@@ -1,12 +1,12 @@
 <template>
-    <header>
-        <div>
+    <div class='sc-page sc-hero'>
+        <header>
             <img alt="@properties" :src="`${publicPath}images/at-logo.svg`">
             <img alt="Stop Looking. Start Finding." :src="`${publicPath}images/stop-looking.svg`">
-            <h1>Presented for Thad Wong for Stephanie Huarte & Mekael Wesley-Rosa</h1>
+            <h1>Presented by Thad Wong for Stephanie Huarte & Mekael Wesley-Rosa</h1>
             <scroll-notify></scroll-notify>
-        </div>
-    </header>
+        </header>
+    </div>
 </template>
 
 <script>

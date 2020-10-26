@@ -1,0 +1,16 @@
+
+
+.sc-page {
+    @apply flex;
+    @apply flex-col;
+    
+    &.sc-hero {
+        @apply justify-center;
+        @apply items-center;
+        @apply p-6;
+        outline: 1px solid #888F9C;
+        outline-offset: -10px;
+    }
+
+}
+

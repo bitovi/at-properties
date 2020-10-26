@@ -1,0 +1,12 @@
+
+
+.scroll-notify {
+    @apply flex;
+    @apply flex-col;
+    @apply justify-center;
+
+    span {
+        text-transform: uppercase;
+        @apply text-center;
+    }
+}

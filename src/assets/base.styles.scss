@@ -1,5 +1,14 @@
 @import "tailwindcss/base";
-
 @import "tailwindcss/components";
-
 @import "tailwindcss/utilities";
+
+//load Showcase Common classes
+@import './utility.styles';
+
+//load all components
+@import '../components/index';
+
+html,
+body {
+    height: 100%;
+}
