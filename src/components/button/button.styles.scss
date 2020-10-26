@@ -1,0 +1,26 @@
+
+.sc-btn {
+    @apply flex;
+    @apply text-white;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    border: 1px solid #000;
+
+    .sc-btn-inner {
+        background: #000;
+        margin: 4px;
+        padding: 12px 24px;
+    }
+}
+
+.sc-btn-group {
+    @apply inline-flex;
+    
+    .sc-btn {
+        margin-right: 12px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}

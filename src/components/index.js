@@ -1,10 +1,13 @@
 import Vue from 'vue'
 import ScrollNotify from "./scrollNotify/scrollNotify.component"
+import Button from './button/button.component'
 
-Vue.component('scroll-notify', ScrollNotify)
+Vue.component(ScrollNotify.name, ScrollNotify)
+Vue.component(Button.name, Button)
 
 
 export {
-    ScrollNotify
+    ScrollNotify,
+    Button
 }
 
