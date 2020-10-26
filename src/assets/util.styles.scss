@@ -1,0 +1,56 @@
+
+
+/**
+    Color Aliases
+*/
+
+$white: theme('colors.white');
+$faint-gray: theme('colors.primary.100');
+$light-gray: theme('colors.primary.200');
+$medium-gray: theme('colors.primary.500');
+$dark-gray: theme('colors.primary.900');
+
+$red: theme('colors.secondary.500');
+
+$bg-faint-gray: theme('colors.neutral.050');
+$bg-light-gray: theme('colors.neutral.300');
+
+/**
+    Headings
+*/
+
+.h1, 
+.h2, 
+.h3, 
+.h4, 
+.h5, 
+.h6 {
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.h1 {
+    font-size: theme('fontSize.3xl');
+}
+
+.h2 {
+    font-size: theme('fontSize.2xl');
+}
+
+.h3 {
+    font-size: theme('fontSize.xl');
+}
+
+.h4 {
+    font-size: theme('fontSize.lg');
+}
+
+.h5 {
+    font-size: theme('fontSize.base');
+    font-weight: 500;
+}
+
+.h6 {
+    font-size: theme('fontSize.sm');
+    font-weight: 300;
+}

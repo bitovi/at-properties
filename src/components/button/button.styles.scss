@@ -1,26 +1,52 @@
 
 .sc-btn {
-    @apply flex;
     @apply text-white;
+    @apply mb-4;
     font-weight: 500;
     text-transform: uppercase;
     text-align: center;
-    border: 1px solid #000;
+    border: 1px solid $dark-gray;
+
+    &:hover,
+    &:active {
+        border-color: $medium-gray;
+    }
+
+    @media (min-width: theme('screens.sm')){
+        @apply flex;
+    }
 
     .sc-btn-inner {
-        background: #000;
+        display: block;
+        background: $dark-gray;
         margin: 4px;
         padding: 12px 24px;
+
+        &:hover,
+        &:active {
+            background: $medium-gray;
+        }
+
+        @media (min-width: theme('screens.sm')){
+            
+        }
     }
+
+    
 }
 
 .sc-btn-group {
-    @apply inline-flex;
+    @apply flex;
+    @apply flex-col;
     
-    .sc-btn {
-        margin-right: 12px;
-        &:last-child {
-            margin-right: 0;
+    @media (min-width: theme('screens.sm')){
+        @apply flex-row;
+
+        .sc-btn {
+            margin-right: theme('spacing.8');
+            &:last-child {
+                margin-right: theme('spacing.0');
+            }
         }
     }
 }

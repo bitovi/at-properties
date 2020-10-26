@@ -4,12 +4,15 @@
     @apply flex;
     @apply flex-col;
     
+    padding: theme('spacing.4');
+
     &.sc-hero {
         @apply justify-center;
         @apply items-center;
         @apply p-6;
         @apply h-screen;
         outline: 1px solid #888F9C;
+        //Build order requires this be hard coded
         outline-offset: -10px;
     }
 

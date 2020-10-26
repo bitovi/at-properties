@@ -1,0 +1,18 @@
+
+.sc-hero-image {
+    @apply relative;
+    color: $white;
+    display: inline-block;
+    outline: 1px solid $white;
+    //Build order requires this be hard coded
+    outline-offset: -10px;
+
+    &.dark-text {
+        color: $dark-gray;
+    }
+
+    .sc-hero-caption {
+        @apply absolute;
+        @apply bottom-0;
+    }
+}
