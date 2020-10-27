@@ -14,4 +14,9 @@
 html,
 body {
     height: 100%;
+    font-size: 16px;
+}
+
+p {
+    font-size: theme('fontSize.p');
 }

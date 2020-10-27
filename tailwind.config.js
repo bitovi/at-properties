@@ -48,8 +48,20 @@ module.exports = {
       }
     },
     fontFamily: {
-      display: ['Gilroy', 'sans-serif'],
-      body: ['Graphik', 'sans-serif'],
+      display: ['Gotham HTF', 'sans-serif'],
+      body: ['Gotham HTF', 'sans-serif'],
+    },
+    fontSize: {
+      'label': '0.625rem',
+      'caption': '0.875rem',
+      'button': '0.875rem',
+      'p': '1.25rem',
+      'h6': '1rem',
+      'h5': '1.375rem',
+      'h4': '1.9375rem',
+      'h3': '2.4375rem',
+      'h2': '3rem',
+      'h1': '3.75rem'
     },
     borderWidth: {
       '0': '0',

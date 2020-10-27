@@ -30,27 +30,29 @@ $bg-light-gray: theme('colors.neutral.300');
 }
 
 .h1 {
-    font-size: theme('fontSize.3xl');
+    font-size: theme('fontSize.h1');
 }
 
 .h2 {
-    font-size: theme('fontSize.2xl');
+    font-size: theme('fontSize.h2');
 }
 
 .h3 {
-    font-size: theme('fontSize.xl');
+    font-size: theme('fontSize.h3');
 }
 
 .h4 {
-    font-size: theme('fontSize.lg');
+    font-size: theme('fontSize.h4');
 }
 
 .h5 {
-    font-size: theme('fontSize.base');
+    font-size: theme('fontSize.h5');
     font-weight: 500;
+    
 }
 
 .h6 {
-    font-size: theme('fontSize.sm');
+    font-size: theme('fontSize.h6');
     font-weight: 300;
+    letter-spacing: 0.1em;
 }

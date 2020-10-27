@@ -17,7 +17,6 @@
                     alt="Thad Wong"
                     caption="Thad Wong"
                 ></hero-image>
-                
             </aside>
             <article>
                 <section id="agent-bio" class="container">
