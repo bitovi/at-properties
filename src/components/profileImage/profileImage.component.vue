@@ -1,5 +1,5 @@
 <template>
-    <figure v-bind="$attrs" class="sc-hero-image">
+    <figure v-bind="$attrs" class="sc-hero-image" v-bind:class="showBorder">
         <picture>
             <source v-if="lg" media="(min-width:1024px)" :srcset="lg">
             <source v-if="md" media="(min-width:769px)" :srcset="md">
@@ -16,7 +16,7 @@
 
 <script>
 export default {
-    name: "hero-image",
+    name: "profile-image",
     props: {
         sm: {
             type: String,
@@ -38,6 +38,10 @@ export default {
         caption: {
             type: String,
             default: null
+        },
+        showBorder: {
+            type: Boolean,
+            default: true
         }
     },
     computed: {
