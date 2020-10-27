@@ -2,6 +2,7 @@
 .sc-btn {
     @apply text-white;
     @apply mb-4;
+    display: inline-block;
     font-weight: 500;
     text-transform: uppercase;
     text-align: center;
@@ -10,10 +11,6 @@
     &:hover,
     &:active {
         border-color: $medium-gray;
-    }
-
-    @media (min-width: theme('screens.sm')){
-        @apply flex;
     }
 
     .sc-btn-inner {
@@ -36,17 +33,10 @@
 }
 
 .sc-btn-group {
-    @apply flex;
-    @apply flex-col;
-    
-    @media (min-width: theme('screens.sm')){
-        @apply flex-row;
-
-        .sc-btn {
-            margin-right: theme('spacing.8');
-            &:last-child {
-                margin-right: theme('spacing.0');
-            }
+    .sc-btn {
+        margin-right: theme('spacing.8');
+        &:last-child {
+            margin-right: theme('spacing.0');
         }
     }
 }

@@ -11,12 +11,12 @@
         </section>
         <section class="grid grid-cols-1 md:grid-cols-2 md:gap-4">
             <aside class="sc-hero">
-                <hero-image 
+                <profile-image 
                     :sm="`${publicPath}images/thad-wong-sm.jpg`"
                     :lg="`${publicPath}images/thad-wong-lg.jpg`"
                     alt="Thad Wong"
                     caption="Thad Wong"
-                ></hero-image>
+                ></profile-image>
             </aside>
             <article>
                 <section id="agent-bio" class="container">
@@ -27,6 +27,13 @@
                         <sc-button href="#">Read Full Bio</sc-button>
                         <sc-button type="button">Watch Agent Video</sc-button>
                     </div>
+                </section>
+                <section>
+                    <h3>Testimonials</h3>
+                    <sc-testimonial :score="4">“Thad provided outstanding service for a very complex transaction that had to be completed within a tight timeframe while working with a difficult counterparty.”</sc-testimonial>
+                    <sc-testimonial>“I offer my highest recommendation--this is the broker you want on your side." [Test no score]</sc-testimonial>
+                    <sc-testimonial :score="5">“Moreover, he brings with him an entire team to make your purchase or sale go through without a hitch.”</sc-testimonial>
+                    <sc-button href="#">View more testimonials</sc-button>
                 </section>
             </article>
         </section>

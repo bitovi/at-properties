@@ -1,0 +1,15 @@
+
+.sc-testimonial {
+    @apply pt-6;
+    @apply pb-6;
+    border-bottom: 1px solid $light-gray;
+    
+    &:last-of-type {
+        border: none;
+    }
+
+    p,
+    .sc-testimonial-content {
+        @apply pb-4;
+    }
+}
