@@ -20,7 +20,7 @@
             </aside>
             <article>
                 <section id="agent-bio">
-                    <h1 class="title-heading">Thad Wong</h1>
+                    <h1 class="title-heading">Cassandra Latrice Johnson Hood</h1>
                     <h2 class="section-heading">Agent Bio</h2>
                     <p>Thad Wong is the co-founder and co-CEO of @properties, the nation's 10th largest brokerage firm by sales volume (REALTrends 500). @properties and its affiliated companies have over 3,500 agents in nine states, as well as annual closed sales volume of over $12 billion...</p>
                     <div class="sc-btn-group">

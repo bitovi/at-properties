@@ -21,7 +21,10 @@ figcaption {
 }
 
 .title-heading {
-    font-size: theme('fontSize.4xl');
+    font-size: 10vw;
+    @media (min-width: 640px) {
+        font-size: theme('fontSize.4xl');  
+    }
 }
 
 .h2 {
