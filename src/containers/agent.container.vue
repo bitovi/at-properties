@@ -1,5 +1,5 @@
 <template>
-    <div class='sc-page'>
+    <div class='sc-page sc-content'>
         <section>
             <header>
                 <div class="flex flex-row justify-center">
@@ -9,7 +9,7 @@
                 </div>
             </header>        
         </section>
-        <section class="grid grid-cols-1 md:grid-cols-2 md:gap-4">
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20">
             <aside class="sc-hero">
                 <profile-image 
                     :sm="`${publicPath}images/thad-wong-sm.jpg`"

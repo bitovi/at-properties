@@ -10,10 +10,25 @@
         @apply justify-center;
         @apply items-center;
         @apply p-6;
+        @apply pb-0;
         @apply h-screen;
-        outline: 1px solid #888F9C;
+        @apply bg-fixed;
+        @apply bg-cover;
+        @apply bg-no-repeat;
+        outline: 1px solid theme('colors.primary.500');
         //Build order requires this be hard coded
         outline-offset: -10px;
+    }
+
+    &.sc-content {
+        margin: 0 theme('spacing.4');
+        padding: 0 theme('spacing.1');
+        border: 3px double theme('colors.primary.100');
+        border-top: none;
+        border-bottom: none;
+        @media (min-width: 640px) {
+            padding: 0 theme('spacing.4');   
+        }
     }
 
 }
