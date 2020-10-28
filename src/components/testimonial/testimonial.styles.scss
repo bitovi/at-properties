@@ -6,6 +6,7 @@
     
     &:first-child,
     &:first-of-type {
+        @apply pt-0;
         border: none;
     }
 
