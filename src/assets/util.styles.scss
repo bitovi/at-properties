@@ -15,52 +15,26 @@ $red: theme('colors.secondary.500');
 $bg-faint-gray: theme('colors.neutral.050');
 $bg-light-gray: theme('colors.neutral.300');
 
-/**
-    Headings
-*/
 
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-h6,
-figcaption {
-    text-transform: uppercase;
-    font-weight: 300;
+html,
+body {
+    height: 100%;
+    font-size: theme('fontSize.base');
 }
 
-.title-heading {
-    font-size: theme('fontSize.4xl');
+@font-face {
+    font-family: 'GothamHTF';
+    src: url('/fonts/gothamhtf-medium-webfont.woff2') format('woff2'),
+         url('/fonts/gothamhtf-medium-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
 }
 
-.h2 {
-    font-size: theme('fontSize.3xl');
-}
+@font-face {
+    font-family: 'GothamHTF';
+    src: url('/fonts/gothamhtf-light-webfont.woff2') format('woff2'),
+         url('/fonts/gothamhtf-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
-.h3 {
-    font-size: theme('fontSize.2xl');
-}
-
-.h4 {
-    font-size: theme('fontSize.xl');
-}
-
-.section-heading {
-    font-size: theme('fontSize.lg');
-    font-weight: 500;
-    &:before {
-        height: 2px;
-        display: block;
-        width: theme('spacing.8');
-        background: $red;
-        content: '';
-        margin: theme('spacing.20') 0 theme('spacing.4');
-    }
-}
-
-.detail-heading {
-    font-size: theme('fontSize.detail');
-    font-weight: 300;
-    letter-spacing: 0.1em;
 }

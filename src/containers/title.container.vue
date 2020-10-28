@@ -1,9 +1,11 @@
 <template>
-    <header class='sc-page sc-hero' :style="`background-image: url('${publicPath}images/clay-banks-Lmc-tvmuopw-unsplash.jpg')`">
-        <img alt="@properties" :src="`${publicPath}images/at-logo.svg`">
-        <img alt="Stop Looking. Start Finding." :src="`${publicPath}images/stop-looking.svg`">
-        <h1>Presented by Thad Wong for Stephanie Huarte & Mekael Wesley-Rosa</h1>
-        <scroll-notify></scroll-notify>
+    <header class='sc-page sc-hero justify-between' :style="`background-image: url('${publicPath}images/clay-banks-Lmc-tvmuopw-unsplash.jpg')`">
+        <img class="mt-4 md:mt-12 w-2/4 md:w-auto mb-4" alt="@properties" :src="`${publicPath}images/at-logo.svg`">
+        <div class="container mx-auto flex flex-col">
+            <img class="pb-8 sm:pb-20" alt="Stop Looking. Start Finding." :src="`${publicPath}images/stop-looking.svg`">
+            <h1 class="presentation-heading">Presented by Thad Wong for Stephanie Huarte & Mekael Wesley-Rosa</h1>
+        </div>
+        <scroll-notify class=""></scroll-notify>
     </header>
 </template>
 
