@@ -14,9 +14,27 @@
 html,
 body {
     height: 100%;
-    font-size: 16px;
+    font-size: theme('fontSize.base');
 }
 
 p {
-    font-size: theme('fontSize.p');
+    font-size: theme('fontSize.copy');
+}
+
+
+@font-face {
+    font-family: 'GothamHTF';
+    src: url('/fonts/gothamhtf-medium-webfont.woff2') format('woff2'),
+         url('/fonts/gothamhtf-medium-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothamHTF';
+    src: url('/fonts/gothamhtf-light-webfont.woff2') format('woff2'),
+         url('/fonts/gothamhtf-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
 }

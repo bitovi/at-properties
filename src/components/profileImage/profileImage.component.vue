@@ -8,7 +8,7 @@
                 alt="alt" 
                 :src="defaultImage" />
         </picture>
-        <figcaption v-if="caption" class="sc-hero-caption h6">
+        <figcaption v-if="caption" class="sc-hero-caption detail-heading">
             {{ caption }}
         </figcaption>
     </figure>

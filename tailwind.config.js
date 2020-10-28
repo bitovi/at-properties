@@ -48,20 +48,22 @@ module.exports = {
       }
     },
     fontFamily: {
-      display: ['Gotham HTF', 'sans-serif'],
-      body: ['Gotham HTF', 'sans-serif'],
+      sans: ['GothamHTF', 'sans-serif'],
+      display: ['GothamHTF', 'sans-serif'],
+      body: ['GothamHTF', 'sans-serif'],
     },
     fontSize: {
-      'label': '0.625rem',
-      'caption': '0.875rem',
-      'button': '0.875rem',
-      'p': '1.25rem',
-      'h6': '1rem',
-      'h5': '1.375rem',
-      'h4': '1.9375rem',
-      'h3': '2.4375rem',
-      'h2': '3rem',
-      'h1': '3.75rem'
+      'tiny': ['0.625rem', { letterSpacing: '1.5px', lineHeight: '1.5' }],
+      'xs':   ['0.875rem', { letterSpacing: '1.5px', lineHeight: '1.5' }],
+      'sm':   ['0.875rem', { lineHeight: '1.5' }],
+      'base': ['16px', { lineHeight: '1.5' }],
+      'copy': ['1.25rem', { lineHeight: '1.5' }],
+      'detail':   ['1rem', { lineHeight: '1.5' }],
+      'lg':   ['1.375rem', { letterSpacing: '0.5px', lineHeight: '1.5' }],
+      'xl':  ['1.9375rem', { letterSpacing: '1px', lineHeight: '1.5' }],
+      '2xl':  ['2.4375rem', { letterSpacing: '1px', lineHeight: '1.5' }],
+      '3xl':  ['3rem', { letterSpacing: '1px', lineHeight: '1.5' }],
+      '4xl':  ['3.75rem', { letterSpacing: '1px', lineHeight: '1.5' }]
     },
     borderWidth: {
       '0': '0',

@@ -20,8 +20,8 @@
             </aside>
             <article>
                 <section id="agent-bio" class="container">
-                    <h1 class="h1">Thad Wong</h1>
-                    <h2 class="h5">Agent Bio</h2>
+                    <h1 class="title-heading">Thad Wong</h1>
+                    <h2 class="section-heading">Agent Bio</h2>
                     <p>Thad Wong is the co-founder and co-CEO of @properties, the nation's 10th largest brokerage firm by sales volume (REALTrends 500). @properties and its affiliated companies have over 3,500 agents in nine states, as well as annual closed sales volume of over $12 billion...</p>
                     <div class="sc-btn-group">
                         <sc-button href="#">Read Full Bio</sc-button>
@@ -29,11 +29,13 @@
                     </div>
                 </section>
                 <section>
-                    <h3>Testimonials</h3>
+                    <h3 class="section-heading">Testimonials</h3>
                     <sc-testimonial :score="4">“Thad provided outstanding service for a very complex transaction that had to be completed within a tight timeframe while working with a difficult counterparty.”</sc-testimonial>
                     <sc-testimonial>“I offer my highest recommendation--this is the broker you want on your side." [Test no score]</sc-testimonial>
                     <sc-testimonial :score="5">“Moreover, he brings with him an entire team to make your purchase or sale go through without a hitch.”</sc-testimonial>
-                    <sc-button href="#">View more testimonials</sc-button>
+                    <div class="sc-btn-group">
+                        <sc-button href="#">View more testimonials</sc-button>
+                    </div>
                 </section>
             </article>
         </section>

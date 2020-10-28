@@ -19,40 +19,48 @@ $bg-light-gray: theme('colors.neutral.300');
     Headings
 */
 
-.h1, 
-.h2, 
-.h3, 
-.h4, 
-.h5, 
-.h6 {
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6,
+figcaption {
     text-transform: uppercase;
     font-weight: 300;
 }
 
-.h1 {
-    font-size: theme('fontSize.h1');
+.title-heading {
+    font-size: theme('fontSize.4xl');
 }
 
 .h2 {
-    font-size: theme('fontSize.h2');
+    font-size: theme('fontSize.3xl');
 }
 
 .h3 {
-    font-size: theme('fontSize.h3');
+    font-size: theme('fontSize.2xl');
 }
 
 .h4 {
-    font-size: theme('fontSize.h4');
+    font-size: theme('fontSize.xl');
 }
 
-.h5 {
-    font-size: theme('fontSize.h5');
+.section-heading {
+    font-size: theme('fontSize.lg');
     font-weight: 500;
-    
+    &:before {
+        height: 2px;
+        display: block;
+        width: theme('spacing.8');
+        background: $red;
+        content: '';
+        margin: theme('spacing.20') 0 theme('spacing.4');
+    }
 }
 
-.h6 {
-    font-size: theme('fontSize.h6');
+.detail-heading {
+    font-size: theme('fontSize.detail');
     font-weight: 300;
     letter-spacing: 0.1em;
 }

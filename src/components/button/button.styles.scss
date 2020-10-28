@@ -3,6 +3,7 @@
     @apply text-white;
     @apply mb-4;
     display: inline-block;
+    font-size: theme('fontSize.sm');
     font-weight: 500;
     text-transform: uppercase;
     text-align: center;
@@ -33,6 +34,7 @@
 }
 
 .sc-btn-group {
+    margin: theme('spacing.12') 0;
     .sc-btn {
         margin-right: theme('spacing.8');
         &:last-child {
