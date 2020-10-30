@@ -1,7 +1,7 @@
 
 .sc-main {
     //bottom nav height plus a bit
-    padding-bottom: 85px;
+    padding-bottom: 50px;
 }
 
 .sc-page {
@@ -24,13 +24,14 @@
     }
 
     &.sc-content {
-        margin: 0 theme('spacing.4');
+        margin: 0 theme('spacing.4') theme('spacing.24');
         padding: 0 theme('spacing.1');
         border: 3px double theme('colors.primary.100');
         border-top: none;
         border-bottom: none;
-        @media (min-width: 640px) {
-            padding: 0 theme('spacing.4');   
+        @media (min-width: theme('screens.sm')) {
+            padding: 0 theme('spacing.4');
+            margin: 0 theme('spacing.4') theme('spacing.56');
         }
     }
 

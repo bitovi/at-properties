@@ -20,7 +20,7 @@
             </aside>
             <article>
                 <section id="agent-bio">
-                    <h1 class="title-heading">Cassandra Latrice Johnson Hood</h1>
+                    <h1 class="title-heading">Thad Wong</h1>
                     <h2 class="section-heading">Agent Bio</h2>
                     <p>Thad Wong is the co-founder and co-CEO of @properties, the nation's 10th largest brokerage firm by sales volume (REALTrends 500). @properties and its affiliated companies have over 3,500 agents in nine states, as well as annual closed sales volume of over $12 billion...</p>
                     <div class="sc-btn-group">
@@ -28,6 +28,7 @@
                         <sc-button type="button">Watch Agent Video</sc-button>
                     </div>
                 </section>
+
                 <section>
                     <h3 class="section-heading">Testimonials</h3>
                     <sc-testimonial :score="4">“Thad provided outstanding service for a very complex transaction that had to be completed within a tight timeframe while working with a difficult counterparty.”</sc-testimonial>
@@ -37,6 +38,7 @@
                         <sc-button href="#">View more testimonials</sc-button>
                     </div>
                 </section>
+
                 <section>
                     <h3 class="section-heading">Recent Sales</h3>
                     <sc-sales-card :image="`${publicPath}images/prop-image-1.jpg`" price="$589,500" address="26W268 Inwood Lane" address2="Winfield, IL 60190"></sc-sales-card>
@@ -46,7 +48,8 @@
                         <sc-button href="#">View more sales</sc-button>
                     </div>
                 </section>
-                <section>
+
+                <section class="mb-16">
                     <h3 class="section-heading">Agent Stats</h3>
                     <!-- TODO: Nick isn't overly fond of this. -->
                     <!-- Is there better semantics? -->
@@ -63,7 +66,8 @@
                         <span class="label-heading">Real Estate Agent in Chicago</span>
                     </p>
                 </section>
-                <section>
+
+                <section class="mb-16">
                     <h3 class="section-heading">Agent Contact</h3>
                     <address>
                         <a href="tel:+1-312-999-0848">312.999.0848</a><br /><br />

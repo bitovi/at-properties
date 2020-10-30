@@ -6,6 +6,7 @@
     <main class="sc-main">
       <TitleContainer />
       <AgentContainer />
+      <CoagentContainer />
     </main>
   </div>
 </template>
@@ -14,6 +15,7 @@
 import Nav from './components/nav/nav.component'
 import TitleContainer from './containers/title.container'
 import AgentContainer from './containers/agent.container'
+import CoagentContainer from './containers/coagent.container'
 
 import './assets/base.styles.scss'
 
@@ -23,7 +25,8 @@ export default {
   components: {
     Nav,
     TitleContainer,
-    AgentContainer
+    AgentContainer,
+    CoagentContainer
   }
 }
 </script>

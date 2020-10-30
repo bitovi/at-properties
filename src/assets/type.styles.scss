@@ -38,7 +38,8 @@ figcaption {
 .title-heading {
     font-size: 10vw;
     @media (min-width: 640px) {
-        font-size: theme('fontSize.4xl');  
+        font-size: theme('fontSize.4xl');
+        margin-bottom: theme('spacing.8');
     }
 }
 
@@ -72,7 +73,7 @@ figcaption {
         width: theme('spacing.8');
         background: $red;
         content: '';
-        margin: theme('spacing.20') 0 theme('spacing.4');
+        margin: theme('spacing.4') 0 theme('spacing.4');
     }
 }
 
