@@ -1,11 +1,17 @@
 <template>
   <div id="app">
-    <TitleContainer />
-    <AgentContainer />
+    <header>
+      <Nav />
+    </header>
+    <main>
+      <TitleContainer />
+      <AgentContainer />
+    </main>
   </div>
 </template>
 
 <script>
+import Nav from './components/nav/nav.component'
 import TitleContainer from './containers/title.container'
 import AgentContainer from './containers/agent.container'
 
@@ -15,6 +21,7 @@ import './assets/base.styles.scss'
 export default {
   name: 'App',
   components: {
+    Nav,
     TitleContainer,
     AgentContainer
   }

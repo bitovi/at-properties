@@ -4,10 +4,11 @@
     @apply mb-4;
     display: inline-block;
     font-size: theme('fontSize.sm');
-    font-weight: 500;
+    font-weight: 600;
     text-transform: uppercase;
     text-align: center;
     border: 1px solid $dark-gray;
+    letter-spacing: 0.1em;
 
     &:hover,
     &:active {

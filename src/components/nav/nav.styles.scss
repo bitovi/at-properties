@@ -1,0 +1,119 @@
+
+.sc-nav {
+    @apply fixed;
+    @apply bottom-0;
+    @apply w-screen;
+    @apply z-30;
+    
+    background: $white;
+
+    .sc-nav-m-tile {
+        @apply px-4;
+        @apply flex-col;
+        @apply justify-center;
+        text-align: center;
+        height: 48px;
+        flex-grow: 1;
+    }
+
+    .sc-nav-tray {
+        @apply flex;
+        @apply flex-row;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+
+    .sc-nav-menu {
+        @apply visually-hidden;
+        
+    }
+
+    @media (max-width: theme('screens.md')){
+        &.isOpen {
+            @apply h-full;
+            .sc-nav-tray {
+                @apply h-full;
+            }
+
+            .sc-nav-menu {
+                @apply mb-20;
+                @apply visually-shown;
+                @apply absolute;
+                @apply top-0;
+                background: $white;
+                padding: theme('spacing.6') theme('spacing.12') 0;
+            }
+        }
+
+        .sc-nav-m-tile {
+            border-top: 1px solid $light-gray;
+        }
+    }
+
+    .sc-nav-ul {
+        li {
+            // Give the :after psydo space
+            // without this, the links move around on hover
+            height: 48px;
+        }
+    }
+
+    .sc-nav-link {
+        @apply py-2;
+        @apply my-2;
+        @apply inline-block;
+        color: $light-gray;
+        font-size: theme('fontSize.lg');
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+
+        &.sc-active,
+        &:hover,
+        &:active {
+            color: $dark-gray;
+
+            &:after {
+                @apply mt-1;
+                height: 2px;
+                display: block;
+                width: 100%;
+                background: $red;
+                content: '';
+            }
+        }
+    }
+
+    @media (min-width: theme('screens.md')){
+        border-top: 3px double $light-gray;
+
+        .sc-nav-m-tile {
+            @apply px-2;
+            border-left: 1px solid $light-gray;
+            &:first-child {
+                border: none;
+                border-right: 1px solid $light-gray;
+            }
+        }
+
+        //menu is open and compressed on desktop
+        .sc-nav-menu {
+            @apply visually-shown;
+            flex-grow: 2;
+            .title-heading {
+                display: none;
+            }
+
+            .sc-nav-ul {
+                @apply flex;
+                @apply flex-row;
+                justify-content: space-evenly;
+                .sc-nav-link {
+                    @apply pt-1;
+                    font-size: theme('fontSize.sm');
+                }
+            }
+        }
+    }
+}
