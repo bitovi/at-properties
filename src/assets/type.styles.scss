@@ -39,6 +39,11 @@ figcaption {
     font-size: theme('fontSize.xl');
 }
 
+.bold-heading {
+    font-size: theme('fontSize.copy');
+    font-weight: 600;
+}
+
 .presentation-heading {
     font-size: theme('fontSize.lg');
     font-weight: 600;

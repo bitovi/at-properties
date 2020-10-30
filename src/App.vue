@@ -3,7 +3,7 @@
     <header>
       <Nav />
     </header>
-    <main>
+    <main class="sc-main">
       <TitleContainer />
       <AgentContainer />
     </main>

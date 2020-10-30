@@ -37,6 +37,15 @@
                         <sc-button href="#">View more testimonials</sc-button>
                     </div>
                 </section>
+                <section>
+                    <h3 class="section-heading">Recent Sales</h3>
+                    <sc-sales-card :image="`${publicPath}images/prop-image-1.jpg`" price="$589,500" address="26W268 Inwood Lane" address2="Winfield, IL 60190"></sc-sales-card>
+                    <sc-sales-card :image="`${publicPath}images/prop-image-2.jpg`" price="$1,140,100" address="701 W Thomas Rd Wheaton, IL 60187"></sc-sales-card>
+                    <sc-sales-card :image="`${publicPath}images/prop-image-3.jpg`" price="$423,250" address="2865 West Shakespeare Avenue Chicago, IL 60647"></sc-sales-card>
+                    <div class="sc-btn-group">
+                        <sc-button href="#">View more sales</sc-button>
+                    </div>
+                </section>
             </article>
         </section>
     </div>
