@@ -1,4 +1,19 @@
+a {
+    &:link,
+    &:visited {
+        text-decoration: underline;
+        color: $dark-gray;
+    }
 
+    &:hover,
+    &:active {
+        color: $medium-gray;
+    }
+}
+
+address {
+    font-style: normal;
+}
 
 p {
     font-size: theme('fontSize.copy');
@@ -27,16 +42,11 @@ figcaption {
     }
 }
 
-.h2 {
-    font-size: theme('fontSize.3xl');
-}
-
-.h3 {
+.callout-heading {
     font-size: theme('fontSize.2xl');
-}
-
-.h4 {
-    font-size: theme('fontSize.xl');
+    color: $red;
+    text-transform: uppercase;
+    display: block;
 }
 
 .bold-heading {

@@ -46,6 +46,34 @@
                         <sc-button href="#">View more sales</sc-button>
                     </div>
                 </section>
+                <section>
+                    <h3 class="section-heading">Agent Stats</h3>
+                    <!-- TODO: Nick isn't overly fond of this. -->
+                    <!-- Is there better semantics? -->
+                    <p class="mb-4">
+                        <span class="callout-heading">Number One</span>
+                        <span class="label-heading">Top selling agent in Lincoln Park</span>
+                    </p>
+                    <p class="mb-4">
+                        <span class="callout-heading">$20 Million</span>
+                        <span class="label-heading">Annual Sales in 2019</span>
+                    </p>
+                    <p class="mb-4">
+                        <span class="callout-heading">30 Under 30</span>
+                        <span class="label-heading">Real Estate Agent in Chicago</span>
+                    </p>
+                </section>
+                <section>
+                    <h3 class="section-heading">Agent Contact</h3>
+                    <address>
+                        <a href="tel:+1-312-999-0848">312.999.0848</a><br /><br />
+                        <a href="mailto:Thad@atproperties.com">Thad@atproperties.com</a>
+                    </address>
+                    <div class="">
+                        <a href="#" target="_blank">Facebook</a>
+                        <a href="#" target="_blank">Instagram</a>
+                    </div>
+                </section>
             </article>
         </section>
     </div>

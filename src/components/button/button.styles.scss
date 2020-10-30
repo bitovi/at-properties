@@ -10,6 +10,12 @@
     border: 1px solid $dark-gray;
     letter-spacing: 0.1em;
 
+    &:link,
+    &:visited {
+        @apply text-white;
+        text-decoration: none;
+    }
+
     &:hover,
     &:active {
         border-color: $medium-gray;
