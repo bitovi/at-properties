@@ -7,6 +7,7 @@
       <TitleContainer />
       <AgentContainer />
       <CoagentContainer />
+      <TeamContainer />
     </main>
   </div>
 </template>
@@ -16,6 +17,7 @@ import Nav from './components/nav/nav.component'
 import TitleContainer from './containers/title.container'
 import AgentContainer from './containers/agent.container'
 import CoagentContainer from './containers/coagent.container'
+import TeamContainer from './containers/team.container'
 
 import './assets/base.styles.scss'
 
@@ -26,7 +28,8 @@ export default {
     Nav,
     TitleContainer,
     AgentContainer,
-    CoagentContainer
+    CoagentContainer,
+    TeamContainer
   }
 }
 </script>
