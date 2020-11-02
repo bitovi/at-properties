@@ -6,6 +6,7 @@ import ProfileImage from './profileImage/profileImage.component'
 import Rating from './rating/rating.component'
 import Testimonial from './testimonial/testimonial.component'
 import SalesCard from './salesCard/salesCard.component'
+import SlideIn from './slideIn/slideIn.component'
 
 Vue.component(ScrollNotify.name, ScrollNotify)
 Vue.component(Button.name, Button)
@@ -14,6 +15,7 @@ Vue.component(ProfileImage.name, ProfileImage)
 Vue.component(Rating.name, Rating)
 Vue.component(Testimonial.name, Testimonial)
 Vue.component(SalesCard.name, SalesCard)
+Vue.component(SlideIn.name, SlideIn)
 
 
 export {
@@ -23,6 +25,7 @@ export {
     ProfileImage,
     Rating,
     Testimonial,
-    SalesCard
+    SalesCard,
+    SlideIn
 }
 

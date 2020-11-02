@@ -1,0 +1,25 @@
+.sc-slide-in-mask {
+    @apply fixed;
+    @apply top-0;
+    @apply left-0;
+    @apply w-screen;
+    @apply h-screen;
+    z-index: 9998;
+    background-color: rgba(0, 0, 0, .5);
+    overflow-x: auto;
+    transition: opacity .3s ease;
+}
+
+.sc-slide-in {
+    @apply h-full;
+    @apply fixed;
+    @apply right-0;
+    width: 55%;
+    padding: 20px 30px;
+    background-color: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+.sc-slide-in-content {
+    margin: 20px 0;
+}

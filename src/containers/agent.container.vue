@@ -24,7 +24,10 @@
                     <h2 class="section-heading">Agent Bio</h2>
                     <p>Thad Wong is the co-founder and co-CEO of @properties, the nation's 10th largest brokerage firm by sales volume (REALTrends 500). @properties and its affiliated companies have over 3,500 agents in nine states, as well as annual closed sales volume of over $12 billion...</p>
                     <div class="sc-btn-group">
-                        <sc-button href="#">Read Full Bio</sc-button>
+                        <sc-button type="button" @click="showModal('AgentModal')">Read Full Bio</sc-button>
+                        <sc-slide-in ref="AgentModal">
+                            Test
+                        </sc-slide-in>
                         <sc-button type="button">Watch Agent Video</sc-button>
                     </div>
                 </section>
@@ -88,7 +91,15 @@ export default {
     name: 'agentContainer',
     data(){
         return {
+            activeModal: 0,
             publicPath: process.env.BASE_URL
+        }
+    },
+    methods: {
+        showModal: function(name) {
+            if(this.$refs[name]){
+                this.$refs[name].open()
+            }
         }
     }
 }

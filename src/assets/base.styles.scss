@@ -12,6 +12,8 @@
 //load Showcase Common classes
 @import './page.styles';
 
+//load transition types
+@import './transitions.styles.scss';
+
 //load all components
 @import '../components/index';
-
