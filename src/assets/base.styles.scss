@@ -2,16 +2,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-
-//load color Aliases
 @import './util.styles';
-
-//load headings
 @import './type.styles';
-
-//load Showcase Common classes
 @import './page.styles';
-
-//load all components
 @import '../components/index';
-

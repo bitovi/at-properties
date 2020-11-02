@@ -1,8 +1,7 @@
 
 .sc-rating {
-    @apply flex;
-    @apply flex-row;
+    @apply flex flex-row;
     span {
-        margin-right: theme('spacing.3');
+        @apply mr-3;
     }
 }

@@ -1,22 +1,20 @@
 <template>
-    <figure v-bind="$attrs" class="sc-hero-image" v-bind:class="showBorder">
+    <!-- <figure v-bind="$attrs" class="sc-hero-image" v-bind:class="showBorder"> -->
+    <figure v-bind="$attrs" :class="ar">
         <picture>
             <source v-if="lg" media="(min-width:1024px)" :srcset="lg">
             <source v-if="md" media="(min-width:769px)" :srcset="md">
             <source v-if="sm" media="(min-width:640px)" :srcset="sm">
-            <img 
-                alt="alt" 
-                :src="defaultImage" />
+            <img :alt="alt" :src="defaultImage" />
         </picture>
-        <figcaption v-if="caption" class="sc-hero-caption detail-heading">
-            {{ caption }}
-        </figcaption>
+        <div v-if="border" :class="border"></div>
+        <figcaption v-if="caption">{{ caption }}</figcaption>
     </figure>
 </template>
 
 <script>
 export default {
-    name: "profile-image",
+    name: "sc-photo",
     props: {
         sm: {
             type: String,
@@ -39,9 +37,13 @@ export default {
             type: String,
             default: null
         },
-        showBorder: {
-            type: Boolean,
-            default: true
+        border: {
+            type: String,
+            default: ''
+        }, 
+        ar: {
+            type: String,
+            default: ''
         }
     },
     computed: {

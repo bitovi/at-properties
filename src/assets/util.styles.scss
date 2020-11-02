@@ -1,20 +1,18 @@
+/* Fonts */ 
 
+@font-face {
+    font-family: 'Gotham Medium';
+    src: url('/fonts/gothamhtf-medium-webfont.woff2') format('woff2'),
+         url('/fonts/gothamhtf-medium-webfont.woff') format('woff');
+}
 
-/**
-    Color Aliases
-*/
+@font-face {
+    font-family: 'Gotham Light';
+    src: url('/fonts/gothamhtf-light-webfont.woff2') format('woff2'),
+         url('/fonts/gothamhtf-light-webfont.woff') format('woff');
+}
 
-$white: theme('colors.white');
-$faint-gray: theme('colors.primary.100');
-$light-gray: theme('colors.primary.200');
-$medium-gray: theme('colors.primary.500');
-$dark-gray: theme('colors.primary.900');
-
-$red: theme('colors.secondary.500');
-
-$bg-faint-gray: theme('colors.neutral.050');
-$bg-light-gray: theme('colors.neutral.300');
-
+/* Global */ 
 
 html,
 body {
@@ -22,19 +20,80 @@ body {
     font-size: theme('fontSize.base');
 }
 
-@font-face {
-    font-family: 'GothamHTF';
-    src: url('/fonts/gothamhtf-medium-webfont.woff2') format('woff2'),
-         url('/fonts/gothamhtf-medium-webfont.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
+#app {
+    border-left: 4px double theme('colors.light-gray');
+    border-right: 4px double theme('colors.light-gray');
+    @apply ml-5 mr-5 min-h-full;   /* ml-5 = margin-left: 20px; */
 }
 
-@font-face {
-    font-family: 'GothamHTF';
-    src: url('/fonts/gothamhtf-light-webfont.woff2') format('woff2'),
-         url('/fonts/gothamhtf-light-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+main { 
+    @apply -ml-6 -mr-6; /* -ml-6 = margin-left: -24px; */
+}
 
+/* Custom Scrollbar */
+
+/* The emerging W3C standard
+that is currently Firefox-only */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.red') theme('colors.light-gray');
+}
+
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+    width: 2px; /* No Tailwind equivalent */
+}
+*::-webkit-scrollbar-track {
+    background: theme('colors.light-gray');
+}
+*::-webkit-scrollbar-thumb {
+    background-color: theme('colors.red');
+}
+
+/* Visibility */ 
+
+.show {
+    display: block;
+    visibility: visible;
+}
+.show-sm {
+    @screen sm {
+        display: block;
+        visibility: visible;
+    }
+}
+.show-md {
+    @screen md {
+        display: block;
+        visibility: visible;
+    }
+}
+.show-lg {
+    @screen lg {
+        display: block;
+        visibility: visible;
+    }
+}
+
+.hide {
+    display: none;
+    visibility: hidden;
+}
+.hide-sm {
+    @screen sm {
+        display: none;
+        visibility: hidden;
+    }
+}
+.hide-md {
+    @screen md {
+        display: none;
+        visibility: hidden;
+    }
+}
+.hide-lg {
+    @screen lg {
+        display: none;
+        visibility: hidden;
+    }
 }

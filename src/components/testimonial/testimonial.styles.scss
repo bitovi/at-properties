@@ -1,8 +1,6 @@
 
 .sc-testimonial {
-    @apply pt-6;
-    @apply pb-6;
-    border-top: 1px solid $light-gray;
+    @apply pt-6 pb-6 border-light-gray;
     
     &:first-child,
     &:first-of-type {
