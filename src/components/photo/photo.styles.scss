@@ -4,22 +4,24 @@
     @apply h-0 overflow-hidden relative;
 }
 .ar-2-3 {
-    // padding-top: calc(3/2 * 100%);
-    padding-top: min(80vh, 150%);
+    padding-top: calc(3/2 * 100%);
 }
 .ar-4-3 {
     padding-top: calc(3/4 * 100%);
 }
 .ar-4-5 {
-    padding-top: min(80vh, 125%);
+    padding-top: calc(5/4 * 100%);
 }
 .ar img {
     @apply w-full h-full object-cover;
+    object-position: top center;
 }
 
 /* Figure, Figcaption */
 
 figure {
+    background: yellow;
+
     picture {
         @apply absolute top-0 left-0 w-full h-full;
         object-position: 50% 0;
