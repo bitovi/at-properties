@@ -1,6 +1,7 @@
 <template>
     <transition
         name="fade-slide"
+        v-on:after-enter="setFocus"
         >
         <div 
             class="sc-slide-in-mask" 
@@ -50,11 +51,6 @@ export default {
             }
         })  
     },
-    updated: function() {
-        if(this.srHeading && this.$refs.ElDescription){
-            this.$refs.ElDescription.focus()
-        }
-    },
     methods: {
         open() {
             try {
@@ -73,6 +69,9 @@ export default {
             }
             this.showModal = false
             this.$emit('close')
+        },
+        setFocus: function() {
+            this.$refs.ElDescription.focus({preventScroll: true})
         }
     }
 }
