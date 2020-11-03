@@ -18,6 +18,8 @@ html,
 body {
     height: 100%;
     font-size: theme('fontSize.base');
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 #app {
