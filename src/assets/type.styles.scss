@@ -45,11 +45,13 @@ strong {
 
 /* Inline Link */
 
-p a, p a:visited {
-    @apply text-dark-gray underline;
-}
-p a:focus, p a:hover, p a:active {
-    @apply text-blue;
+p {
+    a, a:visited {
+        @apply text-dark-gray underline;
+    }
+    a:focus, a:hover, a:active {
+        @apply text-blue;
+    }
 }
 
 /* Text Accents */
@@ -112,6 +114,7 @@ p a:focus, p a:hover, p a:active {
         @extend .head-6;
     }
 }
+
 .stat-lg {
 	span:first-child {  
         @extend .accent-below-center, .head-2;
@@ -126,64 +129,17 @@ p a:focus, p a:hover, p a:active {
 .btn {
     @apply bg-dark-gray font-gotham-medium text-white text-sm uppercase border-4 border-white pt-3 pr-6 pb-3 pl-6 mr-6;
     outline: 1px solid theme('colors.dark-gray');
-}
-.btn:hover { 
-    @apply bg-medium-gray;
-    outline: 1px solid theme('colors.medium-gray');
-}
-.btn:focus, .btn:active { 
-    outline: 1px dashed theme('colors.blue');
+
+    &:hover { 
+        @apply bg-medium-gray;
+        outline: 1px solid theme('colors.medium-gray');
+    }
+
+    &:focus, &:active { 
+        outline: 1px dashed theme('colors.blue');
+    }
 }
 
 * + .btn, * + .btn-group {
     @apply mt-5;
 }
-
-/* DELETE ? USED ? */
-
-/* 
-figcaption {
-    text-transform: uppercase;
-    font-weight: 300;
-}
-
-.title-heading {
-    font-size: 10vw;
-    @media (min-width: 640px) {
-        font-size: theme('fontSize.4xl');  
-    }
-}
-
-.presentation-heading {
-    font-size: theme('fontSize.lg');
-    font-weight: 600;
-    text-align: center;
-    letter-spacing: 0.1em;
-}
-
-.section-heading {
-    @apply mb-6;
-    font-size: theme('fontSize.lg');
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    &:before {
-        height: 2px;
-        display: block;
-        width: theme('spacing.8');
-        background: theme('colors.red');
-        content: '';
-        margin: theme('spacing.20') 0 theme('spacing.4');
-    }
-}
-
-.detail-heading {
-    font-size: theme('fontSize.detail');
-    font-weight: 300;
-    letter-spacing: 0.1em;
-}
-
-.label-heading {
-    font-size: theme('fontSize.xs');
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-} */

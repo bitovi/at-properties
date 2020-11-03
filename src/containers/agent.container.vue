@@ -118,7 +118,10 @@
                     <h3 class="head-5 accent-above-left">Agent Contact</h3>
                     <p><a href="tel:312.999.0848">312.999.0848</a></p>
                     <p><a href="mailto:Thad@atproperties.com">Thad@atproperties.com</a></p>
-                    <p>[ SOCIA LINKS HERE ]</p>
+                    <sc-social 
+                        facebook="https://www.facebook.com/thad.wong.54"
+                        instagram="https://www.instagram.com/thadly_wong/"
+                    ></sc-social>
                 </section>
             </div>
         </div>

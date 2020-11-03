@@ -1,0 +1,8 @@
+.sc-social {
+    a {
+        @apply inline-block mr-6;
+    }
+    svg {
+        @apply w-10 h-10 text-dark-gray;
+    }
+}

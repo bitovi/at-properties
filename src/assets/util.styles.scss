@@ -14,7 +14,10 @@
 
 /* Global */ 
 
-html,
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     height: 100%;
     font-size: theme('fontSize.base');
@@ -34,8 +37,7 @@ main {
 
 /* Custom Scrollbar */
 
-/* The emerging W3C standard
-that is currently Firefox-only */
+/* The emerging W3C standard that is currently Firefox-only */
 * {
     scrollbar-width: thin;
     scrollbar-color: theme('colors.red') theme('colors.light-gray');

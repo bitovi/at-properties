@@ -1,3 +1,5 @@
+/* Nav bar - stuck to the bottom of the page */
+
 .page-nav {
     @apply z-50 fixed bottom-0 left-0 w-full bg-white border-t-4 border-double border-light-gray flex justify-between;
 
@@ -6,6 +8,8 @@
     }
 }
 
+/* Spacing between sections */
+
 article + article {
     @apply mt-24;
 }
@@ -13,6 +17,8 @@ article + article {
 section + section {
     @apply mt-16;
 }
+
+/* Sections */
 
 .section-title {
     @apply w-screen p-5 bg-light-gray bg-cover bg-no-repeat;

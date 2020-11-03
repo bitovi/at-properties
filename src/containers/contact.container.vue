@@ -1,5 +1,5 @@
 <template>
-    <article id="contact">
+    <article id="contact" class="pb-12">
         <header class="section-title" :style="`background-image: url('${publicPath}images/bg/bg-contact-lg.jpg')`">
             <div class="section-border grid lg:grid-cols-2 md:gap-8">
                 <div class="self-center md:pt-10 md:px-56 lg:px-32">
@@ -18,7 +18,12 @@
                     <h3 class="head-5 accent-above-center">Contact me today!</h3>
                     <p><a href="tel:312.999.0848">312.999.0848</a></p>
                     <p><a href="mailto:Thad@atproperties.com">Thad@atproperties.com</a></p>
-                    <p>[ SOCIA LINKS HERE ]</p>
+                    <sc-social 
+                        facebook="https://www.facebook.com/thad.wong.54"
+                        instagram="https://www.instagram.com/thadly_wong/"
+                        twitter="https://twitter.com/properties" 
+                        youtube="https://www.youtube.com/user/AtPropertiesTV"
+                    ></sc-social>
                 </div>
             </div>
         </header>
