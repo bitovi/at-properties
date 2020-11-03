@@ -22,11 +22,11 @@
                 <section id="agent-bio">
                     <h1 class="title-heading">Thad Wong</h1>
                     <h2 class="section-heading">Agent Bio</h2>
-                    <p>Thad Wong is the co-founder and co-CEO of @properties, the nation's 10th largest brokerage firm by sales volume (REALTrends 500). @properties and its affiliated companies have over 3,500 agents in nine states, as well as annual closed sales volume of over $12 billion...</p>
+                    <p v-html="i18n.thad.sample"></p>
                     <div class="sc-btn-group">
                         <sc-button type="button" @click="showModal('AgentModal')">Read Full Bio</sc-button>
-                        <sc-slide-in ref="AgentModal">
-                            Test
+                        <sc-slide-in ref="AgentModal" :srHeading="i18n.thad.modalSRHeading">
+                            <div v-html="i18n.thad.full"></div>
                         </sc-slide-in>
                         <sc-button type="button">Watch Agent Video</sc-button>
                     </div>
@@ -87,12 +87,15 @@
 </template>
 
 <script>
+import Strings from '../assets/strings/bio.i18n.json'
+
 export default {
     name: 'agentContainer',
     data(){
         return {
             activeModal: 0,
-            publicPath: process.env.BASE_URL
+            publicPath: process.env.BASE_URL,
+            i18n: Strings
         }
     },
     methods: {

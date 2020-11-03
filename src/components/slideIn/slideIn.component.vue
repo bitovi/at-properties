@@ -2,9 +2,22 @@
     <transition
         name="fade-slide"
         >
-        <div class="sc-slide-in-mask" @click.self="close" v-if="showModal">
+        <div 
+            class="sc-slide-in-mask" 
+            @click.self="close" 
+            v-if="showModal"
+            role="dialog"
+            aria-modal="true"
+            aria-describedby="modalDescription">
                 <div class="sc-slide-in fade-slide-content">
-                    <nav>
+                    <nav class="absolute right-0 mr-16">
+                        <h1 
+                            ref="ElDescription"
+                            tabindex="0" 
+                            id="modalDescription"
+                            class="visually-hidden">
+                            {{srHeading}}
+                        </h1>
                         <sc-close-btn @click.stop="close" />
                     </nav>
                     <div class="sc-slide-in-content" >
@@ -15,26 +28,54 @@
     </transition>
 </template>
 <script>
+// ref to <body>
+const ElBody = document.getElementsByTagName("body")[0]
+
 export default {
     name: 'sc-slide-in',
+    props: {
+        srHeading:{
+            type: String
+        }
+    },
     data() {
-        //flag for inner transition
         return {
             showModal: false
         }
     },
     mounted: function () {
+        console.log('mounted')
         document.addEventListener("keydown", (e) => {
             if (this.show && e.keyCode == 27) {
                 this.close()
             }
         })
+        
+        
     },
     methods: {
         open() {
+            try {
+                ElBody.classList.add('sc-modal-open')
+            } catch (error) {
+                console.warn('Unable to fix scroll positon')   
+            }
+            if(this.srHeading){
+                this.$nextTick(function(){
+                    console.log(this.$refs)
+                    console.log(this.$refs.ElDescription)
+                })
+                
+                // this.$refs.ElDescription.focus()
+            }
             this.showModal = true
         },
         close: function() {
+            try {
+                ElBody.classList.remove('sc-modal-open')
+            } catch (error) {
+                console.warn('Unable to release scroll position')   
+            }
             this.showModal = false
             this.$emit('close')
         }

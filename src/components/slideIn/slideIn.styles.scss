@@ -12,14 +12,18 @@
 
 .sc-slide-in {
     @apply h-full;
-    @apply fixed;
+    @apply absolute;
     @apply right-0;
+    @apply pb-8;
     width: 55%;
-    padding: 20px 30px;
+    padding: 30px;
     background-color: #fff;
     transition: all 0.5s ease-in-out;
+    overflow: hidden;
 }
 
 .sc-slide-in-content {
-    margin: 20px 0;
+    padding: theme('spacing.16') theme('spacing.16') theme('spacing.16') theme('spacing.12');
+    overflow: auto;
+    height: 100%;
 }
