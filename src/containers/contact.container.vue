@@ -1,8 +1,8 @@
 <template>
     <article id="contact" class="pb-12">
         <header class="section-title" :style="`background-image: url('${publicPath}images/bg/bg-contact-lg.jpg')`">
-            <div class="section-border grid lg:grid-cols-2 md:gap-8">
-                <div class="self-center md:pt-10 md:px-56 lg:px-32">
+            <div class="section-border grid grid-cols-1 lg:grid-cols-2 md:gap-8 content-center">
+                <div class="hidden md:block self-center md:w-1/3 lg:w-full lg:p-20 mx-auto">
                     <sc-photo 
                         :sm="`${publicPath}images/profiles/thad-wong-sm.jpg`"
                         :lg="`${publicPath}images/profiles/thad-wong-lg.jpg`"

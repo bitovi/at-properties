@@ -80,3 +80,20 @@ section + section {
         @apply mt-3;
     }
 }
+
+/* Partner Logo */ 
+
+.partner {
+    background-color: theme('colors.neutral-gray') !important;
+    @extend .ar, .ar-4-3;
+
+    .partner-border {
+        @apply absolute top-0 left-0 border border-medium-gray bg-transparent m-3 p-16 grid grid-cols-1 content-center;
+        width: calc(100% - 26px);
+        height: calc(100% - 26px);
+    }
+
+    img {
+        @apply w-auto h-auto;
+    }
+}

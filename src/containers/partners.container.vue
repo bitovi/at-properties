@@ -9,25 +9,45 @@
             </div>
         </header>
         <div class="section-content">
-            <div class="grid md:grid-cols-2 gap-x-8 gap-y-20 justify-items-stretch lg:max-w-3/5 mx-auto">
+            <div class="p-6 md:p-0 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-20 justify-items-stretch xl:max-w-3/5 mx-auto">
                 <div class="text-center">
-                    <img src="https://via.placeholder.com/300x200/CCC/333.png" alt="" class="w-full" />
+                    <div class="partner">
+                        <div class="partner-border">
+                            <img src="images/logos/logo-proper-title.png" alt="Proper Title" class="" />
+                        </div>
+                    </div>
                     <button class="btn">Learn More</button>
                 </div>
                 <div class="text-center">
-                    <img src="https://via.placeholder.com/300x200/CCC/333.png" alt="" class="w-full" />
+                    <div class="partner">
+                        <div class="partner-border">
+                            <img src="images/logos/logo-proper-rate.png" alt="Proper Rate" class="" />
+                        </div>
+                    </div>
                     <button class="btn">Learn More</button>
                 </div>
                 <div class="text-center">
-                    <img src="https://via.placeholder.com/300x200/CCC/333.png" alt="" class="w-full" />
+                    <div class="partner">
+                        <div class="partner-border">
+                            <img src="images/logos/logo-atproperties-relocation.png" alt="@properties Relocation" class="" />
+                        </div>
+                    </div>
                     <button class="btn">Learn More</button>
                 </div>
                 <div class="text-center">
-                    <img src="https://via.placeholder.com/300x200/CCC/333.png" alt="" class="w-full" />
+                    <div class="partner">
+                        <div class="partner-border">
+                            <img src="images/logos/logo-atproperties-commercial.png" alt="@properties Commercial" class="" />
+                        </div>
+                    </div>
                     <button class="btn">Learn More</button>
                 </div>
-                <div class="text-center md:col-span-2">
-                    <img src="https://via.placeholder.com/300x200/CCC/333.png" alt="" class="w-full md:w-1/2 md:mx-auto" />
+                <div class="text-center md:col-span-2 w-full md:w-1/2 mx-auto">
+                    <div class="partner">
+                        <div class="partner-border">
+                            <img src="images/logos/logo-atproperties-dev-services.png" alt="@properties Development Services" class="" />
+                        </div>
+                    </div>
                     <button class="btn">Learn More</button>
                 </div>
             </div>

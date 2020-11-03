@@ -54,56 +54,24 @@ main {
     background-color: theme('colors.accent');
 }
 
-/* Visibility */ 
+/* Aspect Ratio */ 
 
-.show {
-    display: block !important;
-    visibility: visible !important;
+.ar {
+    @apply h-0 overflow-hidden relative;
 }
-.hide {
-    display: none !important;
-    visibility: hidden !important;
+.ar-2-3 {
+    padding-top: min(80vh, calc(3/2 * 100%));
 }
-
-.show-sm {
-    @extend .hide;
-
-    @screen sm {
-        @extend .show;
-    }
+.ar-3-2 {
+    padding-top: min(80vh, calc(2/3 * 100%));
 }
-.show-md {
-    @extend .hide;
-
-    @screen md {
-        @extend .show;
-    }
+.ar-4-3 {
+    padding-top: min(80vh, calc(3/4 * 100%));
 }
-.show-lg {
-    @extend .hide;
-
-    @screen lg {
-        @extend .show;
-    }
+.ar-4-5 {
+    padding-top: min(80vh, calc(5/4 * 100%));
+    // padding-top: calc(5/4 * 100%);
 }
-.hide-sm {
-    @extend .show;
-
-    @screen sm {
-        @extend .hide;
-    }
-}
-.hide-md {
-    @extend .show;
-    
-    @screen md {
-        @extend .hide;
-    }
-}
-.hide-lg {
-    @extend .show;
-    
-    @screen lg {
-        @extend .hide;
-    }
+.ar img {
+    @apply w-full h-full object-cover;
 }
