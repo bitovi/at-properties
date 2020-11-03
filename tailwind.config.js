@@ -14,8 +14,8 @@ module.exports = {
       'medium-gray': '#888F9C',
       'dark-gray': '#1B1D1F',
       'black': '#000000',
-      'red': '#D22630',
-      'blue': '#0083CC'
+      'accent': '#D22630',
+      'interactive': '#0083CC'
     },
     fontFamily: {
       'gotham-light': '"Gotham Light", Helvetica, Arial, sans-serif',
