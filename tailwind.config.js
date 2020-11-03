@@ -57,6 +57,7 @@ module.exports = {
       'xs':   ['0.875rem', { letterSpacing: '1.5px', lineHeight: '1.5' }],
       'sm':   ['0.875rem', { lineHeight: '1.5' }],
       'base': ['16px', { lineHeight: '1.5' }],
+      'mobile': ['1rem', { lineHeight: '1.5' }],
       'copy': ['1.25rem', { lineHeight: '1.5' }],
       'detail':   ['1rem', { lineHeight: '1.5' }],
       'lg':   ['1.375rem', { letterSpacing: '0.5px', lineHeight: '1.5' }],
