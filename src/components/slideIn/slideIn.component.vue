@@ -44,14 +44,16 @@ export default {
         }
     },
     mounted: function () {
-        console.log('mounted')
         document.addEventListener("keydown", (e) => {
             if (this.show && e.keyCode == 27) {
                 this.close()
             }
-        })
-        
-        
+        })  
+    },
+    updated: function() {
+        if(this.srHeading && this.$refs.ElDescription){
+            this.$refs.ElDescription.focus()
+        }
     },
     methods: {
         open() {
@@ -60,14 +62,7 @@ export default {
             } catch (error) {
                 console.warn('Unable to fix scroll positon')   
             }
-            if(this.srHeading){
-                this.$nextTick(function(){
-                    console.log(this.$refs)
-                    console.log(this.$refs.ElDescription)
-                })
-                
-                // this.$refs.ElDescription.focus()
-            }
+            
             this.showModal = true
         },
         close: function() {
