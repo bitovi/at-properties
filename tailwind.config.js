@@ -22,11 +22,11 @@ module.exports = {
       'gotham-medium': '"Gotham Medium", Helvetica, Arial, sans-serif'
     },
     fontSize: {
-      'tiny': ['10px', { letterSpacing: '1.5px', lineHeight: '1.5' }],
-      'xs':   ['12px', { letterSpacing: '1.5px', lineHeight: '1.5' }],
-      'sm':   ['14px', { lineHeight: '1.5' }],
-      'base': ['16px', { lineHeight: '1.5' }],
-      'lg':   ['20px', { lineHeight: '1.5' }],
+      'tiny': ['10px', { letterSpacing: '1.5px', lineHeight: '1.6' }],
+      'xs':   ['12px', { letterSpacing: '1.5px', lineHeight: '1.6' }],
+      'sm':   ['14px', { letterSpacing: '1.5px', lineHeight: '1.6' }],
+      'base': ['16px', { lineHeight: '1.6' }],
+      'lg':   ['20px', { lineHeight: '1.6' }],
       'xl':   ['25px', { letterSpacing: '0.5px', lineHeight: '1.5' }],
       '2xl':  ['31px', { letterSpacing: '1px', lineHeight: '1.5' }],
       '3xl':  ['39px', { letterSpacing: '1px', lineHeight: '1.5' }],

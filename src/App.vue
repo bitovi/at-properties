@@ -1,5 +1,8 @@
 <template>
   <div id="app" class="theme-atproperties">
+    <header>
+      <NavContainer />
+    </header>
     <main>
       <AgentContainer />
       <CoAgentContainer />
@@ -14,6 +17,7 @@
 </template>
 
 <script>
+  import NavContainer from './containers/nav.container'
   import AgentContainer from './containers/agent.container'
   import CoAgentContainer from './containers/coagent.container'
   import TeamContainer from './containers/team.container'
@@ -28,6 +32,7 @@
   export default {
     name: 'App',
     components: {
+      NavContainer, 
       AgentContainer, 
       CoAgentContainer, 
       TeamContainer, 

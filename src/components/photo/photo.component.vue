@@ -5,7 +5,7 @@
             <source v-if="lg" media="(min-width:1024px)" :srcset="lg">
             <source v-if="md" media="(min-width:769px)" :srcset="md">
             <source v-if="sm" media="(min-width:640px)" :srcset="sm">
-            <img :src="defaultImage" :alt="alt" />
+            <img :src="defaultImage" :alt="alt" :class="position" />
         </picture>
         <div v-if="border" :class="border"></div>
         <figcaption v-if="caption">{{ caption }}</figcaption>
@@ -42,6 +42,10 @@ export default {
             default: ''
         }, 
         ar: {
+            type: String,
+            default: ''
+        }, 
+        position: {
             type: String,
             default: ''
         }

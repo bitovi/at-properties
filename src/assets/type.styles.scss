@@ -67,16 +67,34 @@ p a:focus, p a:hover, p a:active {
     display: block;
     height: 2px; /* No Tailwind equivalent */
 }
+
+.accent-above-responsive:before {
+    @apply bg-red w-8 mt-0 mr-auto mb-3 ml-auto;
+    content: '';
+    display: block;
+    height: 2px; /* No Tailwind equivalent */
+
+    @screen lg {
+        @apply mr-auto ml-0;
+    }
+}
+
+.accent-above-center:before {
+    @apply bg-red w-8 mt-0 mr-auto mb-3 ml-auto;
+    content: '';
+    display: block;
+    height: 2px; /* No Tailwind equivalent */
+}
   
 .accent-below-center:after {
-    @apply bg-red w-8 mt-3 mr-auto mb-0 ml-auto;
+    @apply bg-red w-8 mt-2 mr-auto mb-3 ml-auto;
     content: '';
     display: block;
     height: 2px; /* No Tailwind equivalent */
 }
 
 .accent-below-center-wide:after {
-    @apply bg-red w-16 mt-3 mr-auto mb-0 ml-auto;
+    @apply bg-red w-16 mt-2 mr-auto mb-3 ml-auto;
     content: '';
     display: block;
     height: 2px; /* No Tailwind equivalent */
@@ -97,6 +115,9 @@ p a:focus, p a:hover, p a:active {
 .stat-lg {
 	span:first-child {  
         @extend .accent-below-center, .head-2;
+    }
+	span:last-child  { 
+        @apply inline-block;
     }
 }
 

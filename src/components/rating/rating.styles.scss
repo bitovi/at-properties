@@ -1,7 +1,5 @@
-
 .sc-rating {
-    @apply flex flex-row;
     span {
-        @apply mr-3;
+        @apply inline-block mt-4 mr-3;
     }
 }

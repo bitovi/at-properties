@@ -1,6 +1,6 @@
 <template>
     <div class="sc-testimonial">
-        <p class="sc-testimonial-content"><slot /></p>
+        <p><q><slot /></q></p>
         <sc-rating v-if="score" :score="score"></sc-rating>
     </div>
 </template>

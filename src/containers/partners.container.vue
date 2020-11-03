@@ -1,7 +1,7 @@
 <template>
     <article id="partners">
         <header class="section-title" :style="`background-image: url('${publicPath}images/bg/bg-partners.jpg')`">
-            <div class="border-inset centered-middle">
+            <div class="section-border centered-middle">
                 <hgroup>
                     <h2 class="head-2">Our Partners</h2>
                     <h3 class="head-6 accent-above-center">All working as a team, through every step of the transaction</h3>

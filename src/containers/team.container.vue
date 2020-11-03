@@ -8,8 +8,9 @@
                         :lg="`images/profiles/olivia-carson-lg.jpg`"
                         alt="Our Team"
                         caption="Our Team"
-                        border="border-inset" 
+                        border="photo-border" 
                         ar="ar ar-4-5"
+                        position="object-bottom"
                     ></sc-photo>
                 </div>
                 <div id="team-bio" class="md:col-span-2 xl:col-span-1">

@@ -7,8 +7,9 @@
                     :lg="`${publicPath}images/profiles/brooklyn-simmons-lg.jpg`"
                     alt="Brooklyn Simmons"
                     caption="Brooklyn Simmons"
-                    border="border-inset" 
+                    border="photo-border" 
                     ar="ar ar-4-5"
+                    position="object-top"
                 ></sc-photo>
             </div>
             <div id="co-agent-bio" class="md:col-span-2 xl:col-span-1">

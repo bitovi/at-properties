@@ -1,7 +1,7 @@
 <template>
     <article id="agent" class="border-b border-light-gray pb-24">
         <!-- <header class="section-title" :style="`background-image: url('${publicPath}images/bg/bg-agent.jpg')`">
-            <div class="border-inset grid grid-cols-1 justify-between">
+            <div class="section-border grid grid-cols-1 justify-between">
                 <div class="text-center"> 
                     <img class="mt-4 md:mt-12 w-2/4 md:w-auto mb-4" alt="@properties" :src="`${publicPath}images/at-logo.svg`">
                 </div>
@@ -20,8 +20,9 @@
                     :lg="`${publicPath}images/profiles/thad-wong-lg.jpg`"
                     alt="Thad Wong"
                     caption="Thad Wong"
-                    border="border-inset" 
+                    border="photo-border" 
                     ar="ar ar-4-5"
+                    position="object-top"
                 ></sc-photo>
             </div>
             <div class="md:col-span-2 xl:col-span-1">
@@ -38,10 +39,10 @@
                 </section>
                 <section id="agent-testimonials">
                     <h3 class="head-5 accent-above-left">Testimonials</h3>
-                    <div class="space-y-6 divide-y divide-light-gray">
-                        <sc-testimonial :score="4">“Thad provided outstanding service for a very complex transaction that had to be completed within a tight timeframe while working with a difficult counterparty.”</sc-testimonial>
-                        <sc-testimonial>“I offer my highest recommendation--this is the broker you want on your side." [Test no score]</sc-testimonial>
-                        <sc-testimonial :score="5">“Moreover, he brings with him an entire team to make your purchase or sale go through without a hitch.”</sc-testimonial>
+                    <div class="space-y-4 divide-y divide-light-gray">
+                        <sc-testimonial :score="4">Thad provided outstanding service for a very complex transaction that had to be completed within a tight timeframe while working with a difficult counterparty.</sc-testimonial>
+                        <sc-testimonial>I offer my highest recommendation--this is the broker you want on your side. [Test no score]</sc-testimonial>
+                        <sc-testimonial :score="5">Moreover, he brings with him an entire team to make your purchase or sale go through without a hitch.</sc-testimonial>
                     </div>
                     <button class="btn">View More Testimonials</button>
                 </section>
@@ -49,10 +50,14 @@
                     <h3 class="head-5 accent-above-left">Recent Sales</h3>
                     <div class="space-y-4 divide-y divide-light-gray">
                         <div class="property">
-                            <div class="ar ar-4-3">
-                                <picture class="ar-inner">
-                                    <img src="https://via.placeholder.com/200x150/CCC/333.png" alt="" class="w-full" />
-                                </picture>
+                            <div>
+                                <sc-photo 
+                                    :sm="`${publicPath}images/sales/property-1.jpg`"
+                                    :lg="`${publicPath}images/sales/property-1.jpg`"
+                                    alt="Gray and white Craftsman style country home" 
+                                    ar="ar ar-3-2"
+                                    position="object-top"
+                                ></sc-photo>
                             </div>
                             <div>
                                 <p><strong>$589,500</strong></p>
@@ -60,25 +65,33 @@
                             </div>
                         </div>
                         <div class="property">
-                            <div class="ar ar-4-3">
-                                <picture class="ar-inner">
-                                    <img src="https://via.placeholder.com/200x150/CCC/333.png" alt="" class="w-full" />
-                                </picture>
+                            <div>
+                                <sc-photo 
+                                    :sm="`${publicPath}images/sales/property-2.jpg`"
+                                    :lg="`${publicPath}images/sales/property-2.jpg`"
+                                    alt="Modern glass facade home" 
+                                    ar="ar ar-3-2"
+                                    position="object-top"
+                                ></sc-photo>
                             </div>
                             <div>
-                                <p><strong>$589,500</strong></p>
-                                <p>26W268 Inwood Lane<br />Winfield, IL 60190</p>
+                                <p><strong>$1,140,100</strong></p>
+                                <p>701 W Thomas Rd<br />Wheaton, IL 60187</p>
                             </div>
                         </div>
                         <div class="property">
-                            <div class="ar ar-4-3">
-                                <picture class="ar-inner">
-                                    <img src="https://via.placeholder.com/200x150/CCC/333.png" alt="" class="w-full" />
-                                </picture>
+                            <div>
+                                <sc-photo 
+                                    :sm="`${publicPath}images/sales/property-3.jpg`"
+                                    :lg="`${publicPath}images/sales/property-3.jpg`"
+                                    alt="Modern stucco entryway" 
+                                    ar="ar ar-3-2"
+                                    position="object-top"
+                                ></sc-photo>
                             </div>
                             <div>
-                                <p><strong>$589,500</strong></p>
-                                <p>26W268 Inwood Lane<br />Winfield, IL 60190</p>
+                                <p><strong>$423,250</strong></p>
+                                <p>2865 West Shakespeare Avenue<br />Chicago, IL 60647</p>
                             </div>
                         </div>
                     </div>

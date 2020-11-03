@@ -1,15 +1,3 @@
-
 .sc-testimonial {
-    @apply pt-6 pb-6 border-light-gray;
-    
-    &:first-child,
-    &:first-of-type {
-        @apply pt-0;
-        border: none;
-    }
-
-    p,
-    .sc-testimonial-content {
-        @apply mb-4;
-    }
+    @apply pt-4 pb-3;
 }

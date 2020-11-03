@@ -53,47 +53,53 @@ that is currently Firefox-only */
 /* Visibility */ 
 
 .show {
-    display: block;
-    visibility: visible;
+    display: block !important;
+    visibility: visible !important;
 }
+.hide {
+    display: none !important;
+    visibility: hidden !important;
+}
+
 .show-sm {
+    @extend .hide;
+
     @screen sm {
-        display: block;
-        visibility: visible;
+        @extend .show;
     }
 }
 .show-md {
+    @extend .hide;
+
     @screen md {
-        display: block;
-        visibility: visible;
+        @extend .show;
     }
 }
 .show-lg {
+    @extend .hide;
+
     @screen lg {
-        display: block;
-        visibility: visible;
+        @extend .show;
     }
 }
-
-.hide {
-    display: none;
-    visibility: hidden;
-}
 .hide-sm {
+    @extend .show;
+
     @screen sm {
-        display: none;
-        visibility: hidden;
+        @extend .hide;
     }
 }
 .hide-md {
+    @extend .show;
+    
     @screen md {
-        display: none;
-        visibility: hidden;
+        @extend .hide;
     }
 }
 .hide-lg {
+    @extend .show;
+    
     @screen lg {
-        display: none;
-        visibility: hidden;
+        @extend .hide;
     }
 }

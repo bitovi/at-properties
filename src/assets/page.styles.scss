@@ -1,36 +1,10 @@
+.page-nav {
+    @apply z-50 fixed bottom-0 left-0 w-full bg-white border-t-4 border-double border-light-gray flex justify-between;
 
-
-/* .sc-page {
-    @apply flex;
-    @apply flex-col;
-    
-    padding: theme('spacing.4');
-
-    &.sc-hero {
-        @apply items-center;
-        @apply p-6;
-        @apply pb-0;
-        @apply h-screen;
-        @apply bg-fixed;
-        @apply bg-cover;
-        @apply bg-no-repeat;
-        outline: 1px solid theme('colors.red');
-        //Build order requires this be hard coded
-        outline-offset: -10px;
+    div {
+        @apply px-5 py-2;
     }
-
-    &.sc-content {
-        margin: 0 theme('spacing.4');
-        padding: 0 theme('spacing.1');
-        border: 3px double theme('colors.red');
-        border-top: none;
-        border-bottom: none;
-        @media (min-width: 640px) {
-            padding: 0 theme('spacing.4');   
-        }
-    }
-
-} */
+}
 
 article + article {
     @apply mt-24;
@@ -43,7 +17,7 @@ section + section {
 .section-title {
     @apply w-screen h-screen p-5 bg-light-gray bg-cover bg-no-repeat;
 
-    .border-inset {
+    .section-border {
         @apply w-full h-full border border-dark-gray;
     }
 }
@@ -73,5 +47,23 @@ section + section {
 .text-center {
     img {
         @apply mx-auto;
+    }
+}
+
+/* Recent Sales */ 
+
+.property { 
+    @apply grid grid-cols-2 gap-4 pt-4; 
+    
+    @screen lg {
+        @apply grid-cols-3;
+
+        div:nth-child(2) {
+            @apply col-span-2;
+        }
+    }
+
+    p + p {
+        @apply mt-3;
     }
 }
