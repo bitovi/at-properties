@@ -5,9 +5,7 @@
         <div class="sc-slide-in-mask" @click.self="close" v-if="showModal">
                 <div class="sc-slide-in fade-slide-content">
                     <nav>
-                        <button @click.stop="close">
-                            Close
-                        </button>
+                        <sc-close-btn @click.stop="close" />
                     </nav>
                     <div class="sc-slide-in-content" >
                         <slot />

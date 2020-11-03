@@ -1,0 +1,44 @@
+
+.sc-close-btn {
+    @apply block;
+    border: 1px solid $dark-gray;
+
+    svg .shape {
+        fill: $white;
+    }
+
+    &:hover,
+    &:active,
+    &.light-theme:hover,
+    &.light-theme:active {
+        border: 1px solid $medium-gray;
+        svg .shape {
+            fill: $white;
+        }
+
+        .sc-close-btn-inner {
+            background: $medium-gray;
+        }
+    }
+
+    .sc-close-btn-inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $dark-gray;
+        margin: 4px;
+        width: 40px;
+        height: 40px;
+    }
+
+    &.light-theme {
+        border-color: $white;
+        svg .shape {
+            fill: $dark-gray;
+        }
+
+        .sc-close-btn-inner {
+            background: $white;
+        }
+    }
+}
