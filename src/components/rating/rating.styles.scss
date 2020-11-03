@@ -1,5 +1,11 @@
 .sc-rating {
+    @apply  mt-4;
+    
     span {
-        @apply inline-block mt-4 mr-3;
+        @apply inline-block mr-3;
+    }
+    svg {
+        @apply w-5 h-5;
+        fill: theme('colors.accent');
     }
 }

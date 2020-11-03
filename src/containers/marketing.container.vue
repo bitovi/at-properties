@@ -20,6 +20,7 @@
                 <div class="md:w-2/3 xl:w-1/3 mx-auto text-center">
                     <h3 class="head-5 accent-below-center">Listing Videos</h3>
                     <p>At @properties, video is a gamechanging marketing tool and we’re using it to tell your home’s story like never before.</p>
+                    <p>[ VIDEO HERE ]</p>
                 </div>
             </section>
             <section id="signage" class="p-6 md:p-0 grid md:grid-cols-2 gap-8">

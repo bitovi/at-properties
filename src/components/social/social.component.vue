@@ -1,15 +1,15 @@
 <template>
     <div class="sc-social">
-        <a v-if="facebook" :href="facebook" aria-label="Facebook">
+        <a v-if="facebook" :href="facebook" target="blank" aria-label="Facebook">
             <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
         </a>
-        <a v-if="instagram" :href="instagram" aria-label="Instagram">
+        <a v-if="instagram" :href="instagram" target="blank" aria-label="Instagram">
             <svg class="icon icon-instagram"><use xlink:href="#icon-instagram"></use></svg>
         </a>
-        <a v-if="twitter" :href="twitter" aria-label="Twitter">
+        <a v-if="twitter" :href="twitter" target="blank" aria-label="Twitter">
             <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
         </a>
-        <a v-if="youtube" :href="youtube" aria-label="YouTube">
+        <a v-if="youtube" :href="youtube" target="blank" aria-label="YouTube">
             <svg class="icon icon-youtube"><use xlink:href="#icon-youtube"></use></svg>
         </a>
     </div>

@@ -1,17 +1,35 @@
 .sc-social {
+    @apply mt-8;
+
     a {
-        @apply inline-block mr-6 text-dark-gray;
+        @apply inline-block mr-8;
     }
     svg {
         @apply w-10 h-10;
+        fill: theme('colors.dark-gray');
     }
 }
 
-.icon {
-    display: inline-block;
-    // width: 1em;
-    // height: 1em;
-    stroke-width: 0;
-    stroke: currentColor;
-    fill: currentColor;
+.icon-facebook {
+    &:hover, &:focus, &:active {
+        fill: #1877F2;
+    }
+}
+
+.icon-instagram {
+    &:hover, &:focus, &:active {
+        fill: #E4405F;
+    }
+}
+
+.icon-twitter {
+    &:hover, &:focus, &:active {
+        fill: #1DA1F2;
+    }
+}
+
+.icon-youtube {
+    &:hover, &:focus, &:active {
+        fill: #FF0000;
+    }
 }

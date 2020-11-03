@@ -57,6 +57,12 @@ section + section {
     }
 }
 
+/* Intro Slide */ 
+
+.scroll {
+    @apply font-gotham-medium text-tiny uppercase block mb-4;
+}
+
 /* Recent Sales */ 
 
 .property { 

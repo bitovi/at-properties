@@ -1,18 +1,24 @@
 <template>
     <article id="agent" class="border-b border-light-gray pb-24">
-        <!-- <header class="section-title" :style="`background-image: url('${publicPath}images/bg/bg-agent.jpg')`">
-            <div class="section-border grid grid-cols-1 justify-between">
+        <header class="section-title" :style="`background-image: url('${publicPath}images/bg/bg-agent.jpg')`">
+            <div class="section-border pt-10 px-10 pb-4 grid grid-cols-1 gap-8 content-between">
                 <div class="text-center"> 
-                    <img class="mt-4 md:mt-12 w-2/4 md:w-auto mb-4" alt="@properties" :src="`${publicPath}images/at-logo.svg`">
+                    <img :src="`${publicPath}images/at-logo.svg`" alt="@properties" class="w-1/2 md:w-auto" />
                 </div>
                 <div class="text-center">
-                    <img class="b-8 sm:pb-20" alt="Stop Looking. Start Finding." :src="`${publicPath}images/stop-looking.svg`">
-                    <h1 class="head-1">Top 1% in Chicago<br>with over $250M in sales</h1>
+                    <img :src="`${publicPath}images/stop-looking.svg`" alt="Stop Looking. Start Finding." class="w-3/4 lg:w-auto" />
+                </div>
+                <div class="text-center">
+                    <h1 class="head-1">Top 1% in Chicago<br>$250M Sales</h1>
                     <p class="head-6">Presented by Thad Wong for Stephanie Huarte & Mekael Wesley-Rosa</p>
                 </div>
-                <scroll-notify class="text-center"></scroll-notify>
+                <!-- <scroll-notify class="text-center"></scroll-notify> -->
+                <div class="text-center">
+                    <span class="scroll">Scroll to Continue</span>
+                    <img :src="`${publicPath}images/scroll-arrow.svg`" alt="" />
+                </div>
             </div>
-        </header> -->
+        </header>
         <div class="pt-24 px-12 xl:px-32 grid md:grid-cols-3 xl:grid-cols-2 gap-8 md:gap-16 xl:gap-32">
             <div>
                 <sc-photo 

@@ -108,12 +108,7 @@
                     <h3 class="head-2 accent-below-center-wide">Industry Leading Technology</h3>
                 </div>
                 <div>
-                    <sc-photo 
-                        :sm="`images/company/technology.jpg`"
-                        :lg="`images/company/technology.jpg`"
-                        alt="iPad screen showing colorful swirls"
-                        ar="ar ar-4-3 md:-ml-20"
-                    ></sc-photo>
+                    <p>[ VIDEO HERE ]</p>
                 </div>
                 <div class="self-center md:px-10">
                     <p class="accent-above-left">Designed, built and supported by @properties’ in-house programming team, pl@tform is the brokerage industry’s premier suite of technology applications for managing all aspects of your real estate transaction. Even before your home is officially listed, @properties brokers market internally to a powerful network of 3,000+ brokers – each with a broad sphere of influence that forms a rich source of prospects, buyers and referrals.</p>
