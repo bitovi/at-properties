@@ -1,24 +1,16 @@
 <template>
     <div class="sc-social">
         <a v-if="facebook" :href="facebook" aria-label="Facebook">
-            <svg>
-                <use xlink:href="#facebook" />
-            </svg>
+            <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
         </a>
         <a v-if="instagram" :href="instagram" aria-label="Instagram">
-            <svg>
-                <use xlink:href="#instagram" />
-            </svg>
+            <svg class="icon icon-instagram"><use xlink:href="#icon-instagram"></use></svg>
         </a>
         <a v-if="twitter" :href="twitter" aria-label="Twitter">
-            <svg> 
-                <use xlink:href="#twitter" />
-            </svg>
+            <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
         </a>
         <a v-if="youtube" :href="youtube" aria-label="YouTube">
-            <svg>
-                <use xlink:href="#youtube" />
-            </svg>
+            <svg class="icon icon-youtube"><use xlink:href="#icon-youtube"></use></svg>
         </a>
     </div>
 </template>
