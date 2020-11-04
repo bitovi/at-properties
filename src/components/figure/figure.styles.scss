@@ -1,5 +1,6 @@
 
 .dlp-figure {
+    @apply relative;
     color: $white;
     display: inline-block;
     outline: 1px solid $white;
