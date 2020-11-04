@@ -16,7 +16,7 @@
 
 <script>
 export default {
-    name: "profile-image",
+    name: "dlp-figure",
     props: {
         sm: {
             type: String,

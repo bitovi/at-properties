@@ -2,12 +2,12 @@
     <div class="sc-page sc-content">
         <article class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20">
             <aside class="sc-hero">
-                <profile-image 
+                <dlp-figure 
                     :sm="`${publicPath}images/profiles/brooklyn-simmons-sm.jpg`"
                     :lg="`${publicPath}images/profiles/brooklyn-simmons-lg.jpg`"
                     alt="Brooklyn Simmons"
                     caption="Brooklyn Simmons"
-                ></profile-image>
+                ></dlp-figure>
             </aside>
             <section>
                 <img

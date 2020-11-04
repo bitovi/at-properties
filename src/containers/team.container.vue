@@ -2,12 +2,12 @@
     <article class="sc-page sc-content">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20">
             <aside class="sc-hero">
-                <profile-image 
+                <dlp-figure 
                     :sm="`${publicPath}images/profiles/olivia-carson-sm.jpg`"
                     :lg="`${publicPath}images/profiles/olivia-carson-lg.jpg`"
                     alt="Olivia Carlson"
                     caption="Olivia Carlson"
-                ></profile-image>
+                ></dlp-figure>
             </aside>
             <section class="mb-16">
                 <img
