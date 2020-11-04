@@ -1,5 +1,5 @@
 <template>
-    <figure v-bind="$attrs" class="sc-hero-image" v-bind:class="showBorder">
+    <figure v-bind="$attrs" class="dlp-figure" v-bind:class="showBorder">
         <picture>
             <source v-if="lg" media="(min-width:1024px)" :srcset="lg">
             <source v-if="md" media="(min-width:769px)" :srcset="md">
@@ -8,7 +8,7 @@
                 alt="alt" 
                 :src="defaultImage" />
         </picture>
-        <figcaption v-if="caption" class="sc-hero-caption detail-heading">
+        <figcaption v-if="caption" class="dlp-figure-caption detail-heading">
             {{ caption }}
         </figcaption>
     </figure>

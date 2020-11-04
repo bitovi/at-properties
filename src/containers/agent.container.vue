@@ -16,6 +16,7 @@
                     :lg="`${publicPath}images/profiles/thad-wong-lg.jpg`"
                     alt="Thad Wong"
                     caption="Thad Wong"
+                    class="sticky"
                 ></dlp-figure>
             </aside>
             <article>

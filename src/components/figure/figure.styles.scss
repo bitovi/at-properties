@@ -1,6 +1,5 @@
 
-.sc-hero-image {
-    @apply relative;
+.dlp-figure {
     color: $white;
     display: inline-block;
     outline: 1px solid $white;
@@ -11,11 +10,16 @@
         color: $dark-gray;
     }
 
+    &.sticky {
+        @apply sticky;
+        top: theme('spacing.8')
+    }
+
     img {
         width: 100%;
     }
 
-    .sc-hero-caption {
+    .dlp-figure-caption {
         @apply absolute;
         @apply bottom-0;
         display: block;
