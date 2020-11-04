@@ -5,15 +5,15 @@
                 <div class="flex flex-row justify-center mt-20 mb-20">
                     <img
                         alt="Emily Sachs Wong - Luxury Living" 
-                        :src="`${publicPath}images/agent-logo.png`">
+                        :src="`${publicPath}images/logos/logo-emily-sachs-wong.jpg`">
                 </div>
             </header>        
         </section>
         <section class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20">
             <aside class="sc-hero">
                 <profile-image 
-                    :sm="`${publicPath}images/thad-wong-sm.jpg`"
-                    :lg="`${publicPath}images/thad-wong-lg.jpg`"
+                    :sm="`${publicPath}images/profiles/thad-wong-sm.jpg`"
+                    :lg="`${publicPath}images/profiles/thad-wong-lg.jpg`"
                     alt="Thad Wong"
                     caption="Thad Wong"
                 ></profile-image>

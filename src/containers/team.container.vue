@@ -3,8 +3,8 @@
         <article class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20">
             <aside class="sc-hero">
                 <profile-image 
-                    :sm="`${publicPath}images/team-sm.jpg`"
-                    :lg="`${publicPath}images/team-lg.jpg`"
+                    :sm="`${publicPath}images/profiles/olivia-carson-sm.jpg`"
+                    :lg="`${publicPath}images/profiles/olivia-carson-lg.jpg`"
                     alt="Olivia Carlson"
                     caption="Olivia Carlson"
                 ></profile-image>
@@ -14,7 +14,7 @@
                     <img
                         class="mb-8"
                         alt="Olivia Carlson" 
-                        :src="`${publicPath}images/olivia-carlson.png`">
+                        :src="`${publicPath}images/logos/logo-olivia-carson.jpg`">
                     <h1 class="title-heading">Olivia Carlson</h1>
                     <h2 class="section-heading">Team Bio</h2>
                     <p>My greatest desire is to invest in my neighbors and connect them to their community. This was the driving force behind my decision to leave a career in commercial interiors and become a Broker. My passion of design combined with business skills and vast real estate experience helps to lead clients through their most important investment: your home.</p>
