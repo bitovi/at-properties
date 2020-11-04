@@ -25,7 +25,7 @@
                     <p v-html="i18n.thad.sample"></p>
                     <div class="sc-btn-group">
                         <sc-button type="button" @click="showModal('AgentModal')">Read Full Bio</sc-button>
-                        <sc-slide-in ref="AgentModal" :srHeading="i18n.thad.modalSRHeading">
+                        <sc-slide-in ref="AgentModal">
                             <div v-html="i18n.thad.full"></div>
                         </sc-slide-in>
                         <sc-button type="button">Watch Agent Video</sc-button>
@@ -87,15 +87,13 @@
 </template>
 
 <script>
-import Strings from '../assets/strings/bio.i18n.json'
-
+import BioStrings from '../assets/strings/bio.i18n.json'
 export default {
     name: 'agentContainer',
     data(){
         return {
-            activeModal: 0,
             publicPath: process.env.BASE_URL,
-            i18n: Strings
+            i18n: BioStrings
         }
     },
     methods: {

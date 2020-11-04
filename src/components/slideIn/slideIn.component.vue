@@ -29,6 +29,7 @@
     </transition>
 </template>
 <script>
+import A11yStrings from '../../assets/strings/a11y.i18n.json'
 // ref to <body>
 const ElBody = document.getElementsByTagName("body")[0]
 
@@ -36,7 +37,8 @@ export default {
     name: 'sc-slide-in',
     props: {
         srHeading:{
-            type: String
+            type: String,
+            default: A11yStrings.defaults.modal.heading
         }
     },
     data() {
