@@ -1,13 +1,5 @@
 <template>
     <article id="company" class="sc-page sc-content">
-        <header class="section-title" :style="`background-image: url('${publicPath}images/bg/bg-company.jpg')`">
-            <div class="section-border centered-middle">
-                <hgroup>
-                    <h2 class="head-2">Company Profile</h2>
-                    <h3 class="head-6 accent-above-center">Lorem Ipsum</h3>
-                </hgroup>
-            </div>
-        </header>
         <div class="section-content">
             <section id="company-history" class="p-6 md:p-0 grid md:grid-cols-2 gap-8">
                 <div class="self-center md:px-10">
@@ -19,8 +11,6 @@
                         :sm="`images/company/history-1.jpg`"
                         :lg="`images/company/history-1.jpg`"
                         alt="Two women talking in a cubicle"
-                        border="photo-border" 
-                        ar="ar ar-2-3"
                     ></dlp-figure>
                 </div>
                 <div>
@@ -28,8 +18,6 @@
                         :sm="`images/company/history-2.jpg`"
                         :lg="`images/company/history-2.jpg`"
                         alt="Man presenting whiteboard ideas to his team"
-                        border="photo-border" 
-                        ar="ar ar-4-3 md:-ml-20"
                     ></dlp-figure>
                 </div>
                 <div class="self-center md:px-10">
@@ -41,8 +29,6 @@
                         :sm="`images/company/history-3.jpg`"
                         :lg="`images/company/history-3.jpg`"
                         alt="Overhead view of two people working at their desks"
-                        border="photo-border" 
-                        ar="ar ar-4-3"
                     ></dlp-figure>
                 </div>
             </section>

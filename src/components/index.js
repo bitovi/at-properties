@@ -7,7 +7,8 @@ import Rating from './rating/rating.component'
 import Testimonial from './testimonial/testimonial.component'
 import SalesCard from './salesCard/salesCard.component'
 import SlideIn from './slideIn/slideIn.component'
-import CloseBtn from './close/close.component';
+import CloseBtn from './close/close.component'
+import TitlePage from './title/title.page'
 
 Vue.component(ScrollNotify.name, ScrollNotify)
 Vue.component(Button.name, Button)
@@ -18,6 +19,7 @@ Vue.component(Testimonial.name, Testimonial)
 Vue.component(SalesCard.name, SalesCard)
 Vue.component(SlideIn.name, SlideIn)
 Vue.component(CloseBtn.name, CloseBtn)
+Vue.component(TitlePage.name, TitlePage)
 
 
 export {
@@ -29,6 +31,7 @@ export {
     Testimonial,
     SalesCard,
     SlideIn,
-    CloseBtn
+    CloseBtn,
+    TitlePage
 }
 

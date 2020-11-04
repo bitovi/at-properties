@@ -15,7 +15,7 @@
                     alt="Olivia Carlson" 
                     :src="`${publicPath}images/logos/logo-olivia-carson.jpg`">
                 <h1 class="title-heading">Olivia Carlson</h1>
-                <h2 class="section-heading">Team Bio</h2>
+                <h2 class="section-heading accent">Team Bio</h2>
                 <p v-html="i18n['olivia-arson'].sample"></p>
                 <div class="sc-btn-group">
                     <sc-button type="button" @click="showModal('AgentModal')">Read Full Bio</sc-button>
@@ -43,7 +43,7 @@
             </div>
         </section>
         <section>
-            <h2 class="section-heading centered">Team Members</h2>
+            <h2 class="section-heading text-center accent accent-centered">Team Members</h2>
         </section>
     </article>
 </template>

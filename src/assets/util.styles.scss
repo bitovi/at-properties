@@ -23,21 +23,21 @@ body {
 }
 
 /* The emerging W3C standard that is currently Firefox-only */
-* {
-    scrollbar-width: thin;
-    scrollbar-color: $red $light-gray;
-}
+// * {
+//     scrollbar-width: thin;
+//     scrollbar-color: $red $light-gray;
+// }
 
-/* Works on Chrome/Edge/Safari */
-*::-webkit-scrollbar {
-    width: 4px;
-}
-*::-webkit-scrollbar-track {
-    background: $light-gray;
-}
-*::-webkit-scrollbar-thumb {
-    background-color: $red;
-}
+// /* Works on Chrome/Edge/Safari */
+// *::-webkit-scrollbar {
+//     width: 4px;
+// }
+// *::-webkit-scrollbar-track {
+//     background: $light-gray;
+// }
+// *::-webkit-scrollbar-thumb {
+//     background-color: $red;
+// }
 
 @font-face {
     font-family: 'GothamHTF';
