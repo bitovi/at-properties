@@ -1,16 +1,16 @@
 
-.sc-main {
+.dlp-main {
     //bottom nav height plus a bit
     padding-bottom: 50px;
 }
 
-.sc-page {
+.dlp-page {
     @apply flex;
     @apply flex-col;
     
     padding: theme('spacing.4');
 
-    &.sc-hero {
+    &.dlp-hero {
         @apply items-center;
         @apply p-6;
         @apply pb-0;
@@ -24,7 +24,7 @@
         outline-offset: -10px;
     }
 
-    &.sc-content {
+    &.dlp-content {
         margin: 0 theme('spacing.4') theme('spacing.24');
         padding: 0 theme('spacing.1');
         border: 3px double theme('colors.primary.100');

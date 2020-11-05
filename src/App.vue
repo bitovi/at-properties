@@ -3,7 +3,7 @@
     <header>
       <Nav />
     </header>
-    <main class="sc-main">
+    <main class="dlp-main">
       <TitleContainer />
       <AgentContainer />
       <CoagentContainer />

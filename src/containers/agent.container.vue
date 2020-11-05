@@ -1,5 +1,5 @@
 <template>
-    <div class='sc-page sc-content'>
+    <div class='dlp-page dlp-content'>
         <section>
             <header>
                 <div class="flex flex-row justify-center mt-20 mb-20">
@@ -10,7 +10,7 @@
             </header>        
         </section>
         <section class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20">
-            <aside class="sc-hero">
+            <aside class="dlp-hero">
                 <dlp-figure 
                     :sm="`${publicPath}images/profiles/thad-wong-sm.jpg`"
                     :lg="`${publicPath}images/profiles/thad-wong-lg.jpg`"

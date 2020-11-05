@@ -1,5 +1,5 @@
 <template>
-    <article id="markting" class="sc-page sc-content">
+    <article id="markting" class="dlp-page dlp-content">
         <section id="marketing-plan">
             <div class="md:w-2/3 xl:w-1/3 mx-auto text-center my-48">
                 <h3 class="section-heading accent accent-below">{{i18n.tailored.heading}}</h3>
