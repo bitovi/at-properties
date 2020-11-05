@@ -19,7 +19,7 @@
                             class="visually-hidden">
                             {{srHeading}}
                         </h1>
-                        <sc-close-btn @click.stop="close" />
+                        <dlp-close-btn @click.stop="close" />
                     </nav>
                     <div class="sc-slide-in-content" >
                         <slot />
@@ -56,7 +56,7 @@ export default {
     methods: {
         open() {
             try {
-                ElBody.classList.add('sc-modal-open')
+                ElBody.classList.add('dlp-modal-open')
             } catch (error) {
                 console.warn('Unable to fix scroll positon')   
             }
@@ -65,7 +65,7 @@ export default {
         },
         close: function() {
             try {
-                ElBody.classList.remove('sc-modal-open')
+                ElBody.classList.remove('dlp-modal-open')
             } catch (error) {
                 console.warn('Unable to release scroll position')   
             }

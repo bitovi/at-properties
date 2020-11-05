@@ -1,5 +1,5 @@
 
-.sc-nav {
+.dlp-nav {
     @apply fixed;
     @apply bottom-0;
     @apply w-screen;
@@ -7,7 +7,7 @@
     
     background: $white;
 
-    .sc-nav-m-tile {
+    .dlp-nav-m-tile {
         @apply px-4;
         @apply flex-col;
         @apply justify-center;
@@ -16,14 +16,14 @@
         flex-grow: 1;
     }
 
-    .sc-nav-tray {
+    .dlp-nav-tray {
         @apply flex;
         @apply flex-row;
         justify-content: space-between;
         align-items: flex-end;
     }
 
-    .sc-nav-menu {
+    .dlp-nav-menu {
         @apply visually-hidden;
         
     }
@@ -31,11 +31,11 @@
     @media (max-width: theme('screens.md')){
         &.isOpen {
             @apply h-full;
-            .sc-nav-tray {
+            .dlp-nav-tray {
                 @apply h-full;
             }
 
-            .sc-nav-menu {
+            .dlp-nav-menu {
                 @apply mb-20;
                 @apply visually-shown;
                 @apply absolute;
@@ -45,12 +45,12 @@
             }
         }
 
-        .sc-nav-m-tile {
+        .dlp-nav-m-tile {
             border-top: 1px solid $light-gray;
         }
     }
 
-    .sc-nav-ul {
+    .dlp-nav-ul {
         li {
             // Give the :after psydo space
             // without this, the links move around on hover
@@ -58,7 +58,7 @@
         }
     }
 
-    .sc-nav-link {
+    .dlp-nav-link {
         @apply py-2;
         @apply my-2;
         @apply inline-block;
@@ -70,7 +70,7 @@
         text-transform: uppercase;
         text-decoration: none;
         
-        &.sc-active,
+        &.dlp-active,
         &:hover,
         &:active {
             color: $dark-gray;
@@ -89,7 +89,7 @@
     @media (min-width: theme('screens.md')){
         border-top: 3px double $light-gray;
 
-        .sc-nav-m-tile {
+        .dlp-nav-m-tile {
             @apply px-2;
             border-left: 1px solid $light-gray;
             &:first-child {
@@ -99,18 +99,18 @@
         }
 
         //menu is open and compressed on desktop
-        .sc-nav-menu {
+        .dlp-nav-menu {
             @apply visually-shown;
             flex-grow: 2;
             .title-heading {
                 display: none;
             }
 
-            .sc-nav-ul {
+            .dlp-nav-ul {
                 @apply flex;
                 @apply flex-row;
                 justify-content: space-evenly;
-                .sc-nav-link {
+                .dlp-nav-link {
                     @apply pt-1;
                     font-size: theme('fontSize.sm');
                 }

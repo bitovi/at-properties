@@ -1,5 +1,5 @@
 
-.sc-close-btn {
+.dlp-close-btn {
     @apply block;
     border: 1px solid $dark-gray;
 
@@ -16,12 +16,12 @@
             fill: $white;
         }
 
-        .sc-close-btn-inner {
+        .dlp-close-btn-inner {
             background: $medium-gray;
         }
     }
 
-    .sc-close-btn-inner {
+    .dlp-close-btn-inner {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -37,7 +37,7 @@
             fill: $dark-gray;
         }
 
-        .sc-close-btn-inner {
+        .dlp-close-btn-inner {
             background: $white;
         }
     }
