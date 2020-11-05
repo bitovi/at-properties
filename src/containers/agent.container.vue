@@ -45,9 +45,9 @@
 
                 <section>
                     <h3 class="section-heading accent">Recent Sales</h3>
-                    <dlp-sales-card :image="`${publicPath}images/prop-image-1.jpg`" price="$589,500" address="26W268 Inwood Lane" address2="Winfield, IL 60190"></dlp-sales-card>
-                    <dlp-sales-card :image="`${publicPath}images/prop-image-2.jpg`" price="$1,140,100" address="701 W Thomas Rd Wheaton, IL 60187"></dlp-sales-card>
-                    <dlp-sales-card :image="`${publicPath}images/prop-image-3.jpg`" price="$423,250" address="2865 West Shakespeare Avenue Chicago, IL 60647"></dlp-sales-card>
+                    <dlp-sales-card :image="`${publicPath}images/sales/property-1.jpg`" price="$589,500" address="26W268 Inwood Lane" address2="Winfield, IL 60190"></dlp-sales-card>
+                    <dlp-sales-card :image="`${publicPath}images/sales/property-2.jpg`" price="$1,140,100" address="701 W Thomas Rd Wheaton, IL 60187"></dlp-sales-card>
+                    <dlp-sales-card :image="`${publicPath}images/sales/property-3.jpg`" price="$423,250" address="2865 West Shakespeare Avenue Chicago, IL 60647"></dlp-sales-card>
                     <div class="dlp-btn-group">
                         <dlp-button href="#">View more sales</dlp-button>
                     </div>
