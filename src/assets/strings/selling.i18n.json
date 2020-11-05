@@ -1,0 +1,18 @@
+{
+    "pricing": {
+        "heading": "PRICING YOUR HOME",
+        "content": "<p>The surest way to get the highest selling price for your home is to set the listing price, correctly right out of the gate.</p><p>To determine the right listing price for your home, we will perform a Comparative Market Analysis with @properties’ Digital CMA. Unlike a traditional CMA, which is a static report, our Digital CMA is up-to the-minute accurate, using real-tome data from the local Multiple Listing Service.</p>"
+    },
+    "selling": {
+        "heading": "SELLING YOUR HOME",
+        "content": "Staging is the art of merchandising a home to improve its marketability. It can be as simple as rearranging a few pieces of furniture or as elaborate as hiring a professional to furnish an empty home right down to the plants and artwork."
+    },
+    "negotiation": {
+        "heading": "NEGOTIATION",
+        "content": "Priced correctly and marketed aggressively, most homes will draw a timely offer. A real estate transaction is a fluid process that does not end with an accepted offer."
+    },
+    "contract": {
+        "heading": "CONTRACT TO CLOSING",
+        "content": "Guiding your real estate transaction from contract to closing is a multi-step process that requires proactive management and thorough attention to detail. Our emphasis on communication, organization and followthrough ensures that deadlines are met, documents are distributed, and every item is in place to make your transaction efficient and seamless."
+    }
+}

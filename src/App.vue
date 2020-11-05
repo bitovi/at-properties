@@ -18,6 +18,10 @@
         heading="Marketing your home" 
         subheading="Marketing Plan" />
         <MarketingContainer />
+      <TitlePage 
+        :backgroundUrl="`${publicPath}images/bg/bg-marketing.jpg`"
+        heading="Selling your home"/>
+        <SellingContainer />
     </main>
   </div>
 </template>
@@ -30,6 +34,7 @@ import CoagentContainer from './containers/coagent.container'
 import TeamContainer from './containers/team.container'
 import CompanyContainer from './containers/company.container'
 import MarketingContainer from './containers/marketing.container'
+import SellingContainer from './containers/selling.component'
 
 import TitlePage from './components/title/title.page'
 
@@ -46,6 +51,7 @@ export default {
     TeamContainer,
     CompanyContainer,
     MarketingContainer,
+    SellingContainer,
 
     TitlePage
   },
