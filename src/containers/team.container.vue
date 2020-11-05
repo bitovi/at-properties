@@ -11,7 +11,7 @@
             </aside>
             <section class="mb-16">
                 <img
-                    class="mb-8"
+                    class="sm:mx-auto my-8 md:mb-8 md:my-0 md:mx-0"
                     alt="Olivia Carlson" 
                     :src="`${publicPath}images/logos/logo-olivia-carson.jpg`">
                 <h1 class="title-heading">Olivia Carlson</h1>

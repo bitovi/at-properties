@@ -11,7 +11,7 @@
             </aside>
             <section>
                 <img
-                    class="mb-8"
+                    class="sm:mx-auto my-8 md:mb-8 md:my-0 md:mx-0"
                     alt="Emily Sachs Wong - Luxury Living" 
                     :src="`${publicPath}images/logos/logo-emily-sachs-wong.jpg`">
                 <h1 class="title-heading">Brooklyn Simmons</h1>

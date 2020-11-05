@@ -1,5 +1,5 @@
 <template>
-    <figure v-bind="$attrs" class="dlp-figure" v-bind:class="showBorder">
+    <figure v-bind="$attrs" class="dlp-figure" v-bind:class="{ 'hide-border': !showBorder }">
         <picture>
             <source v-if="lg" media="(min-width:1024px)" :srcset="lg">
             <source v-if="md" media="(min-width:769px)" :srcset="md">

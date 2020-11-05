@@ -1,10 +1,20 @@
 <template>
     <article id="markting" class="dlp-page dlp-content">
         <section id="marketing-plan">
-            <div class="md:w-2/3 xl:w-1/3 mx-auto text-center my-48">
+            <div class="md:w-2/3 xl:w-1/3 mx-auto text-center mt-48 mb-32">
                 <h3 class="section-heading accent accent-below">{{i18n.tailored.heading}}</h3>
                 <p>{{i18n.tailored.content}}</p>
                 <dlp-button>View Custom Marketing Plan</dlp-button>
+            </div>
+            <div class="container mx-auto px-16 md:px-32">
+                <dlp-figure
+                        :sm="`${publicPath}images/marketing/iphone-sm.png`"
+                        :lg="`${publicPath}images/marketing/iphone-lg.png`"
+                        role="presentation"
+                        aria-hidden="true"
+                        :showBorder="false"
+                        alt="iPhone 11 Pro"
+                    />
             </div>
         </section>
         <section id="listing-videos">

@@ -16,6 +16,10 @@
         top: theme('spacing.8')
     }
 
+    &.hide-border {
+        outline: none;
+    }
+
     img {
         width: 100%;
     }
