@@ -2,7 +2,7 @@
     <nav class="dlp-nav" :class="{ isOpen: isOpen}" aria-label="Main Menu">
         <div class="dlp-nav-tray xl:container mx-auto">
             <div class="dlp-nav-m-tile flex md:items-center">
-                <img class="dlp-nav-logo" height="26" width="130" alt="@properties" :src="`${publicPath}images/at-logo.svg`">
+                <img class="dlp-nav-logo" height="26" width="130" alt="@properties" :src="`${publicPath}images/logos/logo-atproperties.svg`">
             </div>
             <div class="dlp-nav-menu" id="nav-menu-links">
                 <h2 class="title-heading mb-6">Menu</h2>
