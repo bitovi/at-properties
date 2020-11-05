@@ -13,6 +13,11 @@
         heading="Every home has a story" 
         subheading="Company Profile" />
       <CompanyContainer />
+      <TitlePage 
+        :backgroundUrl="`${publicPath}images/bg/bg-marketing.jpg`"
+        heading="Marketing your home" 
+        subheading="Marketing Plan" />
+        <MarketingContainer />
     </main>
   </div>
 </template>
@@ -24,6 +29,7 @@ import AgentContainer from './containers/agent.container'
 import CoagentContainer from './containers/coagent.container'
 import TeamContainer from './containers/team.container'
 import CompanyContainer from './containers/company.container'
+import MarketingContainer from './containers/marketing.container'
 
 import TitlePage from './components/title/title.page'
 
@@ -39,6 +45,8 @@ export default {
     CoagentContainer,
     TeamContainer,
     CompanyContainer,
+    MarketingContainer,
+
     TitlePage
   },
   data(){
