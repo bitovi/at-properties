@@ -9,6 +9,7 @@ import SalesCard from './salesCard/salesCard.component'
 import SlideIn from './slideIn/slideIn.component'
 import CloseBtn from './close/close.component'
 import TitlePage from './title/title.page'
+import DisplayCard from './displayCard/displayCard.component'
 
 Vue.component(ScrollNotify.name, ScrollNotify)
 Vue.component(Button.name, Button)
@@ -20,6 +21,7 @@ Vue.component(SalesCard.name, SalesCard)
 Vue.component(SlideIn.name, SlideIn)
 Vue.component(CloseBtn.name, CloseBtn)
 Vue.component(TitlePage.name, TitlePage)
+Vue.component(DisplayCard.name, DisplayCard)
 
 
 export {
@@ -32,6 +34,7 @@ export {
     SalesCard,
     SlideIn,
     CloseBtn,
-    TitlePage
+    TitlePage,
+    DisplayCard
 }
 

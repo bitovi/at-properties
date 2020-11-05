@@ -21,7 +21,12 @@
       <TitlePage 
         :backgroundUrl="`${publicPath}images/bg/bg-marketing.jpg`"
         heading="Selling your home"/>
-        <SellingContainer />
+      <SellingContainer />
+      <TitlePage 
+        :backgroundUrl="`${publicPath}images/bg/bg-partners.jpg`"
+        heading="Our Partners"
+        subheading="all working as a team, through every step of the transaction."/>
+      <PartnerContainer />
     </main>
   </div>
 </template>
@@ -35,6 +40,7 @@ import TeamContainer from './containers/team.container'
 import CompanyContainer from './containers/company.container'
 import MarketingContainer from './containers/marketing.container'
 import SellingContainer from './containers/selling.component'
+import PartnerContainer from './containers/partner.container'
 
 import TitlePage from './components/title/title.page'
 
@@ -52,6 +58,7 @@ export default {
     CompanyContainer,
     MarketingContainer,
     SellingContainer,
+    PartnerContainer,
 
     TitlePage
   },
