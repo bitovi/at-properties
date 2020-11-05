@@ -77,14 +77,7 @@ figcaption {
     font-size: theme('fontSize.lg');
     font-weight: 600;
     letter-spacing: 0.1em;
-    &:before {
-        height: 2px;
-        display: block;
-        width: theme('spacing.8');
-        background: $red;
-        content: '';
-        margin: theme('spacing.4') 0 theme('spacing.4');
-    }
+    
 }
 
 .detail-heading {
@@ -95,7 +88,47 @@ figcaption {
 
 .label-heading {
     font-size: theme('fontSize.xs');
+    font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
 }
 
+@mixin accent-psudo($width) {
+    height: 2px;
+    display: block;
+    width: theme('spacing.#{$width}');
+    background: $red;
+    content: '';
+}
+
+.accent {
+    &:before {
+        @include accent-psudo('8');
+        margin: theme('spacing.4') 0 theme('spacing.4');
+    }
+
+    &.accent-centered {
+        &:before, 
+        &:after {
+            margin: theme('spacing.4') auto;
+        }
+    }
+
+    &.accent-below {
+        &:before {
+            display: none;
+        }
+
+        &:after {
+            @include accent-psudo('8');
+            margin: theme('spacing.4') auto;
+        }
+    }
+
+    &.accent-wide {
+        &:before, 
+        &:after {
+            width: theme('spacing.16');
+        }
+    }
+}

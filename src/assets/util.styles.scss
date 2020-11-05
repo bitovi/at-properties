@@ -22,6 +22,23 @@ body {
     font-size: theme('fontSize.base');
 }
 
+/* The emerging W3C standard that is currently Firefox-only */
+// * {
+//     scrollbar-width: thin;
+//     scrollbar-color: $red $light-gray;
+// }
+
+// /* Works on Chrome/Edge/Safari */
+// *::-webkit-scrollbar {
+//     width: 4px;
+// }
+// *::-webkit-scrollbar-track {
+//     background: $light-gray;
+// }
+// *::-webkit-scrollbar-thumb {
+//     background-color: $red;
+// }
+
 @font-face {
     font-family: 'GothamHTF';
     src: url('/fonts/gothamhtf-medium-webfont.woff2') format('woff2'),

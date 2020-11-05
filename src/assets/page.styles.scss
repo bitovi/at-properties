@@ -14,7 +14,8 @@
         @apply items-center;
         @apply p-6;
         @apply pb-0;
-        @apply h-screen;
+        @apply h-screen; //fallback
+        height: calc(100vh - 48px);
         @apply bg-fixed;
         @apply bg-cover;
         @apply bg-no-repeat;

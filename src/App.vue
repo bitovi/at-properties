@@ -8,6 +8,25 @@
       <AgentContainer />
       <CoagentContainer />
       <TeamContainer />
+      <TitlePage 
+        :backgroundUrl="`${publicPath}images/bg/bg-company.jpg`"
+        heading="Every home has a story" 
+        subheading="Company Profile" />
+      <CompanyContainer />
+      <TitlePage 
+        :backgroundUrl="`${publicPath}images/bg/bg-marketing.jpg`"
+        heading="Marketing your home" 
+        subheading="Marketing Plan" />
+        <MarketingContainer />
+      <TitlePage 
+        :backgroundUrl="`${publicPath}images/bg/bg-marketing.jpg`"
+        heading="Selling your home"/>
+      <SellingContainer />
+      <TitlePage 
+        :backgroundUrl="`${publicPath}images/bg/bg-partners.jpg`"
+        heading="Our Partners"
+        subheading="all working as a team, through every step of the transaction."/>
+      <PartnerContainer />
     </main>
   </div>
 </template>
@@ -18,6 +37,12 @@ import TitleContainer from './containers/title.container'
 import AgentContainer from './containers/agent.container'
 import CoagentContainer from './containers/coagent.container'
 import TeamContainer from './containers/team.container'
+import CompanyContainer from './containers/company.container'
+import MarketingContainer from './containers/marketing.container'
+import SellingContainer from './containers/selling.component'
+import PartnerContainer from './containers/partner.container'
+
+import TitlePage from './components/title/title.page'
 
 import './assets/base.styles.scss'
 
@@ -29,7 +54,18 @@ export default {
     TitleContainer,
     AgentContainer,
     CoagentContainer,
-    TeamContainer
+    TeamContainer,
+    CompanyContainer,
+    MarketingContainer,
+    SellingContainer,
+    PartnerContainer,
+
+    TitlePage
+  },
+  data(){
+      return {
+          publicPath: process.env.BASE_URL
+      }
   }
 }
 </script>

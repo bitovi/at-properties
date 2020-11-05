@@ -1,55 +1,68 @@
 <template>
-    <div class="sc-page sc-content">
-        <article class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20">
+    <article class="sc-page sc-content">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20">
             <aside class="sc-hero">
-                <profile-image 
-                    :sm="`${publicPath}images/team-sm.jpg`"
-                    :lg="`${publicPath}images/team-lg.jpg`"
+                <dlp-figure 
+                    :sm="`${publicPath}images/profiles/olivia-carson-sm.jpg`"
+                    :lg="`${publicPath}images/profiles/olivia-carson-lg.jpg`"
                     alt="Olivia Carlson"
                     caption="Olivia Carlson"
-                ></profile-image>
+                ></dlp-figure>
             </aside>
-            <div>
-                <section class="mb-16">
-                    <img
-                        class="mb-8"
-                        alt="Olivia Carlson" 
-                        :src="`${publicPath}images/olivia-carlson.png`">
-                    <h1 class="title-heading">Olivia Carlson</h1>
-                    <h2 class="section-heading">Team Bio</h2>
-                    <p>My greatest desire is to invest in my neighbors and connect them to their community. This was the driving force behind my decision to leave a career in commercial interiors and become a Broker. My passion of design combined with business skills and vast real estate experience helps to lead clients through their most important investment: your home.</p>
-                    <div class="sc-btn-group">
-                        <sc-button href="#">Read Full Bio</sc-button>
-                        <sc-button type="button">Watch Team Video</sc-button>
-                    </div>
-                </section>
-                <section class="mb-16">
-                    <!-- This is effectivly the same thing as the horizontal one -->
-                    <!-- Do we really need two? -->
-                    <h3 class="section-heading">Team Stats</h3>
-                    <p class="mb-4">
-                        <span class="callout-heading">300+</span>
-                        <span class="label-heading">Transactions</span>
-                    </p>
-                    <p class="mb-4">
-                        <span class="callout-heading">10 Years</span>
-                        <span class="label-heading">Selling Real Estate</span>
-                    </p>
-                    <p class="mb-4">
-                        <span class="callout-heading">$24M+</span>
-                        <span class="label-heading">Total Sales</span>
-                    </p>
-                </section>
+            <section class="mb-16">
+                <img
+                    class="mb-8"
+                    alt="Olivia Carlson" 
+                    :src="`${publicPath}images/logos/logo-olivia-carson.jpg`">
+                <h1 class="title-heading">Olivia Carlson</h1>
+                <h2 class="section-heading accent">Team Bio</h2>
+                <p v-html="i18n['olivia-arson'].sample"></p>
+                <div class="sc-btn-group">
+                    <sc-button type="button" @click="showModal('AgentModal')">Read Full Bio</sc-button>
+                    <sc-slide-in ref="AgentModal">
+                        <div v-html="i18n['olivia-arson'].full"></div>
+                    </sc-slide-in>
+                    <sc-button type="button">Watch Team Video</sc-button>
+                </div>
+            </section>
+        </div>
+        <section id="team-stats" class="my-16">
+            <div class="grid md:grid-cols-3 border-t border-b border-light-gray divide-y md:divide-y-0 md:divide-x divide-light-gray">
+                <div class="p-8 text-center stat">
+                    <span class="callout-heading" aria-label="300 plus">300+</span> 
+                    <span class="label-heading">transactions</span>
+                </div>
+                <div class="p-8 text-center stat">
+                    <span class="callout-heading" >10 years</span> 
+                    <span class="label-heading">selling real estate</span>
+                </div>
+                <div class="p-8 text-center stat">
+                    <span class="callout-heading" aria-label="Over 24 million dollars">$24M+</span> 
+                    <span class="label-heading">total sales</span>
+                </div>
             </div>
-        </article>
-    </div>
+        </section>
+        <section>
+            <h2 class="section-heading text-center accent accent-centered">Team Members</h2>
+        </section>
+    </article>
 </template>
 <script>
+import BioStrings from '../assets/strings/bio.i18n.json'
+
 export default {
     name: 'teamContainer',
     data(){
         return {
-            publicPath: process.env.BASE_URL
+            publicPath: process.env.BASE_URL,
+            i18n: BioStrings,
+        }
+    },
+    methods: {
+        showModal: function(name) {
+            if(this.$refs[name]){
+                this.$refs[name].open()
+            }
         }
     }
 }
