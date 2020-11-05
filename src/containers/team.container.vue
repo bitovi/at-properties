@@ -19,9 +19,9 @@
                 <p v-html="i18n['olivia-arson'].sample"></p>
                 <div class="dlp-btn-group">
                     <dlp-button type="button" @click="showModal('AgentModal')">Read Full Bio</dlp-button>
-                    <sc-slide-in ref="AgentModal">
+                    <dlp-slide-in ref="AgentModal">
                         <div v-html="i18n['olivia-arson'].full"></div>
-                    </sc-slide-in>
+                    </dlp-slide-in>
                     <dlp-button type="button">Watch Team Video</dlp-button>
                 </div>
             </section>

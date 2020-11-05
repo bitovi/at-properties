@@ -1,13 +1,13 @@
 <template>
-    <div class="sc-testimonial">
-        <p class="sc-testimonial-content"><slot /></p>
-        <sc-rating v-if="score" :score="score"></sc-rating>
+    <div class="dlp-testimonial">
+        <p class="dlp-testimonial-content"><slot /></p>
+        <dlp-rating v-if="score" :score="score"></dlp-rating>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'sc-testimonial',
+    name: 'dlp-testimonial',
     props: {
         score: {
             type: [Number, null],

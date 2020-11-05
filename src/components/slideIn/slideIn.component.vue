@@ -4,13 +4,13 @@
         v-on:after-enter="setFocus"
         >
         <div 
-            class="sc-slide-in-mask" 
+            class="dlp-slide-in-mask" 
             @click.self="close" 
             v-if="showModal"
             role="dialog"
             aria-modal="true"
             aria-describedby="modalDescription">
-                <div class="sc-slide-in fade-slide-content">
+                <div class="dlp-slide-in fade-slide-content">
                     <nav class="absolute right-0 mr-16">
                         <h1 
                             ref="ElDescription"
@@ -21,7 +21,7 @@
                         </h1>
                         <dlp-close-btn @click.stop="close" />
                     </nav>
-                    <div class="sc-slide-in-content" >
+                    <div class="dlp-slide-in-content" >
                         <slot />
                     </div>
                 </div>
@@ -34,7 +34,7 @@ import A11yStrings from '../../assets/strings/a11y.i18n.json'
 const ElBody = document.getElementsByTagName("body")[0]
 
 export default {
-    name: 'sc-slide-in',
+    name: 'dlp-slide-in',
     props: {
         srHeading:{
             type: String,

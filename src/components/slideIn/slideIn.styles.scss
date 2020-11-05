@@ -1,4 +1,4 @@
-.sc-slide-in-mask {
+.dlp-slide-in-mask {
     @apply fixed;
     @apply top-0;
     @apply left-0;
@@ -10,7 +10,7 @@
     transition: opacity .3s ease;
 }
 
-.sc-slide-in {
+.dlp-slide-in {
     @apply h-full;
     @apply absolute;
     @apply right-0;
@@ -22,7 +22,7 @@
     overflow: hidden;
 }
 
-.sc-slide-in-content {
+.dlp-slide-in-content {
     padding: theme('spacing.16') theme('spacing.16') theme('spacing.16') theme('spacing.12');
     overflow: auto;
     height: 100%;

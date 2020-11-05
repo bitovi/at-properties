@@ -26,18 +26,18 @@
                     <p v-html="i18n.thad.sample"></p>
                     <div class="dlp-btn-group">
                         <dlp-button type="button" @click="showModal('AgentModal')">Read Full Bio</dlp-button>
-                        <sc-slide-in ref="AgentModal">
+                        <dlp-slide-in ref="AgentModal">
                             <div v-html="i18n.thad.full"></div>
-                        </sc-slide-in>
+                        </dlp-slide-in>
                         <dlp-button type="button">Watch Agent Video</dlp-button>
                     </div>
                 </section>
 
                 <section>
                     <h3 class="section-heading accent">Testimonials</h3>
-                    <sc-testimonial :score="4">“Thad provided outstanding service for a very complex transaction that had to be completed within a tight timeframe while working with a difficult counterparty.”</sc-testimonial>
-                    <sc-testimonial>“I offer my highest recommendation--this is the broker you want on your side." [Test no score]</sc-testimonial>
-                    <sc-testimonial :score="5">“Moreover, he brings with him an entire team to make your purchase or sale go through without a hitch.”</sc-testimonial>
+                    <dlp-testimonial :score="4">“Thad provided outstanding service for a very complex transaction that had to be completed within a tight timeframe while working with a difficult counterparty.”</dlp-testimonial>
+                    <dlp-testimonial>“I offer my highest recommendation--this is the broker you want on your side." [Test no score]</dlp-testimonial>
+                    <dlp-testimonial :score="5">“Moreover, he brings with him an entire team to make your purchase or sale go through without a hitch.”</dlp-testimonial>
                     <div class="dlp-btn-group">
                         <dlp-button href="#">View more testimonials</dlp-button>
                     </div>
@@ -45,9 +45,9 @@
 
                 <section>
                     <h3 class="section-heading accent">Recent Sales</h3>
-                    <sc-sales-card :image="`${publicPath}images/prop-image-1.jpg`" price="$589,500" address="26W268 Inwood Lane" address2="Winfield, IL 60190"></sc-sales-card>
-                    <sc-sales-card :image="`${publicPath}images/prop-image-2.jpg`" price="$1,140,100" address="701 W Thomas Rd Wheaton, IL 60187"></sc-sales-card>
-                    <sc-sales-card :image="`${publicPath}images/prop-image-3.jpg`" price="$423,250" address="2865 West Shakespeare Avenue Chicago, IL 60647"></sc-sales-card>
+                    <dlp-sales-card :image="`${publicPath}images/prop-image-1.jpg`" price="$589,500" address="26W268 Inwood Lane" address2="Winfield, IL 60190"></dlp-sales-card>
+                    <dlp-sales-card :image="`${publicPath}images/prop-image-2.jpg`" price="$1,140,100" address="701 W Thomas Rd Wheaton, IL 60187"></dlp-sales-card>
+                    <dlp-sales-card :image="`${publicPath}images/prop-image-3.jpg`" price="$423,250" address="2865 West Shakespeare Avenue Chicago, IL 60647"></dlp-sales-card>
                     <div class="dlp-btn-group">
                         <dlp-button href="#">View more sales</dlp-button>
                     </div>

@@ -1,5 +1,5 @@
 <template>
-    <div class="sc-sales-card grid grid-cols-3 gap-4">
+    <div class="dlp-sales-card grid grid-cols-3 gap-4">
         <div class="col-span-1">
             <img :src="image" alt="address"/>
         </div>
@@ -12,7 +12,7 @@
 </template>
 <script>
 export default {
-    name: "sc-sales-card",
+    name: "dlp-sales-card",
     props: {
         image: {
             type: String,
