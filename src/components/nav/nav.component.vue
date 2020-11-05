@@ -28,7 +28,7 @@
 
 <script>
 export default {
-    name: 'navContainer',
+    name: 'dlp-nav-component',
     data: () => ({
         publicPath: process.env.BASE_URL,
         isOpen: false
