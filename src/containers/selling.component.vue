@@ -4,7 +4,7 @@
             <div class="self-center md:px-10">
                 <h3 class="section-heading accent">{{i18n.pricing.heading}}</h3>
                 <div v-html="i18n.pricing.content"></div>
-                <sc-button>Learn More</sc-button>
+                <dlp-button>Learn More</dlp-button>
             </div>
             <div>
                 <p>[ VIDEO HERE ]</p>
@@ -19,12 +19,12 @@
             <div class="self-center md:px-10">
                 <h3 class="section-heading accent">{{i18n.selling.heading}}</h3>
                 <p>{{i18n.selling.content}}</p>
-                <sc-button>Learn More</sc-button>
+                <dlp-button>Learn More</dlp-button>
             </div>
             <div class="self-center md:px-10">
                 <h3 class="section-heading accent">{{i18n.negotiation.heading}}</h3>
                 <p>{{i18n.negotiation.content}}</p>
-                <sc-button>Learn More</sc-button>
+                <dlp-button>Learn More</dlp-button>
             </div>
             <div>
                 <dlp-figure 
@@ -43,7 +43,7 @@
             <div class="self-center md:px-10">
                 <h3 class="section-heading accent">{{i18n.contract.heading}}</h3>
                 <p>{{i18n.contract.content}}</p>
-                <sc-button>Learn More</sc-button>
+                <dlp-button>Learn More</dlp-button>
             </div>
         </section>
     </article>

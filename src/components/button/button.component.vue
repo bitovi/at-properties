@@ -4,10 +4,10 @@
         :type="nativeType"
         v-bind="$attrs"
         :href="href"
-        class="sc-btn"
+        class="dlp-btn"
         v-on="$listeners"
     >
-        <span class="sc-btn-inner">
+        <span class="dlp-btn-inner">
             <slot />
         </span>
     </component>
@@ -15,7 +15,7 @@
 
 <script>
 export default {
-    name: 'sc-button',
+    name: 'dlp-button',
     props: {
         href: {
             type: String,

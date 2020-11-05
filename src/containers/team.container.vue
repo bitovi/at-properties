@@ -17,12 +17,12 @@
                 <h1 class="title-heading">Olivia Carlson</h1>
                 <h2 class="section-heading accent">Team Bio</h2>
                 <p v-html="i18n['olivia-arson'].sample"></p>
-                <div class="sc-btn-group">
-                    <sc-button type="button" @click="showModal('AgentModal')">Read Full Bio</sc-button>
+                <div class="dlp-btn-group">
+                    <dlp-button type="button" @click="showModal('AgentModal')">Read Full Bio</dlp-button>
                     <sc-slide-in ref="AgentModal">
                         <div v-html="i18n['olivia-arson'].full"></div>
                     </sc-slide-in>
-                    <sc-button type="button">Watch Team Video</sc-button>
+                    <dlp-button type="button">Watch Team Video</dlp-button>
                 </div>
             </section>
         </div>

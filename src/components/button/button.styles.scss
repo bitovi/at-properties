@@ -1,5 +1,5 @@
 
-.sc-btn {
+.dlp-btn {
     @apply text-white;
     @apply mb-4;
     display: inline-block;
@@ -21,7 +21,7 @@
         border-color: $medium-gray;
     }
 
-    .sc-btn-inner {
+    .dlp-btn-inner {
         display: block;
         background: $dark-gray;
         margin: 4px;
@@ -40,9 +40,9 @@
     
 }
 
-.sc-btn-group {
+.dlp-btn-group {
     margin: theme('spacing.12') 0;
-    .sc-btn {
+    .dlp-btn {
         margin-right: theme('spacing.8');
         &:last-child {
             margin-right: theme('spacing.0');

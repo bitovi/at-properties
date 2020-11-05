@@ -74,7 +74,7 @@
             <div class="md:w-2/3 xl:w-1/3 mx-auto text-center my-48">
                 <h3 class="section-heading accent accent-centered">{{i18n.stats.heading}}</h3>
                 <p>{{i18n.stats.content}}</p>
-                <sc-button>View Local Stats</sc-button>
+                <dlp-button>View Local Stats</dlp-button>
             </div>
         </section>
         <section id="local-stats" class="p-6 md:p-0 grid md:grid-cols-2 gap-8">
@@ -86,7 +86,7 @@
             </div>
             <div class="self-center md:px-10">
                 <p class="accent">{{i18n.technology.content}}</p>
-                <sc-button>Learn More</sc-button>
+                <dlp-button>Learn More</dlp-button>
             </div>
         </section>
     </article>

@@ -4,7 +4,7 @@
             <div class="md:w-2/3 xl:w-1/3 mx-auto text-center my-48">
                 <h3 class="section-heading accent accent-below">{{i18n.tailored.heading}}</h3>
                 <p>{{i18n.tailored.content}}</p>
-                <sc-button>View Custom Marketing Plan</sc-button>
+                <dlp-button>View Custom Marketing Plan</dlp-button>
             </div>
         </section>
         <section id="listing-videos">

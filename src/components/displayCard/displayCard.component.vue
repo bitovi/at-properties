@@ -6,8 +6,8 @@
             </div>
         </div>
         <div class="dlp-display-card-cta">
-            <sc-button v-if="href" :href="href">{{cta}}</sc-button>
-            <sc-button v-else-if="click" nativeType="button" @click="click">{{cta}}</sc-button>
+            <dlp-button v-if="href" :href="href">{{cta}}</dlp-button>
+            <dlp-button v-else-if="click" nativeType="button" @click="click">{{cta}}</dlp-button>
         </div>
     </div>
 </template>
