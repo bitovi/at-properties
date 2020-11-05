@@ -25,14 +25,14 @@
     }
 
     &.dlp-content {
-        margin: 0 theme('spacing.4') theme('spacing.24');
-        padding: 0 theme('spacing.1');
+        margin: 0 theme('spacing.4') ;
+        padding: 0 theme('spacing.1') theme('spacing.24');
         border: 3px double theme('colors.primary.100');
         border-top: none;
         border-bottom: none;
         @media (min-width: theme('screens.sm')) {
-            padding: 0 theme('spacing.4');
-            margin: 0 theme('spacing.4') theme('spacing.56');
+            padding: 0 theme('spacing.4') theme('spacing.56');
+            margin: 0 theme('spacing.4');
         }
     }
 
