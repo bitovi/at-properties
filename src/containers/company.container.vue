@@ -1,5 +1,5 @@
 <template>
-    <article id="company" class="dlp-page dlp-content ">
+    <div class="dlp-page dlp-content">
         <section id="company-history" class="container mx-auto py-48 grid md:grid-cols-2 gap-8 gap-y-48">
             <div class="self-center md:px-10">
                 <h3 class="section-heading accent ">{{i18n.idea.heading}}</h3>
@@ -70,14 +70,16 @@
                 ></dlp-figure>
             </div>
         </section>
-        <section id="local-stats">
+
+        <section id="company-local-stats">
             <div class="md:w-2/3 xl:w-1/3 mx-auto text-center my-48">
                 <h3 class="section-heading accent accent-centered">{{i18n.stats.heading}}</h3>
                 <p>{{i18n.stats.content}}</p>
                 <dlp-button>View Local Stats</dlp-button>
             </div>
         </section>
-        <section id="local-stats" class="p-6 md:p-0 grid md:grid-cols-2 gap-8">
+
+        <section id="company-technology" class="p-6 md:p-0 grid md:grid-cols-2 gap-8">
             <div class="md:col-span-2 text-center mb-32">
                 <h3 class="title-heading accent accent-below accent-wide">{{i18n.technology.heading}}</h3>
             </div>
@@ -89,7 +91,7 @@
                 <dlp-button>Learn More</dlp-button>
             </div>
         </section>
-    </article>
+    </div>
 </template>
 
 <script>

@@ -1,15 +1,13 @@
 <template>
     <div class='dlp-page dlp-content'>
-        <section>
-            <header>
-                <div class="flex flex-row justify-center mt-20 mb-20">
-                    <img
-                        alt="Emily Sachs Wong - Luxury Living" 
-                        :src="`${publicPath}images/logos/logo-emily-sachs-wong.jpg`">
-                </div>
-            </header>        
-        </section>
-        <section class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20">
+        <header>
+            <div class="flex flex-row justify-center mt-20 mb-20">
+                <img
+                    alt="Emily Sachs Wong - Luxury Living" 
+                    :src="`${publicPath}images/logos/logo-emily-sachs-wong.jpg`">
+            </div>
+        </header>
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20">
             <aside class="dlp-hero">
                 <dlp-figure 
                     :sm="`${publicPath}images/profiles/thad-wong-sm.jpg`"
@@ -19,7 +17,7 @@
                     class="sticky"
                 ></dlp-figure>
             </aside>
-            <article>
+            <div>
                 <section id="agent-bio">
                     <h1 class="title-heading">Thad Wong</h1>
                     <h2 class="section-heading accent">Agent Bio</h2>
@@ -33,7 +31,7 @@
                     </div>
                 </section>
 
-                <section>
+                <section id="agent-testimonials">
                     <h3 class="section-heading accent">Testimonials</h3>
                     <dlp-testimonial :score="4">“Thad provided outstanding service for a very complex transaction that had to be completed within a tight timeframe while working with a difficult counterparty.”</dlp-testimonial>
                     <dlp-testimonial>“I offer my highest recommendation--this is the broker you want on your side." [Test no score]</dlp-testimonial>
@@ -43,7 +41,7 @@
                     </div>
                 </section>
 
-                <section>
+                <section id="agent-sales">
                     <h3 class="section-heading accent">Recent Sales</h3>
                     <dlp-sales-card :image="`${publicPath}images/sales/property-1.jpg`" price="$589,500" address="26W268 Inwood Lane" address2="Winfield, IL 60190"></dlp-sales-card>
                     <dlp-sales-card :image="`${publicPath}images/sales/property-2.jpg`" price="$1,140,100" address="701 W Thomas Rd Wheaton, IL 60187"></dlp-sales-card>
@@ -53,7 +51,7 @@
                     </div>
                 </section>
 
-                <section class="mb-16">
+                <section id="agent-stats" class="mb-16">
                     <h3 class="section-heading accent">Agent Stats</h3>
                     <!-- TODO: Nick isn't overly fond of this. -->
                     <!-- Is there better semantics? -->
@@ -71,7 +69,7 @@
                     </p>
                 </section>
 
-                <section class="mb-16">
+                <section id="agent-contact" class="mb-16">
                     <h3 class="section-heading accent">Agent Contact</h3>
                     <address>
                         <a href="tel:+1-312-999-0848">312.999.0848</a><br /><br />
@@ -82,8 +80,8 @@
                         <a href="#" target="_blank">Instagram</a>
                     </div>
                 </section>
-            </article>
-        </section>
+            </div>
+        </div>
     </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
     <div class="dlp-page dlp-content">
-        <article class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20">
             <aside class="dlp-hero">
                 <dlp-figure 
                     :sm="`${publicPath}images/profiles/brooklyn-simmons-sm.jpg`"
@@ -22,7 +22,7 @@
                     <dlp-button type="button">Watch Agent Video</dlp-button>
                 </div>
             </section>
-        </article>
+        </div>
     </div>
 </template>
 <script>

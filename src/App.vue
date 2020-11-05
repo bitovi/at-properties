@@ -5,28 +5,42 @@
     </header>
     <main class="dlp-main">
       <TitleContainer />
-      <AgentContainer />
-      <CoagentContainer />
-      <TeamContainer />
-      <TitlePage 
-        :backgroundUrl="`${publicPath}images/bg/bg-company.jpg`"
-        heading="Every home has a story" 
-        subheading="Company Profile" />
-      <CompanyContainer />
-      <TitlePage 
-        :backgroundUrl="`${publicPath}images/bg/bg-marketing.jpg`"
-        heading="Marketing your home" 
-        subheading="Marketing Plan" />
+      <article id="agent">
+        <AgentContainer />
+      </article>
+      <article id="co-agent">
+        <CoagentContainer />
+      </article>
+      <article id="team">
+        <TeamContainer />
+      </article>
+      <article id="company">
+        <TitlePage 
+          :backgroundUrl="`${publicPath}images/bg/bg-company.jpg`"
+          heading="Every home has a story" 
+          subheading="Company Profile" />
+        <CompanyContainer />
+      </article>
+      <article id="marketing">
+        <TitlePage 
+          :backgroundUrl="`${publicPath}images/bg/bg-marketing.jpg`"
+          heading="Marketing your home" 
+          subheading="Marketing Plan" />
         <MarketingContainer />
-      <TitlePage 
-        :backgroundUrl="`${publicPath}images/bg/bg-marketing.jpg`"
-        heading="Selling your home"/>
-      <SellingContainer />
-      <TitlePage 
-        :backgroundUrl="`${publicPath}images/bg/bg-partners.jpg`"
-        heading="Our Partners"
-        subheading="all working as a team, through every step of the transaction."/>
-      <PartnerContainer />
+      </article>
+      <article id="selling">
+        <TitlePage 
+          :backgroundUrl="`${publicPath}images/bg/bg-marketing.jpg`"
+          heading="Selling your home"/>
+        <SellingContainer />
+      </article>
+      <article id="partners">
+        <TitlePage 
+          :backgroundUrl="`${publicPath}images/bg/bg-partners.jpg`"
+          heading="Our Partners"
+          subheading="all working as a team, through every step of the transaction."/>
+        <PartnerContainer />
+      </article>
     </main>
   </div>
 </template>

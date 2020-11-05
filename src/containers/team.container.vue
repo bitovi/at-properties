@@ -1,5 +1,5 @@
 <template>
-    <article class="dlp-page dlp-content">
+    <div class="dlp-page dlp-content">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20">
             <aside class="dlp-hero">
                 <dlp-figure 
@@ -26,6 +26,7 @@
                 </div>
             </section>
         </div>
+        
         <section id="team-stats" class="my-16">
             <div class="grid md:grid-cols-3 border-t border-b border-light-gray divide-y md:divide-y-0 md:divide-x divide-light-gray">
                 <div class="p-8 text-center stat">
@@ -42,10 +43,11 @@
                 </div>
             </div>
         </section>
+
         <section>
             <h2 class="section-heading text-center accent accent-centered">Team Members</h2>
         </section>
-    </article>
+    </div>
 </template>
 <script>
 import BioStrings from '../assets/strings/bio.i18n.json'

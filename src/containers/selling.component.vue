@@ -1,5 +1,5 @@
 <template>
-    <article id="selling" class="dlp-page dlp-content">
+    <div class="dlp-page dlp-content">
         <section id="pricing" class="container mx-auto py-48 grid md:grid-cols-2 gap-8 gap-y-48">
             <div class="self-center md:px-10">
                 <h3 class="section-heading accent">{{i18n.pricing.heading}}</h3>
@@ -46,7 +46,7 @@
                 <dlp-button>Learn More</dlp-button>
             </div>
         </section>
-    </article>
+    </div>
 </template>
 
 <script>
