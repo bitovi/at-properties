@@ -7,6 +7,7 @@
                     :lg="`${publicPath}images/profiles/olivia-carson-lg.jpg`"
                     alt="Olivia Carlson"
                     caption="Olivia Carlson"
+                    class="sticky"
                 ></dlp-figure>
             </aside>
             <section class="mb-16">
