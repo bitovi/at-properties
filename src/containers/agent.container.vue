@@ -7,7 +7,8 @@
                     :lg="`${publicPath}images/profiles/thad-wong-lg.jpg`"
                     alt="Thad Wong"
                     caption="Thad Wong"
-                    class="sticky"
+                    ar="ar ar-4-5"
+                    :isSticky="true"
                 ></dlp-figure>
             </aside>
             <div>

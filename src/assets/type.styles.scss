@@ -17,6 +17,11 @@ a {
     }
 }
 
+a:focus,
+button:focus {
+    outline-color: theme('colors.secondary.500');
+}
+
 address {
     font-style: normal;
 }

@@ -1,17 +1,22 @@
 <template>
-    <figure v-bind="$attrs" class="dlp-figure" v-bind:class="{ 'hide-border': !showBorder }">
-        <picture>
-            <source v-if="lg" media="(min-width:1024px)" :srcset="lg">
-            <source v-if="md" media="(min-width:769px)" :srcset="md">
-            <source v-if="sm" media="(min-width:640px)" :srcset="sm">
-            <img 
-                alt="alt" 
-                :src="defaultImage" />
-        </picture>
-        <figcaption v-if="caption" class="dlp-figure-caption head-6">
-            {{ caption }}
-        </figcaption>
-    </figure>
+    <div :class="{ 'sticky top-4': isSticky }">
+        <figure 
+            v-bind="$attrs" 
+            class="dlp-figure" 
+            v-bind:class="[{ 'hide-border': !showBorder }, ar]">
+            <picture>
+                <source v-if="lg" media="(min-width:1024px)" :srcset="lg">
+                <source v-if="md" media="(min-width:769px)" :srcset="md">
+                <source v-if="sm" media="(min-width:640px)" :srcset="sm">
+                <img 
+                    alt="alt" 
+                    :src="defaultImage" />
+            </picture>
+            <figcaption v-if="caption" class="dlp-figure-caption head-6">
+                {{ caption }}
+            </figcaption>
+        </figure>
+    </div>
 </template>
 
 <script>
@@ -42,6 +47,15 @@ export default {
         showBorder: {
             type: Boolean,
             default: true
+        },
+        isSticky: {
+            type: Boolean,
+            required: false,
+            default: false
+        },
+        ar: {
+            type: String,
+            default: null
         }
     },
     computed: {
