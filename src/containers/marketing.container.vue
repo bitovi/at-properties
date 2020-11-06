@@ -3,9 +3,9 @@
         <div class="container mx-auto">
             <section id="marketing-plan">
                 <div class="md:w-2/3 xl:w-1/3 mx-auto text-center mt-48 mb-32">
-                    <h3 class="section-heading accent accent-below">{{i18n.tailored.heading}}</h3>
+                    <h3 class="head-5 accent accent-below">{{i18n.tailored.heading}}</h3>
                     <p>{{i18n.tailored.content}}</p>
-                    <dlp-button>View Custom Marketing Plan</dlp-button>
+                    <dlp-button class="mt-4">View Custom Marketing Plan</dlp-button>
                 </div>
                 <div class="container mx-auto px-16 md:px-32">
                     <dlp-figure
@@ -21,7 +21,7 @@
 
             <section id="listing-videos">
                 <div class="md:w-2/3 xl:w-1/3 mx-auto text-center my-48">
-                    <h3 class="section-heading accent accent-below">{{i18n.listing.heading}}</h3>
+                    <h3 class="head-5 accent accent-below">{{i18n.listing.heading}}</h3>
                     <p>{{i18n.listing.content}}</p>
                     <p>[ VIDEO HERE ]</p>
                 </div>
@@ -36,14 +36,14 @@
                     ></dlp-figure >
                 </div>
                 <div class="self-center md:px-10 lg:text-left">
-                    <h3 class="section-heading accent">{{i18n.signage.heading}}</h3>
+                    <h3 class="head-5 accent">{{i18n.signage.heading}}</h3>
                     <p>{{i18n.signage.content}}</p>
                 </div>
             </section>
 
             <section id="marketing-assets" class="my-48">
                 <div class="p-8 text-center">
-                    <h3 class="title-heading accent accent-below accent-wide">Marketing Assets</h3>
+                    <h3 class="head-1 accent accent-below accent-wide">Marketing Assets</h3>
                 </div>
                 <div class="text-center">
                     <p>[ CAROUSEL HERE ]</p>
@@ -52,7 +52,7 @@
             
             <section id="global-reach" class="my-48">
                 <div class="p-8 text-center">
-                    <h3 class="title-heading accent accent-below accent-wide">{{i18n.global.heading}}</h3>
+                    <h3 class="head-1 accent accent-below accent-wide">{{i18n.global.heading}}</h3>
                     <p>{{i18n.global.content}}</p>
                 </div>
                 <div class="text-center">

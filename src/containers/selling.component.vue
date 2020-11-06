@@ -2,9 +2,11 @@
     <div class="dlp-page dlp-content">
         <section id="pricing" class="container mx-auto py-48 grid md:grid-cols-2 gap-8 gap-y-48">
             <div class="self-center md:px-10">
-                <h3 class="section-heading accent">{{i18n.pricing.heading}}</h3>
-                <div v-html="i18n.pricing.content"></div>
-                <dlp-button>Learn More</dlp-button>
+                <h3 class="head-5 accent">{{i18n.pricing.heading}}</h3>
+                <div v-html="i18n.pricing.content" class="mt-4"></div>
+                <div class="dlp-btn-group">
+                    <dlp-button>Learn More</dlp-button>
+                </div>
             </div>
             <div>
                 <p>[ VIDEO HERE ]</p>
@@ -17,14 +19,18 @@
                 ></dlp-figure>
             </div>
             <div class="self-center md:px-10">
-                <h3 class="section-heading accent">{{i18n.selling.heading}}</h3>
+                <h3 class="head-5 accent">{{i18n.selling.heading}}</h3>
                 <p>{{i18n.selling.content}}</p>
-                <dlp-button>Learn More</dlp-button>
+                <div class="dlp-btn-group">
+                    <dlp-button>Learn More</dlp-button>
+                </div>
             </div>
             <div class="self-center md:px-10">
-                <h3 class="section-heading accent">{{i18n.negotiation.heading}}</h3>
+                <h3 class="head-5 accent">{{i18n.negotiation.heading}}</h3>
                 <p>{{i18n.negotiation.content}}</p>
-                <dlp-button>Learn More</dlp-button>
+                <div class="dlp-btn-group">
+                    <dlp-button>Learn More</dlp-button>
+                </div>
             </div>
             <div>
                 <dlp-figure 
@@ -41,9 +47,11 @@
                 ></dlp-figure>
             </div>
             <div class="self-center md:px-10">
-                <h3 class="section-heading accent">{{i18n.contract.heading}}</h3>
+                <h3 class="head-5 accent">{{i18n.contract.heading}}</h3>
                 <p>{{i18n.contract.content}}</p>
-                <dlp-button>Learn More</dlp-button>
+                <div class="dlp-btn-group">
+                    <dlp-button>Learn More</dlp-button>
+                </div>
             </div>
         </section>
     </div>

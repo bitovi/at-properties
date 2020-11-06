@@ -2,7 +2,7 @@
     <div class="dlp-page dlp-content">
         <section id="company-history" class="container mx-auto py-48 grid md:grid-cols-2 gap-8 gap-y-48">
             <div class="self-center md:px-10">
-                <h3 class="section-heading accent ">{{i18n.idea.heading}}</h3>
+                <h3 class="head-5 accent ">{{i18n.idea.heading}}</h3>
                 <p>{{i18n.idea.content}}</p>
             </div>
             <dlp-figure 
@@ -16,7 +16,7 @@
                 alt="Man presenting whiteboard ideas to his team"
             ></dlp-figure>
             <div class="self-center md:px-10">
-                <h3 class="section-heading accent">{{i18n.unique.heading}}</h3>
+                <h3 class="head-5 accent">{{i18n.unique.heading}}</h3>
                 <p>{{i18n.unique.content}}</p>
             </div>
             <dlp-figure 
@@ -28,17 +28,17 @@
         </section>
 
         <section id="company-timeline" class="container mx-auto mb-48">
-            <h3 class="title-heading text-center accent accent-below accent-wide">Company Timeline</h3>
+            <h3 class="head-1 text-center accent accent-below accent-wide">Company Timeline</h3>
             <p>[ CAROUSEL HERE ]</p>
         </section>
 
         <section id="company-stats" class="container mx-auto p-6 md:p-0 grid md:grid-cols-2 gap-8 gap-y-48">
             <div class="md:col-span-2">
-                <h3 class="title-heading text-center accent accent-below accent-wide">The Numbers Don't Lie</h3>
+                <h3 class="head-1 text-center accent accent-below accent-wide">The Numbers Don't Lie</h3>
             </div>
             <div class="self-center text-center stat stat-lg">
-                <span class="callout-heading">Number 10</span> 
-                <span class="label-heading">ranking according to Real Trends</span>
+                <span class="head-3 block text-accent">Number 10</span> 
+                <span class="head-6">ranking according to Real Trends</span>
             </div>
             <div>
                 <dlp-figure 
@@ -55,12 +55,12 @@
                 ></dlp-figure>
             </div>
             <div class="self-center text-center stat stat-lg">
-                <span class="callout-heading">25%</span> 
-                <span class="label-heading">of our listings sold in-house</span>
+                <span class="head-3 block text-accent">25%</span> 
+                <span class="head-6">of our listings sold in-house</span>
             </div>
             <div class="self-center text-center stat stat-lg">
-                <span class="callout-heading" aria-label="50 Billion Dollars">$50 Billion</span> 
-                <span class="label-heading">total home sales</span>
+                <span class="head-3 block text-accent" aria-label="50 Billion Dollars">$50 Billion</span> 
+                <span class="head-6">total home sales</span>
             </div>
             <div>
                 <dlp-figure 
@@ -73,22 +73,24 @@
 
         <section id="company-local-stats">
             <div class="md:w-2/3 xl:w-1/3 mx-auto text-center my-48">
-                <h3 class="section-heading accent accent-centered">{{i18n.stats.heading}}</h3>
+                <h3 class="head-5 accent accent-centered">{{i18n.stats.heading}}</h3>
                 <p>{{i18n.stats.content}}</p>
-                <dlp-button>View Local Stats</dlp-button>
+                <dlp-button class="mt-4">View Local Stats</dlp-button>
             </div>
         </section>
 
         <section id="company-technology" class="p-6 md:p-0 grid md:grid-cols-2 gap-8">
             <div class="md:col-span-2 text-center mb-32">
-                <h3 class="title-heading accent accent-below accent-wide">{{i18n.technology.heading}}</h3>
+                <h3 class="head-1 accent accent-below accent-wide">{{i18n.technology.heading}}</h3>
             </div>
             <div>
                 <p>[ VIDEO HERE ]</p>
             </div>
             <div class="self-center md:px-10">
                 <p class="accent">{{i18n.technology.content}}</p>
-                <dlp-button>Learn More</dlp-button>
+                <div class="dlp-btn-group">
+                    <dlp-button>Learn More</dlp-button>
+                </div>
             </div>
         </section>
     </div>

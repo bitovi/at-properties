@@ -5,7 +5,7 @@
                 <img class="dlp-nav-logo" height="26" width="130" alt="@properties" :src="`${publicPath}images/logos/logo-atproperties.svg`">
             </div>
             <div class="dlp-nav-menu" id="nav-menu-links">
-                <h2 class="title-heading mb-6">Menu</h2>
+                <h2 class="head-1 mb-6">Menu</h2>
                 <ul class="dlp-nav-ul">
                     <li><a class="dlp-nav-link scrollactive-item" href="#agent" @click="close">Agent Profile</a></li>
                     <li><a class="dlp-nav-link scrollactive-item" href="#company" @click="close">Company Profile</a></li>
@@ -26,7 +26,7 @@
                 </button>
             </div>
             <div class="dlp-nav-contact dlp-nav-m-tile flex">
-                <a href="#">Contact Me</a>
+                <a href="#contact">Contact Me</a>
             </div>
         </div>
     </scrollactive>

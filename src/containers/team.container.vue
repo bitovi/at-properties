@@ -15,8 +15,8 @@
                     class="sm:mx-auto my-8 md:mb-8 md:my-0 md:mx-0"
                     alt="Olivia Carlson" 
                     :src="`${publicPath}images/logos/logo-olivia-carson.jpg`">
-                <h1 class="title-heading">Olivia Carlson</h1>
-                <h2 class="section-heading accent">Team Bio</h2>
+                <h1 class="head-1">Olivia Carlson</h1>
+                <h2 class="head-5 accent">Team Bio</h2>
                 <p v-html="i18n['olivia-arson'].sample"></p>
                 <div class="dlp-btn-group">
                     <dlp-button type="button" @click="showModal('AgentModal')">Read Full Bio</dlp-button>
@@ -31,22 +31,22 @@
         <section id="team-stats" class="my-16">
             <div class="grid md:grid-cols-3 border-t border-b border-light-gray divide-y md:divide-y-0 md:divide-x divide-light-gray">
                 <div class="p-8 text-center stat">
-                    <span class="callout-heading" aria-label="300 plus">300+</span> 
-                    <span class="label-heading">transactions</span>
+                    <span class="head-3 block text-accent" aria-label="300 plus">300+</span> 
+                    <span class="head-6">transactions</span>
                 </div>
                 <div class="p-8 text-center stat">
-                    <span class="callout-heading" >10 years</span> 
-                    <span class="label-heading">selling real estate</span>
+                    <span class="head-3 block text-accent" >10 years</span> 
+                    <span class="head-6">selling real estate</span>
                 </div>
                 <div class="p-8 text-center stat">
-                    <span class="callout-heading" aria-label="Over 24 million dollars">$24M+</span> 
-                    <span class="label-heading">total sales</span>
+                    <span class="head-3 block text-accent" aria-label="Over 24 million dollars">$24M+</span> 
+                    <span class="head-6">total sales</span>
                 </div>
             </div>
         </section>
 
         <section>
-            <h2 class="section-heading text-center accent accent-centered">Team Members</h2>
+            <h2 class="head-5 text-center accent accent-centered">Team Members</h2>
         </section>
     </div>
 </template>

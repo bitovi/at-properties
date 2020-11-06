@@ -8,6 +8,10 @@
     padding: 40px;
     span {
         @apply text-center;
-        @apply pb-4;
+        @apply font-gotham-medium;
+        @apply text-tiny;
+        @apply uppercase;
+        @apply block;
+        @apply mb-4;
     }
 }

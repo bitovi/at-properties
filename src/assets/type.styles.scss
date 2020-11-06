@@ -1,4 +1,6 @@
 a {
+    @apply font-gotham-light;
+    font-size: theme('fontSize.base');
     &:link,
     &:visited {
         text-decoration: underline;
@@ -9,37 +11,101 @@ a {
     &:active {
         color: $medium-gray;
     }
+
+    @media (min-width: theme('screens.md')) {  /* Tablet, desktop */
+        font-size: theme('fontSize.lg');
+    }
 }
 
 address {
     font-style: normal;
 }
 
-p {
-    margin-bottom: theme('spacing.4');
-    font-size: theme('fontSize.mobile');
-    @media (min-width: theme('screens.lg')) {
-        font-size: theme('fontSize.copy');
-    }
-}
-
-
 /**
     Headings
 */
 
-h1, 
-h2, 
-h3, 
-h4, 
-h5, 
-h6,
-figcaption {
-    text-transform: uppercase;
-    font-weight: 300;
+.head-1 {
+    @apply font-gotham-light;
+    @apply text-4xl; /* 48px */
+    @apply text-dark-gray;
+    @apply uppercase; 
 }
 
-.title-heading {
+.head-2 {
+    @apply font-gotham-light;
+    @apply text-3xl; /* 39px */ 
+    @apply text-dark-gray;
+    @apply uppercase; 
+}
+
+.head-3 {
+    @apply font-gotham-light;
+    @apply text-2xl;
+    @apply text-dark-gray;
+    @apply uppercase; /* 31px */ 
+}
+
+.head-4 {
+    @apply font-gotham-light;
+    @apply text-xl;
+    @apply text-dark-gray;
+    @apply uppercase;  /* 25px */ 
+}
+
+.head-5 {
+    @apply font-gotham-medium;
+    @apply text-lg;
+    @apply text-dark-gray;
+    @apply uppercase;  /* 20px */ 
+}
+
+.head-6 {
+    @apply font-gotham-medium;
+    @apply text-sm;
+    @apply text-dark-gray;
+    @apply uppercase;  /* 14px */ 
+}
+
+
+@media (min-width: theme('screens.md')) { /* Tablet, desktop */
+	.head-1 { @apply text-5xl;  /* 61px */ }
+	.head-2 { @apply text-4xl;  /* 48px */ }
+	.head-3 { @apply text-3xl;  /* 39px */ }
+	.head-4 { @apply text-2xl;  /* 31px */ }
+	.head-5 { @apply text-xl;   /* 25px */ }
+	.head-6 { @apply text-base; /* 16px */ }
+}
+
+* + .head-2 {
+    @apply mt-8;
+}
+
+.head-2 + .head-5 {
+    @apply mt-8;
+}
+
+/* Paragraph */
+
+p { 
+    @apply font-gotham-light;
+    @apply text-base;/* 16px */ 
+    @apply text-dark-gray;  
+
+    @media (min-width: theme('screens.md')) {  /* Tablet, desktop */
+        font-size: theme('fontSize.lg');
+    }
+}
+
+* + p {
+    @apply mt-5;
+}
+
+.text-accent {
+    color: $red;
+}
+
+.head-1 {
     font-size: 10vw;
     @media (min-width: theme('screens.sm')) {
         font-size: theme('fontSize.2xl');

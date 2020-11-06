@@ -8,7 +8,7 @@
                 alt="alt" 
                 :src="defaultImage" />
         </picture>
-        <figcaption v-if="caption" class="dlp-figure-caption detail-heading">
+        <figcaption v-if="caption" class="dlp-figure-caption head-6">
             {{ caption }}
         </figcaption>
     </figure>

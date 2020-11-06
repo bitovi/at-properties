@@ -1,6 +1,6 @@
 <template>
     <div class="scroll-notify">
-        <span class="label-heading">Scroll to Continue</span>
+        <span>Scroll to Continue</span>
         <img alt="@properties" :src="`${publicPath}images/intro/scroll-arrow.svg`">
     </div>
 </template>

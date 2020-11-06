@@ -15,8 +15,8 @@
                     class="sm:mx-auto my-8 md:mb-8 md:my-0 md:mx-0"
                     alt="Emily Sachs Wong - Luxury Living" 
                     :src="`${publicPath}images/logos/logo-emily-sachs-wong.jpg`">
-                <h1 class="title-heading">Brooklyn Simmons</h1>
-                <h2 class="section-heading accent">Co-agent Bio</h2>
+                <h1 class="head-1">Brooklyn Simmons</h1>
+                <h2 class="head-5 accent">Co-agent Bio</h2>
                 <p>Thad Wong is the co-founder and co-CEO of @properties, the nation's 10th largest brokerage firm by sales volume (REALTrends 500). @properties and its affiliated companies have over 3,500 agents in nine states, as well as annual closed sales volume of over $12 billion...</p>
                 <div class="dlp-btn-group">
                     <dlp-button href="#">Read Full Bio</dlp-button>

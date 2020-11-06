@@ -10,6 +10,12 @@ module.exports = {
       transparent: 'transparent',
       black: '#000',
       white: '#fff',
+      'light-gray': '#DBDDE1',
+      'neutral-gray': '#F2F2F2',
+      'medium-gray': '#888F9C',
+      'dark-gray': '#1B1D1F',
+      'accent': '#D22630',
+      'interactive': '#0083CC',
       primary: {
         050: '#F3F4F5',
         100: '#E7E9EB',
@@ -48,29 +54,30 @@ module.exports = {
       }
     },
     fontFamily: {
-      sans: ['GothamHTF', 'sans-serif'],
-      display: ['GothamHTF', 'sans-serif'],
-      body: ['GothamHTF', 'sans-serif'],
+      'gotham-light': '"Gotham Light", Helvetica, Arial, sans-serif',
+      'gotham-medium': '"Gotham Medium", Helvetica, Arial, sans-serif'
     },
     fontSize: {
-      'tiny': ['0.625rem', { letterSpacing: '1.5px', lineHeight: '1.5' }],
-      'xs':   ['0.875rem', { letterSpacing: '1.5px', lineHeight: '1.5' }],
-      'sm':   ['0.875rem', { lineHeight: '1.5' }],
-      'base': ['16px', { lineHeight: '1.5' }],
-      'mobile': ['1rem', { lineHeight: '1.5' }],
-      'copy': ['1.25rem', { lineHeight: '1.5' }],
-      'detail':   ['1rem', { lineHeight: '1.5' }],
-      'lg':   ['1.375rem', { letterSpacing: '0.5px', lineHeight: '1.5' }],
-      'xl':  ['1.9375rem', { letterSpacing: '1px', lineHeight: '1.5' }],
-      '2xl':  ['2.4375rem', { letterSpacing: '1px', lineHeight: '1.5' }],
-      '3xl':  ['3rem', { letterSpacing: '1px', lineHeight: '1.5' }],
-      '4xl':  ['3.75rem', { letterSpacing: '1px', lineHeight: '1.5' }]
+      'tiny': ['10px', { letterSpacing: '1.5px', lineHeight: '1.6' }],
+      'xs':   ['12px', { letterSpacing: '1.5px', lineHeight: '1.6' }],
+      'sm':   ['14px', { letterSpacing: '1.5px', lineHeight: '1.6' }],
+      'base': ['16px', { lineHeight: '1.6' }],
+      'lg':   ['20px', { lineHeight: '1.6' }],
+      'xl':   ['25px', { letterSpacing: '0.5px', lineHeight: '1.5' }],
+      '2xl':  ['31px', { letterSpacing: '1px', lineHeight: '1.5' }],
+      '3xl':  ['39px', { letterSpacing: '1px', lineHeight: '1.5' }],
+      '4xl':  ['48px', { letterSpacing: '1px', lineHeight: '1.5' }],
+      '5xl':  ['61px', { letterSpacing: '1px', lineHeight: '1.5' }],
+      '6xl':  ['76px', { letterSpacing: '1px', lineHeight: '1.5' }]
     },
     borderWidth: {
       '0': '0',
       default: '1px',
       '2': '2px',
       '4': '4px',
+    },
+    maxWidth: {
+      '3/5': '60%',
     },
     extend: {
       

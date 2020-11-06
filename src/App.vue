@@ -41,6 +41,9 @@
           subheading="all working as a team, through every step of the transaction."/>
         <PartnerContainer />
       </article>
+      <footer id="contact">
+        <ContactContainer />
+      </footer>
     </main>
   </div>
 </template>
@@ -55,6 +58,7 @@ import CompanyContainer from './containers/company.container'
 import MarketingContainer from './containers/marketing.container'
 import SellingContainer from './containers/selling.component'
 import PartnerContainer from './containers/partner.container'
+import ContactContainer from './containers/contact.container'
 
 import TitlePage from './components/title/title.page'
 
@@ -73,6 +77,7 @@ export default {
     MarketingContainer,
     SellingContainer,
     PartnerContainer,
+    ContactContainer,
 
     TitlePage
   },
