@@ -13,6 +13,7 @@
         @apply justify-center;
         text-align: center;
         height: 48px;
+        width: 135px;
     }
 
     .dlp-nav-tray {
@@ -103,18 +104,9 @@
         }
     }
 
-    @media (min-width: theme('screens.sm')){
-        .dlp-nav-m-tile {
-            @apply px-8;
-        }
-    }
 
     @media (min-width: theme('screens.lg')){
         border-top: 3px double $light-gray;
-
-        .dlp-nav-m-tile {
-            @apply px-2;
-        }
 
         //menu is open and compressed on desktop
         .dlp-nav-menu {
