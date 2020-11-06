@@ -11,7 +11,7 @@
             aria-modal="true"
             aria-describedby="modalDescription">
                 <div class="dlp-slide-in fade-slide-content">
-                    <nav class="absolute right-0 mr-16">
+                    <nav class="absolute right-0 mr-12">
                         <h1 
                             ref="ElDescription"
                             tabindex="0" 
