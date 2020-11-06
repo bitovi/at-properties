@@ -83,7 +83,7 @@
         text-transform: uppercase;
         text-decoration: none;
         
-        &.dlp-active,
+        &.is-active,
         &:hover,
         &:active {
             color: $dark-gray;
