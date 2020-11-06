@@ -1,7 +1,7 @@
 <template>
     <div class="dlp-page dlp-hero mb-12" :style="`background-image: url('${publicPath}images/bg/bg-contact-lg.jpg')`">
         <div class="h-full grid grid-cols-1 lg:grid-cols-2 md:gap-8 content-center">
-            <div class="hidden md:block self-center md:w-1/3 lg:w-full lg:p-20 mx-auto">
+            <div class="hidden md:block self-center md:w-2/4 lg:w-full lg:p-20 mx-auto">
                 <dlp-figure 
                     :sm="`${publicPath}images/profiles/thad-wong-sm.jpg`"
                     :lg="`${publicPath}images/profiles/thad-wong-lg.jpg`"
