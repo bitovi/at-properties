@@ -1,6 +1,6 @@
 <template>
     <div class="dlp-page dlp-content">
-        <section id="pricing" class="container mx-auto py-48 grid md:grid-cols-2 gap-8 gap-y-48">
+        <section id="pricing" class="container mx-auto grid md:grid-cols-2 gap-8">
             <div class="self-center md:px-10">
                 <h3 class="head-5 accent">{{i18n.pricing.heading}}</h3>
                 <div v-html="i18n.pricing.content" class="mt-4"></div>
