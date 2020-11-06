@@ -72,10 +72,10 @@
                         <a href="tel:+1-312-999-0848">312.999.0848</a><br /><br />
                         <a href="mailto:Thad@atproperties.com">Thad@atproperties.com</a>
                     </address>
-                    <div class="">
-                        <a href="#" target="_blank">Facebook</a>
-                        <a href="#" target="_blank">Instagram</a>
-                    </div>
+                    <dlp-social 
+                        facebook="https://www.facebook.com/thad.wong.54"
+                        instagram="https://www.instagram.com/thadly_wong/"
+                    ></dlp-social>
                 </section>
             </div>
         </div>
