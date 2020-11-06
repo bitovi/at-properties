@@ -30,7 +30,7 @@
       </article>
       <article id="selling">
         <TitlePage 
-          :backgroundUrl="`${publicPath}images/bg/bg-marketing.jpg`"
+          :backgroundUrl="`${publicPath}images/bg/bg-selling.jpg`"
           heading="Selling your home"/>
         <SellingContainer />
       </article>
