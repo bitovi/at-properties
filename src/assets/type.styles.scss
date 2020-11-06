@@ -105,6 +105,10 @@ p {
     color: $red;
 }
 
+hr {
+    border-color: theme('colors.primary.100');
+}
+
 .head-1 {
     font-size: 10vw;
     @media (min-width: theme('screens.sm')) {
