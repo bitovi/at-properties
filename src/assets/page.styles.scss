@@ -17,20 +17,20 @@
         @apply bg-no-repeat;
         outline: 1px solid theme('colors.primary.500');
         //Build order requires this be hard coded
-        outline-offset: -10px;
+        outline-offset: -14px;
     }
 
     &.dlp-content {
         @apply py-16;
         @apply px-6;
-        margin: 0 theme('spacing.4') ;
+        margin: 0 theme('spacing.3') ;
         padding: 0 theme('spacing.1') theme('spacing.24');
         border: 3px double theme('colors.primary.100');
         border-top: none;
         border-bottom: none;
         @media (min-width: theme('screens.sm')) {
             padding: 0 theme('spacing.4') theme('spacing.40');
-            margin: 0 theme('spacing.4');
+            // margin: 0 theme('spacing.4');
         }
 
         @media (min-width: theme('screens.md')) {
