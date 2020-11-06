@@ -47,6 +47,7 @@
 
         <section>
             <h2 class="head-5 text-center accent accent-centered">Team Members</h2>
+            <p class="text-center">[ CAROUSEL HERE ]</p>
         </section>
     </div>
 </template>

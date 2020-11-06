@@ -29,10 +29,10 @@
 
         <section id="company-timeline" class="container mx-auto mb-48">
             <h3 class="head-1 text-center accent accent-below accent-wide">Company Timeline</h3>
-            <p>[ CAROUSEL HERE ]</p>
+            <p class="text-center">[ CAROUSEL HERE ]</p>
         </section>
 
-        <section id="company-stats" class="container mx-auto p-6 md:p-0 grid md:grid-cols-2 gap-8 gap-y-48">
+        <section id="company-stats" class="container mx-auto p-6 md:p-0 grid md:grid-cols-2 gap-8">
             <div class="md:col-span-2">
                 <h3 class="head-1 text-center accent accent-below accent-wide">The Numbers Don't Lie</h3>
             </div>
@@ -72,7 +72,7 @@
         </section>
 
         <section id="company-local-stats">
-            <div class="md:w-2/3 xl:w-1/3 mx-auto text-center my-48">
+            <div class="md:w-2/3 xl:w-1/3 mx-auto text-center lg:py-24">
                 <h3 class="head-5 accent accent-centered">{{i18n.stats.heading}}</h3>
                 <p>{{i18n.stats.content}}</p>
                 <dlp-button class="mt-4">View Local Stats</dlp-button>
@@ -84,7 +84,7 @@
                 <h3 class="head-1 accent accent-below accent-wide">{{i18n.technology.heading}}</h3>
             </div>
             <div>
-                <p>[ VIDEO HERE ]</p>
+                <p class="text-center">[ VIDEO HERE ]</p>
             </div>
             <div class="self-center md:px-10">
                 <p class="accent">{{i18n.technology.content}}</p>

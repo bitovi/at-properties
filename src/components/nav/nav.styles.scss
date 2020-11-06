@@ -35,9 +35,13 @@
     .dlp-nav-contact {
         a {
             color: $red;
-            font-weight: 600;
+            @apply font-gotham-medium;
+            font-size: theme('fontSize.sm');
             text-decoration: none;
             text-transform: uppercase;
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 
@@ -77,7 +81,7 @@
         @apply inline-block;
         color: $medium-gray;
         font-size: theme('fontSize.lg');
-        font-weight: 600;
+        @apply font-gotham-medium;
         text-align: center;
         letter-spacing: 0.1em;
         text-transform: uppercase;
