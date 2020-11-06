@@ -13,7 +13,6 @@
         @apply justify-center;
         text-align: center;
         height: 48px;
-        flex-grow: 1;
     }
 
     .dlp-nav-tray {
@@ -25,10 +24,24 @@
 
     .dlp-nav-menu {
         @apply visually-hidden;
-        
     }
 
-    @media (max-width: theme('screens.md')){
+    .dlp-nav-trigger {
+        flex-grow: 1;
+        border-left: 1px solid $light-gray;
+        border-right: 1px solid $light-gray;
+    }
+
+    .dlp-nav-contact {
+        a {
+            color: $red;
+            font-weight: 600;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+
+    @media (max-width: theme('screens.lg')){
         &.isOpen {
             @apply h-full;
             .dlp-nav-tray {
@@ -62,7 +75,7 @@
         @apply py-2;
         @apply my-2;
         @apply inline-block;
-        color: $light-gray;
+        color: $medium-gray;
         font-size: theme('fontSize.lg');
         font-weight: 600;
         text-align: center;
@@ -86,22 +99,25 @@
         }
     }
 
-    @media (min-width: theme('screens.md')){
+    @media (min-width: theme('screens.sm')){
+        .dlp-nav-m-tile {
+            @apply px-8;
+        }
+    }
+
+    @media (min-width: theme('screens.lg')){
         border-top: 3px double $light-gray;
 
         .dlp-nav-m-tile {
             @apply px-2;
-            border-left: 1px solid $light-gray;
-            &:first-child {
-                border: none;
-                border-right: 1px solid $light-gray;
-            }
         }
 
         //menu is open and compressed on desktop
         .dlp-nav-menu {
             @apply visually-shown;
             flex-grow: 2;
+            border-left: 1px solid $light-gray;
+            border-right: 1px solid $light-gray;
             .title-heading {
                 display: none;
             }
@@ -118,3 +134,80 @@
         }
     }
 }
+
+#nav-icon {
+    width: 60px;
+    height: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 0 3px;
+    margin: 0 auto;
+    .nav-icon-text {
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        text-align: center;
+    }
+
+    .nav-icon-wrapper {
+        height: 18px;
+        width: 18px;
+        position: relative;
+    }
+
+    .nav-icon-line {
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 18px;
+        background: #000;
+        opacity: 1;
+        left: 0;
+        -webkit-transition: .25s ease-in-out;
+        -moz-transition: .25s ease-in-out;
+        -o-transition: .25s ease-in-out;
+        transition: .25s ease-in-out;
+    }
+    
+    .line-1 {
+        top: 0px;
+    }
+      
+    .line-2,
+    .line-3 {
+        top: 4px;
+    }
+    
+    .line-4 {
+        top: 8px;
+    }
+    
+    &.open .line-1 {
+        top: 18px;
+        width: 0%;
+        left: 50%;
+    }
+    
+    &.open .line-2 {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+    
+    &.open .line-3 {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+    
+    &.open .line-1, 
+    &.open .line-4 {
+        display: none;
+    }
+}
+

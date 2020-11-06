@@ -1,7 +1,7 @@
 <template>
     <nav class="dlp-nav" :class="{ isOpen: isOpen}" aria-label="Main Menu">
         <div class="dlp-nav-tray xl:container mx-auto">
-            <div class="dlp-nav-m-tile flex md:items-center">
+            <div class="dlp-nav-m-tile flex lg:items-center">
                 <img class="dlp-nav-logo" height="26" width="130" alt="@properties" :src="`${publicPath}images/logos/logo-atproperties.svg`">
             </div>
             <div class="dlp-nav-menu" id="nav-menu-links">
@@ -14,9 +14,15 @@
                     <li><a class="dlp-nav-link" href="#">Partners</a></li>
                 </ul>
             </div>
-            <div class="dlp-nav-trigger dlp-nav-m-tile flex md:hidden">
-                <button aria-expanded="false" @click="toggle">
-                    Menu
+            <div class="dlp-nav-trigger dlp-nav-m-tile flex lg:hidden">
+                <button aria-expanded="false" :class="{ open: isOpen}" @click="toggle" id="nav-icon">
+                    <span class="nav-icon-wrapper">
+                        <span class="nav-icon-line line-1"></span>
+                        <span class="nav-icon-line line-2"></span>
+                        <span class="nav-icon-line line-3"></span>
+                        <span class="nav-icon-line line-4"></span>
+                    </span>
+                    <span class="nav-icon-text">Menu</span>
                 </button>
             </div>
             <div class="dlp-nav-contact dlp-nav-m-tile flex">
