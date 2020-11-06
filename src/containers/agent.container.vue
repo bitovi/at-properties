@@ -1,13 +1,6 @@
 <template>
     <div class='dlp-page dlp-content'>
-        <header>
-            <div class="flex flex-row justify-center mt-20 mb-20">
-                <img
-                    alt="Emily Sachs Wong - Luxury Living" 
-                    :src="`${publicPath}images/logos/logo-emily-sachs-wong.jpg`">
-            </div>
-        </header>
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20">
+        <div class="container mx-auto mt-32 grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20">
             <aside class="dlp-hero">
                 <dlp-figure 
                     :sm="`${publicPath}images/profiles/thad-wong-sm.jpg`"
@@ -19,6 +12,10 @@
             </aside>
             <div>
                 <section id="agent-bio">
+                    <img
+                        class="sm:mx-auto my-8 md:mb-8 md:my-0 md:mx-0"
+                        alt="Emily Sachs Wong - Luxury Living" 
+                        :src="`${publicPath}images/logos/logo-emily-sachs-wong.jpg`">
                     <h1 class="title-heading">Thad Wong</h1>
                     <h2 class="section-heading accent">Agent Bio</h2>
                     <p v-html="i18n.thad.sample"></p>
