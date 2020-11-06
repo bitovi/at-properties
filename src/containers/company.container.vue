@@ -1,6 +1,6 @@
 <template>
     <div class="dlp-page dlp-content">
-        <section id="company-history" class="container mx-auto py-48 grid md:grid-cols-2 gap-8 gap-y-48">
+        <section id="company-history" class="container mx-auto grid md:grid-cols-2 gap-8 py-6">
             <div class="self-center md:px-10">
                 <h3 class="head-5 accent ">{{i18n.idea.heading}}</h3>
                 <p>{{i18n.idea.content}}</p>
@@ -9,11 +9,13 @@
                 :sm="`images/company/history-1.jpg`"
                 :lg="`images/company/history-1.jpg`"
                 alt="Two women talking in a cubicle"
+                ar="ar ar-2-3"
             ></dlp-figure>
             <dlp-figure 
                 :sm="`images/company/history-2.jpg`"
                 :lg="`images/company/history-2.jpg`"
                 alt="Man presenting whiteboard ideas to his team"
+                ar="ar ar-4-3 md:-ml-24"
             ></dlp-figure>
             <div class="self-center md:px-10">
                 <h3 class="head-5 accent">{{i18n.unique.heading}}</h3>
@@ -24,6 +26,7 @@
                 :lg="`images/company/history-3.jpg`"
                 alt="Overhead view of two people working at their desks"
                 class="md:col-start-2"
+                ar="ar ar-4-3"
             ></dlp-figure>
         </section>
 
@@ -45,6 +48,7 @@
                     :sm="`images/company/stat-1.jpg`"
                     :lg="`images/company/stat-1.jpg`"
                     alt="Aerial view of a neighborhood with saltbox houses"
+                    ar="ar ar-4-3"
                 ></dlp-figure>
             </div>
             <div>
@@ -52,6 +56,7 @@
                     :sm="`images/company/stat-2.jpg`"
                     :lg="`images/company/stat-2.jpg`"
                     alt="Sunlit modern living room"
+                    ar="ar ar-4-3"
                 ></dlp-figure>
             </div>
             <div class="self-center text-center stat stat-lg">
@@ -67,6 +72,7 @@
                     :sm="`images/company/stat-3.jpg`"
                     :lg="`images/company/stat-3.jpg`"
                     alt="Airy modern living room with high ceiling and fireplace"
+                    ar="ar ar-4-3"
                 ></dlp-figure>
             </div>
         </section>

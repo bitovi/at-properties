@@ -7,7 +7,8 @@
                     :lg="`${publicPath}images/profiles/brooklyn-simmons-lg.jpg`"
                     alt="Brooklyn Simmons"
                     caption="Brooklyn Simmons"
-                    class="sticky"
+                    ar="ar ar-4-5"
+                    :isSticky="true"
                 ></dlp-figure>
             </aside>
             <section>

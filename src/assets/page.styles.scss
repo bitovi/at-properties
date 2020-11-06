@@ -21,6 +21,8 @@
     }
 
     &.dlp-content {
+        @apply py-16;
+        @apply px-6;
         margin: 0 theme('spacing.4') ;
         padding: 0 theme('spacing.1') theme('spacing.24');
         border: 3px double theme('colors.primary.100');
@@ -29,6 +31,20 @@
         @media (min-width: theme('screens.sm')) {
             padding: 0 theme('spacing.4') theme('spacing.40');
             margin: 0 theme('spacing.4');
+        }
+
+        @media (min-width: theme('screens.md')) {
+            & {
+                @apply py-20;
+                @apply px-8;
+            }
+        }
+
+        @media (min-width: theme('screens.lg')) {
+            & {
+                @apply py-24;
+                @apply px-10;
+            }
         }
     }
 

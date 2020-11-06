@@ -33,6 +33,7 @@
                         :sm="`images/marketing/signage.jpg`"
                         :lg="`images/marketing/signage.jpg`"
                         alt="@properties realtor sign"
+                        ar="ar ar-4-3"
                     ></dlp-figure >
                 </div>
                 <div class="self-center md:px-10 lg:text-left">

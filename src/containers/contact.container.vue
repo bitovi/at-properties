@@ -7,9 +7,7 @@
                     :lg="`${publicPath}images/profiles/thad-wong-lg.jpg`"
                     alt="Thad Wong"
                     caption="Thad Wong"
-                    border="photo-border" 
                     ar="ar ar-4-5"
-                    position="object-top"
                 ></dlp-figure>
             </div>
             <div class="self-center text-center">
