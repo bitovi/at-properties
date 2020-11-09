@@ -15,6 +15,11 @@ yarn serve
 yarn build
 ```
 
+### Run Style Guide. Opens in new browser tab
+```
+yarn storybook
+```
+
 ### Lints and fixes files
 ```
 yarn lint
