@@ -13,8 +13,8 @@ const Template = (args, { argTypes }) => ({
 
 export const Default = Template.bind({});
 Default.args = {
-    sm: 'http://placekitten.com/100/150',
-    md: 'http://placekitten.com/200/300',
+    sm: 'http://placekitten.com/200/300',
+    md: 'http://placekitten.com/300/500',
     lg: 'http://placekitten.com/400/600',
     alt: 'A placeholder Kitten',
     caption: 'Dr. Mittens III'
@@ -22,8 +22,8 @@ Default.args = {
 
 export const NoBorder = Template.bind({});
 NoBorder.args = {
-    sm: 'http://placekitten.com/100/150',
-    md: 'http://placekitten.com/200/300',
+    sm: 'http://placekitten.com/200/300',
+    md: 'http://placekitten.com/300/500',
     lg: 'http://placekitten.com/400/600',
     alt: 'A placeholder Kitten',
     caption: 'Dr. Mittens III',
