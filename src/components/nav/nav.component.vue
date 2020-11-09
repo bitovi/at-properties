@@ -27,7 +27,7 @@
                 </button>
             </div>
             <div class="dlp-nav-contact dlp-nav-m-tile flex">
-                <a href="#contact">Contact Me</a>
+                <a class="scrollactive-item" href="#contact">Contact Me</a>
             </div>
         </div>
     </scrollactive>
