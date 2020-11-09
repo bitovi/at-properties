@@ -1,7 +1,7 @@
 import DLPButton from './button.component.vue';
 
 export default {
-    title: 'DLP/Button',
+    title: 'DLP/Button/Default',
     component: DLPButton,
     argTypes: {
         nativeType: { control: { type: 'select', options: [null, 'button', 'submit', 'reset'] } }
