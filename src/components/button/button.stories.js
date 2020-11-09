@@ -10,7 +10,7 @@ export default {
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { DLPButton },
-  template: '<dlp-button type="button">Test</dlp-button>',
+  template: '<dlp-button type="button">Test Button</dlp-button>',
 });
 
 export const Primary = Template.bind({});
