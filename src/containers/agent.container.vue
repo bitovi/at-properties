@@ -1,7 +1,7 @@
 <template>
     <div class='dlp-page dlp-content'>
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20 pb-40">
-            <aside class="dlp-hero">
+            <aside>
                 <dlp-figure 
                     :sm="`${publicPath}images/profiles/thad-wong-sm.jpg`"
                     :lg="`${publicPath}images/profiles/thad-wong-lg.jpg`"
