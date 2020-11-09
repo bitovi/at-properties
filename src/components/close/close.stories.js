@@ -1,7 +1,7 @@
 import DLPClose from './close.component.vue';
 
 export default {
-    title: 'DLP/Button/Close',
+    title: 'Components/Buttons/Close',
     component: DLPClose,
     argTypes: {
         
