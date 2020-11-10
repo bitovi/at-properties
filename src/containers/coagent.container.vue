@@ -1,7 +1,7 @@
 <template>
     <div class="dlp-page dlp-content">
         <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20 pb-40">
-            <aside>
+            <div>
                 <dlp-figure 
                     :sm="`${publicPath}images/profiles/brooklyn-simmons-sm.jpg`"
                     :lg="`${publicPath}images/profiles/brooklyn-simmons-lg.jpg`"
@@ -10,7 +10,7 @@
                     ar="ar ar-4-5"
                     :isSticky="true"
                 ></dlp-figure>
-            </aside>
+            </div>
             <section>
                 <img
                     class="sm:mx-auto my-8 md:mb-8 md:my-0 md:mx-0"
