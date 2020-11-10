@@ -1,6 +1,6 @@
 <template>
     <div class="dlp-page dlp-content">
-        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-20">
+        <div class="container mx-auto px-12 xl:px-32 grid md:grid-cols-3 xl:grid-cols-2 gap-8 md:gap-16 xl:gap-32">
             <div>
                 <dlp-figure 
                     :sm="`${publicPath}images/profiles/olivia-carson-sm.jpg`"
@@ -19,7 +19,7 @@
                 <h1 class="head-1">Olivia Carlson</h1>
                 <h2 class="head-5 accent">Team Bio</h2>
                 <p v-html="i18n['olivia-arson'].sample"></p>
-                <div class="dlp-btn-group">
+                <div class="btn-group">
                     <dlp-button type="button" @click="showModal('AgentModal')">Read Full Bio</dlp-button>
                     <dlp-slide-in ref="AgentModal">
                         <div v-html="i18n['olivia-arson'].full"></div>
@@ -32,15 +32,15 @@
         <section id="team-stats" class="my-16">
             <div class="grid md:grid-cols-3 border-t border-b border-light-gray divide-y md:divide-y-0 md:divide-x divide-light-gray">
                 <div class="p-8 text-center stat">
-                    <span class="head-3 block text-accent" aria-label="300 plus">300+</span> 
+                    <span class="head-3 block callout-text" aria-label="300 plus">300+</span> 
                     <span class="head-6">transactions</span>
                 </div>
                 <div class="p-8 text-center stat">
-                    <span class="head-3 block text-accent" >10 years</span> 
+                    <span class="head-3 block callout-text" >10 years</span> 
                     <span class="head-6">selling real estate</span>
                 </div>
                 <div class="p-8 text-center stat">
-                    <span class="head-3 block text-accent" aria-label="Over 24 million dollars">$24M+</span> 
+                    <span class="head-3 block callout-text" aria-label="Over 24 million dollars">$24M+</span> 
                     <span class="head-6">total sales</span>
                 </div>
             </div>
