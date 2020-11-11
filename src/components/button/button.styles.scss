@@ -1,5 +1,5 @@
 
-.dlp-btn {
+.btn {
     @apply text-white;
     @apply mb-4;
     @apply font-gotham-medium;
@@ -21,7 +21,7 @@
         border-color: $medium-gray;
     }
 
-    .dlp-btn-inner {
+    .btn-inner {
         display: block;
         background: $dark-gray;
         margin: 4px;
@@ -40,9 +40,9 @@
     
 }
 
-.dlp-btn-group {
+.btn-group {
     margin: theme('spacing.12') 0;
-    .dlp-btn {
+    .btn {
         margin-right: theme('spacing.8');
         &:last-child {
             margin-right: theme('spacing.0');

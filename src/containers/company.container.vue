@@ -40,7 +40,7 @@
                 <h3 class="head-1 text-center accent accent-below accent-wide">The Numbers Don't Lie</h3>
             </div>
             <div class="self-center text-center stat stat-lg">
-                <span class="head-3 block text-accent">Number 10</span> 
+                <span class="head-3 block callout-text">Number 10</span> 
                 <span class="head-6">ranking according to Real Trends</span>
             </div>
             <div>
@@ -60,11 +60,11 @@
                 ></dlp-figure>
             </div>
             <div class="self-center text-center stat stat-lg">
-                <span class="head-3 block text-accent">25%</span> 
+                <span class="head-3 block callout-text">25%</span> 
                 <span class="head-6">of our listings sold in-house</span>
             </div>
             <div class="self-center text-center stat stat-lg">
-                <span class="head-3 block text-accent" aria-label="50 Billion Dollars">$50 Billion</span> 
+                <span class="head-3 block callout-text" aria-label="50 Billion Dollars">$50 Billion</span> 
                 <span class="head-6">total home sales</span>
             </div>
             <div>
@@ -94,7 +94,7 @@
             </div>
             <div class="self-center md:px-10">
                 <p class="accent">{{i18n.technology.content}}</p>
-                <div class="dlp-btn-group">
+                <div class="btn-group">
                     <dlp-button>Learn More</dlp-button>
                 </div>
             </div>
