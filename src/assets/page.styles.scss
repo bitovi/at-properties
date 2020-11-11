@@ -23,8 +23,23 @@
         border: 3px double theme('colors.primary.100');
         border-top: none;
         border-bottom: none;
+        @apply py-16;
         @media (min-width: theme('screens.sm')) {
-            padding: 0 theme('spacing.4') theme('spacing.24');
+            & {
+                @apply px-4;
+                @apply pb-24;
+            }
+        }
+        @media (min-width: theme('screens.sm')) {
+            & {
+                @apply py-20
+            }
+        }
+
+        @media (min-width: theme('screens.sm')) {
+            & {
+                @apply py-10
+            }
         }
     }
 

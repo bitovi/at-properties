@@ -1,6 +1,6 @@
 <template>
     <div class="dlp-page dlp-content">
-        <div class="pt-24 px-12 xl:px-32 grid md:grid-cols-3 xl:grid-cols-2 gap-8 md:gap-16 xl:gap-32">
+        <div class="pt-12 px-12 xl:px-32 grid md:grid-cols-3 xl:grid-cols-2 gap-8 md:gap-16 xl:gap-32">
             <div>
                 <dlp-figure 
                     :sm="`${publicPath}images/profiles/brooklyn-simmons-sm.jpg`"
