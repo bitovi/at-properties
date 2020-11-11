@@ -1,6 +1,6 @@
 <template>
     <div class="dlp-page dlp-content">
-        <div class="container mx-auto px-12 xl:px-32 grid md:grid-cols-3 xl:grid-cols-2 gap-8 md:gap-16 xl:gap-32">
+        <div class="pt-24 px-12 xl:px-32 grid md:grid-cols-3 xl:grid-cols-2 gap-8 md:gap-16 xl:gap-32">
             <div>
                 <dlp-figure 
                     :sm="`${publicPath}images/profiles/olivia-carson-sm.jpg`"
@@ -11,22 +11,24 @@
                     :isSticky="true"
                 ></dlp-figure>
             </div>
-            <section class="mb-16">
-                <img
-                    class="sm:mx-auto my-8 md:mb-8 md:my-0 md:mx-0"
-                    alt="Olivia Carlson" 
-                    :src="`${publicPath}images/logos/logo-olivia-carson.jpg`">
-                <h1 class="head-1">Olivia Carlson</h1>
-                <h2 class="head-5 accent">Team Bio</h2>
-                <p v-html="i18n['olivia-arson'].sample"></p>
-                <div class="btn-group">
-                    <dlp-button type="button" @click="showModal('AgentModal')">Read Full Bio</dlp-button>
-                    <dlp-slide-in ref="AgentModal">
-                        <div v-html="i18n['olivia-arson'].full"></div>
-                    </dlp-slide-in>
-                    <dlp-button type="button">Watch Team Video</dlp-button>
-                </div>
-            </section>
+            <div class="md:col-span-2 xl:col-span-1">
+                <section class="mb-16">
+                    <img
+                        class="sm:mx-auto my-8 md:mb-8 md:my-0 md:mx-0"
+                        alt="Olivia Carlson" 
+                        :src="`${publicPath}images/logos/logo-olivia-carson.jpg`">
+                    <h1 class="head-1">Olivia Carlson</h1>
+                    <h2 class="head-5 accent">Team Bio</h2>
+                    <p v-html="i18n['olivia-arson'].sample"></p>
+                    <div class="btn-group">
+                        <dlp-button type="button" @click="showModal('AgentModal')">Read Full Bio</dlp-button>
+                        <dlp-slide-in ref="AgentModal">
+                            <div v-html="i18n['olivia-arson'].full"></div>
+                        </dlp-slide-in>
+                        <dlp-button type="button">Watch Team Video</dlp-button>
+                    </div>
+                </section>
+            </div>
         </div>
         
         <section id="team-stats" class="my-16">

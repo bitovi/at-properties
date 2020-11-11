@@ -3,8 +3,6 @@
 .dlp-page {
     @apply flex;
     @apply flex-col;
-    
-    padding: theme('spacing.4');
 
     &.dlp-hero {
         @apply items-center;
@@ -21,27 +19,12 @@
     }
 
     &.dlp-content {
-        @apply px-6;
-        margin: 0 theme('spacing.3') ;
-        padding: 0 theme('spacing.1') theme('spacing.24');
+        margin: 0 theme('spacing.3');
         border: 3px double theme('colors.primary.100');
         border-top: none;
         border-bottom: none;
         @media (min-width: theme('screens.sm')) {
-            padding: 0 theme('spacing.4') theme('spacing.40');
-            // margin: 0 theme('spacing.4');
-        }
-
-        @media (min-width: theme('screens.md')) {
-            & {
-                @apply px-8;
-            }
-        }
-
-        @media (min-width: theme('screens.lg')) {
-            & {
-                @apply px-10;
-            }
+            padding: 0 theme('spacing.4') theme('spacing.24');
         }
     }
 
