@@ -49,18 +49,18 @@
 </template>
 
 <script>
-import Nav from './components/nav/nav.component'
-import TitleContainer from './containers/title.container'
-import AgentContainer from './containers/agent.container'
-import CoagentContainer from './containers/coagent.container'
-import TeamContainer from './containers/team.container'
-import CompanyContainer from './containers/company.container'
-import MarketingContainer from './containers/marketing.container'
-import SellingContainer from './containers/selling.component'
-import PartnerContainer from './containers/partner.container'
-import ContactContainer from './containers/contact.container'
+import Nav from './components/nav/nav.component.vue'
+import TitleContainer from './containers/title.container.vue'
+import AgentContainer from './containers/agent.container.vue'
+import CoagentContainer from './containers/coagent.container.vue'
+import TeamContainer from './containers/team.container.vue'
+import CompanyContainer from './containers/company.container.vue'
+import MarketingContainer from './containers/marketing.container.vue'
+import SellingContainer from './containers/selling.component.vue'
+import PartnerContainer from './containers/partner.container.vue'
+import ContactContainer from './containers/contact.container.vue'
 
-import TitlePage from './components/title/title.page'
+import TitlePage from './components/title/title.page.vue'
 
 import './assets/base.styles.scss'
 
