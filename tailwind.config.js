@@ -6,6 +6,10 @@ module.exports = {
       lg: '1280px',
       xl: '1920px',
     },
+    container: {
+      xl: '1280px',
+      center: true
+    },
     colors: {
       transparent: 'transparent',
       black: '#000',
