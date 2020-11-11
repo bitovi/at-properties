@@ -8,7 +8,7 @@
     svg {
         @apply w-10;
         @apply h-10;
-        fill: $dark-gray;
+        fill: theme('colors.dark-gray');
     }
 }
 

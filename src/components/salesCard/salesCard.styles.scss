@@ -2,7 +2,7 @@
 .dlp-sales-card {
     @apply pt-6;
     @apply pb-6;
-    border-top: 1px solid $light-gray;
+    border-top: 1px solid theme('colors.light-gray');
     
     &:first-child,
     &:first-of-type {

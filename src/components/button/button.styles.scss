@@ -7,7 +7,7 @@
     font-size: theme('fontSize.sm');
     text-transform: uppercase;
     text-align: center;
-    border: 1px solid $dark-gray;
+    border: 1px solid theme('colors.dark-gray');
     letter-spacing: 0.1em;
 
     &:link,
@@ -18,18 +18,18 @@
 
     &:hover,
     &:active {
-        border-color: $medium-gray;
+        border-color: theme('colors.medium-gray');
     }
 
     .btn-inner {
         display: block;
-        background: $dark-gray;
+        background: theme('colors.dark-gray');
         margin: 4px;
         padding: 12px 24px;
 
         &:hover,
         &:active {
-            background: $medium-gray;
+            background: theme('colors.medium-gray');
         }
 
         @media (min-width: theme('screens.sm')){

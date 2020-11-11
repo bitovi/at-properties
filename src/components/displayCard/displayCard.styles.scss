@@ -7,7 +7,7 @@
         @apply p-3;
         @apply flex-grow;
         min-height: 308px;
-        background-color: $light-gray;
+        background-color: theme('colors.light-gray');
     }
     .dlp-display-card-border {
         @apply h-full;
@@ -15,7 +15,7 @@
         @apply items-center;
         @apply justify-center;
         @apply p-12;
-        border: 1px solid $medium-gray;
+        border: 1px solid theme('colors.medium-gray');
 
     }
 

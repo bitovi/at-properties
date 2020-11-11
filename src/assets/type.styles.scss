@@ -4,12 +4,12 @@ a {
     &:link,
     &:visited {
         text-decoration: underline;
-        color: $dark-gray;
+        color: theme('colors.dark-gray');
     }
 
     &:hover,
     &:active {
-        color: $medium-gray;
+        color: theme('colors.medium-gray');
     }
 
     @media (min-width: theme('screens.md')) {  /* Tablet, desktop */
@@ -107,7 +107,7 @@ p {
 }
 
 .callout-text {
-    color: $red;
+    color: theme('colors.accent');
 }
 
 hr {
@@ -117,7 +117,7 @@ hr {
 
 .callout-heading {
     font-size: theme('fontSize.2xl');
-    color: $red;
+    color: theme('colors.accent');
     text-transform: uppercase;
     display: block;
 }
@@ -162,7 +162,7 @@ hr {
     height: 2px;
     display: block;
     width: theme('spacing.#{$width}');
-    background: $red;
+    background: theme('colors.accent');
     content: '';
 }
 
