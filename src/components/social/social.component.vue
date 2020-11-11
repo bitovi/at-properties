@@ -9,6 +9,9 @@
         <a v-if="twitter" :href="twitter" target="blank" aria-label="Twitter">
             <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
         </a>
+        <a v-if="linkedin" :href="linkedin" target="blank" aria-label="linkedin">
+            <svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg>
+        </a>
         <a v-if="youtube" :href="youtube" target="blank" aria-label="YouTube">
             <svg class="icon icon-youtube"><use xlink:href="#icon-youtube"></use></svg>
         </a>
@@ -28,6 +31,10 @@ export default {
             default: null
         },
         twitter: {
+            type: String,
+            default: null
+        },
+        linkedin: {
             type: String,
             default: null
         },
