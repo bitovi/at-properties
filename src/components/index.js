@@ -11,6 +11,7 @@ import CloseBtn from './close/close.component'
 import TitlePage from './title/title.page'
 import DisplayCard from './displayCard/displayCard.component'
 import Social from './social/social.component'
+import BioSwiper from './bioSwiper/bioSwiper.component.vue'
 
 Vue.component(ScrollNotify.name, ScrollNotify)
 Vue.component(Button.name, Button)
@@ -24,6 +25,7 @@ Vue.component(CloseBtn.name, CloseBtn)
 Vue.component(TitlePage.name, TitlePage)
 Vue.component(DisplayCard.name, DisplayCard)
 Vue.component(Social.name, Social)
+Vue.component(BioSwiper.name, BioSwiper)
 
 
 export {
@@ -37,6 +39,7 @@ export {
     SlideIn,
     CloseBtn,
     TitlePage,
-    DisplayCard
+    DisplayCard,
+    BioSwiper
 }
 

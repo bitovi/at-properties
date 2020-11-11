@@ -11,9 +11,9 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "swiper": "^6.3.5",
     "tailwindcss": "^1.9.5",
     "vue": "^2.6.11",
+    "vue-carousel": "^0.18.0",
     "vue-scrollactive": "^0.9.3"
   },
   "devDependencies": {

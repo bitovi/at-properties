@@ -50,7 +50,7 @@
 
         <section>
             <h2 class="head-5 text-center accent accent-centered">Team Members</h2>
-            <p class="text-center">[ CAROUSEL HERE ]</p>
+            <dlp-bio-swiper></dlp-bio-swiper>
         </section>
     </div>
 </template>
