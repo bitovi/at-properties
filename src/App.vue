@@ -4,8 +4,8 @@
       <Nav />
     </header>
     <main class="dlp-main">
-      <TitleContainer />
       <article id="agent">
+        <TitleContainer />
         <AgentContainer />
       </article>
       <article id="co-agent">

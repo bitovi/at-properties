@@ -4,10 +4,10 @@
         :type="nativeType"
         v-bind="$attrs"
         :href="href"
-        class="dlp-btn"
+        class="btn"
         v-on="$listeners"
     >
-        <span class="dlp-btn-inner">
+        <span class="btn-inner">
             <slot />
         </span>
     </component>
