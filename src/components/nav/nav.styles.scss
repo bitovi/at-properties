@@ -35,7 +35,7 @@
 
     .dlp-nav-contact {
         a {
-            color: theme('colors.red');
+            color: theme('colors.accent');
             @apply font-gotham-medium;
             font-size: theme('fontSize.sm');
             text-decoration: none;
@@ -98,7 +98,7 @@
                 height: 2px;
                 display: block;
                 width: 100%;
-                background: theme('colors.red');
+                background: theme('colors.accent');
                 content: '';
             }
         }
