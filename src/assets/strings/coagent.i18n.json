@@ -1,13 +1,13 @@
 {
     "name": "Leigh Marcus",
     "photo": {
-        "sm": "images/agent/photo-leigh-marcus-sm.jpg",
-        "lg": "images/agent/photo-leigh-marcus-lg.jpg"
+        "sm": "images/coagent/photo-leigh-marcus-sm.jpg",
+        "md": "images/coagent/photo-leigh-marcus-md.jpg"
     },
     "logo": {
         "alt": "Leigh Marcus Real Estate",
-        "sm": "images/agent/logo-leigh-marcus-sm.jpg",
-        "md": "images/agent/logo-leigh-marcus-md.jpg"
+        "sm": "images/coagent/logo-leigh-marcus-sm.jpg",
+        "md": "images/coagent/logo-leigh-marcus-md.jpg"
     },
     "bio": {
         "brief": "<p>Having sold over 1000 homes in his own personal career, Leigh will give you the comfort and confidence that he will be able to help you achieve success with your move. For over a decade, Leigh brings that same dynamic to every client he helps to buy or sell a home. Clients say they feel comfortable and confident trusting their home and family’s future with Leigh and his team.</p>",

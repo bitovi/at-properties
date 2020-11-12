@@ -23,6 +23,7 @@
                     <div class="btn-group">
                         <dlp-button type="button" @click="showModal('AgentModal')">Read Full Bio</dlp-button>
                         <dlp-slide-in ref="AgentModal">
+                            <h3 class="head-5 accent mb-8">Agent Bio</h3>
                             <div v-html="i18n.bio.full"></div>
                         </dlp-slide-in>
                         <dlp-button type="button">Watch Agent Video</dlp-button>
