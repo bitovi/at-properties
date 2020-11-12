@@ -32,7 +32,7 @@
         </div>
         
         <section id="team-stats" class="my-16">
-            <div class="grid md:grid-cols-3 border-t border-b border-light-gray divide-y md:divide-y-0 md:divide-x divide-light-gray">
+            <div class="grid md:grid-cols-3 border-t border-b border-primary-100 divide-y md:divide-y-0 md:divide-x divide-primary-100">
                 <div class="p-8 text-center stat">
                     <span class="head-3 block callout-text" aria-label="300 plus">300+</span> 
                     <span class="head-6">transactions</span>
