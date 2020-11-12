@@ -3,6 +3,7 @@
     <header>
       <Nav />
     </header>
+      <DevGrid />
     <main class="dlp-main">
       <article id="agent">
         <TitleContainer />
@@ -62,6 +63,8 @@ import ContactContainer from './containers/contact.container'
 
 import TitlePage from './components/title/title.page'
 
+import DevGrid from './components/dev/grids.dev'
+
 import './assets/base.styles.scss'
 
 
@@ -79,7 +82,8 @@ export default {
     PartnerContainer,
     ContactContainer,
 
-    TitlePage
+    TitlePage,
+    DevGrid
   },
   data(){
       return {

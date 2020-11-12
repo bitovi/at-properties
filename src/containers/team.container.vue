@@ -11,7 +11,7 @@
                     :isSticky="true"
                 ></dlp-figure>
             </div>
-            <div class="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-8">
+            <div class="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
                 <section class="mb-16">
                     <img
                         class="sm:mx-auto my-8 md:mb-8 md:my-0 md:mx-0"
