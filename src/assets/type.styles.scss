@@ -4,12 +4,12 @@ a {
     &:link,
     &:visited {
         text-decoration: underline;
-        color: theme('colors.dark-gray');
+        color: theme('colors.primary.900');
     }
 
     &:hover,
     &:active {
-        color: theme('colors.medium-gray');
+        color: theme('colors.primary.500');
     }
 
     @media (min-width: theme('screens.md')) {  /* Tablet, desktop */
@@ -33,42 +33,42 @@ address {
 .head-1 {
     @apply font-gotham-light;
     @apply text-4xl; /* 48px */
-    @apply text-dark-gray;
+    color: theme('colors.primary.900');
     @apply uppercase; 
 }
 
 .head-2 {
     @apply font-gotham-light;
     @apply text-3xl; /* 39px */ 
-    @apply text-dark-gray;
+    color: theme('colors.primary.900');
     @apply uppercase; 
 }
 
 .head-3 {
     @apply font-gotham-light;
     @apply text-2xl;
-    @apply text-dark-gray;
+    color: theme('colors.primary.900');
     @apply uppercase; /* 31px */ 
 }
 
 .head-4 {
     @apply font-gotham-light;
     @apply text-xl;
-    @apply text-dark-gray;
+    color: theme('colors.primary.900');
     @apply uppercase;  /* 25px */ 
 }
 
 .head-5 {
     @apply font-gotham-medium;
     @apply text-lg;
-    @apply text-dark-gray;
+    color: theme('colors.primary.900');
     @apply uppercase;  /* 20px */ 
 }
 
 .head-6 {
     @apply font-gotham-medium;
     @apply text-sm;
-    @apply text-dark-gray;
+    color: theme('colors.primary.900');
     @apply uppercase;  /* 14px */ 
 }
 
@@ -95,7 +95,7 @@ address {
 p { 
     @apply font-gotham-light;
     @apply text-base;/* 16px */ 
-    @apply text-dark-gray;  
+    color: theme('colors.primary.900');  
 
     @media (min-width: theme('screens.md')) {  /* Tablet, desktop */
         font-size: theme('fontSize.lg');
@@ -107,7 +107,7 @@ p {
 }
 
 .callout-text {
-    color: theme('colors.accent');
+    color: theme('colors.secondary.500');
 }
 
 hr {
@@ -117,7 +117,7 @@ hr {
 
 .callout-heading {
     font-size: theme('fontSize.2xl');
-    color: theme('colors.accent');
+    color: theme('colors.secondary.500');
     text-transform: uppercase;
     display: block;
 }
@@ -162,7 +162,7 @@ hr {
     height: 2px;
     display: block;
     width: theme('spacing.#{$width}');
-    background: theme('colors.accent');
+    background: theme('colors.secondary.500');
     content: '';
 }
 

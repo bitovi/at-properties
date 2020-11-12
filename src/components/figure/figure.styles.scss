@@ -3,7 +3,7 @@
     @apply relative;
 
     &.dark-text .dlp-figure-caption {
-        color: theme('colors.dark-gray');
+        color: theme('colors.primary.900');
     }
 
     &.sticky {
@@ -50,7 +50,7 @@
             height: 2px;
             display: block;
             width: theme('spacing.8');
-            background: theme('colors.accent');
+            background: theme('colors.secondary.500');
             content: '';
             margin: 8px auto;
         }

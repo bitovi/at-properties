@@ -1,7 +1,7 @@
 
 .dlp-close-btn {
     @apply block;
-    border: 1px solid theme('colors.dark-gray');
+    border: 1px solid theme('colors.primary.900');
 
     svg .shape {
         fill: theme('colors.white');
@@ -11,13 +11,13 @@
     &:active,
     &.light-theme:hover,
     &.light-theme:active {
-        border: 1px solid theme('colors.medium-gray');
+        border: 1px solid theme('colors.primary.500');
         svg .shape {
             fill: theme('colors.white');
         }
 
         .dlp-close-btn-inner {
-            background: theme('colors.medium-gray');
+            background: theme('colors.primary.500');
         }
     }
 
@@ -25,7 +25,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: theme('colors.dark-gray');
+        background: theme('colors.primary.900');
         margin: 4px;
         width: 40px;
         height: 40px;
@@ -34,7 +34,7 @@
     &.light-theme {
         border-color: theme('colors.white');
         svg .shape {
-            fill: theme('colors.dark-gray');
+            fill: theme('colors.primary.900');
         }
 
         .dlp-close-btn-inner {

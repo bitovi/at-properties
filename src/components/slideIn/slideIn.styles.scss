@@ -38,16 +38,16 @@
 
     /* The emerging W3C standard that is currently Firefox-only */
         scrollbar-width: thin;
-        scrollbar-color: theme('colors.accent') theme('colors.light-gray');
+        scrollbar-color: theme('colors.secondary.500') theme('colors.primary.200');
 
     /* Works on Chrome/Edge/Safari */
     &::-webkit-scrollbar {
         width: 3px;
     }
     &::-webkit-scrollbar-track {
-        background: theme('colors.light-gray');
+        background: theme('colors.primary.200');
     }
     &::-webkit-scrollbar-thumb {
-        background-color: theme('colors.accent');
+        background-color: theme('colors.secondary.500');
     }
 }
