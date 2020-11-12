@@ -18,7 +18,7 @@
                         :alt="`${i18n.logo.alt}`" 
                         :src="`${i18n.logo.sm}`">
                     <h1 class="head-1">{{i18n.name}}</h1>
-                    <h2 class="head-5 accent">Co-agent Bio</h2>
+                    <h2 class="head-5 accent mb-4">Co-agent Bio</h2>
                     <div v-html="i18n.bio.brief"></div>
                     <div class="btn-group">
                         <dlp-button type="button" @click="showModal('CoagentModal')">Read Full Bio</dlp-button>
