@@ -54,6 +54,16 @@ body {
     @apply h-0;
     @apply overflow-hidden;
     @apply relative;
+
+    img,
+    picture {
+        @apply absolute;
+        @apply top-0;
+        @apply left-0;
+        @apply w-full;
+        @apply h-full;
+        object-position: 50% 0;
+    }
 }
 .ar-2-3 {
     padding-top: min(80vh, calc(3/2 * 100%));

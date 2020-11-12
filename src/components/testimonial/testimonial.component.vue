@@ -1,7 +1,7 @@
 <template>
     <div class="dlp-testimonial">
-        <p class="dlp-testimonial-content"><slot /></p>
-        <dlp-rating v-if="score" :score="score"></dlp-rating>
+        <slot />
+        <dlp-rating v-if="score" :score="Number(score)"></dlp-rating>
     </div>
 </template>
 
@@ -10,7 +10,7 @@ export default {
     name: 'dlp-testimonial',
     props: {
         score: {
-            type: [Number, null],
+            type: [Number, String],
             default: null,
             required: false
         }

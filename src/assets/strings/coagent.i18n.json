@@ -1,0 +1,165 @@
+{
+    "name": "Leigh Marcus",
+    "photo": {
+        "sm": "images/coagent/photo-leigh-marcus-sm.jpg",
+        "md": "images/coagent/photo-leigh-marcus-md.jpg"
+    },
+    "logo": {
+        "alt": "Leigh Marcus Real Estate",
+        "sm": "images/coagent/logo-leigh-marcus-sm.jpg",
+        "md": "images/coagent/logo-leigh-marcus-md.jpg"
+    },
+    "bio": {
+        "brief": "<p>Having sold over 1000 homes in his own personal career, Leigh will give you the comfort and confidence that he will be able to help you achieve success with your move. For over a decade, Leigh brings that same dynamic to every client he helps to buy or sell a home. Clients say they feel comfortable and confident trusting their home and family’s future with Leigh and his team.</p>",
+        "full": "<p><strong>Experience</strong></p><p>Having sold over 1000 homes in his own personal career, Leigh will give you the comfort and confidence that he will be able to help you achieve success with your move.</p><p>Early in his career with IBM, Leigh was promoted to managing people because he was great at teaching others how to treat clients in a personal way.</p><p>For over a decade, Leigh brings that same dynamic to every client he helps to buy or sell a home.  Clients say they feel comfortable and confident trusting their home and family’s future with Leigh and his team.</p><p><strong>Neighbor. Friend. Partner.</strong></p><p>Whether it’s his family or yours, Leigh believes in putting family first. As a father and husband himself, he understands the stress and uncertainty clients face as they go through the moving process. Leigh brings a calming force when working with his clients.</p><p>Providing a clear and simple plan to get you top dollar will give you the calm confidence to start packing.</p><p><strong>A Community Perspective</strong></p><p>Leigh and his wife Lindsey are committed to giving back to the communities they serve. Whether it’s sponsoring one of the many school events or handing out free ice cream, they not only live in the neighborhood, but spend time and money investing in the families that form their community.</p>"
+    },
+    "video": "https://www.youtube.com/watch?v=7ZMbcaCJzdg",
+    "testimonials": {
+        "1": {
+            "quote": "<p>Leigh and his team were very personable and approachable throughout the entire process. They kept us well informed of their sales process and what to expect as we navigated the sales process together. Leigh and his team's ability to work as one team allowed my wife and I to focus on other aspects associated with moving. Thank you for making this life changing event an enjoyable one!</p>",
+            "rating": "5"
+        },
+        "2": {
+            "quote": "<p>Leigh Marcus and the Marcus Group were a pleasure to work with on the sale of my house. They are reinventing the right way to sell as a Team.</p>",
+            "rating": "5"
+        },
+        "3": {
+            "quote": "<p>If I could give Leigh and his team 10 stars I would. He is awesome. His team is amazing. Everyone provided seamless service throughout the entire selling process, as well as honest counsel to help me make the right decisions to get my property sold.</p>",
+            "rating": "5"
+        },
+        "4": {
+            "quote": "<p>Leigh was great, knowledgeable about the neighborhood and the sales process. And he has an entire team working with him who will ensure your sale goes smoothly.</p>",
+            "rating": "5"
+        },
+        "5": {
+            "quote": "<p>Under contract in three days! Overall process smooth with no issues. Good communication with Leigh and his team.</p>",
+            "rating": "5"
+        },
+        "6": {
+            "quote": "<p>Leigh is the consummate professional realtor. Because of the volume he produces he can afford the staff to follow through and handle every detail making the sales process very easy on the seller (even when the seller resides out of town). This is my eco D sale with Leigh. He priced it accurately which is very important for a quick sale, held an open house, and sold it within two weeks of listing at almost full price. Highly recommend Leigh.</p>",
+            "rating": "5"
+        },
+        "7": {
+            "quote": "<p>Leigh is fantastic to work with. He knows the industry and the market better than anyone out there, and he always kept my best interest in mind. I would recommend him to anyone.</p>",
+            "rating": "5"
+        },
+        "8": {
+            "quote": "<p>Team Marcus did an excellent job start to finish. Leigh thoroughly communicated the process and expectations. I received constant updates throughout...from staging, listing, showings, to final walk through. I would recommend Leigh's service.</p>",
+            "rating": "5"
+        },
+        "9": {
+            "quote": "<p>Fantastic. Highly organized team and process for keeping us up to date on every step of the process is fantastic. The team generated a bidding war with 5 offers in two days. WOW! They were extremely professional throughout the process. I would highly recommend this team.</p>",
+            "rating": "5"
+        },
+        "10": {
+            "quote": "<p>Leigh and his team deliver the highest levels of professionalism, experience and courtesy. From my initial call with Leigh until the time of my close, Leigh and his entire team were communicative, responsive and there to help with any questions or issues big or small. They were also there to provide their input and experience to deal with the day-to-day challenges that must be accommodated when selling a house. They are nothing less than a 12 out of 10, were engaged, patient, understanding and never focused on the money, but more on me (as the client) and the process. Further, they are just GOOD. Leigh was able to quickly sell my house in less than a week of listing it where it had been on the market for one year with a previous broker and I only had a single offer in all of that time. It was the most positive experience I have had with real estate and I have been around the block a few times. If you want a team that will treat you with respect, communicate openly/regularly and sell your house, Leigh and his team are who you are looking for, period. They are the best! I would ONLY recommend Leigh and his team to anyone needing Real Estate services in his territory. I am happy to be a reference for Leigh and his team and cannot think of a single area of improvement for them. They were awesome!</p>",
+            "rating": "5"
+        }
+    },
+    "sales": {
+        "1": {
+            "photo": {
+                "sm": "images/sales/505-n-mcclurg-ct-2203-sm.jpg",
+                "md": "images/sales/505-n-mcclurg-ct-2203-md.jpg"
+            },
+            "price": "$935,000",
+            "address": "505 N Mcclurg Court #2203<br />Chicago, Illinois 60611"
+        },
+        "2": {
+            "photo": {
+                "sm": "images/sales/1030-w-wrightwood-ave-h-sm.jpg",
+                "md": "images/sales/1030-w-wrightwood-ave-h-md.jpg"
+            },
+            "price": "$791,500",
+            "address": "1030 W Wrightwood Avenue #H<br />Chicago, Illinois 60614"
+        },
+        "3": {
+            "photo": {
+                "sm": "images/sales/1028-pawnee-rd-sm.jpg",
+                "md": "images/sales/1028-pawnee-rd-md.jpg"
+            },
+            "price": "$1,150,000",
+            "address": "1028 Pawnee Road<br />Wilmette, Illinois 60091"
+        },
+        "4": {
+            "photo": {
+                "sm": "images/sales/45-e-cedar-st-400-sm.jpg",
+                "md": "images/sales/45-e-cedar-st-400-md.jpg"
+            },
+            "price": "$2,500,000",
+            "address": "45 E Cedar Street #400<br />Chicago, Illinois 60611"
+        },
+        "5": {
+            "photo": {
+                "sm": "images/sales/1530-n-state-parkway-3-sm.jpg",
+                "md": "images/sales/1530-n-state-parkway-3-md.jpg"
+            },
+            "price": "$1,995,000",
+            "address": "1530 N State Parkway #3<br />Chicago, Illinois 60610"
+        },
+        "6": {
+            "photo": {
+                "sm": "images/sales/55-e-erie-st-4503-sm.jpg",
+                "md": "images/sales/55-e-erie-st-4503-md.jpg"
+            },
+            "price": "$1,600,000",
+            "address": "55 E Erie Street #4503<br />Chicago, Illinois 60611"
+        },
+        "7": {
+            "photo": {
+                "sm": "images/sales/2550-n-lakeview-ave-n1305-6-sm.jpg",
+                "md": "images/sales/2550-n-lakeview-ave-n1305-6-md.jpg"
+            },
+            "price": "$1,550,000",
+            "address": "2550 N Lakeview Avenue #N1305-6<br />Chicago, Illinois 60614"
+        },
+        "8": {
+            "photo": {
+                "sm": "images/sales/1249-w-dickens-ave-sm.jpg",
+                "md": "images/sales/1249-w-dickens-ave-md.jpg"
+            },
+            "price": "$1,399,000",
+            "address": "1249 W Dickens Avenue<br />Chicago, Illinois 60614"
+        },
+        "9": {
+            "photo": {
+                "sm": "images/sales/2550-n-lakeview-ave-s1805-sm.jpg",
+                "md": "images/sales/2550-n-lakeview-ave-s1805-md.jpg"
+            },
+            "price": "$1,350,000",
+            "address": "2550 N Lakeview Avenue #S1805<br />Chicago, Illinois 60614"
+        },
+        "10": {
+            "photo": {
+                "sm": "images/sales/3830-n-racine-ave-sm.jpg",
+                "md": "images/sales/3830-n-racine-ave-md.jpg"
+            },
+            "price": "$1,249,000",
+            "address": "3830 N Racine Avenue<br />Chicago, Illinois 60613"
+        }
+    },
+    "stats": {
+        "1": {
+            "span-1": "24 days or less",
+            "span-2": "to sell half of listings"
+        },
+        "2": {
+            "span-1": "98.1% of List Price",
+            "span-2": "average home sales"
+        },
+        "3": {
+            "span-1": "174 Closed Home Sales",
+            "span-2": "in last 12 months "
+        }
+    },
+    "contact": {
+        "phone": "773.299.8025",
+        "email": "Leigh@LeighMarcus.com",
+        "social": {
+            "facebook": "https://www.facebook.com/MarcusRealtyTeam/",
+            "instagram": "https://instagram.com/leighmarcuschicago",
+            "linkedin": "https://us.linkedin.com/in/marcusrealtyteam",
+            "twitter": "https://twitter.com/leighmarcus"
+        }
+    }
+}
