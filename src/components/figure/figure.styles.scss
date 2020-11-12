@@ -26,18 +26,6 @@
         width: 100%;
     }
 
-    &.ar {
-        img,
-        picture {
-            @apply absolute;
-            @apply top-0;
-            @apply left-0;
-            @apply w-full;
-            @apply h-full;
-            object-position: 50% 0;
-        }
-    }
-
     .dlp-figure-caption {
         @apply absolute;
         @apply bottom-0;

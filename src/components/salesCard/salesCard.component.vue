@@ -1,12 +1,17 @@
 <template>
     <div class="dlp-sales-card grid grid-cols-3 gap-4">
         <div class="col-span-1">
-            <img :src="image" alt="address"/>
+            <picture>
+                <source v-if="lg" media="(min-width:1280px)" :srcset="lg">
+                <source :srcset="sm">
+                <img :src="sm" alt="address"/>
+            </picture>
+            
         </div>
         <div class="col-span-2">
-            <h5 class="bold-heading">{{price}}</h5>
-            <p>{{address}}</p>
-            <p v-if="address2">{{address2}}</p>
+            <strong>{{price}}</strong>
+            <p  v-html="address"/>
+            <p v-if="address2"  v-html="address2"/>
         </div>
     </div>
 </template>
@@ -14,9 +19,13 @@
 export default {
     name: "dlp-sales-card",
     props: {
-        image: {
+        sm: {
             type: String,
             required: true
+        },
+        lg: {
+            type: String,
+            required: false
         },
         price: {
             type: String,
