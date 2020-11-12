@@ -1,5 +1,5 @@
 <template>
-    <div class="dlp-page dlp-content">
+    <div class="section-content">
         <section id="pricing" class="container mx-auto grid md:grid-cols-2 gap-8 mt-12">
             <div class="self-center md:px-10">
                 <h3 class="head-5 accent">{{i18n.pricing.heading}}</h3>

@@ -1,7 +1,7 @@
 <template>
-    <div class="dlp-page dlp-content">
-        <div class="container pt-12 px-12 xl:px-32 grid md:grid-cols-3 xl:grid-cols-2 gap-8 md:gap-16 xl:gap-32">
-            <div>
+    <div class='section-content'>
+        <div class="content-grid">
+            <div class="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
                 <dlp-figure 
                     :sm="`${publicPath}images/profiles/olivia-carson-sm.jpg`"
                     :lg="`${publicPath}images/profiles/olivia-carson-lg.jpg`"
@@ -11,7 +11,7 @@
                     :isSticky="true"
                 ></dlp-figure>
             </div>
-            <div class="md:col-span-2 xl:col-span-1">
+            <div class="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-8">
                 <section class="mb-16">
                     <img
                         class="sm:mx-auto my-8 md:mb-8 md:my-0 md:mx-0"
@@ -32,7 +32,7 @@
         </div>
         
         <section id="team-stats" class="my-16">
-            <div class="grid md:grid-cols-3 border-t border-b border-light-gray divide-y md:divide-y-0 md:divide-x divide-light-gray">
+            <div class="grid md:grid-cols-3 border-t border-b border-primary-100 divide-y md:divide-y-0 md:divide-x divide-primary-100">
                 <div class="p-8 text-center stat">
                     <span class="head-3 block callout-text" aria-label="300 plus">300+</span> 
                     <span class="head-6">transactions</span>

@@ -1,21 +1,5 @@
 
 
-/**
-    Color Aliases
-*/
-
-$white: theme('colors.white');
-$faint-gray: theme('colors.primary.100');
-$light-gray: theme('colors.primary.200');
-$medium-gray: theme('colors.primary.500');
-$dark-gray: theme('colors.primary.900');
-
-$red: theme('colors.secondary.500');
-
-$bg-faint-gray: theme('colors.neutral.050');
-$bg-light-gray: theme('colors.neutral.300');
-
-
 html,
 body {
     height: 100%;

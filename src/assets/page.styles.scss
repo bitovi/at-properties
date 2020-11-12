@@ -1,5 +1,4 @@
 
-
 .dlp-page {
     @apply flex;
     @apply flex-col;
@@ -15,33 +14,46 @@
         @apply bg-no-repeat;
         outline: 1px solid theme('colors.primary.500');
         //Build order requires this be hard coded
-        outline-offset: -14px;
-    }
-
-    &.dlp-content {
-        margin: 0 theme('spacing.3');
-        border: 3px double theme('colors.primary.100');
-        border-top: none;
-        border-bottom: none;
-        @apply py-16;
-        @media (min-width: theme('screens.sm')) {
-            & {
-                @apply px-4;
-                @apply pb-24;
-            }
-        }
-        @media (min-width: theme('screens.sm')) {
-            & {
-                @apply py-20
-            }
-        }
-
-        @media (min-width: theme('screens.sm')) {
-            & {
-                @apply py-10
-            }
-        }
+        outline-offset: -16px;
     }
 
 }
 
+.section-content {
+    margin: 0 8px;
+    border-left: 4px double theme('colors.primary.200');
+    padding: 80px 12px;
+    border-right: 4px double theme('colors.primary.200');
+    
+    @media (min-width: theme('screens.md')) {
+      margin: 0 16px;
+    }
+    
+    @media (min-width: theme('screens.lg')) {
+      margin: 0 20px;
+      padding: 96px 8px;
+    }
+}
+
+.content-grid {
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+    
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
+    
+    @media (min-width: theme('screens.md')) {
+        grid-template-columns: repeat(12, minmax(0, 1fr));
+        gap: 32px;
+    }
+    
+    @media (min-width: theme('screens.lg')) {
+        grid-template-columns: repeat(16, minmax(0, 1fr));
+    }
+    
+    @media (min-width: 1441px) {
+        max-width: 1440px;
+    }
+}
