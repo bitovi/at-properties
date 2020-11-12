@@ -36,7 +36,7 @@
     .dlp-nav-contact {
         a {
             color: theme('colors.secondary.500');
-            @apply font-gotham-medium;
+            @apply font-secondary;
             font-size: theme('fontSize.sm');
             text-decoration: none;
             text-transform: uppercase;
@@ -82,7 +82,7 @@
         @apply inline-block;
         color: theme('colors.primary.500');
         font-size: theme('fontSize.lg');
-        @apply font-gotham-medium;
+        @apply font-secondary;
         text-align: center;
         letter-spacing: 0.1em;
         text-transform: uppercase;
