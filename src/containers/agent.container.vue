@@ -1,7 +1,7 @@
 <template>
-    <div class='dlp-page dlp-content '>
-        <div class="container pt-24 px-12 xl:px-32 grid md:grid-cols-3 xl:grid-cols-2 gap-8 md:gap-16 xl:gap-32">
-            <div>
+    <div class='section-content'>
+        <div class="content-grid">
+            <div class="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
                 <dlp-figure 
                     :sm="`${publicPath}images/profiles/thad-wong-sm.jpg`"
                     :lg="`${publicPath}images/profiles/thad-wong-lg.jpg`"
@@ -11,7 +11,7 @@
                     :isSticky="true"
                 ></dlp-figure>
             </div>
-            <div class="md:col-span-2 xl:col-span-1">
+            <div class="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-8">
                 <section id="agent-bio">
                     <img
                         class="sm:mx-auto my-8 md:mb-8 md:my-0 md:mx-0"
