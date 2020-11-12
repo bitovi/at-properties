@@ -3,10 +3,10 @@
         <div class="container pt-24 px-12 xl:px-32 grid md:grid-cols-3 xl:grid-cols-2 gap-8 md:gap-16 xl:gap-32">
             <div>
                 <dlp-figure 
-                    :sm="`${publicPath}images/profiles/thad-wong-sm.jpg`"
-                    :lg="`${publicPath}images/profiles/thad-wong-lg.jpg`"
-                    alt="Thad Wong"
-                    caption="Thad Wong"
+                    :sm="`${publicPath}${i18n.photo.sm}`"
+                    :md="`${publicPath}${i18n.photo.md}`"
+                    :alt="`${i18n.name}`"
+                    :caption="`${i18n.name}`"
                     ar="ar ar-4-5"
                     :isSticky="true"
                 ></dlp-figure>
@@ -17,13 +17,13 @@
                         class="sm:mx-auto my-8 md:mb-8 md:my-0 md:mx-0"
                         alt="Emily Sachs Wong - Luxury Living" 
                         :src="`${publicPath}images/logos/logo-emily-sachs-wong.jpg`">
-                    <h2 class="head-2">Thad Wong</h2>
+                    <h2 class="head-2">{{i18n.name}}</h2>
                     <h3 class="head-5 accent">Agent Bio</h3>
-                    <p v-html="i18n.thad.sample"></p>
+                    <p v-html="i18n.bio.brief"></p>
                     <div class="btn-group">
                         <dlp-button type="button" @click="showModal('AgentModal')">Read Full Bio</dlp-button>
                         <dlp-slide-in ref="AgentModal">
-                            <div v-html="i18n.thad.full"></div>
+                            <div v-html="i18n.bio.full"></div>
                         </dlp-slide-in>
                         <dlp-button type="button">Watch Agent Video</dlp-button>
                     </div>
@@ -41,41 +41,43 @@
 
                 <section id="agent-sales">
                     <h3 class="head-5 accent mb-4">Recent Sales</h3>
-                    <dlp-sales-card :image="`${publicPath}images/sales/property-1.jpg`" price="$589,500" address="26W268 Inwood Lane" address2="Winfield, IL 60190"></dlp-sales-card>
-                    <dlp-sales-card :image="`${publicPath}images/sales/property-2.jpg`" price="$1,140,100" address="701 W Thomas Rd Wheaton, IL 60187"></dlp-sales-card>
-                    <dlp-sales-card :image="`${publicPath}images/sales/property-3.jpg`" price="$423,250" address="2865 West Shakespeare Avenue Chicago, IL 60647"></dlp-sales-card>
+                    <div v-for="sale in i18n.sales.slice(0, 3)" v-bind:key="sale.id">
+                        <dlp-sales-card :sm="sale.photo.sm" :lg="sale.photo.lg" :price="sale.price" :address="sale.address"></dlp-sales-card>
+                    </div>
                     <div class="btn-group">
-                        <dlp-button href="#">View more sales</dlp-button>
+                        <dlp-button type="button" @click="showModal('SalesModal')">View more sales</dlp-button>
+                        <dlp-slide-in ref="SalesModal">
+                            <h3 class="head-5 accent mb-8">Recent Sales</h3>
+                            <div v-for="sale in i18n.sales" v-bind:key="sale.id">
+                                <dlp-sales-card :sm="sale.photo.sm" :lg="sale.photo.lg" :price="sale.price" :address="sale.address"></dlp-sales-card>
+                            </div>
+                        </dlp-slide-in>
                     </div>
                 </section>
 
                 <section id="agent-stats" class="mb-16">
-                    <h3 class="head-5 accent">Agent Stats</h3>
-                    <!-- TODO: Nick isn't overly fond of this. -->
-                    <!-- Is there better semantics? -->
                     <p class="mb-4">
-                        <span class="head-3 block callout-text">Number One</span>
-                        <span class="head-6">Top selling agent in Lincoln Park</span>
+                        <span class="head-3 block callout-text" v-html="i18n.stats[0]['span-1']"></span>
+                        <span class="head-6" v-html="i18n.stats[0]['span-2']"></span>
                     </p>
                     <p class="mb-4">
-                        <span class="head-3 block callout-text">$20 Million</span>
-                        <span class="head-6">Annual Sales in 2019</span>
+                        <span class="head-3 block callout-text" v-html="i18n.stats[1]['span-1']"></span>
+                        <span class="head-6" v-html="i18n.stats[1]['span-2']"></span>
                     </p>
                     <p class="mb-4">
-                        <span class="head-3 block callout-text">30 Under 30</span>
-                        <span class="head-6">Real Estate Agent in Chicago</span>
+                        <span class="head-3 block callout-text">{{i18n.stats[2]['span-1']}}</span>
+                        <span class="head-6" v-html="i18n.stats[2]['span-2']"></span>
                     </p>
                 </section>
 
                 <section id="agent-contact" class="mb-16">
                     <h3 class="head-5 accent">Agent Contact</h3>
                     <address class="mt-4">
-                        <a href="tel:+1-312-999-0848">312.999.0848</a><br /><br />
-                        <a href="mailto:Thad@atproperties.com">Thad@atproperties.com</a>
+                        <a :href="`tel:+1-${i18n.contact.phone}`">{{i18n.contact.phone}}</a><br /><br />
+                        <a :href="`mailto:${i18n.contact.email}`">{{i18n.contact.email}}</a>
                     </address>
                     <dlp-social 
-                        facebook="https://www.facebook.com/thad.wong.54"
-                        instagram="https://www.instagram.com/thadly_wong/"
+                        v-bind="i18n.contact.social"
                     ></dlp-social>
                 </section>
             </div>
@@ -85,13 +87,14 @@
 </template>
 
 <script>
-import BioStrings from '../assets/strings/bio.i18n.json'
+import AgentStrings from '../assets/strings/agent.i18n.json'
+
 export default {
     name: 'agentContainer',
     data(){
         return {
             publicPath: process.env.BASE_URL,
-            i18n: BioStrings
+            i18n: AgentStrings
         }
     },
     methods: {
