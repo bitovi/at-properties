@@ -15,8 +15,8 @@
                 <section id="agent-bio">
                     <img
                         class="sm:mx-auto my-8 md:mb-8 md:my-0 md:mx-0"
-                        alt="Emily Sachs Wong - Luxury Living" 
-                        :src="`${publicPath}images/logos/logo-emily-sachs-wong.jpg`">
+                        :alt="`${i18n.logo.alt}`" 
+                        :src="`${i18n.logo.sm}`">
                     <h2 class="head-2">{{i18n.name}}</h2>
                     <h3 class="head-5 accent">Agent Bio</h3>
                     <p v-html="i18n.bio.brief"></p>
@@ -32,31 +32,53 @@
 
                 <section id="agent-testimonials">
                     <h3 class="head-5 accent mb-4">Testimonials</h3>
-                    <dlp-testimonial :score="4">“Thad provided outstanding service for a very complex transaction that had to be completed within a tight timeframe while working with a difficult counterparty.”</dlp-testimonial>
-                    <dlp-testimonial>“I offer my highest recommendation--this is the broker you want on your side." [Test no score]</dlp-testimonial>
-                    <dlp-testimonial :score="5">“Moreover, he brings with him an entire team to make your purchase or sale go through without a hitch.”</dlp-testimonial>
+                    <dlp-testimonial 
+                                v-for="t in i18n.testimonials.slice(3, 6)" 
+                                v-bind:key="t.id" 
+                                :score="t.rating">
+                                    <div v-html="t.quote"></div>
+                                </dlp-testimonial>
                     <div class="btn-group">
-                        <dlp-button href="#">View more testimonials</dlp-button>
+                        <dlp-button type="button" @click="showModal('TestimonialsModal')">View more testimonials</dlp-button>
+                        <dlp-slide-in ref="TestimonialsModal">
+                            <h3 class="head-5 accent mb-8">Testimonials</h3>
+                            <dlp-testimonial 
+                                v-for="t in i18n.testimonials" 
+                                v-bind:key="t.id" 
+                                :score="t.rating">
+                                    <div v-html="t.quote"></div>
+                                </dlp-testimonial>
+                        </dlp-slide-in>
                     </div>
                 </section>
 
                 <section id="agent-sales">
                     <h3 class="head-5 accent mb-4">Recent Sales</h3>
-                    <div v-for="sale in i18n.sales.slice(0, 3)" v-bind:key="sale.id">
-                        <dlp-sales-card :sm="sale.photo.sm" :lg="sale.photo.lg" :price="sale.price" :address="sale.address"></dlp-sales-card>
-                    </div>
+                    <dlp-sales-card 
+                        v-for="sale in i18n.sales.slice(0, 3)" 
+                        v-bind:key="sale.id" 
+                        :sm="sale.photo.sm" 
+                        :lg="sale.photo.lg" 
+                        :price="sale.price" 
+                        :address="sale.address" />
+                    
                     <div class="btn-group">
                         <dlp-button type="button" @click="showModal('SalesModal')">View more sales</dlp-button>
                         <dlp-slide-in ref="SalesModal">
                             <h3 class="head-5 accent mb-8">Recent Sales</h3>
-                            <div v-for="sale in i18n.sales" v-bind:key="sale.id">
-                                <dlp-sales-card :sm="sale.photo.sm" :lg="sale.photo.lg" :price="sale.price" :address="sale.address"></dlp-sales-card>
-                            </div>
+                            <dlp-sales-card 
+                                v-for="sale in i18n.sales" 
+                                v-bind:key="sale.id" 
+                                :sm="sale.photo.sm" 
+                                :lg="sale.photo.lg" 
+                                :price="sale.price" 
+                                :address="sale.address" />
                         </dlp-slide-in>
                     </div>
                 </section>
 
                 <section id="agent-stats" class="mb-16">
+                    <h3 class="head-5 accent">Agent Stats</h3>
                     <p class="mb-4">
                         <span class="head-3 block callout-text" v-html="i18n.stats[0]['span-1']"></span>
                         <span class="head-6" v-html="i18n.stats[0]['span-2']"></span>
