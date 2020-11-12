@@ -1,5 +1,5 @@
 <template>
-    <div class="dlp-page dlp-content">
+    <div class="section-content">
         <div class="container mx-auto">
             <section id="marketing-plan">
                 <div class="md:w-2/3 xl:w-1/3 mx-auto text-center mt-48 mb-32">

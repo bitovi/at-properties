@@ -17,30 +17,6 @@
         outline-offset: -16px;
     }
 
-    &.dlp-content {
-        margin: 0 theme('spacing.4');
-        border: 4px double theme('colors.primary.100');
-        border-top: none;
-        border-bottom: none;
-        @apply py-16;
-        @media (min-width: theme('screens.sm')) {
-            & {
-                @apply px-4;
-                @apply pb-24;
-            }
-        }
-        @media (min-width: theme('screens.sm')) {
-            & {
-                @apply py-20
-            }
-        }
-
-        @media (min-width: theme('screens.sm')) {
-            & {
-                @apply py-10
-            }
-        }
-    }
 }
 
 .section-content {
