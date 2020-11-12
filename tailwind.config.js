@@ -52,7 +52,16 @@ module.exports = {
       '3/5': '60%',
     },
     extend: {
-      
+      gridTemplateColumns: {
+        '16': 'repeat(16, minmax(0, 1fr))',
+      },
+      gridColumnStart: {
+        '13': '13',
+        '14': '14',
+        '15': '15',
+        '16': '16',
+        '17': '17',
+      }
     }
   }
 }
