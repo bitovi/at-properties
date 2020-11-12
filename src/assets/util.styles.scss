@@ -5,21 +5,12 @@ body {
     height: 100%;
     font-size: theme('fontSize.base');
     scroll-behavior: smooth;
+
+    font-family: "Gotham A", "Gotham B";
+    font-style: normal;
+    font-weight: 400;
 }
 
-
-
-@font-face {
-    font-family: 'Gotham Medium';
-    src: url('/fonts/gothamhtf-medium-webfont.woff2') format('woff2'),
-         url('/fonts/gothamhtf-medium-webfont.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Gotham Light';
-    src: url('/fonts/gothamhtf-light-webfont.woff2') format('woff2'),
-         url('/fonts/gothamhtf-light-webfont.woff') format('woff');
-}
 
 //https://www.a11yproject.com/posts/2013-01-11-how-to-hide-content/
 //Hide content, but keep it available to screen readers
