@@ -15,8 +15,8 @@
                 <section id="agent-bio">
                     <img
                         class="sm:mx-auto my-8 md:mb-8 md:my-0 md:mx-0"
-                        alt="Emily Sachs Wong - Luxury Living" 
-                        :src="`${publicPath}images/logos/logo-emily-sachs-wong.jpg`">
+                        :alt="`${i18n.logo.alt}`" 
+                        :src="`${i18n.logo.sm}`">
                     <h2 class="head-2">{{i18n.name}}</h2>
                     <h3 class="head-5 accent">Agent Bio</h3>
                     <p v-html="i18n.bio.brief"></p>
