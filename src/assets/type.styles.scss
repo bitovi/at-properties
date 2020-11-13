@@ -5,12 +5,12 @@ body {
     scroll-behavior: smooth;
     @apply font-primary;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 500;
 
     color: theme('colors.primary.900');
 
     &.font-book {
-        @apply font-secondary;
+        font-weight: 300;
     }
 }
 
@@ -55,8 +55,14 @@ address {
 .head-5, .head-6 {
     // @apply font-secondary;
     @apply tracking-widest; /* letter-spacing: 0.10em */
-    font-weight: 500;
+    font-weight: 800;
 }
+.font-book {
+    .head-5, .head-6 {
+        font-weight: 500;
+    }
+}
+
 .head-1 { @apply text-5xl; /* 42px */ }
 .head-2 { @apply text-4xl; /* 34px */ }
 .head-3 { @apply text-3xl; /* 28px */ }
