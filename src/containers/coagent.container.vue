@@ -26,7 +26,8 @@
                             <h3 class="head-5 accent mb-8">Agent Bio</h3>
                             <div v-html="i18n.bio.full"></div>
                         </dlp-slide-in>
-                        <dlp-button type="button">Watch Agent Video</dlp-button>
+                        <dlp-button type="button" @click="showModal('AgentVideo')">Watch Agent Video</dlp-button>
+                        <dlp-video-modal ref="AgentVideo" videoId="7ZMbcaCJzdg" :caption="i18n.name"/>
                     </div>
                 </section>
             </div>

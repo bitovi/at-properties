@@ -27,7 +27,7 @@
                             <div v-html="i18n.bio.full"></div>
                         </dlp-slide-in>
                         <dlp-button type="button" @click="showModal('AgentVideo')">Watch Agent Video</dlp-button>
-                        <dlp-video-modal ref="AgentVideo" :caption="i18n.name"/>
+                        <dlp-video-modal ref="AgentVideo" videoId="U0DYr9w9SX0" :caption="i18n.name"/>
                     </div>
                 </section>
 

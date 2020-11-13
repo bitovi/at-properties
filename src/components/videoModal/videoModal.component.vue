@@ -55,7 +55,7 @@ export default {
         },
         videoId: {
             type: String,
-            default: "U0DYr9w9SX0"
+            required: true
         },
         caption: {
             type: String,
