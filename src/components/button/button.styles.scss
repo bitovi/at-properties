@@ -2,13 +2,13 @@
 .btn {
     color: theme('colors.white');
     @apply mb-4;
-    @apply font-secondary;
     display: inline-block;
     font-size: theme('fontSize.sm');
     text-transform: uppercase;
     text-align: center;
     border: 1px solid theme('colors.primary.900');
     letter-spacing: 0.1em;
+    font-weight: 500;
 
     &:link,
     &:visited {

@@ -49,11 +49,9 @@ address {
     line-height: 1.5em;
 }
 .head-1, .head-2, .head-3, .head-4 {
-    // @apply font-primary;
     @apply tracking-wider; /* letter-spacing: 0.05em */
 }
 .head-5, .head-6 {
-    // @apply font-secondary;
     @apply tracking-widest; /* letter-spacing: 0.10em */
     font-weight: 800;
 }
@@ -101,7 +99,7 @@ hr {
 }
 
 strong {
-    @apply font-secondary;
+    font-weight: 800;
 }
 
 
