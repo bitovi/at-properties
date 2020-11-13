@@ -65,7 +65,7 @@ export default {
             if(this.bookFont){
                 ElBody.classList.remove('font-book')
                 this.bookFont = false
-                console.log('Font: Gotham Medium')
+                console.log('Font: Gotham Light')
             } else {
                 ElBody.classList.add('font-book')
                 this.bookFont = true
