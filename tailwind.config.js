@@ -26,8 +26,7 @@ module.exports = {
       }
     },
     fontFamily: {
-      'primary':   '"Gotham A", "Gotham B", Helvetica, Arial, sans-serif',
-      'secondary': '"Gotham B", Helvetica, Arial, sans-serif'
+      'primary':   '"Gotham A", "Gotham B", Helvetica, Arial, sans-serif'
     },
     fontSize: {
       'tiny': '10px',

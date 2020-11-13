@@ -36,8 +36,8 @@
     .dlp-nav-contact {
         a {
             color: theme('colors.secondary.500');
-            @apply font-secondary;
             font-size: theme('fontSize.sm');
+            font-weight: 500;
             text-decoration: none;
             text-transform: uppercase;
             &:hover {
