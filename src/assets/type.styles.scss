@@ -5,12 +5,12 @@ body {
     scroll-behavior: smooth;
     @apply font-primary;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 400;
 
     color: theme('colors.primary.900');
 
     &.font-book {
-        @apply font-secondary;
+        font-weight: 300;
     }
 }
 
