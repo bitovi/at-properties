@@ -1,10 +1,11 @@
 <template>
   <div id="app">
-    <header>
-      <Nav />
-    </header>
+    
       <DevGrid />
     <main class="dlp-main">
+      <header>
+        <Nav />
+      </header>
       <article id="agent">
         <TitleContainer />
         <AgentContainer />
