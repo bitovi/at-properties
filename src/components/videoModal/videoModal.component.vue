@@ -1,16 +1,26 @@
+// Possible solution to showing ads
+// It's a bit trickstery 
+// https://support.google.com/policies/answer/9664901
+
+// also
+// https://www.geekytech.co.uk/remove-disable-related-videos-youtube-embed/
+
+// Known Dev Bug:
+// The target origin provided ('https://www.youtube.com') does not match the recipient window's origin ('http://localhost:8081').
+// When in production with https, this should disapear
 <template>
     <transition
-        name="fade-slide"
+        name="fade"
         v-on:after-enter="setFocus"
         >
         <div 
-            class="dlp-slide-in-mask" 
+            class="dlp-video-modal-mask" 
             @click.self="close" 
             v-if="showModal"
             role="dialog"
             aria-modal="true"
             aria-describedby="modalDescription">
-                <div class="dlp-slide-in fade-slide-content">
+                <div class="dlp-video-modal">
                     <nav class="absolute right-0 mr-12">
                         <h1 
                             ref="ElDescription"
@@ -19,10 +29,13 @@
                             class="visually-hidden">
                             {{srHeading}}
                         </h1>
-                        <dlp-close-btn @click.stop="close" />
+                        <dlp-close-btn @click.stop="close" :light="true" />
                     </nav>
-                    <div class="dlp-slide-in-content" >
-                        <slot />
+                    <div class="dlp-video-modal-content" >
+                        <div class="dlp-video-modal-player">
+                            <youtube :fitParent="true" :video-id="videoId" :player-vars="playerVars"/>
+                        </div>
+                        <span v-if="caption" class="head-6 accent accent-centered text-white pt-4">{{caption}}</span>
                     </div>
                 </div>
         </div>
@@ -34,16 +47,28 @@ import A11yStrings from '../../assets/strings/a11y.i18n.json'
 const ElBody = document.getElementsByTagName("body")[0]
 
 export default {
-    name: 'dlp-slide-in',
+    name: 'dlp-video-modal',
     props: {
         srHeading:{
             type: String,
-            default: A11yStrings.defaults.contentModal.heading
+            default: A11yStrings.defaults.videoModal.heading
+        },
+        videoId: {
+            type: String,
+            required: true
+        },
+        caption: {
+            type: String,
+            required: false
         }
     },
     data() {
         return {
-            showModal: false
+            showModal: false,
+            playerVars: {
+                rel: 0,
+                autoplay: 1
+            }
         }
     },
     mounted: function () {

@@ -18,15 +18,16 @@
                         :alt="`${i18n.logo.alt}`" 
                         :src="`${i18n.logo.sm}`">
                     <h2 class="head-2">{{i18n.name}}</h2>
-                    <h3 class="head-5 accent">Agent Bio</h3>
-                    <p v-html="i18n.bio.brief"></p>
+                    <h3 class="head-5 accent mb-4">Agent Bio</h3>
+                    <div v-html="i18n.bio.brief"></div>
                     <div class="btn-group">
                         <dlp-button type="button" @click="showModal('AgentModal')">Read Full Bio</dlp-button>
                         <dlp-slide-in ref="AgentModal">
                             <h3 class="head-5 accent mb-8">Agent Bio</h3>
                             <div v-html="i18n.bio.full"></div>
                         </dlp-slide-in>
-                        <dlp-button type="button">Watch Agent Video</dlp-button>
+                        <dlp-button type="button" @click="showModal('AgentVideo')">Watch Agent Video</dlp-button>
+                        <dlp-video-modal ref="AgentVideo" videoId="U0DYr9w9SX0" :caption="i18n.name"/>
                     </div>
                 </section>
 
