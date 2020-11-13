@@ -1,19 +1,4 @@
 
-
-html,
-body {
-    height: 100%;
-    font-size: theme('fontSize.base');
-    scroll-behavior: smooth;
-
-    font-family: "Gotham A", "Gotham B";
-    font-style: normal;
-    font-weight: 300;
-
-    color: theme('colors.primary.900');
-}
-
-
 //https://www.a11yproject.com/posts/2013-01-11-how-to-hide-content/
 //Hide content, but keep it available to screen readers
 .visually-hidden {
