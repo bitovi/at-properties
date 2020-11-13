@@ -86,13 +86,15 @@
         </section>
 
         <section id="company-technology" class="p-6 md:p-0 grid md:grid-cols-2 gap-8">
-            <div class="md:col-span-2 text-center mb-32">
+            <div class="md:col-span-2 text-center">
                 <h3 class="head-1 accent accent-below accent-wide">{{i18n.technology.heading}}</h3>
             </div>
-            <div>
-                <p class="text-center">[ VIDEO HERE ]</p>
+            <div class="md:col-span-2 mx-auto">
+                <youtube  video-id="9wYizJiPrNI" :player-vars="{
+                    rel: 0
+                }"/>
             </div>
-            <div class="self-center md:px-10">
+            <div class="md:col-span-2 self-center text-center md:px-10">
                 <p class="accent">{{i18n.technology.content}}</p>
                 <div class="btn-group">
                     <dlp-button>Learn More</dlp-button>
