@@ -50,6 +50,7 @@
 
 <script>
 import gsap from 'gsap';
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 import Nav from './components/nav/nav.component.vue'
 import TitleContainer from './containers/title.container.vue'
@@ -89,28 +90,36 @@ export default {
       }
   },
   mounted() {
+    gsap.registerPlugin(ScrollTrigger);
     gsap.from("#company .bg", {
         // yPercent: 50,
         // ease: "none",
-        duration: 10,
-        transform: 'perspective(100px) translate3d(0, 0, 30px)',
+        // duration: 5,
+        transform: 'perspective(100px) translate3d(0, 0, 0px)',
+        opacity: 1,
         // x: 300,
         // onUpdate() {
         //   // also onStart, onComplete
         //   // console.log('update');
         // },
-        // scrollTrigger: {
-        //     trigger: "#company hgroup",
+        scrollTrigger: {
+            trigger: "#company hgroup",
         //     // start: "top bottom", // the default values
-        //     // end: "bottom top",
-        //     // scrub: true
-        // },
+            end: "bottom top",
+            scrub: true
+        },
     });
 
     gsap.from('#company hgroup', {
       ease: 'out',
       duration: 3,
       y: '200px',
+      scrollTrigger: {
+          trigger: "#company hgroup",
+      //     // start: "top bottom", // the default values
+      //     // end: "bottom top",
+          scrub: true
+      },
     });
   },
 }
