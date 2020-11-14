@@ -91,34 +91,43 @@ export default {
   },
   mounted() {
     gsap.registerPlugin(ScrollTrigger);
-    gsap.from("#company .bg", {
-        // yPercent: 50,
-        // ease: "none",
-        // duration: 5,
-        transform: 'perspective(100px) translate3d(0, 0, 0px)',
-        opacity: 1,
-        // x: 300,
-        // onUpdate() {
-        //   // also onStart, onComplete
-        //   // console.log('update');
-        // },
-        scrollTrigger: {
-            trigger: "#company hgroup",
-        //     // start: "top bottom", // the default values
-            end: "bottom top",
-            scrub: true
-        },
-    });
+    // gsap.from("#company .bg", {
+    //     // yPercent: 50,
+    //     // ease: "none",
+    //     // duration: 5,
+    //     transform: 'perspective(100px) translate3d(0, 0, 0px)',
+    //     opacity: 1,
+    //     // x: 300,
+    //     // onUpdate() {
+    //     //   // also onStart, onComplete
+    //     //   // console.log('update');
+    //     // },
+    //     scrollTrigger: {
+    //         trigger: "#company hgroup",
+    //     //     // start: "top bottom", // the default values
+    //         end: "bottom top",
+    //         scrub: true
+    //     },
+    // });
+    const elSelector = '#company hgroup';
+    const el = document.querySelector(elSelector);
+    const elOffsetH = el.offsetHeight;
 
-    gsap.from('#company hgroup', {
-      ease: 'out',
-      duration: 3,
-      y: '200px',
+    gsap.from(el, {
+      ease: 'sine-inOut',
+      duration: 1.5,
+      transform: 'perspective(100px) translate3d(0, 300px, 0)',
+      opacity: 0,
       scrollTrigger: {
-          trigger: "#company hgroup",
-      //     // start: "top bottom", // the default values
-      //     // end: "bottom top",
-          scrub: true
+        trigger: el,
+        start() {
+          return `top bottom-=${elOffsetH}px`
+        }, // the default values trigger scroller
+        end() {
+          return `50%-${elOffsetH} 50%`
+        }, // triggger scroller
+        scrub: true,
+        markers: true,
       },
     });
   },
