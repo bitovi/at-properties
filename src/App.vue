@@ -49,6 +49,8 @@
 </template>
 
 <script>
+import gsap from 'gsap';
+
 import Nav from './components/nav/nav.component.vue'
 import TitleContainer from './containers/title.container.vue'
 import AgentContainer from './containers/agent.container.vue'
@@ -85,7 +87,32 @@ export default {
       return {
           publicPath: process.env.BASE_URL
       }
-  }
+  },
+  mounted() {
+    gsap.from("#company .bg", {
+        // yPercent: 50,
+        // ease: "none",
+        duration: 10,
+        transform: 'perspective(100px) translate3d(0, 0, 30px)',
+        // x: 300,
+        // onUpdate() {
+        //   // also onStart, onComplete
+        //   // console.log('update');
+        // },
+        // scrollTrigger: {
+        //     trigger: "#company hgroup",
+        //     // start: "top bottom", // the default values
+        //     // end: "bottom top",
+        //     // scrub: true
+        // },
+    });
+
+    gsap.from('#company hgroup', {
+      ease: 'out',
+      duration: 3,
+      y: '200px',
+    });
+  },
 }
 </script>
 
