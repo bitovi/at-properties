@@ -62,5 +62,9 @@ module.exports = {
         '17': '17',
       }
     }
-  }
+  },
+  purge: [
+    './src/**/*.html',
+    './src/**/*.vue'
+  ]
 }

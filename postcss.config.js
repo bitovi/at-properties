@@ -4,7 +4,8 @@ const tailwindcss = require('tailwindcss');
 
 module.exports = {
   plugins: [
-    tailwindcss,
+    tailwindcss('./tailwind.ansly.js'),
+    tailwindcss('./tailwind.config.js'),
     autoprefixer,
   ],
 };
