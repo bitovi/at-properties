@@ -5,9 +5,10 @@
             class="dlp-figure" 
             v-bind:class="[{ 'hide-border': !showBorder }, ar]">
             <picture>
-                <source v-if="lg" media="(min-width:1024px)" :srcset="lg">
-                <source v-if="md" media="(min-width:769px)" :srcset="md">
-                <source v-if="sm" media="(min-width:640px)" :srcset="sm">
+                <source v-if="xl" media="(min-width:1920px)" :srcset="xl">
+                <source v-if="lg" media="(min-width:1280px)" :srcset="lg">
+                <source v-if="md" media="(min-width:768px)" :srcset="md">
+                <source v-if="sm" :srcset="sm">
                 <img 
                     alt="alt" 
                     :src="defaultImage" />
@@ -32,6 +33,10 @@ export default {
             default: null
         },
         lg: {
+            type: String,
+            default: null
+        },
+        xl: {
             type: String,
             default: null
         },

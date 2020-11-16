@@ -1,42 +1,4 @@
 
-
-/**
-    Color Aliases
-*/
-
-$white: theme('colors.white');
-$faint-gray: theme('colors.primary.100');
-$light-gray: theme('colors.primary.200');
-$medium-gray: theme('colors.primary.500');
-$dark-gray: theme('colors.primary.900');
-
-$red: theme('colors.secondary.500');
-
-$bg-faint-gray: theme('colors.neutral.050');
-$bg-light-gray: theme('colors.neutral.300');
-
-
-html,
-body {
-    height: 100%;
-    font-size: theme('fontSize.base');
-    scroll-behavior: smooth;
-}
-
-
-
-@font-face {
-    font-family: 'Gotham Medium';
-    src: url('/fonts/gothamhtf-medium-webfont.woff2') format('woff2'),
-         url('/fonts/gothamhtf-medium-webfont.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Gotham Light';
-    src: url('/fonts/gothamhtf-light-webfont.woff2') format('woff2'),
-         url('/fonts/gothamhtf-light-webfont.woff') format('woff');
-}
-
 //https://www.a11yproject.com/posts/2013-01-11-how-to-hide-content/
 //Hide content, but keep it available to screen readers
 .visually-hidden {
@@ -70,6 +32,16 @@ body {
     @apply h-0;
     @apply overflow-hidden;
     @apply relative;
+
+    img,
+    picture {
+        @apply absolute;
+        @apply top-0;
+        @apply left-0;
+        @apply w-full;
+        @apply h-full;
+        object-position: 50% 0;
+    }
 }
 .ar-2-3 {
     padding-top: min(80vh, calc(3/2 * 100%));

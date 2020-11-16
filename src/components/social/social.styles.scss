@@ -8,7 +8,7 @@
     svg {
         @apply w-10;
         @apply h-10;
-        fill: $dark-gray;
+        fill: theme('colors.primary.900');
     }
 }
 
@@ -33,5 +33,11 @@
 .icon-youtube {
     &:hover, &:focus, &:active {
         fill: #FF0000;
+    }
+}
+
+.icon-linkedin {
+    &:hover, &:focus, &:active {
+        fill: #0077B5;
     }
 }

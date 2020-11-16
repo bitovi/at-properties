@@ -3,7 +3,7 @@
     @apply relative;
 
     &.dark-text .dlp-figure-caption {
-        color: $dark-gray;
+        color: theme('colors.primary.900');
     }
 
     &.sticky {
@@ -20,28 +20,16 @@
 
     img,
     picture {
-        outline: 1px solid $white;
+        outline: 1px solid theme('colors.white');
         //Build order requires this be hard coded
         outline-offset: -14px;
         width: 100%;
     }
 
-    &.ar {
-        img,
-        picture {
-            @apply absolute;
-            @apply top-0;
-            @apply left-0;
-            @apply w-full;
-            @apply h-full;
-            object-position: 50% 0;
-        }
-    }
-
     .dlp-figure-caption {
         @apply absolute;
         @apply bottom-0;
-        color: $white;
+        color: theme('colors.white');
         display: block;
         width: 100%;
         text-align: center;
@@ -50,7 +38,7 @@
             height: 2px;
             display: block;
             width: theme('spacing.8');
-            background: $red;
+            background: theme('colors.secondary.500');
             content: '';
             margin: 8px auto;
         }

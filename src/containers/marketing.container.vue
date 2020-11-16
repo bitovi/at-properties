@@ -1,5 +1,5 @@
 <template>
-    <div class="dlp-page dlp-content">
+    <div class="section-content">
         <div class="container mx-auto">
             <section id="marketing-plan">
                 <div class="md:w-2/3 xl:w-1/3 mx-auto text-center mt-48 mb-32">
@@ -42,7 +42,7 @@
                 </div>
             </section>
 
-            <section id="marketing-assets" class="my-48">
+            <section id="marketing-assets">
                 <div class="p-8 text-center">
                     <h3 class="head-1 accent accent-below accent-wide">Marketing Assets</h3>
                 </div>
@@ -51,7 +51,7 @@
                 </div>
             </section>
             
-            <section id="global-reach" class="my-48">
+            <section id="global-reach" class="">
                 <div class="p-8 text-center">
                     <h3 class="head-1 accent accent-below accent-wide">{{i18n.global.heading}}</h3>
                     <p>{{i18n.global.content}}</p>

@@ -1,5 +1,5 @@
 <template>
-    <div class="dlp-page dlp-content">
+    <div class="section-content">
         <section id="company-history" class="container mx-auto grid md:grid-cols-2 gap-8 py-6">
             <div class="self-center md:px-10">
                 <h3 class="head-5 accent ">{{i18n.idea.heading}}</h3>
@@ -40,7 +40,7 @@
                 <h3 class="head-1 text-center accent accent-below accent-wide">The Numbers Don't Lie</h3>
             </div>
             <div class="self-center text-center stat stat-lg">
-                <span class="head-3 block text-accent">Number 10</span> 
+                <span class="head-3 block callout-text">Number 10</span> 
                 <span class="head-6">ranking according to Real Trends</span>
             </div>
             <div>
@@ -60,11 +60,11 @@
                 ></dlp-figure>
             </div>
             <div class="self-center text-center stat stat-lg">
-                <span class="head-3 block text-accent">25%</span> 
+                <span class="head-3 block callout-text">25%</span> 
                 <span class="head-6">of our listings sold in-house</span>
             </div>
             <div class="self-center text-center stat stat-lg">
-                <span class="head-3 block text-accent" aria-label="50 Billion Dollars">$50 Billion</span> 
+                <span class="head-3 block callout-text" aria-label="50 Billion Dollars">$50 Billion</span> 
                 <span class="head-6">total home sales</span>
             </div>
             <div>
@@ -86,15 +86,17 @@
         </section>
 
         <section id="company-technology" class="p-6 md:p-0 grid md:grid-cols-2 gap-8">
-            <div class="md:col-span-2 text-center mb-32">
+            <div class="md:col-span-2 text-center">
                 <h3 class="head-1 accent accent-below accent-wide">{{i18n.technology.heading}}</h3>
             </div>
-            <div>
-                <p class="text-center">[ VIDEO HERE ]</p>
+            <div class="md:col-span-2 mx-auto">
+                <youtube  video-id="9wYizJiPrNI" :player-vars="{
+                    rel: 0
+                }"/>
             </div>
-            <div class="self-center md:px-10">
+            <div class="md:col-span-2 self-center text-center md:px-10">
                 <p class="accent">{{i18n.technology.content}}</p>
-                <div class="dlp-btn-group">
+                <div class="btn-group">
                     <dlp-button>Learn More</dlp-button>
                 </div>
             </div>

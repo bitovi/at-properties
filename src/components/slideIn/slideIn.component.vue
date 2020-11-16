@@ -38,7 +38,7 @@ export default {
     props: {
         srHeading:{
             type: String,
-            default: A11yStrings.defaults.modal.heading
+            default: A11yStrings.defaults.contentModal.heading
         }
     },
     data() {

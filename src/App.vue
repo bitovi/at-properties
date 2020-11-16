@@ -1,11 +1,13 @@
 <template>
   <div id="app">
-    <header>
-      <Nav />
-    </header>
+    
+      <DevGrid />
     <main class="dlp-main">
-      <TitleContainer />
+      <header>
+        <Nav />
+      </header>
       <article id="agent">
+        <TitleContainer />
         <AgentContainer />
       </article>
       <article id="co-agent">
@@ -62,6 +64,8 @@ import ContactContainer from './containers/contact.container.vue'
 
 import TitlePage from './components/title/title.page.vue'
 
+import DevGrid from './components/dev/grids.dev'
+
 import './assets/base.styles.scss'
 
 
@@ -79,7 +83,8 @@ export default {
     PartnerContainer,
     ContactContainer,
 
-    TitlePage
+    TitlePage,
+    DevGrid
   },
   data(){
       return {
