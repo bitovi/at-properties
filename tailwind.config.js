@@ -14,7 +14,6 @@ module.exports = {
       'transparent':   'transparent',
       'white':         '#FFFFFF',
       'black':         '#000000',
-      'sytem-focus':   '#0083CC',
       primary: {
         100:           '#E7E9EB',
         200:           '#DBDDE1',
@@ -27,7 +26,10 @@ module.exports = {
       neutral: {
         300:           '#B2B2B2',
         500:           '#808080'
-      }
+      },
+      system: {
+        'focus':       '#0083CC'
+      },
     },
     fontFamily: {
       'primary':   '"Gotham A", "Gotham B", Helvetica, Arial, sans-serif',
