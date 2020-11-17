@@ -7,7 +7,7 @@ module.exports = {
       xl: '1920px',
     },
     container: {
-      xl: '1280px',
+      xl: '1440px',
       center: true
     },
     colors: {
@@ -23,6 +23,10 @@ module.exports = {
       },
       secondary: {
         500:           '#D22630'
+      },
+      neutral: {
+        300:           '#B2B2B2',
+        500:           '#808080'
       }
     },
     fontFamily: {
@@ -40,15 +44,6 @@ module.exports = {
       '4xl':  '39px',
       '5xl':  '42px',
       '6xl':  '60px'
-    },
-    borderWidth: {
-      '0': '0',
-      default: '1px',
-      '2': '2px',
-      '4': '4px',
-    },
-    maxWidth: {
-      '3/5': '60%',
     },
     extend: {
       gridTemplateColumns: {
