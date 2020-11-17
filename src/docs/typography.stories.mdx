@@ -1,0 +1,37 @@
+import { Meta } from '@storybook/addon-docs/blocks';
+import Code from './assets/code-brackets.svg';
+import Colors from './assets/colors.svg';
+import Comments from './assets/comments.svg';
+import Direction from './assets/direction.svg';
+import Flow from './assets/flow.svg';
+import Plugin from './assets/plugin.svg';
+import Repo from './assets/repo.svg';
+import StackAlt from './assets/stackalt.svg';
+
+<Meta title="Foundation/Typography" />
+
+<style>{`
+  
+`}</style>
+
+# Typography
+
+<ColorPalette>
+  <ColorItem
+    title="theme.color.greyscale"
+    subtitle="Some of the greys"
+    colors={['#FFFFFF', '#F8F8F8', '#F3F3F3']}
+  />
+</ColorPalette>
+
+## Fonts
+
+Each brand (i.e., @properties, Ansley, Nest) has primary and secondary fonts. 
+* The **primary** font is used for body copy and some headings. It is the most prevalent font on screen.
+* The **secondary** font is used as an accent, to bring more emphasis to some areas of the screen.
+
+## Font Sizes 
+
+Tailwind CSS uses 10 font sizes ranging from `xs` to `6xl`.
+
+<Typeset fontSizes={['12px', '14px', '16px', '20px', '24px', '28px', '34px', '39px', '42px', '60px']} sampleText="Award-winning marketing materials" />
