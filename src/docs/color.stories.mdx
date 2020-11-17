@@ -1,0 +1,24 @@
+import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+
+<Meta title="Foundation/Color" />
+
+# Color
+
+Each brand (i.e., @properties, Ansley, Nest) has a color palette, which includes primary, secondary, neutral, and system colors. 
+* **Primary** and **Neutral** colors include low and high contrast colors for text, borders, backgrounds.
+* **Secondary** colors are tints and shades of the brand/accent color.
+* **System** colors denote states or conditions such as error, alert, success, and interactive.
+
+The DLP page uses only a subset of each brand’s full color palette. 
+* 3 general colors: transparent, white, and black
+* 4 primary colors for text, borders, and backgrounds
+* 1 secondary color for accents
+* 1 system color for interactive elements
+
+<ColorPalette>
+    <ColorItem
+        title="theme.color.greyscale"
+        subtitle="Some of the greys"
+        colors={['#FFFFFF', '#F8F8F8', '#F3F3F3']}
+    />
+</ColorPalette>
