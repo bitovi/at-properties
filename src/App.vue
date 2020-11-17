@@ -18,12 +18,18 @@
       </article>
       <article id="company">
         <TitlePage 
-          :backgroundUrl="`${publicPath}images/bg/bg-company.jpg`"
+          :backgroundUrl="`${publicPath}images/company/bg-company.jpg`"
           heading="Every home has a story" 
           subheading="Company Profile" />
         <CompanyContainer />
       </article>
-      
+      <article id="reach">
+        <TitlePage 
+          :backgroundUrl="`${publicPath}images/bg/bg-partners.jpg`"
+          heading="We're local, we're global"
+          subheading="Luxury"/>
+        <ReachContainer />
+      </article>
       <article id="technology">
         <TitlePage 
           :backgroundUrl="`${publicPath}images/bg/bg-tech.jpg`"
@@ -38,14 +44,12 @@
           subheading="Marketing" />
         <MarketingContainer />
       </article>
-
-      <article id="partners">
+      <article id="selling">
         <TitlePage 
-          :backgroundUrl="`${publicPath}images/bg/bg-partners.jpg`"
-          heading="We're local, we're global"
-          subheading="Luxury"/>
-        
-        
+          :backgroundUrl="`${publicPath}images/bg/bg-marketing.jpg`"
+          heading="Selling your home" 
+          subheading="Final Steps" />
+        <SellingContainer />
       </article>
       <footer id="contact">
         <ContactContainer />
@@ -64,6 +68,8 @@ import CompanyContainer from './containers/company.container'
 import MarketingContainer from './containers/marketing.container'
 import TechnologyContainer from './containers/technology.container'
 import ContactContainer from './containers/contact.container'
+import ReachContainer from './containers/reach.container'
+import SellingContainer from './containers/selling.container'
 
 import TitlePage from './components/title/title.page'
 
@@ -84,6 +90,8 @@ export default {
     MarketingContainer,
     ContactContainer,
     TechnologyContainer,
+    ReachContainer,
+    SellingContainer,
 
     TitlePage,
     DevGrid
