@@ -23,25 +23,29 @@
           subheading="Company Profile" />
         <CompanyContainer />
       </article>
+      
+      <article id="technology">
+        <TitlePage 
+          :backgroundUrl="`${publicPath}images/bg/bg-tech.jpg`"
+          heading="Industry leading technology" 
+          subheading="Technology" />
+        <TechnologyContainer />
+      </article>
       <article id="marketing">
         <TitlePage 
           :backgroundUrl="`${publicPath}images/bg/bg-marketing.jpg`"
-          heading="Marketing your home" 
-          subheading="Marketing Plan" />
+          heading="Award-winning marketing materials" 
+          subheading="Marketing" />
         <MarketingContainer />
       </article>
-      <article id="selling">
-        <TitlePage 
-          :backgroundUrl="`${publicPath}images/bg/bg-selling.jpg`"
-          heading="Selling your home"/>
-        <SellingContainer />
-      </article>
+
       <article id="partners">
         <TitlePage 
           :backgroundUrl="`${publicPath}images/bg/bg-partners.jpg`"
-          heading="Our Partners"
-          subheading="all working as a team, through every step of the transaction."/>
-        <PartnerContainer />
+          heading="We're local, we're global"
+          subheading="Luxury"/>
+        
+        
       </article>
       <footer id="contact">
         <ContactContainer />
@@ -58,8 +62,7 @@ import CoagentContainer from './containers/coagent.container'
 import TeamContainer from './containers/team.container'
 import CompanyContainer from './containers/company.container'
 import MarketingContainer from './containers/marketing.container'
-import SellingContainer from './containers/selling.component'
-import PartnerContainer from './containers/partner.container'
+import TechnologyContainer from './containers/technology.container'
 import ContactContainer from './containers/contact.container'
 
 import TitlePage from './components/title/title.page'
@@ -79,9 +82,8 @@ export default {
     TeamContainer,
     CompanyContainer,
     MarketingContainer,
-    SellingContainer,
-    PartnerContainer,
     ContactContainer,
+    TechnologyContainer,
 
     TitlePage,
     DevGrid
