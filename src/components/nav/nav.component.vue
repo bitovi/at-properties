@@ -10,6 +10,8 @@
                 <ul class="dlp-nav-ul">
                     <li><a class="dlp-nav-link scrollactive-item" href="#agent" @click="close">Agent Profile</a></li>
                     <li><a class="dlp-nav-link scrollactive-item" href="#company" @click="close">Company Profile</a></li>
+                    <li><a class="dlp-nav-link scrollactive-item" href="#reach" @click="close">Global Reach</a></li>
+                    <li><a class="dlp-nav-link scrollactive-item" href="#technology" @click="close">Technology</a></li>
                     <li><a class="dlp-nav-link scrollactive-item" href="#marketing" @click="close">Marketing Plan</a></li>
                     <li><a class="dlp-nav-link scrollactive-item" href="#selling" @click="close">Selling Your Home</a></li>
                     <li><a class="dlp-nav-link scrollactive-item" href="#partners" @click="close">Partners</a></li>

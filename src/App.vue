@@ -23,7 +23,7 @@
           subheading="Company Profile" />
         <CompanyContainer />
       </article>
-      <article>
+      <article id="reach">
         <TitlePage 
           :backgroundUrl="`${publicPath}images/bg/bg-partners.jpg`"
           heading="We're local, we're global"
@@ -44,6 +44,13 @@
           subheading="Marketing" />
         <MarketingContainer />
       </article>
+      <article id="selling">
+        <TitlePage 
+          :backgroundUrl="`${publicPath}images/bg/bg-marketing.jpg`"
+          heading="Selling your home" 
+          subheading="Final Steps" />
+        <SellingContainer />
+      </article>
       <footer id="contact">
         <ContactContainer />
       </footer>
@@ -62,6 +69,7 @@ import MarketingContainer from './containers/marketing.container'
 import TechnologyContainer from './containers/technology.container'
 import ContactContainer from './containers/contact.container'
 import ReachContainer from './containers/reach.container'
+import SellingContainer from './containers/selling.container'
 
 import TitlePage from './components/title/title.page'
 
@@ -83,6 +91,7 @@ export default {
     ContactContainer,
     TechnologyContainer,
     ReachContainer,
+    SellingContainer,
 
     TitlePage,
     DevGrid
