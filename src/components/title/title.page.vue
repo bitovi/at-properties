@@ -1,10 +1,10 @@
 <template>
-    <header v-bind="$attrs" class='dlp-page dlp-hero justify-center' style="overflow: hidden; position: relative;">
-        <div ref="backgroundImage" class="bg" :style="`background-image: url('${backgroundUrl}'); background-repeat: no-repeat; background-size: cover; position:absolute; height:100%; width:100%; z-index: 0; transform: perspective(100px) translate3d(0, 0, 70px); opacity: 0.3; will-change: transform, opacity;`">
+    <header v-bind="$attrs" class='dlp-page dlp-hero justify-center' style="background-color: rgb(0, 0, 0); overflow: hidden; position: relative;">
+        <div ref="backgroundImage" class="bg" :style="`background-image: url('${backgroundUrl}'); background-color: rgb(0, 0, 0); background-repeat: no-repeat; background-size: cover; opacity: .25; position:absolute; height:100%; width:100%; z-index: 0; transform: perspective(100px) translate3d(0, 0, 70px); will-change: transform, opacity;`">
         </div>
         <hgroup ref="titleText" class="container mx-auto" style="z-index: 1; transform: perspective(100px) translate3d(0, 0px, 0); opacity: 1; will-change: transform, opacity;">
-            <h2 class="head-1 text-center accent accent-wide accent-centered accent-below">{{heading}}</h2>
-            <p class="head-6 text-center" v-if="subheading">{{subheading}}</p>
+            <h2 class="text-white head-1 text-center accent accent-wide accent-centered accent-below">{{heading}}</h2>
+            <p class="text-white head-6 text-center" v-if="subheading">{{subheading}}</p>
         </hgroup>
     </header>
 </template>
@@ -66,6 +66,7 @@ export default {
                         ease: 'sine-inOut',
                         duration: 1,
                         transform: 'perspective(100px) translate3d(0, 0, 0px)',
+                        opacity: 1,
                         scrollTrigger: {
                             trigger: imageElement,
                             start: () => `top bottom`,
