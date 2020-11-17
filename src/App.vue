@@ -18,7 +18,7 @@
       </article>
       <article id="company">
         <TitlePage 
-          :backgroundUrl="`${publicPath}images/bg/bg-company.jpg`"
+          :backgroundUrl="`${publicPath}images/company/bg-company.jpg`"
           heading="Every home has a story" 
           subheading="Company Profile" />
         <CompanyContainer />
