@@ -68,6 +68,9 @@ import DevGrid from './components/dev/grids.dev'
 
 import './assets/base.styles.scss'
 
+window.addEventListener('DOMContentLoaded', (e) => {
+  console.log('DOMContentLoaded', e);
+})
 
 export default {
   name: 'App',
