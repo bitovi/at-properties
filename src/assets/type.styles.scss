@@ -1,9 +1,19 @@
+/* Define Font Weights */
+
+.font-primary {
+    @apply font-light;
+}
+
+.font-secondary {
+    @apply font-medium;
+}
+
 html,
 body {
     height: 100%;
     font-size: theme('fontSize.base');
     scroll-behavior: smooth;
-    @apply font-primary;
+    @apply font-default;
     font-style: normal;
     font-weight: 300;
 
