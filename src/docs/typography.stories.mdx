@@ -4,15 +4,6 @@ import { Meta, Story, Canvas, Preview, Typeset } from '@storybook/addon-docs/blo
 
 # Typography
 
-<ColorPalette>
-  <ColorItem
-    title="theme.color.greyscale"
-    subtitle="Some of the greys"
-    colors={['#FFFFFF', '#F8F8F8', '#F3F3F3']}
-  />
-</ColorPalette>
-
-<!-- Nick: Example code. Feel free to delete this -->
 <Preview>
   <div>
     <p className="font-primary font-light">Gotham Light</p>
@@ -41,14 +32,29 @@ Each brand (i.e., @properties, Ansley, Nest) has primary and secondary fonts.
 * The **secondary** font is used as an accent, to bring more emphasis to some areas of the screen.
 
 <Preview>
-    <div class="grid grid-cols-1 gap-2 text-lg">
-        <div className="font-primary">Gotham Light is the primary font.</div>
-        <div className="font-secondary">Gotham Medium is the secondary font.</div>
-    </div>
+  <div class="grid grid-cols-1 gap-2 text-lg">
+    <div className="font-primary">Gotham Light is the primary font.</div>
+    <div className="font-secondary">Gotham Medium is the secondary font.</div>
+  </div>
 </Preview>
 
 ## Font Sizes 
 
 Tailwind CSS uses 10 font sizes ranging from `xs` to `6xl`.
 
-<Typeset fontSizes={['12px', '14px', '16px', '20px', '24px', '28px', '34px', '39px', '42px', '60px']} sampleText="Award-winning marketing materials" />
+<Typeset fontSizes={['12px', '14px', '16px', '20px', '24px', '28px', '34px', '39px', '42px', '60px']} sampleText="The quick brown fox jumps over the lazy dog" />
+
+<Preview>
+  <div class="grid grid-cols-1 gap-2 font-primary">
+    <div class="text-6xl">.text-6xl is 60px</div>
+    <div class="text-5xl">.text-5xl is 42px</div>
+    <div class="text-4xl">.text-4xl is 39px</div>
+    <div class="text-3xl">.text-3xl is 34px</div>
+    <div class="text-2xl">.text-2xl is 28px</div>
+    <div class="text-xl">.text-xl is 24px</div>
+    <div class="text-lg">.text-lg is 20px</div>
+    <div class="text-base">.text-base is 16px</div>
+    <div class="text-sm">.text-sm is 14px</div>
+    <div class="text-xs">.text-xs is 12px</div>
+  </div>
+</Preview>
