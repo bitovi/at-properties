@@ -1,39 +1,8 @@
-import { Meta, ColorPalette, Typeset, Preview } from '@storybook/addon-docs/blocks';
-
+import { Meta, Story, Canvas, Preview } from '@storybook/addon-docs/blocks';
 
 <Meta title="Foundation/Typography" />
 
 # Typography
-
-<ColorPalette>
-  <ColorItem
-    title="theme.color.greyscale"
-    subtitle="Some of the greys"
-    colors={['#FFFFFF', '#F8F8F8', '#F3F3F3']}
-  />
-</ColorPalette>
-
-<!-- Nick: Example code. Feel free to delete this -->
-<Preview>
-  <div>
-    <p className="font-primary font-light">Gotham Light</p>
-    <p className="font-primary font-medium">Gotham Medium</p>
-    <p className="font-secondary">Font-secondary doesn't change the weight. It sets the font to a fallback that I don't entirely understand</p>
-  </div>
-</Preview>
-
-<Preview>
-  <div>
-    <h1 className="head-1 accent">Heading</h1>
-    <h1 className="head-1 accent accent-centered text-center">Heading</h1>
-    <br />
-    <h1 className="head-2 accent accent-below text-center">Heading</h1>
-    <h1 className="head-3">Heading</h1>
-    <h1 className="head-4">Heading</h1>
-    <h1 className="head-5">Heading</h1>
-    <h1 className="head-6">Heading</h1>
-  </div>
-</Preview>
 
 ## Fonts
 
@@ -41,12 +10,28 @@ Each brand (i.e., @properties, Ansley, Nest) has primary and secondary fonts.
 * The **primary** font is used for body copy and some headings. It is the most prevalent font on screen.
 * The **secondary** font is used as an accent, to bring more emphasis to some areas of the screen.
 
+<Preview>
+  <div class="grid grid-cols-1 gap-2 text-lg">
+    <div className="font-primary">Gotham Light is the primary font.</div>
+    <div className="font-secondary">Gotham Medium is the secondary font.</div>
+  </div>
+</Preview>
+
 ## Font Sizes 
 
 Tailwind CSS uses 10 font sizes ranging from `xs` to `6xl`.
 
-<Typeset fontSizes={['12px', '14px', '16px', '20px', '24px', '28px', '34px', '39px', '42px', '60px']} sampleText="Award-winning marketing materials" />
-
-
-<Typeset fontSizes={[16, 20]} sampleText="test"/>
-test
+<Preview>
+  <div class="grid grid-cols-1 gap-2 font-primary">
+    <div class="text-6xl">.text-6xl is 60px</div>
+    <div class="text-5xl">.text-5xl is 42px</div>
+    <div class="text-4xl">.text-4xl is 39px</div>
+    <div class="text-3xl">.text-3xl is 34px</div>
+    <div class="text-2xl">.text-2xl is 28px</div>
+    <div class="text-xl">.text-xl is 24px</div>
+    <div class="text-lg">.text-lg is 20px</div>
+    <div class="text-base">.text-base is 16px</div>
+    <div class="text-sm">.text-sm is 14px</div>
+    <div class="text-xs">.text-xs is 12px</div>
+  </div>
+</Preview>

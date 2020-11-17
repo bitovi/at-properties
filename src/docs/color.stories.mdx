@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Meta, Story, Canvas, Preview, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
 
 <Meta title="Foundation/Color" />
 
@@ -15,10 +15,38 @@ The DLP page uses only a subset of each brand’s full color palette.
 * 1 secondary color for accents
 * 1 system color for interactive elements
 
+<Preview>
+    <div class="grid grid-cols-4">
+        <div class="b-primary-100 p-4">
+            <p>asdf</p>
+        </div>
+    </div>
+</Preview>
+
 <ColorPalette>
     <ColorItem
-        title="theme.color.greyscale"
-        subtitle="Some of the greys"
-        colors={['#FFFFFF', '#F8F8F8', '#F3F3F3']}
+        title="theme.colors"
+        subtitle="Default colors"
+        colors={['transparent', '#FFFFFF', '#000000']}
+    />
+    <ColorItem
+        title="theme.colors.primary"
+        subtitle="Primary colors"
+        colors={['#E7E9EB', '#DBDDE1', '#888F9C', '#1B1D1F']}
+    />
+    <ColorItem
+        title="theme.colors.secondary"
+        subtitle="Secondary colors"
+        colors={['#D22630']}
+    />
+    <ColorItem
+        title="theme.colors.neutral"
+        subtitle="Neutral colors"
+        colors={['#B2B2B2', '#808080']}
+    />
+    <ColorItem
+        title="theme.colors.system"
+        subtitle="System colors"
+        colors={['#0083CC']}
     />
 </ColorPalette>
