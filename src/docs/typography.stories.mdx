@@ -7,16 +7,24 @@ import dedent from 'ts-dedent';
 
 ## Font Family
 
-Each brand (i.e., @properties, Ansley, Nest) has primary and secondary fonts and/or font weights/faces. 
-* The **primary** font is used for body copy and some headings. It is the most prevalent font on screen.
-* The **secondary** font is used as an accent, to bring more emphasis to some areas of the screen.
+All text will use **Gotham HTF**. 
+* Gotham Light is the **primary** typeface used for body copy and some headings. It is the most prevalent font on screen.
+* Gotham Medium is the **secondary** typeface used as an accent, to bring more emphasis to some areas of the screen.
 
 <Preview>
-  <div class="grid grid-cols-1 gap-2 text-2xl">
-    <div class="font-primary">Gotham Light is the primary font.</div>
-    <div class="font-secondary">Gotham Medium is the secondary font.</div>
-  </div>
+<div class="grid grid-cols-1 gap-2 text-2xl">
+  <div class="font-primary">Gotham Light is the primary font.</div>
+  <div class="font-secondary">Gotham Medium is the secondary font.</div>
+</div>
 </Preview>
+
+Tailwind CSS allows for any number of font families. These are defined in **tailwind.config.css**.
+
+<Source language='js' code={dedent` 
+  fontFamily: {
+    'default':   '"Gotham A", "Gotham B", Helvetica, Arial, sans-serif',
+  },
+`} />
 
 ## Font Size
 
@@ -37,7 +45,7 @@ Tailwind CSS uses 10 font sizes ranging from `xs` to `6xl`. These are defined in
   },
 `} />
 
-<Preview>
+<!-- <Preview>
   <div class="grid grid-cols-1 gap-2 font-primary">
     <div class="text-6xl">.text-6xl is 60px</div>
     <div class="text-5xl">.text-5xl is 42px</div>
@@ -50,11 +58,11 @@ Tailwind CSS uses 10 font sizes ranging from `xs` to `6xl`. These are defined in
     <div class="text-sm">.text-sm is 14px</div>
     <div class="text-xs">.text-xs is 12px</div>
   </div>
-</Preview>
+</Preview> -->
 
 ## Type Scale
 
-There are two type scales: 
+Two type scales are used. 
 * **Small** for screens less than 1280px wide
 * **Large** for screens 1280px and wider
 
@@ -62,8 +70,8 @@ There are two type scales:
   <tr>
     <th>Style</th>
     <th>Class</th>
-    <th>Large font scale</th>
-    <th>Small font scale</th>
+    <th>Large type scale</th>
+    <th>Small type scale</th>
   </tr>
   <tr>
     <td>Headline 1</td>
