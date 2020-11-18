@@ -20,7 +20,8 @@
         <TitlePage 
           :backgroundUrl="`${publicPath}images/bg/05-145-oxford-rd-84-a-breathtaking-foyer-with-original-marble-flooring-printjpg-5f628f078b4e2.jpg`"
           heading="Every home has a story" 
-          subheading="Company Profile" />
+          subheading="Company Profile"
+          :animText='{"duration":.5, "ease":"ease-out"}' />
         <CompanyContainer />
       </article>
       <article id="marketing">
@@ -51,6 +52,9 @@
 </template>
 
 <script>
+/* eslint-disable no-unreachable, no-unused-vars */
+import gsap from 'gsap';
+import ScrollTrigger from "gsap/ScrollTrigger";
 import Nav from './components/nav/nav.component.vue'
 import TitleContainer from './containers/title.container.vue'
 import AgentContainer from './containers/agent.container.vue'
@@ -67,6 +71,8 @@ import TitlePage from './components/title/title.page.vue'
 import DevGrid from './components/dev/grids.dev'
 
 import './assets/base.styles.scss'
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default {
   name: 'App',
