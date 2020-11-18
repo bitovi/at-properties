@@ -34,16 +34,16 @@ module.exports = {
       'secondary': 'var(--font-family)'
     },
     fontSize: {
-      'xs':   '12px',
-      'sm':   '14px',
-      'base': '16px',
-      'lg':   '20px',
-      'xl':   '24px',
-      '2xl':  '28px',
-      '3xl':  '34px',
-      '4xl':  '39px',
-      '5xl':  '42px',
-      '6xl':  '60px'
+      'xs':   'var(--font-size-xl)',
+      'sm':   'var(--font-size-sm)',
+      'base': 'var(--font-size-base)',
+      'lg':   'var(--font-size-lg)',
+      'xl':   'var(--font-size-xl)',
+      '2xl':  'var(--font-size-2xl)',
+      '3xl':  'var(--font-size-3xl)',
+      '4xl':  'var(--font-size-4xl)',
+      '5xl':  'var(--font-size-5xl)',
+      '6xl':  'var(--font-size-6xl)'
     },
     extend: {
       gridTemplateColumns: {
