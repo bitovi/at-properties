@@ -21,6 +21,10 @@
         }
     }
 
+    &:focus {
+        border-color: theme('colors.transparent');
+    }
+
     .dlp-close-btn-inner {
         display: flex;
         justify-content: center;

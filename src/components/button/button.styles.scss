@@ -9,6 +9,7 @@
     border: 1px solid theme('colors.primary.900');
     letter-spacing: 0.1em;
     font-weight: 500;
+    
 
     &:link,
     &:visited {
@@ -19,6 +20,10 @@
     &:hover,
     &:active {
         border-color: theme('colors.primary.500');
+    }
+
+    &:focus {
+        border-color: theme('colors.transparent');
     }
 
     .btn-inner {

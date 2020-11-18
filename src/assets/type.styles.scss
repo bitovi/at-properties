@@ -37,7 +37,9 @@ a {
 
 a:focus,
 button:focus {
-    outline-color: theme('colors.secondary.500');
+    // outline-color: theme('colors.secondary.500');
+    outline-style: dashed;
+    outline-width: thin;
 }
 
 address {
