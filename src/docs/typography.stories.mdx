@@ -1,146 +1,73 @@
-import { Meta, Preview, Source } from '@storybook/addon-docs/blocks';
+import { Meta, Canvas, Source } from '@storybook/addon-docs/blocks';
 import dedent from 'ts-dedent';
 
 <Meta title="Foundation/Typography" />
 
 # Typography
 
-## Font Family
-
 **Gotham HTF** is the font used for all text. 
 * **Gotham Light** is the primary typeface used for body copy and some headings. It is the most prevalent font on screen.
 * **Gotham Medium** is the secondary typeface used as an accent, to bring more emphasis to some areas of the screen.
 
-<Preview>
-<div class="grid grid-cols-1 gap-2 text-2xl">
-  <div class="font-primary">Gotham Light is the primary font.</div>
-  <div class="font-secondary">Gotham Medium is the secondary font.</div>
-</div>
-</Preview>
-
-Tailwind CSS allows for any number of font families. These are defined in **tailwind.config.css**.
-
-<Source language='js' code={dedent` 
-  fontFamily: {
-    'default':   '"Gotham A", "Gotham B", Helvetica, Arial, sans-serif',
-  },
-`} />
-
-## Font Size
-
-Tailwind CSS uses 10 font sizes ranging from `xs` to `6xl`. These are defined in **tailwind.config.js**.
-
-<Source language='js' code={dedent`
-  fontSize: {
-    'xs':   '12px',
-    'sm':   '14px',
-    'base': '16px',
-    'lg':   '20px',
-    'xl':   '24px',
-    '2xl':  '28px',
-    '3xl':  '34px',
-    '4xl':  '39px',
-    '5xl':  '42px',
-    '6xl':  '60px'
-  },
-`} />
-
-<!-- <Preview>
-  <div class="grid grid-cols-1 gap-2 font-primary">
-    <div class="text-6xl">.text-6xl is 60px</div>
-    <div class="text-5xl">.text-5xl is 42px</div>
-    <div class="text-4xl">.text-4xl is 39px</div>
-    <div class="text-3xl">.text-3xl is 34px</div>
-    <div class="text-2xl">.text-2xl is 28px</div>
-    <div class="text-xl">.text-xl is 24px</div>
-    <div class="text-lg">.text-lg is 20px</div>
-    <div class="text-base">.text-base is 16px</div>
-    <div class="text-sm">.text-sm is 14px</div>
-    <div class="text-xs">.text-xs is 12px</div>
+<Canvas>
+  <div class="grid grid-cols-1 gap-2 text-2xl">
+    <div class="font-primary">Gotham Light is the primary font.</div>
+    <div class="font-secondary">Gotham Medium is the secondary font.</div>
   </div>
-</Preview> -->
+</Canvas>
 
 ## Type Scale
 
 Two type scales are used. 
-* **Small** for screens less than 1280px wide
-* **Large** for screens 1280px and wider
+* **Small** for screens less than 1280px wide (mobile)
+* **Large** for screens 1280px and wider (desktop)
 
-<table class="w-full">
-  <tr>
-    <th>Style</th>
-    <th>Class</th>
-    <th>Large type scale</th>
-    <th>Small type scale</th>
-  </tr>
-  <tr>
-    <td>Headline 1</td>
-    <td><code>.head-1</code></td>
-    <td><p class="text-6xl">60px</p></td>
-    <td><p class="text-5xl">42px</p></td>
-  </tr>
-  <tr>
-    <td>Headline 2</td>
-    <td><code>.head-2</code></td>
-    <td><p class="text-5xl">42px</p></td>
-    <td><p class="text-3xl">34px</p></td>
-  </tr>
-  <tr>
-    <td>Headline 3</td>
-    <td><code>.head-3</code></td>
-    <td><p class="text-4xl">39px</p></td>
-    <td><p class="text-2xl">28px</p></td>
-  </tr>
-  <tr>
-    <td>Headline 4</td>
-    <td><code>.head-4</code></td>
-    <td><p class="text-3xl">34px</p></td>
-    <td><p class="text-xl">24px</p></td>
-  </tr>
-  <tr>
-    <td>Headline 5</td>
-    <td><code>.head-5</code></td>
-    <td><p class="text-xl font-secondary">24px</p></td>
-    <td><p class="text-lg font-secondary">20px</p></td>
-  </tr>
-  <tr>
-    <td>Headline 6</td>
-    <td><code>.head-6</code></td>
-    <td><p class="text-base font-secondary">16px</p></td>
-    <td><p class="text-sm font-secondary">14px</p></td>
-  </tr>
-  <tr>
-    <td>Paragraph</td>
-    <td><code>p</code></td>
-    <td><p class="text-lg">20px</p></td>
-    <td><p class="text-base">16px</p></td>
-  </tr>
-  <tr>
-    <td>Button</td>
-    <td><code>.btn</code></td>
-    <td><p class="text-sm font-secondary">14px</p></td>
-    <td><p class="text-sm font-secondary">14px</p></td>
-  </tr>
-  <tr>
-    <td>Caption</td>
-    <td><code>.caption</code></td>
-    <td><p class="text-sm">14px</p></td>
-    <td><p class="text-sm">14px</p></td>
-  </tr>
-  <tr>
-    <td>Label</td>
-    <td><code>.label</code></td>
-    <td><p class="text-sm font-secondary">14px</p></td>
-    <td><p class="text-xs font-secondary">12px</p></td>
-  </tr>
-</table>
+<Canvas>
+  <div class="grid grid-cols-3 gap-4">
+    <div class="self-center">Style</div>
+    <div class="self-center">SMALL type scale</div>
+    <div class="self-center">LARGE type scale</div>
+    <div class="self-center text-sm">Headline 1</div>
+    <div class="self-center text-5xl">42px</div>
+    <div class="self-center text-6xl">60px</div>
+    <div class="self-center text-sm">Headline 2</div>
+    <div class="self-center text-3xl">34px</div>
+    <div class="self-center text-5xl">42px</div>
+    <div class="self-center text-sm">Headline 3</div>
+    <div class="self-center text-2xl">28px</div>
+    <div class="self-center text-4xl">39px</div>
+    <div class="self-center text-sm">Headline 4</div>
+    <div class="self-center text-xl">24px</div>
+    <div class="self-center text-3xl">34px</div>
+    <div class="self-center text-sm">Headline 5</div>
+    <div class="self-center text-lg">20px</div>
+    <div class="self-center text-xl">24px</div>
+    <div class="self-center text-sm">Headline 6</div>
+    <div class="self-center text-sm">14px</div>
+    <div class="self-center text-base">16px</div>
+    <div class="self-center text-sm">Paragraph</div>
+    <div class="self-center text-base">16px</div>
+    <div class="self-center text-lg">20px</div>
+    <div class="self-center text-sm">Button</div>
+    <div class="self-center text-sm">14px</div>
+    <div class="self-center text-sm">14px</div>
+    <div class="self-center text-sm">Caption</div>
+    <div class="self-center text-sm">14px</div>
+    <div class="self-center text-sm">14px</div>
+    <div class="self-center text-sm">Label</div>
+    <div class="self-center text-xs">12px</div>
+    <div class="self-center text-sm">14px</div>
+  </div>
+</Canvas>
+
+<br />
 
 ## How to configure
 
 Include the `<link>` for typography.com in the `<head>` of **public/index.html**.
 
 <Source language='html' code={dedent`
-<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7735636/6090192/css/fonts.css" />
+  <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7735636/6090192/css/fonts.css" />
 `} />
 
 Define font families and sizes in **tailwind.config.js**. Tailwind will generate classes for `.text-{family}` and `.text-{size}`.
@@ -173,3 +100,18 @@ Define additional classs in **src/assets/type.styles.scss**. The classes below a
     @apply font-medium;  /* 500 */
   }
 `} />
+
+## Accessibility considerations
+
+Relevant <a href="https://www.w3.org/WAI/WCAG21/quickref/">WCAG 2.1 guidelines</a>:
+
+* sdaf
+
+<br />
+
+## Components
+
+* Heading 
+* Paragraph 
+* Button
+* Statistic

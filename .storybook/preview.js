@@ -9,7 +9,7 @@ export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   options: {
     storySort: {
-      order: ['About', ['DLP', 'Design System'], 'Foundation', ['Design Tokens', 'Platform Scale', 'Breakpoints', 'Color', 'Typography', 'Object Styles', 'Iconography', 'Imagery', 'Layout', 'Motion', 'Inclusive Design'], 'Components', 'Example']
+      order: ['Foundation', ['Front-End Stack', 'Design System', 'Design Tokens', 'Breakpoints', 'Color', 'Typography', 'Object Styles', 'Iconography', 'Imagery', 'Layout', 'Motion'], 'Components', 'Example']
     }
   }
 }

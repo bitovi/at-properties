@@ -5,12 +5,14 @@ import dedent from 'ts-dedent';
 
 # Breakpoints
 
-Mobile vs desktop experiences will be defined using the following breakpoints.
+Mobile vs desktop experiences are defined using the following breakpoints.
 
 * **Small** - screen widths below 768px
 * **Medium** - screen widths between 768 and 1279px
 * **Large** - screen widths between 1280 and 1919px
 * **Extra Large** - screen widths at and above 1920px
+
+<br />
 
 ## How to configure
 
@@ -26,3 +28,10 @@ For example, `<p class="text-center lg:text-left">` will center text below 1280p
     xl: '1920px',  /* Different from Tailwind's default of 1280px */
   },
 `} />
+
+## Accessibility considerations
+
+Relevant <a href="https://www.w3.org/WAI/WCAG21/quickref/">WCAG 2.1 guidelines</a>:
+
+* Content does not restrict its view and operation to a single display orientation, such as portrait or landscape, unless a specific display orientation is essential. <a href="https://www.w3.org/WAI/WCAG21/quickref/#orientation">1.3.4 Orientation (Level AA)</a>
+* Content can be presented without loss of information or functionality, and without requiring scrolling in two dimensions for: 1) Vertical scrolling content at a width equivalent to 320 CSS pixels; 2) Horizontal scrolling content at a height equivalent to 256 CSS pixels; Except for parts of the content which require two-dimensional layout for usage or meaning. <a href="https://www.w3.org/WAI/WCAG21/quickref/#reflow">1.4.10 Reflow (Level AA)</a>
