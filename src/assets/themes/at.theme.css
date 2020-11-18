@@ -1,0 +1,20 @@
+
+.theme-at {
+    --color-transparent: transparent;
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+    --color-system-focus: #0083CC;
+    
+    --color-primary-100: #E7E9EB;
+    --color-primary-200: #DBDDE1;
+    --color-primary-500: #888F9C;
+    --color-primary-900: #1B1D1F;
+
+    --color-secondary-500: #D22630;
+
+    --color-neutral-300: #B2B2B2;
+    --color-neutral-500: #808080;
+
+    --font-family: "Gotham A", "Gotham B", Helvetica, Arial, sans-serif;
+
+}
