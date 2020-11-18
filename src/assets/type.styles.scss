@@ -1,17 +1,18 @@
 html,
 body {
     height: 100%;
-    font-size: theme('fontSize.base');
     scroll-behavior: smooth;
-    @apply font-primary;
-    font-style: normal;
-    font-weight: 300;
-
-    color: theme('colors.primary.900');
-
     &.font-book {
         font-weight: 400;
     }
+}
+
+#app {
+    @apply font-primary;
+    color: theme('colors.primary.900');
+    font-style: normal;
+    font-weight: 300;
+    font-size: theme('fontSize.base');
 }
 
 a {
