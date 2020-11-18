@@ -1,6 +1,6 @@
 <template>
     <div class='section-content'>
-        <div class="content-grid">
+        <div class="content-grid pb-16">
             <div class="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
                 <dlp-figure 
                     :sm="`${publicPath}${i18n.photo.sm}`"
@@ -94,7 +94,7 @@
                     </p>
                 </section>
 
-                <section id="agent-contact" class="mb-16">
+                <section id="agent-contact">
                     <h3 class="head-5 accent">Agent Contact</h3>
                     <address class="mt-4">
                         <a :href="`tel:+1-${i18n.contact.phone}`">{{i18n.contact.phone}}</a><br /><br />
