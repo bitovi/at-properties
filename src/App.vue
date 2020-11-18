@@ -23,25 +23,33 @@
           subheading="Company Profile" />
         <CompanyContainer />
       </article>
+      <article id="reach">
+        <TitlePage 
+          :backgroundUrl="`${publicPath}images/bg/bg-partners.jpg`"
+          heading="We're local, we're global"
+          subheading="Luxury"/>
+        <ReachContainer />
+      </article>
+      <article id="technology">
+        <TitlePage 
+          :backgroundUrl="`${publicPath}images/bg/bg-tech.jpg`"
+          heading="Industry leading technology" 
+          subheading="Technology" />
+        <TechnologyContainer />
+      </article>
       <article id="marketing">
         <TitlePage 
           :backgroundUrl="`${publicPath}images/bg/07-111-woodley-road-2016-printjpg-5f8dc1282e1d4.jpg`"
-          heading="Marketing your home" 
-          subheading="Marketing Plan" />
+          heading="Award-winning marketing materials" 
+          subheading="Marketing" />
         <MarketingContainer />
       </article>
       <article id="selling">
         <TitlePage 
           :backgroundUrl="`${publicPath}images/bg/09-2550-n-lakeview-ave-3802-165-living-room-printjpg-5f8da927c0f72.jpg`"
-          heading="Selling your home"/>
+          heading="Selling your home" 
+          subheading="Final Steps" />
         <SellingContainer />
-      </article>
-      <article id="partners">
-        <TitlePage 
-          :backgroundUrl="`${publicPath}images/bg/bg-partners.jpg`"
-          heading="Our Partners"
-          subheading="all working as a team, through every step of the transaction."/>
-        <PartnerContainer />
       </article>
       <footer id="contact">
         <ContactContainer />
@@ -51,19 +59,19 @@
 </template>
 
 <script>
-/* eslint-disable no-unreachable, no-unused-vars */
 import gsap from 'gsap';
 import ScrollTrigger from "gsap/ScrollTrigger";
-import Nav from './components/nav/nav.component.vue'
-import TitleContainer from './containers/title.container.vue'
-import AgentContainer from './containers/agent.container.vue'
-import CoagentContainer from './containers/coagent.container.vue'
-import TeamContainer from './containers/team.container.vue'
-import CompanyContainer from './containers/company.container.vue'
-import MarketingContainer from './containers/marketing.container.vue'
-import SellingContainer from './containers/selling.component.vue'
-import PartnerContainer from './containers/partner.container.vue'
-import ContactContainer from './containers/contact.container.vue'
+import Nav from './components/nav/nav.component'
+import TitleContainer from './containers/title.container'
+import AgentContainer from './containers/agent.container'
+import CoagentContainer from './containers/coagent.container'
+import TeamContainer from './containers/team.container'
+import CompanyContainer from './containers/company.container'
+import MarketingContainer from './containers/marketing.container'
+import TechnologyContainer from './containers/technology.container'
+import ContactContainer from './containers/contact.container'
+import ReachContainer from './containers/reach.container'
+import SellingContainer from './containers/selling.container'
 
 import TitlePage from './components/title/title.page.vue'
 
@@ -83,9 +91,10 @@ export default {
     TeamContainer,
     CompanyContainer,
     MarketingContainer,
-    SellingContainer,
-    PartnerContainer,
     ContactContainer,
+    TechnologyContainer,
+    ReachContainer,
+    SellingContainer,
 
     TitlePage,
     DevGrid

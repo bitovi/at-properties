@@ -8,10 +8,10 @@
     padding: 40px;
     span {
         @apply text-center;
-        @apply text-tiny;
         @apply uppercase;
         @apply block;
         @apply mb-4;
         font-weight: 500;
+        font-size: 10px;
     }
 }

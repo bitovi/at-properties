@@ -1,11 +1,10 @@
-import DLPClose from './close.component.vue';
+import { withDesign } from 'storybook-addon-designs'
+import DLPClose from './close.component.vue'
 
 export default {
     title: 'Components/Buttons/Close',
     component: DLPClose,
-    argTypes: {
-        
-    },
+    decorators: [withDesign]
 };
 
 const Template = (args, { argTypes }) => ({
@@ -15,3 +14,9 @@ const Template = (args, { argTypes }) => ({
 });
 
 export const Close = Template.bind({});
+Close.parameters = {
+    design: {
+        type: 'figma',
+        url: 'https://www.figma.com/file/9Dh5lVMksIBNrDGMlPsWMk/DLP-Design-Library?node-id=56%3A0',
+    },
+}

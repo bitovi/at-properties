@@ -56,6 +56,13 @@
     padding-top: min(80vh, calc(5/4 * 100%));
     // padding-top: calc(5/4 * 100%);
 }
+.ar-5-4 {
+    padding-top: min(80vh, calc(4/5 * 100%));
+}
+.ar-16-9 {
+    padding-top: min(80vh, calc(9/16 * 100%));
+}
+
 .ar img {
     @apply w-full;
     @apply h-full;

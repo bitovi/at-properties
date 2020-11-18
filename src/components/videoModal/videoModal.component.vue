@@ -20,8 +20,8 @@
             role="dialog"
             aria-modal="true"
             aria-describedby="modalDescription">
-                <div class="dlp-video-modal">
-                    <nav class="absolute right-0 mr-12">
+                <div class="dlp-video-modal content-grid">
+                    <nav class="absolute right-0 mr-4 lg:mr-12 lg:mt-12">
                         <h1 
                             ref="ElDescription"
                             tabindex="0" 
@@ -31,9 +31,11 @@
                         </h1>
                         <dlp-close-btn @click.stop="close" :light="true" />
                     </nav>
-                    <div class="dlp-video-modal-content" >
-                        <div class="dlp-video-modal-player">
-                            <youtube :fitParent="true" :video-id="videoId" :player-vars="playerVars"/>
+                    <div class="dlp-video-modal-content col-span-4 md:col-span-12 lg:col-span-12 lg:col-start-3" >
+                        <div class="dlp-video-border">
+                            <div class="dlp-video-modal-player">
+                                <youtube :fitParent="true" :video-id="videoId" :player-vars="playerVars"/>
+                            </div>
                         </div>
                         <span v-if="caption" class="head-6 accent accent-centered text-white pt-4">{{caption}}</span>
                     </div>
@@ -67,7 +69,7 @@ export default {
             showModal: false,
             playerVars: {
                 rel: 0,
-                autoplay: 1
+                autoplay: 0
             }
         }
     },
