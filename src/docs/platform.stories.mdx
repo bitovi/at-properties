@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Meta } from '@storybook/addon-docs/blocks';
 
 <Meta title="Foundation/Platform Scale" />
 
@@ -6,22 +6,24 @@ import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
 
 Designing for different scales requires finding a balance between platform best practices and design system consistency. Here are the ways to ensure that properties can accommodate different environments while still sharing a common design language.
 
-## Proportions
-
-Mobile components are smaller than their desktop counterparts. DLP uses a 1.25:1 scale ratio. This means that a mobile component is 20% smaller than its desktop counterpart, and a desktop component is 25% larger than its mobile counterpart.
-
-## Borders
-
-While the proportions of a component change between desktop and mobile scales, the border width remains the same at all times.
-Learn more at the Object styles page
-
-## Typography
-
-DLP defines two sets of font sizes, one for desktop and one for mobile. Text is shown smaller in the mobile scale than in the desktop scale.
-
-Learn more at the Typography page
-
-## Iconography
-
-DLP defines one size for icons. Icons will appear the same size on all devices / screen sizes.
-Learn more at the Iconography page
+<div class="pt-8 grid grid-cols-2 gap-x-10 gap-y-12 justify-items-stretch">
+    <div>
+        <h3>Proportions</h3>
+        <p>Mobile components are smaller than their desktop counterparts. DLP uses a <strong>1.25:1 scale ratio</strong>. This means that a mobile component is 20% smaller than its desktop counterpart, and a desktop component is 25% larger than its mobile counterpart.</p>
+    </div>
+    <div>
+        <h3>Typography</h3>
+        <p>DLP defines <strong>two type scales</strong> (small, large), one for desktop and one for mobile. Text is shown smaller in the mobile scale than in the desktop scale.</p>
+        <p>Learn more at the <a href="/?path=/docs/foundation-typography--page">Typography</a> page.</p>
+    </div>
+    <div>
+        <h3>Object Styles</h3>
+        <p>While the proportions of a component change between desktop and mobile scales, the <strong>border width remains the same</strong> at all times.</p>
+        <p>Learn more at the <a href="/?path=/docs/foundation-object-styles--page">Object Styles</a> page.</p>
+    </div>
+    <div>
+        <h3>Iconography</h3>
+        <p>DLP defines <strong>one size for icons</strong>. Icons will appear the same size on all devices / screen sizes.</p>
+        <p>Learn more at the <a href="/?path=/docs/foundation-iconography--page">Iconography</a> page.</p>
+    </div>
+</div>

@@ -1,23 +1,41 @@
-import { Meta, Story, Preview } from '@storybook/addon-docs/blocks';
+import { Meta, Preview, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
 
 <Meta title="Foundation/Typography" />
 
 # Typography
 
-Each brand (i.e., @properties, Ansley, Nest) has primary and secondary fonts. 
+## Font Family
+
+Each brand (i.e., @properties, Ansley, Nest) has primary and secondary fonts and/or font weights/faces. 
 * The **primary** font is used for body copy and some headings. It is the most prevalent font on screen.
 * The **secondary** font is used as an accent, to bring more emphasis to some areas of the screen.
 
 <Preview>
-  <div class="grid grid-cols-1 gap-2 text-lg">
-    <div className="font-primary">Gotham Light is the primary font.</div>
-    <div className="font-secondary">Gotham Medium is the secondary font.</div>
+  <div class="grid grid-cols-1 gap-2 text-2xl">
+    <div class="font-primary">Gotham Light is the primary font.</div>
+    <div class="font-secondary">Gotham Medium is the secondary font.</div>
   </div>
 </Preview>
 
-## Font Sizes 
+## Font Size
 
-Tailwind CSS uses 10 font sizes ranging from `xs` to `6xl`.
+Tailwind CSS uses 10 font sizes ranging from `xs` to `6xl`. These are defined in **tailwind.config.js**.
+
+<Source language='js' code={dedent`
+  fontSize: {
+    'xs':   '12px',
+    'sm':   '14px',
+    'base': '16px',
+    'lg':   '20px',
+    'xl':   '24px',
+    '2xl':  '28px',
+    '3xl':  '34px',
+    '4xl':  '39px',
+    '5xl':  '42px',
+    '6xl':  '60px'
+  },
+`} />
 
 <Preview>
   <div class="grid grid-cols-1 gap-2 font-primary">
@@ -33,3 +51,78 @@ Tailwind CSS uses 10 font sizes ranging from `xs` to `6xl`.
     <div class="text-xs">.text-xs is 12px</div>
   </div>
 </Preview>
+
+## Type Scale
+
+There are two type scales: 
+* **Small** for screens less than 1280px wide
+* **Large** for screens 1280px and wider
+
+<table class="w-full">
+  <tr>
+    <th>Style</th>
+    <th>Class</th>
+    <th>Large font scale</th>
+    <th>Small font scale</th>
+  </tr>
+  <tr>
+    <td>Headline 1</td>
+    <td><code>.head-1</code></td>
+    <td><p class="text-6xl">60px</p></td>
+    <td><p class="text-5xl">42px</p></td>
+  </tr>
+  <tr>
+    <td>Headline 2</td>
+    <td><code>.head-2</code></td>
+    <td><p class="text-5xl">42px</p></td>
+    <td><p class="text-3xl">34px</p></td>
+  </tr>
+  <tr>
+    <td>Headline 3</td>
+    <td><code>.head-3</code></td>
+    <td><p class="text-4xl">39px</p></td>
+    <td><p class="text-2xl">28px</p></td>
+  </tr>
+  <tr>
+    <td>Headline 4</td>
+    <td><code>.head-4</code></td>
+    <td><p class="text-3xl">34px</p></td>
+    <td><p class="text-xl">24px</p></td>
+  </tr>
+  <tr>
+    <td>Headline 5</td>
+    <td><code>.head-5</code></td>
+    <td><p class="text-xl font-secondary">24px</p></td>
+    <td><p class="text-lg font-secondary">20px</p></td>
+  </tr>
+  <tr>
+    <td>Headline 6</td>
+    <td><code>.head-6</code></td>
+    <td><p class="text-base font-secondary">16px</p></td>
+    <td><p class="text-sm font-secondary">14px</p></td>
+  </tr>
+  <tr>
+    <td>Paragraph</td>
+    <td><code>p</code></td>
+    <td><p class="text-lg">20px</p></td>
+    <td><p class="text-base">16px</p></td>
+  </tr>
+  <tr>
+    <td>Button</td>
+    <td><code>.btn</code></td>
+    <td><p class="text-sm font-secondary">14px</p></td>
+    <td><p class="text-sm font-secondary">14px</p></td>
+  </tr>
+  <tr>
+    <td>Caption</td>
+    <td><code>.caption</code></td>
+    <td><p class="text-sm">14px</p></td>
+    <td><p class="text-sm">14px</p></td>
+  </tr>
+  <tr>
+    <td>Label</td>
+    <td><code>.label</code></td>
+    <td><p class="text-sm font-secondary">14px</p></td>
+    <td><p class="text-xs font-secondary">12px</p></td>
+  </tr>
+</table>
