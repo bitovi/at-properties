@@ -3,8 +3,8 @@
         <div class="content-grid">
             <div class="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
                 <dlp-figure 
-                    :sm="`${publicPath}images/profiles/olivia-carson-sm.jpg`"
-                    :lg="`${publicPath}images/profiles/olivia-carson-lg.jpg`"
+                    :sm="`${publicPath}images/team/team-sm.jpg`"
+                    :lg="`${publicPath}images/team/team-lg.jpg`"
                     alt="Olivia Carlson"
                     caption="Olivia Carlson"
                     ar="ar ar-4-5"
@@ -16,7 +16,7 @@
                     <img
                         class="sm:mx-auto my-8 md:mb-8 md:my-0 md:mx-0"
                         alt="Olivia Carlson" 
-                        :src="`${publicPath}images/logos/logo-olivia-carson.jpg`">
+                        :src="`${publicPath}images/team/logo-olivia-carson.jpg`">
                     <h1 class="head-1">Olivia Carlson</h1>
                     <h2 class="head-5 accent">Team Bio</h2>
                     <p v-html="i18n['olivia-arson'].sample"></p>
