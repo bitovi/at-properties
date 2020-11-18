@@ -1,4 +1,4 @@
-import { Meta, Preview, ColorPalette, ColorItem, Source } from '@storybook/addon-docs/blocks';
+import { Meta, Preview, Source } from '@storybook/addon-docs/blocks';
 import dedent from 'ts-dedent';
 
 <Meta title="Foundation/Color" />
@@ -11,39 +11,97 @@ The color palette includes utility, primary, secondary, neutral, and system colo
 * **Secondary** colors are tints and shades of the brand/accent color.
 * **System** colors denote states or conditions such as error, alert, success, and interactive.
 
-<div class="grid grid-cols-4">
-    <div>Transparent</div>
-    <div>White</div>
-    <div>Black</div>
+The DLP page will use a **subset** of the brand's <a href="https://www.figma.com/file/9Dh5lVMksIBNrDGMlPsWMk/DLP-Design-Library?node-id=39%3A34">full color palette</a>.
+
+<div class="pt-8 pb-12 grid grid-cols-12 gap-1">
+    <div class="h-8 bg-secondary-500"></div>
+    <div class="h-8 bg-primary-100"></div>
+    <div class="h-8 bg-primary-200"></div>
+    <div class="h-8 bg-primary-500"></div>
+    <div class="h-8 bg-primary-900"></div>
+    <div class="h-8 bg-neutral-300"></div>
+    <div class="h-8 bg-neutral-500"></div>
+    <div class="h-8 bg-system-focus"></div>
 </div>
 
-<ColorPalette>
-    <ColorItem
-        title="theme.colors"
-        subtitle="Default colors"
-        colors={['transparent', '#FFFFFF', '#000000']}
-    />
-    <ColorItem
-        title="theme.colors.primary"
-        subtitle="Primary colors"
-        colors={['#E7E9EB', '#DBDDE1', '#888F9C', '#1B1D1F']}
-    />
-    <ColorItem
-        title="theme.colors.secondary"
-        subtitle="Secondary colors"
-        colors={['#D22630']}
-    />
-    <ColorItem
-        title="theme.colors.neutral"
-        subtitle="Neutral colors"
-        colors={['#B2B2B2', '#808080']}
-    />
-    <ColorItem
-        title="theme.colors.system"
-        subtitle="System colors"
-        colors={['#0083CC']}
-    />
-</ColorPalette>
+## Utility 
+
+<div class="pt-8 grid grid-cols-4 gap-x-10 gap-y-12 justify-items-stretch">
+    <div>
+        <div class="h-24 border border-neutral-300 border-dashed"></div>
+        <p><strong>Transparent</strong></p>
+    </div>
+    <div>
+        <div class="h-24 border border-primary-500 bg-white"></div>
+        <p><strong>White</strong><br />
+        HEX: #FFFFFF</p>
+    </div>
+    <div>
+        <div class="h-24 border border-primary-500 bg-black"></div>
+        <p><strong>Black</strong><br />
+        HEX: #000000</p>
+    </div>
+</div>
+
+## Primary 
+
+<div class="pt-8 grid grid-cols-4 gap-x-10 gap-y-12 justify-items-stretch">
+    <div>
+        <div class="h-24 border border-primary-500 bg-primary-100"></div>
+        <p><strong>Primary 100</strong><br />
+        HEX: #E7E9EB</p>
+    </div>
+    <div>
+        <div class="h-24 border border-primary-500 bg-primary-200"></div>
+        <p><strong>Primary 200</strong><br />
+        HEX: #DBDDE1</p>
+    </div>
+    <div>
+        <div class="h-24 border border-primary-500 bg-primary-500"></div>
+        <p><strong>Primary 500</strong><br />
+        HEX: #888F9C</p>
+    </div>
+    <div>
+        <div class="h-24 border border-primary-500 bg-primary-900"></div>
+        <p><strong>Primary 900</strong><br />
+        HEX: #1B1D1F</p>
+    </div>
+</div>
+
+## Secondary 
+
+<div class="pt-8 grid grid-cols-4 gap-x-10 gap-y-12 justify-items-stretch">
+    <div>
+        <div class="h-24 border border-primary-500 bg-secondary-500"></div>
+        <p><strong>Secondary 500</strong><br />
+        HEX: #D22630</p>
+    </div>
+</div>
+
+## Neutral 
+
+<div class="pt-8 grid grid-cols-4 gap-x-10 gap-y-12 justify-items-stretch">
+    <div>
+        <div class="h-24 border border-primary-500 bg-neutral-300"></div>
+        <p><strong>Neutral 300</strong><br />
+        HEX: #B2B2B2</p>
+    </div>
+    <div>
+        <div class="h-24 border border-primary-500 bg-neutral-500"></div>
+        <p><strong>Neutral 500</strong><br />
+        HEX: #808080</p>
+    </div>
+</div>
+
+## System 
+
+<div class="pt-8 grid grid-cols-4 gap-x-10 gap-y-12 justify-items-stretch">
+    <div>
+        <div class="h-24 border border-primary-500 bg-system-focus"></div>
+        <p><strong>System Focus</strong><br />
+        HEX: #0083CC</p>
+    </div>
+</div>
 
 ## How to configure
 
