@@ -27,6 +27,7 @@ a {
     &:hover,
     &:active {
         color: theme('colors.primary.500');
+        text-decoration: none;
     }
 
     @media (min-width: theme('screens.md')) {  /* Tablet, desktop */
