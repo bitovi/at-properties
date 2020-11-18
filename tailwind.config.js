@@ -34,7 +34,7 @@ module.exports = {
       'secondary': 'var(--font-family)'
     },
     fontSize: {
-      'xs':   'var(--font-size-xl)',
+      'xs':   'var(--font-size-xs)',
       'sm':   'var(--font-size-sm)',
       'base': 'var(--font-size-base)',
       'lg':   'var(--font-size-lg)',
