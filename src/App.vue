@@ -18,7 +18,7 @@
       </article>
       <article id="company">
         <TitlePage 
-          :backgroundUrl="`${publicPath}images/bg/05-145-oxford-rd-84-a-breathtaking-foyer-with-original-marble-flooring-printjpg-5f628f078b4e2.jpg`"
+          :backgroundUrl="`${publicPath}images/auxiliary/05-145-oxford-rd-84-a-breathtaking-foyer-with-original-marble-flooring-printjpg-5f628f078b4e2.jpg`"
           heading="Every home has a story" 
           subheading="Company Profile" />
         <CompanyContainer />
@@ -39,14 +39,14 @@
       </article>
       <article id="marketing">
         <TitlePage 
-          :backgroundUrl="`${publicPath}images/bg/07-111-woodley-road-2016-printjpg-5f8dc1282e1d4.jpg`"
+          :backgroundUrl="`${publicPath}images/auxiliary/07-111-woodley-road-2016-printjpg-5f8dc1282e1d4.jpg`"
           heading="Award-winning marketing materials" 
           subheading="Marketing" />
         <MarketingContainer />
       </article>
       <article id="selling">
         <TitlePage 
-          :backgroundUrl="`${publicPath}images/bg/09-2550-n-lakeview-ave-3802-165-living-room-printjpg-5f8da927c0f72.jpg`"
+          :backgroundUrl="`${publicPath}images/auxiliary/09-2550-n-lakeview-ave-3802-165-living-room-printjpg-5f8da927c0f72.jpg`"
           heading="Selling your home" 
           subheading="Final Steps" />
         <SellingContainer />
