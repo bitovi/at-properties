@@ -12,7 +12,7 @@ The following types of design tokens are the building blocks and design decision
 
 <div class="pt-8 grid grid-cols-3 gap-x-10 gap-y-16 justify-items-stretch">
     <div class="col-span-2">
-        <h3>Global</h3>
+        <h2>Global</h2>
         <p>Global tokens are the primitive values in our design language, represented by context-agnostic names. Our color palette, animation, typography, and dimension values are all recorded as global tokens. These can be directly used, and are inherited by all other token types.</p>
         <p>Global tokens are defined in <strong>tailwind.config.js</strong>. See the <a href="https://tailwindcss.com/docs/theme#configuration-reference">theme configuration reference</a> for a complete list of keys (i.e., tokens).</p>
     </div>
@@ -21,7 +21,7 @@ The following types of design tokens are the building blocks and design decision
         <p><code>primary-100</code></p>
     </div>
     <div class="col-span-2">
-        <h3>Alias</h3>
+        <h2>Alias</h2>
         <p>Alias tokens relate to a specific context or abstraction. Aliases help communicate the intended purpose of a token, and are effective when a value with a single intent will appear in multiple places.</p>
         <p>Alias tokens are created by <a href="https://tailwindcss.com/docs/configuration">Tailwind CSS</a>. For example, theme colors are used to generate classes for text, background, and border colors.</p>
     </div>
@@ -31,7 +31,7 @@ The following types of design tokens are the building blocks and design decision
         <p><code>.bg-primary-100</code></p>
     </div>
     <div class="col-span-2">
-        <h3>Component-specific</h3>
+        <h2>Component-specific</h2>
         <p>Component-specific tokens are an exhaustive representation of every value associated with a component. They often inherit from alias tokens, but are named in a way that allows engineering teams to be as specific as possible in applying tokens in component development.</p>
         <p>Component tokens are written by developers and reside in <strong>xxxxxx.styles.scss</strong> files.</p>
     </div>

@@ -1,27 +1,21 @@
-import { Meta, Story, Preview, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks';
+import { Meta, Preview, ColorPalette, ColorItem, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
 
 <Meta title="Foundation/Color" />
 
 # Color
 
-Each brand (i.e., @properties, Ansley, Nest) has a color palette, which includes primary, secondary, neutral, and system colors. 
+The color palette includes utility, primary, secondary, neutral, and system colors.
+* **Utility** colors include transparent, white, and black.
 * **Primary** and **Neutral** colors include low and high contrast colors for text, borders, backgrounds.
 * **Secondary** colors are tints and shades of the brand/accent color.
 * **System** colors denote states or conditions such as error, alert, success, and interactive.
 
-The DLP page uses only a subset of each brand’s full color palette. 
-* 3 general colors: transparent, white, and black
-* 4 primary colors for text, borders, and backgrounds
-* 1 secondary color for accents
-* 1 system color for interactive elements
-
-<Preview>
-    <div class="grid grid-cols-4">
-        <div class="b-primary-100 p-4">
-            <p>asdf</p>
-        </div>
-    </div>
-</Preview>
+<div class="grid grid-cols-4">
+    <div>Transparent</div>
+    <div>White</div>
+    <div>Black</div>
+</div>
 
 <ColorPalette>
     <ColorItem
@@ -50,3 +44,31 @@ The DLP page uses only a subset of each brand’s full color palette.
         colors={['#0083CC']}
     />
 </ColorPalette>
+
+## How to configure
+
+Define colors in **tailwind.config.js**. Tailwind will generate classes for `.text-{color}`, `.border-{color}`, and `.bg-{color}`.
+
+<Source language='js' code={dedent`
+    colors: {
+        'transparent':  'transparent',
+        'white':        '#FFFFFF',
+        'black':        '#000000',
+        primary: {
+            100:        '#E7E9EB',
+            200:        '#DBDDE1',
+            500:        '#888F9C',
+            900:        '#1B1D1F'
+        },
+        secondary: {
+            500:        '#D22630'
+        },
+        neutral: {
+            300:        '#B2B2B2',
+            500:        '#808080'
+        },
+        system: {
+            'focus':    '#0083CC'
+        },
+    },
+`} />

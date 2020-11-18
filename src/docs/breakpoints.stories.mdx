@@ -1,0 +1,28 @@
+import { Meta, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+<Meta title="Foundation/Breakpoints" />
+
+# Breakpoints
+
+Mobile vs desktop experiences will be defined using the following breakpoints.
+
+* **Small** - screen widths below 768px
+* **Medium** - screen widths between 768 and 1279px
+* **Large** - screen widths between 1280 and 1919px
+* **Extra Large** - screen widths at and above 1920px
+
+## How to configure
+
+Define breakpoints in **tailwind.config.js**. Tailwind will apply classes responsively when prefixed with `sm:`, `md:`, `lg:`, and `xl:`. 
+
+For example, `<p class="text-center lg:text-left">` will center text below 1280px and align text left above 1280px.
+
+<Source language='js' code={dedent`
+  screens: {
+    sm: '640px',
+    md: '768px',
+    lg: '1280px',  /* Different from Tailwind's default of 1024px */
+    xl: '1920px',  /* Different from Tailwind's default of 1280px */
+  },
+`} />

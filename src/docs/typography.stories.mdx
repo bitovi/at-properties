@@ -7,9 +7,9 @@ import dedent from 'ts-dedent';
 
 ## Font Family
 
-All text will use **Gotham HTF**. 
-* Gotham Light is the **primary** typeface used for body copy and some headings. It is the most prevalent font on screen.
-* Gotham Medium is the **secondary** typeface used as an accent, to bring more emphasis to some areas of the screen.
+**Gotham HTF** is the font used for all text. 
+* **Gotham Light** is the primary typeface used for body copy and some headings. It is the most prevalent font on screen.
+* **Gotham Medium** is the secondary typeface used as an accent, to bring more emphasis to some areas of the screen.
 
 <Preview>
 <div class="grid grid-cols-1 gap-2 text-2xl">
@@ -134,3 +134,42 @@ Two type scales are used.
     <td><p class="text-xs font-secondary">12px</p></td>
   </tr>
 </table>
+
+## How to configure
+
+Include the `<link>` for typography.com in the `<head>` of **public/index.html**.
+
+<Source language='html' code={dedent`
+<link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7735636/6090192/css/fonts.css" />
+`} />
+
+Define font families and sizes in **tailwind.config.js**. Tailwind will generate classes for `.text-{family}` and `.text-{size}`.
+
+<Source language='js' code={dedent`
+  fontFamily: {
+    'default':   '"Gotham A", "Gotham B", Helvetica, Arial, sans-serif',
+  },
+  fontSize: {
+    'xs':   '12px',
+    'sm':   '14px',
+    'base': '16px',
+    'lg':   '20px',
+    'xl':   '24px',
+    '2xl':  '28px',
+    '3xl':  '34px',
+    '4xl':  '39px',
+    '5xl':  '42px',
+    '6xl':  '60px'
+  },
+`} />
+
+Define additional classs in **src/assets/type.styles.scss**. The classes below apply Tailwind's <a href="https://tailwindcss.com/docs/font-weight">font weight classes</a>: `.font-{weight}`.
+
+<Source language='css' code={dedent`
+  .font-primary {
+    @apply font-light;   /* 300 */
+  }
+  .font-secondary {
+    @apply font-medium;  /* 500 */
+  }
+`} />
