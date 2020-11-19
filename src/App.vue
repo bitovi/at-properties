@@ -23,13 +23,7 @@
           subheading="Company Profile" />
         <CompanyContainer />
       </article>
-      <article id="reach">
-        <TitlePage 
-          :backgroundUrl="`${publicPath}images/bg/bg-partners.jpg`"
-          heading="We're local, we're global"
-          subheading="Luxury"/>
-        <ReachContainer />
-      </article>
+
       <article id="technology">
         <TitlePage 
           :backgroundUrl="`${publicPath}images/bg/bg-tech.jpg`"
@@ -43,6 +37,13 @@
           heading="Award-winning marketing materials" 
           subheading="Marketing" />
         <MarketingContainer />
+      </article>
+      <article id="reach">
+        <TitlePage 
+          :backgroundUrl="`${publicPath}images/bg/bg-partners.jpg`"
+          heading="We're local, we're global"
+          subheading="Luxury"/>
+        <ReachContainer />
       </article>
       <article id="selling">
         <TitlePage 
