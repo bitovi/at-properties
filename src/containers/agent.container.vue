@@ -12,7 +12,7 @@
                 ></dlp-figure>
             </div>
             <div class="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
-                <section id="agent-bio">
+                <section id="agent-bio" class="mb-16">
                     <img
                         class="sm:mx-auto my-8 md:mb-8 md:my-0 md:mx-0"
                         :alt="`${i18n.logo.alt}`" 
@@ -31,7 +31,7 @@
                     </div>
                 </section>
 
-                <section id="agent-testimonials">
+                <section id="agent-testimonials" class="mb-16">
                     <h3 class="head-5 accent mb-4">Testimonials</h3>
                     <dlp-testimonial 
                                 v-for="t in i18n.testimonials.slice(0, 3)" 
@@ -53,7 +53,7 @@
                     </div>
                 </section>
 
-                <section id="agent-sales">
+                <section id="agent-sales" class="mb-16">
                     <h3 class="head-5 accent mb-4">Recent Sales</h3>
                     <dlp-sales-card 
                         v-for="sale in i18n.sales.slice(0, 3)" 
