@@ -12,7 +12,7 @@
             <div class="order-4 md:order-3 col-span-4 md:col-span-6 md:col-start-1 lg:col-span-6 lg:col-start-2">
                 <h3 class="head-5 accent accent-above">Luxury Portfolio</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque gravida ac, diam malesuada. Fringilla arcu fusce tempus sodales velit id. Tristique sed nec dignissim imperdiet. Id eu cursus et parturient suscipit.</p>
-                <div class="btn-group">
+                <div class="btn-group pb-16">
                     <dlp-button type="button">View Luxury Stats</dlp-button>
                 </div>
             </div>
@@ -30,7 +30,7 @@
                 <h3 class="head-5 accent accent-above">Leading RE</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque gravida ac, diam malesuada. Fringilla arcu fusce tempus sodales velit id. Tristique sed nec dignissim imperdiet. Id eu cursus et parturient suscipit.</p>
                 <div class="btn-group">
-                    <dlp-button type="button" >View Map of Global Reach</dlp-button>
+                    <dlp-button type="button">View Map of Global Reach</dlp-button>
                 </div>
             </div>
         </div>
