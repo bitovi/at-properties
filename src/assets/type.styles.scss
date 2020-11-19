@@ -1,17 +1,18 @@
 html,
 body {
     height: 100%;
-    font-size: theme('fontSize.base');
     scroll-behavior: smooth;
-    @apply font-primary;
-    font-style: normal;
-    font-weight: 300;
-
-    color: theme('colors.primary.900');
-
     &.font-book {
         font-weight: 400;
     }
+}
+
+#app {
+    @apply font-primary;
+    color: theme('colors.primary.900');
+    font-style: normal;
+    font-weight: 300;
+    font-size: theme('fontSize.base');
 }
 
 a {
@@ -26,6 +27,7 @@ a {
     &:hover,
     &:active {
         color: theme('colors.primary.500');
+        text-decoration: none;
     }
 
     @media (min-width: theme('screens.md')) {  /* Tablet, desktop */
@@ -35,7 +37,9 @@ a {
 
 a:focus,
 button:focus {
-    outline-color: theme('colors.secondary.500');
+    // outline-color: theme('colors.secondary.500');
+    outline-style: dashed;
+    outline-width: thin;
 }
 
 address {
@@ -45,7 +49,6 @@ address {
 /* Headings */
 .head-1, .head-2, .head-3, .head-4, .head-5, .head-6 {
     @apply uppercase;
-    
     line-height: 1.5em;
 }
 .head-1, .head-2, .head-3, .head-4 {
@@ -54,6 +57,7 @@ address {
 .head-5, .head-6 {
     @apply tracking-widest; /* letter-spacing: 0.10em */
     font-weight: 500;
+    line-height: 1.5rem;
 }
 
 
@@ -61,15 +65,22 @@ address {
 .head-2 { @apply text-4xl; /* 34px */ }
 .head-3 { @apply text-3xl; /* 28px */ }
 .head-4 { @apply text-2xl; /* 24px */ }
-.head-5 { @apply text-xl;  /* 20px */ }
+.head-5 { @apply text-lg;  /* 20px */ }
 .head-6 { @apply text-sm; /* 14px */ }
 @media (min-width: theme('screens.lg')) {
     .head-1 { @apply text-6xl;  /* 60px */ }
     .head-2 { @apply text-5xl;  /* 42px */ }
     .head-3 { @apply text-4xl;  /* 39px */ }
     .head-4 { @apply text-3xl;  /* 34px */ }
-    .head-5 { @apply text-2xl;  /* 24px */ }
-    .head-6 { @apply text-xl;   /* 16px */ }
+    .head-5 { 
+        @apply text-xl;   /* 24px */ 
+        line-height: 2rem; /* 32px */
+    }
+    .head-6 { 
+        @apply text-base;   /* 16px */ 
+        line-height: 0.125em; /* 2px */
+
+    }
 }
 
 /* Paragraph */

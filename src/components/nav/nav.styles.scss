@@ -54,10 +54,16 @@
             }
 
             .dlp-nav-menu {
-                @apply mb-20;
                 @apply visually-shown;
                 @apply absolute;
                 @apply top-0;
+                @apply flex;
+                @apply flex-col;
+                @apply w-full;
+                @apply items-center;
+                @apply justify-center;
+                height: 90%;
+                height: calc(100vh - 48px);
                 background: theme('colors.white');
                 padding: theme('spacing.6') theme('spacing.12') 0;
             }
@@ -70,9 +76,11 @@
 
     .dlp-nav-ul {
         li {
+            @apply text-center;
             // Give the :after psydo space
             // without this, the links move around on hover
             height: 48px;
+            padding-top: 3px;
         }
     }
 
@@ -87,7 +95,8 @@
         letter-spacing: 0.1em;
         text-transform: uppercase;
         text-decoration: none;
-        
+        line-height: 1em;
+
         &.is-active,
         &:hover,
         &:active {
