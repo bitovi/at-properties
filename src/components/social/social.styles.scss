@@ -1,6 +1,4 @@
 .dlp-social {
-    @apply mt-8;
-
     a {
         @apply inline-block;
         @apply mr-8;
@@ -10,6 +8,10 @@
         @apply h-10;
         fill: theme('colors.primary.900');
     }
+}
+
+* + .dlp-social {
+    @apply mt-8;
 }
 
 .icon-facebook {
