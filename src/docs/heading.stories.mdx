@@ -1,0 +1,46 @@
+import { Meta, Canvas, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+<Meta title="Components/Heading" />
+
+# Heading
+
+## How to configure
+
+Define classes in **src/assets/type.styles.scss**.
+
+<Source language='css' code={dedent`
+  .head-1, .head-2, .head-3, .head-4, .head-5, .head-6 {
+    @apply uppercase;
+    line-height: 1.5em;
+  }
+  .head-1, .head-2, .head-3, .head-4 {
+    @apply tracking-wider; /* letter-spacing: 0.05em */
+  }
+  .head-5, .head-6 {
+    @apply tracking-widest; /* letter-spacing: 0.10em */
+    font-weight: 500;
+  }
+  .head-1 { @apply text-5xl; /* 42px */ }
+  .head-2 { @apply text-4xl; /* 34px */ }
+  .head-3 { @apply text-3xl; /* 28px */ }
+  .head-4 { @apply text-2xl; /* 24px */ }
+  .head-5 { @apply text-xl;  /* 20px */ }
+  .head-6 { @apply text-sm; /* 14px */ }
+  @media (min-width: theme('screens.lg')) {
+    .head-1 { @apply text-6xl;  /* 60px */ }
+    .head-2 { @apply text-5xl;  /* 42px */ }
+    .head-3 { @apply text-4xl;  /* 39px */ }
+    .head-4 { @apply text-3xl;  /* 34px */ }
+    .head-5 { @apply text-2xl;  /* 24px */ }
+    .head-6 { @apply text-xl;   /* 16px */ }
+  }
+`} />
+
+## Accessibility considerations
+
+Relevant <a href="https://www.w3.org/WAI/WCAG21/quickref/">WCAG 2.1 guidelines</a>:
+
+* Start each section with a heading 
+* Descriptive text 
+* 1 <h1> per page

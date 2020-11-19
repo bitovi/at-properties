@@ -16,7 +16,7 @@ import dedent from 'ts-dedent';
   </div>
 </Canvas>
 
-## Type Scale
+## Type scale
 
 Two type scales are used. 
 * **Small** for screens less than 1280px wide (mobile)
@@ -60,7 +60,9 @@ Two type scales are used.
   </div>
 </Canvas>
 
-<br />
+## Line height and letter spacing
+
+Line height and letter spacing are defined at the component level. Please see individual components.
 
 ## How to configure
 
@@ -90,7 +92,7 @@ Define font families and sizes in **tailwind.config.js**. Tailwind will generate
   },
 `} />
 
-Define additional classs in **src/assets/type.styles.scss**. The classes below apply Tailwind's <a href="https://tailwindcss.com/docs/font-weight">font weight classes</a>: `.font-{weight}`.
+Define classes in **src/assets/type.styles.scss**. The classes below apply Tailwind's <a href="https://tailwindcss.com/docs/font-weight">font weight classes</a>: `.font-{weight}`.
 
 <Source language='css' code={dedent`
   .font-primary {
@@ -105,13 +107,22 @@ Define additional classs in **src/assets/type.styles.scss**. The classes below a
 
 Relevant <a href="https://www.w3.org/WAI/WCAG21/quickref/">WCAG 2.1 guidelines</a>:
 
-* sdaf
-
-<br />
+* Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality. <a href="https://www.w3.org/WAI/WCAG21/quickref/#resize-text">1.4.4 Resize text (Level AA)</a>
+* For the visual presentation of blocks of text, a mechanism is available to achieve the following: 2) Width is no more than 80 characters or glyphs (40 if CJK). 3) Text is not justified (aligned to both the left and the right margins). 4) Line spacing (leading) is at least space-and-a-half within paragraphs, and paragraph spacing is at least 1.5 times larger than the line spacing. 5) Text can be resized without assistive technology up to 200 percent in a way that does not require the user to scroll horizontally to read a line of text on a full-screen window. <a href="https://www.w3.org/WAI/WCAG21/quickref/#visual-presentation">1.4.8 Visual Presentation (Level AAA)</a>
+* In content implemented using markup languages that support the following text style properties, no loss of content or functionality occurs by setting all of the following and by changing no other style property: 1) Line height (line spacing) to at least 1.5 times the font size; 2) Spacing following paragraphs to at least 2 times the font size; 3) Letter spacing (tracking) to at least 0.12 times the font size; 4) Word spacing to at least 0.16 times the font size. Exception: Human languages and scripts that do not make use of one or more of these text style properties in written text can conform using only the properties that exist for that combination of language and script. <a href="https://www.w3.org/WAI/WCAG21/quickref/#text-spacing">1.4.12 Text Spacing (Level AA)</a>
+* The purpose of each link can be determined from the link text alone or from the link text together with its programmatically determined link context, except where the purpose of the link would be ambiguous to users in general. <a href="https://www.w3.org/WAI/WCAG21/quickref/#link-purpose-in-context">2.4.4 Link Purpose (In Context) (Level A)</a>
+* Headings and labels describe topic or purpose. <a href="https://www.w3.org/WAI/WCAG21/quickref/#headings-and-labels">2.4.6 Headings and Labels (Level AA)</a>
+* A mechanism is available to allow the purpose of each link to be identified from link text alone, except where the purpose of the link would be ambiguous to users in general. <a href="https://www.w3.org/WAI/WCAG21/quickref/#link-purpose-link-only">2.4.9 Link Purpose (Link Only) (Level AAA)</a>
+* Section headings are used to organize the content. <a href="https://www.w3.org/WAI/WCAG21/quickref/#section-headings">2.4.10 Section Headings (Level AAA)</a>
+* The human language of each passage or phrase in the content can be programmatically determined except for proper names, technical terms, words of indeterminate language, and words or phrases that have become part of the vernacular of the immediately surrounding text. <a href="https://www.w3.org/WAI/WCAG21/quickref/#language-of-parts">3.1.2 Language of Parts (Level AA)</a>
+* A mechanism is available for identifying specific definitions of words or phrases used in an unusual or restricted way, including idioms and jargon. <a href="https://www.w3.org/WAI/WCAG21/quickref/#unusual-words">3.1.3 Unusual Words (Level AAA)</a>
+* A mechanism for identifying the expanded form or meaning of abbreviations is available. <a href="https://www.w3.org/WAI/WCAG21/quickref/#abbreviations">3.1.4 Abbreviations (Level AAA)</a>
+* When text requires reading ability more advanced than the lower secondary education level after removal of proper names and titles, supplemental content, or a version that does not require reading ability more advanced than the lower secondary education level, is available. <a href="https://www.w3.org/WAI/WCAG21/quickref/#reading-level">3.1.5 Reading Level (Level AAA)</a>
+* A mechanism is available for identifying specific pronunciation of words where meaning of the words, in context, is ambiguous without knowing the pronunciation. <a href="https://www.w3.org/WAI/WCAG21/quickref/#pronunciation">3.1.6 Pronunciation (Level AAA)</a>
 
 ## Components
-
-* Heading 
-* Paragraph 
-* Button
-* Statistic
+ 
+* <a href="/?path=/story/components-button--page">Button</a>
+* <a href="/?path=/story/components-heading--page">Heading</a>
+* <a href="/?path=/story/components-paragraph--page">Paragraph</a>
+* <a href="/?path=/story/components-statistic--page">Statistic</a>

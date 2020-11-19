@@ -1,0 +1,31 @@
+import { Meta, Canvas, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+<Meta title="Components/Paragraph" />
+
+# Paragraph
+
+## How to configure
+
+Define classes in **src/assets/type.styles.scss**.
+
+<Source language='css' code={dedent`
+  p { 
+    @apply text-base; /* 16px */ 
+    color: theme('colors.primary.900');
+    @media (min-width: theme('screens.md')) {  /* Tablet, desktop */
+      font-size: theme('fontSize.lg');
+    }
+  }
+  * + p {
+    @apply mt-4; /* 16px above a paragraph */
+  }
+`} />
+
+## Accessibility considerations
+
+Relevant <a href="https://www.w3.org/WAI/WCAG21/quickref/">WCAG 2.1 guidelines</a>:
+
+* Start each section with a heading 
+* Descriptive text 
+* 1 <h1> per page
