@@ -1,13 +1,40 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Meta, Canvas, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
 
 <Meta title="Foundation/Layout" />
 
 # Layout
 
-## Navigation Bar
+The page is arranged as follows:
+
+<Source language='html' code={dedent`
+  <head>
+    <title>
+  <body>
+    <header> <!-- Main navigation pinned to bottom of the page -->		
+      <nav>
+    <main>
+      <article id="agent">
+        <header> <!-- section title, aka. “intro slide” -->
+        <section> <!-- e.g., agent bio, sales, stats -->
+        <section>
+      <article id="co-agent">
+      <article id="team">
+      <article id="company">
+      <article id="technology">
+      <article id="marketing">
+      <article id="global-reach">
+      <article id="contact">
+`} />
 
 ## Grid
 
-## Modal
+Page elements 
 
 ## Stacking Order (z-index)
+
+## How to configure
+
+## Accessibility considerations
+
+## Components
