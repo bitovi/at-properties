@@ -2,7 +2,7 @@
     <scrollactive class="dlp-nav" :class="{ isOpen: isOpen}" aria-label="Main Menu">
         <div class="dlp-nav-tray xl:container mx-auto">
             <a class="dlp-nav-m-tile flex lg:items-center" href="#">
-                <img class="dlp-nav-logo" height="26" width="130" alt="@properties" :src="`images/logos/logo-atproperties.svg`">
+                <img class="dlp-nav-logo" height="26" width="130" alt="@properties" :src="`images/intro/logo-atproperties.svg`">
                 <span class="visually-hidden">Back to top</span>
             </a>
             <div class="dlp-nav-menu" id="nav-menu-links">

@@ -1,6 +1,6 @@
 <template>
     <div class='section-content'>
-        <div class="content-grid">
+        <div class="content-grid pb-16">
             <div class="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
                 <dlp-figure 
                     :sm="`${publicPath}${i18n.photo.sm}`"
@@ -34,10 +34,10 @@
                 <section id="agent-testimonials">
                     <h3 class="head-5 accent mb-4">Testimonials</h3>
                     <dlp-testimonial 
-                                v-for="t in i18n.testimonials.slice(3, 6)" 
+                                v-for="t in i18n.testimonials.slice(0, 3)" 
                                 v-bind:key="t.id" 
                                 :score="t.rating">
-                                    <div v-html="t.quote"></div>
+                                    <div v-html="t.trunk"></div>
                                 </dlp-testimonial>
                     <div class="btn-group">
                         <dlp-button type="button" @click="showModal('TestimonialsModal')">View more testimonials</dlp-button>
@@ -94,7 +94,7 @@
                     </p>
                 </section>
 
-                <section id="agent-contact" class="mb-16">
+                <section id="agent-contact">
                     <h3 class="head-5 accent">Agent Contact</h3>
                     <address class="mt-4">
                         <a :href="`tel:+1-${i18n.contact.phone}`">{{i18n.contact.phone}}</a><br /><br />
