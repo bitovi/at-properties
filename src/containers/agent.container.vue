@@ -13,10 +13,7 @@
             </div>
             <div class="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
                 <section id="agent-bio" class="mb-16">
-                    <img
-                        class="sm:mx-auto my-8 md:mb-8 md:my-0 md:mx-0"
-                        :alt="`${i18n.logo.alt}`" 
-                        :src="`${i18n.logo.sm}`">
+                    
                     <h2 class="head-2">{{i18n.name}}</h2>
                     <h3 class="head-5 accent mb-4">Agent Bio</h3>
                     <div v-html="i18n.bio.brief"></div>
@@ -103,6 +100,10 @@
                     <dlp-social 
                         v-bind="i18n.contact.social"
                     ></dlp-social>
+                    <img
+                        class="mt-16"
+                        :alt="`${i18n.logo.alt}`" 
+                        :src="`${i18n.logo.sm}`">
                 </section>
             </div>
         </div>

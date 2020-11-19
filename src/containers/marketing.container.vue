@@ -55,7 +55,7 @@
             <div class="col-span-full md:col-span-6 md:col-start-7 md:content-center lg:col-span-6 lg:col-start-10 content-center">
                 <p class="accent accent-above">At @properties, video is a gamechanging marketing tool and we’re using it to tell your home’s story like never before.</p>
                 <div class="btn-group">
-                    <dlp-button type="button" @click="showModal('MarketingPlan')">View Custom Marketing Plan</dlp-button>
+                    <dlp-button type="button">View Custom Marketing Plan</dlp-button>
                 </div>
             </div>
         </section>

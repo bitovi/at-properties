@@ -46,6 +46,13 @@ address {
     font-style: normal;
 }
 
+ul {
+    list-style: disc;
+    li {
+        @apply mb-4;
+    }
+}
+
 /* Headings */
 .head-1, .head-2, .head-3, .head-4, .head-5, .head-6 {
     @apply uppercase;
@@ -84,7 +91,7 @@ address {
 }
 
 /* Paragraph */
-p { 
+p, ol, ul { 
     // @apply font-primary;
     @apply text-base; /* 16px */ 
     color: theme('colors.primary.900');

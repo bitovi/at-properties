@@ -8,7 +8,7 @@
                     ar="ar ar-5-4"
                 />
             </div>
-            <div class="col-span-full md:col-span-6 md:col-start-7 md:content-center lg:col-span-6 lg:col-start-10 content-center">
+            <div class="col-span-full md:col-span-6 md:col-start-7 lg:col-span-6 lg:col-start-10 self-center">
                 <h3 class="head-5 accent">Truly Unique From the Start</h3>
                 <p class="">It all began in Chicago. With tremendous personal sales success, a longstanding friendship, shared philosophies, and a mutual vision for the future of Chicago Real Estate, Mike and Thad embarked on the most significant venture of their collective careers: the founding of @properties in 2000....It all began in Chicago.</p>
             </div>
@@ -30,8 +30,15 @@
             <div class="col-span-full text-center">
                 <p>[ STATS HERE - TBD ]</p>
             </div>
-            <div class="col-span-full text-center">
-                <dlp-button type="button">View Local Stats</dlp-button>
+            <div class="col-span-full flex">
+                <dlp-button type="button" class="mx-auto" @click="showModal('LocalStatsModal')">View local stats</dlp-button>
+                <dlp-slide-in ref="LocalStatsModal">
+                    <h3 class="head-5 accent mb-8">Local Stats</h3>
+                    <img
+                        class=""
+                        :alt="`@properties sells 25% of luxury real estate in Chicago`" 
+                        :src="`${publicPath}images/company/local-stats.png`">
+                </dlp-slide-in>
             </div>
         </section>
     </div>
@@ -44,6 +51,13 @@ export default {
         return {
             i18n: Strings,
             publicPath: process.env.BASE_URL
+        }
+    },
+    methods: {
+        showModal: function(name) {
+            if(this.$refs[name]){
+                this.$refs[name].open()
+            }
         }
     }
 }
