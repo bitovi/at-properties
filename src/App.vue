@@ -40,7 +40,7 @@
       </article>
       <article id="reach">
         <TitlePage 
-          :backgroundUrl="`${publicPath}images/bg/bg-partners.jpg`"
+          :backgroundUrl="`${publicPath}images/reach/bg-reach.jpg`"
           heading="We're local, we're global"
           subheading="Luxury"/>
         <ReachContainer />
