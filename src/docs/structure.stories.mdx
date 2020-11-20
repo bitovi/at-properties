@@ -1,0 +1,117 @@
+import { Meta, Canvas, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+<Meta title="Foundation/Structure" />
+
+# Structure
+
+The page follows a semantic structure using HTML5 tags.
+
+<Source language='html' code={dedent`
+  <head>
+    <title>
+  <body>
+    <header>		
+      <nav>
+    <main>
+      <article id="agent">
+      <article id="co-agent">
+      <article id="team">
+      <article id="company">
+      <article id="global-reach">
+      <article id="technology">
+      <article id="marketing">
+      <article id="selling">
+      <article id="partners">
+      <article id="community">
+      <article id="contact">
+    <div class="modal">
+`} />
+
+## Page title
+
+Page titles should be descriptive. Follow this template:
+
+<Source language='html' code={dedent`
+  <title>[Firstname Lastname] - [City, State Abbreviation], Luxury Real Estate Agent - [Company Name]<title>
+`} />
+
+## Content
+
+* Page content is broken into sections -- coded as `article`. 
+* Some sections have a section intro "slide" -- coded as `header` (e.g., Agent, Technology, Marketing); others do not (e.g., Co-Agent, Team, Contact). 
+* Sections can have sub-sections -- coded as `section` (e.g., the Agent section has sub-sections: agent bio, testimonials, recent sales, stats, contact).
+* The content area has a max-width of 1440px and will be centered on screen.
+* Content will align to a column grid.
+
+Example code for the Selling section.
+
+<Source language='html' code={dedent`
+  <!-- Selling section -->
+  <article id="technology">
+    <!-- section TITLE, aka. “intro slide” -->
+    <header>  
+    <!-- section CONTENT: adds left and right borders, applies consistent padding -->
+    <div class="section-content"> 
+      <!-- SUB-SECTION -->
+      <section id="pricing">
+        <!-- content GRID: sets max-width and provides a grid that content will align to -->
+        <div class="content-grid">
+          <!-- COLUMNS of content: classes are used to specify order, column span, and alignment -->
+          <div class="order-1 md:order-2 col-span-4 md:col-span-6 md:col-start-7 lg:col-span-7 lg:col-start-9">
+          <div class="order-2 md:order-1 col-span-4 md:col-span-6 md:col-start-1 lg:col-span-6 lg:col-start-2">
+      <!-- SUB-SECTION -->
+      <section id="staging">
+        <!-- content GRID: sets max-width and provides a grid that content will align to -->
+        <div class="content-grid">
+          <!-- COLUMNS of content: classes are used to specify order, column span, and alignment -->
+          <div class="col-span-4 md:col-span-6 md:col-start-7 lg:col-span-7 lg:col-start-9">
+          <div class="col-span-4 md:col-span-6 md:col-start-1 lg:col-span-6 lg:col-start-2">
+`} />
+
+IMAGE HERE
+
+## Grid
+
+* **Mobile** -- screens below 768px wide will use a **4-col** grid.
+* **Tablet** -- screen between 768 and 1280px wide will use a **12-col** grid.
+* **Desktop** -- screens at or above 1280px wide will use a **16-col** grid.
+
+IMAGE HERE
+
+## Stacking order (z-index)
+
+## How to configure
+
+Define the `container` max-width and add support for a 16-column `grid` in **tailwind.config.js**.
+
+<Source language='js' code={dedent`
+  container: {
+    xl: '1440px',
+    center: true
+  },
+  extend: {
+    gridTemplateColumns: {
+      '16': 'repeat(16, minmax(0, 1fr))',
+    },
+    gridColumnStart: {
+      '13': '13',
+      '14': '14',
+      '15': '15',
+      '16': '16',
+      '17': '17',
+    }
+  }
+`} />
+
+## Accessibility considerations
+
+Relevant <a href="https://www.w3.org/WAI/WCAG21/quickref/">WCAG 2.1 guidelines</a>:
+
+* asdf
+
+## Components
+
+* <a href="/?path=/story/components-navigation--page">Navigation</a>
+* <a href="/?path=/story/components-section--page">Section</a>
+* <a href="/?path=/story/components-modal--page">Modal</a>
