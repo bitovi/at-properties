@@ -19,7 +19,7 @@ body {
 }
 
 #app {
-    @apply font-primary;
+    font-size: var(--font-size-base);
     color: theme('colors.primary.900');
     font-style: normal;
     font-weight: 300;
