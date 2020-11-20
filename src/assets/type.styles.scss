@@ -1,7 +1,18 @@
+/* Define Font Weights */
+
+.font-primary {
+    @apply font-light;
+}
+
+.font-secondary {
+    @apply font-medium;
+}
+
 html,
 body {
     height: 100%;
     scroll-behavior: smooth;
+
     &.font-book {
         font-weight: 400;
     }

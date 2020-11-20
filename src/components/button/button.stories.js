@@ -22,4 +22,7 @@ Primary.parameters = {
         type: 'figma',
         url: 'https://www.figma.com/file/9Dh5lVMksIBNrDGMlPsWMk/DLP-Design-Library?node-id=56%3A0',
     },
+    /* docs: { 
+        page: 'button.stories.mdx' 
+    } */
 }

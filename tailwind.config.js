@@ -14,7 +14,7 @@ module.exports = {
       'transparent':   'var(--color-transparent)',
       'white':         'var(--color-white)',
       'black':         'var(--color-black)',
-      'sytem-focus':   'var(--color-system-focus)',
+      'sytem-focus':   'var(--color-system-focus)'
       primary: {
         100:           'var(--color-primary-100)',
         200:           'var(--color-primary-200)',
