@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="theme-at">
     
       <DevGrid />
     <main class="dlp-main">
@@ -18,12 +18,12 @@
       </article>
       <article id="company">
         <TitlePage 
-          :backgroundUrl="`${publicPath}images/bg/bg-company.jpg`"
+          :backgroundUrl="`${publicPath}images/auxiliary/05-145-oxford-rd-84-a-breathtaking-foyer-with-original-marble-flooring-printjpg-5f628f078b4e2.jpg`"
           heading="Every home has a story" 
           subheading="Company Profile" />
         <CompanyContainer />
       </article>
-      
+
       <article id="technology">
         <TitlePage 
           :backgroundUrl="`${publicPath}images/bg/bg-tech.jpg`"
@@ -33,19 +33,24 @@
       </article>
       <article id="marketing">
         <TitlePage 
-          :backgroundUrl="`${publicPath}images/bg/bg-marketing.jpg`"
+          :backgroundUrl="`${publicPath}images/auxiliary/07-111-woodley-road-2016-printjpg-5f8dc1282e1d4.jpg`"
           heading="Award-winning marketing materials" 
           subheading="Marketing" />
         <MarketingContainer />
       </article>
-
-      <article id="partners">
+      <article id="reach">
         <TitlePage 
-          :backgroundUrl="`${publicPath}images/bg/bg-partners.jpg`"
+          :backgroundUrl="`${publicPath}images/reach/bg-reach.jpg`"
           heading="We're local, we're global"
           subheading="Luxury"/>
-        
-        
+        <ReachContainer />
+      </article>
+      <article id="selling">
+        <TitlePage 
+          :backgroundUrl="`${publicPath}images/auxiliary/09-2550-n-lakeview-ave-3802-165-living-room-printjpg-5f8da927c0f72.jpg`"
+          heading="Selling your home" 
+          subheading="Final Steps" />
+        <SellingContainer />
       </article>
       <footer id="contact">
         <ContactContainer />
@@ -55,6 +60,8 @@
 </template>
 
 <script>
+import gsap from 'gsap';
+import ScrollTrigger from "gsap/ScrollTrigger";
 import Nav from './components/nav/nav.component'
 import TitleContainer from './containers/title.container'
 import AgentContainer from './containers/agent.container'
@@ -64,13 +71,16 @@ import CompanyContainer from './containers/company.container'
 import MarketingContainer from './containers/marketing.container'
 import TechnologyContainer from './containers/technology.container'
 import ContactContainer from './containers/contact.container'
+import ReachContainer from './containers/reach.container'
+import SellingContainer from './containers/selling.container'
 
-import TitlePage from './components/title/title.page'
+import TitlePage from './components/title/title.page.vue'
 
 import DevGrid from './components/dev/grids.dev'
 
 import './assets/base.styles.scss'
 
+gsap.registerPlugin(ScrollTrigger);
 
 export default {
   name: 'App',
@@ -84,6 +94,8 @@ export default {
     MarketingContainer,
     ContactContainer,
     TechnologyContainer,
+    ReachContainer,
+    SellingContainer,
 
     TitlePage,
     DevGrid
@@ -92,7 +104,7 @@ export default {
       return {
           publicPath: process.env.BASE_URL
       }
-  }
+  },
 }
 </script>
 

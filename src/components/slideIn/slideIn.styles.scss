@@ -16,24 +16,39 @@
     @apply right-0;
     @apply pb-8;
     width: 100%;
-    padding: 24px;
+    padding: 24px 8px 24px 24px;
     background-color: #fff;
     transition: all 0.5s ease-in-out;
     overflow: hidden;
 
+    @media (min-width: theme('screens.md')) {
+        width: 552px;
+        padding: 30px 8px;
+    }
+
     @media (min-width: theme('screens.lg')) {
-        width: 55%;
-        padding: 30px;
+        width: 704px;
+        padding: 30px 8px;
     }
 }
 
 .dlp-slide-in-content {
-    padding: theme('spacing.20') theme('spacing.24') theme('spacing.16') theme('spacing.0');
     overflow: auto;
     height: 100%;
+    padding: 0 32px 0 24px;
+    margin-top: 76px;
+
+    @media (min-width: theme('screens.sm')) {
+        margin-top: 0;
+        padding: 0 77px 0 61px;
+    }
+
+    @media (min-width: theme('screens.md')) {
+        padding: 0 77px 0 61px;
+    }
 
     @media (min-width: theme('screens.lg')) {
-        padding: theme('spacing.20') theme('spacing.16') theme('spacing.16') theme('spacing.12');
+        padding: 0 104px 0 88px;
     }
 
     /* The emerging W3C standard that is currently Firefox-only */
@@ -42,7 +57,8 @@
 
     /* Works on Chrome/Edge/Safari */
     &::-webkit-scrollbar {
-        width: 3px;
+        width: 4px;
+        cursor: grab;
     }
     &::-webkit-scrollbar-track {
         background: theme('colors.primary.200');
