@@ -11,40 +11,39 @@ module.exports = {
       center: true
     },
     colors: {
-      'transparent':   'transparent',
-      'white':         '#FFFFFF',
-      'black':         '#000000',
+      'transparent':   'var(--color-transparent)',
+      'white':         'var(--color-white)',
+      'black':         'var(--color-black)',
+      'sytem-focus':   'var(--color-system-focus)'
       primary: {
-        100:           '#E7E9EB',
-        200:           '#DBDDE1',
-        500:           '#888F9C',
-        900:           '#1B1D1F'
+        100:           'var(--color-primary-100)',
+        200:           'var(--color-primary-200)',
+        500:           'var(--color-primary-500)',
+        900:           'var(--color-primary-900)'
       },
       secondary: {
-        500:           '#D22630'
+        500:           'var(--color-secondary-500)'
       },
       neutral: {
-        300:           '#B2B2B2',
-        500:           '#808080'
-      },
-      system: {
-        'focus':       '#0083CC'
-      },
+        300:           'var(--color-neutral-300)',
+        500:           'var(--color-neutral-500)'
+      }
     },
     fontFamily: {
-      'default':   '"Gotham A", "Gotham B", Helvetica, Arial, sans-serif',
+      'primary':   'var(--font-family)',
+      'secondary': 'var(--font-family)'
     },
     fontSize: {
-      'xs':   '12px',
-      'sm':   '14px',
-      'base': '16px',
-      'lg':   '20px',
-      'xl':   '24px',
-      '2xl':  '28px',
-      '3xl':  '34px',
-      '4xl':  '39px',
-      '5xl':  '42px',
-      '6xl':  '60px'
+      'xs':   'var(--font-size-xs)',
+      'sm':   'var(--font-size-sm)',
+      'base': 'var(--font-size-base)',
+      'lg':   'var(--font-size-lg)',
+      'xl':   'var(--font-size-xl)',
+      '2xl':  'var(--font-size-2xl)',
+      '3xl':  'var(--font-size-3xl)',
+      '4xl':  'var(--font-size-4xl)',
+      '5xl':  'var(--font-size-5xl)',
+      '6xl':  'var(--font-size-6xl)'
     },
     extend: {
       gridTemplateColumns: {

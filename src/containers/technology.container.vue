@@ -3,9 +3,7 @@
         <div class="content-grid">
             <div class="order-1 md:order-2 col-span-4 md:col-span-6 md:col-start-7 lg:col-span-7 lg:col-start-9">
                 <dlp-figure
-                    :sm="`${publicPath}images/technology/laptop-sm.png`"
-                    :lg="`${publicPath}images/technology/laptop-lg.png`"
-                    :showBorder="false"
+                    :lg="`${publicPath}images/technology/laptop-lg.jpg`"
                     alt="Man's hands resting on a laptop"
                 />
             </div>

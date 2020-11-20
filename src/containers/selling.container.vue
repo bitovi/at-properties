@@ -1,61 +1,43 @@
 <template>
-    <div class="section-content">
-        <section id="pricing" class="container mx-auto grid md:grid-cols-2 gap-8 mt-12">
-            <div class="self-center md:px-10">
-                <h3 class="head-5 accent">{{i18n.pricing.heading}}</h3>
-                <div v-html="i18n.pricing.content" class="mt-4"></div>
-                <div class="btn-group">
-                    <dlp-button>Learn More</dlp-button>
+    <div class='section-content'>
+        <div class="content-grid">
+            <div class="order-3 md:order-4 col-span-4 md:col-span-6 md:col-start-7 lg:col-span-7 lg:col-start-9">
+                <dlp-figure
+                    :sm="`${publicPath}images/marketing/iphone-sm.png`"
+                    :lg="`${publicPath}images/marketing/iphone-lg.png`"
+                    alt="iPhone 11 Pro"
+                    :showBorder="false"
+                />
+            </div>
+            <div class="order-4 md:order-3 col-span-4 md:col-span-6 md:col-start-1 lg:col-span-6 lg:col-start-2">
+                <h3 class="head-5 accent accent-above">Luxury Portfolio</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque gravida ac, diam malesuada. Fringilla arcu fusce tempus sodales velit id. Tristique sed nec dignissim imperdiet. Id eu cursus et parturient suscipit.</p>
+                <div class="btn-group pb-16">
+                    <dlp-button type="button">View Luxury Stats</dlp-button>
                 </div>
             </div>
-            <div>
-                <p>[ VIDEO HERE ]</p>
+        </div>
+        <div class="content-grid">
+            <div class="col-span-4 md:col-span-6 md:col-start-1 lg:col-span-7 lg:col-start-2">
+                <dlp-figure
+                    :sm="`${publicPath}images/marketing/iphone-sm.png`"
+                    :lg="`${publicPath}images/marketing/iphone-lg.png`"
+                    alt="iPhone 11 Pro"
+                    :showBorder="false"
+                />
             </div>
-            <div>
-                <dlp-figure 
-                    :sm="`images/selling/staging.jpg`"
-                    :lg="`images/selling/staging.jpg`"
-                    alt="Man presenting whiteboard ideas to his team"
-                ></dlp-figure>
-            </div>
-            <div class="self-center md:px-10">
-                <h3 class="head-5 accent">{{i18n.selling.heading}}</h3>
-                <p>{{i18n.selling.content}}</p>
+            <div class="col-span-4 md:col-span-6 md:col-start-7 lg:col-span-6 lg:col-start-10">
+                <h3 class="head-5 accent accent-above">Staging your home</h3>
+                <p>Staging is the art of merchandising a home to improve its marketability. It can be as simple as rearranging a few pieces of furniture or as elaborate as hiring a professional to furnish an empty home right down to the plants and artwork.</p>
                 <div class="btn-group">
-                    <dlp-button>Learn More</dlp-button>
+                    <dlp-button type="button">View Map of Global Reach</dlp-button>
                 </div>
             </div>
-            <div class="self-center md:px-10">
-                <h3 class="head-5 accent">{{i18n.negotiation.heading}}</h3>
-                <p>{{i18n.negotiation.content}}</p>
-                <div class="btn-group">
-                    <dlp-button>Learn More</dlp-button>
-                </div>
-            </div>
-            <div>
-                <dlp-figure 
-                    :sm="`images/selling/negotiation.jpg`"
-                    :lg="`images/selling/negotiation.jpg`"
-                    alt="Three women seated on a couch working on laptops"
-                ></dlp-figure>
-            </div>
-            <div>
-                <dlp-figure 
-                    :sm="`images/selling/closing.jpg`"
-                    :lg="`images/selling/closing.jpg`"
-                    alt="Man's hand signing a contract"
-                ></dlp-figure>
-            </div>
-            <div class="self-center md:px-10">
-                <h3 class="head-5 accent">{{i18n.contract.heading}}</h3>
-                <p>{{i18n.contract.content}}</p>
-                <div class="btn-group">
-                    <dlp-button>Learn More</dlp-button>
-                </div>
-            </div>
-        </section>
+        </div>
+        
     </div>
 </template>
+
 
 <script>
 import Strings from '../assets/strings/selling.i18n.json'

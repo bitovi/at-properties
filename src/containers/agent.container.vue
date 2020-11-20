@@ -1,6 +1,6 @@
 <template>
     <div class='section-content'>
-        <div class="content-grid">
+        <div class="content-grid pb-16">
             <div class="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
                 <dlp-figure 
                     :sm="`${publicPath}${i18n.photo.sm}`"
@@ -12,11 +12,8 @@
                 ></dlp-figure>
             </div>
             <div class="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
-                <section id="agent-bio">
-                    <img
-                        class="sm:mx-auto my-8 md:mb-8 md:my-0 md:mx-0"
-                        :alt="`${i18n.logo.alt}`" 
-                        :src="`${i18n.logo.sm}`">
+                <section id="agent-bio" class="mb-16">
+                    
                     <h2 class="head-2">{{i18n.name}}</h2>
                     <h3 class="head-5 accent mb-4">Agent Bio</h3>
                     <div v-html="i18n.bio.brief"></div>
@@ -31,13 +28,13 @@
                     </div>
                 </section>
 
-                <section id="agent-testimonials">
+                <section id="agent-testimonials" class="mb-16">
                     <h3 class="head-5 accent mb-4">Testimonials</h3>
                     <dlp-testimonial 
-                                v-for="t in i18n.testimonials.slice(3, 6)" 
+                                v-for="t in i18n.testimonials.slice(0, 3)" 
                                 v-bind:key="t.id" 
                                 :score="t.rating">
-                                    <div v-html="t.quote"></div>
+                                    <div v-html="t.trunk"></div>
                                 </dlp-testimonial>
                     <div class="btn-group">
                         <dlp-button type="button" @click="showModal('TestimonialsModal')">View more testimonials</dlp-button>
@@ -53,7 +50,7 @@
                     </div>
                 </section>
 
-                <section id="agent-sales">
+                <section id="agent-sales" class="mb-16">
                     <h3 class="head-5 accent mb-4">Recent Sales</h3>
                     <dlp-sales-card 
                         v-for="sale in i18n.sales.slice(0, 3)" 
@@ -94,7 +91,7 @@
                     </p>
                 </section>
 
-                <section id="agent-contact" class="mb-16">
+                <section id="agent-contact">
                     <h3 class="head-5 accent">Agent Contact</h3>
                     <address class="mt-4">
                         <a :href="`tel:+1-${i18n.contact.phone}`">{{i18n.contact.phone}}</a><br /><br />
@@ -103,6 +100,10 @@
                     <dlp-social 
                         v-bind="i18n.contact.social"
                     ></dlp-social>
+                    <img
+                        class="mt-16"
+                        :alt="`${i18n.logo.alt}`" 
+                        :src="`${i18n.logo.sm}`">
                 </section>
             </div>
         </div>
