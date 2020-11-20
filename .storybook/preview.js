@@ -11,7 +11,7 @@ export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   options: {
     storySort: {
-      order: ['Welcome', 'Change Log', 'Foundation', ['Design Tokens', 'Breakpoints', 'Color', 'Typography', 'Object Styles', 'Iconography', 'Imagery', 'Structure', 'Motion'], 'Components', ['Button', 'Figure', 'Heading', 'Main Navigation', 'Modal', 'Paragraph', 'Property', 'Section', 'Social', 'Statistic', 'Testimonial', 'Video']]
+      order: ['Welcome', 'Change Log', 'Foundation', ['Design Tokens', 'Breakpoints', 'Color', 'Typography', 'Object Styles', 'Iconography', 'Imagery', 'Motion', 'Structure', 'Inclusive Design'], 'Components', ['Button', 'Figure', 'Heading', 'Main Navigation', 'Modal', 'Paragraph', 'Property', 'Section', 'Social', 'Statistic', 'Testimonial', 'Video']]
     }
   },
   docs: {

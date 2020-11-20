@@ -13,10 +13,12 @@
     line-height: 1.5;
     margin-bottom: 16px;
   }
-  .sbdocs.sbdocs-ul + .sbdocs.sbdocs-p, 
-  .sbdocs.sbdocs-p + .sbdocs.sbdocs-img, 
-  .sbdocs.sbdocs-p + .sbdocs.sbdocs-table {
+  * + .sbdocs.sbdocs-p, 
+  .sbdocs.sbdocs-p + * {
     margin-top: 32px !important;
+  }
+  .sbdocs-p + .sbdocs.sbdocs-ul {
+    margin-top: 16px !important;
   }
   .sbdocs.sbdocs-a {
     color: #0d47a1;
