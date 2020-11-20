@@ -30,7 +30,8 @@ module.exports = {
       }
     },
     fontFamily: {
-      'default':   'var(--font-family)',
+      'primary':   'var(--font-family)',
+      'secondary': 'var(--font-family)'
     },
     fontSize: {
       'xs':   'var(--font-size-xs)',
