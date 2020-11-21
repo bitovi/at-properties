@@ -32,7 +32,6 @@
     @apply h-0;
     @apply overflow-hidden;
     @apply relative;
-
     img,
     picture {
         @apply absolute;
@@ -40,6 +39,7 @@
         @apply left-0;
         @apply w-full;
         @apply h-full;
+        @apply object-cover;
         object-position: 50% 0;
     }
 }
@@ -52,21 +52,17 @@
 .ar-4-3 {
     padding-top: min(80vh, calc(3/4 * 100%));
 }
+.ar-3-4 {
+    padding-top: min(80vh, calc(4/3 * 100%));
+}
 .ar-4-5 {
     padding-top: min(80vh, calc(5/4 * 100%));
-    // padding-top: calc(5/4 * 100%);
 }
 .ar-5-4 {
     padding-top: min(80vh, calc(4/5 * 100%));
 }
 .ar-16-9 {
     padding-top: min(80vh, calc(9/16 * 100%));
-}
-
-.ar img {
-    @apply w-full;
-    @apply h-full;
-    @apply object-cover;
 }
 
 /* Positioning Tools */

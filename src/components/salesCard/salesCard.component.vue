@@ -9,7 +9,7 @@
             
         </div>
         <div class="col-span-2">
-            <strong>{{price}}</strong>
+            <p><strong>{{price}}</strong></p>
             <p  v-html="address"/>
             <p v-if="address2"  v-html="address2"/>
         </div>

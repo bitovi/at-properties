@@ -23,10 +23,11 @@
     @apply justify-center;
     @apply h-full;
     @apply mx-auto;
-    width: 60%;
-    @media (min-width: theme('screens.md')) {
-        width: 100%;
+    width: 100%;
+    @media screen and (orientation:landscape) {
+        width: 60%;
     }
+
 }
 
 .dlp-video-border {

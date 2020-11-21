@@ -6,6 +6,7 @@ module.exports = {
     "../src/**/*.stories.@(js|jsx|ts|tsx)"
   ],
   "addons": [
+    '@storybook/addon-docs',
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     '@storybook/addon-a11y',
@@ -17,15 +18,7 @@ module.exports = {
           injectStoryParameters: false,
         },
       },
-    },
-    {
-      name: '@storybook/addon-docs',
-      options: {
-        sourceLoaderOptions: {
-          injectStoryParameters: false,
-        },
-      },
-    },
+    }    
   ],
   webpackFinal: async (config) => {
     config.module.rules.push({
