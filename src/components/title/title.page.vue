@@ -143,7 +143,7 @@ export default {
                             const animTween = this[tweenName];
                             if (animTween) {
                                 animTween.scrollTrigger.disable(true, false);
-                                animTween.seek(this.animTween.endTime(false));
+                                animTween.seek(animTween.endTime(false));
                                 animTween.kill();
                                 this[tweenName] = null;
                             }
