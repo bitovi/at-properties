@@ -11,9 +11,11 @@
 
 <script>
 import gsap from 'gsap';
+import isMobile from 'is-mobile';
 
 export default {
     name: 'dlp-title-page',
+
     props: {
         backgroundUrl: {
             type: String,
@@ -38,36 +40,51 @@ export default {
             default: () => {},
         }
     },
+
     data() {
         return {
             animationNeedsSetup: true,
+            animTextTween: null,
             animTextDefaults: {
+                enabled: true,
                 ease: 'ease-out',
                 duration: .5,
                 opacity: 0,
                 offset: 100,
             },
+            animImageTween: null,
             animImageDefaults: {
+                enabled: true,
                 ease: 'linear',
                 duration: 1,
                 opacity: 1,
                 sizing: 50,
-            }
+            },
+            motionSafe: false,
+            isMounted: false,
+            isDesktop: isMobile() === false,
         }
     },
+
     methods: {
         getDefinedValue(propertyName, ...options) {
             const option = options.find((option) => option !== undefined && option[propertyName] !== undefined);
             if (!option) throw new Error(`"${propertyName}" not defined in any option argument`);
-            return option[propertyName]
+            return option[propertyName];
         },
-        preSetupAnimation() {
-            if (this.animationNeedsSetup) {
+
+        setupAnimation() {
+            if (
+                this.animationNeedsSetup && 
+                this.motionSafe &&
+                this.isDesktop
+            ) {
                 this.animationNeedsSetup = false;
-                const setupAnimation = () => {
-                    const textElement = this.$refs.titleText;
-                    const imageElement = this.$refs.backgroundImage;
-                    gsap.from(textElement, {
+                const textElement = this.$refs.titleText;
+                const imageElement = this.$refs.backgroundImage;
+
+                if (this.getDefinedValue('enabled', this.animText, this.animTextDefaults)) {
+                    this.animTextTween = gsap.from(textElement, {
                         ease: this.getDefinedValue('ease', this.animText, this.animTextDefaults),
                         duration: this.getDefinedValue('duration', this.animText, this.animTextDefaults),
                         transform: `perspective(100px) translate3d(0, ${this.getDefinedValue('offset', this.animText, this.animTextDefaults)}px, 0)`,
@@ -79,7 +96,10 @@ export default {
                             scrub: true,
                         },
                     });
-                    gsap.from(imageElement, {
+                }
+
+                if (this.getDefinedValue('enabled', this.animImage, this.animImageDefaults)) {
+                    this.animImageTween = gsap.from(imageElement, {
                         ease: this.getDefinedValue('ease', this.animImage, this.animImageDefaults),
                         duration: this.getDefinedValue('duration', this.animImage, this.animImageDefaults),
                         transform: 'perspective(100px) translate3d(0, 0, 0px)',
@@ -91,18 +111,52 @@ export default {
                             scrub: true,
                         },
                     });
-                };
-                const vueSelf = this;
-                window.addEventListener(
-                    'DOMContentLoaded',
-                    () => setTimeout(() => setupAnimation.call(vueSelf), 1),
-                    { once: true, passive: true }
-                );
+                }
             }
         }
     },
+
     created() {
-        this.preSetupAnimation();
+        if (this.isDesktop) {
+            const matchedMedia = matchMedia('(prefers-reduced-motion: no-preference)');
+            this.motionSafe = matchedMedia.matches;
+
+            if (this.motionSafe) {
+                window.addEventListener(
+                    'DOMContentLoaded',
+                    () => setTimeout(function () {
+                        this.setupAnimation();
+                    }.bind(this), 1),
+                    { once: true, passive: true }
+                );
+            }
+
+            matchedMedia.addEventListener('change', function (evt) {
+                this.motionSafe = evt.matches;
+                if (this.isMounted) {
+                    if (this.motionSafe) {
+                        this.setupAnimation()
+                    }
+                    else {
+                        const tweenNames = ['animTextTween', 'animImageTween'];
+                        tweenNames.forEach((tweenName) => {
+                            const animTween = this[tweenName];
+                            if (animTween) {
+                                animTween.scrollTrigger.disable(true, false);
+                                animTween.seek(this.animTween.endTime(false));
+                                animTween.kill();
+                                this[tweenName] = null;
+                            }
+                        });
+                        this.animationNeedsSetup = true;
+                    }
+                }
+            }.bind(this));
+        }
+    },
+
+    mounted() {
+        this.isMounted = true;
     }
 }
 </script>
