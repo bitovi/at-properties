@@ -1,0 +1,25 @@
+
+.dlp-bio-card {
+    @apply flex;
+    @apply flex-col;
+    @apply text-center;
+    width: 232px;
+
+    .dlp-bio-card-name {
+
+    }
+
+    .dlp-bio-card-caption {
+
+    }
+
+    figcaption {
+        @apply py-6;
+    }
+
+    .accent:before,
+    .accent:after {
+        margin-top: 0.4em;
+        margin-bottom: 0.4em;
+    }
+}

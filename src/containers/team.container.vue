@@ -49,8 +49,35 @@
         </section>
 
         <section>
-            <h2 class="head-5 text-center accent accent-centered">Team Members</h2>
-            <p class="text-center">[ CAROUSEL HERE ]</p>
+            <h2 class="head-5 text-center accent accent-below accent-centered mb-12">Team Members</h2>
+            <dlp-carousel>
+                <swiper-slide>
+                    <dlp-bio-card source="images/team/bio-1.jpg" name="Jenny Wilson" caption="Lead Broker" />
+                </swiper-slide>
+                <swiper-slide>
+                    <dlp-bio-card source="images/team/bio-2.jpg" name="Annette Black" caption="Lead Broker" />
+                </swiper-slide>
+                <swiper-slide>
+                    <dlp-bio-card source="images/team/bio-3.jpg" name="Theresa Webb" caption="Lead Broker" />
+                </swiper-slide>
+                <swiper-slide>
+                    <dlp-bio-card source="images/team/bio-4.jpg" name="Savannah Nguyen" caption="Lead Broker" />
+                </swiper-slide>
+                <swiper-slide>
+                    <dlp-bio-card source="images/team/bio-1.jpg" name="Jenny Wilson" caption="Lead Broker" />
+                </swiper-slide>
+                <swiper-slide>
+                    <dlp-bio-card source="images/team/bio-2.jpg" name="Annette Black" caption="Lead Broker" />
+                </swiper-slide>
+                <swiper-slide>
+                    <dlp-bio-card source="images/team/bio-3.jpg" name="Theresa Webb" caption="Lead Broker" />
+                </swiper-slide>
+                <swiper-slide>
+                    <dlp-bio-card source="images/team/bio-4.jpg" name="Savannah Nguyen" caption="Lead Broker" />
+                </swiper-slide>
+
+            </dlp-carousel>
+
         </section>
     </div>
 </template>

@@ -12,9 +12,10 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "gsap": "^3.5.1",
+    "swiper": "5.x",
     "tailwindcss": "^1.9.5",
     "vue": "^2.6.11",
-    "vue-carousel": "^0.18.0",
+    "vue-awesome-swiper": "^4.1.1",
     "vue-scrollactive": "^0.9.3",
     "vue-youtube": "^1.4.0"
   },

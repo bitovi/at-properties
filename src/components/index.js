@@ -12,6 +12,8 @@ import TitlePage from './title/title.page'
 import DisplayCard from './displayCard/displayCard.component'
 import Social from './social/social.component'
 import VideoModal from './videoModal/videoModal.component.vue'
+import BioCard from './bioCard/bioCard.component.vue'
+import Carousel from './carousel/carousel.component.vue'
 
 Vue.component(ScrollNotify.name, ScrollNotify)
 Vue.component(Button.name, Button)
@@ -26,6 +28,8 @@ Vue.component(TitlePage.name, TitlePage)
 Vue.component(DisplayCard.name, DisplayCard)
 Vue.component(Social.name, Social)
 Vue.component(VideoModal.name, VideoModal)
+Vue.component(BioCard.name, BioCard)
+Vue.component(Carousel.name, Carousel)
 
 
 export {
@@ -41,6 +45,8 @@ export {
     TitlePage,
     DisplayCard,
     Social,
-    VideoModal
+    VideoModal,
+    BioCard,
+    Carousel
 }
 

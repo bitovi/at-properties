@@ -1,9 +1,9 @@
 <template>
-    <figure>
-        <img srch="images/company/bio-1.jpg" alt=""/>
+    <figure class="dlp-bio-card">
+        <img :src="source" :alt="name"/>
         <figcaption>
-            <span></span>
-            <span class="accent accent-centered"></span>
+            <span class="dlp-bio-card-name head-6">{{name}}</span>
+            <span v-if="caption" class="dlp-bio-card-caption accent accent-centered">{{caption}}</span>
         </figcaption>
     </figure>
 </template>
