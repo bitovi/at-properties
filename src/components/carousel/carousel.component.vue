@@ -32,10 +32,7 @@ export default {
                 pagination: {
                     type: 'custom',
                     el: '.dlp-carousel-nav'
-                },
-                autoplay: {
-                    delay: 2500,
-                },
+                }
             }
         }
     },
