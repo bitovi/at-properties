@@ -1,0 +1,29 @@
+import { Meta, Preview, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+<Meta title="Components/Button" />
+
+# Button
+
+Buttons are ...
+
+<Preview>
+  <button class="btn"><span class="btn-inner">Agent Bio</span></button>
+</Preview>
+
+## How to configure
+
+Define classes in **src/components/button/button.styles.scss**.
+
+<Source language='css' code={dedent`
+  .class { }
+`} />
+
+## Accessibility considerations
+
+Relevant <a href="https://www.w3.org/WAI/WCAG21/quickref/">WCAG 2.1 guidelines</a>:
+
+* For user interface components with labels that include text or images of text, the name contains the text that is presented visually. <a href="https://www.w3.org/WAI/WCAG21/quickref/#label-in-name">2.5.3 Label in Name (Level A)</a>
+* The size of the target for pointer inputs is at least 44 by 44 CSS pixels except when: 1) Equivalent: The target is available through an equivalent link or control on the same page that is at least 44 by 44 CSS pixels; 2) Inline: The target is in a sentence or block of text; 3) User Agent Control: The size of the target is determined by the user agent and is not modified by the author; 4) Essential: A particular presentation of the target is essential to the information being conveyed. <a href="https://www.w3.org/WAI/WCAG21/quickref/#target-size">2.5.5 Target Size (Level AAA)</a>
+* When any user interface component receives focus, it does not initiate a change of context. <a href="https://www.w3.org/WAI/WCAG21/quickref/#on-focus">3.2.1 On Focus (Level A)</a>
+* Labels or instructions are provided when content requires user input. <a href="https://www.w3.org/WAI/WCAG21/quickref/#labels-or-instructions">3.3.2 Labels or Instructions (Level A)</a>

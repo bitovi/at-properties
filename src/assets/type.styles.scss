@@ -1,14 +1,25 @@
+/* Define Font Weights */
+
+.font-primary {
+    @apply font-light;
+}
+
+.font-secondary {
+    @apply font-medium;
+}
+
 html,
 body {
     height: 100%;
     scroll-behavior: smooth;
+
     &.font-book {
         font-weight: 400;
     }
 }
 
 #app {
-    @apply font-primary;
+    font-size: var(--font-size-base);
     color: theme('colors.primary.900');
     font-style: normal;
     font-weight: 300;
