@@ -33,6 +33,9 @@ export default {
                     type: 'custom',
                     el: '.dlp-carousel-nav'
                 },
+                autoplay: {
+                    delay: 2500,
+                },
             }
         }
     },
