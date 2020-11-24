@@ -1,44 +1,46 @@
 <template>
     <div class="dlp-carousel" v-bind="$attrs">
         <swiper 
-            ref="mySwiper"
+            ref="dlpSwiper"
             :options="swiperOptions"
             class="dlp-carousel-items">
             <slot/>
         </swiper>
-        <div class="dlp-carousel-nav">
-            <div class="dlp-carousel-nav-handle"></div>
-        </div>
+        <div v-if="hasScrollNav" :id="`dlp-carousel-nav-${swiperId}`" class="dlp-carousel-nav swiper-scrollbar"></div>
     </div>
 </template>
 <script>
-import { SCREENS } from '../../constants'
-
 
 export default {
     name: 'dlp-carousel',
     props: {
-        perPage: {
-            type: Array,
-            default: () => [[SCREENS.sm, 2], [SCREENS.md, 4], [SCREENS.lg, 6]]
+        options: {
+            type: Object,
+            required: false
+        },
+        hasScrollNav:{
+            type: Boolean,
+            default: false
         }
     },
     data() {
+        //https://github.com/surmon-china/vue-awesome-swiper/issues/717
+        //Fix pagination when multiple swipers used
+        const _id = 'swiper' + Math.round(Math.random() * 100000)
         return {
+            swiperId: _id,
             swiperOptions: {
+                ...this.options,
                 slidesPerView: 'auto',
-                spaceBetween: 30,
-                loop: true,
-                pagination: {
-                    type: 'custom',
-                    el: '.dlp-carousel-nav'
-                }
+                scrollbar: this.hasScrollNav ? {
+                    el: `#dlp-carousel-nav-${_id}`
+                } : false
             }
         }
     },
     computed: {
         swiper() {
-            return this.$refs.mySwiper.$swiper
+            return this.$refs.dlpSwiper.$swiper
         }
     },
 }
