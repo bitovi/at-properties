@@ -30,23 +30,24 @@
                 </section>
             </div>
         </div>
-        
-        <section id="team-stats" class="my-16">
-            <div class="grid md:grid-cols-3 border-t border-b border-primary-100 divide-y md:divide-y-0 md:divide-x divide-primary-100 max-w-screen-lg mx-auto">
-                <div class="p-8 text-center stat">
-                    <span class="head-3 block callout-text" v-html="i18n.stats[0]['span-1']"></span> 
-                    <span class="head-6" v-html="i18n.stats[0]['span-2']"></span>
+        <div class="content-grid">
+            <section id="team-stats" class="col-span-full lg:col-span-14 lg:col-start-2 my-16">
+                <div class="grid md:grid-cols-3 border-t border-b border-primary-100 divide-y md:divide-y-0 md:divide-x divide-primary-100">
+                    <div class="p-8 text-center stat">
+                        <span class="head-3 block callout-text" v-html="i18n.stats[0]['span-1']"></span> 
+                        <span class="head-6" v-html="i18n.stats[0]['span-2']"></span>
+                    </div>
+                    <div class="p-8 text-center stat">
+                        <span class="head-3 block callout-text" v-html="i18n.stats[1]['span-1']"></span> 
+                        <span class="head-6" v-html="i18n.stats[1]['span-2']"></span>
+                    </div>
+                    <div class="p-8 text-center stat">
+                        <span class="head-3 block callout-text" v-html="i18n.stats[2]['span-1']"></span> 
+                        <span class="head-6" v-html="i18n.stats[2]['span-2']"></span>
+                    </div>
                 </div>
-                <div class="p-8 text-center stat">
-                    <span class="head-3 block callout-text" v-html="i18n.stats[1]['span-1']"></span> 
-                    <span class="head-6" v-html="i18n.stats[1]['span-2']"></span>
-                </div>
-                <div class="p-8 text-center stat">
-                    <span class="head-3 block callout-text" v-html="i18n.stats[2]['span-1']"></span> 
-                    <span class="head-6" v-html="i18n.stats[2]['span-2']"></span>
-                </div>
-            </div>
-        </section>
+            </section>
+        </div>
 
         <section>
             <h2 class="head-5 text-center accent accent-below accent-centered mb-12">Team Members</h2>
