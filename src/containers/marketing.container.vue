@@ -5,7 +5,33 @@
                 <h3 class="head-2 accent accent-centered">Marketing Assets</h3>
             </div>
             <div class="col-span-full text-center">
-                <p>[ CAROUSEL HERE ]</p>
+                <dlp-carousel
+                    :options="{spaceBetween: 64}"
+                    >
+                    <swiper-slide>
+                        <dlp-display-card 
+                            source="http://placekitten.com/254/255"
+                            caption="Online Advertising"/>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <dlp-display-card 
+                            class="pt-16"
+                            source="http://placekitten.com/g/254/255"
+                            caption="Yard Signs"/>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <dlp-display-card 
+                            source="http://placekitten.com/254/255"
+                            caption="Social Media"/>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <dlp-display-card 
+                            class="pt-16"
+                            source="http://placekitten.com/g/254/255"
+                            caption="Sales Kittens"/>
+                    </swiper-slide>
+                </dlp-carousel>
+
             </div>
         </section>
 

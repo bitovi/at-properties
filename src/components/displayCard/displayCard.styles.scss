@@ -4,27 +4,17 @@
     @apply flex;
     @apply flex-col;
     .dlp-display-card-content {
-        @apply p-3;
-        @apply flex-grow;
-        min-height: 308px;
-        background-color: theme('colors.primary.200');
-    }
-    .dlp-display-card-border {
-        @apply h-full;
         @apply flex;
-        @apply items-center;
+        @apply flex-col;
         @apply justify-center;
-        @apply p-12;
-        border: 1px solid theme('colors.primary.500');
-
+        @apply items-center;
+        width: 496px;
+        height: 332px;
+        max-width: 100%;
+        border: 1px solid theme('colors.primary.200');
     }
 
-    .dlp-display-card-cta {
-        @apply pt-8;
-        text-align: center;
-    }
-
-    img {
-        @apply h-auto;
+    figcaption {
+        @apply text-center;
     }
 }

@@ -1,7 +1,7 @@
 <template>
     <div class="dlp-carousel" v-bind="$attrs">
         <swiper 
-            ref="mySwiper"
+            ref="dlpSwiper"
             :options="swiperOptions"
             class="dlp-carousel-items">
             <slot/>
@@ -12,22 +12,20 @@
     </div>
 </template>
 <script>
-import { SCREENS } from '../../constants'
-
 
 export default {
     name: 'dlp-carousel',
     props: {
-        perPage: {
-            type: Array,
-            default: () => [[SCREENS.sm, 2], [SCREENS.md, 4], [SCREENS.lg, 6]]
+        options: {
+            type: Object,
+            required: false
         }
     },
     data() {
         return {
             swiperOptions: {
+                ...this.options,
                 slidesPerView: 'auto',
-                spaceBetween: 30,
                 loop: true,
                 pagination: {
                     type: 'custom',
@@ -38,7 +36,7 @@ export default {
     },
     computed: {
         swiper() {
-            return this.$refs.mySwiper.$swiper
+            return this.$refs.dlpSwiper.$swiper
         }
     },
 }
