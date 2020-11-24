@@ -13,72 +13,72 @@ The color palette includes utility, primary, secondary, neutral, and system colo
 
 The DLP page will use a **subset** of the brand's <a href="https://www.figma.com/file/9Dh5lVMksIBNrDGMlPsWMk/DLP-Design-Library?node-id=39%3A34">full color palette</a>.
 
-<!-- <div class="pt-8 pb-12 grid grid-cols-12 gap-1">
-    <div class="h-8 bg-secondary-500"></div>
-    <div class="h-8 bg-primary-100"></div>
-    <div class="h-8 bg-primary-200"></div>
-    <div class="h-8 bg-primary-500"></div>
-    <div class="h-8 bg-primary-900"></div>
-    <div class="h-8 bg-neutral-300"></div>
-    <div class="h-8 bg-neutral-500"></div>
-    <div class="h-8 bg-system-focus"></div>
+<!-- <div className="pt-8 pb-12 grid grid-cols-12 gap-1">
+    <div className="h-8 bg-secondary-500"></div>
+    <div className="h-8 bg-primary-100"></div>
+    <div className="h-8 bg-primary-200"></div>
+    <div className="h-8 bg-primary-500"></div>
+    <div className="h-8 bg-primary-900"></div>
+    <div className="h-8 bg-neutral-300"></div>
+    <div className="h-8 bg-neutral-500"></div>
+    <div className="h-8 bg-system-focus"></div>
 </div> -->
 
 ## DLP color palette
 
-<div class="pt-8 grid grid-cols-4 gap-5 justify-items-stretch">
+<div className="pt-8 grid grid-cols-4 gap-5 justify-items-stretch">
     <div>
-        <div class="h-24 border border-neutral-300 border-dashed"></div>
+        <div className="h-24 border border-neutral-300 border-dashed"></div>
         <p><strong>Transparent</strong></p>
     </div>
     <div>
-        <div class="h-24 border border-primary-500 bg-white"></div>
+        <div className="h-24 border border-primary-500 bg-white"></div>
         <p><strong>White</strong><br />
         HEX: #FFFFFF</p>
     </div>
     <div></div>
     <div>
-        <div class="h-24 border border-primary-500 bg-black"></div>
+        <div className="h-24 border border-primary-500 bg-black"></div>
         <p><strong>Black</strong><br />
         HEX: #000000</p>
     </div>
     <div>
-        <div class="h-24 border border-primary-500 bg-primary-100"></div>
+        <div className="h-24 border border-primary-500 bg-primary-100"></div>
         <p><strong>Primary 100</strong><br />
         HEX: #E7E9EB</p>
     </div>
     <div>
-        <div class="h-24 border border-primary-500 bg-primary-200"></div>
+        <div className="h-24 border border-primary-500 bg-primary-200"></div>
         <p><strong>Primary 200</strong><br />
         HEX: #DBDDE1</p>
     </div>
     <div>
-        <div class="h-24 border border-primary-500 bg-primary-500"></div>
+        <div className="h-24 border border-primary-500 bg-primary-500"></div>
         <p><strong>Primary 500</strong><br />
         HEX: #888F9C</p>
     </div>
     <div>
-        <div class="h-24 border border-primary-500 bg-primary-900"></div>
+        <div className="h-24 border border-primary-500 bg-primary-900"></div>
         <p><strong>Primary 900</strong><br />
         HEX: #1B1D1F</p>
     </div>
     <div>
-        <div class="h-24 border border-primary-500 bg-secondary-500"></div>
+        <div className="h-24 border border-primary-500 bg-secondary-500"></div>
         <p><strong>Secondary 500</strong><br />
         HEX: #D22630</p>
     </div>
     <div>
-        <div class="h-24 border border-primary-500 bg-neutral-300"></div>
+        <div className="h-24 border border-primary-500 bg-neutral-300"></div>
         <p><strong>Neutral 300</strong><br />
         HEX: #B2B2B2</p>
     </div>
     <div>
-        <div class="h-24 border border-primary-500 bg-neutral-500"></div>
+        <div className="h-24 border border-primary-500 bg-neutral-500"></div>
         <p><strong>Neutral 500</strong><br />
         HEX: #808080</p>
     </div>
     <div>
-        <div class="h-24 border border-primary-500 bg-system-focus"></div>
+        <div className="h-24 border border-primary-500 bg-system-focus"></div>
         <p><strong>System Focus</strong><br />
         HEX: #0083CC</p>
     </div>
@@ -114,14 +114,14 @@ Define colors in **tailwind.config.js**. Tailwind will generate classes for `.te
 
 ## Accessibility considerations
 
-Relevant <a href="https://www.w3.org/WAI/WCAG21/quickref/">WCAG 2.1 guidelines</a>:
+Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
 
-* Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element. <a href="https://www.w3.org/WAI/WCAG21/quickref/#use-of-color">1.4.1 Use of Color (Level A)</a>
-* The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except for the following: 1) Large Text: Large-scale text and images of large-scale text have a contrast ratio of at least 3:1; 2) Incidental: Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement. 3) Logotypes: Text that is part of a logo or brand name has no contrast requirement. <a href="https://www.w3.org/WAI/WCAG21/quickref/#contrast-minimum">1.4.3 Contrast (Minimum) (Level AA)</a>
-* The visual presentation of text and images of text has a contrast ratio of at least 7:1, except for the following: 1) Large Text: Large-scale text and images of large-scale text have a contrast ratio of at least 4.5:1; 2) Incidental: Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement. 3) Logotypes: Text that is part of a logo or brand name has no contrast requirement. <a href="https://www.w3.org/WAI/WCAG21/quickref/#contrast-enhanced">1.4.6 Contrast (Enhanced) (Level AAA)</a>
-* For the visual presentation of blocks of text, a mechanism is available to achieve the following: 1) Foreground and background colors can be selected by the user. <a href="https://www.w3.org/WAI/WCAG21/quickref/#visual-presentation">1.4.8 Visual Presentation (Level AAA)</a>
-* The visual presentation of the following have a contrast ratio of at least 3:1 against adjacent color(s): 1) User Interface Components: Visual information required to identify user interface components and states, except for inactive components or where the appearance of the component is determined by the user agent and not modified by the author; 2) Graphical Objects: Parts of graphics required to understand the content, except when a particular presentation of graphics is essential to the information being conveyed. <a href="https://www.w3.org/WAI/WCAG21/quickref/#non-text-contrast">1.4.11 Non-text Contrast (Level AA)</a>
+* Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element. [1.4.1 Use of Color (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#use-of-color)
+* The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except for the following: 1) Large Text: Large-scale text and images of large-scale text have a contrast ratio of at least 3:1; 2) Incidental: Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement. 3) Logotypes: Text that is part of a logo or brand name has no contrast requirement. [1.4.3 Contrast (Minimum) (Level AA)](https://www.w3.org/WAI/WCAG21/quickref/#contrast-minimum)
+* The visual presentation of text and images of text has a contrast ratio of at least 7:1, except for the following: 1) Large Text: Large-scale text and images of large-scale text have a contrast ratio of at least 4.5:1; 2) Incidental: Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant other visual content, have no contrast requirement. 3) Logotypes: Text that is part of a logo or brand name has no contrast requirement. [1.4.6 Contrast (Enhanced) (Level AAA)](https://www.w3.org/WAI/WCAG21/quickref/#contrast-enhanced)
+* For the visual presentation of blocks of text, a mechanism is available to achieve the following: 1) Foreground and background colors can be selected by the user. [1.4.8 Visual Presentation (Level AAA)](https://www.w3.org/WAI/WCAG21/quickref/#visual-presentation)
+* The visual presentation of the following have a contrast ratio of at least 3:1 against adjacent color(s): 1) User Interface Components: Visual information required to identify user interface components and states, except for inactive components or where the appearance of the component is determined by the user agent and not modified by the author; 2) Graphical Objects: Parts of graphics required to understand the content, except when a particular presentation of graphics is essential to the information being conveyed. [1.4.11 Non-text Contrast (Level AA)](https://www.w3.org/WAI/WCAG21/quickref/#non-text-contrast)
 
-All color combinations (i.e., foreground vs background color) must have sufficient contrast. Please reference the <a href="https://contrast-grid.eightshapes.com/?background-colors=&foreground-colors=%23FFFFFF%2C%20White%0D%0A%23E7E9EB%2C%20Primary%20100%0D%0A%23DBDDE1%2C%20Primary%20200%0D%0A%23888F9C%2C%20Primary%20500%0D%0A%231B1D1F%2C%20Primary%20900%0D%0A%23D22630%2C%20Secondary%20500%0D%0A%23B2B2B2%2C%20Neutral%20300%0D%0A%23808080%2C%20Neutral%20500%0D%0A%230083CC%2C%20System%20Focus&es-color-form__tile-size=compact">Contrast Grid</a> from Eight Shapes below.
+All color combinations (i.e., foreground vs background color) must have sufficient contrast. Please reference the [Contrast Grid](https://contrast-grid.eightshapes.com/?background-colors=&foreground-colors=%23FFFFFF%2C%20White%0D%0A%23E7E9EB%2C%20Primary%20100%0D%0A%23DBDDE1%2C%20Primary%20200%0D%0A%23888F9C%2C%20Primary%20500%0D%0A%231B1D1F%2C%20Primary%20900%0D%0A%23D22630%2C%20Secondary%20500%0D%0A%23B2B2B2%2C%20Neutral%20300%0D%0A%23808080%2C%20Neutral%20500%0D%0A%230083CC%2C%20System%20Focus&es-color-form__tile-size=compact) from Eight Shapes below.
 
-<img src="images/styleguide/contrast-grid.png" class="py-10 w-full" alt="" />
+<img src="images/styleguide/contrast-grid.png" className="py-10 w-full" alt="" />
