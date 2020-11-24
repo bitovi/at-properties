@@ -1,20 +1,21 @@
 <template>
-    <div class="dlp-display-card" v-bind="$attrs">
+    <figure class="dlp-display-card" v-bind="$attrs">
         <div class="dlp-display-card-content">
-            <div class="dlp-display-card-border">
-                <slot />
-            </div>
+            <img :src="source" :alt="caption"/>
         </div>
-        <div class="dlp-display-card-cta">
-            <dlp-button v-if="href" :href="href">{{cta}}</dlp-button>
-            <dlp-button v-else-if="click" nativeType="button" @click="click">{{cta}}</dlp-button>
-        </div>
-    </div>
+        <figcaption>
+            <span v-if="caption" class="dlp-bio-card-caption accent accent-centered head-6">{{caption}}</span>
+        </figcaption>
+    </figure>
 </template>
 <script>
 export default {
     name: 'dlp-display-card',
     props: {
+        source: {
+            type: String,
+            default: null
+        },
         href: {
             type: String,
             required: false
@@ -23,7 +24,7 @@ export default {
             type: Function,
             required: false
         },
-        cta: {
+        caption: {
             type: String,
             default: "Learn More"
         }
