@@ -7,6 +7,7 @@
             <div class="col-span-full text-center">
                 <dlp-carousel
                     :options="{spaceBetween: 64}"
+                    :hasScrollNav="true"
                     >
                     <swiper-slide>
                         <dlp-display-card 

@@ -52,6 +52,8 @@
             <h2 class="head-5 text-center accent accent-below accent-centered mb-12">Team Members</h2>
             <dlp-carousel
                 :options="{spaceBetween: 30}"
+                :hasScrollNav="true"
+                :loop="true"
                 >
                 <swiper-slide>
                     <dlp-bio-card source="images/team/bio-1.jpg" name="Jenny Wilson" caption="Lead Broker" />

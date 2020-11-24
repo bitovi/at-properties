@@ -6,9 +6,7 @@
             class="dlp-carousel-items">
             <slot/>
         </swiper>
-        <div class="dlp-carousel-nav">
-            <div class="dlp-carousel-nav-handle"></div>
-        </div>
+        <div v-if="hasScrollNav" :id="`dlp-carousel-nav-${swiperId}`" class="dlp-carousel-nav swiper-scrollbar"></div>
     </div>
 </template>
 <script>
@@ -19,18 +17,24 @@ export default {
         options: {
             type: Object,
             required: false
+        },
+        hasScrollNav:{
+            type: Boolean,
+            default: false
         }
     },
     data() {
+        //https://github.com/surmon-china/vue-awesome-swiper/issues/717
+        //Fix pagination when multiple swipers used
+        const _id = 'swiper' + Math.round(Math.random() * 100000)
         return {
+            swiperId: _id,
             swiperOptions: {
                 ...this.options,
                 slidesPerView: 'auto',
-                loop: true,
-                pagination: {
-                    type: 'custom',
-                    el: '.dlp-carousel-nav'
-                }
+                scrollbar: this.hasScrollNav ? {
+                    el: `#dlp-carousel-nav-${_id}`
+                } : false
             }
         }
     },
