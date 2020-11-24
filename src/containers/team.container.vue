@@ -17,7 +17,7 @@
                         class="sm:mx-auto my-8 md:mb-8 md:my-0 md:mx-0"
                         alt="Olivia Carlson" 
                         :src="`${publicPath}images/team/logo-olivia-carson.jpg`">
-                    <h1 class="head-1">i18n.name</h1>
+                    <h1 class="head-1">{{i18n.name}}</h1>
                     <h2 class="head-5 accent">Team Bio</h2>
                     <p v-html="i18n.bio.brief"></p>
                     <div class="btn-group">
