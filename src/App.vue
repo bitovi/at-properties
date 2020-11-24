@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="theme-at">
+  <div id="app">
     
       <DevGrid />
     <main class="dlp-main">
