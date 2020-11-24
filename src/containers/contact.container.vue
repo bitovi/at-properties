@@ -14,7 +14,7 @@
                 <h2 class="head-2">MEKAEL WESLEY-ROSA</h2>
                 <h3 class="head-5 accent accent-centered">Contact me today!</h3>
                 <address>
-                    <p><a href="tel:312.999.0848">312.999.0848</a></p>
+                    <p><a href="tel:3129990848">312.999.0848</a></p>
                     <p><a href="mailto:Thad@atproperties.com">Thad@atproperties.com</a></p>
                 </address>
                 <dlp-social 
