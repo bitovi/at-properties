@@ -18,7 +18,3 @@ export const parameters = {
     theme: themes.light,
   }
 }
-
-export const decorators = [
-  (Story) => <div className="theme-at"><Story /></div>
-]

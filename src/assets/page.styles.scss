@@ -1,4 +1,10 @@
 
+html,
+body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
 .dlp-page {
     @apply flex;
     @apply flex-col;

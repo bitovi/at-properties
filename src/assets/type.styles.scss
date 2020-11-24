@@ -8,18 +8,10 @@
     @apply font-medium;
 }
 
-html,
-body {
-    height: 100%;
-    scroll-behavior: smooth;
-
-    &.font-book {
-        font-weight: 400;
-    }
-}
-
-#app {
-    font-size: var(--font-size-base);
+#app,
+#docs-root {
+    @apply font-default;
+    font-size: theme('fontSize.base');
     color: theme('colors.primary.900');
     font-style: normal;
     font-weight: 300;
@@ -27,7 +19,6 @@ body {
 }
 
 a {
-    // @apply font-primary;
     font-size: theme('fontSize.base');
     &:link,
     &:visited {
