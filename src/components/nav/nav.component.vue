@@ -131,7 +131,7 @@ export default {
         //onClick of a link in desktop, control the highlight
         clickNav(evt) {
             this.elActive = evt.target.parentNode
-            this.close()
+            if(this.isOpen){ this.close() }
             this.changeHighlight()
         },
         //update the highlight on scroll

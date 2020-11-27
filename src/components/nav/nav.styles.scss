@@ -4,8 +4,6 @@
     @apply bottom-0;
     @apply w-screen;
     @apply z-30;
-    
-    // background: theme('colors.white');
 
     ol, ul {
         list-style: none;
@@ -128,6 +126,7 @@
             flex-grow: 2;
             border-left: 1px solid theme('colors.primary.200');
             border-right: 1px solid theme('colors.primary.200');
+            background: theme('colors.white');
             .head-1 {
                 display: none;
             }
