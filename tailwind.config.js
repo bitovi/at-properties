@@ -45,6 +45,11 @@ module.exports = {
       '6xl':  '60px'
     },
     extend: {
+      gridColumn: {
+        'span-14': 'span 14 / span 14',
+        'span-15': 'span 15 / span 15',
+        'span-16': 'span 16 / span 16',
+      },
       gridTemplateColumns: {
         '16': 'repeat(16, minmax(0, 1fr))',
       },
