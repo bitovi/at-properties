@@ -148,6 +148,7 @@ export default {
         //update the highlight on scroll
         // eslint-disable-next-line no-unused-vars
         onItemChanged(evt, currentItem, lastItem) {
+            if(!currentItem) return
             this.elActive = currentItem.parentNode
             if(!this.isScrolling){
                 this.changeHighlight()
@@ -194,23 +195,29 @@ export default {
             }
         }
     },
-    created () {
-        this.bounceScroll = debounce(this.handleScroll, 1400, {leading: true})
-        window.addEventListener('scroll', this.bounceScroll);
-    },
     destroyed () {
         window.removeEventListener('scroll', this.bounceScroll);
     },
     mounted() {
         //On load, posititon the highlight. Then allow render
-        const initActive = this.$refs.navUl.querySelector('.isActive').parentNode
+        const initActive = this.$refs.navUl.querySelector('.isActive')
         //set the stored active item
-        this.elActive = initActive
+        if(initActive) {
+            this.elActive = initActive.parentNode
+        } else {
+            this.elActive = this.$refs.navUl.children[0]
+        }
         //set the styles to match nav item
-        this.$refs.highlight.style.width = this.getWidth(initActive)
-        this.$refs.highlight.style.left = this.getLeft(initActive)
+        this.$refs.highlight.style.width = this.getWidth(this.elActive)
+        this.$refs.highlight.style.left = this.getLeft(this.elActive)
         //over precidence hidden on highlight
         this.isMounted = true;
+
+        delay(() => {
+            this.bounceScroll = debounce(this.handleScroll, 1400, {leading: true})
+            window.addEventListener('scroll', this.bounceScroll);
+        }, 20)
+        
     }
 }
 </script>
