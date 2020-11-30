@@ -61,8 +61,19 @@
                 </button>
             </div>
             <div class="dlp-nav-contact dlp-nav-m-tile flex">
-                <a class="scrollactive-item" href="#contact">Contact Me</a>
+                <button class="" @click="showModal('ContactModal')" >Contact Me</button>
             </div>
+            <dlp-slide-in ref="ContactModal">
+                    <h3 class="head-5 accent mb-8">Thad Wong</h3>
+                    <address class="mt-4">
+                        <a :href="`tel:+1-312.999.0848`">312.999.0848</a><br /><br />
+                        <a :href="`mailto:Thad@atproperties.com`">Thad@atproperties.com</a>
+                    </address>
+                    <dlp-social 
+                        facebook="#test"
+                        instagram="#test"
+                    ></dlp-social>
+                </dlp-slide-in>
         </div>
     </scrollactive>
 </template>
@@ -176,6 +187,11 @@ export default {
             delay(() => {
                 this.isScrolling = false
             }, 800)
+        },
+        showModal: function(name) {
+            if(this.$refs[name]){
+                this.$refs[name].open()
+            }
         }
     },
     created () {
