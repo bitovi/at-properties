@@ -43,3 +43,9 @@
         fill: #0077B5;
     }
 }
+
+.icon-earth {
+    &:hover, &:focus, &:active {
+      fill: #025A9A;
+    }
+  }
