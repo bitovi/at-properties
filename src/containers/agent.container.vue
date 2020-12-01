@@ -2,7 +2,11 @@
     <div class='section-content'>
         <div class="content-grid pb-16">
             <div class="col-span-full text-center">
-                <img src="images/agent/emily-sachs-wong.jpeg" class="mx-auto" style="width: 200px;" alt="" />
+                <img
+                    class="mx-auto" 
+                    style="width: 200px;"
+                    :alt="`${i18n.logo.alt}`" 
+                    :src="`${i18n.logo.sm}`">
             </div>
             <div class="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
                 <dlp-figure 
@@ -103,10 +107,7 @@
                     <dlp-social 
                         v-bind="i18n.contact.social"
                     ></dlp-social>
-                    <img
-                        class="mt-16"
-                        :alt="`${i18n.logo.alt}`" 
-                        :src="`${i18n.logo.sm}`">
+                    
                 </section>
             </div>
         </div>
