@@ -52,6 +52,20 @@
           subheading="Final Steps" />
         <SellingContainer />
       </article>
+      <article id="partners">
+        <TitlePage 
+          :backgroundUrl="`${publicPath}images/partners/bg-partners.jpeg`"
+          heading="Our Partners" 
+          subheading="All working as a team, through every step of the transaction" />
+          <PartnersContainer />
+      </article>
+      <article id="community">
+        <TitlePage 
+          :backgroundUrl="`${publicPath}images/community/bg-community.jpeg`"
+          heading="Community" 
+          subheading="Community" />
+        <CommunityContainer />
+      </article>
       <footer id="contact">
         <ContactContainer />
       </footer>
@@ -73,6 +87,8 @@ import TechnologyContainer from './containers/technology.container'
 import ContactContainer from './containers/contact.container'
 import ReachContainer from './containers/reach.container'
 import SellingContainer from './containers/selling.container'
+import CommunityContainer from './containers/community.container'
+import PartnersContainer from './containers/partner.container'
 
 import TitlePage from './components/title/title.page.vue'
 
@@ -96,6 +112,8 @@ export default {
     TechnologyContainer,
     ReachContainer,
     SellingContainer,
+    CommunityContainer,
+    PartnersContainer,
 
     TitlePage,
     DevGrid
