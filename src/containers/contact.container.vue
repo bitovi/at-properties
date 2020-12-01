@@ -2,7 +2,7 @@
     <div class="section-content">
         <section class="content-grid" aria-label="Agent contact information">
             <div class="col-span-full text-center mb-24">
-                <img src="https://tse1.mm.bing.net/th?id=OIP.TsQAleIGiLgT2oKwrtnXwgHaHr&pid=Api" class="mx-auto" style="width: 200px;" alt="" />
+                <img src="images/agent/emily-sachs-wong.jpeg" class="mx-auto" style="width: 200px;" alt="" />
             </div>
             <div class="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
                 <div class="sticky top-4">
