@@ -1,6 +1,6 @@
 <template>
     <figure class="dlp-display-card" v-bind="$attrs">
-        <div class="dlp-display-card-content">
+        <div class="dlp-display-card-content" :class="[{ 'ar': ar }, ar]">
             <img :src="source" :alt="caption"/>
         </div>
         <figcaption>
@@ -13,20 +13,20 @@ export default {
     name: 'dlp-display-card',
     props: {
         source: {
-            type: String,
-            default: null
+            type: String
         },
         href: {
-            type: String,
-            required: false
+            type: String
         },
         click: {
-            type: Function,
-            required: false
+            type: Function
         },
         caption: {
+            type: String
+        },
+        ar: {
             type: String,
-            default: "Learn More"
+
         }
     }
 }

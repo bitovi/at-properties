@@ -1,6 +1,9 @@
 <template>
     <div class='section-content'>
         <div class="content-grid pb-16">
+            <div class="col-span-full text-center">
+                <img src="images/agent/emily-sachs-wong.jpeg" class="mx-auto" style="width: 200px;" alt="" />
+            </div>
             <div class="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
                 <dlp-figure 
                     :sm="`${publicPath}${i18n.photo.sm}`"

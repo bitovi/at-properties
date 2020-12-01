@@ -1,6 +1,9 @@
 <template>
     <div class='section-content'>
         <div class="content-grid">
+            <div class="col-span-full text-center">
+                <img src="images/team/logo-olivia-carson.jpg" class="mx-auto" style="width: 200px;" alt="" />
+            </div>
             <div class="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
                 <dlp-figure 
                     :sm="`${publicPath}images/team/team-sm.jpg`"
@@ -13,10 +16,6 @@
             </div>
             <div class="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
                 <section class="mb-16">
-                    <img
-                        class="sm:mx-auto my-8 md:mb-8 md:my-0 md:mx-0"
-                        alt="Olivia Carlson" 
-                        :src="`${publicPath}images/team/logo-olivia-carson.jpg`">
                     <h1 class="head-1">{{i18n.name}}</h1>
                     <h2 class="head-5 accent">Team Bio</h2>
                     <p v-html="i18n.bio.brief"></p>
@@ -24,8 +23,9 @@
                         <dlp-button type="button" @click="showModal('AgentModal')">Read Full Bio</dlp-button>
                         <dlp-slide-in ref="AgentModal">
                             <div v-html="i18n.bio.full"></div>
-                        </dlp-slide-in>
-                        <dlp-button type="button">Watch Team Video</dlp-button>
+                        </dlp-slide-in>                        
+                        <dlp-button type="button" @click="showModal('TeamVideo')">Watch Team Video</dlp-button>
+                        <dlp-video-modal ref="TeamVideo" videoId="jsNh7ov4uD4" :caption="i18n.name"/>
                     </div>
                 </section>
             </div>

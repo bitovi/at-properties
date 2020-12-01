@@ -28,18 +28,20 @@
                         <li 
                             @mouseover="mouseOver"
                             @mouseleave="mounseOut">
-                            <a class="dlp-nav-link scrollactive-item" href="#technology" @click="clickNav">Technology</a>
-                        </li>
-                        <li 
-                            @mouseover="mouseOver"
-                            @mouseleave="mounseOut">
                             <a class="dlp-nav-link scrollactive-item" href="#marketing" @click="clickNav">Marketing Plan</a>
                         </li>
                         <li 
                             @mouseover="mouseOver"
                             @mouseleave="mounseOut">
-                            <a class="dlp-nav-link scrollactive-item" href="#reach" @click="clickNav">Global Reach</a>
+                            <a class="dlp-nav-link scrollactive-item" href="#selling" @click="clickNav">Selling Your Home</a>
                         </li>
+                        <li 
+                            @mouseover="mouseOver"
+                            @mouseleave="mounseOut">
+                            <a class="dlp-nav-link scrollactive-item" href="#partners" @click="clickNav">Partners</a>
+                        </li>
+                        
+                        
                         <li 
                             ref="highlight" 
                             role="presentation" 
@@ -61,8 +63,19 @@
                 </button>
             </div>
             <div class="dlp-nav-contact dlp-nav-m-tile flex">
-                <a class="scrollactive-item" href="#contact">Contact Me</a>
+                <button class="" @click="showModal('ContactModal')" >Contact Me</button>
             </div>
+            <dlp-slide-in ref="ContactModal">
+                <h3 class="head-5 accent mb-8">Thad Wong</h3>
+                <address class="mt-4">
+                    <a :href="`tel:+1-312.999.0848`">312.999.0848</a><br /><br />
+                    <a :href="`mailto:Thad@atproperties.com`">Thad@atproperties.com</a>
+                </address>
+                <dlp-social 
+                    facebook="#test"
+                    instagram="#test"
+                ></dlp-social>
+            </dlp-slide-in>
         </div>
     </scrollactive>
 </template>
@@ -137,6 +150,7 @@ export default {
         //update the highlight on scroll
         // eslint-disable-next-line no-unused-vars
         onItemChanged(evt, currentItem, lastItem) {
+            if(!currentItem) return
             this.elActive = currentItem.parentNode
             if(!this.isScrolling){
                 this.changeHighlight()
@@ -176,25 +190,36 @@ export default {
             delay(() => {
                 this.isScrolling = false
             }, 800)
+        },
+        showModal: function(name) {
+            if(this.$refs[name]){
+                this.$refs[name].open()
+            }
         }
-    },
-    created () {
-        this.bounceScroll = debounce(this.handleScroll, 1400, {leading: true})
-        window.addEventListener('scroll', this.bounceScroll);
     },
     destroyed () {
         window.removeEventListener('scroll', this.bounceScroll);
     },
     mounted() {
         //On load, posititon the highlight. Then allow render
-        const initActive = this.$refs.navUl.querySelector('.isActive').parentNode
+        const initActive = this.$refs.navUl.querySelector('.isActive')
         //set the stored active item
-        this.elActive = initActive
+        if(initActive) {
+            this.elActive = initActive.parentNode
+        } else {
+            this.elActive = this.$refs.navUl.children[0]
+        }
         //set the styles to match nav item
-        this.$refs.highlight.style.width = this.getWidth(initActive)
-        this.$refs.highlight.style.left = this.getLeft(initActive)
+        this.$refs.highlight.style.width = this.getWidth(this.elActive)
+        this.$refs.highlight.style.left = this.getLeft(this.elActive)
         //over precidence hidden on highlight
         this.isMounted = true;
+
+        delay(() => {
+            this.bounceScroll = debounce(this.handleScroll, 1400, {leading: true})
+            window.addEventListener('scroll', this.bounceScroll);
+        }, 20)
+        
     }
 }
 </script>
