@@ -107,6 +107,11 @@ Images can be cropped (via CSS and HTML code) to the following aspect ratios: 2:
 
 **However**, there is also a rule coded into CSS that images can never exceed 80% of the viewport height. For example, an image with a tall aspect ratio like 2:3 in a layout spanning 6 columns would be very tall on large, wide (desktop) screens. In this case, it would be cropped to never exceed 80% of the viewport height (`min(80vh`), which would change the original 2:3 aspect ratio.
 
+Retina displays
+
+`<img src="low-res.jpg" srcset="high-res.jpg 2x">`
+[Retina Display image assets](https://www.elegantthemes.com/blog/tips-tricks/how-to-create-retina-display-image-assets-for-better-looking-websites)
+
 ## How to configure
 
 Define classes in **src/assets/util.styles.scss**.
