@@ -6,7 +6,7 @@
                     class="mx-auto" 
                     style="width: 200px;"
                     :alt="`${i18n.logo.alt}`" 
-                    :src="`${i18n.logo.sm}`">
+                    :src="`${i18n.logo.sm}`"/>
             </div>
             <div class="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
                 <dlp-figure 
