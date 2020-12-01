@@ -1,6 +1,9 @@
 <template>
     <div class="section-content">
         <div class="content-grid pb-16">
+            <div class="col-span-full text-center">
+                <img :src="`${i18n.logo.sm}`" class="mx-auto" style="width: 200px;" :alt="`${i18n.logo.alt}`" />
+            </div>
             <div class="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
                 <dlp-figure 
                     :sm="`${publicPath}${i18n.photo.sm}`"
@@ -13,10 +16,6 @@
             </div>
             <div class="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
                 <section>
-                    <img
-                        class="sm:mx-auto my-8 md:mb-8 md:my-0 md:mx-0"
-                        :alt="`${i18n.logo.alt}`" 
-                        :src="`${i18n.logo.sm}`">
                     <h1 class="head-1">{{i18n.name}}</h1>
                     <h2 class="head-5 accent mb-4">Co-agent Bio</h2>
                     <div v-html="i18n.bio.brief"></div>

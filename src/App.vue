@@ -35,7 +35,7 @@
 
       <article id="technology">
         <TitlePage 
-          :backgroundUrl="`${publicPath}images/bg/bg-tech.jpg`"
+          :backgroundUrl="`${publicPath}images/technology/bg-technology.jpg`"
           heading="Industry leading technology" 
           subheading="Technology" />
         <TechnologyContainer />
