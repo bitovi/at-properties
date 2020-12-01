@@ -24,20 +24,7 @@
         <CompanyContainer />
       </article>
 
-      <article id="technology">
-        <TitlePage 
-          :backgroundUrl="`${publicPath}images/bg/bg-tech.jpg`"
-          heading="Industry leading technology" 
-          subheading="Technology" />
-        <TechnologyContainer />
-      </article>
-      <article id="marketing">
-        <TitlePage 
-          :backgroundUrl="`${publicPath}images/auxiliary/07-111-woodley-road-2016-printjpg-5f8dc1282e1d4.jpg`"
-          heading="Award-winning marketing materials" 
-          subheading="Marketing" />
-        <MarketingContainer />
-      </article>
+      
       <article id="reach">
         <TitlePage 
           :backgroundUrl="`${publicPath}images/reach/bg-reach.jpg`"
@@ -45,6 +32,23 @@
           subheading="Luxury"/>
         <ReachContainer />
       </article>
+
+      <article id="technology">
+        <TitlePage 
+          :backgroundUrl="`${publicPath}images/bg/bg-tech.jpg`"
+          heading="Industry leading technology" 
+          subheading="Technology" />
+        <TechnologyContainer />
+      </article>
+
+      <article id="marketing">
+        <TitlePage 
+          :backgroundUrl="`${publicPath}images/auxiliary/07-111-woodley-road-2016-printjpg-5f8dc1282e1d4.jpg`"
+          heading="Award-winning marketing materials" 
+          subheading="Marketing" />
+        <MarketingContainer />
+      </article>
+      
       <article id="selling">
         <TitlePage 
           :backgroundUrl="`${publicPath}images/auxiliary/09-2550-n-lakeview-ave-3802-165-living-room-printjpg-5f8da927c0f72.jpg`"

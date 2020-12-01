@@ -28,18 +28,20 @@
                         <li 
                             @mouseover="mouseOver"
                             @mouseleave="mounseOut">
-                            <a class="dlp-nav-link scrollactive-item" href="#technology" @click="clickNav">Technology</a>
-                        </li>
-                        <li 
-                            @mouseover="mouseOver"
-                            @mouseleave="mounseOut">
                             <a class="dlp-nav-link scrollactive-item" href="#marketing" @click="clickNav">Marketing Plan</a>
                         </li>
                         <li 
                             @mouseover="mouseOver"
                             @mouseleave="mounseOut">
-                            <a class="dlp-nav-link scrollactive-item" href="#reach" @click="clickNav">Global Reach</a>
+                            <a class="dlp-nav-link scrollactive-item" href="#selling" @click="clickNav">Selling Your Home</a>
                         </li>
+                        <li 
+                            @mouseover="mouseOver"
+                            @mouseleave="mounseOut">
+                            <a class="dlp-nav-link scrollactive-item" href="#partners" @click="clickNav">Partners</a>
+                        </li>
+                        
+                        
                         <li 
                             ref="highlight" 
                             role="presentation" 
