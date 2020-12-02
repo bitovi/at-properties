@@ -6,14 +6,16 @@ import Figure from './figure/figure.component'
 import Rating from './rating/rating.component'
 import Testimonial from './testimonial/testimonial.component'
 import SalesCard from './salesCard/salesCard.component'
-import SlideIn from './slideIn/slideIn.component'
 import CloseBtn from './close/close.component'
 import TitlePage from './title/title.page'
 import DisplayCard from './displayCard/displayCard.component'
 import Social from './social/social.component'
-import VideoModal from './videoModal/videoModal.component.vue'
 import BioCard from './bioCard/bioCard.component.vue'
 import Carousel from './carousel/carousel.component.vue'
+
+//Modals
+import SlideIn from './modals/slideIn/slideIn.component'
+import VideoModal from './modals/videoModal/videoModal.component.vue'
 
 Vue.component(ScrollNotify.name, ScrollNotify)
 Vue.component(Button.name, Button)

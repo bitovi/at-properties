@@ -44,7 +44,7 @@
     </transition>
 </template>
 <script>
-import A11yStrings from '../../assets/strings/a11y.i18n.json'
+import A11yStrings from '../../../assets/strings/a11y.i18n.json'
 // ref to <body>
 const ElBody = document.getElementsByTagName("body")[0]
 
