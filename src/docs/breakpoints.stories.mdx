@@ -14,9 +14,7 @@ Mobile vs desktop experiences are defined using the following breakpoints.
 
 ## How to configure
 
-Define breakpoints in **tailwind.config.js**. Tailwind will apply classes responsively when prefixed with `sm:`, `md:`, `lg:`, and `xl:`. 
-
-For example, `<p className="text-center lg:text-left">` will center text below 1280px and align text left above 1280px.
+Define breakpoints in **tailwind.config.js**. 
 
 <Source language='js' code={dedent`
   screens: {
@@ -26,6 +24,8 @@ For example, `<p className="text-center lg:text-left">` will center text below 1
     xl: '1920px',  /* Different from Tailwind's default of 1280px */
   },
 `} />
+
+Tailwind will apply classes responsively when prefixed with `sm:`, `md:`, `lg:`, and `xl:`. <br />For example, `<p class="text-center lg:text-left">` will center text below 1280px and align text left above 1280px.
 
 ## Accessibility considerations
 

@@ -4,17 +4,15 @@ import { Meta } from '@storybook/addon-docs/blocks';
 
 # Design Tokens
 
-Design tokens are all the values needed to construct and maintain a design system — spacing, color, typography, object styles, animation, etc. — represented as data. These can represent anything defined by design: a color as a RGB value, an opacity as a number, an animation ease as Bezier coordinates. They’re used in place of hard-coded values in order to ensure flexibility and unity across all product experiences.
+Design tokens are all the values (e.g., color, typography, object styles, spacing, animation, etc.) needed to construct and maintain a design system represented as data/variables. These can represent anything defined by design: a color as an RGB value, an opacity as a number, an animation ease as Bezier coordinates. They’re used in place of hard-coded values in order to ensure flexibility and unity across all product experiences.
 
-Design tokens are directly integrated into our component libraries and UI kits. They cover the various options of platform scales, color themes, component states, and more.
-
-The following types of design tokens are the building blocks and design decisions that make up the DLP design language:
+The following types of design tokens are the building blocks that make up the DLP design language:
 
 <div className="pt-8 grid grid-cols-3 gap-x-10 gap-y-16 justify-items-stretch">
     <div className="col-span-2">
         <h2>Global</h2>
-        <p>Global tokens are the primitive values in our design language, represented by context-agnostic names. Our color palette, animation, typography, and dimension values are all recorded as global tokens. These can be directly used, and are inherited by all other token types.</p>
-        <p>Global tokens are derived from <strong>Figma</strong> and defined in <strong>tailwind.config.js</strong>. See the <a href="https://tailwindcss.com/docs/theme#configuration-reference">theme configuration reference</a> for a complete list of keys (i.e., tokens).</p>
+        <p>Global tokens are the primitive values in our design language, represented by context-agnostic names. Our color palette, animation, typography, and dimension values are all recorded as global tokens. These can be directly used and are inherited by all other token types.</p>
+        <p>Global tokens are derived from <strong>Figma</strong> and defined in <strong>tailwind.config.js</strong>. See Tailwind's <a href="https://tailwindcss.com/docs/theme#configuration-reference">theme configuration reference</a> for a complete list of keys (i.e., tokens).</p>
     </div>
     <div className="border border-primary-100 p-4">
         <p><code>#1B1D1F</code> &rarr;</p>
@@ -32,7 +30,7 @@ The following types of design tokens are the building blocks and design decision
     </div>
     <div className="col-span-2">
         <h2>Component-specific</h2>
-        <p>Component-specific tokens are an exhaustive representation of every value associated with a component. They often inherit from alias tokens, but are named in a way that allows engineering teams to be as specific as possible in applying tokens in component development.</p>
+        <p>Component-specific tokens are an exhaustive representation of every value associated with a component. They often inherit from alias tokens, but are named in a way that allows developers to be as specific as possible in applying tokens to components.</p>
         <p>Component tokens are written by developers and reside in <strong>xxxxxx.styles.scss</strong> files.</p>
     </div>
     <div className="border border-primary-100 p-4">
