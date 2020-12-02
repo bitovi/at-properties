@@ -11,7 +11,23 @@ export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   options: {
     storySort: {
-      order: ['Welcome', 'Change Log', 'Foundation', ['Design Tokens', 'Breakpoints', 'Color', 'Typography', 'Object Styles', 'Iconography', 'Imagery', 'Motion', 'Structure', 'Spacing', 'Inclusive Design'], 'Components', ['Button', 'Figure', 'Heading', 'Main Navigation', 'Modal', 'Paragraph', 'Property', 'Section', 'Social', 'Statistic', 'Testimonial', 'Video']]
+      order: [
+        'Design System', [
+          'Welcome', 'Change Log'
+        ], 
+        'Style Guide', [
+          'Design Tokens', 'Breakpoints', 'Color', 'Typography', 'Object Styles', 
+          'Iconography', 'Imagery', 'Structure', 'Spacing', 'Animation', 'Inclusive Design'
+        ], 
+        'Pattern Library', [
+          'Containers', [
+            'Navigation', 'Section', 'Footer', 'Modal'
+          ], 
+          'Components', [
+            'Button', 'Figure', 'Heading', 'Paragraph', 'Property', 'Social', 'Statistic', 'Testimonial', 'Video'
+          ]
+        ]
+      ]
     }
   },
   docs: {

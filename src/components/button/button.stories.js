@@ -13,7 +13,7 @@ export default {
 const Template = (args, { argTypes }) => ({
     props: Object.keys(argTypes),
     components: { DLPButton },
-    template: '<dlp-button v-bind="$props">Button Primary</dlp-button>',
+    template: '<dlp-button v-bind="$props">Dark Button with Text</dlp-button>',
 });
 
 export const Primary = Template.bind({});
@@ -22,7 +22,7 @@ Primary.parameters = {
         type: 'figma',
         url: 'https://www.figma.com/file/9Dh5lVMksIBNrDGMlPsWMk/DLP-Design-Library?node-id=56%3A0',
     },
-    /* docs: { 
+    docs: { 
         page: 'button.stories.mdx' 
-    } */
+    }
 }

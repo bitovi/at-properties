@@ -1,7 +1,7 @@
 import { Meta, Canvas, Source } from '@storybook/addon-docs/blocks';
 import dedent from 'ts-dedent';
 
-<Meta title="Foundation/Structure" />
+<Meta title="Style Guide/Structure" />
 
 # Structure
 
@@ -12,11 +12,10 @@ The page follows a semantic structure using HTML5 tags. Note: code is abbreviate
     <title>
   <body>
     <div id="app">
-      <a href="#main">Skip to main content</a>
-      <div id="grids">
-      <header className="dlp-nav">		
+      <a href="#main" class="skip-link">Skip to main content</a>
+      <header class="dlp-nav">		
         <nav>
-      <main id="main" className="dlp-main">
+      <main id="main" class="dlp-main">
         <article id="agent">
         <article id="co-agent">
         <article id="team">
@@ -27,8 +26,8 @@ The page follows a semantic structure using HTML5 tags. Note: code is abbreviate
         <article id="selling">
         <article id="partners">
         <article id="community">
-      <footer id="contact">
-      <div className="dlp-modal">
+      <footer class="dlp-footer">
+      <div class="dlp-modal">
 `} />
 
 ## Page title
@@ -38,6 +37,10 @@ Page titles should be descriptive. Follow this template:
 <Source language='html' code={dedent`
   <title>[Firstname Lastname] - [City, State Abbreviation], Luxury Real Estate Agent - [Company Name]<title>
 `} />
+
+## Navigation
+
+See [Main Navigation](/?path=/story/components-main-navigation--page).
 
 ## Content
 
