@@ -5,6 +5,7 @@
                 <dlp-figure
                     :sm="`images/community/video-thumb.jpg`"
                     alt="Play signage video"
+                    animate="shrink"
                 />
             </div>
             <div class="order-2 md:order-1 col-span-full md:col-span-6 lg:col-span-6 lg:col-start-2">

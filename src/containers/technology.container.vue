@@ -5,6 +5,7 @@
                 <dlp-figure
                     :lg="`${publicPath}images/technology/laptop-lg.jpg`"
                     alt="Man's hands resting on a laptop"
+                    animate="shrink"
                 />
             </div>
             <div class="order-2 md:order-1 col-span-4 md:col-span-6 md:col-start-1 lg:col-span-6 lg:col-start-2">

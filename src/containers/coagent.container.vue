@@ -12,7 +12,8 @@
                     :caption="`${i18n.name}`"
                     ar="ar ar-4-5"
                     :isSticky="true"
-                ></dlp-figure>
+                    animate="shrink"
+                />
             </div>
             <div class="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
                 <section>

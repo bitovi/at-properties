@@ -6,6 +6,7 @@
                     :lg="`${publicPath}images/company/train-lg.jpg`"
                     alt="Aerial view of an elevated train on a curved track"
                     ar="ar ar-5-4"
+                    animate="shrink"
                 />
             </div>
             <div class="col-span-full md:col-span-6 md:col-start-7 lg:col-span-6 lg:col-start-10 self-center">
