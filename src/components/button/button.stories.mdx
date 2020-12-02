@@ -39,12 +39,12 @@ Define classes in **src/components/button/button.styles.scss**.
     @apply transition-all;     /* transition-property: all; */
     @apply duration-500;       /* transition-duration: 500ms; */
     &:hover { 
-      @applu bg-primary-500;   /* background-color: theme('colors.primary.500'); */
+      @apply bg-primary-500;   /* background-color: theme('colors.primary.500'); */
       @apply text-white;       /* color: white; */
       outline: 1px solid theme('colors.primary.500');
     }
     &:focus, &:active { 
-      @applu bg-primary-500;   /* background-color: theme('colors.primary.500'); */
+      @apply bg-primary-500;   /* background-color: theme('colors.primary.500'); */
       @apply text-white;       /* color: white; */
       outline: 1px dashed theme('colors.system.focus');
     }
@@ -72,13 +72,13 @@ Define classes in **src/components/button/button.styles.scss**.
   }
   /* Button: styles */
   .btn--style-dark {
-    @applu bg-primary-900;     /* background-color: theme('colors.primary.900'); */
+    @apply bg-primary-900;     /* background-color: theme('colors.primary.900'); */
     @apply border-white;       /* border-color: theme('colors.white'); */
     @apply text-white;         /* color: white; */
     outline: 1px solid theme('colors.primary.900');
   }
   .btn--style-light {
-    @applu bg-white;           /* background-color: theme('colors.white'); */
+    @apply bg-white;           /* background-color: theme('colors.white'); */
     @apply border-transparent; /* border-color: theme('colors.transparent'); */
     @apply text-primary-900;   /* color: theme('colors.primary.900'); */
     outline: 1px solid theme('colors.white');
