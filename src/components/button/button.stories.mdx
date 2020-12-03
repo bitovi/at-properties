@@ -1,7 +1,17 @@
-import { Meta, Preview, Source } from '@storybook/addon-docs/blocks';
+import { Meta, Preview, Source, Canvas, Story, ArgsTable } from '@storybook/addon-docs/blocks';
 import dedent from 'ts-dedent';
+import DLPButton from './button.component.vue'
 
-<Meta title="Pattern Library/Components/Button" />
+<Meta 
+  title="Pattern Library/Components/Button" 
+  argTypes={{
+    nativeType: { control: { type: 'select', options: [null, 'button', 'submit', 'reset'] } }
+  }}
+/>
+
+
+
+
 
 # Button
 
@@ -9,16 +19,31 @@ import dedent from 'ts-dedent';
 * Button elements can include **text**, an **icon** (e.g., X to close a modal), or text with an icon (not used for @properties).
 * Buttons have two styles: **dark** for light backgrounds; **light** for dark backgrounds.
 
+<Canvas>
+  <Story name="Default">
+    {{
+      template: `<dlp-button v-bind="$props">Agent Bio</dlp-button>`
+    }}
+  </Story>
+  <Story name="CloseBtn">
+    {{
+      template: `<dlp-close-btn v-bind="$props">Close</dlp-close-btn>`
+    }}
+  </Story>
+</Canvas>
+
+<ArgsTable of={DLPButton} />
+
 <Preview>
   <div className="grid grid-cols-2">
     <div className="bg-white p-5 self-center">
       <button className="btn btn--style-dark">
-        <span class="btn__text">Agent Bio</span>
+        <span className="btn__text">Agent Bio</span>
       </button>
     </div>
     <div className="bg-primary-900 p-5 self-center">
       <button className="btn btn--style-light">
-        <span class="btn__icon">
+        <span className="btn__icon">
           <svg role="img" aria-label="Close">
             <use href="images/icons/icons.svg#icon-close"></use>
           </svg>
@@ -31,6 +56,7 @@ import dedent from 'ts-dedent';
 ## How to configure
 
 Define classes in **src/components/button/button.styles.scss**.
+
 
 <Source language='css' code={dedent`
   /* Button */
