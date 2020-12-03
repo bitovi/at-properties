@@ -11,7 +11,9 @@
             </div>
             <div class="order-4 md:order-3 col-span-4 md:col-span-6 md:col-start-1 lg:col-span-6 lg:col-start-2">
                 <h3 class="head-5 accent accent-above">Luxury Portfolio</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque gravida ac, diam malesuada. Fringilla arcu fusce tempus sodales velit id. Tristique sed nec dignissim imperdiet. Id eu cursus et parturient suscipit.</p>
+                <dlp-transition type="fadeIn slideUp">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque gravida ac, diam malesuada. Fringilla arcu fusce tempus sodales velit id. Tristique sed nec dignissim imperdiet. Id eu cursus et parturient suscipit.</p>
+                </dlp-transition>
                 <div class="btn-group pb-16">
                     <dlp-button type="button">View Luxury Stats</dlp-button>
                 </div>
@@ -28,7 +30,9 @@
             </div>
             <div class="col-span-4 md:col-span-6 md:col-start-7 lg:col-span-6 lg:col-start-10">
                 <h3 class="head-5 accent accent-above">Staging your home</h3>
-                <p>Staging is the art of merchandising a home to improve its marketability. It can be as simple as rearranging a few pieces of furniture or as elaborate as hiring a professional to furnish an empty home right down to the plants and artwork.</p>
+                <dlp-transition type="fadeIn slideUp">
+                    <p>Staging is the art of merchandising a home to improve its marketability. It can be as simple as rearranging a few pieces of furniture or as elaborate as hiring a professional to furnish an empty home right down to the plants and artwork.</p>
+                </dlp-transition>
                 <div class="btn-group">
                     <dlp-button type="button">View Map of Global Reach</dlp-button>
                 </div>

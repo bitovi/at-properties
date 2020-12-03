@@ -23,8 +23,8 @@
                 <section id="agent-bio" class="mb-16">
                     
                     <h2 class="head-2">{{i18n.name}}</h2>
+                    <h3 class="head-5 accent mb-4">Agent Bio</h3>
                     <dlp-transition type="fadeIn slideUp">
-                        <h3 class="head-5 accent mb-4">Agent Bio</h3>
                         <div v-html="i18n.bio.brief"></div>
                     </dlp-transition>
                     <div class="btn-group">
@@ -62,13 +62,14 @@
 
                 <section id="agent-sales" class="mb-16">
                     <h3 class="head-5 accent mb-4">Recent Sales</h3>
-                    <dlp-sales-card 
-                        v-for="sale in i18n.sales.slice(0, 3)" 
-                        v-bind:key="sale.id" 
-                        :sm="sale.photo.sm" 
-                        :lg="sale.photo.lg" 
-                        :price="sale.price" 
-                        :address="sale.address" />
+
+                    <dlp-transition type="fadeIn slideUp" v-for="s in i18n.sales.slice(0, 3)" v-bind:key="`brief-${s.id}`" >
+                        <dlp-sales-card 
+                            :sm="s.photo.sm" 
+                            :lg="s.photo.lg" 
+                            :price="s.price" 
+                            :address="s.address" />
+                    </dlp-transition>
                     
                     <div class="btn-group">
                         <dlp-button type="button" @click="showModal('SalesModal')">View more sales</dlp-button>
@@ -87,30 +88,37 @@
 
                 <section id="agent-stats" class="mb-16">
                     <h3 class="head-5 accent">Agent Stats</h3>
-                    <p class="mb-4">
-                        <span class="head-3 block callout-text" v-html="i18n.stats[0]['span-1']"></span>
-                        <span class="head-6" v-html="i18n.stats[0]['span-2']"></span>
-                    </p>
-                    <p class="mb-4">
-                        <span class="head-3 block callout-text" v-html="i18n.stats[1]['span-1']"></span>
-                        <span class="head-6" v-html="i18n.stats[1]['span-2']"></span>
-                    </p>
-                    <p class="mb-4">
-                        <span class="head-3 block callout-text">{{i18n.stats[2]['span-1']}}</span>
-                        <span class="head-6" v-html="i18n.stats[2]['span-2']"></span>
-                    </p>
+                    <dlp-transition type="fadeIn slideUp">
+                        <p class="mb-4">
+                            <span class="head-3 block callout-text" v-html="i18n.stats[0]['span-1']"></span>
+                            <span class="head-6" v-html="i18n.stats[0]['span-2']"></span>
+                        </p>
+                    </dlp-transition>
+                    <dlp-transition type="fadeIn slideUp">
+                        <p class="mb-4">
+                            <span class="head-3 block callout-text" v-html="i18n.stats[1]['span-1']"></span>
+                            <span class="head-6" v-html="i18n.stats[1]['span-2']"></span>
+                        </p>
+                    </dlp-transition>
+                    <dlp-transition type="fadeIn slideUp">
+                        <p class="mb-4">
+                            <span class="head-3 block callout-text">{{i18n.stats[2]['span-1']}}</span>
+                            <span class="head-6" v-html="i18n.stats[2]['span-2']"></span>
+                        </p>
+                    </dlp-transition>
                 </section>
 
                 <section id="agent-contact">
                     <h3 class="head-5 accent">Agent Contact</h3>
-                    <address class="mt-4">
+                    <address class="my-4">
                         <a :href="`tel:+1-${i18n.contact.phone}`">{{i18n.contact.phone}}</a><br /><br />
                         <a :href="`mailto:${i18n.contact.email}`">{{i18n.contact.email}}</a>
                     </address>
-                    <dlp-social 
-                        v-bind="i18n.contact.social"
-                    ></dlp-social>
-                    
+                    <dlp-transition type="fadeIn slideLeft">
+                        <dlp-social 
+                            v-bind="i18n.contact.social"
+                        />
+                    </dlp-transition>
                 </section>
             </div>
         </div>

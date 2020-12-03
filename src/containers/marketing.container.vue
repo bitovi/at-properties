@@ -46,7 +46,6 @@
                     :lg="`${publicPath}images/marketing/iphone-lg.png`"
                     :showBorder="false"
                     alt="iPhone 11 Pro"
-                    animate="shrink"
                 />
             </div>
             <div class="col-span-4 md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-6">
@@ -83,7 +82,9 @@
                 />
             </div>
             <div class="col-span-full md:col-span-6 md:col-start-7 md:content-center lg:col-span-6 lg:col-start-10 content-center">
-                <p class="accent accent-above">At @properties, video is a gamechanging marketing tool and we’re using it to tell your home’s story like never before.</p>
+                <dlp-transition type="fadeIn slideUp">
+                    <p class="accent accent-above">At @properties, video is a gamechanging marketing tool and we’re using it to tell your home’s story like never before.</p>
+                </dlp-transition>
                 <div class="btn-group">
                     <dlp-button type="button">View Custom Marketing Plan</dlp-button>
                 </div>

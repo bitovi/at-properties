@@ -19,7 +19,9 @@
                 <section class="mb-16">
                     <h1 class="head-1">{{i18n.name}}</h1>
                     <h2 class="head-5 accent">Team Bio</h2>
-                    <p v-html="i18n.bio.brief"></p>
+                    <dlp-transition type="fadeIn slideUp">
+                        <p v-html="i18n.bio.brief"></p>
+                    </dlp-transition>
                     <div class="btn-group">
                         <dlp-button type="button" @click="showModal('AgentModal')">Read Full Bio</dlp-button>
                         <dlp-slide-in ref="AgentModal">
@@ -34,18 +36,24 @@
         <div class="content-grid">
             <section id="team-stats" class="col-span-full lg:col-span-14 lg:col-start-2 my-16">
                 <div class="grid md:grid-cols-3 border-t border-b border-primary-100 divide-y md:divide-y-0 md:divide-x divide-primary-100">
-                    <div class="p-8 text-center stat">
-                        <span class="head-3 block callout-text" v-html="i18n.stats[0]['span-1']"></span> 
-                        <span class="head-6" v-html="i18n.stats[0]['span-2']"></span>
-                    </div>
-                    <div class="p-8 text-center stat">
-                        <span class="head-3 block callout-text" v-html="i18n.stats[1]['span-1']"></span> 
-                        <span class="head-6" v-html="i18n.stats[1]['span-2']"></span>
-                    </div>
-                    <div class="p-8 text-center stat">
-                        <span class="head-3 block callout-text" v-html="i18n.stats[2]['span-1']"></span> 
-                        <span class="head-6" v-html="i18n.stats[2]['span-2']"></span>
-                    </div>
+                    <dlp-transition type="fadeIn pop">
+                        <div class="p-8 text-center stat">
+                            <span class="head-3 block callout-text" v-html="i18n.stats[0]['span-1']"></span> 
+                            <span class="head-6" v-html="i18n.stats[0]['span-2']"></span>
+                        </div>
+                    </dlp-transition>
+                    <dlp-transition type="fadeIn pop">
+                        <div class="p-8 text-center stat">
+                            <span class="head-3 block callout-text" v-html="i18n.stats[1]['span-1']"></span> 
+                            <span class="head-6" v-html="i18n.stats[1]['span-2']"></span>
+                        </div>
+                    </dlp-transition>
+                    <dlp-transition type="fadeIn pop">
+                        <div class="p-8 text-center stat">
+                            <span class="head-3 block callout-text" v-html="i18n.stats[2]['span-1']"></span> 
+                            <span class="head-6" v-html="i18n.stats[2]['span-2']"></span>
+                        </div>
+                    </dlp-transition>
                 </div>
             </section>
         </div>

@@ -19,7 +19,9 @@
                 <section>
                     <h1 class="head-1">{{i18n.name}}</h1>
                     <h2 class="head-5 accent mb-4">Co-agent Bio</h2>
-                    <div v-html="i18n.bio.brief"></div>
+                    <dlp-transition type="fadeIn slideUp">
+                        <div v-html="i18n.bio.brief"></div>
+                    </dlp-transition>
                     <div class="btn-group">
                         <dlp-button type="button" @click="showModal('CoagentModal')">Read Full Bio</dlp-button>
                         <dlp-slide-in ref="CoagentModal">

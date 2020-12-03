@@ -3,7 +3,9 @@
         <div class="content-grid">
           <div class="col-span-full md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-6">
             <h5 class="head-5 accent">Lorem Ipsum Dolor</h5>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra pretium eu molestie id sit ultricies in arcu quam. Diam, aliquet convallis neque, morbi libero. Nunc nisl purus, ut vitae potenti suspendisse. Pulvinar habitant sapien tempus proin.</p>
+            <dlp-transition type="fadeIn slideUp">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra pretium eu molestie id sit ultricies in arcu quam. Diam, aliquet convallis neque, morbi libero. Nunc nisl purus, ut vitae potenti suspendisse. Pulvinar habitant sapien tempus proin.</p>
+            </dlp-transition>
           </div>
           <div class="col-span-full text-center">
             <dlp-carousel

@@ -14,9 +14,9 @@ import gsap from 'gsap';
 import { filter, includes } from 'lodash'
 import { hasMotion } from '../../constants'
 
-const ALLOWED_HOOKS = ['fadeIn', 'slideRight', 'slideLeft', 'slideUp', 'slideDown', 'scale']
+const ALLOWED_HOOKS = ['fadeIn', 'slideRight', 'slideLeft', 'slideUp', 'slideDown', 'pop']
 
-//Helper for foraming scrollTrigger object
+//Helper for forming scrollTrigger object
 function ScrollTrigger(ref, opts){
     return {
         trigger: ref,
@@ -38,13 +38,13 @@ export default {
         type: {
             type: String,
             default: 'fadeIn',
-            //fadeIn, slideRight, slideLeft, slideUp, slideDown, scale
+            //fadeIn, slideRight, slideLeft, slideUp, slideDown, pop
         },
         scrollTrigger: {
             type: Object,
             default: function() {
                 return {
-                    start: "top 90%",
+                    start: "top 85%",
                     end: "bottom center", 
                     scrub: true, 
                     // markers: true,
@@ -90,7 +90,7 @@ export default {
                 y: 0,
             }]
         },
-        scale(target) {
+        pop(target) {
             gsap.set(target, {transform: 'scale(0.5)'})
             return [{},{
                 scrollTrigger: ScrollTrigger(target, this.scrollTrigger),
