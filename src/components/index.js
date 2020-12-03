@@ -13,6 +13,8 @@ import Social from './social/social.component'
 import BioCard from './bioCard/bioCard.component.vue'
 import Carousel from './carousel/carousel.component.vue'
 
+import Transition from './transition/transition.component.vue'
+
 //Modals
 import SlideIn from './modals/slideIn/slideIn.component'
 import VideoModal from './modals/videoModal/videoModal.component.vue'
@@ -33,6 +35,8 @@ Vue.component(VideoModal.name, VideoModal)
 Vue.component(BioCard.name, BioCard)
 Vue.component(Carousel.name, Carousel)
 
+Vue.component(Transition.name, Transition)
+
 
 export {
     ScrollNotify,
@@ -49,6 +53,7 @@ export {
     Social,
     VideoModal,
     BioCard,
-    Carousel
+    Carousel,
+    Transition
 }
 

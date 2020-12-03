@@ -23,8 +23,10 @@
                 <section id="agent-bio" class="mb-16">
                     
                     <h2 class="head-2">{{i18n.name}}</h2>
-                    <h3 class="head-5 accent mb-4">Agent Bio</h3>
-                    <div v-html="i18n.bio.brief"></div>
+                    <dlp-transition type="fadeIn slideUp">
+                        <h3 class="head-5 accent mb-4">Agent Bio</h3>
+                        <div v-html="i18n.bio.brief"></div>
+                    </dlp-transition>
                     <div class="btn-group">
                         <dlp-button type="button" @click="showModal('AgentModal')">Read Full Bio</dlp-button>
                         <dlp-slide-in ref="AgentModal">
@@ -38,12 +40,12 @@
 
                 <section id="agent-testimonials" class="mb-16">
                     <h3 class="head-5 accent mb-4">Testimonials</h3>
-                    <dlp-testimonial 
-                                v-for="t in i18n.testimonials.slice(0, 3)" 
-                                v-bind:key="t.id" 
-                                :score="t.rating">
-                                    <div v-html="t.trunk"></div>
-                                </dlp-testimonial>
+                    <dlp-transition type="fadeIn slideUp" v-for="t in i18n.testimonials.slice(0, 3)" v-bind:key="t.id" >
+                        <dlp-testimonial
+                            :score="t.rating">
+                            <div v-html="t.trunk"></div>
+                        </dlp-testimonial>
+                    </dlp-transition>
                     <div class="btn-group">
                         <dlp-button type="button" @click="showModal('TestimonialsModal')">View more testimonials</dlp-button>
                         <dlp-slide-in ref="TestimonialsModal">
