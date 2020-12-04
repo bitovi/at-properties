@@ -16,7 +16,7 @@
                 />
             </div>
             <div class="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
-                <section class="mb-16">
+                <section>
                     <h1 class="head-1">{{i18n.name}}</h1>
                     <h2 class="head-5 accent--above-left">Team Bio</h2>
                     <dlp-transition type="fadeIn slideUp">

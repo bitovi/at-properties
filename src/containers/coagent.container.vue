@@ -1,6 +1,6 @@
 <template>
     <div class="section-content">
-        <div class="content-grid pb-16">
+        <div class="content-grid">
             <div class="col-span-full text-center">
                 <img :src="`${i18n.logo.sm}`" class="mx-auto" style="width: 200px;" :alt="`${i18n.logo.alt}`" />
             </div>
@@ -34,7 +34,6 @@
                 </section>
             </div>
         </div>
-        <hr />
     </div>
 </template>
 <script>

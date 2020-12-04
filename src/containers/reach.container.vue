@@ -3,10 +3,9 @@
         <div class="content-grid">
             <div class="col-span-4 md:col-span-6 md:col-start-1 lg:col-span-7 lg:col-start-2">
                 <dlp-figure
-                    :sm="`${publicPath}images/marketing/iphone-sm.png`"
-                    :lg="`${publicPath}images/marketing/iphone-lg.png`"
+                    :sm="`${publicPath}images/reach/reach-1.jpeg`"
                     alt="iPhone 11 Pro"
-                    :showBorder="false"
+                    animate="shrink"
                 />
             </div>
             <div class="col-span-4 md:col-span-6 md:col-start-7 lg:col-span-6 lg:col-start-10">
@@ -23,10 +22,9 @@
         <div class="content-grid">
             <div class="order-3 md:order-4 col-span-4 md:col-span-6 md:col-start-7 lg:col-span-7 lg:col-start-9">
                 <dlp-figure
-                    :sm="`${publicPath}images/marketing/iphone-sm.png`"
-                    :lg="`${publicPath}images/marketing/iphone-lg.png`"
+                    :sm="`${publicPath}images/reach/reach-2.jpeg`"
                     alt="iPhone 11 Pro"
-                    :showBorder="false"
+                    animate="shrink"
                 />
             </div>
             <div class="order-4 md:order-3 col-span-4 md:col-span-6 md:col-start-1 lg:col-span-6 lg:col-start-2">

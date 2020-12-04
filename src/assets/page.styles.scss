@@ -44,3 +44,7 @@ body {
     max-width: 1440px;
   }
 }
+
+.content-grid + .content-grid  {
+  @apply pt-16;
+}
