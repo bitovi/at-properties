@@ -3,7 +3,7 @@
     @apply fixed;
     @apply bottom-0;
     @apply w-screen;
-    @apply z-30;
+    z-index: 100;
 
     ol, ul {
         list-style: none;
