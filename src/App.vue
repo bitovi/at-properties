@@ -79,7 +79,11 @@
 
 <script>
 import gsap from 'gsap';
-import ScrollTrigger from "gsap/ScrollTrigger";
+import ScrollTrigger from "gsap/ScrollTrigger"
+import ExpoScaleEase from "gsap/EasePack";
+import MotionPathPlugin from "gsap/MotionPathPlugin";
+
+
 import Nav from './components/nav/nav.component'
 import TitleContainer from './containers/title.container'
 import AgentContainer from './containers/agent.container'
@@ -100,7 +104,7 @@ import DevGrid from './components/dev/grids.dev'
 
 import './assets/base.styles.scss'
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(MotionPathPlugin, ScrollTrigger, ExpoScaleEase);
 
 export default {
   name: 'App',

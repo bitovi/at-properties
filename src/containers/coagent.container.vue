@@ -12,13 +12,16 @@
                     :caption="`${i18n.name}`"
                     ar="ar ar-4-5"
                     :isSticky="true"
-                ></dlp-figure>
+                    animate="shrink"
+                />
             </div>
             <div class="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
                 <section>
                     <h1 class="head-1">{{i18n.name}}</h1>
                     <h2 class="head-5 accent mb-4">Co-agent Bio</h2>
-                    <div v-html="i18n.bio.brief"></div>
+                    <dlp-transition type="fadeIn slideUp">
+                        <div v-html="i18n.bio.brief"></div>
+                    </dlp-transition>
                     <div class="btn-group">
                         <dlp-button type="button" @click="showModal('CoagentModal')">Read Full Bio</dlp-button>
                         <dlp-slide-in ref="CoagentModal">

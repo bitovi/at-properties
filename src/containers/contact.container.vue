@@ -12,6 +12,7 @@
                         alt="Thad Wong"
                         caption="Thad Wong"
                         ar="ar ar-4-5"
+                        animate="shrink"
                     />
                 </div>
             </div>
