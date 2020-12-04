@@ -1,15 +1,16 @@
-import { Meta, Canvas, Source } from '@storybook/addon-docs/blocks';
+import { Meta, Preview, Source } from '@storybook/addon-docs/blocks';
 import dedent from 'ts-dedent';
 
 <Meta title="Pattern Library/Components/Property" />
 
 # Property
 
-* A property includes an image (figure), price, and address.
-* Multiple properties are shown separated by a horizontal rule.
+* A property includes an image (4:3 ratio), price, and address.
+* The component uses a 2-col, 16px gap layout for small screens; 3-col = 1/3 + 2/3, 24px gap layout for large screens.
+* Multiple properties are shown separated by a 1px light gray (Primary 100) horizontal rule, with 16px between the rule and each item.
 
 <Preview>
-<div className="properties">
+<div className="properties w-2/3">
   <div className="property">
     <div className="property__img">
       <figure>
@@ -46,7 +47,7 @@ Define classes in **src/components/property/property.styles.scss**.
 <Source language='css' code={dedent`
   /* Property */
   .properties {
-    @apply space-y-5;          /* 20px of space between items and dividers */
+    @apply space-y-4;          /* 16px of space between items and dividers */
     @apply divide-y;           /* Place 1px horizontal dividers between items */
     @apply divide-primary-100; /* Divider color is light gray (Primary 100) */
   }
@@ -57,11 +58,15 @@ Define classes in **src/components/property/property.styles.scss**.
     @apply pt-4;               /* padding-top: 16px; */
     @screen lg {
       @apply grid-cols-3;      /* grid-template-columns: repeat(3, minmax(0, 1fr)); */
+      @apply gap-6;            /* gap: 24px; */
+    }
+    &:first-child {
+      @apply pt-0;             /* padding-top: 0; */
     }
   }
   .property_img picture {
-    @extend ar;                /* Use an aspect ratio of... */
-    @extend ar--4-3;           /* 4:3 */
+    @extend .ar;               /* Use an aspect ratio of... */
+    @extend .ar--4-3;          /* 4:3 */
   }
   .property__desc {
     @screen lg {

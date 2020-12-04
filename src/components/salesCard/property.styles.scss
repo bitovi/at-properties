@@ -1,6 +1,6 @@
 /* Property */
 .properties {
-  @apply space-y-5;          /* 20px of space between items and dividers */
+  @apply space-y-4;          /* 16px of space between items and dividers */
   @apply divide-y;           /* Place 1px horizontal dividers between items */
   @apply divide-primary-100; /* Divider color is light gray (Primary 100) */
 }
@@ -11,11 +11,15 @@
   @apply pt-4;               /* padding-top: 16px; */
   @screen lg {
     @apply grid-cols-3;      /* grid-template-columns: repeat(3, minmax(0, 1fr)); */
+    @apply gap-6;            /* gap: 24px; */
+  }
+  &:first-child {
+    @apply pt-0;             /* padding-top: 0; */
   }
 }
 .property_img picture {
-  @extend .ar;                /* Use an aspect ratio of... */
-  @extend .ar--4-3;           /* 4:3 */
+  @extend .ar;               /* Use an aspect ratio of... */
+  @extend .ar--4-3;          /* 4:3 */
 }
 .property__desc {
   @screen lg {

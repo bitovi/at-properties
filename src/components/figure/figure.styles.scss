@@ -6,10 +6,11 @@
         color: theme('colors.primary.900');
     }
 
-    &.sticky {
+    /* Commenting this out because it creates a circular dependency */
+    /* &.sticky {
         @apply sticky;
         top: theme('spacing.8')
-    }
+    } */
 
     &.hide-border {
         img,
