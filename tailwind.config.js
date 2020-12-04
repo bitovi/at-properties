@@ -58,5 +58,9 @@ module.exports = {
         '17': '17',
       }
     }
+  }, 
+  /* This is necessary for @apply space-y-5 and divide-y to work. Or upgrade TW to 2.0 */
+  experimental: {
+    applyComplexClasses: true,
   }
 }
