@@ -1,29 +1,33 @@
-
-//https://www.a11yproject.com/posts/2013-01-11-how-to-hide-content/
-//Hide content, but keep it available to screen readers
+/* https://www.a11yproject.com/posts/2013-01-11-how-to-hide-content/
+   Hide content, but keep it available to screen readers */
 .visually-hidden {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
-
 .visually-shown {
-    clip: auto;
-    clip-path: initial;
-    height: auto;
-    overflow: auto;
-    position: initial;
-    white-space: initial;
-    width: auto;
+  clip: auto;
+  clip-path: initial;
+  height: auto;
+  overflow: auto;
+  position: initial;
+  white-space: initial;
+  width: auto;
 }
 
+/* Modal */
 .dlp-modal-open {
-    height: 100vh;
-    overflow-y: hidden;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+/* SVG */ 
+svg {
+  @apply fill-current;	     /* fill: currentColor; */
 }
 
 /* Aspect ratio */ 
@@ -65,7 +69,6 @@
 }
 
 /* Positioning Tools */
-
 .top-4 {
   top: theme('spacing.4');
 }

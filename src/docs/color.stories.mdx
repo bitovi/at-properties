@@ -25,12 +25,6 @@ The DLP page will use a **subset** of the brand's <a href="https://www.figma.com
         <p><strong>White</strong><br />
         HEX: #FFFFFF</p>
     </div>
-    <div></div>
-    <div>
-        <div className="h-24 border border-primary-500 bg-black"></div>
-        <p><strong>Black</strong><br />
-        HEX: #000000</p>
-    </div>
     <div>
         <div className="h-24 border border-primary-500 bg-primary-100"></div>
         <p><strong>Primary 100</strong><br />
@@ -40,6 +34,16 @@ The DLP page will use a **subset** of the brand's <a href="https://www.figma.com
         <div className="h-24 border border-primary-500 bg-primary-200"></div>
         <p><strong>Primary 200</strong><br />
         HEX: #DBDDE1</p>
+    </div>
+    <div>
+        <div className="h-24 border border-primary-500 bg-neutral-300"></div>
+        <p><strong>Neutral 300</strong><br />
+        HEX: #B2B2B2</p>
+    </div>
+    <div>
+        <div className="h-24 border border-primary-500 bg-neutral-500"></div>
+        <p><strong>Neutral 500</strong><br />
+        HEX: #808080</p>
     </div>
     <div>
         <div className="h-24 border border-primary-500 bg-primary-500"></div>
@@ -52,19 +56,19 @@ The DLP page will use a **subset** of the brand's <a href="https://www.figma.com
         HEX: #1B1D1F</p>
     </div>
     <div>
+        <div className="h-24 border border-primary-500 bg-secondary-900"></div>
+        <p><strong>Secondary 900</strong><br />
+        HEX: #2A080A</p>
+    </div>
+    <div>
+        <div className="h-24 border border-primary-500 bg-black"></div>
+        <p><strong>Black</strong><br />
+        HEX: #000000</p>
+    </div>
+    <div>
         <div className="h-24 border border-primary-500 bg-secondary-500"></div>
         <p><strong>Secondary 500</strong><br />
         HEX: #D22630</p>
-    </div>
-    <div>
-        <div className="h-24 border border-primary-500 bg-neutral-300"></div>
-        <p><strong>Neutral 300</strong><br />
-        HEX: #B2B2B2</p>
-    </div>
-    <div>
-        <div className="h-24 border border-primary-500 bg-neutral-500"></div>
-        <p><strong>Neutral 500</strong><br />
-        HEX: #808080</p>
     </div>
     <div>
         <div className="h-24 border border-primary-500 bg-system-focus"></div>
@@ -89,14 +93,15 @@ Define colors in **tailwind.config.js**. Tailwind will generate classes for `.te
             900:        '#1B1D1F'
         },
         secondary: {
-            500:        '#D22630'
+            500:        '#D22630',
+            900:        '#2A080A'
         },
         neutral: {
             300:        '#B2B2B2',
             500:        '#808080'
         },
         system: {
-            'focus':    '#0083CC'
+            focus:      '#0083CC'
         },
     },
 `} />

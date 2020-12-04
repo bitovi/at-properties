@@ -1,12 +1,20 @@
-import { Meta, Canvas, Source, IconGallery, IconItem } from '@storybook/addon-docs/blocks';
+import { Meta, Preview, Source, IconGallery, IconItem } from '@storybook/addon-docs/blocks';
 import dedent from 'ts-dedent';
-import sprite from '../../public/images/icons/icons.svg';
 
 <Meta title="Style Guide/Iconography" />
 
 # Iconography
 
-Icons remain the same size; they are *not* scaled for different screen sizes.
+* Icons remain the same size; they are *not* scaled for different screen sizes.
+* Icons will be SVG format.
+* SVGs will use the current text color as the fill.
+
+<Source language='css' code={dedent`
+  /* SVG */ 
+  svg {
+    @apply fill-current;	     /* fill: currentColor; */
+  }
+`} />
 
 <!-- <IconGallery>
   <IconItem name="Facebook">
@@ -46,7 +54,7 @@ Example: [https://brand.uber.com/guide#iconography-overview](https://brand.uber.
 
 Social icons will be 32 x 32px, with 24px of space between icons, and 32px of space above the row of icons. Note the `:hover` state: the icon fill color changes to the social brand color.
 
-<Canvas>
+<Preview>
 <div className="dlp-social">
   <a href="https://www.facebook.com/atproperties" target="blank" aria-label="Facebook">
     <svg className="icon icon-facebook">
@@ -74,7 +82,7 @@ Social icons will be 32 x 32px, with 24px of space between icons, and 32px of sp
     </svg>
   </a>
 </div>
-</Canvas>
+</Preview>
 
 Social "icons" are actually logos and must follow third-party brand guidelines like any other logo. Guidelines define not only the logo itself, but also it's color, size, placement, and spacing. Please reference each brand's fair use guidelines.
 
