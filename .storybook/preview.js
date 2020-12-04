@@ -24,8 +24,8 @@ export const parameters = {
             'Navigation', 'Section', 'Footer', 'Modal'
           ], 
           'Components', [
-            'Button', 'Figure', 'Heading', 'List', 'Paragraph', 'Property', 'Social', 
-            'Statistic', 'Testimonial', 'Video'
+            'Button', 'Carousel', 'Figure', 'Heading', 'List', 'Paragraph', 'Property', 
+            'Social', 'Statistic', 'Testimonial', 'Video'
           ]
         ]
       ]

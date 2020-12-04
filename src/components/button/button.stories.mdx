@@ -54,6 +54,14 @@ import DLPButton from './button.component.vue'
 Define classes in **src/components/button/button.styles.scss**.
 
 <Source language='css' code={dedent`
+  .class { 
+    /* outline: 1px solid theme('colors.white'); */
+    width: 1em;                /* set icon size to font size */
+    height: 1em;
+  }
+`} />
+
+<Source language='css' code={dedent`
   /* Button */
   .btn {
     @apply border-4;           /* border-width: 4px; */
