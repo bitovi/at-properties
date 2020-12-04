@@ -95,11 +95,21 @@ Define font families and sizes in **tailwind.config.js**. Tailwind will generate
 Define classes in **src/assets/type.styles.scss**. The classes below apply Tailwind's [font weight classes](https://tailwindcss.com/docs/font-weight): `.font-{weight}`.
 
 <Source language='css' code={dedent`
+  /* Fonts */
   .font-primary {
     @apply font-light;   /* 300 */
   }
   .font-secondary {
     @apply font-medium;  /* 500 */
+  }
+  /* Defaults */
+  #app,
+  #docs-root {
+    @apply text-primary-900;   /* color: theme('colors.primary.900'); */
+    @apply font-default;       /* font-family: "Gotham A", "Gotham B", Helvetica, Arial, sans-serif; */
+    @apply text-base;          /* font-size: 16px; */
+    @apply not-italic;         /* font-style: normal; */
+    @apply font-light;         /* font-weight: 300; */
   }
 `} />
 
@@ -122,8 +132,9 @@ Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
 
 ## Components
  
-* [Button](/?path=/story/components-button--page)
-* [Heading](/?path=/story/components-heading--page)
-* [Paragraph](/?path=/story/components-paragraph--page)
-* [Statistic](/?path=/story/components-statistic--page)
-* [Testimonial](/?path=/story/components-testimonial--page)
+* [Button](/?path=/story/pattern-library-components-button--page)
+* [Heading](/?path=/story/pattern-library-components-heading--page)
+* [Paragraph](/?path=/story/pattern-library-components-paragraph--page)
+* [List](/?path=/story/pattern-library-components-list--page)
+* [Statistic](/?path=/story/pattern-library-components-statistic--page)
+* [Testimonial](/?path=/story/pattern-library-components-testimonial--page)

@@ -1,0 +1,35 @@
+/* Accent */
+.accent--above-left:before, 
+.accent--above-center:before, 
+.accent--below-center:after, 
+.accent--below-center-wide:after {
+  @apply bg-secondary-500;   /* background-color: $secondary-500; */
+  content: '';
+  @apply block;              /* display: block; */
+  height: 2px;
+  @apply w-8;                /* width: 32px; */
+  @apply mb-3;               /* margin-bottom: 12px; */
+}
+.accent--above-left:before {
+  @apply ml-0;               /* margin-left: 0; */
+  @apply mr-auto;            /* margin-right: auto; */
+}
+.accent--above-center:before {
+  @apply ml-auto;            /* margin-left: auto; */
+  @apply mr-auto;            /* margin-right: auto; */
+}
+.accent--below-center:after,
+.accent--below-center-wide:after {
+  @apply mt-4;               /* margin-top: 16px; */
+  @apply ml-auto;            /* margin-left: auto; */
+  @apply mr-auto;            /* margin-right: auto; */
+}
+.accent--below-center-wide:after {
+  @apply w-16;               /* width: 64px; */
+}
+/* Accent: spacing */
+.head-6.accent--above-center:before, 
+.head-6.accent--below-center:after {
+  @apply my-2;               /* margin-top/bottom: 8px; */
+  @apply mx-auto;            /* margin-left/right: auto; */
+}

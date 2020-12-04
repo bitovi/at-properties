@@ -2,19 +2,11 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-//load color Aliases
-@import './util.styles';
+@import './util.styles';        /* html, body, custom scroll bar, colors */
+@import './type.styles';        /* headings, paragraph, lists */
+@import './object.styles';      /* borders, rules, accents */
+@import './page.styles';        /* containers? */
+// @import './transitions.styles.scss';  -- won't need, will use GSAP
 
-//load headings
-@import './type.styles';
-
-//load Showcase Common classes
-@import './page.styles';
-
-//load transition types
-@import './transitions.styles.scss';
-
-//load all components
-@import '../components/index';
-
-@import './dev.styles.scss';
+@import '../components/index';  /* component styles */
+@import './dev.styles.scss';    /* NOT for production, dev only */
