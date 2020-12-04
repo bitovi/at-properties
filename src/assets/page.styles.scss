@@ -5,25 +5,6 @@ body {
   scroll-behavior: smooth;
 }
 
-.dlp-page {
-  @apply flex;
-  @apply flex-col;
-
-  &.dlp-hero {
-    @apply items-center;
-    @apply p-6;
-    @apply pb-0;
-    @apply h-screen; //fallback
-    height: calc(100vh - 48px);
-    @apply bg-fixed;
-    @apply bg-cover;
-    @apply bg-no-repeat;
-    outline: 1px solid theme('colors.primary.500');
-    //Build order requires this be hard coded
-    outline-offset: -16px;
-  }
-
-}
 
 .section-content {
   margin: 0 8px;

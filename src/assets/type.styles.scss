@@ -34,7 +34,7 @@
 .head-4 { @apply text-xl; }  /* font-size: 24px */
 .head-5 { @apply text-lg; }  /* font-size: 20px */
 .head-6 { @apply text-sm; }  /* font-size: 14px */
-@screen lg {
+@media (min-width: theme('screens.lg')) {
   .head-1 { @apply text-6xl; }  /* font-size: 60px */
   .head-2 { @apply text-5xl; }  /* font-size: 42px */
   .head-3 { @apply text-4xl; }  /* font-size: 39px */
@@ -45,16 +45,20 @@
 /* Heading: spacing */
 .head-1 + .head-5 {
   @apply mt-6;               /* margin-top: 24px; */
-  @screen lg {
-    @apply mt-8;             /* margin-top: 32px; */
+  @media (min-width: theme('screens.lg')) {
+    & { 
+      @apply mt-8;           /* margin-top: 32px; */
+    }
   }
 }
 
 /* Paragraph */
 p, address, li { 
   @apply not-italic;         /* font-style: normal; */
-  @screen lg {
-    @apply text-lg;          /* font-size: 20px */
+  @media (min-width: theme('screens.lg')) {
+    & {
+      @apply text-lg;        /* font-size: 20px */
+    }
   }
 }
 /* List */ 

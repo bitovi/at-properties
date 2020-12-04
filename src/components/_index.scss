@@ -8,11 +8,13 @@
 @import './testimonial/testimonial.styles';
 @import './salesCard/salesCard.styles';
 @import './salesCard/property.styles';
-@import './slideIn/slideIn.styles.scss';
 @import './close/close.styles.scss';
 @import './title/title.styles.scss';
 @import './displayCard/displayCard.styles.scss';
 @import './social/social.styles.scss';
-@import './videoModal/videoModal.styles.scss';
 @import './bioCard/bioCard.styles.scss';
 @import './carousel/carousel.styles.scss';
+
+//modals
+@import './modals/slideIn/slideIn.styles.scss';
+@import './modals/videoModal/videoModal.styles.scss';

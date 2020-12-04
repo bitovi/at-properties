@@ -1,0 +1,47 @@
+.dlp-title-page {
+    @apply flex;
+    @apply flex-col;
+    @apply items-center;
+    @apply p-6;
+    @apply pb-0;
+    @apply h-screen; //fallback
+    height: calc(100vh - 48px);
+    @apply bg-fixed;
+    @apply bg-cover;
+    @apply bg-no-repeat;
+    outline: 1px solid theme('colors.primary.500');
+    //Build order requires this be hard coded
+    outline-offset: -16px;
+
+    background-color: rgb(0, 0, 0); 
+    overflow: hidden; 
+    position: relative;
+
+    .dlp-title-page-bg {
+        background-color: rgb(0, 0, 0); 
+        background-repeat: no-repeat; 
+        background-size: cover; 
+        opacity: .25; 
+        position:absolute; 
+        height:100%; 
+        width:100%; 
+        z-index: 0;
+    }
+
+    .dlp-title-page-text {
+        z-index: 1;
+    }
+
+    .dlp-title-page-head {
+        @apply text-white;
+        @apply text-center;
+
+    }
+
+    .dlp-title-page-subhead {
+        @apply text-white;
+        @apply text-center;
+        @apply mt-8;
+    }
+
+}

@@ -3,6 +3,8 @@
     @apply h-full;
     @apply flex;
     @apply flex-col;
+    margin-bottom: 2px;
+    
     .dlp-display-card-content {
         @apply flex;
         @apply flex-col;
@@ -12,6 +14,10 @@
         height: 332px;
         max-width: 100%;
         border: 1px solid theme('colors.primary.200');
+    
+        &.ar img {
+            @apply p-8;
+        }
     }
 
     figcaption {

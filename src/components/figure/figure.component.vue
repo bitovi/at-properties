@@ -1,16 +1,19 @@
 <template>
-    <div :class="{ 'sticky top-4': isSticky }">
+    <div
+        class="dlp-figure-wrapper" 
+        :class="[{ 'pinned': isSticky }]">
+        <div v-if="showBorder" class="dlp-figure-border"></div>
         <figure 
             v-bind="$attrs" 
             class="dlp-figure" 
-            v-bind:class="[{ 'hide-border': !showBorder }, ar]">
-            <picture>
+            v-bind:class="[ar]">
+            <picture ref="figurePic">
                 <source v-if="xl" media="(min-width:1920px)" :srcset="xl">
                 <source v-if="lg" media="(min-width:1280px)" :srcset="lg">
                 <source v-if="md" media="(min-width:768px)" :srcset="md">
                 <source v-if="sm" :srcset="sm">
                 <img 
-                    alt="alt" 
+                    :alt="alt" 
                     :src="defaultImage" />
             </picture>
             <figcaption v-if="caption" class="dlp-figure-caption head-6">
@@ -21,6 +24,9 @@
 </template>
 
 <script>
+import gsap from 'gsap';
+import { hasMotion } from '../../constants'
+
 export default {
     name: "dlp-figure",
     props: {
@@ -61,6 +67,13 @@ export default {
         ar: {
             type: String,
             default: null
+        },
+        animate: {
+            type: String,
+            default: null,
+            validator: function(val) {
+                return ['shrink', null].indexOf(val) !== 1
+            }
         }
     },
     computed: {
@@ -68,6 +81,30 @@ export default {
             //use the smallest available
             const sizes = [this.sm, this.md, this.lg]
             return sizes.find(s => ![undefined, null].includes(s))
+        }
+    },
+    methods: {
+        getCurrentSrc() {
+            return this.$refs.figurePic.querySelector('img')
+        }
+    },
+    mounted() {
+        if(!hasMotion) return
+        if(this.animate === 'shrink'){
+            gsap.fromTo(this.getCurrentSrc(), {
+                scale: 1.1,
+            },
+            {
+                scrollTrigger: {
+                    trigger: this.getCurrentSrc(),
+                    start: "top 80%", 
+                    end: "top 20%", 
+                    scrub: true,
+                    toggleActions: "play none none reverse",
+                },
+                scale: 1,
+                ease: "expoScale(1.1, 1)"
+            })
         }
     }
 }
