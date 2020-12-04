@@ -11,7 +11,7 @@
                         :md="`${publicPath}images/agent/photo-carrie-mccormick-md.jpg`"
                         alt="Thad Wong"
                         caption="Thad Wong"
-                        ar="ar ar-4-5"
+                        ar="ar ar--4-5"
                         animate="shrink"
                     />
                 </div>

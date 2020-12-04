@@ -1,6 +1,6 @@
 <template>
     <div class="section-content">
-        <div class="content-grid pb-16">
+        <div class="content-grid">
             <div class="col-span-full text-center">
                 <img :src="`${i18n.logo.sm}`" class="mx-auto" style="width: 200px;" :alt="`${i18n.logo.alt}`" />
             </div>
@@ -10,7 +10,7 @@
                     :md="`${publicPath}${i18n.photo.md}`"
                     :alt="`${i18n.name}`"
                     :caption="`${i18n.name}`"
-                    ar="ar ar-4-5"
+                    ar="ar ar--4-5"
                     :isSticky="true"
                     animate="shrink"
                 />
@@ -18,14 +18,14 @@
             <div class="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
                 <section>
                     <h1 class="head-1">{{i18n.name}}</h1>
-                    <h2 class="head-5 accent mb-4">Co-agent Bio</h2>
+                    <h2 class="head-5 accent--above-left mb-4">Co-agent Bio</h2>
                     <dlp-transition type="fadeIn slideUp">
                         <div v-html="i18n.bio.brief"></div>
                     </dlp-transition>
                     <div class="btn-group">
                         <dlp-button type="button" @click="showModal('CoagentModal')">Read Full Bio</dlp-button>
                         <dlp-slide-in ref="CoagentModal">
-                            <h3 class="head-5 accent mb-8">Agent Bio</h3>
+                            <h3 class="head-5 accent--above-left mb-8">Agent Bio</h3>
                             <div v-html="i18n.bio.full"></div>
                         </dlp-slide-in>
                         <dlp-button type="button" @click="showModal('AgentVideo')">Watch Agent Video</dlp-button>
@@ -34,7 +34,6 @@
                 </section>
             </div>
         </div>
-        <hr />
     </div>
 </template>
 <script>

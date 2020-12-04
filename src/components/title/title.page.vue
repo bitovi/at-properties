@@ -3,7 +3,7 @@
         <div ref="backgroundImage" class="dlp-title-page-bg" :style="`background-image: url('${backgroundUrl}'); transform: perspective(100px) translate3d(0, 0, ${this.getDefinedValue('sizing', this.animImage, this.animImageDefaults)}px); will-change: transform, opacity;`">
         </div>
         <hgroup ref="titleText" class="container mx-auto dlp-title-page-text" style="transform: perspective(100px) translate3d(0, 0px, 0); opacity: 1; will-change: transform, opacity;">
-            <h2 class="dlp-title-page-head head-1 accent accent-wide accent-centered accent-below">{{heading}}</h2>
+            <h2 class="dlp-title-page-head head-1 accent--below-center-wide">{{heading}}</h2>
             <p class="dlp-title-page-subhead head-6" v-if="subheading">{{subheading}}</p>
         </hgroup>
     </header>

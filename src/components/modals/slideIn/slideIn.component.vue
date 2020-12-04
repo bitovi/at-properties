@@ -56,7 +56,7 @@ export default {
     methods: {
         open() {
             try {
-                ElBody.classList.add('dlp-modal-open')
+                ElBody.classList.add('lock-scroll')
             } catch (error) {
                 console.warn('Unable to fix scroll positon')   
             }
@@ -65,7 +65,7 @@ export default {
         },
         close: function() {
             try {
-                ElBody.classList.remove('dlp-modal-open')
+                ElBody.classList.remove('lock-scroll')
             } catch (error) {
                 console.warn('Unable to release scroll position')   
             }

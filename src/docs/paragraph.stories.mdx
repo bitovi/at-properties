@@ -1,29 +1,74 @@
-import { Meta, Canvas, Source } from '@storybook/addon-docs/blocks';
+import { Meta, Preview, Source } from '@storybook/addon-docs/blocks';
 import dedent from 'ts-dedent';
 
-<Meta title="Components/Paragraph" />
+<Meta title="Pattern Library/Components/Paragraph" />
 
 # Paragraph
+
+* Paragraphs are dark gray (Primary 900), Gotham Light (300), 16px/20px mobile/desktop, 150% leading (line-height). 
+* [Accents](/?path=/story/style-guide-object-styles--page#accents) may be added to paragraphs.
+* See [Spacing](/?path=/docs/style-guide-spacing--page) for details about space around paragraphs.
+
+<Preview>
+<div className="grid grid-cols-2 gap-10">
+  <div>
+    <h6 className="head-6">Paragraph</h6>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque gravida ac, diam malesuada. Fringilla arcu fusce tempus sodales velit id. Tristique sed nec dignissim imperdiet. Id eu cursus et parturient suscipit.</p>
+  </div>
+  <div>
+    <h6 className="head-6">Address</h6>
+    <address>1234 Main Street,<br />Chicago, IL 60647</address>
+  </div>
+  <div>
+    <h6 className="head-6">Ordered List</h6>
+    <ol>
+      <li>List item</li>
+      <li>List item</li>
+      <li>List item</li>
+    </ol>
+  </div>
+  <div>
+    <h6 className="head-6">Unordered List</h6>
+    <ul>
+      <li>List item</li>
+      <li>List item</li>
+      <li>List item</li>
+    </ul>
+  </div>
+</div>
+</Preview>
 
 ## How to configure
 
 Define classes in **src/assets/type.styles.scss**.
 
 <Source language='css' code={dedent`
-  p { 
-    @apply text-base; /* 16px */ 
-    color: theme('colors.primary.900');
-    @media (min-width: theme('screens.md')) {  /* Tablet, desktop */
-      font-size: theme('fontSize.lg');
+  /* Paragraph */
+  p, address, li { 
+    @apply not-italic;         /* font-style: normal; */
+    @screen lg {
+      @apply text-lg;          /* font-size: 20px */
     }
   }
-  * + p {
-    @apply mt-4; /* 16px above a paragraph */
+  /* Paragraph: spacing */
+  * + p, * + address, * + ol, * + ul, 
+  p + *, address + *, ol + *, ul + * {
+    @apply mt-3;               /* margin-top: 12px; */
+  }
+  /* List */ 
+  ol, ul {
+    @apply list-inside;        /* list-style-position: inside; */
+  }
+  ol {
+    @apply list-decimal;       /* list-style-type: decimal; */
+  }
+  ul {
+    @apply list-disc;          /* list-style-type: disc; */
   }
 `} />
 
 ## Accessibility considerations
 
-Relevant <a href="https://www.w3.org/WAI/WCAG21/quickref/">WCAG 2.1 guidelines</a>:
+Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
 
-* AAA ones from Typography
+* NEED TO ADD

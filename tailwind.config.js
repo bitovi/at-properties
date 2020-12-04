@@ -14,7 +14,6 @@ module.exports = {
       'transparent':   'transparent',
       'white':         '#FFFFFF',
       'black':         '#000000',
-      'sytem-focus':   '#0083CC',
       primary: {
         100:           '#E7E9EB',
         200:           '#DBDDE1',
@@ -22,11 +21,15 @@ module.exports = {
         900:           '#1B1D1F'
       },
       secondary: {
-        500:           '#D22630'
+        500:           '#D22630',
+        900:           '#2A080A'
       },
       neutral: {
         300:           '#B2B2B2',
         500:           '#808080'
+      },
+      system: {
+        focus:          '#0083CC'
       }
     },
     fontFamily: {
@@ -61,5 +64,9 @@ module.exports = {
         '17': '17',
       }
     }
+  }, 
+  /* This is necessary for @apply space-y-5 and divide-y to work. Or upgrade TW to 2.0 */
+  experimental: {
+    applyComplexClasses: true,
   }
 }

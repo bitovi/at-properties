@@ -10,10 +10,10 @@
         color: theme('colors.primary.900');
     }
 
-    &.sticky {
+    &.pinned {
         @apply sticky;
         top: theme('spacing.8')
-    }
+    } 
 
     .dlp-figure-border {
         @apply absolute;
@@ -24,18 +24,9 @@
         outline-offset: -14px;
     }
 
-    &.hide-border {
-        overflow: visible;
-        .dlp-figure-border {
-            outline: none;
-        }
-    }
-
     img,
     picture {
-        
         width: 100%;
-        transform: scale(1.1);
     }
 
     .dlp-figure-caption {

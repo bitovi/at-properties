@@ -1,47 +1,50 @@
 
 html,
 body {
-    height: 100%;
-    scroll-behavior: smooth;
+  height: 100%;
+  scroll-behavior: smooth;
 }
-
 
 
 .section-content {
-    margin: 0 8px;
-    border-left: 4px double theme('colors.primary.200');
-    padding: 80px 12px;
-    border-right: 4px double theme('colors.primary.200');
-    
-    @media (min-width: theme('screens.md')) {
-      margin: 0 16px;
-    }
-    
-    @media (min-width: theme('screens.lg')) {
-      margin: 0 20px;
-      padding: 96px 8px;
-    }
+  margin: 0 8px;
+  border-left: 4px double theme('colors.primary.200');
+  padding: 80px 12px;
+  border-right: 4px double theme('colors.primary.200');
+  
+  @media (min-width: theme('screens.md')) {
+    margin: 0 16px;
+  }
+  
+  @media (min-width: theme('screens.lg')) {
+    margin: 0 20px;
+    padding: 96px 8px;
+  }
 }
 
 .content-grid {
-    width: 100%;
-    margin: 0 auto;
-    height: 100%;
-    
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 24px;
-    
-    @media (min-width: theme('screens.md')) {
-        grid-template-columns: repeat(12, minmax(0, 1fr));
-        gap: 32px;
-    }
-    
-    @media (min-width: theme('screens.lg')) {
-        grid-template-columns: repeat(16, minmax(0, 1fr));
-    }
-    
-    @media (min-width: 1441px) {
-        max-width: 1440px;
-    }
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  
+  @media (min-width: theme('screens.md')) {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 32px;
+  }
+  
+  @media (min-width: theme('screens.lg')) {
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+  }
+  
+  @media (min-width: 1441px) {
+    max-width: 1440px;
+  }
+}
+
+.content-grid + .content-grid  {
+  @apply pt-16;
 }

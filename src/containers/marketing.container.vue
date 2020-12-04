@@ -2,7 +2,7 @@
     <div class="section-content">
         <section id="marketing-assets" class="content-grid">
             <div class="col-span-full text-center">
-                <h3 class="head-2 accent accent-centered">Marketing Assets</h3>
+                <h3 class="head-2 accent--above-center">Marketing Assets</h3>
             </div>
             <div class="col-span-full text-center">
                 <dlp-carousel
@@ -38,7 +38,7 @@
 
         <section id="listing-video" class="content-grid mb-24">
             <div class="col-span-full text-center">
-                <h3 class="head-2 accent accent-centered">Listing Video</h3>
+                <h3 class="head-2 accent--above-center">Listing Video</h3>
             </div>
             <div class="col-span-2 col-start-2 md:col-span-4 md:col-start-5 lg:col-span-12 lg:col-start-3">
                 <dlp-figure
@@ -48,14 +48,14 @@
                     alt="iPhone 11 Pro"
                 />
             </div>
-            <div class="col-span-4 md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-6">
-                <p class="accent accent-above">At @properties, video is a gamechanging marketing tool and we’re using it to tell your home’s story like never before.</p>
+            <div class="col-span-full md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-6">
+                <p class="accent--above-left">At @properties, video is a gamechanging marketing tool and we’re using it to tell your home’s story like never before.</p>
             </div>
         </section>
 
         <section id="signage" class="content-grid">
             <div class="col-span-full">
-                <h3 class="head-2 accent accent-centered text-center">Signage</h3>
+                <h3 class="head-2 accent--above-center text-center">Signage</h3>
             </div>
             <div class="col-span-full lg:col-span-10 lg:col-start-4">
                 <dlp-figure
@@ -65,25 +65,25 @@
                 />
             </div>
             <div class="col-span-full md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-6">
-                <p class="accent accent-above">Bold, Effective, Standing Out from the Rest. That’s how your listing should be seen and there’s no better reinforcement than @properties signage.</p>
+                <p class="accent--above-left">Bold, Effective, Standing Out from the Rest. That’s how your listing should be seen and there’s no better reinforcement than @properties signage.</p>
             </div>
         </section>
 
         <section id="marketing-plan" class="content-grid">
             <div class="col-span-full">
-                <h3 class="head-2 accent accent-centered text-center">Tailored Marketing Plan</h3>
+                <h3 class="head-2 accent--below-center text-center">Tailored Marketing Plan</h3>
             </div>
             <div class="col-span-full md:col-span-6 lg:col-span-7 lg:col-start-2">
                 <dlp-figure
                     :sm="`${publicPath}images/marketing/marketing-plan.jpg`"
                     alt="Woman's hands resting on laptop with flowers and coffee cup nearby"
-                    ar="ar ar-5-4"
+                    ar="ar ar--5-4"
                     animate="shrink"
                 />
             </div>
             <div class="col-span-full md:col-span-6 md:col-start-7 md:content-center lg:col-span-6 lg:col-start-10 content-center">
                 <dlp-transition type="fadeIn slideUp">
-                    <p class="accent accent-above">At @properties, video is a gamechanging marketing tool and we’re using it to tell your home’s story like never before.</p>
+                    <p class="accent--above-left">At @properties, video is a gamechanging marketing tool and we’re using it to tell your home’s story like never before.</p>
                 </dlp-transition>
                 <div class="btn-group">
                     <dlp-button type="button">View Custom Marketing Plan</dlp-button>

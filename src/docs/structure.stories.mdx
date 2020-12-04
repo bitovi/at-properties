@@ -1,7 +1,7 @@
 import { Meta, Canvas, Source } from '@storybook/addon-docs/blocks';
 import dedent from 'ts-dedent';
 
-<Meta title="Foundation/Structure" />
+<Meta title="Style Guide/Structure" />
 
 # Structure
 
@@ -12,8 +12,7 @@ The page follows a semantic structure using HTML5 tags. Note: code is abbreviate
     <title>
   <body>
     <div id="app">
-      <a href="#main">Skip to main content</a>
-      <div id="grids">
+      <a href="#main" class="skip-link">Skip to main content</a>
       <header class="dlp-nav">		
         <nav>
       <main id="main" class="dlp-main">
@@ -27,7 +26,7 @@ The page follows a semantic structure using HTML5 tags. Note: code is abbreviate
         <article id="selling">
         <article id="partners">
         <article id="community">
-      <footer id="contact">
+      <footer class="dlp-footer">
       <div class="dlp-modal">
 `} />
 
@@ -38,6 +37,10 @@ Page titles should be descriptive. Follow this template:
 <Source language='html' code={dedent`
   <title>[Firstname Lastname] - [City, State Abbreviation], Luxury Real Estate Agent - [Company Name]<title>
 `} />
+
+## Navigation
+
+See [Navigation](/?path=/story/pattern-library-components-navigation--page).
 
 ## Content
 
@@ -66,55 +69,59 @@ Example code for the Selling section. Note: code is abbreviated for simplicity (
     <!-- section TITLE, aka. “intro slide” -->
     <header>  
     <!-- section CONTENT: adds left and right borders, applies consistent padding -->
-    <div class="section-content"> 
+    <div className="section-content"> 
       <!-- SUB-SECTION -->
       <section id="pricing">
         <!-- content GRID: sets max-width and provides a grid that content will align to -->
-        <div class="content-grid">
+        <div className="content-grid">
           <!-- COLUMNS of content: classes are used to specify order, column span, and alignment -->
-          <div class="order-1 md:order-2 col-span-4 md:col-span-6 md:col-start-7 lg:col-span-7 lg:col-start-9">
-          <div class="order-2 md:order-1 col-span-4 md:col-span-6 md:col-start-1 lg:col-span-6 lg:col-start-2">
+          <div className="order-1 md:order-2 col-span-4 md:col-span-6 md:col-start-7 lg:col-span-7 lg:col-start-9">
+          <div className="order-2 md:order-1 col-span-4 md:col-span-6 md:col-start-1 lg:col-span-6 lg:col-start-2">
       <!-- SUB-SECTION -->
       <section id="staging">
         <!-- content GRID: sets max-width and provides a grid that content will align to -->
-        <div class="content-grid">
+        <div className="content-grid">
           <!-- COLUMNS of content: classes are used to specify order, column span, and alignment -->
-          <div class="col-span-4 md:col-span-6 md:col-start-7 lg:col-span-7 lg:col-start-9">
-          <div class="col-span-4 md:col-span-6 md:col-start-1 lg:col-span-6 lg:col-start-2">
+          <div className="col-span-4 md:col-span-6 md:col-start-7 lg:col-span-7 lg:col-start-9">
+          <div className="col-span-4 md:col-span-6 md:col-start-1 lg:col-span-6 lg:col-start-2">
 `} />
 
-<img src="images/styleguide/selling.jpg" alt="Comps for Selling section" class="w-full" />
+<img src="images/styleguide/selling.jpg" alt="Comps for Selling section" className="w-full" />
 
 ## Layers
 
 Content will stack along the `z-index` in the following order.
 
 <table>
-  <tr>
-    <th class="w-1/5">z-index</th>
-    <th class="w-1/5">Item</th>
-    <th class="w-3/5">Description</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td><code>#grids</code></td>
-    <td>Used to check alignment during development <em>only</em>.<br /><u>Remove from production/public code</u>.</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td><code>main.dlp-main</code></td>
-    <td>Main content area.</td>
-  </tr>
-  <tr>
-    <td>100</td>
-    <td><code>header.dlp-nav</code></td>
-    <td>Navigation, stuck to the bottom of the screen.</td>
-  </tr>
-  <tr>
-    <td>9998</td>
-    <td><code>div.dlp-modal</code></td>
-    <td>Modals.</td>
-  </tr>
+  <thead>
+    <tr>
+      <th className="w-1/5">z-index</th>
+      <th className="w-1/5">Item</th>
+      <th className="w-3/5">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td><code>#grids</code></td>
+      <td>Used to check alignment during development <em>only</em>.<br /><u>Remove from production/public code</u>.</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td><code>main.dlp-main</code></td>
+      <td>Main content area.</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td><code>header.dlp-nav</code></td>
+      <td>Navigation, stuck to the bottom of the screen.</td>
+    </tr>
+    <tr>
+      <td>9998</td>
+      <td><code>div.dlp-modal</code></td>
+      <td>Modals.</td>
+    </tr>
+  </tbody>
 </table>
 
 ## How to configure
@@ -153,18 +160,18 @@ Define classes in **src/assets/page.styles.scss**. MOVE THIS TO SECTION CONTENT 
 
 ## Accessibility considerations
 
-Relevant <a href="https://www.w3.org/WAI/WCAG21/quickref/">WCAG 2.1 guidelines</a>:
+Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
 
-* Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text. <a href="https://www.w3.org/WAI/WCAG21/quickref/#info-and-relationships">1.3.1 Info and Relationships (Level A)</a>
-* When the sequence in which content is presented affects its meaning, a correct reading sequence can be programmatically determined. <a href="https://www.w3.org/WAI/WCAG21/quickref/#meaningful-sequence">1.3.2 Meaningful Sequence (Level A)</a>
-* In content implemented using markup languages, the purpose of User Interface Components, icons, and regions can be programmatically determined. <a href="">1.3.6 Identify Purpose (Level AAA)</a>
-* A mechanism is available to bypass blocks of content that are repeated on multiple Web pages. <a href="https://www.w3.org/WAI/WCAG21/quickref/#bypass-blocks">2.4.1 Bypass Blocks (Level A)</a>
-* Web pages have titles that describe topic or purpose. <a href="https://www.w3.org/WAI/WCAG21/quickref/#page-titled">2.4.2 Page Titled (Level A)</a>
-* If a Web page can be navigated sequentially and the navigation sequences affect meaning or operation, focusable components receive focus in an order that preserves meaning and operability. <a href="https://www.w3.org/WAI/WCAG21/quickref/#focus-order">2.4.3 Focus Order (Level A)</a>
-* Section headings are used to organize the content. <a href="https://www.w3.org/WAI/WCAG21/quickref/#section-headings">2.4.10 Section Headings (Level AAA)</a>
+* Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text. [1.3.1 Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#info-and-relationships)
+* When the sequence in which content is presented affects its meaning, a correct reading sequence can be programmatically determined. [1.3.2 Meaningful Sequence (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#meaningful-sequence)
+* In content implemented using markup languages, the purpose of User Interface Components, icons, and regions can be programmatically determined. [1.3.6 Identify Purpose (Level AAA)]()
+* A mechanism is available to bypass blocks of content that are repeated on multiple Web pages. [2.4.1 Bypass Blocks (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#bypass-blocks)
+* Web pages have titles that describe topic or purpose. [2.4.2 Page Titled (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#page-titled)
+* If a Web page can be navigated sequentially and the navigation sequences affect meaning or operation, focusable components receive focus in an order that preserves meaning and operability. [2.4.3 Focus Order (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#focus-order)
+* Section headings are used to organize the content. [2.4.10 Section Headings (Level AAA)](https://www.w3.org/WAI/WCAG21/quickref/#section-headings)
 
 ## Components
 
-* <a href="/?path=/story/components-navigation--page">Navigation</a>
-* <a href="/?path=/story/components-section--page">Section</a> Intro, Section Content
-* <a href="/?path=/story/components-modal--page">Modal</a>
+* [Navigation](/?path=/story/pattern-library-components-navigation--page)
+* [Section Intro, Section Content](/?path=/story/pattern-library-components-section--page)
+* [Modal](/?path=/story/pattern-library-components-modal--page)

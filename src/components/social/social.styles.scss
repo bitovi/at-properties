@@ -6,7 +6,7 @@
     svg {
         @apply w-10;
         @apply h-10;
-        fill: theme('colors.primary.900');
+      color: theme('colors.primary.900');
     }
 }
 
@@ -15,37 +15,32 @@
 }
 
 .icon-facebook {
-    &:hover, &:focus, &:active {
-        fill: #1877F2;
-    }
-}
-
-.icon-instagram {
-    &:hover, &:focus, &:active {
-        fill: #E4405F;
-    }
-}
-
-.icon-twitter {
-    &:hover, &:focus, &:active {
-        fill: #1DA1F2;
-    }
-}
-
-.icon-youtube {
-    &:hover, &:focus, &:active {
-        fill: #FF0000;
-    }
-}
-
-.icon-linkedin {
-    &:hover, &:focus, &:active {
-        fill: #0077B5;
-    }
-}
-
-.icon-earth {
-    &:hover, &:focus, &:active {
-      fill: #025A9A;
-    }
+  &:hover, &:focus, &:active {
+    color: #1877F2;
   }
+}
+.icon-instagram {
+  &:hover, &:focus, &:active {
+    color: #E4405F;
+  }
+}
+.icon-twitter {
+  &:hover, &:focus, &:active {
+    color: #1DA1F2;
+  }
+}
+.icon-linkedin {
+  &:hover, &:focus, &:active {
+    color: #0077B5;
+  }
+}
+.icon-youtube {
+  &:hover, &:focus, &:active {
+    color: #FF0000;
+  }
+}
+.icon-earth {
+  &:hover, &:focus, &:active {
+    fill: #025A9A;
+  }
+}

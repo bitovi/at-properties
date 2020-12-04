@@ -14,22 +14,18 @@
                     >
                     <swiper-slide>
                         <dlp-display-card
-                            ar='ar-3-2'
                             source="images/partners/ProperTitle-Logo_horiz_blue.png"/>
                     </swiper-slide>
                     <swiper-slide>
                         <dlp-display-card
-                            ar='ar-3-2'
                             source="images/partners/proper-rate.jpeg"/>
                     </swiper-slide>
                     <swiper-slide>
-                        <dlp-display-card 
-                            ar='ar-3-2'
+                        <dlp-display-card
                             source="images/partners/at-commercial-logo.png"/>
                     </swiper-slide>
                     <swiper-slide>
                         <dlp-display-card
-                            ar='ar-3-2'
                             source="images/partners/chicago-asso-realtors.jpeg"/>
                     </swiper-slide>
                 </dlp-carousel>

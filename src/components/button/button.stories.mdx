@@ -1,0 +1,140 @@
+import { Meta, Preview, Source, Canvas, Story, ArgsTable } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+import DLPButton from './button.component.vue'
+
+<Meta 
+  title="Pattern Library/Components/Button" 
+  argTypes={{
+    nativeType: { control: { type: 'select', options: [null, 'button', 'submit', 'reset'] } }
+  }}
+/>
+
+# Button
+
+* Buttons are used to open or close (toggle) **modals**. 
+* Button elements can include **text**, an **icon** (e.g., X to close a modal), or text with an icon (not used for @properties).
+* Buttons have two styles: **dark** for light backgrounds; **light** for dark backgrounds.
+
+<Canvas>
+  <Story name="Default">
+    {{
+      template: `<dlp-button v-bind="$props">Agent Bio</dlp-button>`
+    }}
+  </Story>
+  <Story name="CloseBtn">
+    {{
+      template: `<dlp-close-btn v-bind="$props">Close</dlp-close-btn>`
+    }}
+  </Story>
+</Canvas>
+
+<ArgsTable of={DLPButton} />
+
+<Preview>
+<div className="grid grid-cols-2">
+  <div className="bg-white p-5 self-center">
+    <button className="btn btn--style-dark">
+      <span className="btn__text">Agent Bio</span>
+    </button>
+  </div>
+  <div className="bg-primary-900 p-5 self-center">
+    <button className="btn btn--style-light">
+      <span className="btn__icon">
+        <svg role="img" aria-label="Close">
+          <use href="images/icons/icons.svg#icon-close"></use>
+        </svg>
+      </span>
+    </button>
+  </div>
+</div>
+</Preview>
+
+## How to configure
+
+Define classes in **src/components/button/button.styles.scss**.
+
+<Source language='css' code={dedent`
+  .class { 
+    /* outline: 1px solid theme('colors.white'); */
+    width: 1em;                /* set icon size to font size */
+    height: 1em;
+  }
+`} />
+
+<Source language='css' code={dedent`
+  /* Button */
+  .btn {
+    @apply border-4;           /* border-width: 4px; */
+    @apply transition-all;     /* transition-property: all; */
+    @apply duration-500;       /* transition-duration: 500ms; */
+    &:hover { 
+      @apply bg-primary-500;   /* background-color: theme('colors.primary.500'); */
+      @apply text-white;       /* color: white; */
+      /* outline: 1px solid theme('colors.primary.500'); */
+    }
+    &:focus, &:active { 
+      @apply bg-primary-500;   /* background-color: theme('colors.primary.500'); */
+      @apply text-white;       /* color: white; */
+      /* outline: 1px dashed theme('colors.system.focus'); */
+    }
+  }
+  /* Button: elements */
+  .btn span {
+    @apply inline-block;       /* display: inline-block; */
+  }
+  .btn__text {
+    @apply text-sm;            /* font-size: theme('fontSize.sm'); */
+    @apply font-medium;        /* font-weight: 500; */
+    @apply capitalize;         /* text-transform: capitalize; */
+    @apply px-3;               /* padding-top/bottom: 12px; */
+    @apply py-4;               /* padding-left/right: 16px; */
+    @screen lg {               /* @media (min-width: theme(screens.lg) */
+      @apply px-6;             /* padding-left/right: 24px; */
+    }
+  }
+  .btn__icon {
+    @apply fill-current;       /* fill: currentColor; */
+    @apply text-base;          /* font-size: theme('fontSize.base'); */
+    /* width: 1em;                /* set icon size to font size */
+    /* height: 1em;
+    @apply p-3;                /* padding: 12px; */
+  }
+  /* Button: styles */
+  .btn--style-dark {
+    @apply bg-primary-900;     /* background-color: theme('colors.primary.900'); */
+    @apply border-white;       /* border-color: theme('colors.white'); */
+    @apply text-white;         /* color: white; */
+    /* outline: 1px solid theme('colors.primary.900'); */
+  }
+  .btn--style-light {
+    @apply bg-white;           /* background-color: theme('colors.white'); */
+    @apply border-transparent; /* border-color: theme('colors.transparent'); */
+    @apply text-primary-900;   /* color: theme('colors.primary.900'); */
+    /* outline: 1px solid theme('colors.white'); */
+  }
+  /* Button: spacing */
+  p + .btn {
+    @apply mt-9;               /* margin-top: 36px; */
+    @apply mr-6;               /* margin-right: 24px; */
+    @screen lg {               /* @media (min-width: theme(screens.lg) */
+      @apply mt-12;            /* margin-top: 48px; */
+      @apply mr-10;            /* margin-right: 40px; */
+    }
+  }
+  .btn + .btn, 
+  div + .btn {
+    @apply mt-6;               /* margin-top: 24px; */
+    @screen lg {               /* @media (min-width: theme(screens.lg) */
+      @apply mt-10;            /* margin-top: 40px; */
+    }
+  }
+`} />
+
+## Accessibility considerations
+
+Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
+
+* For user interface components with labels that include text or images of text, the name contains the text that is presented visually. [2.5.3 Label in Name (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#label-in-name)
+* The size of the target for pointer inputs is at least 44 by 44 CSS pixels except when: 1) Equivalent: The target is available through an equivalent link or control on the same page that is at least 44 by 44 CSS pixels; 2) Inline: The target is in a sentence or block of text; 3) User Agent Control: The size of the target is determined by the user agent and is not modified by the author; 4) Essential: A particular presentation of the target is essential to the information being conveyed. [2.5.5 Target Size (Level AAA)](https://www.w3.org/WAI/WCAG21/quickref/#target-size)
+* When any user interface component receives focus, it does not initiate a change of context. [3.2.1 On Focus (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#on-focus)
+* Labels or instructions are provided when content requires user input. [3.3.2 Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#labels-or-instructions)

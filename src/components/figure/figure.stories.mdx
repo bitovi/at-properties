@@ -1,0 +1,24 @@
+import { Meta, Canvas, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+<Meta title="Pattern Library/Components/Figure" />
+
+# Figure
+
+## How to configure
+
+Define classes in **src/components/figure/figure.styles.scss**.
+
+<Source language='css' code={dedent`
+  .class { }
+`} />
+
+## Writing alt text
+
+* When writing image descriptions, describe the style of the home and any distinguising features. 
+
+## Accessibility considerations
+
+Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
+
+* [Figure and figcaption – extended alternate text for screen readers?](https://www.hassellinclusion.com/blog/figure-figcaption-extended-alternate-text-screen-readers/)

@@ -1,8 +1,8 @@
 <template>
     <div
         class="dlp-figure-wrapper" 
-        :class="[{ 'sticky top-4': isSticky }, { 'hide-border': !showBorder }]">
-        <div class="dlp-figure-border"></div>
+        :class="[{ 'pinned': isSticky }]">
+        <div v-if="showBorder" class="dlp-figure-border"></div>
         <figure 
             v-bind="$attrs" 
             class="dlp-figure" 
@@ -13,7 +13,7 @@
                 <source v-if="md" media="(min-width:768px)" :srcset="md">
                 <source v-if="sm" :srcset="sm">
                 <img 
-                    alt="alt" 
+                    :alt="alt" 
                     :src="defaultImage" />
             </picture>
             <figcaption v-if="caption" class="dlp-figure-caption head-6">
@@ -92,16 +92,16 @@ export default {
         if(!hasMotion) return
         if(this.animate === 'shrink'){
             gsap.fromTo(this.getCurrentSrc(), {
-                scale: 1.3,
+                scale: 1.1,
             },
             {
                 scrollTrigger: {
                     trigger: this.getCurrentSrc(),
-                    start: "top center",
+                    start: "top 80%", 
+                    end: "top 20%", 
                     scrub: true,
                     toggleActions: "play none none reverse",
                 },
-                
                 scale: 1,
                 ease: "expoScale(1.1, 1)"
             })
