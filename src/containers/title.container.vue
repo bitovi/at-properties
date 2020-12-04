@@ -24,6 +24,6 @@ export default {
     /* Fill entire screen, nav appears from below on scroll */
     .dlp-title-page {
         height: 100vh;
-        z-index: 100;
+        z-index: 1000;
     }
 </style>
