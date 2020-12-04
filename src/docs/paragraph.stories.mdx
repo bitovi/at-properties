@@ -19,6 +19,22 @@ import dedent from 'ts-dedent';
     <h6 class="head-6">Address</h6>
     <address>1234 Main Street,<br />Chicago, IL 60647</address>
   </div>
+  <div>
+    <h6 class="head-6">Ordered List</h6>
+    <ol>
+      <li>List item</li>
+      <li>List item</li>
+      <li>List item</li>
+    </ol>
+  </div>
+  <div>
+    <h6 class="head-6">Unordered List</h6>
+    <ul>
+      <li>List item</li>
+      <li>List item</li>
+      <li>List item</li>
+    </ul>
+  </div>
 </div>
 </Preview>
 
@@ -38,6 +54,16 @@ Define classes in **src/assets/type.styles.scss**.
   * + p, * + address, * + ol, * + ul, 
   p + *, address + *, ol + *, ul + * {
     @apply mt-3;               /* margin-top: 12px; */
+  }
+  /* List */ 
+  ol, ul {
+    @apply list-inside;        /* list-style-position: inside; */
+  }
+  ol {
+    @apply list-decimal;       /* list-style-type: decimal; */
+  }
+  ul {
+    @apply list-disc;          /* list-style-type: disc; */
   }
 `} />
 

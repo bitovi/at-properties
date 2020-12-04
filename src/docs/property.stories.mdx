@@ -5,12 +5,72 @@ import dedent from 'ts-dedent';
 
 # Property
 
+* A property includes an image (figure), price, and address.
+* Multiple properties are shown separated by a horizontal rule.
+
+<Preview>
+<div className="properties">
+  <div className="property">
+    <div className="property__img">
+      <figure>
+        <picture>
+          <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTh8fGhvbWV8ZW58MHwwfDB8&auto=format&fit=crop&w=800&q=60" alt="" />
+        </picture>
+      </figure>
+    </div>
+    <div className="property__desc">
+      <p className="property__price">$589,500</p>
+      <address>26W268 Inwood Lane<br />Winfield, IL 60190</address>
+    </div>
+  </div>
+  <div className="property">
+    <div className="property__img">
+      <figure>
+        <picture>
+          <img src="https://images.unsplash.com/photo-1416331108676-a22ccb276e35?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDN8fGhvbWV8ZW58MHwwfDB8&auto=format&fit=crop&w=800&q=60" alt="" />
+        </picture>
+      </figure>
+    </div>
+    <div className="property__desc">
+      <p className="property__price">$1,140,100</p>
+      <address>701 W Thomas Rd<br />Wheaton, IL 60187</address>
+    </div>
+  </div>
+</div>
+</Preview>
+
 ## How to configure
 
-Define classes in **src/components/salesCard/salesCard.styles.scss**.
+Define classes in **src/components/property/property.styles.scss**.
 
 <Source language='css' code={dedent`
-  .class { }
+  /* Property */
+  .properties {
+    @apply space-y-5;          /* 20px of space between items and dividers */
+    @apply divide-y;           /* Place 1px horizontal dividers between items */
+    @apply divide-primary-100; /* Divider color is light gray (Primary 100) */
+  }
+  .property {
+    @apply grid;               /* display: grid; */
+    @apply grid-cols-2;        /* grid-template-columns: repeat(2, minmax(0, 1fr)); */
+    @apply gap-4;              /* gap: 16px; */
+    @apply pt-4;               /* padding-top: 16px; */
+    @screen lg {
+      @apply grid-cols-3;      /* grid-template-columns: repeat(3, minmax(0, 1fr)); */
+    }
+  }
+  .property_img picture {
+    @extend ar;                /* Use an aspect ratio of... */
+    @extend ar--4-3;           /* 4:3 */
+  }
+  .property__desc {
+    @screen lg {
+      @apply col-span-2;       /* grid-column: span 2 / span 2; */
+    }
+  }
+  .property__price {
+    @apply font-medium;        /* font-weight: 500; */
+  }
 `} />
 
 ## Accessibility considerations
