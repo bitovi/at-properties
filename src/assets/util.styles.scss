@@ -20,7 +20,7 @@
 }
 
 /* Modal */
-.dlp-modal-open {
+.lock-scroll{
   height: 100vh;
   overflow-y: hidden;
 }
@@ -36,7 +36,8 @@ svg {
   @apply block;              /* display: block; */
   @apply h-0;                /* height: 0px; */
   @apply overflow-hidden;    /* overflow: hidden; */
-  img {
+  img,
+  picture {
     @apply absolute;         /* position: absolute; */
     @apply top-0;            /* top: 0; */
     @apply left-0;           /* left: 0; */
@@ -46,6 +47,7 @@ svg {
     @apply object-top;       /* object-position: top center; */
   }
 }
+
 .ar--2-3 {
   padding-top: min(80vh, calc(3/2 * 100%));
 }
@@ -66,9 +68,4 @@ svg {
 }
 .ar--16-9 {
   padding-top: min(80vh, calc(9/16 * 100%));
-}
-
-/* Positioning Tools */
-.top-4 {
-  top: theme('spacing.4');
 }

@@ -37,14 +37,14 @@
                                 <youtube :fitParent="true" :video-id="videoId" :player-vars="playerVars"/>
                             </div>
                         </div>
-                        <span v-if="caption" class="head-6 accent accent-centered text-white pt-4">{{caption}}</span>
+                        <span v-if="caption" class="head-6 accent--above-center text-white pt-4">{{caption}}</span>
                     </div>
                 </div>
         </div>
     </transition>
 </template>
 <script>
-import A11yStrings from '../../assets/strings/a11y.i18n.json'
+import A11yStrings from '../../../assets/strings/a11y.i18n.json'
 // ref to <body>
 const ElBody = document.getElementsByTagName("body")[0]
 
@@ -83,7 +83,7 @@ export default {
     methods: {
         open() {
             try {
-                ElBody.classList.add('dlp-modal-open')
+                ElBody.classList.add('lock-scroll')
             } catch (error) {
                 console.warn('Unable to fix scroll positon')   
             }
@@ -92,7 +92,7 @@ export default {
         },
         close: function() {
             try {
-                ElBody.classList.remove('dlp-modal-open')
+                ElBody.classList.remove('lock-scroll')
             } catch (error) {
                 console.warn('Unable to release scroll position')   
             }

@@ -5,21 +5,8 @@
     @apply text-center;
     width: 232px;
 
-    .dlp-bio-card-name {
-
-    }
-
-    .dlp-bio-card-caption {
-
-    }
-
     figcaption {
         @apply pt-6;
     }
 
-    .accent:before,
-    .accent:after {
-        margin-top: 0.4em;
-        margin-bottom: 0.4em;
-    }
 }

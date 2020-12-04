@@ -1,5 +1,5 @@
 <template>
-    <header class='dlp-page dlp-hero justify-between' :style="`background-image: url('${publicPath}images/intro/bg-intro.jpg')`">
+    <header class='dlp-title-page justify-between' :style="`background-image: url('${publicPath}images/intro/bg-intro.jpg')`">
         <img class="mt-4 md:mt-12 w-2/4 md:w-auto mb-4" alt="@properties" :src="`${publicPath}images/intro/logo-atproperties.svg`">
         <div class="container mx-auto flex flex-col text-center">
             <img class="pb-8 sm:pb-20 w-2/4 mx-auto" alt="Stop Looking. Start Finding." :src="`${publicPath}images/intro/stop-looking.svg`">
@@ -19,3 +19,11 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+    /* Fill entire screen, nav appears from below on scroll */
+    .dlp-title-page {
+        height: 100vh;
+        z-index: 1000;
+    }
+</style>

@@ -1,29 +1,31 @@
 
-.dlp-figure {
+.dlp-figure-wrapper {
     @apply relative;
+    overflow: hidden;
+    .dlp-figure {
+        @apply relative;
+    }
 
     &.dark-text .dlp-figure-caption {
         color: theme('colors.primary.900');
     }
 
-    /* Commenting this out because it creates a circular dependency */
-    /* &.sticky {
+    &.pinned {
         @apply sticky;
         top: theme('spacing.8')
-    } */
+    } 
 
-    &.hide-border {
-        img,
-        picture {
-            outline: none;
-        }
+    .dlp-figure-border {
+        @apply absolute;
+        @apply w-full;
+        @apply h-full;
+        z-index: 80;
+        outline: 1px solid #FFFFFF;
+        outline-offset: -14px;
     }
 
     img,
     picture {
-        outline: 1px solid theme('colors.white');
-        //Build order requires this be hard coded
-        outline-offset: -14px;
         width: 100%;
     }
 
@@ -34,14 +36,14 @@
         display: block;
         width: 100%;
         text-align: center;
-        padding-bottom: theme('spacing.8');
+        padding-bottom: theme('spacing.4');
         &:after {
             height: 2px;
             display: block;
             width: theme('spacing.8');
             background: theme('colors.secondary.500');
             content: '';
-            margin: 8px auto;
+            margin: 18px auto;
         }
     }
 }
