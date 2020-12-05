@@ -28,7 +28,7 @@
                         <div v-html="i18n.bio.brief"></div>
                     </dlp-transition>
                     <div class="btn-group">
-                        <dlp-button type="button" @click="showModal('AgentModal')">Read Full Bio</dlp-button>
+                        <dlp-button type="button" @click="showModal('AgentModal', $event)">Read Full Bio</dlp-button>
                         <dlp-slide-in ref="AgentModal">
                             <h3 class="head-5 accent--above-left mb-8">Agent Bio</h3>
                             <div v-html="i18n.bio.full"></div>
@@ -89,19 +89,19 @@
                 <section id="agent-stats" class="">
                     <h3 class="head-5 accent--above-left">Agent Stats</h3>
                     <dlp-transition type="fadeIn slideUp">
-                        <p class="mb-4">
+                        <p class="pb-4 mb-2 border-b border-primary-100">
                             <span class="head-3 block text-secondary-500" v-html="i18n.stats[0]['span-1']"></span>
                             <span class="head-6" v-html="i18n.stats[0]['span-2']"></span>
                         </p>
                     </dlp-transition>
                     <dlp-transition type="fadeIn slideUp">
-                        <p class="mb-4">
+                        <p class="pb-4 mb-2 border-b border-primary-100">
                             <span class="head-3 block text-secondary-500" v-html="i18n.stats[1]['span-1']"></span>
                             <span class="head-6" v-html="i18n.stats[1]['span-2']"></span>
                         </p>
                     </dlp-transition>
                     <dlp-transition type="fadeIn slideUp">
-                        <p class="mb-4">
+                        <p>
                             <span class="head-3 block text-secondary-500">{{i18n.stats[2]['span-1']}}</span>
                             <span class="head-6" v-html="i18n.stats[2]['span-2']"></span>
                         </p>
@@ -137,9 +137,9 @@ export default {
         }
     },
     methods: {
-        showModal: function(name) {
+        showModal: function(name, evt) {
             if(this.$refs[name]){
-                this.$refs[name].open()
+                this.$refs[name].open(evt)
             }
         }
     }

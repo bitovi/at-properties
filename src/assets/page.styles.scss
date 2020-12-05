@@ -45,6 +45,7 @@ body {
   }
 }
 
-.content-grid + .content-grid  {
+.content-grid + .content-grid,
+section + section  {
   @apply pt-16;
 }
