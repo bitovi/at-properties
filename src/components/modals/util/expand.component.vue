@@ -18,7 +18,8 @@ export default {
         return {
             isActive: false,
             isOpen: false,
-            origin: 0,
+            originY: 0,
+            originX: 0,
             caller: null
         }
     },
@@ -35,12 +36,13 @@ export default {
             this.onResize()
 
             gsap.set(this.$refs.expando, {
-                clipPath: `circle(20% at 40% ${this.origin}%)`
+                clipPath: `circle(20% at ${this.originX}% ${this.originY}%)`
             })
 
             gsap.to(this.$refs.expando, {
-                duration: 1,
-                clipPath: `circle(100% at 40% ${this.origin}%)`,
+                duration: 1.5,
+                ease: "power1.out",
+                clipPath: `circle(100% at ${this.originX}% ${this.originY}%)`,
                 onComplete: () => this.$emit('openDone')
             })
 
@@ -48,14 +50,17 @@ export default {
         close() {
             gsap.to(this.$refs.expando, {
                 duration: 1,
-                clipPath: `circle(0% at 40% ${this.origin}%)`,
+                clipPath: `circle(0% at 40% ${this.originY}%)`,
                 onComplete: () => this.$emit('closeDone')
             })
         },
         onResize() {
             const viewPortHeight = window.innerHeight;
+            const viewPortWidth = window.innerWidth;
             const offsetY = this.caller.clientY
-            this.origin = ((offsetY / viewPortHeight) * 100).toFixed(2)
+            const offsetX = this.caller.clientX
+            this.originY = ((offsetY / viewPortHeight) * 100).toFixed(2)
+            this.originX = ((offsetX / viewPortWidth) * 100).toFixed(2)
         }
         
     },
@@ -64,7 +69,7 @@ export default {
         window.addEventListener("resize", bounceRipple);
 
         gsap.set(this.$refs.expando, {
-            clipPath: `circle(0% at 40% 0%)`
+            clipPath: `circle(0% at 0% 0%)`
         })
     }
 }

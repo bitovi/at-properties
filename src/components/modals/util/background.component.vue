@@ -60,6 +60,7 @@ export default {
                 duration: 0.85,
                 alpha: isFull ? TARGET_ALPHA : 0, 
                 radius: isFull ? radius : 0,
+                ease: "power2.out",
                 onUpdate: function(){
                     ctx.clearRect(0, 0, vw, vh)
                     ctx.globalCompositeOperation = "source-over"
