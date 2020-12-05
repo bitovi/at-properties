@@ -66,10 +66,10 @@
                 <button class="" @click="showModal('ContactModal')" >Contact Me</button>
             </div>
             <dlp-slide-in ref="ContactModal">
-                <h3 class="head-5 accent--above-left mb-8">Thad Wong</h3>
+                <h3 class="head-5 accent--above-left mb-8">CARRIE MCCORMICK</h3>
                 <address class="mt-4">
-                    <a :href="`tel:+1-312.999.0848`">312.999.0848</a><br /><br />
-                    <a :href="`mailto:Thad@atproperties.com`">Thad@atproperties.com</a>
+                    <a :href="`tel:+1-312-961-4612`">312.961.4612</a><br /><br />
+                    <a :href="`mailto:Thad@atproperties.com`">Carrie@atproperties.com</a>
                 </address>
                 <dlp-social 
                     facebook="#test"
