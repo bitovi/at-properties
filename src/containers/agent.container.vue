@@ -28,7 +28,7 @@
                         <div v-html="i18n.bio.brief"></div>
                     </dlp-transition>
                     <div class="btn-group">
-                        <dlp-button type="button" @click="showModal('AgentModal')">Read Full Bio</dlp-button>
+                        <dlp-button type="button" @click="showModal('AgentModal', $event)">Read Full Bio</dlp-button>
                         <dlp-slide-in ref="AgentModal">
                             <h3 class="head-5 accent--above-left mb-8">Agent Bio</h3>
                             <div v-html="i18n.bio.full"></div>
@@ -137,9 +137,9 @@ export default {
         }
     },
     methods: {
-        showModal: function(name) {
+        showModal: function(name, evt) {
             if(this.$refs[name]){
-                this.$refs[name].open()
+                this.$refs[name].open(evt)
             }
         }
     }

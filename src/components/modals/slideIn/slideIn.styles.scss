@@ -1,13 +1,11 @@
-.dlp-slide-in-mask {
+.dlp-slide-in-wrapper {
     @apply fixed;
     @apply top-0;
     @apply left-0;
     @apply w-screen;
     @apply h-screen;
     z-index: 9998;
-    background-color: rgba(0, 0, 0, .8);
     overflow-x: auto;
-    transition: opacity .3s ease;
 }
 
 .dlp-slide-in {
@@ -20,7 +18,7 @@
     background-color: #fff;
     transition: all 0.5s ease-in-out;
     overflow: hidden;
-
+    z-index: 1000;
     @media (min-width: theme('screens.md')) {
         width: 552px;
         padding: 30px 8px;
