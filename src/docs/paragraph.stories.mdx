@@ -46,8 +46,10 @@ Define classes in **src/assets/type.styles.scss**.
   /* Paragraph */
   p, address, li { 
     @apply not-italic;         /* font-style: normal; */
+    @apply leading-normal;     /* line-height: 1.5em; */
     @screen lg {
       @apply text-lg;          /* font-size: 20px */
+      /* line-height: 1.6;        /* line-height: 32px; */
     }
   }
   /* Paragraph: spacing */
