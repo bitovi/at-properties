@@ -30,9 +30,59 @@
             <div class="col-span-full text-center">
                 <h3 class="head-2 accent--above-center">The Numbers Don't Lie</h3>
             </div>
-            <div class="col-span-full text-center">
-                <p>[ STATS HERE - TBD ]</p>
+            
+            <div class="col-span-full lg:col-span-14 lg:col-start-2">
+                <div class="stat-img__grid">
+                    <div class="stat-img__tile">
+                        <figure>
+                        <picture class="ar ar--1-1">
+                            <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fGxpdmluZyUyMHJvb218ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="" aria-hidden="true" />
+                        </picture>
+                        </figure>
+                        <div class="stat-img__border">
+                        <div class="stat-img__content">
+                            <div class="stat">
+                            <span>#10</span> 
+                            <span>ranking according to Real Trends</span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                
+                    <div class="stat-img__tile">
+                        <figure>
+                        <picture class="ar ar--1-1">
+                            <img src="https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8YmVkcm9vbXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="" aria-hidden="true" />
+                        </picture>
+                        </figure>
+                        <div class="stat-img__border">
+                        <div class="stat-img__content">
+                            <div class="stat">
+                            <span aria-label="50 billion dollars">$50B</span> 
+                            <span>total home sales</span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="stat-img__tile">
+                        <figure>
+                        <picture class="ar ar--1-1">
+                            <img src="https://images.unsplash.com/photo-1562663474-6cbb3eaa4d14?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8YmVkcm9vbXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="" aria-hidden="true" />
+                        </picture>
+                        </figure>
+                        <div class="stat-img__border">
+                        <div class="stat-img__content">
+                            <div class="stat">
+                            <span>25%</span> 
+                            <span>of our listings sold in-house</span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+
             <div class="col-span-full flex">
                 <dlp-button type="button" class="mx-auto" @click="showModal('LocalStatsModal')">View local stats</dlp-button>
                 <dlp-slide-in ref="LocalStatsModal">

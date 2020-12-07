@@ -97,11 +97,11 @@ export default {
             {
                 scrollTrigger: {
                     trigger: this.getCurrentSrc(),
-                    start: "top 80%", 
-                    end: "top 20%", 
-                    scrub: true,
-                    toggleActions: "play none none reverse",
+                    start: "top 50%",
+                    // scrub: true,
+                    toggleActions: "play none none reverse"
                 },
+                duration: 0.7,
                 scale: 1,
                 ease: "expoScale(1.1, 1)"
             })
