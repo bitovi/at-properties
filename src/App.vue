@@ -10,9 +10,11 @@
         <TitleContainer />
         <AgentContainer />
       </article>
+      <hr />
       <article id="co-agent">
         <CoagentContainer />
       </article>
+      <hr />
       <article id="team">
         <TeamContainer />
       </article>
@@ -70,6 +72,7 @@
           subheading="Community" />
         <CommunityContainer />
       </article>
+      <hr />
       <footer id="contact">
         <ContactContainer />
       </footer>

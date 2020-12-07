@@ -20,6 +20,7 @@ body {
     margin: 0 20px;
     padding: 96px 8px;
   }
+
 }
 
 .content-grid {
@@ -48,4 +49,8 @@ body {
 .content-grid + .content-grid,
 section + section  {
   @apply pt-16;
+}
+
+.section-divider {
+  border-bottom: 1px solid theme('colors.primary.200');
 }
