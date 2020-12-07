@@ -1,6 +1,6 @@
 <template>
     <div class='section-content'>
-        <div class="content-grid pb-16">
+        <div class="content-grid">
             <div class="col-span-full text-center">
                 <img
                     class="mx-auto" 
@@ -20,7 +20,7 @@
                 />
             </div>
             <div class="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
-                <section id="agent-bio" class="mb-16">
+                <section id="agent-bio" class="">
                     
                     <h2 class="head-2">{{i18n.name}}</h2>
                     <h3 class="head-5 accent--above-left mb-4">Agent Bio</h3>
@@ -38,7 +38,7 @@
                     </div>
                 </section>
 
-                <section id="agent-testimonials" class="mb-16">
+                <section id="agent-testimonials" class="">
                     <h3 class="head-5 accent--above-left mb-4">Testimonials</h3>
                     <dlp-transition type="fadeIn slideUp" v-for="t in i18n.testimonials.slice(0, 3)" v-bind:key="t.id" >
                         <dlp-testimonial
@@ -60,7 +60,7 @@
                     </div>
                 </section>
 
-                <section id="agent-sales" class="mb-16">
+                <section id="agent-sales" class="">
                     <h3 class="head-5 accent--above-left mb-4">Recent Sales</h3>
 
                     <dlp-transition type="fadeIn slideUp" v-for="s in i18n.sales.slice(0, 3)" v-bind:key="`brief-${s.id}`" >
@@ -86,7 +86,7 @@
                     </div>
                 </section>
 
-                <section id="agent-stats" class="mb-16">
+                <section id="agent-stats" class="">
                     <h3 class="head-5 accent--above-left">Agent Stats</h3>
                     <dlp-transition type="fadeIn slideUp">
                         <p class="mb-4">
@@ -122,7 +122,6 @@
                 </section>
             </div>
         </div>
-        <hr />
     </div>
 </template>
 
