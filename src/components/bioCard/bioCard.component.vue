@@ -1,6 +1,8 @@
 <template>
     <figure class="dlp-bio-card">
-        <img :src="source" :alt="name"/>
+        <div class="dpl-bio-card--image" :class="[{ 'ar': ar}, ar]">
+            <img :src="source" :alt="name"/>
+        </div>
         <figcaption>
             <span class="head-6 block mb-2">{{name}}</span>
             <span v-if="caption" class="accent--above-center block">{{caption}}</span>
@@ -23,6 +25,9 @@ export default {
             type: String,
             default: null
         },
+        ar: {
+            type: String
+        }
     }
 }
 </script>

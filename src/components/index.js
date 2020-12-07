@@ -12,6 +12,7 @@ import DisplayCard from './displayCard/displayCard.component'
 import Social from './social/social.component'
 import BioCard from './bioCard/bioCard.component.vue'
 import Carousel from './carousel/carousel.component.vue'
+import FlatScroll from './flatScroll/flatScroll.component.vue'
 
 import Transition from './transition/transition.component.vue'
 
@@ -37,6 +38,8 @@ Vue.component(Carousel.name, Carousel)
 
 Vue.component(Transition.name, Transition)
 
+Vue.component(FlatScroll.name, FlatScroll)
+
 
 export {
     ScrollNotify,
@@ -54,6 +57,7 @@ export {
     VideoModal,
     BioCard,
     Carousel,
-    Transition
+    Transition,
+    FlatScroll
 }
 

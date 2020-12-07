@@ -60,37 +60,15 @@
 
         <section>
             <h2 class="head-5 text-center accent--below-center mb-12">Team Members</h2>
-            <dlp-carousel
-                :options="{spaceBetween: 30}"
-                :hasScrollNav="true"
-                >
-                <swiper-slide>
-                    <dlp-bio-card source="images/team/bio-1.jpg" name="Jenny Wilson" caption="Lead Broker" />
-                </swiper-slide>
-                <swiper-slide>
-                    <dlp-bio-card source="images/team/bio-2.jpg" name="Annette Black" caption="Lead Broker" />
-                </swiper-slide>
-                <swiper-slide>
-                    <dlp-bio-card source="images/team/bio-3.jpg" name="Theresa Webb" caption="Lead Broker" />
-                </swiper-slide>
-                <swiper-slide>
-                    <dlp-bio-card source="images/team/bio-4.jpg" name="Savannah Nguyen" caption="Lead Broker" />
-                </swiper-slide>
-                <swiper-slide>
-                    <dlp-bio-card source="images/team/bio-1.jpg" name="Jenny Wilson" caption="Lead Broker" />
-                </swiper-slide>
-                <swiper-slide>
-                    <dlp-bio-card source="images/team/bio-2.jpg" name="Annette Black" caption="Lead Broker" />
-                </swiper-slide>
-                <swiper-slide>
-                    <dlp-bio-card source="images/team/bio-3.jpg" name="Theresa Webb" caption="Lead Broker" />
-                </swiper-slide>
-                <swiper-slide>
-                    <dlp-bio-card source="images/team/bio-4.jpg" name="Savannah Nguyen" caption="Lead Broker" />
-                </swiper-slide>
-
-            </dlp-carousel>
-
+            <dlp-flat-scroll>
+                <dlp-bio-card source="images/team/Olivia_Main.jpg" name="Olivia Carlson" caption="Lead Broker"  ar="ar--3-4"/>
+                <dlp-bio-card source="images/team/Paul-Headshot.jpg" name="Paul Siebert" caption="Broker"  ar="ar--3-4"/>
+                <dlp-bio-card source="images/team/LoumenaDa.jpg" name="Dani Loumena" caption="Broker"  ar="ar--3-4"/>
+                <dlp-bio-card source="images/team/Lindsey-Crop.jpeg" name="Lindsey Matejak" caption="Broker"  ar="ar--3-4"/>
+                <dlp-bio-card source="images/team/david-lubega.jpeg" name="David Lubega" caption="Broker"  ar="ar--3-4"/>
+                <dlp-bio-card source="images/team/christine-hooper.jpeg" name="Christine Hooper" caption="Broker"  ar="ar--3-4"/>
+                <dlp-bio-card source="images/team/lou-prima.jpeg" name="Lou Prima" caption="Broker"  ar="ar--3-4"/>
+            </dlp-flat-scroll>
         </section>
     </div>
 </template>

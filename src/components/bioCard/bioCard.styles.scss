@@ -3,10 +3,17 @@
     @apply flex;
     @apply flex-col;
     @apply text-center;
-    width: 232px;
 
     figcaption {
         @apply pt-6;
     }
 
+    .dpl-bio-card--image {
+        width: 160px;
+        
+        @media (min-width: theme('screens.lg')) {
+            width: 240px;
+        }
+    }
+    
 }
