@@ -28,7 +28,7 @@
   @apply font-medium;        /* font-weight: 500; */
   @apply tracking-widest;    /* letter-spacing: 0.10em; */
 }
-.head-1 { @apply text-5xl; } /* font-size: 42px */
+.head-1 { font-size: 5vh;} /* font-size: 42px */
 .head-2 { @apply text-3xl; } /* font-size: 34px */
 .head-3 { @apply text-2xl; } /* font-size: 28px */
 .head-4 { @apply text-xl; }  /* font-size: 24px */
@@ -116,37 +116,4 @@ strong {
   font-weight: 500;
 } 
 
-
-
-.accent {
-    &:before {
-        @include accent-psudo('8');
-        margin: theme('spacing.4') 0 theme('spacing.4');
-    }
-
-    &.accent-centered {
-        &:before, 
-        &:after {
-            margin: theme('spacing.4') auto;
-        }
-    }
-
-    &.accent-below {
-        &:before {
-            display: none;
-        }
-
-        &:after {
-            @include accent-psudo('8');
-            margin: theme('spacing.4') auto;
-        }
-    }
-
-    &.accent-wide {
-        &:before, 
-        &:after {
-            width: theme('spacing.16');
-        }
-    }
-}
 */

@@ -22,7 +22,7 @@
             <div class="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
                 <section id="agent-bio" class="">
                     
-                    <h2 class="head-2">{{i18n.name}}</h2>
+                    <h2 class="head-1">{{i18n.name}}</h2>
                     <h3 class="head-5 accent--above-left mb-4">Agent Bio</h3>
                     <dlp-transition type="fadeIn slideUp">
                         <div v-html="i18n.bio.brief"></div>
