@@ -56,8 +56,8 @@ Define classes in **src/components/button/button.styles.scss**.
 <Source language='css' code={dedent`
   .class { 
     /* outline: 1px solid theme('colors.white'); */
-    width: 1em;                /* set icon size to font size */
-    height: 1em;
+    /* width: 1em;                /* set icon size to font size */
+    /* height: 1em; */
   }
 `} />
 
@@ -114,11 +114,11 @@ Define classes in **src/components/button/button.styles.scss**.
   }
   /* Button: spacing */
   p + .btn {
-    @apply mt-9;               /* margin-top: 36px; */
-    @apply mr-6;               /* margin-right: 24px; */
+    @apply mt-8;               /* margin-top: 32px; */
+    @apply mr-4;               /* margin-right: 16px; */
     @screen lg {               /* @media (min-width: theme(screens.lg) */
       @apply mt-12;            /* margin-top: 48px; */
-      @apply mr-10;            /* margin-right: 40px; */
+      @apply mr-8;             /* margin-right: 32px; */
     }
   }
   .btn + .btn, 
