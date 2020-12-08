@@ -19,20 +19,22 @@
 
         <section id="company-timeline" class="content-grid">
             <div class="col-span-full text-center">
-                <h3 class="head-2 accent--above-center">Company Timeline</h3>
+                <h3 class="head-2 accent--below-center">Company Timeline</h3>
+
             </div>
             <div class="col-span-full text-center">
                 <p>[ CAROUSEL HERE ]</p>
             </div>
         </section>
 
-        <section id="company-stats" class="content-grid">
-            <div class="col-span-full text-center">
-                <h3 class="head-2 accent--above-center">The Numbers Don't Lie</h3>
+        <section id="company-stats">
+            <div class="text-center">
+                <h3 class="head-2 accent--below-center mb-12">The Numbers Don't Lie</h3>
             </div>
-            <div class="col-span-full text-center">
-                <p>[ STATS HERE - TBD ]</p>
-            </div>
+            <dlp-stat-grid />
+            
+
+
             <div class="col-span-full flex">
                 <dlp-button type="button" class="mx-auto" @click="showModal('LocalStatsModal')">View local stats</dlp-button>
                 <dlp-slide-in ref="LocalStatsModal">
@@ -48,6 +50,7 @@
 </template>
 <script>
 import Strings from '../assets/strings/company.i18n.json'
+import StatGrid from './statGrid.container'
 export default {
     name: 'companyContainer',
     data(){
@@ -55,6 +58,9 @@ export default {
             i18n: Strings,
             publicPath: process.env.BASE_URL
         }
+    },
+    components: {
+        [StatGrid.name]: StatGrid
     },
     methods: {
         showModal: function(name) {

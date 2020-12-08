@@ -25,7 +25,7 @@ export default {
     },
     data() {
         //https://github.com/surmon-china/vue-awesome-swiper/issues/717
-        //Fix pagination when multiple swipers used
+        //Fix scrollbar when multiple swipers used
         const _id = 'swiper' + Math.round(Math.random() * 100000)
         return {
             swiperId: _id,
@@ -33,7 +33,9 @@ export default {
                 ...this.options,
                 slidesPerView: 'auto',
                 scrollbar: this.hasScrollNav ? {
-                    el: `#dlp-carousel-nav-${_id}`
+                    el: `#dlp-carousel-nav-${_id}`,
+                    draggable: true,
+                    dragSize: 100
                 } : false
             }
         }

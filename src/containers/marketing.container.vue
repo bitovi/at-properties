@@ -11,25 +11,30 @@
                     >
                     <swiper-slide>
                         <dlp-display-card 
-                            source="http://placekitten.com/254/255"
+                            source="images/marketing/marketing-1.jpg"
                             caption="Online Advertising"/>
                     </swiper-slide>
                     <swiper-slide>
                         <dlp-display-card 
                             class="pt-16"
-                            source="http://placekitten.com/g/254/255"
+                            source="images/marketing/marketing-2.png"
                             caption="Yard Signs"/>
                     </swiper-slide>
                     <swiper-slide>
                         <dlp-display-card 
-                            source="http://placekitten.com/254/255"
+                            source="images/marketing/marketing-3.jpg"
                             caption="Social Media"/>
                     </swiper-slide>
                     <swiper-slide>
                         <dlp-display-card 
+                            source="images/marketing/marketing-1.jpg"
+                            caption="Flyers"/>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <dlp-display-card 
                             class="pt-16"
-                            source="http://placekitten.com/g/254/255"
-                            caption="Sales Kittens"/>
+                            source="images/marketing/marketing-2.png"
+                            caption="Magazine Feature"/>
                     </swiper-slide>
                 </dlp-carousel>
 
@@ -81,9 +86,9 @@
                     animate="shrink"
                 />
             </div>
-            <div class="col-span-full md:col-span-6 md:col-start-7 md:content-center lg:col-span-6 lg:col-start-10 content-center">
+            <div class="col-span-full md:col-span-6 md:col-start-7 md:content-center lg:col-span-6 lg:col-start-10 content-center self-center">
                 <dlp-transition type="fadeIn slideUp">
-                    <p class="accent--above-left">At @properties, video is a gamechanging marketing tool and we’re using it to tell your home’s story like never before.</p>
+                    <p class="accent--above-left">A fully integrated marketing plan is key to getting your home sold quickly and for top dollar. No home is the same, so we provide a customized marketing plan tailored for your home.</p>
                 </dlp-transition>
                 <div class="btn-group">
                     <dlp-button type="button">View Custom Marketing Plan</dlp-button>
