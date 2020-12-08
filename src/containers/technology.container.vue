@@ -2,10 +2,12 @@
     <div class='section-content'>
         <div class="content-grid">
             <div class="order-1 md:order-2 col-span-4 md:col-span-6 md:col-start-7 lg:col-span-7 lg:col-start-9">
-                <dlp-figure
+                <dlp-video-card
                     :lg="`${publicPath}images/technology/laptop-lg.jpg`"
                     alt="Man's hands resting on a laptop"
                     animate="shrink"
+                    videoId="9wYizJiPrNI"
+                    title="Watch"
                 />
             </div>
             <div class="order-2 md:order-1 col-span-4 md:col-span-6 md:col-start-1 lg:col-span-6 lg:col-start-2">
