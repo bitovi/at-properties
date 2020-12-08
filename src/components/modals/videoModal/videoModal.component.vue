@@ -72,19 +72,19 @@ export default {
             if (this.show && e.keyCode == 27) {
                 this.close()
             }
-        })  
+        })
     },
     methods: {
         open(evt) {
             this.showModal = true
             this.openerEl = evt
-
-            if(hasMotion){
-                gsap.set(this.$refs.dlpContent, { opacity: 0})
-            }
             
             this.$nextTick(()=> {
                 this.$refs.dlpBg.open(this.openerEl)
+
+                if(hasMotion){
+                    gsap.set(this.$refs.dlpContent, { opacity: 0})
+                }
             })
             
             try {
@@ -94,14 +94,11 @@ export default {
             }
         },
         showContent() {
-            this.$nextTick(()=> {
-                console.log(this.$refs.dlpContent)
-                if(hasMotion){
-                    gsap.to(this.$refs.dlpContent, { 
-                        opacity: 1
-                    })
-                }
-            })
+            if(hasMotion){
+                gsap.to(this.$refs.dlpContent, { 
+                    opacity: 1
+                })
+            }
             
         },
         cleanup() {
@@ -110,8 +107,19 @@ export default {
             } catch (error) {
                 console.warn('Unable to release scroll position')   
             }
-            this.showModal = false
-            this.$emit('close')
+            if(hasMotion){
+                gsap.to(this.$refs.dlpContent, { 
+                    opacity: 0,
+                    onComplete: () => {
+                        this.showModal = false
+                        this.$emit('close')
+                    }
+                })
+            } else {
+                this.showModal = false
+                this.$emit('close')
+            }
+            
         },
         close: function() {
             this.$refs.dlpBg.close(this.openerEl)
