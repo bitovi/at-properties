@@ -5,12 +5,9 @@ import Nav from './nav/nav.component'
 import Figure from './figure/figure.component'
 import Rating from './rating/rating.component'
 import Testimonial from './testimonial/testimonial.component'
-import SalesCard from './salesCard/salesCard.component'
 import CloseBtn from './close/close.component'
 import TitlePage from './title/title.page'
-import DisplayCard from './displayCard/displayCard.component'
 import Social from './social/social.component'
-import BioCard from './bioCard/bioCard.component.vue'
 import Carousel from './carousel/carousel.component.vue'
 import FlatScroll from './flatScroll/flatScroll.component.vue'
 
@@ -19,6 +16,15 @@ import Transition from './transition/transition.component.vue'
 //Modals
 import AppeaModal from './modals/appearModal/appearModal.component'
 import VideoModal from './modals/videoModal/videoModal.component.vue'
+
+
+//Cards
+import SalesCard from './salesCard/salesCard.component'
+import DisplayCard from './displayCard/displayCard.component'
+import BioCard from './bioCard/bioCard.component.vue'
+import VideoCard from './videoCard/videoCard.component.vue'
+
+
 
 Vue.component(ScrollNotify.name, ScrollNotify)
 Vue.component(Button.name, Button)
@@ -39,6 +45,7 @@ Vue.component(Carousel.name, Carousel)
 Vue.component(Transition.name, Transition)
 
 Vue.component(FlatScroll.name, FlatScroll)
+Vue.component(VideoCard.name, VideoCard)
 
 
 export {
@@ -58,6 +65,7 @@ export {
     BioCard,
     Carousel,
     Transition,
-    FlatScroll
+    FlatScroll,
+    VideoCard
 }
 
