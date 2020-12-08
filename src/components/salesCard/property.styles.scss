@@ -3,6 +3,12 @@
   @apply space-y-4;          /* 16px of space between items and dividers */
   @apply divide-y;           /* Place 1px horizontal dividers between items */
   @apply divide-primary-100; /* Divider color is light gray (Primary 100) */
+  @apply mt-6;               /* margin-top: 24px; */
+  @apply mb-8;               /* margin-top: 32px; */
+  @screen lg {
+    @apply mt-8;             /* margin-top: 32px; */
+    @apply mb-12;            /* margin-top: 48px; */
+  }
 }
 .property {
   @apply grid;               /* display: grid; */
@@ -28,4 +34,8 @@
 }
 .property__price {
   @apply font-medium;        /* font-weight: 500; */
+  @apply leading-none;       /* line-height: 1; */
+}
+.property__price + address {
+  @apply mt-2;               /* margin-top: 8px; */
 }

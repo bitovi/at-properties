@@ -5,7 +5,28 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Skip link */
+.skip-link {
+  @apply sr-only;              /* hide the element */
+  @apply bg-white;             /* background-color: theme('colors.white'); */
+  @apply border-system-focus;  /* border: 1px solid theme('colors.system.focus'); */
+  @apply text-xl;              /* font-size: 24px; */
+  @apply p-5;                  /* padding: 20px; */
+  &:focus {
+    @apply not-sr-only;        /* show the element */
+    @apply bg-white;           /* background-color: theme('colors.white'); */
+    @apply border-system-focus;  /* border: 1px solid theme('colors.system.focus'); */
+    @apply block;              /* display: block; */
+    @apply text-lg;            /* font-size: 20px; */
+    @apply py-3;               /* padding-top/bottom: 12px; */
+    @apply px-5;               /* padding-left/right: 20px; */
+    @apply absolute;           /* position: absolute; */
+    top: 8px;
+    left: 8px;
+  }
+}
 
+/* Section */
 .section-content {
   margin: 0 8px;
   border-left: 4px double theme('colors.primary.200');
@@ -22,7 +43,6 @@ body {
   }
 
 }
-
 .content-grid {
   width: 100%;
   margin: 0 auto;
@@ -44,9 +64,11 @@ body {
   @media (min-width: 1441px) {
     max-width: 1440px;
   }
-}
+}/* 
+.content-grid + .content-grid  {
+  @apply pt-16;
+} */
 
-.content-grid + .content-grid,
 section + section  {
   @apply pt-16;
 }

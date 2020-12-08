@@ -53,13 +53,13 @@ import DLPButton from './button.component.vue'
 
 Define classes in **src/components/button/button.styles.scss**.
 
-<Source language='css' code={dedent`
+<!-- <Source language='css' code={dedent`
   .class { 
     /* outline: 1px solid theme('colors.white'); */
-    width: 1em;                /* set icon size to font size */
-    height: 1em;
+    /* width: 1em;                /* set icon size to font size */
+    /* height: 1em; */
   }
-`} />
+`} /> -->
 
 <Source language='css' code={dedent`
   /* Button */
@@ -85,7 +85,8 @@ Define classes in **src/components/button/button.styles.scss**.
   .btn__text {
     @apply text-sm;            /* font-size: theme('fontSize.sm'); */
     @apply font-medium;        /* font-weight: 500; */
-    @apply capitalize;         /* text-transform: capitalize; */
+    @apply tracking-widest;    /* letter-spacing: 0.10em; */
+    @apply uppercase;          /* text-transform: uppercase; */
     @apply px-3;               /* padding-top/bottom: 12px; */
     @apply py-4;               /* padding-left/right: 16px; */
     @screen lg {               /* @media (min-width: theme(screens.lg) */
@@ -114,15 +115,14 @@ Define classes in **src/components/button/button.styles.scss**.
   }
   /* Button: spacing */
   p + .btn {
-    @apply mt-9;               /* margin-top: 36px; */
-    @apply mr-6;               /* margin-right: 24px; */
+    @apply mt-8;               /* margin-top: 32px; */
+    @apply mr-4;               /* margin-right: 16px; */
     @screen lg {               /* @media (min-width: theme(screens.lg) */
       @apply mt-12;            /* margin-top: 48px; */
-      @apply mr-10;            /* margin-right: 40px; */
+      @apply mr-8;             /* margin-right: 32px; */
     }
   }
-  .btn + .btn, 
-  div + .btn {
+  .btn + .btn {
     @apply mt-6;               /* margin-top: 24px; */
     @screen lg {               /* @media (min-width: theme(screens.lg) */
       @apply mt-10;            /* margin-top: 40px; */

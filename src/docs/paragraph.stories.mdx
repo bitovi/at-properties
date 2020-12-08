@@ -5,9 +5,12 @@ import dedent from 'ts-dedent';
 
 # Paragraph
 
-* Paragraphs are dark gray (Primary 900), Gotham Light (300), 16px/20px mobile/desktop, 150% leading (line-height). 
+* Paragraphs are dark gray (Primary 900), Gotham Light (300), 16px/24px leading (1.5) on mobile, 20px/32px (1.6) leading on desktop. 
+* Addresses and lists follow the same style as paragraphs.
+* There is 16px of space between a paragraph, address, or list and any element above or below it.
 * [Accents](/?path=/story/style-guide-object-styles--page#accents) may be added to paragraphs.
-* See [Spacing](/?path=/docs/style-guide-spacing--page) for details about space around paragraphs.
+* Links are dark gray (Primary 900) and underlined by default, blue (System Focus) and not underlined on focus and hover.
+* Contact Info (in the Agent section and page footer) has 20px of space between the heading and links, and 16px of space between links.
 
 <Preview>
 <div className="grid grid-cols-2 gap-10">
@@ -35,6 +38,13 @@ import dedent from 'ts-dedent';
       <li>List item</li>
     </ul>
   </div>
+  <div>
+    <h3 className="head-5 accent--above-left">Contact Info</h3>
+    <address className="contact-info">
+      <a href="tel:+1-312.961.4612">312.961.4612</a>
+      <a href="mailto:Carrie@atproperties.com">Carrie@atproperties.com</a>
+    </address>
+  </div>
 </div>
 </Preview>
 
@@ -46,14 +56,16 @@ Define classes in **src/assets/type.styles.scss**.
   /* Paragraph */
   p, address, li { 
     @apply not-italic;         /* font-style: normal; */
-    @screen lg {
+    @apply leading-normal;     /* line-height: 1.5em; */
+    /* @media (min-width: theme('screens.lg')) { */
       @apply text-lg;          /* font-size: 20px */
+      /* line-height: 1.6;        /* line-height: 32px; */
     }
   }
   /* Paragraph: spacing */
   * + p, * + address, * + ol, * + ul, 
   p + *, address + *, ol + *, ul + * {
-    @apply mt-3;               /* margin-top: 12px; */
+    @apply mt-4;               /* margin-top: 16px; */
   }
   /* List */ 
   ol, ul {
@@ -64,6 +76,23 @@ Define classes in **src/assets/type.styles.scss**.
   }
   ul {
     @apply list-disc;          /* list-style-type: disc; */
+  }
+  /* Links */
+  a, a:visited {
+    @apply text-primary-900;   /* color: theme('colors.primary.900'); */
+    @apply underline;          /* text-decoration: underline; */
+  }
+  a:focus, a:hover, a:active {
+    @apply text-system-focus;  /* color: theme('colors.primary.900'); */
+    @apply no-underline;       /* text-decoration: none; */
+  }
+  /* Contact info */
+  .contact-info {
+    @apply mt-5;               /* margin-top: 20px; */
+    a {
+      @apply block;            /* display: block; */
+      @apply mt-4;             /* margin-top: 16px; */
+    }
   }
 `} />
 

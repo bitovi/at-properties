@@ -1,11 +1,11 @@
-import { Meta, Canvas, Source } from '@storybook/addon-docs/blocks';
+import { Meta, Preview, Source } from '@storybook/addon-docs/blocks';
 import dedent from 'ts-dedent';
 
 <Meta title="Style Guide/Structure" />
 
 # Structure
 
-The page follows a semantic structure using HTML5 tags. Note: code is abbreviated for simplicity (e.g., no end/closing tags).
+The page follows a semantic structure using HTML5 tags. *Note*: code is abbreviated for simplicity (e.g., no end/closing tags).
 
 <Source language='html' code={dedent`
   <head>
@@ -13,8 +13,8 @@ The page follows a semantic structure using HTML5 tags. Note: code is abbreviate
   <body>
     <div id="app">
       <a href="#main" class="skip-link">Skip to main content</a>
-      <header class="dlp-nav">		
-        <nav>
+      <header class="dlp-title">
+      <nav class="dlp-nav">
       <main id="main" class="dlp-main">
         <article id="agent">
         <article id="co-agent">
@@ -30,7 +30,9 @@ The page follows a semantic structure using HTML5 tags. Note: code is abbreviate
       <div class="dlp-modal">
 `} />
 
-## Page title
+## Page Title
+
+*Disambiguation*: This refers to the `title` tag of the HTML document, *not* the Title animation at the top of the page.
 
 Page titles should be descriptive. Follow this template:
 
@@ -38,15 +40,55 @@ Page titles should be descriptive. Follow this template:
   <title>[Firstname Lastname] - [City, State Abbreviation], Luxury Real Estate Agent - [Company Name]<title>
 `} />
 
+## Skip Link
+
+Skip links are a recommended accessibility best practice. They are invisible until focus is brought to them. (Tab to the skip link to see it.)
+
+<Preview>
+<div className="relative overflow-y-scroll border border-primary-900 text-base">
+  <a href="#main" className="skip-link">Skip to main content</a>
+  <div id="main" className="pt-40">Main content is here</div>
+</div>
+</Preview>
+
+Define classes in **src/assets/page.styles.scss**.
+
+<Source language='html' code={dedent`
+  /* Skip link */
+  .skip-link {
+    @apply sr-only;              /* hide the element */
+    @apply bg-white;             /* background-color: theme('colors.white'); */
+    @apply border-system-focus;  /* border: 1px solid theme('colors.system.focus'); */
+    @apply text-xl;              /* font-size: 24px; */
+    @apply p-5;                  /* padding: 20px; */
+    &:focus {
+      @apply not-sr-only;        /* show the element */
+      @apply bg-white;           /* background-color: theme('colors.white'); */
+      @apply border-system-focus;  /* border: 1px solid theme('colors.system.focus'); */
+      @apply block;              /* display: block; */
+      @apply text-xl;            /* font-size: 24px; */
+      @apply py-3;               /* padding-top/bottom: 12px; */
+      @apply px-5;               /* padding-left/right: 20px; */
+      @apply absolute;           /* position: absolute; */
+      top: 8px;
+      left: 8px;
+    }
+  }
+`} />
+
 ## Navigation
 
-See [Navigation](/?path=/story/pattern-library-components-navigation--page).
+See [Navigation](/?path=/story/pattern-library-containers-navigation--page).
+
+## Title
+
+See [Title](/?path=/story/pattern-library-containers-title--page).
 
 ## Content
 
-* Page content is broken into sections. Each section is coded as `article`. 
-* The Contact section includes legal disclaimers. It is coded as `footer`.
-* Some sections have an intro "slide" (e.g., Agent, Technology, Marketing); others do not (e.g., Co-Agent, Team, Contact). Each intro is coded as a `header` for that `article`.
+* Page content is broken into sections. Each section is coded as `article`. See [Section](/?path=/story/pattern-library-containers-section--page).
+* The Contact section includes legal disclaimers. It is coded as `footer`. See [Footer](/?path=/story/pattern-library-containers-footer--page).
+* Some sections have an intro "slide" (e.g., Company, Technology, Marketing); others do not (e.g., Co-Agent, Team, Contact). Each intro is coded as a `header` for that `article`.
 * Sections can have sub-sections. Each sub-section is coded as `section` (e.g., the Agent section has sub-sections: agent bio, testimonials, recent sales, stats, contact).
 * The content area (i.e., `.section-content`) has a max-width of 1440px and will be centered on screen.
 * Content will align to a column grid.
@@ -88,9 +130,30 @@ Example code for the Selling section. Note: code is abbreviated for simplicity (
 
 <img src="images/styleguide/selling.jpg" alt="Comps for Selling section" className="w-full" />
 
+Define the `container` max-width and add support for a 16-column `grid` in **tailwind.config.js**.
+
+<Source language='js' code={dedent`
+  container: {
+    xl: '1440px',
+    center: true
+  },
+  extend: {
+    gridTemplateColumns: {
+      '16': 'repeat(16, minmax(0, 1fr))',
+    },
+    gridColumnStart: {
+      '13': '13',
+      '14': '14',
+      '15': '15',
+      '16': '16',
+      '17': '17',
+    }
+  }
+`} />
+
 ## Layers
 
-Content will stack along the `z-index` in the following order.
+Content will stack along the `z-index` in the following order. <span class="highlight">Need to update this.</span>
 
 <table>
   <thead>
@@ -113,8 +176,18 @@ Content will stack along the `z-index` in the following order.
     </tr>
     <tr>
       <td>30</td>
-      <td><code>header.dlp-nav</code></td>
+      <td><code>nav.dlp-nav</code></td>
       <td>Navigation, stuck to the bottom of the screen.</td>
+    </tr>
+    <tr>
+      <td>?</td>
+      <td><code>header.dlp-title</code></td>
+      <td>Title: animated intro to the page.</td>
+    </tr>
+    <tr>
+      <td>?</td>
+      <td><code>a.skip-link</code></td>
+      <td>Skip link.</td>
     </tr>
     <tr>
       <td>9998</td>
@@ -123,40 +196,6 @@ Content will stack along the `z-index` in the following order.
     </tr>
   </tbody>
 </table>
-
-## How to configure
-
-Define the `container` max-width and add support for a 16-column `grid` in **tailwind.config.js**.
-
-<Source language='js' code={dedent`
-  container: {
-    xl: '1440px',
-    center: true
-  },
-  extend: {
-    gridTemplateColumns: {
-      '16': 'repeat(16, minmax(0, 1fr))',
-    },
-    gridColumnStart: {
-      '13': '13',
-      '14': '14',
-      '15': '15',
-      '16': '16',
-      '17': '17',
-    }
-  }
-`} />
-
-Define classes in **src/assets/page.styles.scss**. MOVE THIS TO SECTION CONTENT COMPONENT?
-
-<Source language='css' code={dedent`
-  .section-content {
-    ...
-  }
-  .section grid {
-    ...
-  }
-`} />
 
 ## Accessibility considerations
 
@@ -173,5 +212,7 @@ Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
 ## Components
 
 * [Navigation](/?path=/story/pattern-library-components-navigation--page)
-* [Section Intro, Section Content](/?path=/story/pattern-library-components-section--page)
+* [Title](/?path=/story/pattern-library-components-title--page)
+* [Section](/?path=/story/pattern-library-components-section--page)
+* [Footer](/?path=/story/pattern-library-components-footer--page)
 * [Modal](/?path=/story/pattern-library-components-modal--page)
