@@ -35,7 +35,7 @@ import dedent from 'ts-dedent';
 
 * Accents are red (Secondary 500), 2px high, 32 or 64px wide.
 * Accents can appear above or below [headings](/?path=/story/pattern-library-components-heading--page) or [paragraphs](/?path=/story/pattern-library-components-paragraph--page), left aligned or centered.
-* Spacing around accents is 8, 12, or 16px.
+* Spacing between accents and text is usually 16px. For `accent--below-center`, the spacing is text -- 16px -- accent -- 24px on mobile, 32px on desktop -- text. For level 6 headings (`.head-6`), the spacing is 8px -- accent -- 8px.
 
 <Preview>
 <div className="grid grid-cols-2 gap-10">
@@ -58,7 +58,8 @@ import dedent from 'ts-dedent';
     <h6 className="head-6 accent--below-center">H6 Accent below center</h6>
   </div>
   <div className="col-span-full text-center">
-    <h2 className="head-2 accent--below-center-wide">Accent below center wide</h2>
+    <h1 className="head-2 accent--below-center-wide">Accent below center wide</h1>
+    <h2 className="head-6">Subheading text</h2>
   </div>
 </div>
 </Preview>
@@ -67,16 +68,16 @@ import dedent from 'ts-dedent';
 
 Define classes in **src/assets/object.styles.scss**.
 
-<Source language='css' code={dedent`
+<Source language='html' code={dedent`
   /* Accent */
   .accent--above-left:before, 
   .accent--above-center:before, 
   .accent--below-center:after, 
   .accent--below-center-wide:after {
     @apply bg-secondary-500;   /* background-color: $secondary-500; */
-    /* content: ''; */
+    content: '';
     @apply block;              /* display: block; */
-    /* height: 2px; */
+    height: 2px;
     @apply w-8;                /* width: 32px; */
     @apply mb-4;               /* margin-bottom: 16px; */
   }
@@ -94,14 +95,14 @@ Define classes in **src/assets/object.styles.scss**.
     @apply ml-auto;            /* margin-left: auto; */
     @apply mr-auto;            /* margin-right: auto; */
     @apply mb-6;               /* margin-bottom: 24px; */
-    @screen lg {
+    @media (min-width: theme('screens.lg')) {
       @apply mb-8;             /* margin-bottom: 32px; */
     }
   }
   .accent--below-center-wide:after {
     @apply w-16;               /* width: 64px; */
   }
-  /* Accent: spacing */
+  /* Accent: exceptions */
   .head-6.accent--above-center:before, 
   .head-6.accent--below-center:after {
     @apply my-2;               /* margin-top/bottom: 8px; */
@@ -113,4 +114,4 @@ Define classes in **src/assets/object.styles.scss**.
 
 Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
 
-* NEED TO ADD
+* <span className="highlight">NEED TO ADD</span>

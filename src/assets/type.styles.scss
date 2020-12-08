@@ -57,8 +57,8 @@ p, address, li {
   @apply not-italic;         /* font-style: normal; */
   @apply leading-normal;     /* line-height: 1.5em; */
   @media (min-width: theme('screens.lg')) {
-    @apply text-lg;        /* font-size: 20px */
-    line-height: 1.6;      /* line-height: 32px; */
+    @apply text-lg;          /* font-size: 20px */
+    line-height: 1.6;        /* line-height: 32px; */
   }
 }
 /* List */ 
@@ -78,11 +78,11 @@ p + *, address + *, ol + *, ul + * {
 }
 /* Links */
 a, a:visited {
-  @apply text-primary-900;   /* color: $primary-900; */
+  @apply text-primary-900;   /* color: theme('colors.primary.900'); */
   @apply underline;          /* text-decoration: underline; */
 }
 a:focus, a:hover, a:active {
-  @apply text-system-focus;  /* color: $primary-900; */
+  @apply text-system-focus;  /* color: theme('colors.primary.900'); */
   @apply no-underline;       /* text-decoration: none; */
 }
 /* Contact info */

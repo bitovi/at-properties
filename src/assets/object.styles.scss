@@ -24,14 +24,14 @@
   @apply ml-auto;            /* margin-left: auto; */
   @apply mr-auto;            /* margin-right: auto; */
   @apply mb-6;               /* margin-bottom: 24px; */
-  @screen lg {
+  @media (min-width: theme('screens.lg')) {
     @apply mb-8;             /* margin-bottom: 32px; */
   }
 }
 .accent--below-center-wide:after {
   @apply w-16;               /* width: 64px; */
 }
-/* Accent: spacing */
+/* Accent: exceptions */
 .head-6.accent--above-center:before, 
 .head-6.accent--below-center:after {
   @apply my-2;               /* margin-top/bottom: 8px; */

@@ -7,7 +7,7 @@ import dedent from 'ts-dedent';
 
 * Headings are dark gray (Primary 900), Gotham Light (300) or Medium (500), various sizes (see below), 150% leading (line-height), 5 or 10% tracking (letter-spacing). 
 * [Accents](/?path=/story/style-guide-object-styles--page#accents) may be added to headings.
-* See [Spacing](/?path=/docs/style-guide-spacing--page) for details about space around headings.
+* Level 1 headings used in the Agent, Co-Agent, and Team sections will scale to fit the available width. <span className="highlight">How is this done?</span>
 
 <Preview>
 <div class="grid grid-cols-1">
@@ -43,7 +43,7 @@ Define classes in **src/assets/type.styles.scss**.
   .head-4 { @apply text-xl; }  /* font-size: 24px */
   .head-5 { @apply text-lg; }  /* font-size: 20px */
   .head-6 { @apply text-sm; }  /* font-size: 14px */
-  @screen lg {
+  @media (min-width: theme('screens.lg')) {
     .head-1 { @apply text-6xl; }  /* font-size: 60px */
     .head-2 { @apply text-5xl; }  /* font-size: 42px */
     .head-3 { @apply text-4xl; }  /* font-size: 39px */
@@ -54,7 +54,7 @@ Define classes in **src/assets/type.styles.scss**.
   /* Heading: spacing */
   .head-1 + .head-5 {
     @apply mt-6;               /* margin-top: 24px; */
-    @screen lg {
+    @media (min-width: theme('screens.lg')) {
       @apply mt-8;             /* margin-top: 32px; */
     }
   }
