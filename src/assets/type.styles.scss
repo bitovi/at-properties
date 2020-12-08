@@ -76,6 +76,23 @@ ul {
 p + *, address + *, ol + *, ul + * {
   @apply mt-3;               /* margin-top: 12px; */
 }
+/* Links */
+a, a:visited {
+  @apply text-primary-900;   /* color: $primary-900; */
+  @apply underline;          /* text-decoration: underline; */
+}
+a:focus, a:hover, a:active {
+  @apply text-system-focus;  /* color: $primary-900; */
+  @apply no-underline;       /* text-decoration: none; */
+}
+/* Contact info */
+.contact-info {
+  @apply mt-5;               /* margin-top: 20px; */
+  a {
+    @apply block;            /* display: block; */
+    @apply mt-4;             /* margin-top: 16px; */
+  }
+}
 
 
 /* Unused */

@@ -47,7 +47,9 @@ svg {
     @apply object-top;       /* object-position: top center; */
   }
 }
-
+.ar--1-1 {
+  padding-top: 100%;
+}
 .ar--2-3 {
   padding-top: min(80vh, calc(3/2 * 100%));
 }

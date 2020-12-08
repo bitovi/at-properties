@@ -35,6 +35,13 @@ import dedent from 'ts-dedent';
       <li>List item</li>
     </ul>
   </div>
+  <div>
+    <h6 className="head-6">Contact Info</h6>
+    <address class="contact-info">
+      <a href="tel:+1-312.961.4612">312.961.4612</a>
+      <a href="mailto:Carrie@atproperties.com">Carrie@atproperties.com</a>
+    </address>
+  </div>
 </div>
 </Preview>
 
@@ -66,6 +73,23 @@ Define classes in **src/assets/type.styles.scss**.
   }
   ul {
     @apply list-disc;          /* list-style-type: disc; */
+  }
+  /* Links */
+  a, a:visited {
+    @apply text-primary-900;   /* color: $primary-900; */
+    @apply underline;          /* text-decoration: underline; */
+  }
+  a:focus, a:hover, a:active {
+    @apply text-system-focus;  /* color: $primary-900; */
+    @apply no-underline;       /* text-decoration: none; */
+  }
+  /* Contact info */
+  .contact-info {
+    @apply mt-5;               /* margin-top: 20px; */
+    a {
+      @apply block;            /* display: block; */
+      @apply mt-4;            /* margin-top: 16px; */
+    }
   }
 `} />
 
