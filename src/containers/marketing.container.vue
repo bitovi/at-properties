@@ -63,10 +63,12 @@
                 <h3 class="head-2 accent--above-center text-center">Signage</h3>
             </div>
             <div class="col-span-full lg:col-span-10 lg:col-start-4">
-                <dlp-figure
+                <dlp-video-card
                     :sm="`${publicPath}images/marketing/signage.jpg`"
                     alt="Play signage video"
                     animate="shrink"
+                    videoId="XZ8F2AJa-_U"
+                    title="Watch"
                 />
             </div>
             <div class="col-span-full md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-6">
