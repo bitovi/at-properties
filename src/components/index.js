@@ -14,16 +14,29 @@ import FlatScroll from './flatScroll/flatScroll.component.vue'
 import Transition from './transition/transition.component.vue'
 
 //Modals
-import AppeaModal from './modals/appearModal/appearModal.component'
-import VideoModal from './modals/videoModal/videoModal.component.vue'
+import {
+    AppearModal,
+    VideoModal
+} from './modals'
 
 
 //Cards
-import SalesCard from './salesCard/salesCard.component'
-import DisplayCard from './displayCard/displayCard.component'
-import BioCard from './bioCard/bioCard.component.vue'
-import VideoCard from './videoCard/videoCard.component.vue'
+import {
+    BioCard,
+    DisplayCard,
+    SalesCard,
+    VideoCard
+} from './cards'
 
+//install modals
+Vue.component(AppearModal.name, AppearModal)
+Vue.component(VideoModal.name, VideoModal)
+
+//install cards
+Vue.component(BioCard.name, BioCard)
+Vue.component(DisplayCard.name, DisplayCard)
+Vue.component(SalesCard.name, SalesCard)
+Vue.component(VideoCard.name, VideoCard)
 
 
 Vue.component(ScrollNotify.name, ScrollNotify)
@@ -32,20 +45,19 @@ Vue.component(Nav.name, Nav)
 Vue.component(Figure.name, Figure)
 Vue.component(Rating.name, Rating)
 Vue.component(Testimonial.name, Testimonial)
-Vue.component(SalesCard.name, SalesCard)
-Vue.component(AppeaModal.name, AppeaModal)
+
+
 Vue.component(CloseBtn.name, CloseBtn)
 Vue.component(TitlePage.name, TitlePage)
-Vue.component(DisplayCard.name, DisplayCard)
+
 Vue.component(Social.name, Social)
-Vue.component(VideoModal.name, VideoModal)
-Vue.component(BioCard.name, BioCard)
+
+
 Vue.component(Carousel.name, Carousel)
 
 Vue.component(Transition.name, Transition)
 
 Vue.component(FlatScroll.name, FlatScroll)
-Vue.component(VideoCard.name, VideoCard)
 
 
 export {
@@ -56,7 +68,7 @@ export {
     Rating,
     Testimonial,
     SalesCard,
-    AppeaModal,
+    AppearModal,
     CloseBtn,
     TitlePage,
     DisplayCard,
