@@ -11,25 +11,30 @@
                     >
                     <swiper-slide>
                         <dlp-display-card 
-                            source="http://placekitten.com/254/255"
+                            source="images/marketing/marketing-1.jpg"
                             caption="Online Advertising"/>
                     </swiper-slide>
                     <swiper-slide>
                         <dlp-display-card 
                             class="pt-16"
-                            source="http://placekitten.com/g/254/255"
+                            source="images/marketing/marketing-2.png"
                             caption="Yard Signs"/>
                     </swiper-slide>
                     <swiper-slide>
                         <dlp-display-card 
-                            source="http://placekitten.com/254/255"
+                            source="images/marketing/marketing-3.jpg"
                             caption="Social Media"/>
                     </swiper-slide>
                     <swiper-slide>
                         <dlp-display-card 
+                            source="images/marketing/marketing-1.jpg"
+                            caption="Flyers"/>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <dlp-display-card 
                             class="pt-16"
-                            source="http://placekitten.com/g/254/255"
-                            caption="Sales Kittens"/>
+                            source="images/marketing/marketing-2.png"
+                            caption="Magazine Feature"/>
                     </swiper-slide>
                 </dlp-carousel>
 

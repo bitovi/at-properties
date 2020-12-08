@@ -9,8 +9,8 @@
                     <dlp-figure 
                         :sm="`${publicPath}images/agent/photo-carrie-mccormick-sm.jpg`"
                         :md="`${publicPath}images/agent/photo-carrie-mccormick-md.jpg`"
-                        alt="Thad Wong"
-                        caption="Thad Wong"
+                        alt="Carrie McCormick"
+                        caption="Carrie McCormick"
                         ar="ar ar--4-5"
                         animate="shrink"
                     />

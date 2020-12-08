@@ -1,0 +1,89 @@
+/* flat-scroll */
+
+.flat-scroll__wrapper {
+    position: relative;
+}
+
+.flat-scroll {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 48px; 
+    text-align: center;
+    white-space: nowrap;
+    
+    .flat-scroll__stage {
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+    }
+  
+    picture {
+        margin-bottom: 24px;
+    }
+}
+  
+.flat-scroll--company {
+    .flat-scroll__stage {
+        @media (min-width: theme('screens.lg')) {
+            gap: 128px;
+        }
+    }
+    
+    picture, p {
+        width: 272px;
+      
+        @media (min-width: theme('screens.lg')) {
+            width: 496px;
+        }
+    }
+    
+    p {
+      white-space: normal;
+    }
+}
+  
+.flat-scroll--marketing, 
+.flat-scroll--partners {
+    .flat-scroll__stage {
+        @media (min-width: theme('screens.lg')) {
+            gap: 64px;
+        }
+    }
+    
+    picture {
+        width: 272px;
+        
+        @media (min-width: theme('screens.lg')) {
+            width: 496px;
+        }
+    }
+    
+    img {
+        object-fit: contain;
+        object-position: center center;
+        padding: 24px 56px;
+        
+        @media (min-width: theme('screens.lg')) {
+            padding: 32px 96px;
+        }
+    }
+}
+  
+.flat-scroll__fade-left, 
+.flat-scroll__fade-right {
+    position: absolute;
+    top: 0;
+    height: calc(100% - 48px);
+    width: 64px;
+}
+.flat-scroll__fade-left {
+    background-image: linear-gradient(to right, theme('colors.white'), transparent);
+    left: 0;
+    opacity: 0;
+}
+.flat-scroll__fade-right {
+    background-image: linear-gradient(to left, theme('colors.white'), transparent);
+    right: 0;
+    opacity: 1;
+}
