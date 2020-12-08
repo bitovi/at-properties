@@ -46,11 +46,12 @@
                 <h3 class="head-2 accent--above-center">Listing Video</h3>
             </div>
             <div class="col-span-2 col-start-2 md:col-span-4 md:col-start-5 lg:col-span-12 lg:col-start-3">
-                <dlp-figure
-                    :sm="`${publicPath}images/marketing/iphone-sm.png`"
-                    :lg="`${publicPath}images/marketing/iphone-lg.png`"
-                    :showBorder="false"
-                    alt="iPhone 11 Pro"
+                <dlp-video-card
+                    :sm="`images/community/video-thumb.jpg`"
+                    alt="Listing Video"
+                    animate="shrink"
+                    videoId="WkflInhRuqE"
+                    title="Lorem ipsum dolor sit amet"
                 />
             </div>
             <div class="col-span-full md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-6">
