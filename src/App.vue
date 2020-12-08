@@ -20,7 +20,7 @@
       </article>
       <article id="company">
         <TitlePage 
-          :backgroundUrl="`${publicPath}images/auxiliary/05-145-oxford-rd-84-a-breathtaking-foyer-with-original-marble-flooring-printjpg-5f628f078b4e2.jpg`"
+          :backgroundUrl="`${publicPath}images/company/bg-company.jpeg`"
           heading="Every home has a story" 
           subheading="Company Profile" />
         <CompanyContainer />
