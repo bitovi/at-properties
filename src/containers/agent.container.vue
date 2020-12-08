@@ -29,10 +29,10 @@
                     </dlp-transition>
                     <div class="btn-group">
                         <dlp-button type="button" @click="showModal('AgentModal', $event)">Read Full Bio</dlp-button>
-                        <dlp-slide-in ref="AgentModal">
+                        <dlp-appear-modal ref="AgentModal">
                             <h3 class="head-5 accent--above-left mb-8">Agent Bio</h3>
                             <div v-html="i18n.bio.full"></div>
-                        </dlp-slide-in>
+                        </dlp-appear-modal>
                         <dlp-button type="button" @click="showModal('AgentVideo')">Watch Agent Video</dlp-button>
                         <dlp-video-modal ref="AgentVideo" videoId="U0DYr9w9SX0" :caption="i18n.name"/>
                     </div>
@@ -48,7 +48,7 @@
                     </dlp-transition>
                     <div class="btn-group">
                         <dlp-button type="button" @click="showModal('TestimonialsModal')">View more testimonials</dlp-button>
-                        <dlp-slide-in ref="TestimonialsModal">
+                        <dlp-appear-modal ref="TestimonialsModal">
                             <h3 class="head-5 accent--above-left mb-8">Testimonials</h3>
                             <dlp-testimonial 
                                 v-for="t in i18n.testimonials" 
@@ -56,7 +56,7 @@
                                 :score="t.rating">
                                     <div v-html="t.quote"></div>
                                 </dlp-testimonial>
-                        </dlp-slide-in>
+                        </dlp-appear-modal>
                     </div>
                 </section>
 
@@ -73,7 +73,7 @@
                     
                     <div class="btn-group">
                         <dlp-button type="button" @click="showModal('SalesModal')">View more sales</dlp-button>
-                        <dlp-slide-in ref="SalesModal">
+                        <dlp-appear-modal ref="SalesModal">
                             <h3 class="head-5 accent--above-left mb-8">Recent Sales</h3>
                             <dlp-sales-card 
                                 v-for="sale in i18n.sales" 
@@ -82,7 +82,7 @@
                                 :lg="sale.photo.lg" 
                                 :price="sale.price" 
                                 :address="sale.address" />
-                        </dlp-slide-in>
+                        </dlp-appear-modal>
                     </div>
                 </section>
 

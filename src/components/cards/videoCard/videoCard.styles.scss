@@ -1,0 +1,25 @@
+
+.dlp-video-card {
+    @apply relative;
+    cursor: pointer;
+    .dlp-video-card--overlay {
+        @apply absolute;
+        @apply z-10;
+        @apply flex;
+        @apply items-center;
+        @apply justify-center;
+        @apply w-full;
+        @apply h-full;
+        opacity: 0.75;
+
+        &.dark svg {
+            fill: theme('colors.black');
+        }
+        
+        &.light svg {
+            fill: theme('colors.white');
+        }
+    }
+
+
+}

@@ -1,0 +1,97 @@
+import { Meta, Preview, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+<Meta title="Pattern Library/Components/Property" />
+
+# Property
+
+* A property includes an image (4:3 ratio), price, and address.
+* The component uses a 2-col, 16px gap layout for small screens; 3-col = 1/3 + 2/3, 24px gap layout for large screens.
+* Properties are shown separated by a 1px light gray (Primary 100) horizontal rule, with 16px between the rule and each item.
+* **Accessibility**: Notice that images use `alt=""`. Read more about [writing alt text](/?path=/story/pattern-library-components-figure--page#writing-alt-text) for images (See [Figure](/?path=/story/pattern-library-components-figure--page)).
+* NEED NOTE ABOUT ANIMATION
+
+<Preview>
+<div className="properties w-2/3">
+  <div className="property">
+    <div className="property__img">
+      <figure>
+        <picture>
+          <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTh8fGhvbWV8ZW58MHwwfDB8&auto=format&fit=crop&w=800&q=60" alt="" />
+        </picture>
+      </figure>
+    </div>
+    <div className="property__desc">
+      <p className="property__price">$589,500</p>
+      <address>26W268 Inwood Lane<br />Winfield, IL 60190</address>
+    </div>
+  </div>
+  <div className="property">
+    <div className="property__img">
+      <figure>
+        <picture>
+          <img src="https://images.unsplash.com/photo-1416331108676-a22ccb276e35?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDN8fGhvbWV8ZW58MHwwfDB8&auto=format&fit=crop&w=800&q=60" alt="" />
+        </picture>
+      </figure>
+    </div>
+    <div className="property__desc">
+      <p className="property__price">$1,140,100</p>
+      <address>701 W Thomas Rd<br />Wheaton, IL 60187</address>
+    </div>
+  </div>
+</div>
+</Preview>
+
+## How to configure
+
+Define classes in **src/components/property/property.styles.scss**.
+
+<Source language='css' code={dedent`
+  /* Property */
+  .properties {
+    @apply space-y-4;          /* 16px of space between items and dividers */
+    @apply divide-y;           /* Place 1px horizontal dividers between items */
+    @apply divide-primary-100; /* Divider color is light gray (Primary 100) */
+    @apply mt-6;               /* margin-top: 24px; */
+    @apply mb-8;               /* margin-top: 32px; */
+    @screen lg {
+      @apply mt-8;             /* margin-top: 32px; */
+      @apply mb-12;            /* margin-top: 48px; */
+    }
+  }
+  .property {
+    @apply grid;               /* display: grid; */
+    @apply grid-cols-2;        /* grid-template-columns: repeat(2, minmax(0, 1fr)); */
+    @apply gap-4;              /* gap: 16px; */
+    @apply pt-4;               /* padding-top: 16px; */
+    @screen lg {
+      @apply grid-cols-3;      /* grid-template-columns: repeat(3, minmax(0, 1fr)); */
+      @apply gap-6;            /* gap: 24px; */
+    }
+    &:first-child {
+      @apply pt-0;             /* padding-top: 0; */
+    }
+  }
+  .property_img picture {
+    @extend .ar;               /* Use an aspect ratio of... */
+    @extend .ar--4-3;          /* 4:3 */
+  }
+  .property__desc {
+    @screen lg {
+      @apply col-span-2;       /* grid-column: span 2 / span 2; */
+    }
+  }
+  .property__price {
+    @apply font-medium;        /* font-weight: 500; */
+    @apply leading-none;       /* line-height: 1; */
+  }
+  .property__price + address {
+    @apply mt-2;               /* margin-top: 8px; */
+  }
+`} />
+
+## Accessibility considerations
+
+Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
+
+* asdf

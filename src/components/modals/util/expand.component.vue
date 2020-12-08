@@ -31,7 +31,7 @@ export default {
                 this.open()
             }
         },
-        open(evt) {
+        open(evt = {}) {
             this.caller = evt
             this.onResize()
 
@@ -40,9 +40,9 @@ export default {
             })
 
             gsap.to(this.$refs.expando, {
-                duration: 1.5,
+                duration: 1,
                 ease: "power1.out",
-                clipPath: `circle(100% at ${this.originX}% ${this.originY}%)`,
+                clipPath: `circle(110% at ${this.originX}% ${this.originY}%)`,
                 onComplete: () => this.$emit('openDone')
             })
 
@@ -57,8 +57,8 @@ export default {
         onResize() {
             const viewPortHeight = window.innerHeight;
             const viewPortWidth = window.innerWidth;
-            const offsetY = this.caller.clientY
-            const offsetX = this.caller.clientX
+            const offsetY = this.caller.clientY || viewPortHeight
+            const offsetX = this.caller.clientX || viewPortWidth
             this.originY = ((offsetY / viewPortHeight) * 100).toFixed(2)
             this.originX = ((offsetX / viewPortWidth) * 100).toFixed(2)
         }

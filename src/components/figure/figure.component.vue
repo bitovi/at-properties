@@ -6,7 +6,7 @@
         <figure 
             v-bind="$attrs" 
             class="dlp-figure" 
-            v-bind:class="[ar]">
+            v-bind:class="[{ 'ar': ar }, ar]">
             <picture ref="figurePic">
                 <source v-if="xl" media="(min-width:1920px)" :srcset="xl">
                 <source v-if="lg" media="(min-width:1280px)" :srcset="lg">

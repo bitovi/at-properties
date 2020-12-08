@@ -6,16 +6,17 @@
 @import './figure/figure.styles';
 @import './rating/rating.styles';
 @import './testimonial/testimonial.styles';
-@import './salesCard/salesCard.styles';
-@import './salesCard/property.styles';
+
 @import './close/close.styles.scss';
 @import './title/title.styles.scss';
-@import './displayCard/displayCard.styles.scss';
+
 @import './social/social.styles.scss';
-@import './bioCard/bioCard.styles.scss';
+
 @import './carousel/carousel.styles.scss';
 @import './flatScroll/flatScroll.styles.scss';
 
+//cards
+@import './cards/index';
+
 //modals
-@import './modals/slideIn/slideIn.styles.scss';
-@import './modals/videoModal/videoModal.styles.scss';
+@import './modals/index';
