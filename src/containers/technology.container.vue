@@ -7,7 +7,7 @@
                     alt="Man's hands resting on a laptop"
                     animate="shrink"
                     videoId="9wYizJiPrNI"
-                    title="Watch"
+                    title="Cutting Edge Technology"
                 />
             </div>
             <div class="order-2 md:order-1 col-span-4 md:col-span-6 md:col-start-1 lg:col-span-6 lg:col-start-2">

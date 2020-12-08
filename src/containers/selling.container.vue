@@ -2,10 +2,12 @@
     <div class='section-content'>
         <div class="content-grid">
             <div class="order-3 md:order-4 col-span-4 md:col-span-6 md:col-start-7 lg:col-span-7 lg:col-start-9">
-                <dlp-figure
+                <dlp-video-card
                     :sm="`${publicPath}images/selling/selling-1.jpg`"
                     alt="Person at desk"
                     animate="shrink"
+                    videoId="K41QuRaOJPc"
+                    title="Pricing Your Home"
                 />
             </div>
             <div class="order-4 md:order-3 col-span-4 md:col-span-6 md:col-start-1 lg:col-span-6 lg:col-start-2">
@@ -25,6 +27,7 @@
                     :sm="`${publicPath}images/selling/selling-2.jpg`"
                     alt="Fancy Living Room"
                     animate="shrink"
+                    ar="ar--4-3"
                 />
             </div>
             <div class="col-span-4 md:col-span-6 md:col-start-7 lg:col-span-6 lg:col-start-10">
