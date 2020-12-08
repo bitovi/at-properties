@@ -20,6 +20,7 @@ import dedent from 'ts-dedent';
 * Items are 160px wide on mobile, 240px wide on desktop, 3:4 aspect ratio, no border (outer or inner).
 * The gap between items is 32px.
 * The spacing around items is image -- 24px -- heading -- 8px -- accent -- 8px -- paragraph.
+* **Accessibility**: Notice that images use null `alt=""` and provide a text alternative via `aria-labelledby="[id of the figcaption]"`.
 
 <Preview>
 <div className="carousel__wrapper">
@@ -158,6 +159,7 @@ An example with a small number of team members. Items will be centered; the scro
 * Items are 272px wide on mobile, 496px wide on desktop, 4:3 aspect ratio, no border (outer or inner).
 * The gap between items is 32px on mobile, 128px on desktop.
 * The spacing around items is image -- 24px -- accent -- 8px -- paragraph -- <span className="highlight">Need additional info about red lines, icons here</span>.
+* **Accessibility**: Notice that images use `alt=""`. Read more about [writing alt text](/?path=/story/pattern-library-components-figure--page#writing-alt-text) for images (See [Figure](/?path=/story/pattern-library-components-figure--page)).
 
 <Preview>
 <div className="carousel__wrapper">
@@ -226,6 +228,7 @@ An example with a small number of team members. Items will be centered; the scro
 * The gap between items is 64px.
 * The padding around images is 24px top/bottom, 56px left/right on mobile, and 32px top/bottom, 96px left/right on desktop.
 * The spacing around items is image -- 24px -- accent -- 8px -- heading.
+* **Accessibility**: Notice that images use `alt=""`. Read more about [writing alt text](/?path=/story/pattern-library-components-figure--page#writing-alt-text) for images (See [Figure](/?path=/story/pattern-library-components-figure--page)).
 
 <Preview>
 <div className="carousel__wrapper">
