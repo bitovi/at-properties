@@ -2,7 +2,7 @@
     <div class='section-content'>
         <div class="content-grid">
             <div class="col-span-full text-center">
-                <img src="images/team/logo-olivia-carson.jpg" class="mx-auto" style="width: 200px;" alt="" />
+                <img src="images/team/logo-olivia-carson.jpg" class="mx-auto" style="width: 200px;" alt="Olivia Carlson" />
             </div>
             <div class="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
                 <dlp-figure 
