@@ -23,7 +23,60 @@
 
             </div>
             <div class="col-span-full text-center">
-                <p>[ CAROUSEL HERE ]</p>
+                
+                <dlp-flat-scroll class="flat-scroll--company">
+                    <div>
+                        <figure>
+                            <picture class="ar ar--4-3">
+                                <img src="https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8bGl2aW5nJTIwcm9vbXxlbnwwfDB8MHw%3D&auto=format&fit=crop&w=800&q=60" alt="Modern living room" />
+                            </picture>
+                            <figcaption>
+                                <p class="accent--above-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet quam augue massa.</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div>
+                        <figure>
+                            <picture class="ar ar--4-3">
+                                <img src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8a2l0Y2hlbnxlbnwwfDB8MHw%3D&auto=format&fit=crop&w=800&q=60" alt="Cozy kitchen seating" />
+                            </picture>
+                            <figcaption>
+                                <p class="accent--above-center">Aliquet quam augue massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div>
+                        <figure>
+                            <picture class="ar ar--4-3">
+                                <img src="https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8YmVkcm9vbXxlbnwwfDB8MHw%3D&auto=format&fit=crop&w=800&q=60" alt="Neutral toned bedroom" />
+                            </picture>
+                            <figcaption>
+                                <p class="accent--above-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet quam augue massa.</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div>
+                        <figure>
+                            <picture class="ar ar--4-3">
+                                <img src="https://images.unsplash.com/photo-1584722065001-ee7f49d903b1?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTZ8fGhvbWUlMjBvZmZpY2V8ZW58MHwwfDB8&auto=format&fit=crop&w=800&q=60" alt="Man working from home" />
+                            </picture>
+                            <figcaption>
+                                <p class="accent--above-center">Aliquet quam augue massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div>
+                        <figure>
+                            <picture class="ar ar--4-3">
+                                <img src="https://images.unsplash.com/photo-1560449752-3fd4bdbe7df0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8cmVhbHRvcnxlbnwwfDB8MHw%3D&auto=format&fit=crop&w=800&q=60" alt="Living room" />
+                            </picture>
+                            <figcaption>
+                                <p class="accent--above-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet quam augue massa.</p>
+                            </figcaption>
+                        </figure>
+                    </div>
+                </dlp-flat-scroll>
+
             </div>
         </section>
 
