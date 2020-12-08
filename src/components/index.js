@@ -17,7 +17,7 @@ import FlatScroll from './flatScroll/flatScroll.component.vue'
 import Transition from './transition/transition.component.vue'
 
 //Modals
-import SlideIn from './modals/slideIn/slideIn.component'
+import AppeaModal from './modals/appearModal/appearModal.component'
 import VideoModal from './modals/videoModal/videoModal.component.vue'
 
 Vue.component(ScrollNotify.name, ScrollNotify)
@@ -27,7 +27,7 @@ Vue.component(Figure.name, Figure)
 Vue.component(Rating.name, Rating)
 Vue.component(Testimonial.name, Testimonial)
 Vue.component(SalesCard.name, SalesCard)
-Vue.component(SlideIn.name, SlideIn)
+Vue.component(AppeaModal.name, AppeaModal)
 Vue.component(CloseBtn.name, CloseBtn)
 Vue.component(TitlePage.name, TitlePage)
 Vue.component(DisplayCard.name, DisplayCard)
@@ -49,7 +49,7 @@ export {
     Rating,
     Testimonial,
     SalesCard,
-    SlideIn,
+    AppeaModal,
     CloseBtn,
     TitlePage,
     DisplayCard,

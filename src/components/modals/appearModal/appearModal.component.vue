@@ -45,7 +45,7 @@ import A11yStrings from '../../../assets/strings/a11y.i18n.json'
 const ElBody = document.getElementsByTagName("body")[0]
 
 export default {
-    name: 'dlp-slide-in',
+    name: 'dlp-appear-modal',
     props: {
         srHeading:{
             type: String,

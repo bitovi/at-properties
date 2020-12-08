@@ -65,7 +65,7 @@
             <div class="dlp-nav-contact dlp-nav-m-tile flex">
                 <button class="" @click="showModal('ContactModal')" >Contact Me</button>
             </div>
-            <dlp-slide-in ref="ContactModal">
+            <dlp-appear-modal ref="ContactModal">
                 <h3 class="head-5 accent--above-left mb-8">CARRIE MCCORMICK</h3>
                 <address class="mt-4">
                     <a :href="`tel:+1-312-961-4612`">312.961.4612</a><br /><br />
@@ -75,7 +75,7 @@
                     facebook="#test"
                     instagram="#test"
                 ></dlp-social>
-            </dlp-slide-in>
+            </dlp-appear-modal>
         </div>
     </scrollactive>
 </template>

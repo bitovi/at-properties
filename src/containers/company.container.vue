@@ -90,13 +90,13 @@
 
             <div class="col-span-full flex">
                 <dlp-button type="button" class="mx-auto" @click="showModal('LocalStatsModal')">View local stats</dlp-button>
-                <dlp-slide-in ref="LocalStatsModal">
+                <dlp-appear-modal ref="LocalStatsModal">
                     <h3 class="head-5 accent--above-left mb-8">Local Stats</h3>
                     <img
                         class=""
                         :alt="`@properties sells 25% of luxury real estate in Chicago`" 
                         :src="`${publicPath}images/company/local-stats.png`">
-                </dlp-slide-in>
+                </dlp-appear-modal>
             </div>
         </section>
     </div>
