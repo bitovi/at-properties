@@ -35,15 +35,15 @@ export default {
             isFull = false
             this.createRipple(evt)
         },
-        createRipple(evt) {
+        createRipple(evt = {}) {
             if(this.isActive) return 
             const ctx = this.$refs.canvas.getContext('2d')
 
             this.isActive = true
             // isFull = !isFull
 
-            let x = evt.clientX
-            let y = evt.clientY 
+            let x = evt.clientX || vw
+            let y = evt.clientY || vh
             
             let dx = x < vw / 2 ? vw - x : x
             let dy = y < vh / 2 ? vh - y : y

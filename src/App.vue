@@ -29,7 +29,7 @@
       
       <article id="reach">
         <TitlePage 
-          :backgroundUrl="`${publicPath}images/reach/bg-reach.jpg`"
+          :backgroundUrl="`${publicPath}images/reach/bg-reach.jpeg`"
           heading="We're local, we're global"
           subheading="Luxury"/>
         <ReachContainer />
