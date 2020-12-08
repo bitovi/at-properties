@@ -1,4 +1,4 @@
-
+/* PLEASE DELETE THESE OLD STYLES */
 .dlp-carousel {
     .swiper-slide {
         width: auto;
@@ -32,4 +32,95 @@
         z-index: 10;
         cursor: pointer;
     }
+}
+
+/* Carousel */
+.carousel__wrapper {
+  @apply relative;           /* position: relative; */
+}
+.carousel {
+  @apply w-full;             /* width: 100%; */
+  @apply overflow-x-auto;    /* overflow-x: auto; */
+  @apply overflow-y-hidden;  /* overflow-y: hidden; */
+  @apply pb-12;              /* padding-bottom: 48px; */
+  @apply text-center;        /* text-align: center; */
+  @apply whitespace-no-wrap; /* white-space: nowrap; */
+  .carousel__stage {
+    @apply flex;             /* display: flex; */
+    @apply flex-row;         /* flex-direction: row; */
+    @apply gap-8;            /* gap: 32px; */
+  }
+  picture {
+    @apply mb-6;             /* margin-bottom: 24px; */
+  }
+}
+.carousel--team {
+  picture {
+    @apply w-40;             /* width: 160px; */
+    @media (min-width: theme('screens.lg')) {
+      width: 240px;
+    }
+  }
+  p {
+    @apply mt-0;             /* margin-top: 0; */
+  }
+}
+.carousel--company {
+  .carousel__stage {
+    @media (min-width: theme('screens.lg')) {
+      @apply gap-32;         /* gap: 128px; */
+    }
+  }
+  picture, p {
+    width: 272px;
+    @media (min-width: theme('screens.lg')) {
+      width: 496px;
+    }
+  }
+  p {
+    @apply whitespace-normal;  /* white-space: normal; */
+  }
+}
+.carousel--marketing, 
+.carousel--partners {
+  .carousel__stage {
+    @media (min-width: theme('screens.lg')) {
+      @apply gap-16;         /* gap: 64px; */
+    }
+  } 
+  picture {
+    width: 272px;
+    @media (min-width: theme('screens.lg')) {
+      width: 496px;
+    }
+  }
+  img {
+    @apply object-contain;   /* object-fit: contain; */
+    @apply object-center;    /* object-position: center center; */
+    padding: 24px 56px;
+    @media (min-width: theme('screens.lg')) {
+      @apply py-4;           /* padding-top/bottom: 32px; */
+      @apply px-24;          /* padding-right/left: 96px; */
+    }
+  }
+}
+.carousel__fade-left, 
+.carousel__fade-right {
+  @apply bg-gradient-to-r;   /* background-image: linear-gradient(to right, */
+  @apply absolute;           /* position: absolute; */
+  @apply top-0;              /* top: 0; */
+  height: calc(100% - 48px);
+  @apply w-16;               /* width: 64px; */
+}
+.carousel__fade-left {
+  @apply from-white;         /* --gradient-from-color: theme('colors.white'); */
+  @apply to-transparent;     /* --gradient-to-color: theme('colors.transparent'); */
+  @apply left-0;             /* left: 0; */
+  @apply opacity-0;          /* opacity: 0; */
+}
+.carousel__fade-right {
+  @apply from-transparent;   /* --gradient-from-color: theme('colors.transparent'); */
+  @apply to-white;           /* --gradient-to-color: theme('colors.white'); */
+  @apply right-0;            /* right: 0; */
+  @apply opacity-100;        /* opacity: 1; */
 }

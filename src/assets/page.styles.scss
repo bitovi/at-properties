@@ -26,6 +26,24 @@ body {
   }
 }
 
+/* Custom scroll bar */
+/* Works for Firefox, but not in MacOS */
+:root {
+  scrollbar-color: theme('colors.secondary.900') theme('colors.primary.100') !important;
+  scrollbar-width: thin !important;
+}
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+*::-webkit-scrollbar-track {
+  @apply bg-primary-100;     /* background-color: theme('colors.primary.100'); */
+}
+*::-webkit-scrollbar-thumb {
+  @apply bg-secondary-900;   /* background-color: theme('colors.secondary.900'); */
+}
+
 /* Section */
 .section-content {
   margin: 0 8px;
