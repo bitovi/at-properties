@@ -1,8 +1,11 @@
 <template>
     <div class="section-content">
         <section class="content-grid" aria-label="Agent contact information">
-            <div class="col-span-full text-center mb-24">
-                <img src="images/agent/emily-sachs-wong.jpeg" class="mx-auto" style="width: 200px;" alt="" />
+            <div class="col-span-full text-center">
+                <img 
+                    src="images/agent/emily-sachs-wong.jpeg" 
+                    class="mx-auto logo--agency" 
+                    alt="" />
             </div>
             <div class="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
                 <div class="sticky top-4">

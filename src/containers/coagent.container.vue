@@ -2,7 +2,10 @@
     <div class="section-content">
         <div class="content-grid">
             <div class="col-span-full text-center">
-                <img :src="`${i18n.logo.sm}`" class="mx-auto" style="width: 200px;" :alt="`${i18n.logo.alt}`" />
+                <img 
+                    class="mx-auto logo--agency" 
+                    :src="`${i18n.logo.sm}`" 
+                    :alt="`${i18n.logo.alt}`" />
             </div>
             <div class="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
                 <dlp-figure 

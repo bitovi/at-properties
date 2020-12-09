@@ -3,8 +3,7 @@
         <div class="content-grid">
             <div class="col-span-full text-center">
                 <img
-                    class="mx-auto" 
-                    style="width: 200px;"
+                    class="mx-auto logo--agency"
                     :alt="`${i18n.logo.alt}`" 
                     :src="`${i18n.logo.sm}`"/>
             </div>
