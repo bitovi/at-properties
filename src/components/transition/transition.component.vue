@@ -2,6 +2,8 @@
     <component
         class="dlp-transition-wrapper"
         :is="tagName"
+        v-bind="$attrs"
+        v-on="$listeners"
         ref="tWrapper"
     >
         <div class="dlp-transition" ref="tInner">

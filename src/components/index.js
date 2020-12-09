@@ -25,7 +25,8 @@ import {
     BioCard,
     DisplayCard,
     SalesCard,
-    VideoCard
+    VideoCard,
+    PropertyCard
 } from './cards'
 
 //install modals
@@ -37,6 +38,7 @@ Vue.component(BioCard.name, BioCard)
 Vue.component(DisplayCard.name, DisplayCard)
 Vue.component(SalesCard.name, SalesCard)
 Vue.component(VideoCard.name, VideoCard)
+Vue.component(PropertyCard.name, PropertyCard)
 
 
 Vue.component(ScrollNotify.name, ScrollNotify)
