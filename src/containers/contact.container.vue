@@ -26,6 +26,7 @@
                 <dlp-social 
                     facebook="https://www.facebook.com/thad.wong.54"
                     instagram="https://www.instagram.com/thadly_wong/"
+                    website="https://www.carriemccormickre.com/"
                 />
             </div>
         </section>
