@@ -82,11 +82,9 @@ body {
   @media (min-width: 1441px) {
     max-width: 1440px;
   }
-}/* 
-.content-grid + .content-grid  {
-  @apply pt-16;
-} */
+}
 
+.content-grid + .content-grid,
 section + section  {
   @apply pt-16;
 }
