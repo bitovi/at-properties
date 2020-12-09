@@ -1,6 +1,6 @@
 <template>
     <div class="dlp-testimonial">
-        <slot />
+        <p><slot /></p>
         <dlp-rating v-if="score" :score="Number(score)"></dlp-rating>
     </div>
 </template>

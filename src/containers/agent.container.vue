@@ -42,7 +42,7 @@
                     <dlp-transition type="fadeIn slideUp" v-for="t in i18n.testimonials.slice(0, 3)" v-bind:key="t.id" >
                         <dlp-testimonial
                             :score="t.rating">
-                            <div v-html="t.trunk"></div>
+                            <q v-html="t.trunk"/>
                         </dlp-testimonial>
                     </dlp-transition>
                     <div class="btn-group">
@@ -53,7 +53,7 @@
                                 v-for="t in i18n.testimonials" 
                                 v-bind:key="t.id" 
                                 :score="t.rating">
-                                    <div v-html="t.quote"></div>
+                                    <div v-html="t.quote"/>
                                 </dlp-testimonial>
                         </dlp-appear-modal>
                     </div>
