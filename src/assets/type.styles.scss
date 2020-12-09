@@ -57,8 +57,10 @@ p, address, li {
   @apply not-italic;         /* font-style: normal; */
   @apply leading-normal;     /* line-height: 1.5em; */
   @media (min-width: theme('screens.lg')) {
-    @apply text-lg;          /* font-size: 20px */
-    line-height: 1.6;        /* line-height: 32px; */
+    & {
+      @apply text-lg;          /* font-size: 20px */
+      line-height: 1.6;        /* line-height: 32px; */
+    }
   }
 }
 /* List */ 
