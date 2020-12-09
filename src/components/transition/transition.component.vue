@@ -40,67 +40,65 @@ export default {
             default: 'fadeIn',
             //fadeIn, slideRight, slideLeft, slideUp, slideDown, pop
         },
+        delay: {
+            type: Number,
+            default: 0
+        },
         scrollTrigger: {
             type: Object,
             default: function() {
                 return {
                     start: "top 85%",
-                    end: "bottom center", 
-                    scrub: true, 
-                    // markers: true,
-                    toggleActions: "play none none reverse"
+                    end: "bottom center",
+                    toggleActions: "play none none reset"
                 }
             }
         }
     },
     methods: {
         fadeIn(target) {
-            return[{
-                opacity: 0
-            },{
-                scrollTrigger: ScrollTrigger(target, this.scrollTrigger),
+            gsap.set(target, { opacity: 0 })
+            return[{},{
                 opacity: 1
-            }]
+            }, 0]
         },
         slideRight(target) {
             gsap.set(target, {transform: 'translate(-50px, 0)'})
             return [{},{
-                scrollTrigger: ScrollTrigger(target, this.scrollTrigger),
                 x: 0
-            }]
+            }, 0]
         },
         slideLeft(target) {
             gsap.set(target, {transform: 'translate(50px, 0)'})
             return [{},{
-                scrollTrigger: ScrollTrigger(target, this.scrollTrigger),
                 x: 0
-            }]
+            }, 0]
         },
         slideUp(target) {
             gsap.set(target, {transform: 'translate(0, 50px)'})
             return [{},{
-                scrollTrigger: ScrollTrigger(target, this.scrollTrigger),
                 y: 0,
-            }]
+            }, 0]
         },
         slideDown(target) {
             gsap.set(target, {transform: 'translate(0, -50px)'})
             return [{},{
-                scrollTrigger: ScrollTrigger(target, this.scrollTrigger),
                 y: 0,
-            }]
+            }, 0]
         },
         pop(target) {
             gsap.set(target, {transform: 'scale(0.5)'})
             return [{},{
-                scrollTrigger: ScrollTrigger(target, this.scrollTrigger),
                 scale: 1
-            }]
+            }, 0]
         }
     },
     mounted() {
         if(!hasMotion) return
-        this.tl = gsap.timeline()
+        this.tl = gsap.timeline({
+            delay: this.delay,
+            scrollTrigger: ScrollTrigger(this.$refs.tInner, this.scrollTrigger),
+        })
         //add any valid animation types to the timeline
         this.hooks.forEach(h => {
             const res = this[h](this.$refs.tInner)
