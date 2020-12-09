@@ -20,7 +20,7 @@
       </article>
       <article id="company">
         <TitlePage 
-          :backgroundUrl="`${publicPath}images/company/bg-company.jpeg`"
+          :backgroundUrl="`images/company/bg-company.jpeg`"
           heading="Every home has a story" 
           subheading="Company Profile" />
         <CompanyContainer />
@@ -29,7 +29,7 @@
       
       <article id="reach">
         <TitlePage 
-          :backgroundUrl="`${publicPath}images/reach/bg-reach.jpeg`"
+          :backgroundUrl="`images/reach/bg-reach.jpg`"
           heading="We're local, we're global"
           subheading="Luxury"/>
         <ReachContainer />
@@ -37,7 +37,7 @@
 
       <article id="technology">
         <TitlePage 
-          :backgroundUrl="`${publicPath}images/technology/bg-technology.jpg`"
+          :backgroundUrl="`images/technology/bg-technology.jpg`"
           heading="Industry leading technology" 
           subheading="Technology" />
         <TechnologyContainer />
@@ -45,7 +45,7 @@
 
       <article id="marketing">
         <TitlePage 
-          :backgroundUrl="`${publicPath}images/auxiliary/07-111-woodley-road-2016-printjpg-5f8dc1282e1d4.jpg`"
+          :backgroundUrl="`images/marketing/bg-marketing.jpeg`"
           heading="Award-winning marketing materials" 
           subheading="Marketing" />
         <MarketingContainer />
@@ -53,21 +53,21 @@
       
       <article id="selling">
         <TitlePage 
-          :backgroundUrl="`${publicPath}images/auxiliary/09-2550-n-lakeview-ave-3802-165-living-room-printjpg-5f8da927c0f72.jpg`"
+          :backgroundUrl="`images/auxiliary/09-2550-n-lakeview-ave-3802-165-living-room-printjpg-5f8da927c0f72.jpg`"
           heading="Selling your home" 
           subheading="Final Steps" />
         <SellingContainer />
       </article>
       <article id="partners">
         <TitlePage 
-          :backgroundUrl="`${publicPath}images/partners/bg-partners.jpeg`"
+          :backgroundUrl="`images/partners/bg-partners.jpeg`"
           heading="Our Partners" 
           subheading="All working as a team, through every step of the transaction" />
           <PartnersContainer />
       </article>
       <article id="community">
         <TitlePage 
-          :backgroundUrl="`${publicPath}images/community/bg-community.jpeg`"
+          :backgroundUrl="`images/community/bg-community.jpeg`"
           heading="Community" 
           subheading="Community" />
         <CommunityContainer />
