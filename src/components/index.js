@@ -24,7 +24,6 @@ import {
 import {
     BioCard,
     DisplayCard,
-    SalesCard,
     VideoCard,
     PropertyCard
 } from './cards'
@@ -36,7 +35,6 @@ Vue.component(VideoModal.name, VideoModal)
 //install cards
 Vue.component(BioCard.name, BioCard)
 Vue.component(DisplayCard.name, DisplayCard)
-Vue.component(SalesCard.name, SalesCard)
 Vue.component(VideoCard.name, VideoCard)
 Vue.component(PropertyCard.name, PropertyCard)
 
@@ -69,7 +67,6 @@ export {
     Figure,
     Rating,
     Testimonial,
-    SalesCard,
     AppearModal,
     CloseBtn,
     TitlePage,
