@@ -16,7 +16,7 @@
                     :alt="alt" 
                     :src="defaultImage" />
             </picture>
-            <figcaption v-if="caption" class="dlp-figure-caption head-6">
+            <figcaption v-if="caption" class="dlp-figure-caption head-6 accent--below-center">
                 {{ caption }}
             </figcaption>
         </figure>

@@ -33,17 +33,14 @@
         @apply absolute;
         @apply bottom-0;
         color: theme('colors.white');
-        display: block;
+        display: none;
         width: 100%;
         text-align: center;
-        padding-bottom: theme('spacing.4');
-        &:after {
-            height: 2px;
+        padding-bottom: theme('spacing.8');
+        
+        
+        @media (min-width: theme('screens.md')) {
             display: block;
-            width: theme('spacing.8');
-            background: theme('colors.secondary.500');
-            content: '';
-            margin: 18px auto;
         }
     }
 }
