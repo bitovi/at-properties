@@ -21,7 +21,10 @@
         @apply h-full;
         z-index: 80;
         outline: 1px solid #FFFFFF;
-        outline-offset: -14px;
+        outline-offset: -8px;
+        @media (min-width: theme('screens.md')) {
+            outline-offset: -12px;
+        }
     }
 
     img,
