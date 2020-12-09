@@ -40,14 +40,16 @@ export default {
             default: 'fadeIn',
             //fadeIn, slideRight, slideLeft, slideUp, slideDown, pop
         },
+        delay: {
+            type: Number,
+            default: 0
+        },
         scrollTrigger: {
             type: Object,
             default: function() {
                 return {
                     start: "top 85%",
-                    end: "bottom center", 
-                    // scrub: true, 
-                    // markers: true,
+                    end: "bottom center",
                     toggleActions: "play none none reset"
                 }
             }
@@ -94,6 +96,7 @@ export default {
     mounted() {
         if(!hasMotion) return
         this.tl = gsap.timeline({
+            delay: this.delay,
             scrollTrigger: ScrollTrigger(this.$refs.tInner, this.scrollTrigger),
         })
         //add any valid animation types to the timeline
