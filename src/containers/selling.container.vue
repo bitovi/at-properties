@@ -26,7 +26,7 @@
             </div>
         </div>
         <div class="content-grid">
-            <div class="col-span-4 md:col-span-6 md:col-start-1 lg:col-span-7 lg:col-start-2">
+            <div class="col-span-4 md:col-span-6 md:col-start-1 lg:col-span-7 lg:col-start-2 self-center">
                 <dlp-figure
                     :sm="`images/selling/selling-2.jpg`"
                     alt="Fancy Living Room"
@@ -34,7 +34,7 @@
                     ar="ar--4-3"
                 />
             </div>
-            <div class="col-span-4 md:col-span-6 md:col-start-7 lg:col-span-6 lg:col-start-10">
+            <div class="col-span-4 md:col-span-6 md:col-start-7 lg:col-span-6 lg:col-start-10 self-center">
                 <h3 class="head-5 accent--above-left">Staging your home</h3>
                 <dlp-transition type="fadeIn slideUp">
                     <p>Staging is the art of merchandising a home to improve its marketability. It can be as simple as rearranging a few pieces of furniture or as elaborate as hiring a professional to furnish an empty home right down to the plants and artwork.</p>
