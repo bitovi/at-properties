@@ -5,19 +5,447 @@ import dedent from 'ts-dedent';
 
 # Carousel
 
-* Carousels are...
+* Carousels are not "true carousels" (i.e., no JS library, no infinite loop, no previous/next buttons, no pagination/dots). Rather, a carousel is simply a horizontal scrolling `div`.
+* A user can scroll back and forth by grabbing and sliding the horizontal scrollbar or by swiping side to side (left to right) on a trackpad or touch device.
+* The slide area itself is not grabbable or draggable. (A JS library would be required to add this functionality.)
+* The component uses a custom scrollbar (see code below). However, this code may not display consistently across all devices (e.g., Firefox on MacOS will hide the scrollbar by default). Furthermore, it's not possible to style the cursor for the scroll thumb (grabable part of the scrollbar) to be a pointer/hand/grab. <span className="highlight">Should we use [SimpleBar](https://github.com/Grsmto/simplebar) to provide a consistent custom scrollbar across devices and style the scroll thumb cursor? File under: nice to have / requires more time.</span>
+* Carousels have a left and a right fade. The left fade is "off" (opacity: 0) by default. When the user starts scrolling to the right, the left fade turns "on" (fades in to opacity: 1 over 500ms). When the user reaches the end of the carousel (far right), the right fade will turn "off" (opacity: 0). When the user reaches the start of the carousel (far left), the right fade will turn "on" (fades in to opacity: 1 over 500ms). <span className="highlight">Carousel animations are not coded yet. These are nice to have / requires more time.</span>
+* There are 4 carousels on the page: [Team Members](#team-members), [Company Timeline](#company-timeline), [Marketing Assets](#marketing-assets--partners), [Partners](#marketing-assets--partners). <span className="highlight">Need additional styling and icons written to make Company Timeline look like a timeline.</span>
+* Carousel items align to top.
+* <span className="highlight">Logic needs to be written (Nick) to align items center and remove the left and right fades when the total width of the items is less than the width of the stage. Add <code>justify-center</code> next to <code>carousel__stage</code>.</span>
+* <span className="highlight">Note: All the images below point to outside of DLP. At some point, shouldn't these have local paths?</span>
+
+## Team Members
+
+* Items are 160px wide on mobile, 240px wide on desktop, 3:4 aspect ratio, no border (outer or inner).
+* The gap between items is 32px.
+* The spacing around items is image -- 24px -- heading -- 8px -- accent -- 8px -- paragraph.
+* **Accessibility**: Notice that images use null `alt=""` and provide a text alternative via `aria-labelledby="[id of the figcaption]"`.
+
+<Preview>
+<div className="carousel__wrapper">
+  <div className="carousel carousel--team">
+    <div className="carousel__stage">
+      <div>
+        <figure>
+          <picture className="ar ar--3-4">
+            <img src="https://oliviaschicago.com/wp-content/uploads/2019/01/Olivia_Main.jpg" alt="" aria-labelledby="team-member-1" />
+          </picture>
+          <figcaption id="team-member-1">
+            <h3 className="head-6 accent--below-center">Olivia Carlson</h3>
+            <p>Lead Broker</p>
+          </figcaption>
+        </figure>
+      </div>
+      <div>
+        <figure>
+          <picture className="ar ar--3-4">
+            <img src="https://oliviaschicago.com/wp-content/uploads/2019/08/Paul-Headshot.jpg" alt="" aria-labelledby="team-member-2" />
+          </picture>
+          <figcaption id="team-member-2">
+            <h3 className="head-6 accent--below-center">Paul Siebert</h3>
+            <p>Broker</p>
+          </figcaption>
+        </figure>
+      </div>
+      <div>
+        <figure>
+          <picture className="ar ar--3-4">
+            <img src="https://oliviaschicago.com/wp-content/uploads/2020/02/LoumenaDa.jpg" alt="" aria-labelledby="team-member-3" />
+          </picture>
+          <figcaption id="team-member-3">
+            <h3 className="head-6 accent--below-center">Dani Loumena</h3>
+            <p>Broker</p>
+          </figcaption>
+        </figure>
+      </div>
+      <div>
+        <figure>
+          <picture className="ar ar--3-4">
+            <img src="https://oliviaschicago.com/wp-content/uploads/2020/02/Lindsey-Crop.jpeg" alt="" aria-labelledby="team-member-4" />
+          </picture>
+          <figcaption id="team-member-4">
+            <h3 className="head-6 accent--below-center">Lindsey Matejak</h3>
+            <p>Broker</p>
+          </figcaption>
+        </figure>
+      </div>
+      <div>
+        <figure>
+          <picture className="ar ar--3-4">
+            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuJTIwcHJvZmVzc2lvbmFsfGVufDB8MXwwfA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="" aria-labelledby="team-member-5" />
+          </picture>
+          <figcaption id="team-member-5">
+            <h3 className="head-6 accent--below-center">David Lubega</h3>
+            <p>Broker</p>
+          </figcaption>
+        </figure>
+      </div>
+      <div>
+        <figure>
+          <picture className="ar ar--3-4">
+            <img src="https://images.unsplash.com/photo-1573496358961-3c82861ab8f4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8d29tYW4lMjBwcm9mZXNzaW9uYWx8ZW58MHwxfDB8&auto=format&fit=crop&w=800&q=60" alt="" aria-labelledby="team-member-6" />
+          </picture>
+          <figcaption id="team-member-6">
+            <h3 className="head-6 accent--below-center">Christine Hooper</h3>
+            <p>Associate</p>
+          </figcaption>
+        </figure>
+      </div>
+      <div>
+        <figure>
+          <picture className="ar ar--3-4">
+            <img src="https://images.unsplash.com/photo-1568316674077-d72ee56de61c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Njh8fG1hbiUyMHByb2Zlc3Npb25hbHxlbnwwfDF8MHw%3D&auto=format&fit=crop&w=800&q=60" alt="" aria-labelledby="team-member-7" />
+          </picture>
+          <figcaption id="team-member-7">
+            <h3 className="head-6 accent--below-center">Lou Prima</h3>
+            <p>Associate</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div className="carousel__fade-left"></div>
+    <div className="carousel__fade-right"></div>
+  </div>
+</div>
+</Preview>
+
+An example with a small number of team members. Items will be centered; the scrollbar and fades will not appear.
+
+<Preview>
+<div className="carousel__wrapper">
+  <div className="carousel carousel--team">
+    <div className="carousel__stage justify-center">
+      <div>
+        <figure>
+          <picture className="ar ar--3-4">
+            <img src="https://oliviaschicago.com/wp-content/uploads/2019/01/Olivia_Main.jpg" alt="" aria-labelledby="team-member-1" />
+          </picture>
+          <figcaption id="team-member-1">
+            <h3 className="head-6 accent--below-center">Olivia Carlson</h3>
+            <p>Lead Broker</p>
+          </figcaption>
+        </figure>
+      </div>
+      <div>
+        <figure>
+          <picture className="ar ar--3-4">
+            <img src="https://oliviaschicago.com/wp-content/uploads/2019/08/Paul-Headshot.jpg" alt="" aria-labelledby="team-member-2" />
+          </picture>
+          <figcaption id="team-member-2">
+            <h3 className="head-6 accent--below-center">Paul Siebert</h3>
+            <p>Broker</p>
+          </figcaption>
+        </figure>
+      </div>
+      <div>
+        <figure>
+          <picture className="ar ar--3-4">
+            <img src="https://oliviaschicago.com/wp-content/uploads/2020/02/LoumenaDa.jpg" alt="" aria-labelledby="team-member-3" />
+          </picture>
+          <figcaption id="team-member-3">
+            <h3 className="head-6 accent--below-center">Dani Loumena</h3>
+            <p>Broker</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
+</Preview>
+
+## Company Timeline
+
+* Items are 272px wide on mobile, 496px wide on desktop, 4:3 aspect ratio, no border (outer or inner).
+* The gap between items is 32px on mobile, 128px on desktop.
+* The spacing around items is image -- 24px -- accent -- 8px -- paragraph -- <span className="highlight">Need additional info about red lines, icons here</span>.
+* **Accessibility**: Notice that images use `alt=""`. Read more about [writing alt text](/?path=/story/pattern-library-components-figure--page#writing-alt-text) for images (See [Figure](/?path=/story/pattern-library-components-figure--page)).
+
+<Preview>
+<div className="carousel__wrapper">
+  <div className="carousel carousel--company simplebar-scrollbar">
+    <div className="carousel__stage">
+      <div>
+        <figure>
+          <picture className="ar ar--4-3">
+            <img src="https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8bGl2aW5nJTIwcm9vbXxlbnwwfDB8MHw%3D&auto=format&fit=crop&w=800&q=60" alt="Modern living room" />
+          </picture>
+          <figcaption>
+            <p className="accent--above-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet quam augue massa.</p>
+          </figcaption>
+        </figure>
+      </div>
+      <div>
+        <figure>
+          <picture className="ar ar--4-3">
+            <img src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8a2l0Y2hlbnxlbnwwfDB8MHw%3D&auto=format&fit=crop&w=800&q=60" alt="Cozy kitchen seating" />
+          </picture>
+          <figcaption>
+            <p className="accent--above-center">Aliquet quam augue massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </figcaption>
+        </figure>
+      </div>
+      <div>
+        <figure>
+          <picture className="ar ar--4-3">
+            <img src="https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8YmVkcm9vbXxlbnwwfDB8MHw%3D&auto=format&fit=crop&w=800&q=60" alt="Neutral toned bedroom" />
+          </picture>
+          <figcaption>
+            <p className="accent--above-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet quam augue massa.</p>
+          </figcaption>
+        </figure>
+      </div>
+      <div>
+        <figure>
+          <picture className="ar ar--4-3">
+            <img src="https://images.unsplash.com/photo-1584722065001-ee7f49d903b1?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTZ8fGhvbWUlMjBvZmZpY2V8ZW58MHwwfDB8&auto=format&fit=crop&w=800&q=60" alt="Man working from home" />
+          </picture>
+          <figcaption>
+            <p className="accent--above-center">Aliquet quam augue massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          </figcaption>
+        </figure>
+      </div>
+      <div>
+        <figure>
+          <picture className="ar ar--4-3">
+            <img src="https://images.unsplash.com/photo-1560449752-3fd4bdbe7df0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8cmVhbHRvcnxlbnwwfDB8MHw%3D&auto=format&fit=crop&w=800&q=60" alt="Living room" />
+          </picture>
+          <figcaption>
+            <p className="accent--above-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet quam augue massa.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div className="carousel__fade-left"></div>
+    <div className="carousel__fade-right"></div>
+  </div>
+</div>
+</Preview>
+
+## Marketing Assets &amp; Partners
+
+* Items are 272px wide on mobile, 496px wide on desktop, 3:2 aspect ratio, 1px medium gray border (Neutral 300).
+* The gap between items is 64px.
+* The padding around images is 24px top/bottom, 56px left/right on mobile, and 32px top/bottom, 96px left/right on desktop.
+* The spacing around items is image -- 24px -- accent -- 8px -- heading.
+* **Accessibility**: Notice that images use `alt=""`. Read more about [writing alt text](/?path=/story/pattern-library-components-figure--page#writing-alt-text) for images (See [Figure](/?path=/story/pattern-library-components-figure--page)).
+
+<Preview>
+<div className="carousel__wrapper">
+  <div className="carousel carousel--marketing">
+    <div className="carousel__stage">
+      <div>
+        <figure>
+          <picture className="ar ar--3-2 border border-neutral-300">
+            <img src="https://banner2.cleanpng.com/20180805/fl/kisspng-website-real-estate-agent-image-web-design-multime-30-most-influential-real-estate-websites-of-2018-5b673a8d4f2781.3987929015334918533242.jpg" alt="Real estate web site featuring a home" />
+          </picture>
+          <figcaption>
+            <h3 className="head-6 accent--above-center">Online Advertising</h3>
+          </figcaption>
+        </figure>
+      </div>
+      <div>
+        <figure>
+          <picture className="ar ar--3-2 border border-neutral-300">
+            <img src="https://png.pngitem.com/pimgs/s/280-2803839_yard-sign-png-yard-sign-printing-transparent-png.png" alt="Home for sale yard sign" />
+          </picture>
+          <figcaption>
+            <h3 className="head-6 accent--above-center">Yard Signs</h3>
+          </figcaption>
+        </figure>
+      </div>
+      <div>
+        <figure>
+          <picture className="ar ar--3-2 border border-neutral-300">
+            <img src="https://banner2.cleanpng.com/20180429/jfq/kisspng-paper-ultimate-imaging-flyer-advertising-brochure-flyer-mock-up-5ae667700f0103.4032287815250492000615.jpg" alt="Real estate housing flyers" />
+          </picture>
+          <figcaption>
+            <h3 className="head-6 accent--above-center">Flyers</h3>
+          </figcaption>
+        </figure>
+      </div>
+      <div>
+        <figure>
+          <picture className="ar ar--3-2 border border-neutral-300">
+            <img src="https://www.seekpng.com/png/detail/253-2538036_local-company-builds-app-to-create-safe-space.png" alt="iPhone showing a social media app" />
+          </picture>
+          <figcaption>
+            <h3 className="head-6 accent--above-center">Social Media</h3>
+          </figcaption>
+        </figure>
+      </div>
+      <div>
+        <figure>
+          <picture className="ar ar--3-2 border border-neutral-300">
+            <img src="https://img.favpng.com/8/5/15/online-magazine-glamour-magazines-newspapers-png-favpng-vRNF6QzdhGneETZSKXRvtwL3k.jpg" alt="Two magazines laying open" />
+          </picture>
+          <figcaption>
+            <h3 className="head-6 accent--above-center">Magazine Feature</h3>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+    <div className="carousel__fade-left"></div>
+    <div className="carousel__fade-right"></div>
+  </div>
+</div>
+</Preview>
+
+<Preview>
+<div className="carousel__wrapper">
+  <div className="carousel carousel--partners">
+    <div className="carousel__stage">
+      <div>
+        <figure>
+          <picture className="ar ar--3-2 border border-neutral-300">
+            <img src="https://static1.squarespace.com/static/5d499488e40860000132b465/t/5d4995e13b48f80001ef9b42/1605717068162/?format=1500w" alt="Proper Title" />
+          </picture>
+        </figure>
+      </div>
+      <div>
+        <figure>
+          <picture className="ar ar--3-2 border border-neutral-300">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.iZmxnG7UUw9hAIy4VbyEiQAAAA&pid=Api" alt="Proper Rate" />
+          </picture>
+        </figure>
+      </div>
+      <div>
+        <figure>
+          <picture className="ar ar--3-2 border border-neutral-300">
+            <img src="https://tse1.mm.bing.net/th?id=OIP.afitccwCmngYifzziNLcIgHaCX&pid=Api" alt="@properties Commercial" />
+          </picture>
+        </figure>
+      </div>
+      <div>
+        <figure>
+          <picture className="ar ar--3-2 border border-neutral-300">
+            <img src="https://tse3.mm.bing.net/th?id=OIP.MDRjm-GBb6-1iGdVJBSJtgAAAA&pid=Api" alt="Chicago Association of Realtors" />
+          </picture>
+        </figure>
+      </div>
+    </div>
+    <div className="carousel__fade-left"></div>
+    <div className="carousel__fade-right"></div>
+  </div>
+</div>
+</Preview>
 
 ## How to configure
 
+Define classes in **src/assets/page.styles.scss**. The custom scrollbar code styles both the vertical scrollbar for the page and the horizontal scrollbar for carousels.
+
+<Source language='html' code={dedent`
+  /* Custom scroll bar */
+  /* Works for Firefox, but not in MacOS */
+  :root {
+    scrollbar-color: theme('colors.secondary.900') theme('colors.primary.100') !important;
+    scrollbar-width: thin !important;
+  }
+  /* Works on Chrome/Edge/Safari */
+  *::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+  *::-webkit-scrollbar-track {
+    @apply bg-primary-100;     /* background-color: theme('colors.primary.100'); */
+  }
+  *::-webkit-scrollbar-thumb {
+    @apply bg-secondary-900;   /* background-color: theme('colors.secondary.900'); */
+  }
+`} />
+
 Define classes in **src/components/carousel/carousel.styles.scss**.
 
-<Source language='css' code={dedent`
+<Source language='html' code={dedent`
+  /* Carousel */
+  .carousel__wrapper {
+    @apply relative;           /* position: relative; */
+  }
   .carousel {
-    @apply border;
-    /* border: 1px solid red;
-    height: 1em;
-    width: 1em;
-    outline: 1px; */
+    @apply w-full;             /* width: 100%; */
+    @apply overflow-x-auto;    /* overflow-x: auto; */
+    @apply overflow-y-hidden;  /* overflow-y: hidden; */
+    @apply pb-12;              /* padding-bottom: 48px; */
+    @apply text-center;        /* text-align: center; */
+    @apply whitespace-no-wrap; /* white-space: nowrap; */
+    .carousel__stage {
+      @apply flex;             /* display: flex; */
+      @apply flex-row;         /* flex-direction: row; */
+      @apply gap-8;            /* gap: 32px; */
+    }
+    picture {
+      @apply mb-6;             /* margin-bottom: 24px; */
+    }
+  }
+  .carousel--team {
+    picture {
+      @apply w-40;             /* width: 160px; */
+      @media (min-width: theme('screens.lg')) {
+        width: 240px;
+      }
+    }
+    p {
+      @apply mt-0;             /* margin-top: 0; */
+    }
+  }
+  .carousel--company {
+    .carousel__stage {
+      @media (min-width: theme('screens.lg')) {
+        @apply gap-32;         /* gap: 128px; */
+      }
+    }
+    picture, p {
+      width: 272px;  
+      @media (min-width: theme('screens.lg')) {
+        width: 496px;
+      }
+    }
+    p {
+      @apply whitespace-normal;  /* white-space: normal; */
+    }
+  }
+  .carousel--marketing, 
+  .carousel--partners {
+    .carousel__stage {
+      @media (min-width: theme('screens.lg')) {
+        @apply gap-16;         /* gap: 64px; */
+      }
+    } 
+    picture {
+      width: 272px;
+      @media (min-width: theme('screens.lg')) {
+        width: 496px;
+      }
+    }
+    img {
+      @apply object-contain;   /* object-fit: contain; */
+      @apply object-center;    /* object-position: center center; */
+      padding: 24px 56px;
+      @media (min-width: theme('screens.lg')) {
+        @apply py-4;           /* padding-top/bottom: 32px; */
+        @apply px-24;          /* padding-right/left: 96px; */
+      }
+    }
+  }
+  .carousel__fade-left, 
+  .carousel__fade-right {
+    @apply bg-gradient-to-r;   /* background-image: linear-gradient(to right, */
+    @apply absolute;           /* position: absolute; */
+    @apply top-0;              /* top: 0; */
+    height: calc(100% - 48px);
+    @apply w-16;               /* width: 64px; */
+  }
+  .carousel__fade-left {
+    @apply from-white;         /* --gradient-from-color: theme('colors.white'); */
+    @apply to-transparent;     /* --gradient-to-color: theme('colors.transparent'); */
+    @apply left-0;             /* left: 0; */
+    @apply opacity-0;          /* opacity: 0; */
+  }
+  .carousel__fade-right {
+    @apply from-transparent;   /* --gradient-from-color: theme('colors.transparent'); */
+    @apply to-white;           /* --gradient-to-color: theme('colors.white'); */
+    @apply right-0;            /* right: 0; */
+    @apply opacity-100;        /* opacity: 1; */
   }
 `} />
 
@@ -25,4 +453,10 @@ Define classes in **src/components/carousel/carousel.styles.scss**.
 
 Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
 
-* NEED TO WRITE
+* Same guidelines as for [Color](/?path=/docs/style-guide-color--page).
+* Same guidelines as for [Typography](/?path=/docs/style-guide-typography--page).
+* Same guidelines as for [Iconography](/?path=/docs/style-guide-iconography--page).
+* Same guidelines as for [Imagery](/?path=/docs/style-guide-imagery--page).
+* Same guidelines as for [Structure](/?path=/docs/style-guide-structure--page).
+* Same guidelines as for [Animation](/?path=/docs/style-guide-animation--page).
+* Same guidelines as for [Inclusive Design](/?path=/docs/style-guide-inclusive-design--page), specifically Keyboard Operability.
