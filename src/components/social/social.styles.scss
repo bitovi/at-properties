@@ -2,11 +2,12 @@
     a {
         @apply inline-block;
         @apply mr-8;
+        padding: 4px;
     }
     svg {
-        @apply w-10;
-        @apply h-10;
-      color: theme('colors.primary.900');
+        width: 32px;
+        height: 32px;
+        color: theme('colors.primary.900');
     }
 }
 

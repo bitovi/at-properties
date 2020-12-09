@@ -5,38 +5,24 @@
                 <h3 class="head-2 accent--above-center">Marketing Assets</h3>
             </div>
             <div class="col-span-full text-center">
-                <dlp-carousel
-                    :options="{spaceBetween: 64}"
-                    :hasScrollNav="true"
-                    >
-                    <swiper-slide>
-                        <dlp-display-card 
-                            source="images/marketing/marketing-1.jpg"
-                            caption="Online Advertising"/>
-                    </swiper-slide>
-                    <swiper-slide>
-                        <dlp-display-card 
-                            class="pt-16"
-                            source="images/marketing/marketing-2.png"
-                            caption="Yard Signs"/>
-                    </swiper-slide>
-                    <swiper-slide>
-                        <dlp-display-card 
-                            source="images/marketing/marketing-3.jpg"
-                            caption="Social Media"/>
-                    </swiper-slide>
-                    <swiper-slide>
-                        <dlp-display-card 
-                            source="images/marketing/marketing-1.jpg"
-                            caption="Flyers"/>
-                    </swiper-slide>
-                    <swiper-slide>
-                        <dlp-display-card 
-                            class="pt-16"
-                            source="images/marketing/marketing-2.png"
-                            caption="Magazine Feature"/>
-                    </swiper-slide>
-                </dlp-carousel>
+
+                <dlp-flat-scroll class="flat-scroll--marketing">
+                    <dlp-display-card 
+                        source="images/marketing/marketing-1.jpg"
+                        caption="Online Advertising"/>
+                    <dlp-display-card
+                        source="images/marketing/marketing-2.png"
+                        caption="Yard Signs"/>
+                    <dlp-display-card 
+                        source="images/marketing/marketing-3.jpg"
+                        caption="Social Media"/>
+                    <dlp-display-card 
+                        source="images/marketing/marketing-1.jpg"
+                        caption="Flyers"/>
+                    <dlp-display-card
+                        source="images/marketing/marketing-2.png"
+                        caption="Magazine Feature"/>
+                </dlp-flat-scroll>
 
             </div>
         </section>
@@ -65,7 +51,7 @@
             </div>
             <div class="col-span-full lg:col-span-10 lg:col-start-4">
                 <dlp-video-card
-                    :sm="`${publicPath}images/marketing/signage.jpg`"
+                    :sm="`images/marketing/signage.jpg`"
                     alt="Play signage video"
                     animate="shrink"
                     videoId="XZ8F2AJa-_U"
@@ -83,7 +69,7 @@
             </div>
             <div class="col-span-full md:col-span-6 lg:col-span-7 lg:col-start-2">
                 <dlp-figure
-                    :sm="`${publicPath}images/marketing/marketing-plan.jpg`"
+                    :sm="`images/marketing/marketing-plan.jpg`"
                     alt="Woman's hands resting on laptop with flowers and coffee cup nearby"
                     ar="ar ar--5-4"
                     animate="shrink"
@@ -94,7 +80,11 @@
                     <p class="accent--above-left">A fully integrated marketing plan is key to getting your home sold quickly and for top dollar. No home is the same, so we provide a customized marketing plan tailored for your home.</p>
                 </dlp-transition>
                 <div class="btn-group">
-                    <dlp-button type="button">View Custom Marketing Plan</dlp-button>
+                    <dlp-button type="button" @click="showModal('MarketingPlanModal', $event)">View Custom Marketing Plan</dlp-button>
+                    <dlp-appear-modal ref="MarketingPlanModal">
+                        <h3 class="head-5 accent--above-left mb-8">Luxury Stats</h3>
+                        <p>Coming soon...</p>
+                    </dlp-appear-modal>
                 </div>
             </div>
         </section>
@@ -102,13 +92,13 @@
 </template>
 
 <script>
-import Strings from '../assets/strings/marketing.i18n.json'
 export default {
     name: 'marketingContainer',
-    data(){
-        return {
-            i18n: Strings,
-            publicPath: process.env.BASE_URL
+    methods: {
+        showModal: function(name, evt) {
+            if(this.$refs[name]){
+                this.$refs[name].open(evt)
+            }
         }
     }
 }

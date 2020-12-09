@@ -23,10 +23,13 @@
                     <p><a href="tel:+1-312.961.4612">312.961.4612</a></p>
                     <p><a href="mailto:Carrie@atproperties.com">Carrie@atproperties.com</a></p>
                 </address>
+                <dlp-transition type="fadeIn slideLeft">
                 <dlp-social 
                     facebook="https://www.facebook.com/thad.wong.54"
                     instagram="https://www.instagram.com/thadly_wong/"
+                    website="https://www.carriemccormickre.com/"
                 />
+                </dlp-transition>
             </div>
         </section>
 
@@ -37,13 +40,15 @@
                 <img src="images/intro/logo-atproperties.svg" class="w-full" alt="@properties" />
             </div>
             <div class="col-span-full text-center">
-                <dlp-social 
-                    facebook="https://www.facebook.com/thad.wong.54"
-                    instagram="https://www.instagram.com/thadly_wong/"
-                    twitter="https://twitter.com/properties" 
-                    youtube="https://www.youtube.com/user/AtPropertiesTV"
-                    website="https://www.atproperties.com/"
-                />
+                <dlp-transition type="fadeIn slideRight">
+                    <dlp-social 
+                        facebook="https://www.facebook.com/thad.wong.54"
+                        instagram="https://www.instagram.com/thadly_wong/"
+                        twitter="https://twitter.com/properties" 
+                        youtube="https://www.youtube.com/user/AtPropertiesTV"
+                        website="https://www.atproperties.com/"
+                    />
+                </dlp-transition>
             </div>
         </section>
 
@@ -55,6 +60,7 @@
                 <dlp-social 
                     lender="https://www.us.hsbc.com/home-loans/equal-housing-lender/"
                     realtor="https://www.nar.realtor/"
+                    website="https://www.carriemccormickre.com/"
                 />
             </div>
       </section>
