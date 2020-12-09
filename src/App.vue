@@ -53,7 +53,7 @@
       
       <article id="selling">
         <TitlePage 
-          :backgroundUrl="`images/auxiliary/09-2550-n-lakeview-ave-3802-165-living-room-printjpg-5f8da927c0f72.jpg`"
+          :backgroundUrl="`images/selling/bg-selling.jpeg`"
           heading="Selling your home" 
           subheading="Final Steps" />
         <SellingContainer />
