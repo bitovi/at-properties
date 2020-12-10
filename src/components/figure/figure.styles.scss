@@ -47,3 +47,33 @@
         }
     }
 }
+
+/* Hanna: adding my classes here */ 
+
+/* Figure */ 
+figure {
+  @apply relative;           /* position: relative; */
+}
+.img__border {
+  @apply absolute;           /* position: absolute; */
+  @apply top-0;              /* top: 0; */
+  @apply left-0;             /* left: 0; */
+  @apply m-2;                /* margin: 8px; */
+  @apply border;             /* border-width: 1px; */
+  @apply border-white;       /* border-color: theme('colors.white'); */
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  @apply grid;               /* display: grid; */
+  @apply z-30;               /* z-index: 30; */
+  @media (min-width: theme('screens.lg')) {
+    @apply m-3;              /* margin: 12px; */
+    width: calc(100% - 24px);
+    height: calc(100% - 24px);
+  }
+}
+.caption--inside {
+  @apply self-end;           /* align-self: flex-end; */
+  @apply text-white;         /* color: theme('colors.white'); */
+  @apply text-center;        /* text-align: center; */
+  @apply pb-6;               /* padding-bottom: 24px; */
+}
