@@ -77,7 +77,7 @@
                         <dlp-button type="button" @click="showModal('SalesModal')">View more sales</dlp-button>
                         <dlp-appear-modal ref="SalesModal">
                             <h3 class="head-5 accent--above-left mb-8">Recent Sales</h3>
-                            <dlp-sales-card 
+                            <dlp-property
                                 v-for="sale in i18n.sales" 
                                 v-bind:key="sale.id" 
                                 :sm="sale.photo.sm" 

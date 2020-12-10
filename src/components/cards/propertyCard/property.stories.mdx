@@ -1,5 +1,7 @@
-import { Meta, Preview, Source } from '@storybook/addon-docs/blocks';
+import { Meta, Preview, Source, Canvas, Story } from '@storybook/addon-docs/blocks';
 import dedent from 'ts-dedent';
+
+import DLPPropCard from './property.component.vue'
 
 <Meta title="Pattern Library/Components/Property" />
 
@@ -10,6 +12,18 @@ import dedent from 'ts-dedent';
 * Properties are shown separated by a 1px light gray (Primary 100) horizontal rule, with 16px between the rule and each item.
 * **Accessibility**: Notice that images use `alt=""`. Read more about [writing alt text](/?path=/story/pattern-library-components-figure--page#writing-alt-text) for images (See [Figure](/?path=/story/pattern-library-components-figure--page)).
 * NEED NOTE ABOUT ANIMATION
+
+<Canvas>
+  <Story 
+    name="Default">
+    {{
+      template: '<div class="w-2/3"><dlp-property sm="images/sales/505-n-mcclurg-ct-2203-sm.jpg" price="935000" address="505 N Mcclurg Court #2203 Chicago, Illinois 60611" /></div>'
+    }}
+  </Story>
+</Canvas>
+
+
+
 
 <Preview>
 <div className="properties w-2/3">
