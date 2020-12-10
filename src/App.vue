@@ -18,21 +18,13 @@
       <article id="team">
         <TeamContainer />
       </article>
+      
       <article id="company">
         <TitlePage 
           :backgroundUrl="`images/company/bg-company.jpeg`"
           heading="Every home has a story" 
           subheading="Company Profile" />
         <CompanyContainer />
-      </article>
-
-      
-      <article id="reach">
-        <TitlePage 
-          :backgroundUrl="`images/reach/bg-reach.jpg`"
-          heading="We're local, we're global"
-          subheading="Luxury"/>
-        <ReachContainer />
       </article>
 
       <article id="technology">
@@ -50,7 +42,15 @@
           subheading="Marketing" />
         <MarketingContainer />
       </article>
-      
+
+      <article id="reach">
+        <TitlePage 
+          :backgroundUrl="`images/reach/bg-reach.jpg`"
+          heading="We're local, we're global"
+          subheading="Luxury"/>
+        <ReachContainer />
+      </article>
+
       <article id="selling">
         <TitlePage 
           :backgroundUrl="`images/selling/bg-selling.jpeg`"
@@ -58,6 +58,7 @@
           subheading="Final Steps" />
         <SellingContainer />
       </article>
+
       <article id="partners">
         <TitlePage 
           :backgroundUrl="`images/partners/bg-partners.jpeg`"
@@ -65,6 +66,7 @@
           subheading="All working as a team, through every step of the transaction" />
           <PartnersContainer />
       </article>
+
       <article id="community">
         <TitlePage 
           :backgroundUrl="`images/community/bg-community.jpeg`"
@@ -72,7 +74,7 @@
           subheading="Community" />
         <CommunityContainer />
       </article>
-      <hr />
+      
       <footer id="contact">
         <ContactContainer />
       </footer>

@@ -25,7 +25,9 @@
   @apply mr-auto;            /* margin-right: auto; */
   @apply mb-6;               /* margin-bottom: 24px; */
   @media (min-width: theme('screens.lg')) {
-    @apply mb-8;             /* margin-bottom: 32px; */
+    & { 
+      @apply mb-8;             /* margin-bottom: 32px; */
+    }
   }
 }
 .accent--below-center-wide:after {
@@ -36,4 +38,15 @@
 .head-6.accent--below-center:after {
   @apply my-2;               /* margin-top/bottom: 8px; */
   @apply mx-auto;            /* margin-left/right: auto; */
+}
+
+/* Agency logo */
+.logo--agency {
+  max-width: 150px;
+  padding-bottom: 64px;
+  
+  @media (min-width: theme('screens.lg')) {
+    max-width: 200px;
+    padding-bottom: 80px;
+  }
 }

@@ -3,8 +3,7 @@
         <div class="content-grid">
             <div class="col-span-full text-center">
                 <img
-                    class="mx-auto" 
-                    style="width: 200px;"
+                    class="mx-auto logo--agency"
                     :alt="`${i18n.logo.alt}`" 
                     :src="`${i18n.logo.sm}`"/>
             </div>
@@ -43,7 +42,7 @@
                     <dlp-transition type="fadeIn slideUp" v-for="t in i18n.testimonials.slice(0, 3)" v-bind:key="t.id" >
                         <dlp-testimonial
                             :score="t.rating">
-                            <div v-html="t.trunk"></div>
+                            <q v-html="t.trunk"/>
                         </dlp-testimonial>
                     </dlp-transition>
                     <div class="btn-group">
@@ -54,7 +53,7 @@
                                 v-for="t in i18n.testimonials" 
                                 v-bind:key="t.id" 
                                 :score="t.rating">
-                                    <div v-html="t.quote"></div>
+                                    <div v-html="t.quote"/>
                                 </dlp-testimonial>
                         </dlp-appear-modal>
                     </div>
@@ -62,20 +61,23 @@
 
                 <section id="agent-sales" class="">
                     <h3 class="head-5 accent--above-left mb-4">Recent Sales</h3>
-
-                    <dlp-transition type="fadeIn slideUp" v-for="s in i18n.sales.slice(0, 3)" v-bind:key="`brief-${s.id}`" >
-                        <dlp-sales-card 
-                            :sm="s.photo.sm" 
-                            :lg="s.photo.lg" 
-                            :price="s.price" 
-                            :address="s.address" />
-                    </dlp-transition>
-                    
+                    <div class="dlp-property-wrapper">
+                        <dlp-transition 
+                            type="fadeIn slideUp" 
+                            v-for="s in i18n.sales.slice(0, 3)" 
+                            v-bind:key="`brief-${s.id}`" >
+                            <dlp-property
+                                :sm="s.photo.sm" 
+                                :lg="s.photo.lg" 
+                                :price="s.price" 
+                                :address="s.address" />
+                        </dlp-transition>
+                    </div>
                     <div class="btn-group">
                         <dlp-button type="button" @click="showModal('SalesModal')">View more sales</dlp-button>
                         <dlp-appear-modal ref="SalesModal">
                             <h3 class="head-5 accent--above-left mb-8">Recent Sales</h3>
-                            <dlp-sales-card 
+                            <dlp-property
                                 v-for="sale in i18n.sales" 
                                 v-bind:key="sale.id" 
                                 :sm="sale.photo.sm" 
@@ -88,24 +90,26 @@
 
                 <section id="agent-stats" class="">
                     <h3 class="head-5 accent--above-left">Agent Stats</h3>
-                    <dlp-transition type="fadeIn slideUp">
-                        <p class="pb-4 mb-2 border-b border-primary-100">
-                            <span class="head-3 block text-secondary-500" v-html="i18n.stats[0]['span-1']"></span>
-                            <span class="head-6" v-html="i18n.stats[0]['span-2']"></span>
-                        </p>
-                    </dlp-transition>
-                    <dlp-transition type="fadeIn slideUp">
-                        <p class="pb-4 mb-2 border-b border-primary-100">
-                            <span class="head-3 block text-secondary-500" v-html="i18n.stats[1]['span-1']"></span>
-                            <span class="head-6" v-html="i18n.stats[1]['span-2']"></span>
-                        </p>
-                    </dlp-transition>
-                    <dlp-transition type="fadeIn slideUp">
-                        <p>
-                            <span class="head-3 block text-secondary-500">{{i18n.stats[2]['span-1']}}</span>
-                            <span class="head-6" v-html="i18n.stats[2]['span-2']"></span>
-                        </p>
-                    </dlp-transition>
+                    <div class="space-y-4 lg:space-y-6 mt-6 lg:mt-8">
+                        <dlp-transition type="fadeIn slideUp">
+                            <p>
+                                <span class="head-3 block text-secondary-500" v-html="i18n.stats[0]['span-1']"></span>
+                                <span class="head-6" v-html="i18n.stats[0]['span-2']"></span>
+                            </p>
+                        </dlp-transition>
+                        <dlp-transition type="fadeIn slideUp">
+                            <p>
+                                <span class="head-3 block text-secondary-500" v-html="i18n.stats[1]['span-1']"></span>
+                                <span class="head-6" v-html="i18n.stats[1]['span-2']"></span>
+                            </p>
+                        </dlp-transition>
+                        <dlp-transition type="fadeIn slideUp">
+                            <p>
+                                <span class="head-3 block text-secondary-500">{{i18n.stats[2]['span-1']}}</span>
+                                <span class="head-6" v-html="i18n.stats[2]['span-2']"></span>
+                            </p>
+                        </dlp-transition>
+                    </div>
                 </section>
 
                 <section id="agent-contact">
