@@ -1,6 +1,7 @@
 <template>
     <div class="section-content">
         <section class="content-grid" aria-label="Agent contact information">
+            <div class="col-span-full lg:col-span-14 lg:col-start-2 border-t border-primary-200 mb-24"></div>
             <div class="col-span-full text-center">
                 <img 
                     src="images/agent/emily-sachs-wong.jpeg" 
@@ -36,9 +37,8 @@
             </div>
         </section>
 
-        <hr class="my-16" />
-
         <section class="content-grid" aria-label="@properties social presence">
+            <div class="col-span-full lg:col-span-14 lg:col-start-2 border-t border-primary-200"></div>
             <div class="md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-6">
                 <img src="images/intro/logo-atproperties.svg" class="w-full" alt="@properties" />
             </div>
@@ -53,9 +53,8 @@
                     />
                 </dlp-transition>
             </div>
+            <div class="col-span-full lg:col-span-14 lg:col-start-2 border-t border-primary-200"></div>
         </section>
-
-        <hr class="my-16" />
 
         <section class="content-grid" aria-label="Legal disclaimers">
             <div class="col-span-full lg:col-span-14 lg:col-start-2 text-center">
