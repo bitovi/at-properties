@@ -24,8 +24,8 @@ import {
 import {
     BioCard,
     DisplayCard,
-    SalesCard,
-    VideoCard
+    VideoCard,
+    PropertyCard
 } from './cards'
 
 //install modals
@@ -35,8 +35,8 @@ Vue.component(VideoModal.name, VideoModal)
 //install cards
 Vue.component(BioCard.name, BioCard)
 Vue.component(DisplayCard.name, DisplayCard)
-Vue.component(SalesCard.name, SalesCard)
 Vue.component(VideoCard.name, VideoCard)
+Vue.component(PropertyCard.name, PropertyCard)
 
 
 Vue.component(ScrollNotify.name, ScrollNotify)
@@ -67,7 +67,6 @@ export {
     Figure,
     Rating,
     Testimonial,
-    SalesCard,
     AppearModal,
     CloseBtn,
     TitlePage,

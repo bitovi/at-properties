@@ -61,20 +61,23 @@
 
                 <section id="agent-sales" class="">
                     <h3 class="head-5 accent--above-left mb-4">Recent Sales</h3>
-
-                    <dlp-transition type="fadeIn slideUp" v-for="s in i18n.sales.slice(0, 3)" v-bind:key="`brief-${s.id}`" >
-                        <dlp-sales-card 
-                            :sm="s.photo.sm" 
-                            :lg="s.photo.lg" 
-                            :price="s.price" 
-                            :address="s.address" />
-                    </dlp-transition>
-                    
+                    <div class="dlp-property-wrapper">
+                        <dlp-transition 
+                            type="fadeIn slideUp" 
+                            v-for="s in i18n.sales.slice(0, 3)" 
+                            v-bind:key="`brief-${s.id}`" >
+                            <dlp-property
+                                :sm="s.photo.sm" 
+                                :lg="s.photo.lg" 
+                                :price="s.price" 
+                                :address="s.address" />
+                        </dlp-transition>
+                    </div>
                     <div class="btn-group">
                         <dlp-button type="button" @click="showModal('SalesModal')">View more sales</dlp-button>
                         <dlp-appear-modal ref="SalesModal">
                             <h3 class="head-5 accent--above-left mb-8">Recent Sales</h3>
-                            <dlp-sales-card 
+                            <dlp-property
                                 v-for="sale in i18n.sales" 
                                 v-bind:key="sale.id" 
                                 :sm="sale.photo.sm" 
