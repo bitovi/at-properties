@@ -1,7 +1,6 @@
 <template>
     <div class="section-content">
         <section class="content-grid" aria-label="Agent contact information">
-            <div class="col-span-full lg:col-span-14 lg:col-start-2 border-t border-primary-200 mb-24"></div>
             <div class="col-span-full text-center">
                 <img 
                     src="images/agent/emily-sachs-wong.jpeg" 
