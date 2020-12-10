@@ -1,50 +1,25 @@
+.dlp-testimonial-wrapper {
+	@apply space-y-4;          /* 16px of space between items and dividers */
+	@apply divide-y;           /* Place 1px horizontal dividers between items */
+	@apply divide-primary-100; /* Divider color is light gray (Primary 100) */
+	@apply mt-6;               /* margin-top: 24px; */
+	@apply mb-8;               /* margin-top: 32px; */
+	@media (min-width: theme('screens.lg')) {
+		& {
+			@apply mt-8;       /* margin-top: 32px; */
+			@apply mb-12;      /* margin-top: 48px; */
+		}
+	}
+	& > :first-child {
+		@apply pt-0;           /* padding-top: 0; */
+	}
+}
 
 .dlp-testimonial {
-    @apply pt-6;
-    @apply pb-6;
-    border-top: 1px solid theme('colors.primary.200');
-    
-    &:first-child,
-    &:first-of-type {
-        @apply pt-0;
-        border: none;
-    }
-
-    p,
-    .dlp-testimonial-content {
-        @apply mb-4;
-    }
-}
-
-/* Testimonial */ 
-.testimonials {
-  @apply space-y-6;          /* 24px of space between items and dividers */
-  @apply divide-y;           /* Place 1px horizontal dividers between items */
-  @apply divide-primary-100; /* Divider color is light gray (Primary 100) */
-  @apply mt-6;               /* margin-top: 24px; */
-  @apply mb-8;               /* margin-top: 32px; */
-  @screen lg {
-    @apply mt-8;             /* margin-top: 32px; */
-    @apply mb-12;            /* margin-top: 48px; */
-  }
-}
-.testimonial {
   @apply pt-6;               /* padding-top: 24px; */
-  &:first-child {
-    @apply pt-0;             /* padding-top: 0; */
+
+  .dlp-rating {
+	@apply mt-4;
+	@apply mb-6;
   }
-}
-/* Rating */
-.rating {
-  @apply mt-4;               /* margin-top: 16px; */
-  @apply mb-4;               /* margin-bottom: 16px; */
-  span {
-    @apply inline-block;     /* display: inline-block; */
-  }
-}
-.icon-star {
-  @apply text-secondary-500; /* color: theme('colors.secondary.500'); */
-  @apply w-5;                /* width: 20px; */
-  @apply h-5;                /* height: 20px; */
-  @apply mr-3;               /* margin-right: 12px; */
 }

@@ -39,22 +39,26 @@
 
                 <section id="agent-testimonials" class="">
                     <h3 class="head-5 accent--above-left mb-4">Testimonials</h3>
-                    <dlp-transition type="fadeIn slideUp" v-for="t in i18n.testimonials.slice(0, 3)" v-bind:key="t.id" >
-                        <dlp-testimonial
-                            :score="t.rating">
-                            <q v-html="t.trunk"/>
-                        </dlp-testimonial>
-                    </dlp-transition>
+                    <div class="dlp-testimonial-wrapper">
+                        <dlp-transition type="fadeIn slideUp" v-for="t in i18n.testimonials.slice(0, 3)" v-bind:key="t.id" >
+                            <dlp-testimonial
+                                :score="t.rating">
+                                <q v-html="t.trunk"/>
+                            </dlp-testimonial>
+                        </dlp-transition>
+                    </div>
                     <div class="btn-group">
                         <dlp-button type="button" @click="showModal('TestimonialsModal')">View more testimonials</dlp-button>
                         <dlp-appear-modal ref="TestimonialsModal">
                             <h3 class="head-5 accent--above-left mb-8">Testimonials</h3>
-                            <dlp-testimonial 
-                                v-for="t in i18n.testimonials" 
-                                v-bind:key="t.id" 
-                                :score="t.rating">
-                                    <div v-html="t.quote"/>
-                                </dlp-testimonial>
+                            <div class="dlp-testimonial-wrapper">
+                                <dlp-testimonial 
+                                    v-for="t in i18n.testimonials" 
+                                    v-bind:key="t.id" 
+                                    :score="t.rating">
+                                        <div v-html="t.quote"/>
+                                    </dlp-testimonial>
+                            </div>
                         </dlp-appear-modal>
                     </div>
                 </section>
