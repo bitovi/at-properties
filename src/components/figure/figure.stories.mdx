@@ -1,24 +1,111 @@
-import { Meta, Canvas, Source } from '@storybook/addon-docs/blocks';
+import { Meta, Preview, Source } from '@storybook/addon-docs/blocks';
 import dedent from 'ts-dedent';
 
 <Meta title="Pattern Library/Components/Figure" />
 
 # Figure
 
+* Images are coded as `figure`, with the exception of some logos (e.g., @properties, [partner](/?path=/docs/pattern-library-components-carousel--page#marketing-assets--partners) logos), which are SVGs.
+* Most images have inner borders. The exceptions are [property](/?path=/docs/pattern-library-components-property--default-story) photos and images used in [carousels](/?path=/docs/pattern-library-components-carousel--page).
+* Borders are 1px solid white, positioned 8px in on mobile/tablet, 12px in on desktop.
+* Images can have captions on top of the image (i.e., agent, co-agent photos) or below the image (i.e., [Team member](/?path=/docs/pattern-library-components-carousel--page#team-members) photos).
+* Images are scaled to a certain [aspect ratio](/?path=/docs/style-guide-imagery--page#aspect-ratios) (e.g., 4:3, 4:5).
+
+## Profile photo
+
+* Profile photos in the Agent, Co-Agent, Team, and Contact sections use a **4:5** [aspect ratio](/?path=/docs/style-guide-imagery--page#aspect-ratios).
+* The agent name appears as the figure caption inside the photo. *Note*: the figure caption does **not** appear on `sm` screen sizes.
+* Captions only appear for photos in the Agent and Co-Agent sections. The Team and Contact section photos will not have captions.
+
+<Preview>
+<div className="w-1/2">
+  <figure>
+    <picture className="ar ar--4-5">
+      <img src="images/agent/photo-carrie-mccormick-md.jpg" alt="" />
+    </picture>
+    <div className="img__border">
+      <figcaption className="hidden md:block caption--inside">
+        <h3 className="head-6 accent--below-center">Carrie McCormick</h3>
+      </figcaption>
+    </div>
+  </figure>
+</div>
+</Preview>
+
+## Editorial photo
+
+* Editorial photos accompany a block of body copy and use a **4:3** [aspect ratio](/?path=/docs/style-guide-imagery--page#aspect-ratios).
+
+<Preview>
+<div className="grid md:grid-cols-2 gap-8">
+  <div>
+    <figure>
+      <picture className="ar ar--4-3">
+        <img src="images/selling/selling-2.jpg" alt="" />
+      </picture>
+      <div className="img__border"></div>
+    </figure>
+  </div>
+  <div className="opacity-25 self-center">
+    <h3 className="head-5 accent--above-left">Staging Your Home</h3>
+    <p>Staging is the art of merchandising a home to improve its marketability. It can be as simple as rearranging a few pieces of furniture or as elaborate as hiring a professional to furnish an empty home right down to the plants and artwork.</p>
+  </div>
+</div>
+</Preview>
+
+## Carousel photo
+
+See [Carousel](/?path=/docs/pattern-library-components-carousel--page).
+
+## Property photo
+
+See [Property](/?path=/docs/pattern-library-components-property--default-story).
+
+## Statistic photo
+
+See [Statistic](/?path=/docs/pattern-library-components-statistic--page).
+
+## Video thumbnail
+
+See [Video Thumbnail](/?path=/docs/pattern-library-components-video-thumbnail--page).
+
 ## How to configure
 
 Define classes in **src/components/figure/figure.styles.scss**.
 
-<Source language='css' code={dedent`
-  .class { }
+<Source language='scss' code={dedent`
+  /* Figure */ 
+  figure {
+    @apply relative;           /* position: relative; */
+  }
+  .img__border {
+    @apply absolute;           /* position: absolute; */
+    @apply top-0;              /* top: 0; */
+    @apply left-0;             /* left: 0; */
+    @apply m-2;                /* margin: 8px; */
+    @apply border;             /* border-width: 1px; */
+    @apply border-white;       /* border-color: theme('colors.white'); */
+    width: calc(100% - 16px);
+    height: calc(100% - 16px);
+    @apply grid;               /* display: grid; */
+    @apply z-30;               /* z-index: 30; */
+    @media (min-width: theme('screens.lg')) {
+      @apply m-3;              /* margin: 12px; */
+      width: calc(100% - 24px);
+      height: calc(100% - 24px);
+    }
+  }
+  .caption--inside {
+    @apply self-end;           /* align-self: flex-end; */
+    @apply text-white;         /* color: theme('colors.white'); */
+    @apply text-center;        /* text-align: center; */
+    @apply pb-6;               /* padding-bottom: 24px; */
+  }
 `} />
-
-## Writing alt text
-
-* When writing image descriptions, describe the style of the home and any distinguising features. 
 
 ## Accessibility considerations
 
 Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
 
-* [Figure and figcaption – extended alternate text for screen readers?](https://www.hassellinclusion.com/blog/figure-figcaption-extended-alternate-text-screen-readers/)
+* Same guidelines as for [Imagery](/?path=/docs/style-guide-imagery--page). See [writing alt text](/?path=/docs/style-guide-imagery--page#writing-alt-text).
+* See also: [Figure and figcaption – extended alternate text for screen readers?](https://www.hassellinclusion.com/blog/figure-figcaption-extended-alternate-text-screen-readers/), April 2019.
