@@ -50,7 +50,7 @@ export default {
             type: Object,
             default: function() {
                 return {
-                    start: "top 85%",
+                    start: "top 80%",
                     end: "bottom center",
                     toggleActions: "play none none reset"
                 }
@@ -61,6 +61,7 @@ export default {
         fadeIn(target) {
             gsap.set(target, { opacity: 0 })
             return[{},{
+                duration: 0.7,
                 opacity: 1
             }, 0]
         },
@@ -91,6 +92,7 @@ export default {
         pop(target) {
             gsap.set(target, {transform: 'scale(0.5)'})
             return [{},{
+                duration: 0.5,
                 scale: 1
             }, 0]
         }
