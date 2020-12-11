@@ -3,7 +3,7 @@
         <section class="content-grid">
             <div class="col-span-full md:col-span-6 lg:col-span-7 lg:col-start-2">
                 <dlp-figure
-                    :sm="`${publicPath}images/reach/leading_re.jpeg`"
+                    :sm="`${publicPath}images/reach/leading_re.jpg`"
                     alt="Leading Real Estate Companies of the World"
                     ar="ar ar--4-3"
                     animate="shrink"
@@ -23,7 +23,7 @@
         <div class="content-grid">
             <div class="order-3 md:order-4 col-span-4 md:col-span-6 md:col-start-7 lg:col-span-7 lg:col-start-9">
                 <dlp-figure
-                    :sm="`${publicPath}images/reach/luxury_portfolio.jpeg`"
+                    :sm="`${publicPath}images/reach/luxury_portfolio.jpg`"
                     alt="Luxury Portfolio International"
                     ar="ar ar--4-3"
                     animate="shrink"
