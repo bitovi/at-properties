@@ -19,7 +19,7 @@
                 <div class="btn-group">
                     <dlp-button type="button" @click="showModal('CMAModal', $event)">View Sample CMA</dlp-button>
                     <dlp-appear-modal ref="CMAModal">
-                        <h3 class="head-5 accent--above-left mb-8">Luxury Stats</h3>
+                        <h3 class="head-5 accent--above-left mb-8">Pricing Your Home</h3>
                         <p>Coming soon...</p>
                     </dlp-appear-modal>
                 </div>
@@ -42,7 +42,7 @@
                 <div class="btn-group">
                     <dlp-button type="button" @click="showModal('LearnModal', $event)">Learn More</dlp-button>
                     <dlp-appear-modal ref="LearnModal">
-                        <h3 class="head-5 accent--above-left mb-8">Luxury Stats</h3>
+                        <h3 class="head-5 accent--above-left mb-8">Staging your home</h3>
                         <p>Coming soon...</p>
                     </dlp-appear-modal>
                 </div>
