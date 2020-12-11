@@ -1,13 +1,62 @@
-import { Meta, Story, Canvas } from '@storybook/addon-docs/blocks';
+import { Meta, Preview, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
 
 <Meta title="Style Guide/Animation" />
 
 # Animation
 
-## Animation
+There are several areas of the page where animations play.
+* **Title** area at the top of the page
+* **Section intros** at the begining of some sections (e.g., Global Reach, Marketing, Community)
+* **Transitions** added to select elements on a case by case basis (e.g., text fades in, images scale down)
+
+## Title
+
+See [Title](/?path=/docs/pattern-library-containers-title--page).
+
+## Section Intro
+
+See Secton Intro. <span className="highlight">Link doesn't exist yet.</span>
 
 ## Transitions
 
-## Modals
+* Transitions can be added to individual elements (e.g., paragraph, testimonial, property, etc.) using classes.
+* Animations play once and do not reverse (rewind on scroll up) or repeat (start over once you reach the top of the page).
 
-## Video
+<table>
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Animation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>.fade-in</code></td>
+      <td>Change opacity from 0 to 1 over 700ms</td>
+    </tr>
+    <tr>
+      <td><code>.pop</code></td>
+      <td>Change opacity from 0 to 1 <em>and</em> scale from 0.5 to 1 over 500ms<br />
+      Stagger multiple instances of 300ms apart (i.e., pop, wait 300 ms, pop the next item, wait 300ms, etc.)</td>
+    </tr>
+  </tbody>
+</table>
+
+<Preview>
+<div className="grid grid-cols-2 gap-8">
+  <div>
+    <p className="highlight">NEED EXAMPLES</p>
+  </div>
+</div>
+</Preview>
+
+## How to configure
+
+<span className="highlight">Write a paragraph about Nick's explanation: GSAP styles everything vs CSS. Checks for reduced motion preference first.</span>
+
+## Accessibility considerations
+
+Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
+
+* <span className="highlight">NEED TO ADD. Reduced motion. Flashing. Blinking, movement.</span>

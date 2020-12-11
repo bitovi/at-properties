@@ -21,11 +21,11 @@ export const parameters = {
         ], 
         'Pattern Library', [
           'Containers', [
-            'Navigation', 'Title', 'Section', 'Footer', 'Modal'
+            'Title', 'Navigation', 'Section', 'Footer', 'Modal'
           ], 
           'Components', [
             'Button', 'Carousel', 'Figure', 'Heading', 'Paragraph', 'Property', 
-            'Social', 'Statistic', 'Testimonial', 'Video'
+            'Social', 'Statistic', 'Testimonial', 'Video Thumbnail'
           ]
         ]
       ]

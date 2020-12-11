@@ -1,0 +1,55 @@
+import { Meta, Preview, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+<Meta title="Pattern Library/Components/Video Thumbnail" />
+
+# Video Thumbnail
+
+* Video thumbnails use a **16:9** aspect ratio, have a border, and include a play icon.
+* The play icon is 75% white by default, 100% white on `:focus` and `:hover`. 
+* The play icon is 64px wide on mobile/tablet; 128px wide on desktop.
+
+<Preview>
+<div className="w-1/2">
+  <figure>
+    <picture className="ar ar--16-9">
+      <img src="images/community/video-thumb.jpg" alt="" />
+    </picture>
+    <div className="img__border">
+      <div className="video-thumbnail">
+        <svg class="icon icon-play"><use href="images/icons/icons.svg#icon-play"></use></svg>
+      </div>
+    </div>
+  </figure>
+</div>
+</Preview>
+
+## How to configure
+
+Define classes in **src/components/cards/videoCard/videoCard.styles.scss**.
+
+<Source language='scss' code={dedent`
+  /* Video Thumbnail */ 
+  .video-thumbnail {
+    @apply self-center;        /* align-self: center; */
+    @apply text-white;         /* color: theme('colors.white'); */
+    @apply justify-self-center;  /* justify-self: center; */
+    @apply opacity-75;         /* opacity: 0.75; */
+    &:focus, &:hover {
+      @apply opacity-100;      /* opacity: 1; */
+    }
+  }
+  .icon-play {
+    @apply w-16;               /* width: 64px; */
+    @media (min-width: theme('screens.lg')) {
+      @apply w-32;             /* width: 128px; */
+    }
+  }
+`} />
+
+## Accessibility considerations
+
+Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
+
+* Same guidelines as for [Imagery](/?path=/docs/style-guide-imagery--page). See [writing alt text](/?path=/docs/style-guide-imagery--page#writing-alt-text). 
+* <span className="highlight">Need to discuss what element alt text will be attached to. Also, use alt or aria-label, not title.</span>
