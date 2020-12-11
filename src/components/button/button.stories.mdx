@@ -53,7 +53,7 @@ import DLPButton from './button.component.vue'
 
 Define classes in **src/components/button/button.styles.scss**.
 
-<!-- <Source language='css' code={dedent`
+<!-- <Source language='scss' code={dedent`
   .class { 
     /* outline: 1px solid theme('colors.white'); */
     /* width: 1em;                /* set icon size to font size */
@@ -61,7 +61,7 @@ Define classes in **src/components/button/button.styles.scss**.
   }
 `} /> -->
 
-<Source language='css' code={dedent`
+<Source language='scss' code={dedent`
   /* Button */
   .btn {
     @apply border-4;           /* border-width: 4px; */
@@ -70,12 +70,12 @@ Define classes in **src/components/button/button.styles.scss**.
     &:hover { 
       @apply bg-primary-500;   /* background-color: theme('colors.primary.500'); */
       @apply text-white;       /* color: white; */
-      /* outline: 1px solid theme('colors.primary.500'); */
+      outline: 1px solid theme('colors.primary.500');
     }
     &:focus, &:active { 
       @apply bg-primary-500;   /* background-color: theme('colors.primary.500'); */
       @apply text-white;       /* color: white; */
-      /* outline: 1px dashed theme('colors.system.focus'); */
+      outline: 1px dashed theme('colors.system.focus');
     }
   }
   /* Button: elements */
@@ -96,8 +96,8 @@ Define classes in **src/components/button/button.styles.scss**.
   .btn__icon {
     @apply fill-current;       /* fill: currentColor; */
     @apply text-base;          /* font-size: theme('fontSize.base'); */
-    /* width: 1em;                /* set icon size to font size */
-    /* height: 1em;
+    width: 1em;                /* set icon size to font size */
+    height: 1em;
     @apply p-3;                /* padding: 12px; */
   }
   /* Button: styles */
@@ -105,13 +105,13 @@ Define classes in **src/components/button/button.styles.scss**.
     @apply bg-primary-900;     /* background-color: theme('colors.primary.900'); */
     @apply border-white;       /* border-color: theme('colors.white'); */
     @apply text-white;         /* color: white; */
-    /* outline: 1px solid theme('colors.primary.900'); */
+    outline: 1px solid theme('colors.primary.900');
   }
   .btn--style-light {
     @apply bg-white;           /* background-color: theme('colors.white'); */
     @apply border-transparent; /* border-color: theme('colors.transparent'); */
     @apply text-primary-900;   /* color: theme('colors.primary.900'); */
-    /* outline: 1px solid theme('colors.white'); */
+    outline: 1px solid theme('colors.white');
   }
   /* Button: spacing */
   p + .btn {

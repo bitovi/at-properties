@@ -5,31 +5,78 @@ import dedent from 'ts-dedent';
 
 # Object Styles
 
-<div className="pt-8 grid grid-cols-2 gap-x-10 gap-y-16 justify-items-stretch">
-  <div>
-    <h2>Borders</h2>
-    <p>Borders appear:</p>
-    <ul>
-      <li>Navigation</li>
-      <li>Between sections</li>
-      <li>Section Intro</li>
-      <li>Section Content</li>
-      <li>Figure images</li>
-      <li>Button</li>
-      <li>Footer</li>
-    </ul>
+Page elements can be styled with borders, rules/dividers, and accents.
+
+## Borders
+
+Borders are used as decorative accents. 
+
+The following components have **single** 1px wide borders:
+* [Button](/?path=/docs/pattern-library-components-button--default-story)
+* [Figure](/?path=/docs/pattern-library-components-figure--page)
+* [Section](/?path=/docs/pattern-library-containers-section--page) - 1px border between sections (Agent | Co-Agent | Team... | Footer) and image border on Section Intros
+
+<Preview>
+<article id="agent" className="border-b border-primary-100 w-full">
+  <div className="p-10">
+    <div className="content-grid">
+      <div className="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
+        <figure>
+          <picture className="ar ar--1-1">
+            <img src="images/agent/photo-carrie-mccormick-md.jpg" alt="" />
+          </picture>
+        </figure>
+      </div>
+      <div className="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
+        <h2 class="head-5 accent--above-left pb-10">Agent Section</h2>
+        <button className="btn btn--style-dark">
+          <span className="btn__text">Agent Bio</span>
+        </button>
+      </div>
+    </div>
   </div>
-  <div>
-    <h2>Rules</h2>
-    <p>Rules are used to separate items. Rules are 1px wide, light gray (Primary 100). See individual components:</p>
-    <ul>
-      <li>Testimonials</li>
-      <li>Recent Sales</li>
-      <li>Agent Stats</li>
-      <li>Team Stats</li>
-    </ul>
+</article>
+<article id="co-agent" className="w-full">
+  <div className="p-10">
+    <div className="content-grid">
+      <div className="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
+        <figure>
+          <picture className="ar ar--1-1">
+            <img src="images/coagent/photo-leigh-marcus-md.jpg" alt="" />
+          </picture>
+        </figure>
+      </div>
+      <div className="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
+        <h2 class="head-5 accent--above-left pb-10">Co-Agent Section</h2>
+        <button className="btn btn--style-dark">
+          <span className="btn__text">Co-Agent Bio</span>
+        </button>
+      </div>
+    </div>
   </div>
-</div>
+</article>
+</Preview>
+
+The following components have **double** (1px -- 2px space -- 1px) borders:
+* [Navigation](/?path=/docs/pattern-library-containers-navigation--page)
+* [Section Content](/?path=/docs/pattern-library-containers-section--page)
+
+<Preview>
+<article>
+  <div className="section-content text-center">
+    <p>A section</p>
+  </div>
+</article>
+</Preview>
+
+## Rules
+
+Rules are used to separate items. Rules are 1px wide, light gray (Primary 100). See individual components:
+
+* Testimonials - See [Testimonial](/?path=/docs/pattern-library-components-testimonial--page)
+* Recent Sales - See [Property](/?path=/docs/pattern-library-components-property--default-story)
+* Agent Stats - See [Statistic](/?path=/docs/pattern-library-components-statistic--page)
+* Team Stats - See [Statistic](/?path=/docs/pattern-library-components-statistic--page)
 
 ## Accents
 
@@ -68,7 +115,7 @@ import dedent from 'ts-dedent';
 
 Define classes in **src/assets/object.styles.scss**.
 
-<Source language='html' code={dedent`
+<Source language='scss' code={dedent`
   /* Accent */
   .accent--above-left:before, 
   .accent--above-center:before, 
@@ -114,4 +161,5 @@ Define classes in **src/assets/object.styles.scss**.
 
 Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
 
-* <span className="highlight">NEED TO ADD</span>
+* Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element. [1.4.1 Use of Color (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#use-of-color)
+* Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text. [1.3.1 Info and Relationships (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#info-and-relationships)

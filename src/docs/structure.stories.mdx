@@ -38,7 +38,7 @@ The page follows a semantic structure using HTML5 tags. *Note*: code is abbrevia
 
 Page titles should be descriptive. Follow this template:
 
-<Source language='html' code={dedent`
+<Source language='scss' code={dedent`
   <title>[Firstname Lastname] - [City, State Abbreviation], Luxury Real Estate Agent - [Company Name]<title>
 `} />
 
@@ -57,7 +57,7 @@ Skip links are a recommended accessibility best practice. They are invisible unt
 
 Define classes in **src/assets/page.styles.scss**.
 
-<Source language='html' code={dedent`
+<Source language='scss' code={dedent`
   /* Skip link */
   .skip-link {
     @apply sr-only;              /* hide the element */
@@ -130,7 +130,7 @@ Define the `container` max-width and add support for a 16-column `grid` in **tai
 
 Example code for the Selling section. *Note*: code is abbreviated for simplicity (e.g., no end/closing tags).
 
-<Source language='html' code={dedent`
+<Source language='scss' code={dedent`
   <!-- Selling section -->
   <article id="selling">
     <!-- section TITLE, aka. “intro slide” -->
