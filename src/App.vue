@@ -74,7 +74,7 @@
           subheading="Community" />
         <CommunityContainer />
       </article>
-      
+      <hr />
       <footer id="contact">
         <ContactContainer />
       </footer>

@@ -4,7 +4,6 @@ import Button from './button/button.component'
 import Nav from './nav/nav.component'
 import Figure from './figure/figure.component'
 import Rating from './rating/rating.component'
-import Testimonial from './testimonial/testimonial.component'
 import CloseBtn from './close/close.component'
 import TitlePage from './title/title.page'
 import Social from './social/social.component'
@@ -25,7 +24,8 @@ import {
     BioCard,
     DisplayCard,
     VideoCard,
-    PropertyCard
+    PropertyCard,
+    TestimonialCard
 } from './cards'
 
 //install modals
@@ -37,14 +37,14 @@ Vue.component(BioCard.name, BioCard)
 Vue.component(DisplayCard.name, DisplayCard)
 Vue.component(VideoCard.name, VideoCard)
 Vue.component(PropertyCard.name, PropertyCard)
-
+Vue.component(TestimonialCard.name, TestimonialCard)
 
 Vue.component(ScrollNotify.name, ScrollNotify)
 Vue.component(Button.name, Button)
 Vue.component(Nav.name, Nav)
 Vue.component(Figure.name, Figure)
 Vue.component(Rating.name, Rating)
-Vue.component(Testimonial.name, Testimonial)
+
 
 
 Vue.component(CloseBtn.name, CloseBtn)
@@ -66,7 +66,7 @@ export {
     Nav,
     Figure,
     Rating,
-    Testimonial,
+    TestimonialCard,
     AppearModal,
     CloseBtn,
     TitlePage,
