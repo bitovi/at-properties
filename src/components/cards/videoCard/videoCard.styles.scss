@@ -19,7 +19,10 @@
         &.light svg {
             fill: theme('colors.white');
         }
+
+        /* Hanna: why doesn't this work? */
+        &:focus, &:hover {
+          opacity: 1.0;
+        }
     }
-
-
 }
