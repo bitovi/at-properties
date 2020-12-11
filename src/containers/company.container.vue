@@ -80,16 +80,17 @@
             </div>
         </section>
 
-        <section id="company-stats">
-            <div class="text-center">
-                <h3 class="head-2 accent--below-center mb-12">The Numbers Don't Lie</h3>
-            </div>
+        <section id="company-stats" class="content-grid">
+          <div class="col-span-full text-center">
+            <h3 class="head-2 accent--below-center mb-12">The Numbers Don't Lie</h3>
+            
             <dlp-stat-grid />
             
 
 
-            <div class="col-span-full flex">
+            <!-- <div class="col-span-full flex"> -->
                 <dlp-button type="button" class="mx-auto" @click="showModal('LocalStatsModal')">View local stats</dlp-button>
+                
                 <dlp-appear-modal ref="LocalStatsModal">
                     <h3 class="head-5 accent--above-left mb-8">Local Stats</h3>
                     <img
@@ -97,7 +98,8 @@
                         :alt="`@properties sells 25% of luxury real estate in Chicago`" 
                         :src="`${publicPath}images/company/local-stats.png`">
                 </dlp-appear-modal>
-            </div>
+            <!-- </div> -->
+          </div>
         </section>
     </div>
 </template>

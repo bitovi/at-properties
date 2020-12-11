@@ -85,7 +85,7 @@ a, a:visited {
   @apply underline;          /* text-decoration: underline; */
 }
 a:focus, a:hover, a:active {
-  @apply text-system-focus;  /* color: theme('colors.primary.900'); */
+  @apply text-system-focus;  /* color: theme('colors.system.focus'); */
   @apply no-underline;       /* text-decoration: none; */
 }
 /* Contact info */
@@ -97,7 +97,7 @@ a:focus, a:hover, a:active {
   }
 }
 
-/* Links */
+/* Links
 a {
   font-size: theme('fontSize.base');
   &:link,
@@ -116,7 +116,7 @@ a {
       font-size: theme('fontSize.lg');
   }
 }
-a:focus,
+a:focus, */
 button:focus {
   // outline-color: theme('colors.secondary.500');
   outline-style: dashed;

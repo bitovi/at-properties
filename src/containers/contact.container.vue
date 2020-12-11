@@ -13,7 +13,6 @@
                         :sm="`${publicPath}images/agent/photo-carrie-mccormick-sm.jpg`"
                         :md="`${publicPath}images/agent/photo-carrie-mccormick-md.jpg`"
                         alt="Carrie McCormick"
-                        caption="Carrie McCormick"
                         ar="ar ar--4-5"
                         animate="shrink"
                     />
@@ -22,16 +21,25 @@
             <div class="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
                 <h1 class="head-1">Carrie McCormick</h1>
                 <h5 class="head-5 accent">Contact Me Today!</h5>
-                <address>
+                <!-- <address>
                     <p><a href="tel:+1-312.961.4612">312.961.4612</a></p>
                     <p><a href="mailto:Carrie@atproperties.com">Carrie@atproperties.com</a></p>
                 </address>
-                <dlp-transition type="fadeIn slideLeft">
+                <dlp-transition type="fadeIn">
                 <dlp-social 
                     facebook="https://www.facebook.com/thad.wong.54"
                     instagram="https://www.instagram.com/thadly_wong/"
                     website="https://www.carriemccormickre.com/"
                 />
+                </dlp-transition> -->
+                <address class="my-4">
+                    <a :href="`tel:+1-${i18n.contact.phone}`">{{i18n.contact.phone}}</a><br /><br />
+                    <a :href="`mailto:${i18n.contact.email}`">{{i18n.contact.email}}</a>
+                </address>
+                <dlp-transition type="fadeIn">
+                    <dlp-social 
+                        v-bind="i18n.contact.social"
+                    />
                 </dlp-transition>
             </div>
         </section>
@@ -42,7 +50,7 @@
                 <img src="images/intro/logo-atproperties.svg" class="w-full" alt="@properties" />
             </div>
             <div class="col-span-full text-center">
-                <dlp-transition type="fadeIn slideRight">
+                <dlp-transition type="fadeIn">
                     <dlp-social 
                         facebook="https://www.facebook.com/thad.wong.54"
                         instagram="https://www.instagram.com/thadly_wong/"
@@ -68,11 +76,14 @@
 </template>
 
 <script>
+import AgentStrings from '../assets/strings/agent.i18n.json'
+
 export default {
     name: 'contactContainer',
     data(){
         return {
-            publicPath: process.env.BASE_URL
+            publicPath: process.env.BASE_URL,
+            i18n: AgentStrings
         }
     }
 }

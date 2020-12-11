@@ -52,7 +52,7 @@ export default {
                 return {
                     start: "top 80%",
                     end: "bottom center",
-                    toggleActions: "play none none reset"
+                    toggleActions: "play none none none"
                 }
             }
         }

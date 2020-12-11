@@ -14,7 +14,7 @@
                     :alt="`${i18n.name}`"
                     :caption="`${i18n.name}`"
                     ar="ar ar--4-5"
-                    :isSticky="true"
+                    :isSticky="false"
                     animate="shrink"
                 />
             </div>

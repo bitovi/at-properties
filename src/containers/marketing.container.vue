@@ -71,7 +71,7 @@
                 <dlp-figure
                     :sm="`images/marketing/marketing-plan.jpg`"
                     alt="Woman's hands resting on laptop with flowers and coffee cup nearby"
-                    ar="ar ar--5-4"
+                    ar="ar ar--4-3"
                     animate="shrink"
                 />
             </div>
