@@ -3,7 +3,7 @@
         <div class="stat-img__grid">
             <div class="stat-img__tile">
                 <figure>
-                    <picture class="ar ar--4-3 md:ar--1-1">
+                    <picture class="ar ar--stat">
                         <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fGxpdmluZyUyMHJvb218ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="" aria-hidden="true" />
                     </picture>
                 </figure>
@@ -19,7 +19,7 @@
             
             <div class="stat-img__tile">
                 <figure>
-                    <picture class="ar ar--4-3 md:ar--1-1">
+                    <picture class="ar ar--stat">
                         <img src="https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8YmVkcm9vbXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="" aria-hidden="true" />
                     </picture>
                 </figure>
@@ -34,7 +34,7 @@
             </div>
             <div class="stat-img__tile">
                 <figure>
-                    <picture class="ar ar--4-3 md:ar--1-1">
+                    <picture class="ar ar--stat">
                         <img src="https://images.unsplash.com/photo-1562663474-6cbb3eaa4d14?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8YmVkcm9vbXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" alt="" aria-hidden="true" />
                     </picture>
                 </figure>
