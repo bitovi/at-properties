@@ -1,4 +1,5 @@
 <template>
+  <div class="content-grid">
     <div class="col-span-full lg:col-span-14 lg:col-start-2 mb-12">
         <div class="stat-img__grid">
             <div class="stat-img__tile">
@@ -49,6 +50,7 @@
             </div>
         </div>
     </div>
+  </div>
 </template>
 <script>
 export default {
