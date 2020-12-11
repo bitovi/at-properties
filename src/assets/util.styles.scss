@@ -1,97 +1,73 @@
-
-
-/**
-    Color Aliases
-*/
-
-$white: theme('colors.white');
-$faint-gray: theme('colors.primary.100');
-$light-gray: theme('colors.primary.200');
-$medium-gray: theme('colors.primary.500');
-$dark-gray: theme('colors.primary.900');
-
-$red: theme('colors.secondary.500');
-
-$bg-faint-gray: theme('colors.neutral.050');
-$bg-light-gray: theme('colors.neutral.300');
-
-
-html,
-body {
-    height: 100%;
-    font-size: theme('fontSize.base');
-    scroll-behavior: smooth;
-}
-
-
-
-@font-face {
-    font-family: 'Gotham Medium';
-    src: url('/fonts/gothamhtf-medium-webfont.woff2') format('woff2'),
-         url('/fonts/gothamhtf-medium-webfont.woff') format('woff');
-}
-
-@font-face {
-    font-family: 'Gotham Light';
-    src: url('/fonts/gothamhtf-light-webfont.woff2') format('woff2'),
-         url('/fonts/gothamhtf-light-webfont.woff') format('woff');
-}
-
-//https://www.a11yproject.com/posts/2013-01-11-how-to-hide-content/
-//Hide content, but keep it available to screen readers
+/* https://www.a11yproject.com/posts/2013-01-11-how-to-hide-content/
+   Hide content, but keep it available to screen readers */
 .visually-hidden {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
-
 .visually-shown {
-    clip: auto;
-    clip-path: initial;
-    height: auto;
-    overflow: auto;
-    position: initial;
-    white-space: initial;
-    width: auto;
+  clip: auto;
+  clip-path: initial;
+  height: auto;
+  overflow: auto;
+  position: initial;
+  white-space: initial;
+  width: auto;
 }
 
-.dlp-modal-open {
-    height: 100vh;
-    overflow-y: hidden;
+/* Modal */
+.lock-scroll{
+  height: 100vh;
+  overflow-y: hidden;
 }
 
-/* Aspect Ratio */ 
+/* SVG */ 
+svg {
+  @apply fill-current;	     /* fill: currentColor; */
+}
 
+/* Aspect ratio */ 
 .ar {
-    @apply h-0;
-    @apply overflow-hidden;
-    @apply relative;
+  @apply relative;           /* position: relative; */
+  @apply block;              /* display: block; */
+  @apply h-0;                /* height: 0px; */
+  @apply overflow-hidden;    /* overflow: hidden; */
+  img,
+  picture {
+    @apply absolute;         /* position: absolute; */
+    @apply top-0;            /* top: 0; */
+    @apply left-0;           /* left: 0; */
+    @apply w-full;           /* width: 100%; */
+    @apply h-full;           /* height: 100%; */
+    @apply object-cover;     /* object-fit: cover; */
+    @apply object-top;       /* object-position: top center; */
+  }
 }
-.ar-2-3 {
-    padding-top: min(80vh, calc(3/2 * 100%));
+.ar--1-1 {
+  padding-top: 100%;
 }
-.ar-3-2 {
-    padding-top: min(80vh, calc(2/3 * 100%));
+.ar--2-3 {
+  padding-top: min(80vh, calc(3/2 * 100%));
 }
-.ar-4-3 {
-    padding-top: min(80vh, calc(3/4 * 100%));
+.ar--3-2 {
+  padding-top: min(80vh, calc(2/3 * 100%));
 }
-.ar-4-5 {
-    padding-top: min(80vh, calc(5/4 * 100%));
-    // padding-top: calc(5/4 * 100%);
+.ar--4-3 {
+  padding-top: min(80vh, calc(3/4 * 100%));
 }
-.ar img {
-    @apply w-full;
-    @apply h-full;
-    @apply object-cover;
+.ar--3-4 {
+  padding-top: min(80vh, calc(4/3 * 100%));
 }
-
-/* Positioning Tools */
-
-.top-4 {
-    top: theme('spacing.4')
+.ar--4-5 {
+  padding-top: min(80vh, calc(5/4 * 100%));
+}
+.ar--5-4 {
+  padding-top: min(80vh, calc(4/5 * 100%));
+}
+.ar--16-9 {
+  padding-top: min(80vh, calc(9/16 * 100%));
 }

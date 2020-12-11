@@ -1,46 +1,80 @@
 <template>
   <div id="app">
-    <header>
-      <Nav />
-    </header>
+    
+      <DevGrid />
     <main class="dlp-main">
+      <header>
+        <Nav />
+      </header>
       <article id="agent">
         <TitleContainer />
         <AgentContainer />
       </article>
+      <hr />
       <article id="co-agent">
         <CoagentContainer />
       </article>
+      <hr />
       <article id="team">
         <TeamContainer />
       </article>
+      
       <article id="company">
         <TitlePage 
-          :backgroundUrl="`${publicPath}images/bg/bg-company.jpg`"
+          :backgroundUrl="`images/company/bg-company.jpeg`"
           heading="Every home has a story" 
           subheading="Company Profile" />
         <CompanyContainer />
       </article>
+
+      <article id="technology">
+        <TitlePage 
+          :backgroundUrl="`images/technology/bg-technology.jpg`"
+          heading="Industry leading technology" 
+          subheading="Technology" />
+        <TechnologyContainer />
+      </article>
+
       <article id="marketing">
         <TitlePage 
-          :backgroundUrl="`${publicPath}images/bg/bg-marketing.jpg`"
-          heading="Marketing your home" 
-          subheading="Marketing Plan" />
+          :backgroundUrl="`images/marketing/bg-marketing.jpeg`"
+          heading="Award-winning marketing materials" 
+          subheading="Marketing" />
         <MarketingContainer />
       </article>
+
+      <article id="reach">
+        <TitlePage 
+          :backgroundUrl="`images/reach/bg-reach.jpg`"
+          heading="We're local, we're global"
+          subheading="Luxury"/>
+        <ReachContainer />
+      </article>
+
       <article id="selling">
         <TitlePage 
-          :backgroundUrl="`${publicPath}images/bg/bg-selling.jpg`"
-          heading="Selling your home"/>
+          :backgroundUrl="`images/selling/bg-selling.jpeg`"
+          heading="Selling your home" 
+          subheading="Final Steps" />
         <SellingContainer />
       </article>
+
       <article id="partners">
         <TitlePage 
-          :backgroundUrl="`${publicPath}images/bg/bg-partners.jpg`"
-          heading="Our Partners"
-          subheading="all working as a team, through every step of the transaction."/>
-        <PartnerContainer />
+          :backgroundUrl="`images/partners/bg-partners.jpeg`"
+          heading="Our Partners" 
+          subheading="All working as a team, through every step of the transaction" />
+          <PartnersContainer />
       </article>
+
+      <article id="community">
+        <TitlePage 
+          :backgroundUrl="`images/community/bg-community.jpeg`"
+          heading="Community" 
+          subheading="Community" />
+        <CommunityContainer />
+      </article>
+      <hr />
       <footer id="contact">
         <ContactContainer />
       </footer>
@@ -49,6 +83,12 @@
 </template>
 
 <script>
+import gsap from 'gsap';
+import ScrollTrigger from "gsap/ScrollTrigger"
+import ExpoScaleEase from "gsap/EasePack";
+import MotionPathPlugin from "gsap/MotionPathPlugin";
+
+
 import Nav from './components/nav/nav.component'
 import TitleContainer from './containers/title.container'
 import AgentContainer from './containers/agent.container'
@@ -56,14 +96,20 @@ import CoagentContainer from './containers/coagent.container'
 import TeamContainer from './containers/team.container'
 import CompanyContainer from './containers/company.container'
 import MarketingContainer from './containers/marketing.container'
-import SellingContainer from './containers/selling.component'
-import PartnerContainer from './containers/partner.container'
+import TechnologyContainer from './containers/technology.container'
 import ContactContainer from './containers/contact.container'
+import ReachContainer from './containers/reach.container'
+import SellingContainer from './containers/selling.container'
+import CommunityContainer from './containers/community.container'
+import PartnersContainer from './containers/partner.container'
 
-import TitlePage from './components/title/title.page'
+import TitlePage from './components/title/title.page.vue'
+
+import DevGrid from './components/dev/grids.dev'
 
 import './assets/base.styles.scss'
 
+gsap.registerPlugin(MotionPathPlugin, ScrollTrigger, ExpoScaleEase);
 
 export default {
   name: 'App',
@@ -75,17 +121,21 @@ export default {
     TeamContainer,
     CompanyContainer,
     MarketingContainer,
-    SellingContainer,
-    PartnerContainer,
     ContactContainer,
+    TechnologyContainer,
+    ReachContainer,
+    SellingContainer,
+    CommunityContainer,
+    PartnersContainer,
 
-    TitlePage
+    TitlePage,
+    DevGrid
   },
   data(){
       return {
           publicPath: process.env.BASE_URL
       }
-  }
+  },
 }
 </script>
 

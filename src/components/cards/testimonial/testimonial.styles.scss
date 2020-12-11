@@ -1,0 +1,25 @@
+.dlp-testimonial-wrapper {
+	@apply space-y-4;          /* 16px of space between items and dividers */
+	@apply divide-y;           /* Place 1px horizontal dividers between items */
+	@apply divide-primary-100; /* Divider color is light gray (Primary 100) */
+	@apply mt-6;               /* margin-top: 24px; */
+	@apply mb-8;               /* margin-top: 32px; */
+	@media (min-width: theme('screens.lg')) {
+		& {
+			@apply mt-8;       /* margin-top: 32px; */
+			@apply mb-12;      /* margin-top: 48px; */
+		}
+	}
+	& > :first-child {
+		@apply pt-0;           /* padding-top: 0; */
+	}
+}
+
+.dlp-testimonial {
+  @apply pt-6;               /* padding-top: 24px; */
+
+  .dlp-rating {
+	@apply mt-4;
+	@apply mb-6;
+  }
+}

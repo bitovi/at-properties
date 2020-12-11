@@ -1,44 +1,48 @@
 
 .dlp-close-btn {
     @apply block;
-    border: 1px solid $dark-gray;
+    border: 1px solid theme('colors.primary.900');
 
     svg .shape {
-        fill: $white;
+        fill: theme('colors.white');
     }
 
     &:hover,
     &:active,
     &.light-theme:hover,
     &.light-theme:active {
-        border: 1px solid $medium-gray;
+        border: 1px solid theme('colors.primary.500');
         svg .shape {
-            fill: $white;
+            fill: theme('colors.white');
         }
 
         .dlp-close-btn-inner {
-            background: $medium-gray;
+            background: theme('colors.primary.500');
         }
+    }
+
+    &:focus {
+        border-color: theme('colors.transparent');
     }
 
     .dlp-close-btn-inner {
         display: flex;
         justify-content: center;
         align-items: center;
-        background: $dark-gray;
+        background: theme('colors.primary.900');
         margin: 4px;
         width: 40px;
         height: 40px;
     }
 
     &.light-theme {
-        border-color: $white;
+        border-color: theme('colors.white');
         svg .shape {
-            fill: $dark-gray;
+            fill: theme('colors.primary.900');
         }
 
         .dlp-close-btn-inner {
-            background: $white;
+            background: theme('colors.white');
         }
     }
 }

@@ -1,77 +1,104 @@
 <template>
-    <div class="dlp-page dlp-content">
-        <div class="container mx-auto">
-            <section id="marketing-plan">
-                <div class="md:w-2/3 xl:w-1/3 mx-auto text-center mt-48 mb-32">
-                    <h3 class="head-5 accent accent-below">{{i18n.tailored.heading}}</h3>
-                    <p>{{i18n.tailored.content}}</p>
-                    <dlp-button class="mt-4">View Custom Marketing Plan</dlp-button>
-                </div>
-                <div class="container mx-auto px-16 md:px-32">
-                    <dlp-figure
-                            :sm="`${publicPath}images/marketing/iphone-sm.png`"
-                            :lg="`${publicPath}images/marketing/iphone-lg.png`"
-                            role="presentation"
-                            aria-hidden="true"
-                            :showBorder="false"
-                            alt="iPhone 11 Pro"
-                        />
-                </div>
-            </section>
+    <div class="section-content">
+        <section id="marketing-assets" class="content-grid">
+            <div class="col-span-full text-center">
+                <h3 class="head-2 accent--above-center">Marketing Assets</h3>
+            </div>
+            <div class="col-span-full text-center">
 
-            <section id="listing-videos">
-                <div class="md:w-2/3 xl:w-1/3 mx-auto text-center my-48">
-                    <h3 class="head-5 accent accent-below">{{i18n.listing.heading}}</h3>
-                    <p>{{i18n.listing.content}}</p>
-                    <p>[ VIDEO HERE ]</p>
-                </div>
-            </section>
+                <dlp-flat-scroll class="flat-scroll--marketing">
+                    <dlp-display-card 
+                        source="images/marketing/marketing-1.jpg"
+                        caption="Online Advertising"/>
+                    <dlp-display-card
+                        source="images/marketing/marketing-2.png"
+                        caption="Yard Signs"/>
+                    <dlp-display-card 
+                        source="images/marketing/marketing-3.jpg"
+                        caption="Social Media"/>
+                    <dlp-display-card 
+                        source="images/marketing/marketing-1.jpg"
+                        caption="Flyers"/>
+                    <dlp-display-card
+                        source="images/marketing/marketing-2.png"
+                        caption="Magazine Feature"/>
+                </dlp-flat-scroll>
 
-            <section id="signage" class="p-6 md:p-0 grid md:grid-cols-2 gap-8 my-48">
-                <div>
-                    <dlp-figure  
-                        :sm="`images/marketing/signage.jpg`"
-                        :lg="`images/marketing/signage.jpg`"
-                        alt="@properties realtor sign"
-                        ar="ar ar-4-3"
-                    ></dlp-figure >
-                </div>
-                <div class="self-center md:px-10 lg:text-left">
-                    <h3 class="head-5 accent">{{i18n.signage.heading}}</h3>
-                    <p>{{i18n.signage.content}}</p>
-                </div>
-            </section>
+            </div>
+        </section>
 
-            <section id="marketing-assets">
-                <div class="p-8 text-center">
-                    <h3 class="head-1 accent accent-below accent-wide">Marketing Assets</h3>
+        <section id="listing-video" class="content-grid mb-24">
+            <div class="col-span-full text-center">
+                <h3 class="head-2 accent--above-center">Listing Video</h3>
+            </div>
+            <div class="col-span-2 col-start-2 md:col-span-4 md:col-start-5 lg:col-span-12 lg:col-start-3">
+                <dlp-video-card
+                    :sm="`images/community/video-thumb.jpg`"
+                    alt="Listing Video"
+                    animate="shrink"
+                    videoId="WkflInhRuqE"
+                    title="Lorem ipsum dolor sit amet"
+                />
+            </div>
+            <div class="col-span-full md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-6">
+                <p class="accent--above-left">At @properties, video is a gamechanging marketing tool and we’re using it to tell your home’s story like never before.</p>
+            </div>
+        </section>
+
+        <section id="signage" class="content-grid">
+            <div class="col-span-full">
+                <h3 class="head-2 accent--above-center text-center">Signage</h3>
+            </div>
+            <div class="col-span-full lg:col-span-10 lg:col-start-4">
+                <dlp-video-card
+                    :sm="`images/marketing/signage.jpg`"
+                    alt="Play signage video"
+                    animate="shrink"
+                    videoId="XZ8F2AJa-_U"
+                    title="Watch"
+                />
+            </div>
+            <div class="col-span-full md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-6">
+                <p class="accent--above-left">Bold, Effective, Standing Out from the Rest. That’s how your listing should be seen and there’s no better reinforcement than @properties signage.</p>
+            </div>
+        </section>
+
+        <section id="marketing-plan" class="content-grid">
+            <div class="col-span-full">
+                <h3 class="head-2 accent--below-center text-center">Tailored Marketing Plan</h3>
+            </div>
+            <div class="col-span-full md:col-span-6 lg:col-span-7 lg:col-start-2">
+                <dlp-figure
+                    :sm="`images/marketing/marketing-plan.jpg`"
+                    alt="Woman's hands resting on laptop with flowers and coffee cup nearby"
+                    ar="ar ar--5-4"
+                    animate="shrink"
+                />
+            </div>
+            <div class="col-span-full md:col-span-6 md:col-start-7 md:content-center lg:col-span-6 lg:col-start-10 content-center self-center">
+                <dlp-transition type="fadeIn slideUp">
+                    <p class="accent--above-left">A fully integrated marketing plan is key to getting your home sold quickly and for top dollar. No home is the same, so we provide a customized marketing plan tailored for your home.</p>
+                </dlp-transition>
+                <div class="btn-group">
+                    <dlp-button type="button" @click="showModal('MarketingPlanModal', $event)">View Custom Marketing Plan</dlp-button>
+                    <dlp-appear-modal ref="MarketingPlanModal">
+                        <h3 class="head-5 accent--above-left mb-8">Luxury Stats</h3>
+                        <p>Coming soon...</p>
+                    </dlp-appear-modal>
                 </div>
-                <div class="text-center">
-                    <p>[ CAROUSEL HERE ]</p>
-                </div>
-            </section>
-            
-            <section id="global-reach" class="">
-                <div class="p-8 text-center">
-                    <h3 class="head-1 accent accent-below accent-wide">{{i18n.global.heading}}</h3>
-                    <p>{{i18n.global.content}}</p>
-                </div>
-                <div class="text-center">
-                    <img :src="`${publicPath}images/marketing/global-reach.jpg`" alt="World map showing 565 brokerages around the world, 6 continents with member companies, and 130,000 associates worldwide" class="w-full" />
-                </div>
-            </section>
-        </div>
+            </div>
+        </section>
     </div>
 </template>
 
 <script>
-import Strings from '../assets/strings/marketing.i18n.json'
 export default {
     name: 'marketingContainer',
-    data(){
-        return {
-            i18n: Strings,
-            publicPath: process.env.BASE_URL
+    methods: {
+        showModal: function(name, evt) {
+            if(this.$refs[name]){
+                this.$refs[name].open(evt)
+            }
         }
     }
 }

@@ -1,0 +1,117 @@
+import { Meta, Preview, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+<Meta title="Style Guide/Object Styles" />
+
+# Object Styles
+
+<div className="pt-8 grid grid-cols-2 gap-x-10 gap-y-16 justify-items-stretch">
+  <div>
+    <h2>Borders</h2>
+    <p>Borders appear:</p>
+    <ul>
+      <li>Navigation</li>
+      <li>Between sections</li>
+      <li>Section Intro</li>
+      <li>Section Content</li>
+      <li>Figure images</li>
+      <li>Button</li>
+      <li>Footer</li>
+    </ul>
+  </div>
+  <div>
+    <h2>Rules</h2>
+    <p>Rules are used to separate items. Rules are 1px wide, light gray (Primary 100). See individual components:</p>
+    <ul>
+      <li>Testimonials</li>
+      <li>Recent Sales</li>
+      <li>Agent Stats</li>
+      <li>Team Stats</li>
+    </ul>
+  </div>
+</div>
+
+## Accents
+
+* Accents are red (Secondary 500), 2px high, 32 or 64px wide.
+* Accents can appear above or below [headings](/?path=/story/pattern-library-components-heading--page) or [paragraphs](/?path=/story/pattern-library-components-paragraph--page), left aligned or centered.
+* Spacing between accents and text is usually 16px. For `accent--below-center`, the spacing is text -- 16px -- accent -- 24px on mobile, 32px on desktop -- text. For level 6 headings (`.head-6`), the spacing is 8px -- accent -- 8px.
+
+<Preview>
+<div className="grid grid-cols-2 gap-10">
+  <div>
+    <h3 className="head-5 accent--above-left">Accent above left</h3>
+  </div>
+  <div>
+    <p className="accent--above-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+  <div className="text-center">
+    <h3 className="head-5 accent--above-center">Accent above center</h3>
+  </div>
+  <div className="text-center">
+    <h6 className="head-6 accent--above-center">H6 Accent above center</h6>
+  </div>
+  <div className="text-center">
+    <h3 className="head-5 accent--below-center">Accent below center</h3>
+  </div>
+  <div className="text-center">
+    <h6 className="head-6 accent--below-center">H6 Accent below center</h6>
+  </div>
+  <div className="col-span-full text-center">
+    <h1 className="head-2 accent--below-center-wide">Accent below center wide</h1>
+    <h2 className="head-6">Subheading text</h2>
+  </div>
+</div>
+</Preview>
+
+## How to configure
+
+Define classes in **src/assets/object.styles.scss**.
+
+<Source language='html' code={dedent`
+  /* Accent */
+  .accent--above-left:before, 
+  .accent--above-center:before, 
+  .accent--below-center:after, 
+  .accent--below-center-wide:after {
+    @apply bg-secondary-500;   /* background-color: $secondary-500; */
+    content: '';
+    @apply block;              /* display: block; */
+    height: 2px;
+    @apply w-8;                /* width: 32px; */
+    @apply mb-4;               /* margin-bottom: 16px; */
+  }
+  .accent--above-left:before {
+    @apply ml-0;               /* margin-left: 0; */
+    @apply mr-auto;            /* margin-right: auto; */
+  }
+  .accent--above-center:before {
+    @apply ml-auto;            /* margin-left: auto; */
+    @apply mr-auto;            /* margin-right: auto; */
+  }
+  .accent--below-center:after,
+  .accent--below-center-wide:after {
+    @apply mt-4;               /* margin-top: 16px; */
+    @apply ml-auto;            /* margin-left: auto; */
+    @apply mr-auto;            /* margin-right: auto; */
+    @apply mb-6;               /* margin-bottom: 24px; */
+    @media (min-width: theme('screens.lg')) {
+      @apply mb-8;             /* margin-bottom: 32px; */
+    }
+  }
+  .accent--below-center-wide:after {
+    @apply w-16;               /* width: 64px; */
+  }
+  /* Accent: exceptions */
+  .head-6.accent--above-center:before, 
+  .head-6.accent--below-center:after {
+    @apply my-2;               /* margin-top/bottom: 8px; */
+    @apply mx-auto;            /* margin-left/right: auto; */
+  }
+`} />
+
+## Accessibility considerations
+
+Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
+
+* <span className="highlight">NEED TO ADD</span>

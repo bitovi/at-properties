@@ -1,47 +1,94 @@
 
-
-.dlp-page {
-    @apply flex;
-    @apply flex-col;
-
-    &.dlp-hero {
-        @apply items-center;
-        @apply p-6;
-        @apply pb-0;
-        @apply h-screen; //fallback
-        height: calc(100vh - 48px);
-        @apply bg-fixed;
-        @apply bg-cover;
-        @apply bg-no-repeat;
-        outline: 1px solid theme('colors.primary.500');
-        //Build order requires this be hard coded
-        outline-offset: -14px;
-    }
-
-    &.dlp-content {
-        margin: 0 theme('spacing.3');
-        border: 3px double theme('colors.primary.100');
-        border-top: none;
-        border-bottom: none;
-        @apply py-16;
-        @media (min-width: theme('screens.sm')) {
-            & {
-                @apply px-4;
-                @apply pb-24;
-            }
-        }
-        @media (min-width: theme('screens.sm')) {
-            & {
-                @apply py-20
-            }
-        }
-
-        @media (min-width: theme('screens.sm')) {
-            & {
-                @apply py-10
-            }
-        }
-    }
-
+html,
+body {
+  height: 100%;
+  scroll-behavior: smooth;
 }
 
+/* Skip link */
+.skip-link {
+  @apply sr-only;              /* hide the element */
+  @apply bg-white;             /* background-color: theme('colors.white'); */
+  @apply border-system-focus;  /* border: 1px solid theme('colors.system.focus'); */
+  @apply text-xl;              /* font-size: 24px; */
+  @apply p-5;                  /* padding: 20px; */
+  &:focus {
+    @apply not-sr-only;        /* show the element */
+    @apply bg-white;           /* background-color: theme('colors.white'); */
+    @apply border-system-focus;  /* border: 1px solid theme('colors.system.focus'); */
+    @apply block;              /* display: block; */
+    @apply text-lg;            /* font-size: 20px; */
+    @apply py-3;               /* padding-top/bottom: 12px; */
+    @apply px-5;               /* padding-left/right: 20px; */
+    @apply absolute;           /* position: absolute; */
+    top: 8px;
+    left: 8px;
+  }
+}
+
+/* Custom scroll bar */
+/* Works for Firefox, but not in MacOS */
+:root {
+  scrollbar-color: theme('colors.secondary.900') theme('colors.primary.100') !important;
+  scrollbar-width: thin !important;
+}
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+*::-webkit-scrollbar-track {
+  @apply bg-primary-100;     /* background-color: theme('colors.primary.100'); */
+}
+*::-webkit-scrollbar-thumb {
+  @apply bg-secondary-900;   /* background-color: theme('colors.secondary.900'); */
+}
+
+/* Section */
+.section-content {
+  margin: 0 8px;
+  border-left: 4px double theme('colors.primary.200');
+  padding: 80px 12px;
+  border-right: 4px double theme('colors.primary.200');
+  
+  @media (min-width: theme('screens.md')) {
+    margin: 0 16px;
+  }
+  
+  @media (min-width: theme('screens.lg')) {
+    margin: 0 20px;
+    padding: 96px 8px;
+  }
+
+}
+.content-grid {
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  
+  @media (min-width: theme('screens.md')) {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 32px;
+  }
+  
+  @media (min-width: theme('screens.lg')) {
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+  }
+  
+  @media (min-width: 1441px) {
+    max-width: 1440px;
+  }
+}
+
+.content-grid + .content-grid,
+section + section  {
+  @apply pt-16;
+}
+
+.section-divider {
+  border-bottom: 1px solid theme('colors.primary.200');
+}

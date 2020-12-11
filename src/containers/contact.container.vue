@@ -1,30 +1,70 @@
 <template>
-    <div class="dlp-page dlp-hero mb-12" :style="`background-image: url('${publicPath}images/bg/bg-contact-lg.jpg')`">
-        <div class="h-full grid grid-cols-1 lg:grid-cols-2 md:gap-8 content-center">
-            <div class="hidden md:block self-center md:w-2/4 lg:w-full lg:p-20 mx-auto">
-                <dlp-figure 
-                    :sm="`${publicPath}images/profiles/thad-wong-sm.jpg`"
-                    :lg="`${publicPath}images/profiles/thad-wong-lg.jpg`"
-                    alt="Thad Wong"
-                    caption="Thad Wong"
-                    ar="ar ar-4-5"
-                ></dlp-figure>
+    <div class="section-content">
+        <section class="content-grid" aria-label="Agent contact information">
+            <div class="col-span-full text-center">
+                <img 
+                    src="images/agent/emily-sachs-wong.jpeg" 
+                    class="mx-auto logo--agency" 
+                    alt="" />
             </div>
-            <div class="self-center text-center">
-                <h2 class="head-2">MEKAEL WESLEY-ROSA</h2>
-                <h3 class="head-5 accent accent-centered">Contact me today!</h3>
+            <div class="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
+                <div class="sticky top-4">
+                    <dlp-figure 
+                        :sm="`${publicPath}images/agent/photo-carrie-mccormick-sm.jpg`"
+                        :md="`${publicPath}images/agent/photo-carrie-mccormick-md.jpg`"
+                        alt="Carrie McCormick"
+                        caption="Carrie McCormick"
+                        ar="ar ar--4-5"
+                        animate="shrink"
+                    />
+                </div>
+            </div>
+            <div class="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
+                <h1 class="head-1">Carrie McCormick</h1>
+                <h5 class="head-5 accent">Contact Me Today!</h5>
                 <address>
-                    <p><a href="tel:312.999.0848">312.999.0848</a></p>
-                    <p><a href="mailto:Thad@atproperties.com">Thad@atproperties.com</a></p>
+                    <p><a href="tel:+1-312.961.4612">312.961.4612</a></p>
+                    <p><a href="mailto:Carrie@atproperties.com">Carrie@atproperties.com</a></p>
                 </address>
+                <dlp-transition type="fadeIn slideLeft">
                 <dlp-social 
                     facebook="https://www.facebook.com/thad.wong.54"
                     instagram="https://www.instagram.com/thadly_wong/"
-                    twitter="https://twitter.com/properties" 
-                    youtube="https://www.youtube.com/user/AtPropertiesTV"
-                ></dlp-social>
+                    website="https://www.carriemccormickre.com/"
+                />
+                </dlp-transition>
             </div>
-        </div>
+        </section>
+
+        <section class="content-grid" aria-label="@properties social presence">
+            <div class="col-span-full lg:col-span-14 lg:col-start-2 border-t border-primary-200"></div>
+            <div class="md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-6">
+                <img src="images/intro/logo-atproperties.svg" class="w-full" alt="@properties" />
+            </div>
+            <div class="col-span-full text-center">
+                <dlp-transition type="fadeIn slideRight">
+                    <dlp-social 
+                        facebook="https://www.facebook.com/thad.wong.54"
+                        instagram="https://www.instagram.com/thadly_wong/"
+                        twitter="https://twitter.com/properties" 
+                        youtube="https://www.youtube.com/user/AtPropertiesTV"
+                        website="https://www.atproperties.com/"
+                    />
+                </dlp-transition>
+            </div>
+            <div class="col-span-full lg:col-span-14 lg:col-start-2 border-t border-primary-200"></div>
+        </section>
+
+        <section class="content-grid" aria-label="Legal disclaimers">
+            <div class="col-span-full lg:col-span-14 lg:col-start-2 text-center">
+                <p>Disclaimer: Additional Information. All information, other than personal information subject to the @properties Privacy Policy, submitted to @properties through the Website or any related website is the property of @properties. @properties shall be free to use any ideas, concepts, know how or techniques that you may submit to us through the Website to improve our services. @properties shall not be subject to any obligations of confidentiality regarding any submitted information except as specified in our Privacy Policy, as set forth in any additional terms and conditions relating to specific products or services, or as otherwise specifically agreed or required by law.</p>
+                <dlp-social 
+                    lender="https://www.us.hsbc.com/home-loans/equal-housing-lender/"
+                    realtor="https://www.nar.realtor/"
+                    website="https://www.carriemccormickre.com/"
+                />
+            </div>
+      </section>
     </div>
 </template>
 

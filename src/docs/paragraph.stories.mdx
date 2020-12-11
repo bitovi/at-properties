@@ -1,0 +1,103 @@
+import { Meta, Preview, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+<Meta title="Pattern Library/Components/Paragraph" />
+
+# Paragraph
+
+* Paragraphs are dark gray (Primary 900), Gotham Light (300), 16px/24px leading (1.5) on mobile, 20px/32px (1.6) leading on desktop. 
+* Addresses and lists follow the same style as paragraphs.
+* There is 16px of space between a paragraph, address, or list and any element above or below it.
+* [Accents](/?path=/story/style-guide-object-styles--page#accents) may be added to paragraphs.
+* Links are dark gray (Primary 900) and underlined by default, blue (System Focus) and not underlined on focus and hover.
+* Contact Info (in the Agent section and page footer) has 20px of space between the heading and links, and 16px of space between links.
+
+<Preview>
+<div className="grid grid-cols-2 gap-10">
+  <div>
+    <h6 className="head-6">Paragraph</h6>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque gravida ac, diam malesuada. Fringilla arcu fusce tempus sodales velit id. Tristique sed nec dignissim imperdiet. Id eu cursus et parturient suscipit.</p>
+  </div>
+  <div>
+    <h6 className="head-6">Address</h6>
+    <address>1234 Main Street,<br />Chicago, IL 60647</address>
+  </div>
+  <div>
+    <h6 className="head-6">Ordered List</h6>
+    <ol>
+      <li>List item</li>
+      <li>List item</li>
+      <li>List item</li>
+    </ol>
+  </div>
+  <div>
+    <h6 className="head-6">Unordered List</h6>
+    <ul>
+      <li>List item</li>
+      <li>List item</li>
+      <li>List item</li>
+    </ul>
+  </div>
+  <div>
+    <h3 className="head-5 accent--above-left">Contact Info</h3>
+    <address className="contact-info">
+      <a href="tel:+1-312.961.4612">312.961.4612</a>
+      <a href="mailto:Carrie@atproperties.com">Carrie@atproperties.com</a>
+    </address>
+  </div>
+</div>
+</Preview>
+
+## How to configure
+
+Define classes in **src/assets/type.styles.scss**.
+
+<Source language='css' code={dedent`
+  /* Paragraph */
+  p, address, li { 
+    @apply not-italic;         /* font-style: normal; */
+    @apply leading-normal;     /* line-height: 1.5em; */
+    /* @media (min-width: theme('screens.lg')) { */
+      @apply text-lg;          /* font-size: 20px */
+      /* line-height: 1.6;        /* line-height: 32px; */
+    }
+  }
+  /* Paragraph: spacing */
+  * + p, * + address, * + ol, * + ul, 
+  p + *, address + *, ol + *, ul + * {
+    @apply mt-4;               /* margin-top: 16px; */
+  }
+  /* List */ 
+  ol, ul {
+    @apply list-inside;        /* list-style-position: inside; */
+  }
+  ol {
+    @apply list-decimal;       /* list-style-type: decimal; */
+  }
+  ul {
+    @apply list-disc;          /* list-style-type: disc; */
+  }
+  /* Links */
+  a, a:visited {
+    @apply text-primary-900;   /* color: theme('colors.primary.900'); */
+    @apply underline;          /* text-decoration: underline; */
+  }
+  a:focus, a:hover, a:active {
+    @apply text-system-focus;  /* color: theme('colors.primary.900'); */
+    @apply no-underline;       /* text-decoration: none; */
+  }
+  /* Contact info */
+  .contact-info {
+    @apply mt-5;               /* margin-top: 20px; */
+    a {
+      @apply block;            /* display: block; */
+      @apply mt-4;             /* margin-top: 16px; */
+    }
+  }
+`} />
+
+## Accessibility considerations
+
+Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
+
+* NEED TO ADD

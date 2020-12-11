@@ -1,0 +1,116 @@
+import { Meta, Preview, Source, IconGallery, IconItem } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+<Meta title="Style Guide/Iconography" />
+
+# Iconography
+
+* Icons remain the same size; they are *not* scaled for different screen sizes.
+* Icons will be SVG format.
+* SVGs will use the current text color as the fill.
+
+## How to configure
+
+Define classes in **src/assets/util.styles.scss**.
+
+<Source language='css' code={dedent`
+  /* SVG */ 
+  svg {
+    @apply fill-current;	     /* fill: currentColor; */
+  }
+`} />
+
+<!-- <IconGallery>
+  <IconItem name="Facebook">
+    <svg className="icon icon-facebook" role="img" aria-label="Facebook">
+      <use href={sprite + '#icon-facebook'}/>
+    </svg>
+  </IconItem>
+  <IconItem name="Instagram">
+    <svg className="icon icon-instagram" role="img" aria-label="Instagram">
+      <use href={sprite + '#icon-instagram'}/>
+    </svg>
+  </IconItem>
+  <IconItem name="LinkedIn">
+    <svg className="icon icon-linkedin" role="img" aria-label="LinkedIn">
+      <use href={sprite + '#icon-linkedin'}/>
+    </svg>
+  </IconItem>
+  <IconItem name="Twitter">
+    <svg className="icon icon-twitter" role="img" aria-label="Twitter">
+      <use href={sprite + '#icon-twitter'}/>
+    </svg>
+  </IconItem>
+  <IconItem name="YouTube">
+    <svg className="icon icon-youtube" role="img" aria-label="YouTube">
+      <use href={sprite + '#icon-youtube'}/>
+    </svg>
+  </IconItem>
+</IconGallery> -->
+
+## Sprite sheet
+
+NEED TO INCLUDE HERE: down arrow, menu, close icon, play button, etc.
+
+Example: [https://brand.uber.com/guide#iconography-overview](https://brand.uber.com/guide#iconography-overview)
+
+## Social
+
+Social icons will be 32 x 32px, with 24px of space between icons, and 32px of space above the row of icons. Note the `:hover` state: the icon fill color changes to the social brand color.
+
+<Preview>
+<div className="dlp-social">
+  <a href="https://www.facebook.com/atproperties" target="blank" aria-label="Facebook">
+    <svg className="icon icon-facebook">
+      <use href="images/icons/icons.svg#icon-facebook"></use>
+    </svg>
+  </a>
+  <a href="https://www.instagram.com/thadly_wong/" target="blank" aria-label="Instagram">
+    <svg className="icon icon-instagram">
+      <use href="images/icons/icons.svg#icon-instagram"></use>
+    </svg>
+  </a>
+  <a href="https://www.linkedin.com/company/properties/" target="blank" aria-label="LinkedIn">
+    <svg className="icon icon-linkedin">
+      <use href="images/icons/icons.svg#icon-linkedin"></use>
+    </svg>
+  </a>
+  <a href="https://twitter.com/properties" target="blank" aria-label="Twitter">
+    <svg className="icon icon-twitter">
+      <use href="images/icons/icons.svg#icon-twitter"></use>
+    </svg>
+  </a>
+  <a href="https://www.youtube.com/user/AtPropertiesTV" target="blank" aria-label="YouTube">
+    <svg className="icon icon-youtube">
+      <use href="images/icons/icons.svg#icon-youtube"></use>
+    </svg>
+  </a>
+</div>
+</Preview>
+
+Social "icons" are actually logos and must follow third-party brand guidelines like any other logo. Guidelines define not only the logo itself, but also it's color, size, placement, and spacing. Please reference each brand's fair use guidelines.
+
+* **Facebook** - [https://en.facebookbrand.com/facebookapp/](https://en.facebookbrand.com/facebookapp/)
+* **Instagram** - [https://en.instagram-brand.com/](https://en.instagram-brand.com/)
+* **LinkedIn** - [https://brand.linkedin.com/](https://brand.linkedin.com/)
+* **Twitter** - [https://about.twitter.com/en_us/company/brand-resources.html](https://about.twitter.com/en_us/company/brand-resources.html)
+* **YouTube** - [https://www.youtube.com/about/brand-resources/#logos-icons-colors](https://www.youtube.com/about/brand-resources/#logos-icons-colors)
+
+## How to configure
+
+NEED CONTENT HERE
+
+## Accessibility considerations
+
+Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
+
+* Same guidelines as for <a href="/?path=/story/foundation-color--page#accessibility-considerations">Color</a>.
+* All non-text content that is presented to the user has a text alternative that serves the equivalent purpose. [1.1.1 Non-text Content (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#non-text-content)
+* In content implemented using markup languages, the purpose of User Interface Components, icons, and regions can be programmatically determined. [1.3.6 Identify Purpose (Level AAA)](https://www.w3.org/WAI/WCAG21/quickref/#identify-purpose)
+
+## Components
+ 
+* [Modal](/?path=/story/pattern-library-components-modal--page)
+* [Section: Agent, Contact](/?path=/story/pattern-library-components-section--page)
+* [Social](/?path=/story/pattern-library-components-social--page)
+* [Testimonial](/?path=/story/pattern-library-components-testimonial--page)

@@ -1,37 +1,47 @@
 .dlp-social {
-    @apply mt-8;
-
     a {
         @apply inline-block;
         @apply mr-8;
+        padding: 4px;
     }
     svg {
-        @apply w-10;
-        @apply h-10;
-        fill: $dark-gray;
+        width: 32px;
+        height: 32px;
+        color: theme('colors.primary.900');
     }
+}
+
+* + .dlp-social {
+    @apply mt-8;
 }
 
 .icon-facebook {
-    &:hover, &:focus, &:active {
-        fill: #1877F2;
-    }
+  &:hover, &:focus, &:active {
+    color: #1877F2;
+  }
 }
-
 .icon-instagram {
-    &:hover, &:focus, &:active {
-        fill: #E4405F;
-    }
+  &:hover, &:focus, &:active {
+    color: #E4405F;
+  }
 }
-
 .icon-twitter {
-    &:hover, &:focus, &:active {
-        fill: #1DA1F2;
-    }
+  &:hover, &:focus, &:active {
+    color: #1DA1F2;
+  }
 }
-
+.icon-linkedin {
+  &:hover, &:focus, &:active {
+    color: #0077B5;
+  }
+}
 .icon-youtube {
-    &:hover, &:focus, &:active {
-        fill: #FF0000;
-    }
+  &:hover, &:focus, &:active {
+    color: #FF0000;
+  }
+}
+.icon-earth {
+  &:hover, &:focus, &:active {
+    fill: #025A9A;
+  }
 }

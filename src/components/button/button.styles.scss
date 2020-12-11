@@ -1,35 +1,42 @@
 
 .btn {
-    @apply text-white;
     @apply mb-4;
-    @apply font-gotham-medium;
+    color: theme('colors.white');
     display: inline-block;
     font-size: theme('fontSize.sm');
     text-transform: uppercase;
     text-align: center;
-    border: 1px solid $dark-gray;
+    border: 1px solid theme('colors.primary.900');
     letter-spacing: 0.1em;
+    font-weight: 500;
+    
 
     &:link,
     &:visited {
-        @apply text-white;
+        color: theme('colors.white');
         text-decoration: none;
     }
 
     &:hover,
     &:active {
-        border-color: $medium-gray;
+        border-color: theme('colors.primary.500');
+    }
+
+    &:focus {
+        border-color: theme('colors.transparent');
     }
 
     .btn-inner {
+        @apply transition;
+        @apply duration-300;
         display: block;
-        background: $dark-gray;
+        background: theme('colors.primary.900');
         margin: 4px;
         padding: 12px 24px;
 
         &:hover,
         &:active {
-            background: $medium-gray;
+            background: theme('colors.primary.500');
         }
 
         @media (min-width: theme('screens.sm')){
@@ -42,6 +49,7 @@
 
 .btn-group {
     margin: theme('spacing.12') 0;
+
     .btn {
         margin-right: theme('spacing.8');
         &:last-child {

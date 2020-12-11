@@ -1,58 +1,49 @@
 
-.dlp-figure {
+.dlp-figure-wrapper {
     @apply relative;
+    overflow: hidden;
+    .dlp-figure {
+        @apply relative;
+    }
 
     &.dark-text .dlp-figure-caption {
-        color: $dark-gray;
+        color: theme('colors.primary.900');
     }
 
-    &.sticky {
+    &.pinned {
         @apply sticky;
         top: theme('spacing.8')
-    }
+    } 
 
-    &.hide-border {
-        img,
-        picture {
-            outline: none;
+    .dlp-figure-border {
+        @apply absolute;
+        @apply w-full;
+        @apply h-full;
+        z-index: 80;
+        outline: 1px solid #FFFFFF;
+        outline-offset: -8px;
+        @media (min-width: theme('screens.md')) {
+            outline-offset: -12px;
         }
     }
 
     img,
     picture {
-        outline: 1px solid $white;
-        //Build order requires this be hard coded
-        outline-offset: -14px;
         width: 100%;
-    }
-
-    &.ar {
-        img,
-        picture {
-            @apply absolute;
-            @apply top-0;
-            @apply left-0;
-            @apply w-full;
-            @apply h-full;
-            object-position: 50% 0;
-        }
     }
 
     .dlp-figure-caption {
         @apply absolute;
         @apply bottom-0;
-        color: $white;
-        display: block;
+        color: theme('colors.white');
+        display: none;
         width: 100%;
         text-align: center;
         padding-bottom: theme('spacing.8');
-        &:after {
-            height: 2px;
+        
+        
+        @media (min-width: theme('screens.md')) {
             display: block;
-            width: theme('spacing.8');
-            background: $red;
-            content: '';
-            margin: 8px auto;
         }
     }
 }

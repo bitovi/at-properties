@@ -1,22 +1,19 @@
 <template>
-    <div class="dlp-page dlp-content py-48">
-        <div class="container mx-auto mt-24">
-            <div class="mx-auto md:p-0 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-20 justify-items-stretch xl:max-w-3/5">
-                <dlp-display-card href="#">
-                    <img src="images/logos/logo-proper-title.png" alt="Proper Title" class="" />
-                </dlp-display-card>
-                <dlp-display-card href="#">
-                    <img src="images/logos/logo-proper-rate.png" alt="Proper Rate" class="" />
-                </dlp-display-card>
-                <dlp-display-card href="#">
-                    <img src="images/logos/logo-atproperties-relocation.png" alt="@properties Relocation" class="" />
-                </dlp-display-card>
-                <dlp-display-card href="#">
-                    <img src="images/logos/logo-atproperties-commercial.png" alt="@properties Commercial" class="" />
-                </dlp-display-card>
-                <dlp-display-card href="#" class="md:col-span-2 w-full md:w-1/2 mx-auto">
-                    <img src="images/logos/logo-atproperties-dev-services.png" alt="@properties Development Services" class="" />
-                </dlp-display-card>
+    <div class="section-content">
+        <div class="content-grid">
+            <div class="col-span-full md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-6">
+                <h5 class="head-5 accent">Lorem Ipsum Dolor</h5>
+                <dlp-transition type="fadeIn slideUp">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra pretium eu molestie id sit ultricies in arcu quam. Diam, aliquet convallis neque, morbi libero. Nunc nisl purus, ut vitae potenti suspendisse. Pulvinar habitant sapien tempus proin.</p>
+                </dlp-transition>
+            </div>
+            <div class="col-span-full text-center">
+                <dlp-flat-scroll class="">
+                    <dlp-display-card source="images/partners/ProperTitle-Logo_horiz_blue.png"/>
+                    <dlp-display-card source="images/partners/proper-rate.jpeg"/>
+                    <dlp-display-card source="images/partners/at-commercial-logo.png"/>
+                    <dlp-display-card source="images/partners/chicago-asso-realtors.jpeg"/>
+                </dlp-flat-scroll>
             </div>
         </div>
     </div>
@@ -24,11 +21,6 @@
 
 <script>
 export default {
-    name: 'partnersContainer',
-    data(){
-        return {
-            publicPath: process.env.BASE_URL
-        }
-    }
+    name: 'partnersContainer'
 }
 </script>

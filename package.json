@@ -11,10 +11,15 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
+    "gsap": "^3.5.1",
+    "is-mobile": "^2.2.2",
+    "lodash": "^4.17.20",
+    "swiper": "5.x",
     "tailwindcss": "^1.9.5",
     "vue": "^2.6.11",
-    "vue-carousel": "^0.18.0",
-    "vue-scrollactive": "^0.9.3"
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-scrollactive": "^0.9.3",
+    "vue-youtube": "^1.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",
@@ -35,6 +40,7 @@
     "react-is": "^17.0.1",
     "sass": "^1.27.0",
     "sass-loader": "^10.0.4",
+    "storybook-addon-designs": "^5.4.2",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {

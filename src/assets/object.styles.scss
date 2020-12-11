@@ -1,0 +1,52 @@
+/* Accent */
+.accent--above-left:before, 
+.accent--above-center:before, 
+.accent--below-center:after, 
+.accent--below-center-wide:after {
+  @apply bg-secondary-500;   /* background-color: $secondary-500; */
+  content: '';
+  @apply block;              /* display: block; */
+  height: 2px;
+  @apply w-8;                /* width: 32px; */
+  @apply mb-4;               /* margin-bottom: 16px; */
+}
+.accent--above-left:before {
+  @apply ml-0;               /* margin-left: 0; */
+  @apply mr-auto;            /* margin-right: auto; */
+}
+.accent--above-center:before {
+  @apply ml-auto;            /* margin-left: auto; */
+  @apply mr-auto;            /* margin-right: auto; */
+}
+.accent--below-center:after,
+.accent--below-center-wide:after {
+  @apply mt-4;               /* margin-top: 16px; */
+  @apply ml-auto;            /* margin-left: auto; */
+  @apply mr-auto;            /* margin-right: auto; */
+  @apply mb-6;               /* margin-bottom: 24px; */
+  @media (min-width: theme('screens.lg')) {
+    & { 
+      @apply mb-8;             /* margin-bottom: 32px; */
+    }
+  }
+}
+.accent--below-center-wide:after {
+  @apply w-16;               /* width: 64px; */
+}
+/* Accent: exceptions */
+.head-6.accent--above-center:before, 
+.head-6.accent--below-center:after {
+  @apply my-2;               /* margin-top/bottom: 8px; */
+  @apply mx-auto;            /* margin-left/right: auto; */
+}
+
+/* Agency logo */
+.logo--agency {
+  max-width: 150px;
+  padding-bottom: 64px;
+  
+  @media (min-width: theme('screens.lg')) {
+    max-width: 200px;
+    padding-bottom: 80px;
+  }
+}

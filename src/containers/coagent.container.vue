@@ -1,41 +1,59 @@
 <template>
-    <div class="dlp-page dlp-content">
-        <div class="container pt-12 px-12 xl:px-32 grid md:grid-cols-3 xl:grid-cols-2 gap-8 md:gap-16 xl:gap-32">
-            <div>
-                <dlp-figure 
-                    :sm="`${publicPath}images/profiles/brooklyn-simmons-sm.jpg`"
-                    :lg="`${publicPath}images/profiles/brooklyn-simmons-lg.jpg`"
-                    alt="Brooklyn Simmons"
-                    caption="Brooklyn Simmons"
-                    ar="ar ar-4-5"
-                    :isSticky="true"
-                ></dlp-figure>
+    <div class="section-content">
+        <div class="content-grid">
+            <div class="col-span-full text-center">
+                <img 
+                    class="mx-auto logo--agency" 
+                    :src="`${i18n.logo.sm}`" 
+                    :alt="`${i18n.logo.alt}`" />
             </div>
-            <div class="md:col-span-2 xl:col-span-1">
+            <div class="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
+                <dlp-figure 
+                    :sm="`${publicPath}${i18n.photo.sm}`"
+                    :md="`${publicPath}${i18n.photo.md}`"
+                    :alt="`${i18n.name}`"
+                    :caption="`${i18n.name}`"
+                    ar="ar ar--4-5"
+                    :isSticky="true"
+                    animate="shrink"
+                />
+            </div>
+            <div class="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
                 <section>
-                    <img
-                        class="sm:mx-auto my-8 md:mb-8 md:my-0 md:mx-0"
-                        alt="Emily Sachs Wong - Luxury Living" 
-                        :src="`${publicPath}images/logos/logo-emily-sachs-wong.jpg`">
-                    <h1 class="head-1">Brooklyn Simmons</h1>
-                    <h2 class="head-5 accent">Co-agent Bio</h2>
-                    <p>Thad Wong is the co-founder and co-CEO of @properties, the nation's 10th largest brokerage firm by sales volume (REALTrends 500). @properties and its affiliated companies have over 3,500 agents in nine states, as well as annual closed sales volume of over $12 billion...</p>
+                    <h1 class="head-1">{{i18n.name}}</h1>
+                    <h2 class="head-5 accent--above-left mb-4">Co-agent Bio</h2>
+                    <dlp-transition type="fadeIn slideUp">
+                        <div v-html="i18n.bio.brief"></div>
+                    </dlp-transition>
                     <div class="btn-group">
-                        <dlp-button href="#">Read Full Bio</dlp-button>
-                        <dlp-button type="button">Watch Agent Video</dlp-button>
+                        <dlp-button type="button" @click="showModal('CoagentModal')">Read Full Bio</dlp-button>
+                        <dlp-appear-modal ref="CoagentModal">
+                            <h3 class="head-5 accent--above-left mb-8">Agent Bio</h3>
+                            <div v-html="i18n.bio.full"></div>
+                        </dlp-appear-modal>
+                        <dlp-button type="button" @click="showModal('AgentVideo')">Watch Agent Video</dlp-button>
+                        <dlp-video-modal ref="AgentVideo" videoId="7ZMbcaCJzdg" :caption="i18n.name"/>
                     </div>
                 </section>
             </div>
         </div>
-        <hr />
     </div>
 </template>
 <script>
+import CoAgentStrings from '../assets/strings/coagent.i18n.json'
 export default {
     name: 'coagentContainer',
     data(){
         return {
-            publicPath: process.env.BASE_URL
+            publicPath: process.env.BASE_URL,
+            i18n: CoAgentStrings
+        }
+    },
+    methods: {
+        showModal: function(name) {
+            if(this.$refs[name]){
+                this.$refs[name].open()
+            }
         }
     }
 }

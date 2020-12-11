@@ -1,0 +1,179 @@
+import { Meta, Canvas, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+<Meta title="Style Guide/Imagery" />
+
+# Imagery
+
+The page includes several types of images.
+
+* Background images for section intros
+* Agent profile photos
+* Agency logos
+* Property photos
+* Editorial images
+
+IMAGE HERE
+
+## Photography and Mood
+
+NEED CONTENT HERE? Example: [https://brand.uber.com/guide#photography-overview](https://brand.uber.com/guide#photography-overview)
+
+## Image sizes
+
+For performance reasons, some images will have small, medium, and large versions. Create images at sizes in increments of 16px.
+
+<table>
+  <thead>
+    <tr>
+      <th>Image type</th>
+      <th>Small / Mobile<br />&lt; 768px</th>
+      <th>Medium / Tablet<br />768 - 1280px</th>
+      <th>Large / Desktop<br />1280 - 1920px</th>
+      <th>Extra Large<br />&gt; 1920px</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Section intro background images</td>
+      <td>416 x 800 px</td>
+      <td>768 x 1024 px</td>
+      <td>1920 x 1200 px</td>
+      <td>2560 x 1600 px</td>
+    </tr>
+    <tr>
+      <td>Agent profile photos (4:5)</td>
+      <td>768 x 960 px</td>
+      <td colSpan="3">640 x 800 px</td>
+    </tr>
+    <tr>
+      <td>Agency logos (5:4)</td>
+      <td>384 x 304 px</td>
+      <td colSpan="3">288 x 224 px</td>
+    </tr>
+    <tr>
+      <td>Property photos (4:3)</td>
+      <td>320 x 240 px</td>
+      <td colSpan="3">240 x 180 px</td>
+    </tr>
+    <tr>
+      <td>Editorial images (4:3)</td>
+      <td colSpan="4">672 x 504 px</td>
+    </tr>
+  </tbody>
+</table>
+
+## Aspect ratios
+
+Images can be cropped (via CSS and HTML code) to the following aspect ratios: 1:1, 2:3, 3:2, 4:3, 3:4, 5:4, 4:5, 16:9 (e.g., video thumbnails).
+
+<div className="grid grid-cols-12 gap-4">
+  <div className="col-span-2">
+    <div className="bg-primary-100 text-primary-900 ar ar--2-3 border border-primary-500 relative">
+      <div className="absolute top-0 w-full h-full pt-10 text-center text-3xl">2:3</div>
+    </div>
+  </div>
+  <div className="col-span-3">
+    <div className="bg-primary-100 text-primary-900 ar ar--3-2 border border-primary-500 relative">
+      <div className="absolute top-0 w-full h-full pt-10 text-center text-3xl">3:2</div>
+    </div>
+  </div>
+  <div className="col-span-3">
+    <div className="bg-primary-100 text-primary-900 ar ar--3-4 border border-primary-500 relative">
+      <div className="absolute top-0 w-full h-full pt-10 text-center text-3xl">3:4</div>
+    </div>
+  </div>
+  <div className="col-span-4">
+    <div className="bg-primary-100 text-primary-900 ar ar--4-3 border border-primary-500 relative">
+      <div className="absolute top-0 w-full h-full pt-10 text-center text-3xl">4:3</div>
+    </div>
+  </div>
+  <div className="col-span-2">
+    <div className="bg-primary-100 text-primary-900 ar ar--4-5 border border-primary-500 relative">
+      <div className="absolute top-0 w-full h-full pt-10 text-center text-3xl">4:5</div>
+    </div>
+  </div>
+  <div className="col-span-3">
+    <div className="bg-primary-100 text-primary-900 ar ar--5-4 border border-primary-500 relative">
+      <div className="absolute top-0 w-full h-full pt-10 text-center text-3xl">5:4</div>
+    </div>
+  </div>
+  <div className="col-span-2">
+    <div className="bg-primary-100 text-primary-900 ar ar--1-1 border border-primary-500 relative">
+      <div className="absolute top-0 w-full h-full pt-10 text-center text-3xl">1:1</div>
+    </div>
+  </div>
+  <div className="col-span-5">
+    <div className="bg-primary-100 text-primary-900 ar ar--16-9 border border-primary-500 relative">
+      <div className="absolute top-0 w-full h-full pt-10 text-center text-3xl">16:9</div>
+    </div>
+  </div>
+</div>
+
+**However**, there is also a rule coded into CSS that images can never exceed 80% of the viewport height. For example, an image with a tall aspect ratio like 2:3 in a layout spanning 6 columns would be very tall on large, wide (desktop) screens. In this case, it would be cropped to never exceed 80% of the viewport height (`min(80vh`), which would change the original 2:3 aspect ratio.
+
+Retina displays
+
+`<img src="low-res.jpg" srcset="high-res.jpg 2x">`
+[Retina Display image assets](https://www.elegantthemes.com/blog/tips-tricks/how-to-create-retina-display-image-assets-for-better-looking-websites)
+
+## How to configure
+
+Define classes in **src/assets/util.styles.scss**.
+
+<Source language='css' code={dedent`
+  /* Aspect ratio */ 
+  .ar {
+    @apply relative;           /* position: relative; */
+    @apply block;              /* display: block; */
+    @apply h-0;                /* height: 0px; */
+    @apply overflow-hidden;    /* overflow: hidden; */
+    img {
+      @apply absolute;         /* position: absolute; */
+      @apply top-0;            /* top: 0; */
+      @apply left-0;           /* left: 0; */
+      @apply w-full;           /* width: 100%; */
+      @apply h-full;           /* height: 100%; */
+      @apply object-cover;     /* object-fit: cover; */
+      @apply object-top;       /* object-position: top center; */
+    }
+  }
+  /*.ar--1-1 {
+    padding-top: 100%;
+  }
+  .ar--2-3 {
+    padding-top: min(80vh, calc(3/2 * 100%));
+  }
+  .ar--3-2 {
+    padding-top: min(80vh, calc(2/3 * 100%));
+  }
+  .ar--4-3 {
+    padding-top: min(80vh, calc(3/4 * 100%));
+  }
+  .ar--3-4 {
+    padding-top: min(80vh, calc(4/3 * 100%));
+  }
+  .ar--4-5 {
+    padding-top: min(80vh, calc(5/4 * 100%));
+  }
+  .ar--5-4 {
+    padding-top: min(80vh, calc(4/5 * 100%));
+  }
+  .ar--16-9 {
+    padding-top: min(80vh, calc(9/16 * 100%));
+  }*/
+`} />
+
+## Accessibility considerations
+
+Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
+
+* All non-text content that is presented to the user has a text alternative that serves the equivalent purpose. [1.1.1 Non-text Content (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#non-text-content)
+* If the technologies being used can achieve the visual presentation, text is used to convey information rather than images of text except for the following: 1) Customizable: The image of text can be visually customized to the user's requirements; 2) Essential: A particular presentation of text is essential to the information being conveyed. [1.4.5 Images of Text (Level AA)](https://www.w3.org/WAI/WCAG21/quickref/#images-of-text)
+* Images of text are only used for pure decoration or where a particular presentation of text is essential to the information being conveyed. [1.4.9 Images of Text (No Exceptions) (Level AAA)](https://www.w3.org/WAI/WCAG21/quickref/#images-of-text-no-exception)
+* 
+
+## Components
+
+* [Figure](/?path=/story/pattern-library-components-figure--page)
+* [Section Intro](/?path=/story/pattern-library-components-section--page)

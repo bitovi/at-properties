@@ -1,6 +1,9 @@
 {
     "defaults": {
-        "modal": {
+        "contentModal": {
+            "heading": "Beginning of dialog window. It does not collect any information. Escape will close the window."
+        },
+        "videoModal": {
             "heading": "Beginning of dialog window. It does not collect any information. Escape will close the window."
         }
     }

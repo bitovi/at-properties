@@ -1,0 +1,67 @@
+import { Meta, Preview, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+<Meta title="Pattern Library/Components/Heading" />
+
+# Heading
+
+* Headings are dark gray (Primary 900), Gotham Light (300) or Medium (500), various sizes (see below), 150% leading (line-height), 5 or 10% tracking (letter-spacing). 
+* [Accents](/?path=/story/style-guide-object-styles--page#accents) may be added to headings.
+* Level 1 headings used in the Agent, Co-Agent, and Team sections will scale to fit the available width. <span className="highlight">How is this done?</span>
+
+<Preview>
+<div class="grid grid-cols-1">
+  <h1 className="head-1">Heading Level 1</h1>
+  <h2 className="head-2">Heading Level 2</h2>
+  <h3 className="head-3">Heading Level 3</h3>
+  <h4 className="head-4">Heading Level 4</h4>
+  <h5 className="head-5">Heading Level 5</h5>
+  <h6 className="head-6">Heading Level 6</h6>
+</div>
+</Preview>
+
+## How to configure
+
+Define classes in **src/assets/type.styles.scss**.
+
+<Source language='css' code={dedent`
+  /* Heading */
+  .head-1, .head-2, .head-3, .head-4, .head-5, .head-6 {
+    @apply leading-normal;     /* line-height: 1.5em; */
+    @apply uppercase;          /* text-transform: uppercase; */
+  }
+  .head-1, .head-2, .head-3, .head-4 {
+    @apply tracking-wider;     /* letter-spacing: 0.05em; */
+  }
+  .head-5, .head-6 {
+    @apply font-medium;        /* font-weight: 500; */
+    @apply tracking-widest;    /* letter-spacing: 0.10em; */
+  }
+  .head-1 { @apply text-5xl; } /* font-size: 42px */
+  .head-2 { @apply text-3xl; } /* font-size: 34px */
+  .head-3 { @apply text-2xl; } /* font-size: 28px */
+  .head-4 { @apply text-xl; }  /* font-size: 24px */
+  .head-5 { @apply text-lg; }  /* font-size: 20px */
+  .head-6 { @apply text-sm; }  /* font-size: 14px */
+  @media (min-width: theme('screens.lg')) {
+    .head-1 { @apply text-6xl; }  /* font-size: 60px */
+    .head-2 { @apply text-5xl; }  /* font-size: 42px */
+    .head-3 { @apply text-4xl; }  /* font-size: 39px */
+    .head-4 { @apply text-3xl; }  /* font-size: 34px */
+    .head-5 { @apply text-xl; }   /* font-size: 24px */
+    .head-6 { @apply text-base; } /* font-size: 16px */
+  }
+  /* Heading: spacing */
+  .head-1 + .head-5 {
+    @apply mt-6;               /* margin-top: 24px; */
+    @media (min-width: theme('screens.lg')) {
+      @apply mt-8;             /* margin-top: 32px; */
+    }
+  }
+`} />
+
+## Accessibility considerations
+
+Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
+
+* NEED TO ADD

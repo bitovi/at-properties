@@ -5,11 +5,17 @@
 @import './nav/nav.styles';
 @import './figure/figure.styles';
 @import './rating/rating.styles';
-@import './testimonial/testimonial.styles';
-@import './salesCard/salesCard.styles';
-@import './slideIn/slideIn.styles.scss';
+
 @import './close/close.styles.scss';
 @import './title/title.styles.scss';
-@import './displayCard/displayCard.styles.scss';
+
 @import './social/social.styles.scss';
-@import './bioSwiper/bioSwiper.styles.scss';
+
+@import './carousel/carousel.styles.scss';
+@import './flatScroll/flatScroll.styles.scss';
+
+//cards
+@import './cards/index';
+
+//modals
+@import './modals/index';
