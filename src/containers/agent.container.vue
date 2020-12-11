@@ -81,13 +81,15 @@
                         <dlp-button type="button" @click="showModal('SalesModal')">View more sales</dlp-button>
                         <dlp-appear-modal ref="SalesModal">
                             <h3 class="head-5 accent--above-left mb-8">Recent Sales</h3>
-                            <dlp-property
-                                v-for="sale in i18n.sales" 
-                                v-bind:key="sale.id" 
-                                :sm="sale.photo.sm" 
-                                :lg="sale.photo.lg" 
-                                :price="sale.price" 
-                                :address="sale.address" />
+                            <div class="dlp-property-wrapper">
+                                <dlp-property
+                                    v-for="sale in i18n.sales" 
+                                    v-bind:key="sale.id" 
+                                    :sm="sale.photo.sm" 
+                                    :lg="sale.photo.lg" 
+                                    :price="sale.price" 
+                                    :address="sale.address" />
+                            </div>
                         </dlp-appear-modal>
                     </div>
                 </section>
@@ -118,8 +120,8 @@
 
                 <section id="agent-contact">
                     <h3 class="head-5 accent--above-left">Agent Contact</h3>
-                    <address class="my-4">
-                        <a :href="`tel:+1-${i18n.contact.phone}`">{{i18n.contact.phone}}</a><br /><br />
+                    <address class="contact-info">
+                        <a :href="`tel:+1-${i18n.contact.phone}`">{{i18n.contact.phone}}</a>
                         <a :href="`mailto:${i18n.contact.email}`">{{i18n.contact.email}}</a>
                     </address>
                     <dlp-transition type="fadeIn">

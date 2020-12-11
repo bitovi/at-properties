@@ -8,7 +8,7 @@
                 </dlp-transition>
             </div>
             <div class="col-span-full text-center">
-                <dlp-flat-scroll class="">
+                <dlp-flat-scroll class="flat-scroll--partners">
                     <dlp-display-card source="images/partners/ProperTitle-Logo_horiz_blue.png"/>
                     <dlp-display-card source="images/partners/proper-rate.jpeg"/>
                     <dlp-display-card source="images/partners/at-commercial-logo.png"/>

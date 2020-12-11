@@ -21,19 +21,8 @@
             <div class="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
                 <h1 class="head-1">Carrie McCormick</h1>
                 <h5 class="head-5 accent">Contact Me Today!</h5>
-                <!-- <address>
-                    <p><a href="tel:+1-312.961.4612">312.961.4612</a></p>
-                    <p><a href="mailto:Carrie@atproperties.com">Carrie@atproperties.com</a></p>
-                </address>
-                <dlp-transition type="fadeIn">
-                <dlp-social 
-                    facebook="https://www.facebook.com/thad.wong.54"
-                    instagram="https://www.instagram.com/thadly_wong/"
-                    website="https://www.carriemccormickre.com/"
-                />
-                </dlp-transition> -->
-                <address class="my-4">
-                    <a :href="`tel:+1-${i18n.contact.phone}`">{{i18n.contact.phone}}</a><br /><br />
+                <address class="contact-info">
+                    <a :href="`tel:+1-${i18n.contact.phone}`">{{i18n.contact.phone}}</a>
                     <a :href="`mailto:${i18n.contact.email}`">{{i18n.contact.email}}</a>
                 </address>
                 <dlp-transition type="fadeIn">
