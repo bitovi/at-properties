@@ -84,8 +84,9 @@
             <div class="text-center">
                 <h3 class="head-2 accent--below-center mb-12">The Numbers Don't Lie</h3>
             </div>
-            <dlp-stat-grid />
-            
+            <div class="content-grid">
+                <dlp-stat-grid />
+            </div>
 
 
             <div class="col-span-full flex">
