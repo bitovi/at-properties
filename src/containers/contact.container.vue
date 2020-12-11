@@ -26,7 +26,7 @@
                     <p><a href="tel:+1-312.961.4612">312.961.4612</a></p>
                     <p><a href="mailto:Carrie@atproperties.com">Carrie@atproperties.com</a></p>
                 </address>
-                <dlp-transition type="fadeIn slideLeft">
+                <dlp-transition type="fadeIn">
                 <dlp-social 
                     facebook="https://www.facebook.com/thad.wong.54"
                     instagram="https://www.instagram.com/thadly_wong/"
@@ -42,7 +42,7 @@
                 <img src="images/intro/logo-atproperties.svg" class="w-full" alt="@properties" />
             </div>
             <div class="col-span-full text-center">
-                <dlp-transition type="fadeIn slideRight">
+                <dlp-transition type="fadeIn">
                     <dlp-social 
                         facebook="https://www.facebook.com/thad.wong.54"
                         instagram="https://www.instagram.com/thadly_wong/"

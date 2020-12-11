@@ -122,7 +122,7 @@
                         <a :href="`tel:+1-${i18n.contact.phone}`">{{i18n.contact.phone}}</a><br /><br />
                         <a :href="`mailto:${i18n.contact.email}`">{{i18n.contact.email}}</a>
                     </address>
-                    <dlp-transition type="fadeIn slideLeft">
+                    <dlp-transition type="fadeIn">
                         <dlp-social 
                             v-bind="i18n.contact.social"
                         />
