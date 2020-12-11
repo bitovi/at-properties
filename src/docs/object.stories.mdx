@@ -12,17 +12,19 @@ Page elements can be styled with borders, rules/dividers, and accents.
 Borders are used as decorative accents. 
 
 The following components have **single** 1px wide borders:
-* [Section](/?path=/docs/pattern-library-containers-section--page) - Between sections (Agent | Co-Agent | Team... | Footer), Section Intros
 * [Button](/?path=/docs/pattern-library-components-button--default-story)
 * [Figure](/?path=/docs/pattern-library-components-figure--page)
+* [Section](/?path=/docs/pattern-library-containers-section--page) - 1px border between sections (Agent | Co-Agent | Team... | Footer) and image border on Section Intros
 
 <Preview>
-<article id="agent" className="border-b border-primary-100">
+<article id="agent" className="border-b border-primary-100 w-full">
   <div className="p-10">
     <div className="content-grid">
       <div className="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
         <figure>
-        
+          <picture className="ar ar--1-1">
+            <img src="images/agent/photo-carrie-mccormick-md.jpg" alt="" />
+          </picture>
         </figure>
       </div>
       <div className="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
@@ -34,11 +36,14 @@ The following components have **single** 1px wide borders:
     </div>
   </div>
 </article>
-<article id="co-agent">
+<article id="co-agent" className="w-full">
   <div className="p-10">
     <div className="content-grid">
       <div className="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
         <figure>
+          <picture className="ar ar--1-1">
+            <img src="images/coagent/photo-leigh-marcus-md.jpg" alt="" />
+          </picture>
         </figure>
       </div>
       <div className="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
@@ -55,6 +60,14 @@ The following components have **single** 1px wide borders:
 The following components have **double** (1px -- 2px space -- 1px) borders:
 * [Navigation](/?path=/docs/pattern-library-containers-navigation--page)
 * [Section Content](/?path=/docs/pattern-library-containers-section--page)
+
+<Preview>
+<article>
+  <div className="section-content text-center">
+    <p>A section</p>
+  </div>
+</article>
+</Preview>
 
 ## Rules
 
