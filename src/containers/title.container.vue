@@ -199,6 +199,10 @@ export default {
     opacity: 0;
 }
 
+#pt-logo {
+  margin: 0 auto;
+}
+
 p.scroll {
   font-size: theme('fontSize.xs');
   font-weight: 500;
