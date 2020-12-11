@@ -23,7 +23,7 @@
                     
                     <h2 class="head-1">{{i18n.name}}</h2>
                     <h3 class="head-5 accent--above-left mb-4">Agent Bio</h3>
-                    <dlp-transition type="fadeIn slideUp">
+                    <dlp-transition type="fadeIn ">
                         <div v-html="i18n.bio.brief"></div>
                     </dlp-transition>
                     <div class="btn-group">
@@ -39,22 +39,26 @@
 
                 <section id="agent-testimonials" class="">
                     <h3 class="head-5 accent--above-left mb-4">Testimonials</h3>
-                    <dlp-transition type="fadeIn slideUp" v-for="t in i18n.testimonials.slice(0, 3)" v-bind:key="t.id" >
-                        <dlp-testimonial
-                            :score="t.rating">
-                            <q v-html="t.trunk"/>
-                        </dlp-testimonial>
-                    </dlp-transition>
+                    <div class="dlp-testimonial-wrapper">
+                        <dlp-transition type="fadeIn " v-for="t in i18n.testimonials.slice(0, 3)" v-bind:key="t.id" >
+                            <dlp-testimonial
+                                :score="t.rating">
+                                <q v-html="t.trunk"/>
+                            </dlp-testimonial>
+                        </dlp-transition>
+                    </div>
                     <div class="btn-group">
                         <dlp-button type="button" @click="showModal('TestimonialsModal')">View more testimonials</dlp-button>
                         <dlp-appear-modal ref="TestimonialsModal">
                             <h3 class="head-5 accent--above-left mb-8">Testimonials</h3>
-                            <dlp-testimonial 
-                                v-for="t in i18n.testimonials" 
-                                v-bind:key="t.id" 
-                                :score="t.rating">
-                                    <div v-html="t.quote"/>
-                                </dlp-testimonial>
+                            <div class="dlp-testimonial-wrapper">
+                                <dlp-testimonial 
+                                    v-for="t in i18n.testimonials" 
+                                    v-bind:key="t.id" 
+                                    :score="t.rating">
+                                        <div v-html="t.quote"/>
+                                    </dlp-testimonial>
+                            </div>
                         </dlp-appear-modal>
                     </div>
                 </section>
@@ -63,7 +67,7 @@
                     <h3 class="head-5 accent--above-left mb-4">Recent Sales</h3>
                     <div class="dlp-property-wrapper">
                         <dlp-transition 
-                            type="fadeIn slideUp" 
+                            type="fadeIn " 
                             v-for="s in i18n.sales.slice(0, 3)" 
                             v-bind:key="`brief-${s.id}`" >
                             <dlp-property
@@ -91,19 +95,19 @@
                 <section id="agent-stats" class="">
                     <h3 class="head-5 accent--above-left">Agent Stats</h3>
                     <div class="space-y-4 lg:space-y-6 mt-6 lg:mt-8">
-                        <dlp-transition type="fadeIn slideUp">
+                        <dlp-transition type="fadeIn ">
                             <p>
                                 <span class="head-3 block text-secondary-500" v-html="i18n.stats[0]['span-1']"></span>
                                 <span class="head-6" v-html="i18n.stats[0]['span-2']"></span>
                             </p>
                         </dlp-transition>
-                        <dlp-transition type="fadeIn slideUp">
+                        <dlp-transition type="fadeIn ">
                             <p>
                                 <span class="head-3 block text-secondary-500" v-html="i18n.stats[1]['span-1']"></span>
                                 <span class="head-6" v-html="i18n.stats[1]['span-2']"></span>
                             </p>
                         </dlp-transition>
-                        <dlp-transition type="fadeIn slideUp">
+                        <dlp-transition type="fadeIn ">
                             <p>
                                 <span class="head-3 block text-secondary-500">{{i18n.stats[2]['span-1']}}</span>
                                 <span class="head-6" v-html="i18n.stats[2]['span-2']"></span>
@@ -118,7 +122,7 @@
                         <a :href="`tel:+1-${i18n.contact.phone}`">{{i18n.contact.phone}}</a><br /><br />
                         <a :href="`mailto:${i18n.contact.email}`">{{i18n.contact.email}}</a>
                     </address>
-                    <dlp-transition type="fadeIn slideLeft">
+                    <dlp-transition type="fadeIn">
                         <dlp-social 
                             v-bind="i18n.contact.social"
                         />

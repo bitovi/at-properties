@@ -69,12 +69,15 @@
                 <h3 class="head-5 accent--above-left mb-8">CARRIE MCCORMICK</h3>
                 <address class="mt-4">
                     <a :href="`tel:+1-312-961-4612`">312.961.4612</a><br /><br />
-                    <a :href="`mailto:Thad@atproperties.com`">Carrie@atproperties.com</a>
+                    <a :href="`mailto:Carrie@atproperties.com`">Carrie@atproperties.com</a>
                 </address>
                 <dlp-social 
-                    facebook="#test"
-                    instagram="#test"
-                ></dlp-social>
+                    facebook="https://www.facebook.com/thad.wong.54"
+                    instagram="https://www.instagram.com/thadly_wong/"
+                    twitter="https://twitter.com/properties" 
+                    youtube="https://www.youtube.com/user/AtPropertiesTV"
+                    website="https://www.atproperties.com/"
+                />
             </dlp-appear-modal>
         </div>
     </scrollactive>

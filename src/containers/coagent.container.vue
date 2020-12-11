@@ -14,7 +14,7 @@
                     :alt="`${i18n.name}`"
                     :caption="`${i18n.name}`"
                     ar="ar ar--4-5"
-                    :isSticky="true"
+                    :isSticky="false"
                     animate="shrink"
                 />
             </div>
@@ -22,7 +22,7 @@
                 <section>
                     <h1 class="head-1">{{i18n.name}}</h1>
                     <h2 class="head-5 accent--above-left mb-4">Co-agent Bio</h2>
-                    <dlp-transition type="fadeIn slideUp">
+                    <dlp-transition type="fadeIn ">
                         <div v-html="i18n.bio.brief"></div>
                     </dlp-transition>
                     <div class="btn-group">

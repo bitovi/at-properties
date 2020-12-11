@@ -2,6 +2,12 @@
 .dlp-video-card {
     @apply relative;
     cursor: pointer;
+    &:focus, &:hover {
+        .dlp-video-card--overlay {
+            opacity: 1;
+        }
+    }
+
     .dlp-video-card--overlay {
         @apply absolute;
         @apply z-10;
@@ -11,7 +17,7 @@
         @apply w-full;
         @apply h-full;
         opacity: 0.75;
-
+        transition: opacity 0.3s;
         &.dark svg {
             fill: theme('colors.black');
         }
@@ -20,6 +26,23 @@
             fill: theme('colors.white');
         }
     }
+}
 
+/* Hanna: adding my classes here */ 
 
+/* Video Thumbnail */
+.video-thumbnail {
+  @apply self-center;        /* align-self: center; */
+  @apply text-white;         /* color: theme('colors.white'); */
+  @apply justify-self-center;  /* justify-self: center; */
+  @apply opacity-75;         /* opacity: 0.75; */
+  &:focus, &:hover {
+    @apply opacity-100;      /* opacity: 1; */
+  }
+}
+.icon-play {
+  @apply w-16;               /* width: 64px; */
+  @media (min-width: theme('screens.lg')) {
+    @apply w-32;             /* width: 128px; */
+  }
 }
