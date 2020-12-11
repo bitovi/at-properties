@@ -13,7 +13,7 @@
                     :lg="`${publicPath}images/team/team-lg.jpg`"
                     alt="Olivia Carlson team"
                     ar="ar ar--4-5"
-                    :isSticky="true"
+                    :isSticky="false"
                     animate="shrink"
                 />
             </div>
