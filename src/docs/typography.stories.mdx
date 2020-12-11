@@ -68,7 +68,7 @@ Line height and letter spacing are defined at the component level. Please see in
 
 Include the `<link>` for typography.com in the `<head>` of **public/index.html**. Check that typography.com has the all fonts/weights enabled and that relevant URLs have been whitelisted.
 
-<Source language='html' code={dedent`
+<Source language='scss' code={dedent`
   <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7735636/6090192/css/fonts.css" />
 `} />
 
@@ -94,7 +94,7 @@ Define font families and sizes in **tailwind.config.js**. Tailwind will generate
 
 Define classes in **src/assets/type.styles.scss**. The classes below apply Tailwind's [font weight classes](https://tailwindcss.com/docs/font-weight): `.font-{weight}`.
 
-<Source language='html' code={dedent`
+<Source language='scss' code={dedent`
   /* Fonts */
   .font-primary {
     @apply font-light;   /* 300 */
