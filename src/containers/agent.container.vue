@@ -118,8 +118,8 @@
 
                 <section id="agent-contact">
                     <h3 class="head-5 accent--above-left">Agent Contact</h3>
-                    <address class="my-4">
-                        <a :href="`tel:+1-${i18n.contact.phone}`">{{i18n.contact.phone}}</a><br /><br />
+                    <address class="contact-info">
+                        <a :href="`tel:+1-${i18n.contact.phone}`">{{i18n.contact.phone}}</a>
                         <a :href="`mailto:${i18n.contact.email}`">{{i18n.contact.email}}</a>
                     </address>
                     <dlp-transition type="fadeIn">

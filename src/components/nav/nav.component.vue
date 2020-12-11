@@ -67,8 +67,8 @@
             </div>
             <dlp-appear-modal ref="ContactModal">
                 <h3 class="head-5 accent--above-left mb-8">CARRIE MCCORMICK</h3>
-                <address class="mt-4">
-                    <a :href="`tel:+1-312-961-4612`">312.961.4612</a><br /><br />
+                <address class="contact-info">
+                    <a :href="`tel:+1-312-961-4612`">312.961.4612</a>
                     <a :href="`mailto:Carrie@atproperties.com`">Carrie@atproperties.com</a>
                 </address>
                 <dlp-social 
