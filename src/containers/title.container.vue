@@ -1,6 +1,6 @@
 <template>
     <header id="dlp-title">
-        <div class="title title--style-dark">
+        <div class="title title--style-light">
             <img 
                 :class="[{ 'hide': isAnimated}]"
                 class="intro-image" 
@@ -217,19 +217,18 @@ p.scroll {
   height: 100vh;
   overflow: hidden;
 
-    .intro-image, 
-    .intro-title {
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
+  .intro-image, 
+  .intro-title {
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
   
   .intro-image {
-    // opacity: 0.25;
     // transform: scale(1.5);
     object-fit: cover;
     object-position: center center;
-    opacity: 0.5;
+    opacity: 0.25;
     width: 100%;
     height: 100%;
   }
@@ -291,22 +290,22 @@ p.scroll {
 }
 
 .title--style-light {
-    background: linear-gradient(to top, black, theme('colors.primary.100'));
+    background: linear-gradient(to top, white, theme('colors.primary.100'));
     
     h1, h2, h3, h4, h5, h6, p {
-        color: theme('colors.primary.100');
+        color: theme('colors.primary.900');
     }
     
     #pt-logo {
-        fill: theme('colors.primary.100');
+        fill: theme('colors.primary.900');
     }
     
     #pt-logo-at {
-        fill: theme('colors.primary.100');
+        fill: theme('colors.secondary.500');
     }
     
     #love {
-        stroke: theme('colors.primary.100');
+        stroke: theme('colors.primary.900');
     }
 }
 
