@@ -65,7 +65,8 @@ p, address, li {
 }
 /* List */ 
 ol, ul {
-  @apply list-inside;        /* list-style-position: inside; */
+  @apply list-outside;       /* list-style-position: outside; */
+  @apply ml-5;               /* margin-left: 20px; */
 }
 ol {
   @apply list-decimal;       /* list-style-type: decimal; */
@@ -75,8 +76,8 @@ ul {
 }
 /* Paragraph: spacing */
 * + p, * + address, * + ol, * + ul, 
-p + *, address + *, ol + *, ul + * {
-  @apply mt-3;               /* margin-top: 12px; */
+p + *, address + *, ol + *, ul + *, li + li {
+  @apply mt-5;               /* margin-top: 20px; */
 }
 /* Links */
 a, a:visited {

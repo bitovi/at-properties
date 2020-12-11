@@ -11,8 +11,7 @@
                 <dlp-figure 
                     :sm="`${publicPath}images/team/team-sm.jpg`"
                     :lg="`${publicPath}images/team/team-lg.jpg`"
-                    alt="Olivia Carlson"
-                    caption="Olivia Carlson"
+                    alt="Olivia Carlson team"
                     ar="ar ar--4-5"
                     :isSticky="true"
                     animate="shrink"
