@@ -22,7 +22,7 @@
                 <section>
                     <h1 class="head-1">{{i18n.name}}</h1>
                     <h2 class="head-5 accent--above-left">Team Bio</h2>
-                    <dlp-transition type="fadeIn slideUp">
+                    <dlp-transition type="fadeIn ">
                         <p v-html="i18n.bio.brief"></p>
                     </dlp-transition>
                     <div class="btn-group">
