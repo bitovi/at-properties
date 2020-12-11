@@ -2,6 +2,12 @@
 .dlp-video-card {
     @apply relative;
     cursor: pointer;
+    &:focus, &:hover {
+        .dlp-video-card--overlay {
+            opacity: 1;
+        }
+    }
+
     .dlp-video-card--overlay {
         @apply absolute;
         @apply z-10;
@@ -11,18 +17,13 @@
         @apply w-full;
         @apply h-full;
         opacity: 0.75;
-
+        transition: opacity 0.3s;
         &.dark svg {
             fill: theme('colors.black');
         }
         
         &.light svg {
             fill: theme('colors.white');
-        }
-
-        /* Hanna: why doesn't this work? */
-        &:focus, &:hover {
-          opacity: 1.0;
         }
     }
 }
