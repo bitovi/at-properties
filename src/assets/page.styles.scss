@@ -86,7 +86,10 @@ body {
 
 .content-grid + .content-grid,
 section + section  {
-  @apply pt-16;
+  @apply pt-16;              /* padding-top: 64px; */
+  @media (min-width: theme('screens.lg')) {
+    @apply pt-20;            /* padding-top: 80px; */
+  }
 }
 
 .section-divider {
