@@ -81,13 +81,15 @@
                         <dlp-button type="button" @click="showModal('SalesModal')">View more sales</dlp-button>
                         <dlp-appear-modal ref="SalesModal">
                             <h3 class="head-5 accent--above-left mb-8">Recent Sales</h3>
-                            <dlp-property
-                                v-for="sale in i18n.sales" 
-                                v-bind:key="sale.id" 
-                                :sm="sale.photo.sm" 
-                                :lg="sale.photo.lg" 
-                                :price="sale.price" 
-                                :address="sale.address" />
+                            <div class="dlp-property-wrapper">
+                                <dlp-property
+                                    v-for="sale in i18n.sales" 
+                                    v-bind:key="sale.id" 
+                                    :sm="sale.photo.sm" 
+                                    :lg="sale.photo.lg" 
+                                    :price="sale.price" 
+                                    :address="sale.address" />
+                            </div>
                         </dlp-appear-modal>
                     </div>
                 </section>
