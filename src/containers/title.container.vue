@@ -5,7 +5,7 @@
                 :class="[{ 'hide': isAnimated}]"
                 class="intro-image" 
                 ref="introBg" 
-                src="https://images.unsplash.com/photo-1474696100102-01b8519f06f3?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fGNoaWNhZ298ZW58MHwwfDB8&auto=format&fit=crop&w=800&q=60" 
+                src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80" 
                 role="presentation" />
             <div class="intro-title">
                 <div class="w-1/2 md:w-1/3 lg:w-1/4 self-center">
@@ -122,7 +122,7 @@ export default {
             },{
                 scale: 1,
                 ease: "expoScale(1.5, 1)",
-                duration: 4.5
+                duration: 10
             }, 0);
 
             this.tl = gsap.timeline();
@@ -201,6 +201,7 @@ export default {
 
 #pt-logo {
   margin: 0 auto;
+  width: 100%;
 }
 
 p.scroll {
@@ -228,7 +229,7 @@ p.scroll {
     // transform: scale(1.5);
     object-fit: cover;
     object-position: center center;
-    opacity: 0.25;
+    opacity: 0.5;
     width: 100%;
     height: 100%;
   }
@@ -318,8 +319,8 @@ p.scroll {
         width: 30vw;
     }
 
-    @media (min-width: theme('screens.lg')) {
+    /* @media (min-width: theme('screens.lg')) {
         width: 20vw;
-    }
+    } */
 }
 </style>
