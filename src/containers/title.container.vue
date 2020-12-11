@@ -1,6 +1,6 @@
 <template>
     <header id="dlp-title">
-        <div class="title title--style-light">
+        <div class="title title--style-dark">
             <img 
                 :class="[{ 'hide': isAnimated}]"
                 class="intro-image" 
