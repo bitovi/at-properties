@@ -5,31 +5,65 @@ import dedent from 'ts-dedent';
 
 # Object Styles
 
-<div className="pt-8 grid grid-cols-2 gap-x-10 gap-y-16 justify-items-stretch">
-  <div>
-    <h2>Borders</h2>
-    <p>Borders appear:</p>
-    <ul>
-      <li>Navigation</li>
-      <li>Between sections</li>
-      <li>Section Intro</li>
-      <li>Section Content</li>
-      <li>Figure images</li>
-      <li>Button</li>
-      <li>Footer</li>
-    </ul>
+Page elements can be styled with borders, rules/dividers, and accents.
+
+## Borders
+
+Borders are used as decorative accents. 
+
+The following components have **single** 1px wide borders:
+* [Section](/?path=/docs/pattern-library-containers-section--page) - Between sections (Agent | Co-Agent | Team... | Footer), Section Intros
+* [Button](/?path=/docs/pattern-library-components-button--default-story)
+* [Figure](/?path=/docs/pattern-library-components-figure--page)
+
+<Preview>
+<article id="agent" className="border-b border-primary-100">
+  <div className="p-10">
+    <div className="content-grid">
+      <div className="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
+        <figure>
+        
+        </figure>
+      </div>
+      <div className="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
+        <h2 class="head-5 accent--above-left pb-10">Agent Section</h2>
+        <button className="btn btn--style-dark">
+          <span className="btn__text">Agent Bio</span>
+        </button>
+      </div>
+    </div>
   </div>
-  <div>
-    <h2>Rules</h2>
-    <p>Rules are used to separate items. Rules are 1px wide, light gray (Primary 100). See individual components:</p>
-    <ul>
-      <li>Testimonials</li>
-      <li>Recent Sales</li>
-      <li>Agent Stats</li>
-      <li>Team Stats</li>
-    </ul>
+</article>
+<article id="co-agent">
+  <div className="p-10">
+    <div className="content-grid">
+      <div className="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
+        <figure>
+        </figure>
+      </div>
+      <div className="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
+        <h2 class="head-5 accent--above-left pb-10">Co-Agent Section</h2>
+        <button className="btn btn--style-dark">
+          <span className="btn__text">Co-Agent Bio</span>
+        </button>
+      </div>
+    </div>
   </div>
-</div>
+</article>
+</Preview>
+
+The following components have **double** (1px -- 2px space -- 1px) borders:
+* [Navigation](/?path=/docs/pattern-library-containers-navigation--page)
+* [Section Content](/?path=/docs/pattern-library-containers-section--page)
+
+## Rules
+
+Rules are used to separate items. Rules are 1px wide, light gray (Primary 100). See individual components:
+
+* Testimonials - See [Testimonial](/?path=/docs/pattern-library-components-testimonial--page)
+* Recent Sales - See [Property](/?path=/docs/pattern-library-components-property--default-story)
+* Agent Stats - See [Statistic](/?path=/docs/pattern-library-components-statistic--page)
+* Team Stats - See [Statistic](/?path=/docs/pattern-library-components-statistic--page)
 
 ## Accents
 
