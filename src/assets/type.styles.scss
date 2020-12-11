@@ -65,7 +65,8 @@ p, address, li {
 }
 /* List */ 
 ol, ul {
-  @apply list-inside;        /* list-style-position: inside; */
+  @apply list-outside;       /* list-style-position: outside; */
+  @apply ml-5;               /* margin-left: 20px; */
 }
 ol {
   @apply list-decimal;       /* list-style-type: decimal; */
@@ -75,8 +76,8 @@ ul {
 }
 /* Paragraph: spacing */
 * + p, * + address, * + ol, * + ul, 
-p + *, address + *, ol + *, ul + * {
-  @apply mt-3;               /* margin-top: 12px; */
+p + *, address + *, ol + *, ul + *, li + li {
+  @apply mt-5;               /* margin-top: 20px; */
 }
 /* Links */
 a, a:visited {
@@ -84,7 +85,7 @@ a, a:visited {
   @apply underline;          /* text-decoration: underline; */
 }
 a:focus, a:hover, a:active {
-  @apply text-system-focus;  /* color: theme('colors.primary.900'); */
+  @apply text-system-focus;  /* color: theme('colors.system.focus'); */
   @apply no-underline;       /* text-decoration: none; */
 }
 /* Contact info */
@@ -96,7 +97,7 @@ a:focus, a:hover, a:active {
   }
 }
 
-/* Links */
+/* Links
 a {
   font-size: theme('fontSize.base');
   &:link,
@@ -115,7 +116,7 @@ a {
       font-size: theme('fontSize.lg');
   }
 }
-a:focus,
+a:focus, */
 button:focus {
   // outline-color: theme('colors.secondary.500');
   outline-style: dashed;

@@ -7,6 +7,8 @@ import dedent from 'ts-dedent';
 
 The page follows a semantic structure using HTML5 tags. *Note*: code is abbreviated for simplicity (e.g., no end/closing tags).
 
+<span class="highlight">Need to ensure code follows this structure, then delete this comment.</span>
+
 <Source language='html' code={dedent`
   <head>
     <title>
@@ -43,6 +45,8 @@ Page titles should be descriptive. Follow this template:
 ## Skip Link
 
 Skip links are a recommended accessibility best practice. They are invisible until focus is brought to them. (Tab to the skip link to see it.)
+
+<span class="highlight">Style defined below is being overwritten. Fix later.</span>
 
 <Preview>
 <div className="relative overflow-y-scroll border border-primary-900 text-base">
@@ -101,9 +105,30 @@ Grids vary by screen size.
 * **Tablet** -- screen between 768 and 1280px wide will use a **12-col** grid.
 * **Desktop** -- screens at or above 1280px wide will use a **16-col** grid.
 
+Define the `container` max-width and add support for a 16-column `grid` in **tailwind.config.js**.
+
+<Source language='js' code={dedent`
+  container: {
+    xl: '1440px',
+    center: true
+  },
+  extend: {
+    gridTemplateColumns: {
+      '16': 'repeat(16, minmax(0, 1fr))',
+    },
+    gridColumnStart: {
+      '13': '13',
+      '14': '14',
+      '15': '15',
+      '16': '16',
+      '17': '17',
+    }
+  }
+`} />
+
 ## Example: Selling
 
-Example code for the Selling section. Note: code is abbreviated for simplicity (e.g., no end/closing tags).
+Example code for the Selling section. *Note*: code is abbreviated for simplicity (e.g., no end/closing tags).
 
 <Source language='html' code={dedent`
   <!-- Selling section -->
@@ -129,27 +154,6 @@ Example code for the Selling section. Note: code is abbreviated for simplicity (
 `} />
 
 <img src="images/styleguide/selling.jpg" alt="Comps for Selling section" className="w-full" />
-
-Define the `container` max-width and add support for a 16-column `grid` in **tailwind.config.js**.
-
-<Source language='js' code={dedent`
-  container: {
-    xl: '1440px',
-    center: true
-  },
-  extend: {
-    gridTemplateColumns: {
-      '16': 'repeat(16, minmax(0, 1fr))',
-    },
-    gridColumnStart: {
-      '13': '13',
-      '14': '14',
-      '15': '15',
-      '16': '16',
-      '17': '17',
-    }
-  }
-`} />
 
 ## Layers
 

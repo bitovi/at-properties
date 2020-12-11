@@ -71,3 +71,9 @@ svg {
 .ar--16-9 {
   padding-top: min(80vh, calc(9/16 * 100%));
 }
+.ar--stat {
+  padding-top: min(80vh, calc(3/4 * 100%));
+  @media (min-width: theme('screens.md')) { 
+    padding-top: 100%;
+  }
+}
