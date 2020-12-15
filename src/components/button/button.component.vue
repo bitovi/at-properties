@@ -4,10 +4,10 @@
         :type="nativeType"
         v-bind="$attrs"
         :href="href"
-        class="btn"
+        class="btn btn--style-dark"
         v-on="$listeners"
     >
-        <span class="btn-inner">
+        <span class="btn__text">
             <slot />
         </span>
     </component>
