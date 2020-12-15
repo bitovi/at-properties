@@ -14,6 +14,11 @@
     @apply p-4;
     transition: all 0.5s ease-in-out;
     overflow: hidden;
+
+    //if isAnimated, start at 0 opacity
+    &.fade-in {
+        opacity: 0;
+    }
 }
 
 .dlp-video-modal-content {
@@ -24,6 +29,7 @@
     @apply h-full;
     @apply mx-auto;
     width: 100%;
+    z-index: 1;
     @media screen and (orientation:landscape) and (max-width: theme('screens.md')) {
         width: 60%;
     }

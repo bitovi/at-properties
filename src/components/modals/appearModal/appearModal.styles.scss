@@ -28,6 +28,11 @@
         width: 704px;
         padding: 30px 8px;
     }
+
+    //move the container off screen to be animated in
+    &.off-screen {
+        right: -100%;
+    }
 }
 
 .dlp-slide-in-content {
