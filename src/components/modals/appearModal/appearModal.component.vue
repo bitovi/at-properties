@@ -6,26 +6,25 @@
         role="dialog"
         aria-modal="true"
         aria-describedby="modalDescription">
-            <dlp-bg-ripple ref="dlpBg" @openDone="slideOpen"  @closeDone="cleanup"/>
-            <div 
-                ref="slideInner"
-                :class="{ 'off-screen':isAnimated }"
-                class="dlp-slide-in">
-                <nav class="absolute right-0 mr-8">
-                    <h1 
-                        ref="ElDescription"
-                        tabindex="0" 
-                        id="modalDescription"
-                        class="visually-hidden">
-                        {{srHeading}}
-                    </h1>
-                    <dlp-close-btn @click.stop="slideClose" />
-                </nav>
-                <div class="dlp-slide-in-content" >
-                    <slot />
-                </div>
+        <dlp-bg-ripple ref="dlpBg" @openDone="slideOpen"  @closeDone="cleanup"/>
+        <div 
+            ref="slideInner"
+            :class="{ 'off-screen':isAnimated }"
+            class="dlp-slide-in">
+            <nav class="absolute right-0 mr-8">
+                <h1 
+                    ref="ElDescription"
+                    tabindex="0" 
+                    id="modalDescription"
+                    class="visually-hidden">
+                    {{srHeading}}
+                </h1>
+                <dlp-close-btn @click.stop="slideClose" />
+            </nav>
+            <div class="dlp-slide-in-content" >
+                <slot />
             </div>
-            
+        </div>  
     </div>
 </template>
 <script>
