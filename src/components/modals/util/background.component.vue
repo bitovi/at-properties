@@ -40,7 +40,6 @@ export default {
             const ctx = this.$refs.canvas.getContext('2d')
 
             this.isActive = true
-            // isFull = !isFull
 
             let x = evt.clientX || vw
             let y = evt.clientY || vh
@@ -57,7 +56,7 @@ export default {
                 y: y
             }
             gsap.to(ripple, {
-                duration: 0.85,
+                duration: 1,
                 alpha: isFull ? TARGET_ALPHA : 0, 
                 radius: isFull ? radius : 0,
                 ease: "power2.out",

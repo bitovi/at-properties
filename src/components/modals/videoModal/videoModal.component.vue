@@ -7,8 +7,11 @@
         role="dialog"
         aria-modal="true"
         aria-describedby="modalDescription">
-            <dlp-bg-ripple ref="dlpBg" @openDone="showContent" @closeDone="cleanup"/>
-            <div class="dlp-video-modal content-grid" ref="dlpContent">
+            <dlp-bg-ripple ref="dlpVideoBg" @openDone="showContent" @closeDone="cleanup"/>
+            <div 
+                :class="{ 'fade-in': isAnimated }"
+                class="dlp-video-modal content-grid" 
+                ref="dlpContent">
                 <nav class="absolute right-0 mr-4 lg:mr-12 lg:mt-12">
                     <h1 
                         ref="ElDescription"
@@ -35,7 +38,8 @@ import gsap from 'gsap'
 import Background from '../util/background.component.vue'
 import '../util/background.styles.scss'
 import { hasMotion } from '../../../constants'
-// ref to <body>
+
+// ref to <body> for locking scroll
 const ElBody = document.getElementsByTagName("body")[0]
 
 export default {
@@ -61,6 +65,7 @@ export default {
                 rel: 0,
                 autoplay: 0
             },
+            isAnimated: hasMotion,
             openerEl: null
         }
     },
@@ -78,13 +83,8 @@ export default {
         open(evt) {
             this.showModal = true
             this.openerEl = evt
-            
             this.$nextTick(()=> {
-                this.$refs.dlpBg.open(this.openerEl)
-
-                if(hasMotion){
-                    gsap.set(this.$refs.dlpContent, { opacity: 0})
-                }
+                this.$refs.dlpVideoBg.open(this.openerEl)
             })
             
             try {
@@ -99,7 +99,6 @@ export default {
                     opacity: 1
                 })
             }
-            
         },
         cleanup() {
             try {
@@ -107,22 +106,16 @@ export default {
             } catch (error) {
                 console.warn('Unable to release scroll position')   
             }
-            if(hasMotion){
-                gsap.to(this.$refs.dlpContent, { 
-                    opacity: 0,
-                    onComplete: () => {
-                        this.showModal = false
-                        this.$emit('close')
-                    }
-                })
-            } else {
-                this.showModal = false
-                this.$emit('close')
-            }
+            
+            this.$emit('close')
+            this.showModal = false
             
         },
         close: function() {
-            this.$refs.dlpBg.close(this.openerEl)
+            this.$refs.dlpVideoBg.close(this.openerEl)
+            gsap.to(this.$refs.dlpContent, { 
+                opacity: 0
+            })
         },
         setFocus: function() {
             this.$refs.ElDescription.focus({preventScroll: true})
