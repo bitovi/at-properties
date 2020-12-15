@@ -6,23 +6,39 @@
             </div>
             <div class="col-span-full text-center">
 
-                <dlp-flat-scroll class="flat-scroll--marketing">
-                    <dlp-display-card 
-                        source="images/marketing/marketing-1.jpg"
-                        caption="Online Advertising"/>
-                    <dlp-display-card
-                        source="images/marketing/marketing-2.png"
-                        caption="Yard Signs"/>
-                    <dlp-display-card 
-                        source="images/marketing/marketing-3.jpg"
-                        caption="Social Media"/>
-                    <dlp-display-card 
-                        source="images/marketing/marketing-1.jpg"
-                        caption="Flyers"/>
-                    <dlp-display-card
-                        source="images/marketing/marketing-2.png"
-                        caption="Magazine Feature"/>
-                </dlp-flat-scroll>
+                <dlp-carousel
+                    :options="{spaceBetween: 64}"
+                    :hasScrollNav="true"
+                    >
+                    <swiper-slide>
+                        <dlp-display-card 
+                            source="images/marketing/marketing-1.jpg"
+                            caption="Online Advertising"/>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <dlp-display-card
+                            class="pt-16"
+                            source="images/marketing/marketing-2.png"
+                            caption="Yard Signs"/>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <dlp-display-card 
+                            source="images/marketing/marketing-3.jpg"
+                            caption="Social Media"/>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <dlp-display-card 
+                            class="pt-16"
+                            source="images/marketing/marketing-1.jpg"
+                            caption="Flyers"/>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <dlp-display-card
+                            source="images/marketing/marketing-2.png"
+                            caption="Magazine Feature"/>
+                    </swiper-slide>
+                </dlp-carousel>
+
 
             </div>
         </section>
