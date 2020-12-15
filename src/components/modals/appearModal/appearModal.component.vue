@@ -29,16 +29,13 @@
     </div>
 </template>
 <script>
-// import { delay } from 'lodash'
 import gsap from 'gsap'
 import Background from '../util/background.component.vue'
 import '../util/background.styles.scss'
 
 import { hasMotion } from '../../../constants'
 
-import A11yStrings from '../../../assets/strings/a11y.i18n.json'
-
-// ref to <body>
+// ref to <body> for locking scroll
 const ElBody = document.getElementsByTagName("body")[0]
 
 export default {
@@ -46,7 +43,7 @@ export default {
     props: {
         srHeading:{
             type: String,
-            default: A11yStrings.defaults.contentModal.heading
+            default: "Beginning of dialog window. It does not collect any information. Escape will close the window."
         }
     },
     data() {
@@ -70,7 +67,7 @@ export default {
         open(evt) {
             this.showModal = true
             this.openerEl = evt
-            
+
             this.$nextTick(()=> {
                 if(hasMotion){
                     this.bgOpen()

@@ -32,7 +32,7 @@
                             <h3 class="head-5 accent--above-left mb-8">Agent Bio</h3>
                             <div v-html="i18n.bio.full"></div>
                         </dlp-appear-modal>
-                        <dlp-button type="button" @click="showModal('AgentVideo')">Watch Agent Video</dlp-button>
+                        <dlp-button type="button" @click="showModal('AgentVideo', $event)">Watch Agent Video</dlp-button>
                         <dlp-video-modal ref="AgentVideo" videoId="U0DYr9w9SX0" :caption="i18n.name"/>
                     </div>
                 </section>
