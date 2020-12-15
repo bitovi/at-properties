@@ -1,11 +1,91 @@
 import { Meta, Preview, Source } from '@storybook/addon-docs/blocks';
 import dedent from 'ts-dedent';
 
-<Meta title="Pattern Library/Containers/Section/Section Content" />
+<Meta title="Pattern Library/Containers/Section Content" />
 
 # Section Content
 
-asdfasdf
+* Section content has a double (1px -- 2px space -- 1px), light gray (Primary 200) border on the left and right sides.
+  * **Mobile** -- 8px margin -- 4px border -- 12px padding = 24px on each side; 80px on the top/bottom of each section.
+  * **Tablet** -- 16px margin -- 4px border -- 12px padding = 32px on each side; 80px on the top/bottom of each section.
+  * **Desktop** -- 20px margin -- 4px border -- 8px padding = 32px on each side; 96px on the top/bottom of each section.
+* The content area (i.e., `.section-content`) has a max-width of 1440px and will be centered on screen.
+* Content will align to a column grid (i.e., `.content-grid`). See [Grid](#grid).
+* Each section (e.g., Agent) can have sub-sections, coded as `section` (e.g., the Agent section has sub-sections: Agent Bio, Testimonials, Recent Sales, Agent Stats, Agent Contact).
+  * **Mobile/Tablet** -- 64px between sub-sections
+  * **Desktop** -- 80px between sub-sections
+* Nesting for `section` and `.content-grid` can vary. These classes are flexible.
+  * Agent section -- one column in the `.content-grid` holds multiple `section` tags
+  * Marketing section -- multiple `section` tags, each has the class `.content-grid`
+
+<Preview>
+<div id="dlp-main">
+  <article id="agent" className="section-divider">
+    <div className="section-content">
+      <div className="content-grid">
+        <div className="col-span-full md:col-span-5 lg:col-span-6 lg:col-start-2">
+          <figure>
+            <picture className="ar ar--4-5">
+              <img src="images/agent/photo-carrie-mccormick-md.jpg" alt="Carrie McCormick" />
+            </picture>
+            <div className="img__border">
+              <figcaption className="hidden md:block caption--inside">
+                <h3 className="head-6 accent--below-center">Carrie McCormick</h3>
+              </figcaption>
+            </div>
+          </figure>
+        </div>
+        <div className="col-span-full md:col-span-7 lg:col-span-7 lg:col-start-9">
+          <section id="agent-bio">
+            <h2 className="head-1">Agent</h2>
+            <h3 className="head-5 accent--above-left">Agent Bio</h3>
+            <p>This is a sub-section.</p>
+          </section>
+          <section id="testimonials">
+            <h3 className="head-5 accent--above-left">Testimonials</h3>
+            <p>Another sub-section.</p>
+          </section>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article id="co-agent" className="section-divider">
+    <div className="section-content">
+      <div className="content-grid">
+        <div className="col-span-full md:col-span-5 lg:col-span-6 lg:col-start-2">
+          <figure>
+            <picture className="ar ar--4-5">
+              <img src="images/coagent/photo-leigh-marcus-md.jpg" alt="Leigh Marcus" />
+            </picture>
+            <div className="img__border">
+              <figcaption className="hidden md:block caption--inside">
+                <h3 className="head-6 accent--below-center">Leigh Marcus</h3>
+              </figcaption>
+            </div>
+          </figure>
+        </div>
+        <div className="col-span-full md:col-span-7 lg:col-span-7 lg:col-start-9">
+          <div id="agent-bio">
+            <h2 className="head-1">Co-Agent</h2>
+            <h3 className="head-5 accent--above-left">Co-Agent Bio</h3>
+            <p>Bio here.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</div>
+</Preview>
+
+## Grid
+
+Grids vary by screen size.
+
+* **Mobile** -- screens below 768px wide will use a **4-col** grid.
+* **Tablet** -- screen between 768 and 1280px wide will use a **12-col** grid.
+* **Desktop** -- screens at or above 1280px wide will use a **16-col** grid.
+
+*Note*: Some components (e.g., Carousels, Team Statistics, Company Statistics) use their own grids, which do not align to the main grid.
 
 <!-- <Preview>
 <article id="co-agent">
@@ -73,24 +153,52 @@ asdfasdf
 
 ## How to configure
 
+Define the `container` max-width and add support for a 16-column `grid` in **tailwind.config.js**.
+
+<Source language='js' code={dedent`
+  container: {
+    xl: '1440px',
+    center: true
+  },
+  extend: {
+    gridTemplateColumns: {
+      '16': 'repeat(16, minmax(0, 1fr))',
+    },
+    gridColumnStart: {
+      '13': '13',
+      '14': '14',
+      '15': '15',
+      '16': '16',
+      '17': '17',
+    }
+  }
+`} />
+
 Define classes in **src/assets/pages.styles.scss**.
 
 <Source language='scss' code={dedent`
-  /* Section content */
-  .section-content {
-    @apply py-20;              /* padding-top/bottom: 80px; */
-    @apply px-6;               /* padding-left/right: 24px; */
-    @media (min-width: theme('screens.md')) {
-      @apply px-8;             /* padding-left/right: 32px; */
-    }
-    @media (min-width: theme('screens.lg')) {
-      @apply py-24;            /* padding-top/bottom: 96px; */
-    }
-  }
-  /* Section divider */
+  /* Section divider: attach to article */
   .section-divider {
     @apply border-b;           /* border-bottom-width: 1px; */
     @apply border-primary-200; /* border-color: theme('colors.primary.200'); */
+  }
+  /* Section content */
+  .section-content {
+    @apply border-double;	     /* border-style: double; */
+    @apply border-primary-200; /* border-color: theme('colors.primary.200'); */
+    @apply border-l-4;         /* border-left-width: 4px; */
+    @apply border-r-4;         /* border-right-width: 4px; */
+    @apply mx-2;               /* margin-left/right: 8px; */
+    @apply py-20;              /* padding-top/bottom: 80px; */
+    @apply px-3;               /* padding-left/right: 12px; */
+    @media (min-width: theme('screens.md')) {
+      @apply mx-4;             /* margin-left/right: 16px; */
+    }
+    @media (min-width: theme('screens.lg')) {
+      @apply mx-5;             /* margin-left/right: 20px; */
+      @apply py-24;            /* padding-top/bottom: 96px; */
+      @apply px-2;             /* padding-left/right: 8px; */
+    }
   }
   /* Content grid */
   .content-grid {
@@ -124,4 +232,4 @@ Define classes in **src/assets/pages.styles.scss**.
 
 Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
 
-* asdf
+* Same guidelines as for [Structure](/?path=/docs/style-guide-structure--page).

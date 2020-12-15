@@ -44,21 +44,28 @@ body {
   @apply bg-secondary-900;   /* background-color: theme('colors.secondary.900'); */
 }
 
-/* Section content */
-.section-content {
-  @apply py-20;              /* padding-top/bottom: 80px; */
-  @apply px-6;               /* padding-left/right: 24px; */
-  @media (min-width: theme('screens.md')) {
-    @apply px-8;             /* padding-left/right: 32px; */
-  }
-  @media (min-width: theme('screens.lg')) {
-    @apply py-24;            /* padding-top/bottom: 96px; */
-  }
-}
-/* Section divider */
+/* Section divider: attach to article */
 .section-divider {
   @apply border-b;           /* border-bottom-width: 1px; */
   @apply border-primary-200; /* border-color: theme('colors.primary.200'); */
+}
+/* Section content */
+.section-content {
+  @apply border-double;	     /* border-style: double; */
+  @apply border-primary-200; /* border-color: theme('colors.primary.200'); */
+  @apply border-l-4;         /* border-left-width: 4px; */
+  @apply border-r-4;         /* border-right-width: 4px; */
+  @apply mx-2;               /* margin-left/right: 8px; */
+  @apply py-20;              /* padding-top/bottom: 80px; */
+  @apply px-3;               /* padding-left/right: 12px; */
+  @media (min-width: theme('screens.md')) {
+    @apply mx-4;             /* margin-left/right: 16px; */
+  }
+  @media (min-width: theme('screens.lg')) {
+    @apply mx-5;             /* margin-left/right: 20px; */
+    @apply py-24;            /* padding-top/bottom: 96px; */
+    @apply px-2;             /* padding-left/right: 8px; */
+  }
 }
 /* Content grid */
 .content-grid {

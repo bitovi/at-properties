@@ -81,6 +81,7 @@ svg {
 }
 
 /* Responsive: show, hide */
+/* Hanna: may not need these */
 .appear-md {
   @apply hidden;             /* display: none; */
   @media (min-width: theme('screens.md')) {

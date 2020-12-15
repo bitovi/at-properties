@@ -22,9 +22,9 @@ The page follows a semantic structure using HTML5 tags. *Note*: code is abbrevia
         <article id="co-agent">
         <article id="team">
         <article id="company">
-        <article id="global-reach">
         <article id="technology">
         <article id="marketing">
+        <article id="global-reach">
         <article id="selling">
         <article id="partners">
         <article id="community">
@@ -80,80 +80,25 @@ Define classes in **src/assets/page.styles.scss**.
   }
 `} />
 
+## Header, aka. Title
+
+See [Header](/?path=/story/pattern-library-containers-header--page).
+
 ## Navigation
 
 See [Navigation](/?path=/story/pattern-library-containers-navigation--page).
 
-## Title
+## Main Content
 
-See [Title](/?path=/story/pattern-library-containers-title--page).
+See [Main Content](/?path=/story/pattern-library-containers-main-content--page).
 
-## Content
+## Footer, aka. Contact section
 
-* Page content is broken into sections. Each section is coded as `article`. See [Section](/?path=/story/pattern-library-containers-section--page).
-* The Contact section includes legal disclaimers. It is coded as `footer`. See [Footer](/?path=/story/pattern-library-containers-footer--page).
-* Some sections have an intro "slide" (e.g., Company, Technology, Marketing); others do not (e.g., Co-Agent, Team, Contact). Each intro is coded as a `header` for that `article`.
-* Sections can have sub-sections. Each sub-section is coded as `section` (e.g., the Agent section has sub-sections: agent bio, testimonials, recent sales, stats, contact).
-* The content area (i.e., `.section-content`) has a max-width of 1440px and will be centered on screen.
-* Content will align to a column grid.
+See [Footer](/?path=/story/pattern-library-containers-footer--page).
 
-## Grid
+## Modals
 
-Grids vary by screen size.
-
-* **Mobile** -- screens below 768px wide will use a **4-col** grid.
-* **Tablet** -- screen between 768 and 1280px wide will use a **12-col** grid.
-* **Desktop** -- screens at or above 1280px wide will use a **16-col** grid.
-
-Define the `container` max-width and add support for a 16-column `grid` in **tailwind.config.js**.
-
-<Source language='js' code={dedent`
-  container: {
-    xl: '1440px',
-    center: true
-  },
-  extend: {
-    gridTemplateColumns: {
-      '16': 'repeat(16, minmax(0, 1fr))',
-    },
-    gridColumnStart: {
-      '13': '13',
-      '14': '14',
-      '15': '15',
-      '16': '16',
-      '17': '17',
-    }
-  }
-`} />
-
-## Example: Selling
-
-Example code for the Selling section. *Note*: code is abbreviated for simplicity (e.g., no end/closing tags).
-
-<Source language='html' code={dedent`
-  <!-- Selling section -->
-  <article id="selling">
-    <!-- section TITLE, aka. “intro slide” -->
-    <header>  
-    <!-- section CONTENT: adds left and right borders, applies consistent padding -->
-    <div className="section-content"> 
-      <!-- SUB-SECTION -->
-      <section id="pricing">
-        <!-- content GRID: sets max-width and provides a grid that content will align to -->
-        <div className="content-grid">
-          <!-- COLUMNS of content: classes are used to specify order, column span, and alignment -->
-          <div className="order-1 md:order-2 col-span-4 md:col-span-6 md:col-start-7 lg:col-span-7 lg:col-start-9">
-          <div className="order-2 md:order-1 col-span-4 md:col-span-6 md:col-start-1 lg:col-span-6 lg:col-start-2">
-      <!-- SUB-SECTION -->
-      <section id="staging">
-        <!-- content GRID: sets max-width and provides a grid that content will align to -->
-        <div className="content-grid">
-          <!-- COLUMNS of content: classes are used to specify order, column span, and alignment -->
-          <div className="col-span-4 md:col-span-6 md:col-start-7 lg:col-span-7 lg:col-start-9">
-          <div className="col-span-4 md:col-span-6 md:col-start-1 lg:col-span-6 lg:col-start-2">
-`} />
-
-<img src="images/styleguide/selling.jpg" alt="Comps for Selling section" className="w-full" />
+See [Modal](/?path=/story/pattern-library-containers-modal--page) and [Video Modal](/?path=/story/pattern-library-containers-video-modal--page).
 
 ## Layers
 
@@ -212,11 +157,3 @@ Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
 * Web pages have titles that describe topic or purpose. [2.4.2 Page Titled (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#page-titled)
 * If a Web page can be navigated sequentially and the navigation sequences affect meaning or operation, focusable components receive focus in an order that preserves meaning and operability. [2.4.3 Focus Order (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#focus-order)
 * Section headings are used to organize the content. [2.4.10 Section Headings (Level AAA)](https://www.w3.org/WAI/WCAG21/quickref/#section-headings)
-
-## Components
-
-* [Navigation](/?path=/story/pattern-library-components-navigation--page)
-* [Title](/?path=/story/pattern-library-components-title--page)
-* [Section](/?path=/story/pattern-library-components-section--page)
-* [Footer](/?path=/story/pattern-library-components-footer--page)
-* [Modal](/?path=/story/pattern-library-components-modal--page)
