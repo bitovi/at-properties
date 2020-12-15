@@ -68,7 +68,7 @@ Line height and letter spacing are defined at the component level. Please see in
 
 Include the `<link>` for typography.com in the `<head>` of **public/index.html**. Check that typography.com has the all fonts/weights enabled and that relevant URLs have been whitelisted.
 
-<Source language='scss' code={dedent`
+<Source language='html' code={dedent`
   <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7735636/6090192/css/fonts.css" />
 `} />
 
@@ -97,10 +97,10 @@ Define classes in **src/assets/type.styles.scss**. The classes below apply Tailw
 <Source language='scss' code={dedent`
   /* Fonts */
   .font-primary {
-    @apply font-light;   /* 300 */
+    @apply font-light;         /* font-weight: 300; */
   }
   .font-secondary {
-    @apply font-medium;  /* 500 */
+    @apply font-medium;        /* font-weight: 500; */
   }
   /* Defaults */
   #app,

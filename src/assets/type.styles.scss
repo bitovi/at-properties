@@ -1,9 +1,9 @@
 /* Fonts */
 .font-primary {
-  @apply font-light;   /* 300 */
+  @apply font-light;         /* font-weight: 300; */
 }
 .font-secondary {
-  @apply font-medium;  /* 500 */
+  @apply font-medium;        /* font-weight: 500; */
 }
 
 /* Defaults */
