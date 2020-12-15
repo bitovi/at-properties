@@ -1,5 +1,6 @@
 /* https://www.a11yproject.com/posts/2013-01-11-how-to-hide-content/
    Hide content, but keep it available to screen readers */
+/* Hanna: I don't think these are used any where. dlp-nav-menu */
 .visually-hidden {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -20,6 +21,7 @@
 }
 
 /* Modal */
+/* Hanna: should be moved to modal scss code. */
 .lock-scroll{
   height: 100vh;
   overflow-y: hidden;
@@ -75,5 +77,25 @@ svg {
   padding-top: min(80vh, calc(3/4 * 100%));
   @media (min-width: theme('screens.md')) { 
     padding-top: 100%;
+  }
+}
+
+/* Responsive: show, hide */
+.appear-md {
+  @apply hidden;             /* display: none; */
+  @media (min-width: theme('screens.md')) {
+    @apply block;            /* display: block; */
+  }
+}
+.appear-lg {
+  @apply hidden;             /* display: none; */
+  @media (min-width: theme('screens.lg')) {
+    @apply block;            /* display: block; */
+  }
+}
+.disappear-lg {
+  @apply block;              /* display: block; */
+  @media (min-width: theme('screens.lg')) {
+    @apply hidden;           /* display: none; */
   }
 }
