@@ -17,11 +17,12 @@ export const parameters = {
         ], 
         'Style Guide', [
           'Design Tokens', 'Breakpoints', 'Color', 'Typography', 'Object Styles', 
-          'Iconography', 'Imagery', 'Structure', 'Spacing', 'Animation', 'Inclusive Design'
+          'Iconography', 'Imagery', 'Structure', 'Animation', 'Inclusive Design'
         ], 
         'Pattern Library', [
           'Containers', [
-            'Title', 'Navigation', 'Section', 'Footer', 'Modal'
+            'Header', 'Navigation', 'Main Content', 'Section Intro', 'Section Content', 
+            'Footer', 'Modal', 'Video Modal'
           ], 
           'Components', [
             'Button', 'Carousel', 'Figure', 'Heading', 'Paragraph', 'Property', 
