@@ -1,5 +1,5 @@
 <template>
-    <canvas ref="canvas" class="dlp-bg-ripple"/>
+    <canvas v-bind="$attrs" v-on="$listeners" ref="canvas" class="dlp-bg-ripple"/>
 </template>
 <script>
 import gsap from 'gsap'
