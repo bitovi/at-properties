@@ -6,7 +6,7 @@
         class="btn"
         v-on="$listeners"
     >
-        <span class="btn__text">
+        <span :class="innerClass">
             <slot />
         </span>
     </button>
@@ -24,7 +24,13 @@ export default {
             }
         },
         icon: {
-
+            type: Boolean,
+            default: false
+        }
+    },
+    computed: {
+        innerClass() {
+            return this.icon ? 'btn__icon' : 'btn__text'
         }
     }
 }

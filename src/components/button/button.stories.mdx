@@ -90,11 +90,10 @@ Define classes in **src/components/button/button.styles.scss**.
       @apply px-6;             /* padding-left/right: 24px; */
     }
   }
-  .btn__icon {
+  span.btn__icon {
     @apply fill-current;       /* fill: currentColor; */
     @apply text-base;          /* font-size: theme('fontSize.base'); */
-    width: 1em;                /* set icon size to font size */
-    height: 1em;
+    @apply block;
     @apply p-3;                /* padding: 12px; */
   }
   /* Button: styles */
