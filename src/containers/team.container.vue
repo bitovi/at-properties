@@ -25,11 +25,11 @@
                         <p v-html="i18n.bio.brief"></p>
                     </dlp-transition>
                     <div class="btn-group">
-                        <dlp-button type="button" @click="showModal('AgentModal')">Read Full Bio</dlp-button>
+                        <dlp-button type="button" @click="showModal('AgentModal', $event)">Read Full Bio</dlp-button>
                         <dlp-appear-modal ref="AgentModal">
                             <div v-html="i18n.bio.full"></div>
                         </dlp-appear-modal>                        
-                        <dlp-button type="button" @click="showModal('TeamVideo')">Watch Team Video</dlp-button>
+                        <dlp-button type="button" @click="showModal('TeamVideo', $event)">Watch Team Video</dlp-button>
                         <dlp-video-modal ref="TeamVideo" videoId="jsNh7ov4uD4" :caption="i18n.name"/>
                     </div>
                 </div>
@@ -89,9 +89,9 @@ export default {
         }
     },
     methods: {
-        showModal: function(name) {
+        showModal: function(name, evt) {
             if(this.$refs[name]){
-                this.$refs[name].open()
+                this.$refs[name].open(evt)
             }
         }
     }

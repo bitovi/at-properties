@@ -89,7 +89,7 @@
 
 
             <!-- <div class="col-span-full flex"> -->
-                <dlp-button type="button" class="mx-auto" @click="showModal('LocalStatsModal')">View local stats</dlp-button>
+                <dlp-button type="button" class="mx-auto" @click="showModal('LocalStatsModal', $event)">View local stats</dlp-button>
                 
                 <dlp-appear-modal ref="LocalStatsModal">
                     <h3 class="head-5 accent--above-left mb-8">Local Stats</h3>
@@ -118,9 +118,9 @@ export default {
         [StatGrid.name]: StatGrid
     },
     methods: {
-        showModal: function(name) {
+        showModal: function(name, evt) {
             if(this.$refs[name]){
-                this.$refs[name].open()
+                this.$refs[name].open(evt)
             }
         }
     }

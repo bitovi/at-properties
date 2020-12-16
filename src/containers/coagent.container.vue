@@ -26,12 +26,12 @@
                         <div v-html="i18n.bio.brief"></div>
                     </dlp-transition>
                     <div class="btn-group">
-                        <dlp-button type="button" @click="showModal('CoagentModal')">Read Full Bio</dlp-button>
+                        <dlp-button type="button" @click="showModal('CoagentModal', $event)">Read Full Bio</dlp-button>
                         <dlp-appear-modal ref="CoagentModal">
                             <h3 class="head-5 accent--above-left mb-8">Agent Bio</h3>
                             <div v-html="i18n.bio.full"></div>
                         </dlp-appear-modal>
-                        <dlp-button type="button" @click="showModal('AgentVideo')">Watch Agent Video</dlp-button>
+                        <dlp-button type="button" @click="showModal('AgentVideo', $event)">Watch Agent Video</dlp-button>
                         <dlp-video-modal ref="AgentVideo" videoId="7ZMbcaCJzdg" :caption="i18n.name"/>
                     </div>
                 </section>
@@ -50,9 +50,9 @@ export default {
         }
     },
     methods: {
-        showModal: function(name) {
+        showModal: function(name, evt) {
             if(this.$refs[name]){
-                this.$refs[name].open()
+                this.$refs[name].open(evt)
             }
         }
     }
