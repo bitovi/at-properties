@@ -1,47 +1,36 @@
 <template>
-    <component
-        :is="type"
-        :type="nativeType"
+    <button
+        type="button"
         v-bind="$attrs"
-        :href="href"
+        :class="`btn--style-${theme}`"
         class="btn"
         v-on="$listeners"
     >
-        <span class="btn-inner">
+        <span :class="innerClass">
             <slot />
         </span>
-    </component>
+    </button>
 </template>
 
 <script>
 export default {
     name: 'dlp-button',
     props: {
-        href: {
+        theme: {
             type: String,
-            default: null
-        },
-        nativeType: {
-            type: [String, null],
-            default: null,
-            validator: (value) => {
-                //allow <a> tag
-                if(value === null) return null
-                return [
-                    'button',
-                    'submit',
-                    'reset'
-                ].indexOf(value) >= 0
+            default: 'dark',
+            validator: function(val) {
+                return ['dark', 'light'].indexOf(val) !== -1
             }
         },
+        icon: {
+            type: Boolean,
+            default: false
+        }
     },
     computed: {
-        type() {
-            if(this.href){
-                return 'a'
-            } else {
-                return 'button'
-            }
+        innerClass() {
+            return this.icon ? 'btn__icon' : 'btn__text'
         }
     }
 }

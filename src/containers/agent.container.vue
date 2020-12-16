@@ -48,7 +48,7 @@
                         </dlp-transition>
                     </div>
                     <div class="btn-group">
-                        <dlp-button type="button" @click="showModal('TestimonialsModal')">View more testimonials</dlp-button>
+                        <dlp-button type="button" @click="showModal('TestimonialsModal', $event)">View more testimonials</dlp-button>
                         <dlp-appear-modal ref="TestimonialsModal">
                             <h3 class="head-5 accent--above-left mb-8">Testimonials</h3>
                             <div class="dlp-testimonial-wrapper">
@@ -78,7 +78,7 @@
                         </dlp-transition>
                     </div>
                     <div class="btn-group">
-                        <dlp-button type="button" @click="showModal('SalesModal')">View more sales</dlp-button>
+                        <dlp-button type="button" @click="showModal('SalesModal', $event)">View more sales</dlp-button>
                         <dlp-appear-modal ref="SalesModal">
                             <h3 class="head-5 accent--above-left mb-8">Recent Sales</h3>
                             <div class="dlp-property-wrapper">

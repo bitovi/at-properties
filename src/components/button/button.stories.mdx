@@ -33,9 +33,14 @@ import DLPButton from './button.component.vue'
 <Preview>
 <div className="grid grid-cols-2">
   <div className="bg-white p-5 self-center">
-    <button className="btn btn--style-dark">
-      <span className="btn__text">Agent Bio</span>
-    </button>
+    <div className="btn-group">
+      <button className="btn btn--style-dark">
+        <span className="btn__text">Read Full Bio</span>
+      </button>
+      <button className="btn btn--style-dark">
+        <span className="btn__text">Watch Agent Video</span>
+      </button>
+    </div>
   </div>
   <div className="bg-primary-900 p-5 self-center">
     <button className="btn btn--style-light">
@@ -52,14 +57,6 @@ import DLPButton from './button.component.vue'
 ## How to configure
 
 Define classes in **src/components/button/button.styles.scss**.
-
-<!-- <Source language='scss' code={dedent`
-  .class { 
-    /* outline: 1px solid theme('colors.white'); */
-    /* width: 1em;                /* set icon size to font size */
-    /* height: 1em; */
-  }
-`} /> -->
 
 <Source language='scss' code={dedent`
   /* Button */
@@ -93,11 +90,10 @@ Define classes in **src/components/button/button.styles.scss**.
       @apply px-6;             /* padding-left/right: 24px; */
     }
   }
-  .btn__icon {
+  span.btn__icon {
     @apply fill-current;       /* fill: currentColor; */
     @apply text-base;          /* font-size: theme('fontSize.base'); */
-    width: 1em;                /* set icon size to font size */
-    height: 1em;
+    @apply block;
     @apply p-3;                /* padding: 12px; */
   }
   /* Button: styles */
@@ -114,18 +110,19 @@ Define classes in **src/components/button/button.styles.scss**.
     outline: 1px solid theme('colors.white');
   }
   /* Button: spacing */
-  p + .btn {
-    @apply mt-8;               /* margin-top: 32px; */
-    @apply mr-4;               /* margin-right: 16px; */
-    @screen lg {               /* @media (min-width: theme(screens.lg) */
-      @apply mt-12;            /* margin-top: 48px; */
-      @apply mr-8;             /* margin-right: 32px; */
+  * + .btn-group {
+    @apply mt-6;               /* margin-top: 24px; */
+    @media (min-width: theme('screens.lg')) {
+      @apply mt-10;            /* margin-top: 40px; */
     }
   }
-  .btn + .btn {
-    @apply mt-6;               /* margin-top: 24px; */
-    @screen lg {               /* @media (min-width: theme(screens.lg) */
-      @apply mt-10;            /* margin-top: 40px; */
+  .btn-group {
+    @apply inline-flex;        /* display: inline-flex; */
+    @apply flex-wrap;	         /* flex-wrap: wrap; */
+    @apply gap-4;              /* gap: 16px; */
+    @apply place-items-start;	 /* justify-items: start; */
+    @media (min-width: theme('screens.lg')) {
+      @apply gap-8;            /* gap: 32px; */
     }
   }
 `} />

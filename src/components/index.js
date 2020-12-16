@@ -4,7 +4,6 @@ import Button from './button/button.component'
 import Nav from './nav/nav.component'
 import Figure from './figure/figure.component'
 import Rating from './rating/rating.component'
-import CloseBtn from './close/close.component'
 import TitlePage from './title/title.page'
 import Social from './social/social.component'
 import Carousel from './carousel/carousel.component.vue'
@@ -45,9 +44,6 @@ Vue.component(Nav.name, Nav)
 Vue.component(Figure.name, Figure)
 Vue.component(Rating.name, Rating)
 
-
-
-Vue.component(CloseBtn.name, CloseBtn)
 Vue.component(TitlePage.name, TitlePage)
 
 Vue.component(Social.name, Social)
@@ -68,7 +64,6 @@ export {
     Rating,
     TestimonialCard,
     AppearModal,
-    CloseBtn,
     TitlePage,
     DisplayCard,
     Social,
