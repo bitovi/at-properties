@@ -33,13 +33,11 @@
 </template>
 <script>
 import gsap from 'gsap'
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 import Background from '../util/background.component.vue'
 import '../util/background.styles.scss'
 
 import { hasMotion } from '../../../constants'
-
-// ref to <body> for locking scroll
-const ElBody = document.getElementsByTagName("body")[0]
 
 export default {
     name: 'dlp-appear-modal',
@@ -77,11 +75,7 @@ export default {
                 }
             })
             
-            try {
-                ElBody.classList.add('lock-scroll')
-            } catch (error) {
-                console.warn('Unable to fix scroll positon')   
-            }
+            disableBodyScroll(this.$el)
         },
         slideOpen() {
             gsap.to(this.$refs.slideInner, {
@@ -107,11 +101,7 @@ export default {
         },
         cleanup: function() {
             this.showModal = false
-            try {
-                ElBody.classList.remove('lock-scroll')
-            } catch (error) {
-                console.warn('Unable to release scroll position')   
-            }
+            enableBodyScroll(this.$el)
             this.$emit('close')
         },
         setFocus: function() {

@@ -107,15 +107,13 @@
 <script>
 import gsap from 'gsap';
 import { hasMotion } from '../constants'
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 
 export default {
     name: 'titleContainer',
-    methods: {
-
-    },
     mounted() {
         if(hasMotion){
-
+            this.lockScroll()
             gsap.fromTo(this.$refs.introBg, 
             {
                 scale: 1.5
@@ -125,8 +123,7 @@ export default {
                 duration: 10
             }, 0);
 
-            this.tl = gsap.timeline();
-            // this.tl = gsap.timeline({onComplete: enableScroll});
+            this.tl = gsap.timeline({onComplete: this.unlockScroll});
 
             this.tl.fromTo(this.$refs.introLogo, {
                 opacity: 0,
@@ -205,6 +202,14 @@ export default {
                 stagger: { yoyo: true, repeat: -1 }
             });
             
+        }
+    },
+    methods: {
+        lockScroll() {
+            disableBodyScroll(this.$el)
+        },
+        unlockScroll() {
+            enableBodyScroll(this.$el)
         }
     },
     computed: {

@@ -142,5 +142,6 @@ export default {
 <style>
 #app {
   min-height: 100%;
+  overflow-x: hidden;
 }
 </style>

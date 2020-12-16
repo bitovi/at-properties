@@ -39,12 +39,10 @@
 </template>
 <script>
 import gsap from 'gsap'
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock'
 import Background from '../util/background.component.vue'
 import '../util/background.styles.scss'
 import { hasMotion } from '../../../constants'
-
-// ref to <body> for locking scroll
-const ElBody = document.getElementsByTagName("body")[0]
 
 export default {
     name: 'dlp-video-modal',
@@ -91,11 +89,7 @@ export default {
                 this.$refs.dlpVideoBg.open(this.openerEl)
             })
             
-            try {
-                ElBody.classList.add('lock-scroll')
-            } catch (error) {
-                console.warn('Unable to fix scroll positon')   
-            }
+            disableBodyScroll(this.$el)
         },
         showContent() {
             if(hasMotion){
@@ -105,11 +99,7 @@ export default {
             }
         },
         cleanup() {
-            try {
-                ElBody.classList.remove('lock-scroll')
-            } catch (error) {
-                console.warn('Unable to release scroll position')   
-            }
+            enableBodyScroll(this.$el)
             
             this.$emit('close')
             this.showModal = false

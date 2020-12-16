@@ -20,13 +20,6 @@
   width: auto;
 }
 
-/* Modal */
-/* Hanna: should be moved to modal scss code. */
-.lock-scroll{
-  height: 100vh;
-  overflow-y: hidden;
-}
-
 /* SVG */ 
 svg {
   @apply fill-current;	     /* fill: currentColor; */
