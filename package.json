@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "gsap": "^3.5.1",
+    "gsap": "./gsap-bonus.tgz",
     "is-mobile": "^2.2.2",
     "lodash": "^4.17.20",
     "swiper": "5.x",
