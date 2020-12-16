@@ -1,9 +1,9 @@
 /* Fonts */
 .font-primary {
-  @apply font-light;   /* 300 */
+  @apply font-light;         /* font-weight: 300; */
 }
 .font-secondary {
-  @apply font-medium;  /* 500 */
+  @apply font-medium;        /* font-weight: 500; */
 }
 
 /* Defaults */
@@ -116,7 +116,7 @@ a {
       font-size: theme('fontSize.lg');
   }
 }
-a:focus, */
+a:focus,
 button:focus {
   // outline-color: theme('colors.secondary.500');
   outline-style: dashed;
@@ -128,4 +128,4 @@ hr {
 }
 strong {
   font-weight: 500;
-} 
+}  */

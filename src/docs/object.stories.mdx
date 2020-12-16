@@ -9,74 +9,26 @@ Page elements can be styled with borders, rules/dividers, and accents.
 
 ## Borders
 
-Borders are used as decorative accents. 
+Borders are used as decorative accents. Borders vary in color and are single (1px) or double (4px). See individual components.
 
-The following components have **single** 1px wide borders:
-* [Button](/?path=/docs/pattern-library-components-button--default-story)
-* [Figure](/?path=/docs/pattern-library-components-figure--page)
-* [Section](/?path=/docs/pattern-library-containers-section--page) - 1px border between sections (Agent | Co-Agent | Team... | Footer) and image border on Section Intros
+Components with a **single** 1px wide border:
+* [Button](/?path=/docs/pattern-library-components-button--default-story) - 1px outer border (really `outline`)
+* [Figure](/?path=/docs/pattern-library-components-figure--page) - 1px inner border
+* [Section Intro](/?path=/docs/pattern-library-containers-section-intro--page) - 1px inner border
+* [Statistic](/?path=/docs/pattern-library-components-statistic--page) -- 1px inner border for [Company Stats](/?path=/docs/pattern-library-components-statistic--page#company-stats)
 
-<Preview>
-<article id="agent" className="border-b border-primary-100 w-full">
-  <div className="p-10">
-    <div className="content-grid">
-      <div className="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
-        <figure>
-          <picture className="ar ar--1-1">
-            <img src="images/agent/photo-carrie-mccormick-md.jpg" alt="" />
-          </picture>
-        </figure>
-      </div>
-      <div className="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
-        <h2 class="head-5 accent--above-left pb-10">Agent Section</h2>
-        <button className="btn btn--style-dark">
-          <span className="btn__text">Agent Bio</span>
-        </button>
-      </div>
-    </div>
-  </div>
-</article>
-<article id="co-agent" className="w-full">
-  <div className="p-10">
-    <div className="content-grid">
-      <div className="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
-        <figure>
-          <picture className="ar ar--1-1">
-            <img src="images/coagent/photo-leigh-marcus-md.jpg" alt="" />
-          </picture>
-        </figure>
-      </div>
-      <div className="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
-        <h2 class="head-5 accent--above-left pb-10">Co-Agent Section</h2>
-        <button className="btn btn--style-dark">
-          <span className="btn__text">Co-Agent Bio</span>
-        </button>
-      </div>
-    </div>
-  </div>
-</article>
-</Preview>
-
-The following components have **double** (1px -- 2px space -- 1px) borders:
+Components with a **double** (1px -- 2px space -- 1px) border:
 * [Navigation](/?path=/docs/pattern-library-containers-navigation--page)
-* [Section Content](/?path=/docs/pattern-library-containers-section--page)
-
-<Preview>
-<article>
-  <div className="section-content text-center">
-    <p>A section</p>
-  </div>
-</article>
-</Preview>
+* [Section Content](/?path=/docs/pattern-library-containers-section-content--page)
 
 ## Rules
 
-Rules are used to separate items. Rules are 1px wide, light gray (Primary 100). See individual components:
+Rules are used to separate items. Rules are 1px wide, light gray (Primary 200). See individual components.
 
-* Testimonials - See [Testimonial](/?path=/docs/pattern-library-components-testimonial--page)
-* Recent Sales - See [Property](/?path=/docs/pattern-library-components-property--default-story)
-* Agent Stats - See [Statistic](/?path=/docs/pattern-library-components-statistic--page)
-* Team Stats - See [Statistic](/?path=/docs/pattern-library-components-statistic--page)
+* [Main Content](/?path=/docs/pattern-library-containers-main-content--page) -- 1px divider between sections 
+* [Testimonial](/?path=/docs/pattern-library-components-testimonial--page) -- 1px divider between Testimonials
+* [Property](/?path=/docs/pattern-library-components-property--default-story) -- 1px divider between Recent Sales
+* [Statistic](/?path=/docs/pattern-library-components-statistic--page) -- 1px divider between [Agent Stats](/?path=/docs/pattern-library-components-statistic--page#agent-stats); vertical and horizontal dividers between [Team Stats](/?path=/docs/pattern-library-components-statistic--page#team-stats)
 
 ## Accents
 
