@@ -6,7 +6,7 @@
         role="dialog"
         aria-modal="true"
         aria-describedby="modalDescription">
-        <dlp-bg-ripple ref="dlpBg" @openDone="slideOpen" @click="close" @closeDone="cleanup"/>
+        <dlp-bg-ripple ref="dlpBg" @click="close" @closeDone="cleanup"/>
         <div 
             ref="slideInner"
             :class="{ 'off-screen':isAnimated }"
@@ -72,6 +72,7 @@ export default {
             this.$nextTick(()=> {
                 if(hasMotion){
                     this.bgOpen()
+                    this.slideOpen()
                 }
             })
             
@@ -79,7 +80,8 @@ export default {
         },
         slideOpen() {
             gsap.to(this.$refs.slideInner, {
-                right: 0
+                right: 0,
+                delay: 0
             })
         },
         slideClose() {
