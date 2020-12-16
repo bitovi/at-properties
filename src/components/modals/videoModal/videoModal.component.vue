@@ -106,9 +106,12 @@ export default {
             
         },
         close: function() {
-            this.$refs.dlpVideoBg.close(this.openerEl)
+            
             gsap.to(this.$refs.dlpContent, { 
-                opacity: 0
+                opacity: 0,
+                onComplete: () => {
+                    this.$refs.dlpVideoBg.close(this.openerEl)
+                }
             })
         },
         setFocus: function() {
