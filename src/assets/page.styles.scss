@@ -1,8 +1,31 @@
 
 html,
 body {
-  height: 100%;
+  @apply h-full;	           /* height: 100%; */
   scroll-behavior: smooth;
+}
+
+/* Custom scroll bar */
+/* Works for Firefox, but not in MacOS */
+:root {
+  scrollbar-color: theme('colors.secondary.900') theme('colors.primary.100') !important;
+  scrollbar-width: thin !important;
+}
+/* Works on Chrome/Edge/Safari */
+*::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+*::-webkit-scrollbar-track {
+  @apply bg-primary-100;     /* background-color: theme('colors.primary.100'); */
+}
+*::-webkit-scrollbar-thumb {
+  @apply bg-secondary-900;   /* background-color: theme('colors.secondary.900'); */
+}
+
+#app {
+  @apply min-h-full;         /* min-height: 100%; */
+  @apply overflow-x-hidden;  /* overflow-x: hidden; */
 }
 
 /* Skip link */
@@ -24,24 +47,6 @@ body {
     top: 8px;
     left: 8px;
   }
-}
-
-/* Custom scroll bar */
-/* Works for Firefox, but not in MacOS */
-:root {
-  scrollbar-color: theme('colors.secondary.900') theme('colors.primary.100') !important;
-  scrollbar-width: thin !important;
-}
-/* Works on Chrome/Edge/Safari */
-*::-webkit-scrollbar {
-  width: 4px;
-  height: 4px;
-}
-*::-webkit-scrollbar-track {
-  @apply bg-primary-100;     /* background-color: theme('colors.primary.100'); */
-}
-*::-webkit-scrollbar-thumb {
-  @apply bg-secondary-900;   /* background-color: theme('colors.secondary.900'); */
 }
 
 /* Section divider: attach to article */
@@ -72,14 +77,12 @@ body {
   @apply grid;               /* display: grid; */
   @apply grid-cols-4;        /* grid-template-columns: repeat(4, minmax(0, 1fr)); */
   @apply gap-x-6;            /* column-gap: 24px; */
-  @apply gap-y-8;            /* row-gap: 32px; */
   @media (min-width: theme('screens.md')) {
     @apply grid-cols-12;     /* grid-template-columns: repeat(12, minmax(0, 1fr)); */
     @apply gap-x-8;          /* column-gap: 32px; */
   }
   @media (min-width: theme('screens.lg')) {
     @apply grid-cols-16;     /* grid-template-columns: repeat(16, minmax(0, 1fr)); */
-    @apply gap-x-12;         /* column-gap: 48px; */
   }
   @media (min-width: 1441px) {
     max-width: 1440px;

@@ -1,6 +1,6 @@
 <template>
-    <div class='section-content'>
-        <div class="content-grid">
+    <div class="section-content">
+        <section class="content-grid">
             <div class="order-3 md:order-4 col-span-4 md:col-span-6 md:col-start-7 lg:col-span-7 lg:col-start-9">
                 <dlp-video-card
                     :sm="`images/selling/selling-1.jpg`"
@@ -12,7 +12,7 @@
             </div>
             <div class="order-4 md:order-3 col-span-4 md:col-span-6 md:col-start-1 lg:col-span-6 lg:col-start-2">
                 <h3 class="head-5 accent--above-left">Pricing Your Home</h3>
-                <dlp-transition type="fadeIn ">
+                <dlp-transition type="fadeIn">
                     <p>The surest way to get the highest selling price for your home is to set the listing price, correctly right out of the gate.</p>
                     <p>To determine the right listing price for your home, we will perform a Comparative Market Analysis with @properties’ Digital CMA. Unlike a traditional CMA, which is a static report, our Digital CMA is up-to the-minute accurate, using real-tome data from the local Multiple Listing Service.</p>
                 </dlp-transition>
@@ -24,8 +24,9 @@
                     </dlp-appear-modal>
                 </div>
             </div>
-        </div>
-        <div class="content-grid">
+        </section>
+
+        <section class="content-grid">
             <div class="col-span-4 md:col-span-6 md:col-start-1 lg:col-span-7 lg:col-start-2 self-center">
                 <dlp-figure
                     :sm="`images/selling/selling-2.jpg`"
@@ -47,8 +48,7 @@
                     </dlp-appear-modal>
                 </div>
             </div>
-        </div>
-        
+        </section>
     </div>
 </template>
 

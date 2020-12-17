@@ -19,10 +19,9 @@
 
         <section id="company-timeline" class="content-grid">
             <div class="col-span-full text-center">
-                <h3 class="head-2 accent--below-center">Company Timeline</h3>
-
+              <h3 class="head-2 accent--below-center">Company Timeline</h3>
             </div>
-            <div class="col-span-full text-center">
+            <div class="col-span-full text-center lg:mt-4">
                 
                 <dlp-flat-scroll class="flat-scroll--company">
                     <div>
@@ -82,13 +81,12 @@
 
         <section id="company-stats" class="content-grid">
           <div class="col-span-full text-center">
-            <h3 class="head-2 accent--below-center mb-12">The Numbers Don't Lie</h3>
-            
+            <h3 class="head-2 accent--below-center">The Numbers Don't Lie</h3>
+          </div>
+          <div class="col-span-full text-center lg:mt-4">
             <dlp-stat-grid />
-            
-
-
-            <!-- <div class="col-span-full flex"> -->
+          </div>
+          <div class="col-span-full text-center mt-8 lg:mt-12">
                 <dlp-button type="button" class="mx-auto" @click="showModal('LocalStatsModal', $event)">View local stats</dlp-button>
                 
                 <dlp-appear-modal ref="LocalStatsModal">

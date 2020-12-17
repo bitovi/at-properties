@@ -3,65 +3,61 @@ $bp-lg: 1280px;
 $bp-xl: 1920px;
 
 #grids {
-    background-color: aqua;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    margin: 0 auto;
-    height: 100%;
-    z-index: 1;
-    
-    padding: 0 24px; 
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 24px;
-    
-    div {
-      background-color: pink;
-    }
-    
-    @media (min-width: $bp-md) {
-      padding: 0 32px; 
-      grid-template-columns: repeat(12, minmax(0, 1fr));
-      gap: 32px;
-    }
-    
-    @media (min-width: $bp-lg) {
-      grid-template-columns: repeat(16, minmax(0, 1fr));
-    }
-    
-    @media (min-width: 1441px) {
-      max-width: 1504px;
-    }
-
-
-    .appear-md {
-        display: none;
-        
-        @media (min-width: $bp-md) {
-          display: block;
-        }
-    }
-    .appear-lg {
-        display: none;
-        
-        @media (min-width: $bp-lg) {
-            display: block;
-        }
-    }
-}
-
-main {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
+  margin: 0 auto;
   height: 100%;
-  z-index: 2;
-  display: block;
+  z-index: -1;
+  
+  padding: 0 24px; 
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  
+  div {
+    background-color: pink;
+  }
+  
+  @media (min-width: $bp-md) {
+    padding: 0 32px; 
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 32px;
+  }
+  
+  @media (min-width: $bp-lg) {
+    grid-template-columns: repeat(16, minmax(0, 1fr));
+  }
+  
+  @media (min-width: 1441px) {
+    padding: 0;
+    max-width: 1440px;
+  }
+
+  .appear-md {
+    display: none;
+    
+    @media (min-width: $bp-md) {
+      display: block;
+    }
+  }
+
+  .appear-lg {
+    display: none;
+    
+    @media (min-width: $bp-lg) {
+      display: block;
+    }
+  }
 }
+
+/* .content-grid {
+  div {
+    background-color: aqua;
+  }
+} */
 
 /* Highlighting for style guide */
 .highlight {
