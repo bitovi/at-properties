@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
+import { gsap } from "gsap";
+import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import VueScrollactive from 'vue-scrollactive';
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import VueYoutube from 'vue-youtube'
@@ -7,6 +9,8 @@ import VueYoutube from 'vue-youtube'
 import 'swiper/css/swiper.min.css'
 
 import './components/index'
+
+gsap.registerPlugin(DrawSVGPlugin);
 
 Vue.use(VueScrollactive);
 Vue.use(VueAwesomeSwiper);

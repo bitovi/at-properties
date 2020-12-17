@@ -1,22 +1,21 @@
-.dlp-video-modal-mask {
+.dlp-video-modal-wrapper {
     @apply fixed;
     @apply top-0;
     @apply left-0;
     @apply w-screen;
     @apply h-screen;
     z-index: 9998;
-    background-color: rgba(0, 0, 0, .8);
     overflow-x: auto;
-    transition: opacity .3s ease;
 }
 
 .dlp-video-modal {
     @apply p-4;
+    @apply h-full;
     transition: all 0.5s ease-in-out;
     overflow: hidden;
 
     //if isAnimated, start at 0 opacity
-    &.fade-in {
+    &.hide {
         opacity: 0;
     }
 }

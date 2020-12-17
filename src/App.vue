@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    
-      <DevGrid />
+    <DevGrid />
     <main class="dlp-main">
       <Nav />
       <TitleContainer />
@@ -140,5 +139,6 @@ export default {
 <style>
 #app {
   min-height: 100%;
+  overflow-x: hidden;
 }
 </style>
