@@ -133,88 +133,21 @@ export default {
           publicPath: process.env.BASE_URL
       }
   },
-  methods: {
-    st(anim, trigger) {
-      ScrollTrigger.create({
-          trigger: trigger,
-          start: "top 80%",
-          onEnter: () => anim.play()
-      });
-      
-      ScrollTrigger.create({
-          trigger: trigger,
-          start: "top bottom",
-          onLeaveBack: () => anim.pause(0)
-      });
-    }
-  },
   mounted() {
-    //animation hooks
-    gsap.utils.toArray('.animate--fade').forEach( (item) => {
-      const fade = gsap.fromTo(item, {
-        opacity: 0
-      }, {
-        duration: 0.7,
-        opacity: 1,
-        paused: true
+    //generic fade-in 
+    gsap.utils.toArray(".fade-in").forEach(item => {
+      gsap.to(item, {
+        scrollTrigger: {
+          trigger: item,
+          start: "top 90%",
+          end: "top center", 
+          scrub: 1, 
+          once: true
+        },
+        opacity: 1 
       })
-      this.st(fade, item)
     })
 
-    gsap.utils.toArray('.animate--slide-right').forEach( (item) => {
-      const fade = gsap.fromTo(item, {
-        transform: 'translate(-50px, 0)'
-      }, {
-        duration: 0.7,
-        x: 0,
-        paused: true
-      })
-      this.st(fade, item)
-    })
-
-    gsap.utils.toArray('.animate--slide-left').forEach( (item) => {
-      const fade = gsap.fromTo(item, {
-        transform: 'translate(50px, 0)'
-      }, {
-        duration: 0.7,
-        x: 0,
-        paused: true
-      })
-      this.st(fade, item)
-    })
-    
-    gsap.utils.toArray('.animate--slide-up').forEach( (item) => {
-      const fade = gsap.fromTo(item, {
-        transform: 'translate(0, 50px)'
-      }, {
-        duration: 0.7,
-        y: 0,
-        paused: true
-      })
-      this.st(fade, item)
-    })
-
-    gsap.utils.toArray('.animate--slide-down').forEach( (item) => {
-      const fade = gsap.fromTo(item, {
-        transform: 'translate(0, -50px)'
-      }, {
-        duration: 0.7,
-        y: 0,
-        paused: true
-      })
-      this.st(fade, item)
-    })
-
-    gsap.utils.toArray('.animate--pop').forEach( (f) => {
-      const fade = gsap.fromTo(f, {
-        transform: 'scale(0.5)'
-      }, {
-        duration: 0.5,
-        scale: 1,
-        paused: true
-      })
-      this.st(fade, f)
-    })
   }
 }
 </script>
