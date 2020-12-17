@@ -1,7 +1,8 @@
 <template>
     <div
+        ref="figWrapper"
         class="dlp-figure-wrapper" 
-        :class="[{ 'pinned': isSticky }]">
+        :class="[{ 'pinned': isSticky }, {'hide': isAnimated}]">
         <div v-if="showBorder" class="dlp-figure-border"></div>
         <figure 
             v-bind="$attrs" 
@@ -76,6 +77,11 @@ export default {
             }
         }
     },
+    data() {
+        return {
+            isAnimated: hasMotion
+        }
+    },
     computed: {
         defaultImage() {
             //use the smallest available
@@ -91,6 +97,18 @@ export default {
     mounted() {
         if(!hasMotion) return
         if(this.animate === 'shrink'){
+            
+            gsap.to(this.$refs.figWrapper, {
+                scrollTrigger: {
+                    trigger: this.$refs.figWrapper,
+                    start: "top 80%",
+                    end: "bottom center",
+                    toggleActions: "play none none reset"
+                },
+                duration: 0.7,
+                opacity:1
+            })
+
             gsap.fromTo(this.getCurrentSrc(), {
                 scale: 1.1,
             },
@@ -98,8 +116,8 @@ export default {
                 scrollTrigger: {
                     trigger: this.getCurrentSrc(),
                     start: "top 50%",
-                    // scrub: true,
-                    toggleActions: "play none none reverse"
+                    scrub: 1,
+                    toggleActions: "play none none reset"
                 },
                 duration: 0.7,
                 scale: 1,
