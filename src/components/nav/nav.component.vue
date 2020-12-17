@@ -2,6 +2,7 @@
     <scrollactive 
         active-class="isActive"
         :offset="0"
+        :modifyUrl="false"
         v-on:itemchanged="onItemChanged"
         class="dlp-nav" 
         :class="{ isOpen: isOpen}" 
@@ -15,30 +16,45 @@
                 <div ref="navUlWrapper" class="text-center">
                     <h2 ref="navUlHeader" class="head-1 mb-6">Menu</h2>
                     <ul class="dlp-nav-ul" ref="navUl">
-                        <li 
-                            @mouseover="mouseOver"
-                            @mouseleave="mounseOut">
-                            <a class="dlp-nav-link scrollactive-item" href="#agent" @click="clickNav">Agent Profile</a>
+                        <li >
+                            <a 
+                                @mouseover="mouseOver"
+                                @mouseleave="mounseOut"
+                                class="dlp-nav-link scrollactive-item" 
+                                href="#agent" 
+                                @click="clickNav">Agent Profile</a>
                         </li>
-                        <li 
-                            @mouseover="mouseOver"
-                            @mouseleave="mounseOut">
-                            <a class="dlp-nav-link scrollactive-item" href="#company" @click="clickNav">Company Profile</a>
+                        <li>
+                            <a 
+                                @mouseover="mouseOver"
+                                @mouseleave="mounseOut"
+                                class="dlp-nav-link scrollactive-item" 
+                                href="#company" 
+                                @click="clickNav">Company Profile</a>
                         </li>
-                        <li 
-                            @mouseover="mouseOver"
-                            @mouseleave="mounseOut">
-                            <a class="dlp-nav-link scrollactive-item" href="#marketing" @click="clickNav">Marketing Plan</a>
+                        <li >
+                            <a 
+                                @mouseover="mouseOver"
+                                @mouseleave="mounseOut"
+                                class="dlp-nav-link scrollactive-item" 
+                                href="#marketing" 
+                                @click="clickNav">Marketing Plan</a>
                         </li>
-                        <li 
-                            @mouseover="mouseOver"
-                            @mouseleave="mounseOut">
-                            <a class="dlp-nav-link scrollactive-item" href="#selling" @click="clickNav">Selling Your Home</a>
+                        <li>
+                            <a 
+                                @mouseover="mouseOver"
+                                @mouseleave="mounseOut"
+                                class="dlp-nav-link scrollactive-item" 
+                                href="#selling" 
+                                @click="clickNav">Selling Your Home</a>
                         </li>
-                        <li 
-                            @mouseover="mouseOver"
-                            @mouseleave="mounseOut">
-                            <a class="dlp-nav-link scrollactive-item" href="#partners" @click="clickNav">Partners</a>
+                        <li>
+                            <a 
+                                @mouseover="mouseOver"
+                                @mouseleave="mounseOut"
+                                class="dlp-nav-link scrollactive-item" 
+                                href="#partners" 
+                                @click="clickNav">Partners</a>
                         </li>
                         
                         
@@ -115,11 +131,11 @@ export default {
             })
             //clip reveal each nav item
             openTimeline.fromTo(initial(this.$refs.navUl.children), {
-                clipPath: 'polygon(0 0, 100% 0, 100% 0%, 0 0%)'
+                opacity: 0
             }, {
                 duration: 0.5,
                 stagger: 0.2,
-                clipPath: 'polygon(0 0, 100% 0, 100% 105%, 0 105%)'
+                opacity: 1
             })
         },
         close() {
@@ -130,6 +146,7 @@ export default {
             })
             //swipe the menu
             closeTimeline.to(this.$refs.navMenu, {
+                delay: 1,
                 top: window.innerHeight,
                 onComplete: () => this.isOpen = false
             })
@@ -146,7 +163,7 @@ export default {
         },
         //onClick of a link in desktop, control the highlight
         clickNav(evt) {
-            this.elActive = evt.target.parentNode
+            this.elActive = evt.target
             if(this.isOpen){ this.close() }
             this.changeHighlight()
         },
@@ -154,9 +171,9 @@ export default {
         // eslint-disable-next-line no-unused-vars
         onItemChanged(evt, currentItem, lastItem) {
             if(!currentItem) return
-            this.elActive = currentItem.parentNode
+            this.elActive = currentItem
             if(!this.isScrolling){
-                this.changeHighlight()
+                delay(this.changeHighlight, 400)
             }
         },
         //what is the left offest including the container offset?
@@ -208,9 +225,9 @@ export default {
         const initActive = this.$refs.navUl.querySelector('.isActive')
         //set the stored active item
         if(initActive) {
-            this.elActive = initActive.parentNode
+            this.elActive = initActive
         } else {
-            this.elActive = this.$refs.navUl.children[0]
+            this.elActive = this.$refs.navUl.children[0].children[0]
         }
         //set the styles to match nav item
         this.$refs.highlight.style.width = this.getWidth(this.elActive)
