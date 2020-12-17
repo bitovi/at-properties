@@ -250,6 +250,10 @@ p.scroll {
   height: 100vh;
   overflow: hidden;
 
+  @media only screen and (max-device-width : theme('screens.sm')) {
+    height: calc(100vh - 48px);
+  }
+
   .intro-image, 
   .intro-title {
       position: absolute;
