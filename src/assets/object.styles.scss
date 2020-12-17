@@ -49,3 +49,11 @@
     @apply mb-20;            /* margin-bottom: 80px; */
   }
 }
+
+/* Global Fade Animation */
+.fade-in {
+  opacity: 0;
+  @media (prefers-reduced-motion) {
+    opacity: 1;
+  }
+}

@@ -136,5 +136,21 @@ export default {
           publicPath: process.env.BASE_URL
       }
   },
+  mounted() {
+    //generic fade-in 
+    gsap.utils.toArray(".fade-in").forEach(item => {
+      gsap.to(item, {
+        scrollTrigger: {
+          trigger: item,
+          start: "top 90%",
+          end: "top center", 
+          scrub: 1, 
+          once: true
+        },
+        opacity: 1 
+      })
+    })
+
+  }
 }
 </script>

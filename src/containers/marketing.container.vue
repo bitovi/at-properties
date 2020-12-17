@@ -91,10 +91,8 @@
                 />
             </div>
             <div class="col-span-full md:col-span-6 md:col-start-7 md:content-center lg:col-span-6 lg:col-start-10 content-center self-center">
-                <dlp-transition type="fadeIn ">
-                    <p class="accent--above-left">A fully integrated marketing plan is key to getting your home sold quickly and for top dollar. No home is the same, so we provide a customized marketing plan tailored for your home.</p>
-                </dlp-transition>
-                <div class="btn-group">
+                <p class="accent--above-left fade-in">A fully integrated marketing plan is key to getting your home sold quickly and for top dollar. No home is the same, so we provide a customized marketing plan tailored for your home.</p>
+                <div class="btn-group fade-in">
                     <dlp-button type="button" @click="showModal('MarketingPlanModal', $event)">View Custom Marketing Plan</dlp-button>
                     <dlp-appear-modal ref="MarketingPlanModal">
                         <h3 class="head-5 accent--above-left mb-8">Luxury Stats</h3>

@@ -3,14 +3,14 @@
         <div class="content-grid">
             <div class="col-span-full lg:col-span-14 lg:col-start-2 text-center">
                 <img 
-                    class="mx-auto logo--agency" 
+                    class="mx-auto logo--agency fade-in" 
                     :src="`${i18n.logo.sm}`" 
                     :alt="`${i18n.logo.alt}`" />
             </div>
             <div class="col-span-full md:col-span-5 lg:col-start-2 lg:col-span-6">
                 <dlp-figure 
-                    :sm="`${publicPath}${i18n.photo.sm}`"
-                    :md="`${publicPath}${i18n.photo.md}`"
+                    :sm="`${i18n.photo.sm}`"
+                    :md="`${i18n.photo.md}`"
                     :alt="`${i18n.name}`"
                     :caption="`${i18n.name}`"
                     ar="ar ar--4-5"
@@ -20,12 +20,10 @@
             </div>
             <div class="col-span-full md:col-span-7 lg:col-start-9 lg:col-span-7">
                 <section>
-                    <h1 class="head-1">{{i18n.name}}</h1>
-                    <h2 class="head-5 accent--above-left mb-4">Co-agent Bio</h2>
-                    <dlp-transition type="fadeIn ">
-                        <div v-html="i18n.bio.brief"></div>
-                    </dlp-transition>
-                    <div class="btn-group">
+                    <h1 class="head-1 fade-in">{{i18n.name}}</h1>
+                    <h2 class="head-5 accent--above-left fade-in">Co-agent Bio</h2>    
+                    <p v-html="i18n.bio.brief" class="fade-in"></p>
+                    <div class="btn-group fade-in">
                         <dlp-button type="button" @click="showModal('CoagentModal', $event)">Read Full Bio</dlp-button>
                         <dlp-appear-modal ref="CoagentModal">
                             <h3 class="head-5 accent--above-left mb-8">Agent Bio</h3>
@@ -45,7 +43,6 @@ export default {
     name: 'coagentContainer',
     data(){
         return {
-            publicPath: process.env.BASE_URL,
             i18n: CoAgentStrings
         }
     },

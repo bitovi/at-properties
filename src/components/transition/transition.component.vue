@@ -13,18 +13,11 @@
 </template>
 <script>
 import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { filter, includes } from 'lodash'
 import { hasMotion } from '../../constants'
 
 const ALLOWED_HOOKS = ['fadeIn', 'slideRight', 'slideLeft', 'slideUp', 'slideDown', 'pop']
-
-//Helper for forming scrollTrigger object
-function ScrollTrigger(ref, opts){
-    return {
-        trigger: ref,
-        ...opts
-    }
-}
 
 export default {
     name: 'dlp-transition',
@@ -51,8 +44,6 @@ export default {
             default: function() {
                 return {
                     start: "top 80%",
-                    end: "bottom center",
-                    toggleActions: "play none none none"
                 }
             }
         }
@@ -60,55 +51,77 @@ export default {
     methods: {
         fadeIn(target) {
             gsap.set(target, { opacity: 0 })
-            return[{},{
+            return gsap.to(this.$refs.tInner, {
+                delay: this.delay,
                 duration: 0.7,
-                opacity: 1
-            }, 0]
+                opacity: 1,
+                paused: true
+            })
         },
         slideRight(target) {
             gsap.set(target, {transform: 'translate(-50px, 0)'})
-            return [{},{
-                x: 0
-            }, 0]
+            return gsap.to(this.$refs.tInner, {
+                delay: this.delay,
+                duration: 0.7,
+                x: 0,
+                paused: true
+            })
         },
         slideLeft(target) {
             gsap.set(target, {transform: 'translate(50px, 0)'})
-            return [{},{
-                x: 0
-            }, 0]
+            return gsap.to(this.$refs.tInner, {
+                delay: this.delay,
+                duration: 0.7,
+                x: 0,
+                paused: true
+            })
         },
         slideUp(target) {
             gsap.set(target, {transform: 'translate(0, 50px)'})
-            return [{},{
+            return gsap.to(this.$refs.tInner, {
+                delay: this.delay,
+                duration: 0.7,
                 y: 0,
-            }, 0]
+                paused: true
+            })
         },
         slideDown(target) {
             gsap.set(target, {transform: 'translate(0, -50px)'})
-            return [{},{
+            return gsap.to(this.$refs.tInner, {
+                delay: this.delay,
+                duration: 0.7,
                 y: 0,
-            }, 0]
+                paused: true
+            })
         },
         pop(target) {
             gsap.set(target, {transform: 'scale(0.5)'})
-            return [{},{
+            return gsap.to(this.$refs.tInner, {
+                delay: this.delay,
                 duration: 0.5,
-                scale: 1
-            }, 0]
+                scale: 1,
+                paused: true
+            })
         }
     },
     mounted() {
         if(!hasMotion) return
-        this.tl = gsap.timeline({
-            delay: this.delay,
-            scrollTrigger: ScrollTrigger(this.$refs.tInner, this.scrollTrigger),
-        })
         //add any valid animation types to the timeline
         this.hooks.forEach(h => {
-            const res = this[h](this.$refs.tInner)
-            this.tl.fromTo(this.$refs.tInner, ...res)
-        })
+            const anim = this[h](this.$refs.tInner)
 
+            ScrollTrigger.create({
+                trigger: this.$refs.tInner,
+                ...this.scrollTrigger,
+                onEnter: () => anim.play()
+            });
+            
+            ScrollTrigger.create({
+                trigger: this.$refs.tInner,
+                start: "top bottom",
+                onLeaveBack: () => anim.pause(0)
+            });
+        })
     },
     computed: {
         hooks: function() {

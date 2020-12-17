@@ -15,6 +15,11 @@
         top: theme('spacing.8')
     } 
 
+    //pre-load animation
+    &.hide {
+        opacity: 0;
+    }
+
     .dlp-figure-border {
         @apply absolute;
         @apply w-full;

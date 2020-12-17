@@ -1,7 +1,8 @@
 <template>
     <div
+        ref="figWrapper"
         class="dlp-figure-wrapper" 
-        :class="[{ 'pinned': isSticky }]">
+        :class="[{ 'pinned': isSticky }, {'hide': isAnimated}]">
         <div v-if="showBorder" class="dlp-figure-border"></div>
         <figure 
             v-bind="$attrs" 
@@ -24,7 +25,8 @@
 </template>
 
 <script>
-import gsap from 'gsap';
+import gsap from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { hasMotion } from '../../constants'
 
 export default {
@@ -76,6 +78,11 @@ export default {
             }
         }
     },
+    data() {
+        return {
+            isAnimated: hasMotion
+        }
+    },
     computed: {
         defaultImage() {
             //use the smallest available
@@ -91,6 +98,25 @@ export default {
     mounted() {
         if(!hasMotion) return
         if(this.animate === 'shrink'){
+            
+            const fade = gsap.to(this.$refs.figWrapper, {
+                duration: 0.7,
+                opacity:1,
+                paused: true
+            })
+
+            ScrollTrigger.create({
+                trigger: this.$refs.figWrapper,
+                start: "top 80%",
+                onEnter: () => fade.play()
+            });
+            
+            ScrollTrigger.create({
+                trigger: this.$refs.figWrapper,
+                start: "top bottom",
+                onLeaveBack: () => fade.pause(0)
+            });
+
             gsap.fromTo(this.getCurrentSrc(), {
                 scale: 1.1,
             },
@@ -98,8 +124,8 @@ export default {
                 scrollTrigger: {
                     trigger: this.getCurrentSrc(),
                     start: "top 50%",
-                    // scrub: true,
-                    toggleActions: "play none none reverse"
+                    scrub: 1,
+                    toggleActions: "play none none reset"
                 },
                 duration: 0.7,
                 scale: 1,
