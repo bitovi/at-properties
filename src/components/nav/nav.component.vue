@@ -2,6 +2,7 @@
     <scrollactive 
         active-class="isActive"
         :offset="0"
+        :modifyUrl="false"
         v-on:itemchanged="onItemChanged"
         class="dlp-nav" 
         :class="{ isOpen: isOpen}" 
@@ -145,6 +146,7 @@ export default {
             })
             //swipe the menu
             closeTimeline.to(this.$refs.navMenu, {
+                delay: 1,
                 top: window.innerHeight,
                 onComplete: () => this.isOpen = false
             })
@@ -225,7 +227,7 @@ export default {
         if(initActive) {
             this.elActive = initActive
         } else {
-            this.elActive = this.$refs.navUl.children[0]
+            this.elActive = this.$refs.navUl.children[0].children[0]
         }
         //set the styles to match nav item
         this.$refs.highlight.style.width = this.getWidth(this.elActive)
