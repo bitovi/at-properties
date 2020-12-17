@@ -25,7 +25,8 @@
 </template>
 
 <script>
-import gsap from 'gsap';
+import gsap from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { hasMotion } from '../../constants'
 
 export default {
@@ -98,16 +99,23 @@ export default {
         if(!hasMotion) return
         if(this.animate === 'shrink'){
             
-            gsap.to(this.$refs.figWrapper, {
-                scrollTrigger: {
-                    trigger: this.$refs.figWrapper,
-                    start: "top 80%",
-                    end: "bottom center",
-                    toggleActions: "play none none reset"
-                },
+            const fade = gsap.to(this.$refs.figWrapper, {
                 duration: 0.7,
-                opacity:1
+                opacity:1,
+                paused: true
             })
+
+            ScrollTrigger.create({
+                trigger: this.$refs.figWrapper,
+                start: "top 80%",
+                onEnter: () => fade.play()
+            });
+            
+            ScrollTrigger.create({
+                trigger: this.$refs.figWrapper,
+                start: "top bottom",
+                onLeaveBack: () => fade.pause(0)
+            });
 
             gsap.fromTo(this.getCurrentSrc(), {
                 scale: 1.1,
