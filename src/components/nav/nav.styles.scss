@@ -56,8 +56,13 @@
     }
 
     @media (max-width: theme('screens.lg')){
+        .dlp-nav-tray {
+            border: 1px solid theme('colors.primary.100');
+        }
+
         &.isOpen {
             @apply h-full;
+            z-index: 1001;
             .dlp-nav-tray {
                 @apply h-full;
             }
@@ -82,10 +87,10 @@
                     border-bottom: 2px solid theme('colors.secondary.500');
                 }
             }
-        }
 
-        .dlp-nav-m-tile {
-            border-top: 1px solid theme('colors.primary.200');
+            .dlp-nav-m-tile {
+                border: 1px solid theme('colors.primary.100');
+            }
         }
     }
 
