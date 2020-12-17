@@ -130,11 +130,11 @@ export default {
             })
             //clip reveal each nav item
             openTimeline.fromTo(initial(this.$refs.navUl.children), {
-                clipPath: 'polygon(0 0, 100% 0, 100% 0%, 0 0%)'
+                opacity: 0
             }, {
                 duration: 0.5,
                 stagger: 0.2,
-                clipPath: 'polygon(0 0, 100% 0, 100% 105%, 0 105%)'
+                opacity: 1
             })
         },
         close() {
