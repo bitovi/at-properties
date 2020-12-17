@@ -34,7 +34,7 @@
         </section>
 
         <section class="content-grid border-t border-b border-primary-200 py-12 lg:py-16" aria-label="@properties social presence">
-            <div class="md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-6">
+            <div class="col-span-2 col-start-2 md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-6 mb-8">
                 <img src="images/intro/logo-atproperties.svg" class="w-full" alt="@properties" />
             </div>
             <div class="col-span-full text-center">
