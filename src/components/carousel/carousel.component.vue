@@ -10,7 +10,6 @@
     </div>
 </template>
 <script>
-
 export default {
     name: 'dlp-carousel',
     props: {

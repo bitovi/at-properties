@@ -8,12 +8,26 @@
                 </dlp-transition>
             </div>
             <div class="col-span-full text-center">
-                <dlp-flat-scroll class="flat-scroll--partners">
-                    <dlp-display-card source="images/partners/ProperTitle-Logo_horiz_blue.png"/>
-                    <dlp-display-card source="images/partners/proper-rate.jpeg"/>
-                    <dlp-display-card source="images/partners/at-commercial-logo.png"/>
-                    <dlp-display-card source="images/partners/chicago-asso-realtors.jpeg"/>
-                </dlp-flat-scroll>
+
+                <dlp-carousel
+                    :options="{
+                        spaceBetween: 32,
+                    }"
+                    :hasScrollNav="true">
+                    <swiper-slide>
+                        <dlp-display-card source="images/partners/ProperTitle-Logo_horiz_blue.png"/>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <dlp-display-card source="images/partners/proper-rate.jpeg"/>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <dlp-display-card source="images/partners/at-commercial-logo.png"/>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <dlp-display-card source="images/partners/chicago-asso-realtors.jpeg"/>
+                    </swiper-slide>
+
+                </dlp-carousel>
             </div>
         </div>
     </div>
