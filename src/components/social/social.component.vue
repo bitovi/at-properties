@@ -1,28 +1,28 @@
 <template>
     <div class="dlp-social">
         <a v-if="facebook" :href="facebook" target="blank" aria-label="Facebook">
-            <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
+            <svg class="icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
         </a>
         <a v-if="instagram" :href="instagram" target="blank" aria-label="Instagram">
-            <svg class="icon icon-instagram"><use xlink:href="#icon-instagram"></use></svg>
+            <svg class="icon-instagram"><use xlink:href="#icon-instagram"></use></svg>
         </a>
         <a v-if="twitter" :href="twitter" target="blank" aria-label="Twitter">
-            <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
+            <svg class="icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
         </a>
         <a v-if="linkedin" :href="linkedin" target="blank" aria-label="linkedin">
-            <svg class="icon icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg>
+            <svg class="icon-linkedin"><use xlink:href="#icon-linkedin"></use></svg>
         </a>
         <a v-if="youtube" :href="youtube" target="blank" aria-label="YouTube">
-            <svg class="icon icon-youtube"><use xlink:href="#icon-youtube"></use></svg>
+            <svg class="icon-youtube"><use xlink:href="#icon-youtube"></use></svg>
         </a>
         <a v-if="website" :href="website" target="blank" aria-label="Website">
-            <svg class="icon icon-earth"><use xlink:href="#icon-earth"></use></svg>
+            <svg class="icon-earth"><use xlink:href="#icon-earth"></use></svg>
         </a>
         <a v-if="lender" :href="lender" target="blank" aria-label="Equal Housing Lender">
-            <svg class="icon icon-lender"><use xlink:href="#icon-equal-housing"></use></svg>
+            <svg class="icon-lender"><use xlink:href="#icon-equal-housing"></use></svg>
         </a>
         <a v-if="realtor" :href="realtor" target="blank" aria-label="Member National Association of Realtors">
-            <svg class="icon icon-realtor"><use xlink:href="#icon-realtor"></use></svg>
+            <svg class="icon-realtor"><use xlink:href="#icon-realtor"></use></svg>
         </a>
     </div>
 </template>

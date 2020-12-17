@@ -1,14 +1,14 @@
 .dlp-social {
-    a {
-        @apply inline-block;
-        @apply mr-8;
-        padding: 4px;
-    }
-    svg {
-        width: 32px;
-        height: 32px;
-        color: theme('colors.primary.900');
-    }
+  a {
+    @apply inline-block;
+    @apply mr-8;
+    padding: 4px;
+  }
+  svg {
+    width: 32px;
+    height: 32px;
+    color: theme('colors.primary.900');
+  }
 }
 
 * + .dlp-social {
@@ -42,6 +42,6 @@
 }
 .icon-earth {
   &:hover, &:focus, &:active {
-    fill: #025A9A;
+    color: #025A9A;
   }
 }

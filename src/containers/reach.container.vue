@@ -20,7 +20,8 @@
                 </div>
             </div>
         </section>
-        <div class="content-grid">
+
+        <section class="content-grid">
             <div class="order-3 md:order-4 col-span-4 md:col-span-6 md:col-start-7 lg:col-span-7 lg:col-start-9">
                 <dlp-figure
                     :sm="`${publicPath}images/reach/luxury_portfolio.jpg`"
@@ -42,7 +43,7 @@
                     </dlp-appear-modal>
                 </div>
             </div>
-        </div>
+        </section>
     </div>
 </template>
 
