@@ -10,17 +10,14 @@
                 />
             </div>
             <div class="col-span-full md:col-span-6 md:col-start-7 lg:col-span-6 lg:col-start-10 self-center">
-                <h3 class="head-5 accent--above-left">Truly Unique From the Start</h3>
-                <dlp-transition type="fadeIn ">
-                    <p>It all began in Chicago. With tremendous personal sales success, a longstanding friendship, shared philosophies, and a mutual vision for the future of Chicago Real Estate, Mike and Thad embarked on the most significant venture of their collective careers: the founding of @properties in 2000....It all began in Chicago.</p>
-                </dlp-transition>
+                <h3 class="head-5 accent--above-left fade-in">Truly Unique From the Start</h3>
+                <p class="fade-in">It all began in Chicago. With tremendous personal sales success, a longstanding friendship, shared philosophies, and a mutual vision for the future of Chicago Real Estate, Mike and Thad embarked on the most significant venture of their collective careers: the founding of @properties in 2000....It all began in Chicago.</p>
             </div>
         </section>
 
         <section id="company-timeline" class="content-grid">
             <div class="col-span-full text-center">
                 <h3 class="head-2 accent--below-center">Company Timeline</h3>
-
             </div>
             <div class="col-span-full text-center">
                 
@@ -86,19 +83,15 @@
             
             <dlp-stat-grid />
             
-
-
-            <!-- <div class="col-span-full flex"> -->
-                <dlp-button type="button" class="mx-auto" @click="showModal('LocalStatsModal', $event)">View local stats</dlp-button>
-                
-                <dlp-appear-modal ref="LocalStatsModal">
-                    <h3 class="head-5 accent--above-left mb-8">Local Stats</h3>
-                    <img
-                        class=""
-                        :alt="`@properties sells 25% of luxury real estate in Chicago`" 
-                        :src="`${publicPath}images/company/local-stats.png`">
-                </dlp-appear-modal>
-            <!-- </div> -->
+            <dlp-button type="button" class="mx-auto" @click="showModal('LocalStatsModal', $event)">View local stats</dlp-button>
+            
+            <dlp-appear-modal ref="LocalStatsModal">
+                <h3 class="head-5 accent--above-left mb-8">Local Stats</h3>
+                <img
+                    class=""
+                    :alt="`@properties sells 25% of luxury real estate in Chicago`" 
+                    :src="`${publicPath}images/company/local-stats.png`">
+            </dlp-appear-modal>
           </div>
         </section>
     </div>

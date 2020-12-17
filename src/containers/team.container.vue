@@ -4,7 +4,7 @@
             <div class="col-span-full text-center">
                 <img 
                     src="images/team/logo-olivia-carson.jpg" 
-                    class="mx-auto logo--agency" 
+                    class="mx-auto logo--agency fade-in" 
                     alt="Olivia Carlson" />
             </div>
             <div class="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
@@ -19,12 +19,10 @@
             </div>
             <div class="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
                 <div>
-                    <h1 class="head-1">{{i18n.name}}</h1>
-                    <h2 class="head-5 accent--above-left">Team Bio</h2>
-                    <dlp-transition type="fadeIn ">
-                        <p v-html="i18n.bio.brief"></p>
-                    </dlp-transition>
-                    <div class="btn-group">
+                    <h1 class="head-1 fade-in">{{i18n.name}}</h1>
+                    <h2 class="head-5 accent--above-left fade-in">Team Bio</h2>
+                    <p class="fade-in" v-html="i18n.bio.brief"></p>
+                    <div class="btn-group fade-in">
                         <dlp-button type="button" @click="showModal('AgentModal', $event)">Read Full Bio</dlp-button>
                         <dlp-appear-modal ref="AgentModal">
                             <div v-html="i18n.bio.full"></div>
