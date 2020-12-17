@@ -3,11 +3,9 @@
     
       <DevGrid />
     <main class="dlp-main">
-      <header>
-        <Nav />
-      </header>
+      <Nav />
+      <TitleContainer />
       <article id="agent">
-        <TitleContainer />
         <AgentContainer />
       </article>
       <hr />

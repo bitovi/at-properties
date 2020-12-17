@@ -182,7 +182,6 @@ export default {
         },
         //what is the width of the new nav item?
         getWidth(target) {
-            console.log(target)
             const activeState = target.getBoundingClientRect()
             return `${activeState.width}px`
         },
