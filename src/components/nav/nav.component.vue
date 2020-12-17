@@ -15,30 +15,45 @@
                 <div ref="navUlWrapper" class="text-center">
                     <h2 ref="navUlHeader" class="head-1 mb-6">Menu</h2>
                     <ul class="dlp-nav-ul" ref="navUl">
-                        <li 
-                            @mouseover="mouseOver"
-                            @mouseleave="mounseOut">
-                            <a class="dlp-nav-link scrollactive-item" href="#agent" @click="clickNav">Agent Profile</a>
+                        <li >
+                            <a 
+                                @mouseover="mouseOver"
+                                @mouseleave="mounseOut"
+                                class="dlp-nav-link scrollactive-item" 
+                                href="#agent" 
+                                @click="clickNav">Agent Profile</a>
                         </li>
-                        <li 
-                            @mouseover="mouseOver"
-                            @mouseleave="mounseOut">
-                            <a class="dlp-nav-link scrollactive-item" href="#company" @click="clickNav">Company Profile</a>
+                        <li>
+                            <a 
+                                @mouseover="mouseOver"
+                                @mouseleave="mounseOut"
+                                class="dlp-nav-link scrollactive-item" 
+                                href="#company" 
+                                @click="clickNav">Company Profile</a>
                         </li>
-                        <li 
-                            @mouseover="mouseOver"
-                            @mouseleave="mounseOut">
-                            <a class="dlp-nav-link scrollactive-item" href="#marketing" @click="clickNav">Marketing Plan</a>
+                        <li >
+                            <a 
+                                @mouseover="mouseOver"
+                                @mouseleave="mounseOut"
+                                class="dlp-nav-link scrollactive-item" 
+                                href="#marketing" 
+                                @click="clickNav">Marketing Plan</a>
                         </li>
-                        <li 
-                            @mouseover="mouseOver"
-                            @mouseleave="mounseOut">
-                            <a class="dlp-nav-link scrollactive-item" href="#selling" @click="clickNav">Selling Your Home</a>
+                        <li>
+                            <a 
+                                @mouseover="mouseOver"
+                                @mouseleave="mounseOut"
+                                class="dlp-nav-link scrollactive-item" 
+                                href="#selling" 
+                                @click="clickNav">Selling Your Home</a>
                         </li>
-                        <li 
-                            @mouseover="mouseOver"
-                            @mouseleave="mounseOut">
-                            <a class="dlp-nav-link scrollactive-item" href="#partners" @click="clickNav">Partners</a>
+                        <li>
+                            <a 
+                                @mouseover="mouseOver"
+                                @mouseleave="mounseOut"
+                                class="dlp-nav-link scrollactive-item" 
+                                href="#partners" 
+                                @click="clickNav">Partners</a>
                         </li>
                         
                         
@@ -146,7 +161,7 @@ export default {
         },
         //onClick of a link in desktop, control the highlight
         clickNav(evt) {
-            this.elActive = evt.target.parentNode
+            this.elActive = evt.target
             if(this.isOpen){ this.close() }
             this.changeHighlight()
         },
@@ -154,7 +169,7 @@ export default {
         // eslint-disable-next-line no-unused-vars
         onItemChanged(evt, currentItem, lastItem) {
             if(!currentItem) return
-            this.elActive = currentItem.parentNode
+            this.elActive = currentItem
             if(!this.isScrolling){
                 this.changeHighlight()
             }
@@ -167,6 +182,7 @@ export default {
         },
         //what is the width of the new nav item?
         getWidth(target) {
+            console.log(target)
             const activeState = target.getBoundingClientRect()
             return `${activeState.width}px`
         },
@@ -208,7 +224,7 @@ export default {
         const initActive = this.$refs.navUl.querySelector('.isActive')
         //set the stored active item
         if(initActive) {
-            this.elActive = initActive.parentNode
+            this.elActive = initActive
         } else {
             this.elActive = this.$refs.navUl.children[0]
         }

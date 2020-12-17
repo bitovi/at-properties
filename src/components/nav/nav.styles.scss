@@ -101,6 +101,7 @@
 
     .dlp-nav-link {
         @apply py-2;
+        @apply mx-4;
         @apply my-2;
         @apply inline-block;
         color: theme('colors.primary.500');
@@ -137,7 +138,7 @@
                 @apply flex;
                 @apply flex-row;
                 position: relative;
-                justify-content: space-evenly;
+                justify-content: center;
                 .dlp-nav-link {
                     @apply pt-1;
                     font-size: theme('fontSize.sm');
