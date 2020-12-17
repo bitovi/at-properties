@@ -2,10 +2,8 @@
     <div class="section-content">
         <div class="content-grid">
             <div class="col-span-full md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-6">
-                <h5 class="head-5 accent">Lorem Ipsum Dolor</h5>
-                <dlp-transition type="fadeIn">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra pretium eu molestie id sit ultricies in arcu quam. Diam, aliquet convallis neque, morbi libero. Nunc nisl purus, ut vitae potenti suspendisse. Pulvinar habitant sapien tempus proin.</p>
-                </dlp-transition>
+                <h5 class="head-5 accent fade-in">Lorem Ipsum Dolor</h5>
+                <p class="fade-in">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra pretium eu molestie id sit ultricies in arcu quam. Diam, aliquet convallis neque, morbi libero. Nunc nisl purus, ut vitae potenti suspendisse. Pulvinar habitant sapien tempus proin.</p>
             </div>
             <div class="col-span-full text-center mt-16 lg:mt-20">
 

@@ -10,11 +10,9 @@
                 />
             </div>
             <div class="col-span-full md:col-span-6 md:col-start-7 lg:col-span-6 lg:col-start-10 self-center">
-                <h3 class="head-5 accent--above-left">Leading RE</h3>
-                <dlp-transition type="fadeIn ">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque gravida ac, diam malesuada. Fringilla arcu fusce tempus sodales velit id. Tristique sed nec dignissim imperdiet. Id eu cursus et parturient suscipit.</p>
-                </dlp-transition>
-                <div class="btn-group">
+                <h3 class="head-5 accent--above-left fade-in">Leading RE</h3>
+                <p class="fade-in">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque gravida ac, diam malesuada. Fringilla arcu fusce tempus sodales velit id. Tristique sed nec dignissim imperdiet. Id eu cursus et parturient suscipit.</p>
+                <div class="btn-group fade-in">
                     <dlp-button type="button" @click="showModal('ReachVideo', $event)">Our Global Reach</dlp-button>
                     <dlp-video-modal ref="ReachVideo" videoId="DgZb_NRk-Bk" />
                 </div>
@@ -31,11 +29,9 @@
                 />
             </div>
             <div class="order-4 md:order-3 col-span-4 md:col-span-6 md:col-start-1 lg:col-span-6 lg:col-start-2 content-center self-center">
-                <h3 class="head-5 accent--above-left">Luxury Portfolio</h3>
-                <dlp-transition type="fadeIn ">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque gravida ac, diam malesuada. Fringilla arcu fusce tempus sodales velit id. Tristique sed nec dignissim imperdiet. Id eu cursus et parturient suscipit.</p>
-                </dlp-transition>
-                <div class="btn-group">
+                <h3 class="head-5 accent--above-left fade-in">Luxury Portfolio</h3>
+                <p class="fade-in">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque gravida ac, diam malesuada. Fringilla arcu fusce tempus sodales velit id. Tristique sed nec dignissim imperdiet. Id eu cursus et parturient suscipit.</p>
+                <div class="btn-group fade-in">
                     <dlp-button type="button" @click="showModal('LuxaryStatsModal', $event)">View Luxury Stats</dlp-button>
                     <dlp-appear-modal ref="LuxaryStatsModal">
                         <h3 class="head-5 accent--above-left mb-8">Luxury Stats</h3>

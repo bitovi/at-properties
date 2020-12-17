@@ -4,32 +4,29 @@
             <div class="col-span-full lg:col-span-14 lg:col-start-2 text-center">
                 <img 
                     src="images/agent/emily-sachs-wong.jpeg" 
-                    class="mx-auto logo--agency" 
+                    class="mx-auto logo--agency fade-in" 
                     alt="" />
             </div>
             <div class="col-span-full md:col-span-5 lg:col-start-2 lg:col-span-6">
-                <div class="sticky top-4">
-                    <dlp-figure 
-                        :sm="`${publicPath}images/agent/photo-carrie-mccormick-sm.jpg`"
-                        :md="`${publicPath}images/agent/photo-carrie-mccormick-md.jpg`"
-                        alt="Carrie McCormick"
-                        ar="ar ar--4-5"
-                        animate="shrink"
-                    />
-                </div>
+                <dlp-figure 
+                    :sm="`${publicPath}images/agent/photo-carrie-mccormick-sm.jpg`"
+                    :md="`${publicPath}images/agent/photo-carrie-mccormick-md.jpg`"
+                    alt="Carrie McCormick"
+                    ar="ar ar--4-5"
+                    animate="shrink"
+                />
             </div>
             <div class="col-span-full md:col-span-7 lg:col-start-9 lg:col-span-7">
-                <h1 class="head-1">Carrie McCormick</h1>
-                <h5 class="head-5 accent">Contact Me Today!</h5>
-                <address class="contact-info">
+                <h1 class="head-1 fade-in">Carrie McCormick</h1>
+                <h5 class="head-5 accent--above-left fade-in">Contact Me Today!</h5>
+                <address class="contact-info fade-in">
                     <a :href="`tel:+1-${i18n.contact.phone}`">{{i18n.contact.phone}}</a>
                     <a :href="`mailto:${i18n.contact.email}`">{{i18n.contact.email}}</a>
                 </address>
-                <dlp-transition type="fadeIn">
-                    <dlp-social 
-                        v-bind="i18n.contact.social"
-                    />
-                </dlp-transition>
+                <dlp-social 
+                    class="fade-in"
+                    v-bind="i18n.contact.social"
+                />
             </div>
         </section>
 
@@ -38,15 +35,14 @@
                 <img src="images/intro/logo-atproperties.svg" class="w-full" alt="@properties" />
             </div>
             <div class="col-span-full text-center">
-                <dlp-transition type="fadeIn">
-                    <dlp-social 
-                        facebook="https://www.facebook.com/thad.wong.54"
-                        instagram="https://www.instagram.com/thadly_wong/"
-                        twitter="https://twitter.com/properties" 
-                        youtube="https://www.youtube.com/user/AtPropertiesTV"
-                        website="https://www.atproperties.com/"
-                    />
-                </dlp-transition>
+                <dlp-social 
+                    class="fade-in"
+                    facebook="https://www.facebook.com/thad.wong.54"
+                    instagram="https://www.instagram.com/thadly_wong/"
+                    twitter="https://twitter.com/properties" 
+                    youtube="https://www.youtube.com/user/AtPropertiesTV"
+                    website="https://www.atproperties.com/"
+                />
             </div>
         </section>
 

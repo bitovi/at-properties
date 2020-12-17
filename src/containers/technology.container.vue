@@ -11,10 +11,8 @@
                 />
             </div>
             <div class="order-2 md:order-1 col-span-4 md:col-span-6 md:col-start-1 lg:col-span-6 lg:col-start-2">
-                <h3 class="head-5 accent--above-left">Cutting Edge Technology</h3>
-                <dlp-transition type="fadeIn ">
-                    <p>Designed, built and supported by @properties’ in-house programming team, pl@tform is the brokerage industry’s premier suite of technology applications for managing all aspects of your real estate transaction. Even before your home is officially listed, @properties brokers market internally to a powerful network of 3,000+ brokers – each with a broad sphere of influence that forms a rich source of prospects, buyers and referrals.</p>
-                </dlp-transition>
+                <h3 class="head-5 accent--above-left fade-in">Cutting Edge Technology</h3>
+                <p class="fade-in">Designed, built and supported by @properties’ in-house programming team, pl@tform is the brokerage industry’s premier suite of technology applications for managing all aspects of your real estate transaction. Even before your home is officially listed, @properties brokers market internally to a powerful network of 3,000+ brokers – each with a broad sphere of influence that forms a rich source of prospects, buyers and referrals.</p>
             </div>
         </div>
     </div>
