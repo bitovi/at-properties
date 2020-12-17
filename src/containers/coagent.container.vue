@@ -1,13 +1,13 @@
 <template>
     <div class="section-content">
         <div class="content-grid">
-            <div class="col-span-full text-center">
+            <div class="col-span-full lg:col-span-14 lg:col-start-2 text-center">
                 <img 
                     class="mx-auto logo--agency fade-in" 
                     :src="`${i18n.logo.sm}`" 
                     :alt="`${i18n.logo.alt}`" />
             </div>
-            <div class="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
+            <div class="col-span-full md:col-span-5 lg:col-start-2 lg:col-span-6">
                 <dlp-figure 
                     :sm="`${i18n.photo.sm}`"
                     :md="`${i18n.photo.md}`"
@@ -18,7 +18,7 @@
                     animate="shrink"
                 />
             </div>
-            <div class="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
+            <div class="col-span-full md:col-span-7 lg:col-start-9 lg:col-span-7">
                 <section>
                     <h1 class="head-1 fade-in">{{i18n.name}}</h1>
                     <h2 class="head-5 accent--above-left fade-in">Co-agent Bio</h2>    

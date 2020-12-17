@@ -205,14 +205,12 @@ Define classes in **src/assets/pages.styles.scss**.
     @apply grid;               /* display: grid; */
     @apply grid-cols-4;        /* grid-template-columns: repeat(4, minmax(0, 1fr)); */
     @apply gap-x-6;            /* column-gap: 24px; */
-    @apply gap-y-8;            /* row-gap: 32px; */
     @media (min-width: theme('screens.md')) {
       @apply grid-cols-12;     /* grid-template-columns: repeat(12, minmax(0, 1fr)); */
       @apply gap-x-8;          /* column-gap: 32px; */
     }
     @media (min-width: theme('screens.lg')) {
       @apply grid-cols-16;     /* grid-template-columns: repeat(16, minmax(0, 1fr)); */
-      @apply gap-x-12;         /* column-gap: 48px; */
     }
     @media (min-width: 1441px) {
       max-width: 1440px;

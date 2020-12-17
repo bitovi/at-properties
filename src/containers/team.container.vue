@@ -1,13 +1,13 @@
 <template>
     <div class="section-content">
         <section id="team-bio" class="content-grid">
-            <div class="col-span-full text-center">
+            <div class="col-span-full lg:col-span-14 lg:col-start-2 text-center">
                 <img 
                     src="images/team/logo-olivia-carson.jpg" 
                     class="mx-auto logo--agency fade-in" 
                     alt="Olivia Carlson" />
             </div>
-            <div class="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
+            <div class="col-span-full md:col-span-5 lg:col-start-2 lg:col-span-6">
                 <dlp-figure 
                     :sm="`${publicPath}images/team/team-sm.jpg`"
                     :lg="`${publicPath}images/team/team-lg.jpg`"
@@ -17,7 +17,7 @@
                     animate="shrink"
                 />
             </div>
-            <div class="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
+            <div class="col-span-full md:col-span-7 lg:col-start-9 lg:col-span-7">
                 <div>
                     <h1 class="head-1 fade-in">{{i18n.name}}</h1>
                     <h2 class="head-5 accent--above-left fade-in">Team Bio</h2>
@@ -35,7 +35,7 @@
         </section>
 
         <section id="team-stats" class="content-grid">
-            <div class="col-span-full lg:col-span-14 lg:col-start-2 my-16">
+            <div class="col-span-full lg:col-span-14 lg:col-start-2">
                 <div class="grid md:grid-cols-3 border-t border-b border-primary-100 divide-y md:divide-y-0 md:divide-x divide-primary-100">
                     <dlp-transition type="fadeIn pop" :delay="0">
                         <div class="p-8 text-center stat">

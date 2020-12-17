@@ -1,13 +1,13 @@
 <template>
     <div class="section-content">
-        <section class="content-grid" aria-label="Agent contact information">
-            <div class="col-span-full text-center">
+        <section class="content-grid pb-12 lg:pb-16" aria-label="Agent contact information">
+            <div class="col-span-full lg:col-span-14 lg:col-start-2 text-center">
                 <img 
                     src="images/agent/emily-sachs-wong.jpeg" 
                     class="mx-auto logo--agency" 
                     alt="" />
             </div>
-            <div class="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
+            <div class="col-span-full md:col-span-5 lg:col-start-2 lg:col-span-6">
                 <div class="sticky top-4">
                     <dlp-figure 
                         :sm="`${publicPath}images/agent/photo-carrie-mccormick-sm.jpg`"
@@ -18,7 +18,7 @@
                     />
                 </div>
             </div>
-            <div class="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
+            <div class="col-span-full md:col-span-7 lg:col-start-9 lg:col-span-7">
                 <h1 class="head-1">Carrie McCormick</h1>
                 <h5 class="head-5 accent">Contact Me Today!</h5>
                 <address class="contact-info">
@@ -33,8 +33,7 @@
             </div>
         </section>
 
-        <section class="content-grid" aria-label="@properties social presence">
-            <div class="col-span-full lg:col-span-14 lg:col-start-2 border-t border-primary-200"></div>
+        <section class="content-grid border-t border-b border-primary-200 py-12 lg:py-16" aria-label="@properties social presence">
             <div class="md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-6">
                 <img src="images/intro/logo-atproperties.svg" class="w-full" alt="@properties" />
             </div>
@@ -49,7 +48,6 @@
                     />
                 </dlp-transition>
             </div>
-            <div class="col-span-full lg:col-span-14 lg:col-start-2 border-t border-primary-200"></div>
         </section>
 
         <section class="content-grid" aria-label="Legal disclaimers">

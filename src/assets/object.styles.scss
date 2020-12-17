@@ -43,11 +43,10 @@
 /* Agency logo */
 .logo--agency {
   max-width: 150px;
-  padding-bottom: 64px;
-  
+  @apply mb-16;              /* margin-bottom: 64px; */
   @media (min-width: theme('screens.lg')) {
     max-width: 200px;
-    padding-bottom: 80px;
+    @apply mb-20;            /* margin-bottom: 80px; */
   }
 }
 

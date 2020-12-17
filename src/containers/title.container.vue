@@ -127,7 +127,7 @@ export default {
 
             this.tl.fromTo(this.$refs.introLogo, {
                 opacity: 0,
-                y: 50
+                // y: 50
             }, {
                 y:0,
                 delay: 0.7, 

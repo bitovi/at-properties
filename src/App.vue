@@ -1,17 +1,20 @@
 <template>
   <div id="app">
-    <DevGrid />
+    <DevGrid /><!-- Remove this for production. Development only to check alignment. -->
+
+    <TitleContainer />
+
+    <Nav />
+
     <main class="dlp-main">
-      <Nav />
-      <TitleContainer />
-      <article id="agent">
+      <article id="agent" class="section-divider">
         <AgentContainer />
       </article>
-      <hr />
-      <article id="co-agent">
+
+      <article id="co-agent" class="section-divider">
         <CoagentContainer />
       </article>
-      <hr />
+
       <article id="team">
         <TeamContainer />
       </article>
@@ -61,21 +64,21 @@
           :backgroundUrl="`images/partners/bg-partners.jpeg`"
           heading="Our Partners" 
           subheading="All working as a team, through every step of the transaction" />
-          <PartnersContainer />
+        <PartnersContainer />
       </article>
 
-      <article id="community">
+      <article id="community" class="section-divider">
         <TitlePage 
           :backgroundUrl="`images/community/bg-community.jpeg`"
           heading="Community" 
           subheading="Community" />
         <CommunityContainer />
       </article>
-      <hr />
-      <footer id="contact">
-        <ContactContainer />
-      </footer>
     </main>
+
+    <footer id="contact">
+      <ContactContainer />
+    </footer>
   </div>
 </template>
 
@@ -84,7 +87,6 @@ import gsap from 'gsap';
 import ScrollTrigger from "gsap/ScrollTrigger"
 import ExpoScaleEase from "gsap/EasePack";
 import MotionPathPlugin from "gsap/MotionPathPlugin";
-
 
 import Nav from './components/nav/nav.component'
 import TitleContainer from './containers/title.container'
@@ -102,7 +104,8 @@ import PartnersContainer from './containers/partner.container'
 
 import TitlePage from './components/title/title.page.vue'
 
-import DevGrid from './components/dev/grids.dev'
+/* Remove this for production. Development only to check alignment. */
+import DevGrid from './components/dev/grids.dev' 
 
 import './assets/base.styles.scss'
 
@@ -151,10 +154,3 @@ export default {
   }
 }
 </script>
-
-<style>
-#app {
-  min-height: 100%;
-  overflow-x: hidden;
-}
-</style>
