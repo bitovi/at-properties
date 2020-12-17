@@ -3,15 +3,17 @@
     <DevGrid />
     <main class="dlp-main">
       <Nav />
+
       <TitleContainer />
-      <article id="agent">
+
+      <article id="agent" class="section-divider">
         <AgentContainer />
       </article>
-      <hr />
-      <article id="co-agent">
+
+      <article id="co-agent" class="section-divider">
         <CoagentContainer />
       </article>
-      <hr />
+
       <article id="team">
         <TeamContainer />
       </article>
@@ -64,14 +66,14 @@
           <PartnersContainer />
       </article>
 
-      <article id="community">
+      <article id="community" class="section-divider">
         <TitlePage 
           :backgroundUrl="`images/community/bg-community.jpeg`"
           heading="Community" 
           subheading="Community" />
         <CommunityContainer />
       </article>
-      <hr />
+
       <footer id="contact">
         <ContactContainer />
       </footer>
