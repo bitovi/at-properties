@@ -1,22 +1,23 @@
 /* Button */
 .btn {
-  @apply border-4;           /* border-width: 4px; */
+  @apply border;             /* border-width: 1px; */
+  @apply inline-block;       /* display: inline-block; */
+  @apply p-1;                /* padding: 4px; */
   @apply transition-all;     /* transition-property: all; */
   @apply duration-500;       /* transition-duration: 500ms; */
-  &:hover { 
-    @apply bg-primary-500;   /* background-color: theme('colors.primary.500'); */
-    @apply text-white;       /* color: white; */
-    outline: 1px solid theme('colors.primary.500');
+  &:active, &:hover { 
+    span {
+      @apply bg-primary-500; /* background-color: theme('colors.primary.500'); */
+      @apply text-white;     /* color: white; */
+    }
   }
-  &:focus, &:active { 
-    @apply bg-primary-500;   /* background-color: theme('colors.primary.500'); */
-    @apply text-white;       /* color: white; */
-    outline: 1px dashed theme('colors.system.focus');
+  &:active, &:hover { 
+    @apply border-primary-500;  /* border-color: theme('colors.primary.500'); */
   }
 }
 /* Button: elements */
 .btn span {
-  @apply inline-block;       /* display: inline-block; */
+  @apply block;              /* display: block; */
 }
 .btn__text {
   @apply text-sm;            /* font-size: theme('fontSize.sm'); */
@@ -26,37 +27,33 @@
   @apply px-3;               /* padding-top/bottom: 12px; */
   @apply py-4;               /* padding-left/right: 16px; */
   @media (min-width: theme('screens.lg')) {
-    & {
-      @apply px-6;           /* padding-left/right: 24px; */
-    }
+    @apply px-6;             /* padding-left/right: 24px; */
   }
 }
-span.btn__icon {
-  @apply fill-current;       /* fill: currentColor; */
+.btn__icon {
   @apply text-base;          /* font-size: theme('fontSize.base'); */
-  @apply block;
   @apply p-3;                /* padding: 12px; */
 }
 /* Button: styles */
 .btn--style-dark {
-  @apply bg-primary-900;     /* background-color: theme('colors.primary.900'); */
-  @apply border-white;       /* border-color: theme('colors.white'); */
-  @apply text-white;         /* color: white; */
-  outline: 1px solid theme('colors.primary.900');
+  @apply border-primary-900;  /* border-color: theme('colors.primary.900'); */
+  span {
+    @apply bg-primary-900;    /* background-color: theme('colors.primary.900'); */
+    @apply text-white;        /* color: white; */
+  }
 }
 .btn--style-light {
-  @apply bg-white;           /* background-color: theme('colors.white'); */
-  @apply border-transparent; /* border-color: theme('colors.transparent'); */
-  @apply text-primary-900;   /* color: theme('colors.primary.900'); */
-  outline: 1px solid theme('colors.white');
+  @apply border-white;        /* border-color: theme('colors.white'); */
+  span {
+    @apply bg-white;          /* background-color: theme('colors.white'); */
+    @apply text-primary-900;  /* color: theme('colors.primary.900'); */
+  }
 }
 /* Button: spacing */
 * + .btn-group {
   @apply mt-8;               /* margin-top: 32px; */
   @media (min-width: theme('screens.lg')) {
-    & {
-      @apply mt-12;          /* margin-top: 48px; */
-    }
+    @apply mt-10;            /* margin-top: 40px; */
   }
 }
 .btn-group {
@@ -65,8 +62,6 @@ span.btn__icon {
   @apply gap-4;              /* gap: 16px; */
   @apply place-items-start;	 /* justify-items: start; */
   @media (min-width: theme('screens.lg')) {
-    & {
-      @apply gap-8;          /* gap: 32px; */
-    }
+    @apply gap-8;            /* gap: 32px; */
   }
 }

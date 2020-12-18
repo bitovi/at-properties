@@ -24,3 +24,15 @@
         @apply text-center;
     }
 }
+
+#marketing-assets, #partners {
+  .dlp-display-card-content {
+    @apply mb-5;
+    @apply py-6;
+    @apply px-12;
+    @media (min-width: theme('screens.lg')) {
+      @apply py-8;
+      @apply px-24;
+    }
+  }
+}
