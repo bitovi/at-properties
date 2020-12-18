@@ -89,7 +89,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="self-end" ref="scrollWrapper" :class="[{ 'hide': isAnimated}]">
+                <a href="#agent" class="self-end" ref="scrollWrapper" :class="[{ 'hide': isAnimated}]">
                     <p class="scroll">Scroll to continue</p>
                     <img 
                         alt="Scroll to continue" 
@@ -98,7 +98,7 @@
                         :class="[{ 'hide': isAnimated}]"
                         role="presentation" 
                         :src="`images/intro/scroll-arrow.svg`">
-                </div>
+                </a>
             </div>
         </div>
     </header>
