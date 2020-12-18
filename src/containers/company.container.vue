@@ -10,14 +10,14 @@
                 />
             </div>
             <div class="col-span-full md:col-span-6 md:col-start-7 lg:col-span-6 lg:col-start-10 self-center">
-                <h3 class="head-5 accent--above-left fade-in">Truly Unique From the Start</h3>
-                <p class="fade-in">It all began in Chicago. With tremendous personal sales success, a longstanding friendship, shared philosophies, and a mutual vision for the future of Chicago Real Estate, Mike and Thad embarked on the most significant venture of their collective careers: the founding of @properties in 2000....It all began in Chicago.</p>
+                <h3 class="head-5 accent--above-left">Truly Unique From the Start</h3>
+                <p>It all began in Chicago. With tremendous personal sales success, a longstanding friendship, shared philosophies, and a mutual vision for the future of Chicago Real Estate, Mike and Thad embarked on the most significant venture of their collective careers: the founding of @properties in 2000....It all began in Chicago.</p>
             </div>
         </section>
 
         <section id="company-timeline" class="content-grid">
             <div class="col-span-full text-center">
-              <h3 class="head-2 accent--below-center">Company Timeline</h3>
+              <h3 class="head-2 accent--below-center accent--mb-0">Company Timeline</h3>
             </div>
             <div class="col-span-full text-center lg:mt-4">
 
@@ -81,12 +81,12 @@
 
         <section id="company-stats" class="content-grid">
           <div class="col-span-full text-center">
-            <h3 class="head-2 accent--below-center">The Numbers Don't Lie</h3>
+            <h3 class="head-2 accent--below-center accent--mb-0">The Numbers Don't Lie</h3>
           </div>
-          <div class="col-span-full text-center lg:mt-4">
+          <div class="col-span-full text-center">
             <dlp-stat-grid />
           </div>
-          <div class="col-span-full text-center mt-8 lg:mt-12">
+          <div class="col-span-full text-center">
                 <dlp-button type="button" class="mx-auto" @click="showModal('LocalStatsModal', $event)">View local stats</dlp-button>
                 
                 <dlp-appear-modal ref="LocalStatsModal">
@@ -100,6 +100,7 @@
         </section>
     </div>
 </template>
+
 <script>
 import Strings from '../assets/strings/company.i18n.json'
 import StatGrid from './statGrid.container'

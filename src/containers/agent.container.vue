@@ -23,7 +23,7 @@
                     
                     <h2 class="head-1 fade-in">{{i18n.name}}</h2>
                     <h3 class="head-5 accent--above-left fade-in">Agent Bio</h3>
-                    <div v-html="i18n.bio.brief" class="fade-in"></div>
+                    <p v-html="i18n.bio.brief" class="fade-in"></p>
                     <div class="btn-group fade-in">
                         <dlp-button type="button" @click="showModal('AgentModal', $event)">Read Full Bio</dlp-button>
                         <dlp-appear-modal ref="AgentModal">
