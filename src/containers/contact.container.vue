@@ -34,7 +34,7 @@
             <div class="col-span-2 col-start-2 md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-6 mb-8">
                 <img src="images/intro/logo-atproperties.svg" class="w-full" alt="@properties" />
             </div>
-            <div class="col-span-full text-center">
+            <div class="col-span-full lg:col-span-14 lg:col-start-2 text-center">
                 <dlp-social 
                     class="fade-in"
                     facebook="https://www.facebook.com/thad.wong.54"

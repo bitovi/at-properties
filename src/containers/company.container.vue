@@ -10,14 +10,14 @@
                 />
             </div>
             <div class="col-span-full md:col-span-6 md:col-start-7 lg:col-span-6 lg:col-start-10 self-center">
-                <h3 class="head-5 accent--above-left fade-in">Truly Unique From the Start</h3>
-                <p class="fade-in">It all began in Chicago. With tremendous personal sales success, a longstanding friendship, shared philosophies, and a mutual vision for the future of Chicago Real Estate, Mike and Thad embarked on the most significant venture of their collective careers: the founding of @properties in 2000....It all began in Chicago.</p>
+                <h3 class="head-5 accent--above-left">Truly Unique From the Start</h3>
+                <p>It all began in Chicago. With tremendous personal sales success, a longstanding friendship, shared philosophies, and a mutual vision for the future of Chicago Real Estate, Mike and Thad embarked on the most significant venture of their collective careers: the founding of @properties in 2000....It all began in Chicago.</p>
             </div>
         </section>
 
         <section id="company-timeline" class="content-grid">
             <div class="col-span-full text-center">
-              <h3 class="head-2 accent--below-center">Company Timeline</h3>
+              <h3 class="head-2 accent--below-center accent--mb-0">Company Timeline</h3>
             </div>
             <div class="col-span-full text-center lg:mt-4">
 
@@ -31,8 +31,7 @@
                             />
                     </swiper-slide>
                     <swiper-slide>
-                        <dlp-timeline-item  
-                            class="md:pt-12"
+                        <dlp-timeline-item
                             date="2001"
                             alt="Cozy kitchen seating"
                             img="images/company/history2.jpg"
@@ -48,8 +47,7 @@
                             />
                     </swiper-slide>
                     <swiper-slide>
-                        <dlp-timeline-item  
-                            class="md:pt-12"
+                        <dlp-timeline-item
                             date="2003"
                             alt="Modern living room"
                             img="images/company/history1.jpg"
@@ -66,7 +64,6 @@
                     </swiper-slide>
                     <swiper-slide>
                         <dlp-timeline-item
-                            class="md:pt-12"
                             date="2005"
                             alt="Man working from home"
                             img="images/company/history3.jpg"
@@ -81,9 +78,9 @@
 
         <section id="company-stats" class="content-grid">
           <div class="col-span-full text-center">
-            <h3 class="head-2 accent--below-center">The Numbers Don't Lie</h3>
+            <h3 class="head-2 accent--below-center accent--mb-0">The Numbers Don't Lie</h3>
           </div>
-          <div class="col-span-full text-center lg:mt-4">
+          <div class="col-span-full text-center">
             <dlp-stat-grid />
           </div>
           <div class="col-span-full text-center">
@@ -100,6 +97,7 @@
         </section>
     </div>
 </template>
+
 <script>
 import Strings from '../assets/strings/company.i18n.json'
 import StatGrid from './statGrid.container'

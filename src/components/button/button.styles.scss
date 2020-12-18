@@ -51,7 +51,7 @@
 }
 /* Button: spacing */
 * + .btn-group {
-  @apply mt-6;               /* margin-top: 24px; */
+  @apply mt-8;               /* margin-top: 32px; */
   @media (min-width: theme('screens.lg')) {
     @apply mt-10;            /* margin-top: 40px; */
   }

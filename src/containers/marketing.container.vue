@@ -2,7 +2,7 @@
     <div class="section-content">
         <section id="marketing-assets" class="content-grid">
             <div class="col-span-full text-center">
-                <h3 class="head-2 accent--below-center">Marketing Assets</h3>
+                <h3 class="head-2 accent--below-center accent--mb-0">Marketing Assets</h3>
             </div>
             <div class="col-span-full text-center lg:mt-4">
 
@@ -42,7 +42,7 @@
 
         <section id="listing-video" class="content-grid">
             <div class="col-span-full text-center">
-                <h3 class="head-2 accent--below-center">Listing Video</h3>
+                <h3 class="head-2 accent--below-center accent--mb-0">Listing Video</h3>
             </div>
             <div class="col-span-2 col-start-2 md:col-span-4 md:col-start-5 lg:col-span-12 lg:col-start-3 lg:mt-4">
                 <dlp-video-card
@@ -53,14 +53,14 @@
                     title="Lorem ipsum dolor sit amet"
                 />
             </div>
-            <div class="col-span-full md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-6 mt-8 lg:mt-12">
+            <div class="col-span-full md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-6">
                 <p class="accent--above-left">At @properties, video is a gamechanging marketing tool and we’re using it to tell your home’s story like never before.</p>
             </div>
         </section>
 
         <section id="signage" class="content-grid">
-            <div class="col-span-full">
-                <h3 class="head-2 accent--below-center text-center">Signage</h3>
+            <div class="col-span-full text-center">
+                <h3 class="head-2 accent--below-center accent--mb-0">Signage</h3>
             </div>
             <div class="col-span-full lg:col-span-10 lg:col-start-4 lg:mt-4">
                 <dlp-video-card
@@ -71,14 +71,14 @@
                     title="Watch"
                 />
             </div>
-            <div class="col-span-full md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-6 mt-8 lg:mt-12">
+            <div class="col-span-full md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-6">
                 <p class="accent--above-left">Bold, Effective, Standing Out from the Rest. That’s how your listing should be seen and there’s no better reinforcement than @properties signage.</p>
             </div>
         </section>
 
         <section id="marketing-plan" class="content-grid">
-            <div class="col-span-full lg:mb-4">
-                <h3 class="head-2 accent--below-center text-center">Tailored Marketing Plan</h3>
+            <div class="col-span-full text-center">
+                <h3 class="head-2 accent--below-center accent--mb-0">Tailored Marketing Plan</h3>
             </div>
             <div class="col-span-full md:col-span-6 lg:col-span-7 lg:col-start-2">
                 <dlp-figure

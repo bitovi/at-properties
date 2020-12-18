@@ -74,7 +74,7 @@ export default {
             type: String,
             default: null,
             validator: function(val) {
-                return ['shrink', null].indexOf(val) !== 1
+                return ['shrink', null].indexOf(val) !== -1
             }
         }
     },
