@@ -119,7 +119,7 @@ export default {
             ScrollTrigger.create({
                 trigger: this.$refs.tInner,
                 start: "top bottom",
-                onLeaveBack: () => anim.pause(0)
+                onLeaveBack: () => anim.pause( )
             });
         })
     },
