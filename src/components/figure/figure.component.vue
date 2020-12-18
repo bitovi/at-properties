@@ -111,12 +111,6 @@ export default {
                 onEnter: () => fade.play()
             });
             
-            ScrollTrigger.create({
-                trigger: this.$refs.figWrapper,
-                start: "top bottom",
-                onLeaveBack: () => fade.pause(0)
-            });
-
             gsap.fromTo(this.getCurrentSrc(), {
                 scale: 1.1,
             },
