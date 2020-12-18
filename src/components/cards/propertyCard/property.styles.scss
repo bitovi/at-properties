@@ -4,11 +4,11 @@
     @apply divide-y;           /* Place 1px horizontal dividers between items */
     @apply divide-primary-100; /* Divider color is light gray (Primary 100) */
     @apply mt-6;               /* margin-top: 24px; */
-    @apply mb-8;               /* margin-top: 32px; */
+    // @apply mb-8;               /* margin-top: 32px; */
     @media (min-width: theme('screens.lg')) {
         & {
             @apply mt-8;       /* margin-top: 32px; */
-            @apply mb-12;      /* margin-top: 48px; */
+            // @apply mb-12;      /* margin-top: 48px; */
         }
     }
     & > :first-child {
