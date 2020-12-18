@@ -1,0 +1,79 @@
+.dlp-timeline {
+    @apply relative;
+
+    .swiper-slide {
+        @apply mr-12;
+        width: 239px;
+
+        @media (min-width: theme('screens.md')) {
+            width: 274px;
+        }
+
+        @media (min-width: theme('screens.lg')) {
+            width: 496px;
+        }
+    }
+
+    .dlp-timeline--line {
+        @apply absolute;
+        bottom: 52px;
+        height: 1px;
+        width: 500%;
+        margin-left: -30px;
+        margin-right: -30px;
+        border-bottom: 1px dotted theme('colors.neutral.300');
+    }
+
+    .dlp-timeline-item {
+        @apply flex;
+        @apply flex-col;
+
+        @media (min-width: theme('screens.md')) {
+            min-height: 460px;
+        }
+        @media (min-width: theme('screens.lg')) {
+            min-height: 650px;
+        }
+    }
+
+    .dlp-timeline-item--content {
+        @apply mb-4;
+    }
+
+    .dlp-timeline-item--img {
+        height: 183px;
+        @media (min-width: theme('screens.lg')) {
+            height: 332px;
+        }
+    }
+
+    .dlp-timeline-item--time {
+        @apply flex;
+        @apply flex-col;
+        @apply items-center;
+        flex-grow: 1;
+        height: 100%;
+    }
+
+    .dlp-timeline-item--pointer-line {
+        width: 1px;
+        flex-grow: 1;
+        border-left: 1px solid theme('colors.secondary.500');
+        align-self: center;
+    }
+
+    .dlp-timeline-item--pointer {
+        width: 24px;
+        height: 24px;
+        background: theme('colors.secondary.500');
+        border-radius: 16px;
+        border: 4px solid theme('colors.white');
+        box-shadow: 0 0 0 1px theme('colors.secondary.500');
+    }
+
+    .dlp-timeline-item--date {
+        color: theme('colors.secondary.500');
+        font-weight: 500;
+        margin-top: 16px;
+    }
+}

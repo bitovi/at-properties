@@ -8,6 +8,8 @@ import TitlePage from './title/title.page'
 import Social from './social/social.component'
 import Carousel from './carousel/carousel.component.vue'
 import FlatScroll from './flatScroll/flatScroll.component.vue'
+import Timeline from './timeline/timeline.component.vue'
+import TimelineItem from './timeline/timelineItem.component.vue'
 
 import Transition from './transition/transition.component.vue'
 
@@ -50,10 +52,12 @@ Vue.component(Social.name, Social)
 
 
 Vue.component(Carousel.name, Carousel)
+Vue.component(FlatScroll.name, FlatScroll)
+Vue.component(Timeline.name, Timeline)
+Vue.component(TimelineItem.name, TimelineItem)
 
 Vue.component(Transition.name, Transition)
 
-Vue.component(FlatScroll.name, FlatScroll)
 
 
 export {
@@ -70,6 +74,8 @@ export {
     VideoModal,
     BioCard,
     Carousel,
+    Timeline,
+    TimelineItem,
     Transition,
     FlatScroll,
     VideoCard
