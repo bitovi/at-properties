@@ -16,42 +16,32 @@
                 <div ref="navUlWrapper" class="text-center">
                     <h2 ref="navUlHeader" class="head-1 mb-6">Menu</h2>
                     <ul class="dlp-nav-ul" ref="navUl">
-                        <li >
-                            <a 
-                                @mouseover="mouseOver"
-                                @mouseleave="mounseOut"
+                        <li>
+                            <a
                                 class="dlp-nav-link scrollactive-item" 
                                 href="#agent" 
                                 @click="clickNav">Agent Profile</a>
                         </li>
                         <li>
-                            <a 
-                                @mouseover="mouseOver"
-                                @mouseleave="mounseOut"
+                            <a
                                 class="dlp-nav-link scrollactive-item" 
                                 href="#company" 
                                 @click="clickNav">Company Profile</a>
                         </li>
                         <li >
-                            <a 
-                                @mouseover="mouseOver"
-                                @mouseleave="mounseOut"
+                            <a
                                 class="dlp-nav-link scrollactive-item" 
                                 href="#marketing" 
                                 @click="clickNav">Marketing Plan</a>
                         </li>
                         <li>
-                            <a 
-                                @mouseover="mouseOver"
-                                @mouseleave="mounseOut"
+                            <a
                                 class="dlp-nav-link scrollactive-item" 
                                 href="#selling" 
                                 @click="clickNav">Selling Your Home</a>
                         </li>
                         <li>
-                            <a 
-                                @mouseover="mouseOver"
-                                @mouseleave="mounseOut"
+                            <a
                                 class="dlp-nav-link scrollactive-item" 
                                 href="#partners" 
                                 @click="clickNav">Partners</a>
@@ -185,17 +175,6 @@ export default {
         getWidth(target) {
             const activeState = target.getBoundingClientRect()
             return `${activeState.width}px`
-        },
-        //on hover, highlight the current target
-        mouseOver(evt) {
-            gsap.to(this.$refs.highlight, {
-                width: this.getWidth(evt.target),
-                left: this.getLeft(evt.target)
-            })
-        },
-        //on leave, wait a moment before returning
-        mounseOut(){
-            delay(this.changeHighlight, 200)
         },
         changeHighlight() {
             gsap.to(this.$refs.highlight, {
