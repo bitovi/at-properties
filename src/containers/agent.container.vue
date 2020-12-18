@@ -3,7 +3,7 @@
         <div class="content-grid">
             <div class="col-span-full lg:col-span-14 lg:col-start-2 text-center">
                 <img
-                    class="mx-auto logo--agency"
+                    class="mx-auto logo--agency fade-in"
                     :alt="`${i18n.logo.alt}`" 
                     :src="`${i18n.logo.sm}`"/>
             </div>

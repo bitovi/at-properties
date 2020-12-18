@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import gsap from 'gsap';
+import gsap from 'gsap'
 
 export default {
     name: 'dlp-title-page',
@@ -35,37 +35,31 @@ export default {
         const { titleWrapper, titleImg, titleText } = this.$refs
 
         this.tl = gsap.timeline({
-            scrollTrigger: {
-                trigger: titleWrapper,
-                start: "50% center",
-                end: "bottom bottom", 
-                toggleActions: "play none none reverse"
-            }
+            paused: true
         })
 
-        this.tl.to(titleImg, 0.7, {
-            opacity: 0.25,
-        })
-
-        this.tl.to(titleImg, 1.3, {
+        this.tl.to(titleImg, {
             scrollTrigger: {
-                trigger: titleWrapper,
-                start: "top bottom",
+                trigger: titleImg,
+                start: "top top",
                 end: "bottom top", 
-                scrub: true, 
-                // markers: true,
-                toggleActions: "play none none reverse"
+                scrub: 1
             },
-            scale: 1.3
-        })
-
-        this.tl.fromTo(titleText, 0.7, {
-            opacity: 0,
-            y: 50
-        }, {
-            opacity: 1,
-            y: 0
-        })
+            opacity: 0.25,
+            scale: 1.3,
+        });
+        this.tl.to(titleText, {
+            scrollTrigger: {
+                trigger: titleWrapper,
+                start: "top top",
+                end: "bottom top", 
+                scrub: 1,
+                pin: true,
+                once: true,
+            },
+            opacity: 1, 
+            y: 0,
+        });
     }
 }
 </script>
