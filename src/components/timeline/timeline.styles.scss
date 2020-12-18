@@ -27,7 +27,13 @@
     .dlp-timeline-item {
         @apply flex;
         @apply flex-col;
-        min-height: 650px;
+
+        @media (min-width: theme('screens.md')) {
+            min-height: 460px;
+        }
+        @media (min-width: theme('screens.lg')) {
+            min-height: 650px;
+        }
     }
 
     .dlp-timeline-item--content {
