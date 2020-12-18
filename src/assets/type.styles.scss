@@ -2,7 +2,7 @@
 .font-primary {
   @apply font-light;         /* font-weight: 300; */
 }
-.font-secondary {
+.font-secondary, strong {
   @apply font-medium;        /* font-weight: 500; */
 }
 
@@ -125,7 +125,4 @@ button:focus {
 
 hr {
   border-color: theme('colors.primary.100');
-}
-strong {
-  font-weight: 500;
-}  */
+} */
