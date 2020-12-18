@@ -44,7 +44,7 @@
             <div class="col-span-full text-center">
                 <h3 class="head-2 accent--below-center accent--mb-0">Listing Video</h3>
             </div>
-            <div class="col-span-2 col-start-2 md:col-span-4 md:col-start-5 lg:col-span-12 lg:col-start-3 lg:mt-4">
+            <div class="col-span-full lg:col-span-12 lg:col-start-3 lg:mt-4">
                 <dlp-video-card
                     :sm="`images/community/video-thumb.jpg`"
                     alt="Listing Video"
