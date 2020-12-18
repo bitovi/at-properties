@@ -93,7 +93,7 @@
                 <div class="btn-group fade-in">
                     <dlp-button type="button" @click="showModal('MarketingPlanModal', $event)">View Custom Marketing Plan</dlp-button>
                     <dlp-appear-modal ref="MarketingPlanModal">
-                        <h3 class="head-5 accent--above-left mb-8">Luxury Stats</h3>
+                        <h3 class="head-5 accent--above-left mb-8">Custom Marketing Plan</h3>
                         <p>Coming soon...</p>
                     </dlp-appear-modal>
                 </div>

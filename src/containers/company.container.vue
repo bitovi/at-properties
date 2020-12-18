@@ -86,7 +86,7 @@
           <div class="col-span-full text-center lg:mt-4">
             <dlp-stat-grid />
           </div>
-          <div class="col-span-full text-center mt-8 lg:mt-12">
+          <div class="col-span-full text-center">
                 <dlp-button type="button" class="mx-auto" @click="showModal('LocalStatsModal', $event)">View local stats</dlp-button>
                 
                 <dlp-appear-modal ref="LocalStatsModal">

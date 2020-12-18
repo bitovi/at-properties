@@ -6,6 +6,7 @@
     @apply h-screen;
     z-index: 9998;
     overflow-x: auto;
+    @apply text-left;
 }
 
 .dlp-slide-in {
