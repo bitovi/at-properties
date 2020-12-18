@@ -162,7 +162,7 @@ export default {
             if(!currentItem) return
             this.elActive = currentItem
             if(!this.isScrolling){
-                delay(this.changeHighlight, 400)
+                delay(this.changeHighlight, 1000)
             }
         },
         //what is the left offest including the container offset?
