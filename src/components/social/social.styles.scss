@@ -1,13 +1,21 @@
 .dlp-social {
   a {
-    @apply inline-block;
-    @apply mr-8;
+    @apply inline-block;       /* display: inline-block; */
+    @apply mr-6;               /* margin-right: 24px; */
     padding: 4px;
+    @apply duration-500;       /* transition-duration: 500ms; */
+    @media (min-width: theme('screens.md')) {
+      @apply mr-8;             /* margin-right: 32px; */
+    }
   }
   svg {
-    width: 32px;
-    height: 32px;
-    color: theme('colors.primary.900');
+    @apply text-primary-900;   /* color: theme('colors.primary.900'); */
+    @apply w-6;                /* width: 24px; */
+    @apply h-6;                /* height: 24px; */
+    @media (min-width: theme('screens.md')) {
+      @apply w-8;              /* width: 32px; */
+      @apply h-8;              /* height: 32px; */
+    }
   }
 }
 
