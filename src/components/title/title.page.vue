@@ -55,7 +55,6 @@ export default {
                 end: "bottom top", 
                 scrub: 1,
                 pin: true,
-                once: true,
             },
             opacity: 1, 
             y: 0,
