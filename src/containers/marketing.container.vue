@@ -22,7 +22,7 @@
                     </swiper-slide>
                     <swiper-slide>
                         <dlp-display-card 
-                            source="images/marketing/marketing-4.jpg"
+                            source="images/marketing/marketing-4.png"
                             caption="Social Media"/>
                     </swiper-slide>
                     <swiper-slide>
@@ -32,7 +32,7 @@
                     </swiper-slide>
                     <swiper-slide>
                         <dlp-display-card
-                            source="images/marketing/marketing-5.png"
+                            source="images/marketing/marketing-5.jpg"
                             caption="Magazine Feature"/>
                     </swiper-slide>
                 </dlp-carousel>
