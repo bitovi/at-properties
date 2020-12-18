@@ -89,7 +89,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="#agent" class="self-end" ref="scrollWrapper" :class="[{ 'hide': isAnimated}]">
+                <a href="#agent" class="self-end scroll-wrapper" ref="scrollWrapper" :class="[{ 'hide': isAnimated}]">
                     <p class="scroll">Scroll to continue</p>
                     <img 
                         alt="Scroll to continue" 
@@ -234,6 +234,10 @@ export default {
 #pt-logo {
   margin: 0 auto;
   width: 100%;
+}
+
+.scroll-wrapper {
+    text-decoration: none;
 }
 
 p.scroll {
