@@ -12,6 +12,8 @@
 
 <script>
 import gsap from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { ExpoScaleEase } from "gsap/EasePack"
 
 export default {
     name: 'dlp-title-page',
@@ -34,30 +36,40 @@ export default {
     mounted() {
         const { titleWrapper, titleImg, titleText } = this.$refs
 
-        this.tl = gsap.timeline({
-            paused: true
-        })
-
-        this.tl.to(titleImg, {
+        gsap.to(titleImg, {
             scrollTrigger: {
-                trigger: titleImg,
-                start: "top top",
+                trigger: titleWrapper,
+                id: "intro-image-" + this._uid,
+                start: "top bottom",
                 end: "bottom top", 
-                scrub: 1
+                scrub: 1,
             },
-            opacity: 0.25,
             scale: 1.3,
-        });
-        this.tl.to(titleText, {
+            ease: ExpoScaleEase.config(1, 1.3)
+        })
+      
+        this.tl = gsap.timeline({
             scrollTrigger: {
                 trigger: titleWrapper,
                 start: "top top",
-                end: "bottom top", 
+                end: "bottom top",
                 scrub: 1,
                 pin: true,
+                onLeave: (self) => {
+                    self.kill()
+                    ScrollTrigger.getById("intro-image-" + this._uid).kill()
+                    gsap.set(titleImg, { scale: 1.3, opacity: 0.25 })
+                    gsap.set(titleText, { opacity: 1, y: 0 })
+                    ScrollTrigger.refresh()
+                }
             },
+        });
+        
+        this.tl.to(titleImg, {
+            opacity: 0.25
+        }).to(titleText, {
             opacity: 1, 
-            y: 0,
+            y: 0 
         });
     }
 }
