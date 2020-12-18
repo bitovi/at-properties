@@ -1,5 +1,4 @@
 import Vue from 'vue'
-import ScrollNotify from "./scrollNotify/scrollNotify.component"
 import Button from './button/button.component'
 import Nav from './nav/nav.component'
 import Figure from './figure/figure.component'
@@ -40,7 +39,6 @@ Vue.component(VideoCard.name, VideoCard)
 Vue.component(PropertyCard.name, PropertyCard)
 Vue.component(TestimonialCard.name, TestimonialCard)
 
-Vue.component(ScrollNotify.name, ScrollNotify)
 Vue.component(Button.name, Button)
 Vue.component(Nav.name, Nav)
 Vue.component(Figure.name, Figure)
@@ -61,7 +59,6 @@ Vue.component(Transition.name, Transition)
 
 
 export {
-    ScrollNotify,
     Button,
     Nav,
     Figure,
