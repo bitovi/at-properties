@@ -221,12 +221,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-/* Fill entire screen, nav appears from below on scroll */
-.dlp-title-page {
-    height: 100vh;
-    z-index: 1000;
-}
-
 .hide {
     opacity: 0;
 }
@@ -266,7 +260,6 @@ p.scroll {
   }
   
   .intro-image {
-    // transform: scale(1.5);
     object-fit: cover;
     object-position: center center;
     opacity: 0.5;
@@ -358,9 +351,5 @@ p.scroll {
     @media (min-width: theme('screens.md')) {
         width: 30vw;
     }
-
-    /* @media (min-width: theme('screens.lg')) {
-        width: 20vw;
-    } */
 }
 </style>
