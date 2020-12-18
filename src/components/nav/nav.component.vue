@@ -102,7 +102,6 @@
 <script>
 import gsap from 'gsap'
 import { delay, debounce, initial } from 'lodash'
-// import isMobile from 'is-mobile'
 
 export default {
     name: 'dlp-nav-component',
@@ -129,7 +128,7 @@ export default {
                 duration: 0.5,
                 opacity: 0
             })
-            //clip reveal each nav item
+            // reveal each nav item
             openTimeline.fromTo(initial(this.$refs.navUl.children), {
                 opacity: 0
             }, {

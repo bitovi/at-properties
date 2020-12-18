@@ -95,6 +95,7 @@
     }
 
     .dlp-nav-ul {
+        padding-bottom: 2px;
         li {
             @apply text-center;
             padding-top: 3px;
@@ -161,11 +162,6 @@
             background: none theme('colors.secondary.500');
         }
 
-        .dlp-nav-ul {
-            li {
-                height: 48px;
-            }
-        }
     }
 }
 
