@@ -3,7 +3,7 @@
         <section id="company-origin" class="content-grid">
             <div class="col-span-full md:col-span-6 lg:col-span-7 lg:col-start-2">
                 <dlp-figure
-                    :lg="`${publicPath}images/company/train-lg.jpg`"
+                    :lg="`images/company/train-lg.jpg`"
                     alt="Aerial view of an elevated train on a curved track"
                     ar="ar ar--5-4"
                     animate="shrink"
@@ -20,59 +20,61 @@
               <h3 class="head-2 accent--below-center">Company Timeline</h3>
             </div>
             <div class="col-span-full text-center lg:mt-4">
+
+                <dlp-timeline>
+                    <swiper-slide>
+                        <dlp-timeline-item  
+                            date="2000"
+                            alt="Modern living room"
+                            img="images/company/history1.jpg"
+                            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet quam augue massa."
+                            />
+                    </swiper-slide>
+                    <swiper-slide>
+                        <dlp-timeline-item  
+                            class="md:pt-12"
+                            date="2001"
+                            alt="Cozy kitchen seating"
+                            img="images/company/history2.jpg"
+                            desc="Aliquet quam augue massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                            />
+                    </swiper-slide>
+                    <swiper-slide>
+                        <dlp-timeline-item  
+                            date="2002"
+                            alt="Man working from home"
+                            img="images/company/history3.jpg"
+                            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet quam augue massa."
+                            />
+                    </swiper-slide>
+                    <swiper-slide>
+                        <dlp-timeline-item  
+                            class="md:pt-12"
+                            date="2003"
+                            alt="Modern living room"
+                            img="images/company/history1.jpg"
+                            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet quam augue massa."
+                            />
+                    </swiper-slide>
+                    <swiper-slide>
+                        <dlp-timeline-item  
+                            date="2004"
+                            alt="Cozy kitchen seating"
+                            img="images/company/history2.jpg"
+                            desc="Aliquet quam augue massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                            />
+                    </swiper-slide>
+                    <swiper-slide>
+                        <dlp-timeline-item
+                            class="md:pt-12"
+                            date="2005"
+                            alt="Man working from home"
+                            img="images/company/history3.jpg"
+                            desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet quam augue massa."
+                            />
+                    </swiper-slide>
+                </dlp-timeline>
                 
-                <dlp-flat-scroll class="flat-scroll--company">
-                    <div>
-                        <figure>
-                            <picture class="ar ar--4-3">
-                                <img src="https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8bGl2aW5nJTIwcm9vbXxlbnwwfDB8MHw%3D&auto=format&fit=crop&w=800&q=60" alt="Modern living room" />
-                            </picture>
-                            <figcaption>
-                                <p class="accent--above-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet quam augue massa.</p>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div>
-                        <figure>
-                            <picture class="ar ar--4-3">
-                                <img src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8a2l0Y2hlbnxlbnwwfDB8MHw%3D&auto=format&fit=crop&w=800&q=60" alt="Cozy kitchen seating" />
-                            </picture>
-                            <figcaption>
-                                <p class="accent--above-center">Aliquet quam augue massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div>
-                        <figure>
-                            <picture class="ar ar--4-3">
-                                <img src="https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8YmVkcm9vbXxlbnwwfDB8MHw%3D&auto=format&fit=crop&w=800&q=60" alt="Neutral toned bedroom" />
-                            </picture>
-                            <figcaption>
-                                <p class="accent--above-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet quam augue massa.</p>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div>
-                        <figure>
-                            <picture class="ar ar--4-3">
-                                <img src="https://images.unsplash.com/photo-1584722065001-ee7f49d903b1?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTZ8fGhvbWUlMjBvZmZpY2V8ZW58MHwwfDB8&auto=format&fit=crop&w=800&q=60" alt="Man working from home" />
-                            </picture>
-                            <figcaption>
-                                <p class="accent--above-center">Aliquet quam augue massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                            </figcaption>
-                        </figure>
-                    </div>
-                    <div>
-                        <figure>
-                            <picture class="ar ar--4-3">
-                                <img src="https://images.unsplash.com/photo-1560449752-3fd4bdbe7df0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8cmVhbHRvcnxlbnwwfDB8MHw%3D&auto=format&fit=crop&w=800&q=60" alt="Living room" />
-                            </picture>
-                            <figcaption>
-                                <p class="accent--above-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet quam augue massa.</p>
-                            </figcaption>
-                        </figure>
-                    </div>
-                </dlp-flat-scroll>
 
             </div>
         </section>
@@ -92,7 +94,7 @@
                     <img
                         class=""
                         :alt="`@properties sells 25% of luxury real estate in Chicago`" 
-                        :src="`${publicPath}images/company/local-stats.png`">
+                        :src="`images/company/local-stats.png`">
                 </dlp-appear-modal>
           </div>
         </section>
