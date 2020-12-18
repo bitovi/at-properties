@@ -25,7 +25,7 @@ body {
 
 #app {
   @apply min-h-full;         /* min-height: 100%; */
-  @apply overflow-x-hidden;  /* overflow-x: hidden; */
+  //@apply overflow-x-hidden;  /* overflow-x: hidden; */
 }
 
 /* Skip link */
