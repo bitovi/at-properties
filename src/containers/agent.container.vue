@@ -76,10 +76,9 @@
                     <div class="btn-group">
                         <dlp-button type="button" class="fade-in" @click="showModal('SalesModal', $event)">View more sales</dlp-button>
                         <dlp-appear-modal ref="SalesModal">
-                            <h3 class="head-5 accent--above-left mb-8 fade-in">Recent Sales</h3>
+                            <h3 class="head-5 accent--above-left mb-8">Recent Sales</h3>
                             <div class="dlp-property-wrapper">
                                 <dlp-property
-                                    class="fade-in"
                                     v-for="sale in i18n.sales" 
                                     v-bind:key="sale.id" 
                                     :sm="sale.photo.sm" 

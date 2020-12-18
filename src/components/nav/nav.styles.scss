@@ -79,7 +79,7 @@
                 height: 90%;
                 height: calc(100vh - 48px);
                 background: theme('colors.white');
-                padding: theme('spacing.6') theme('spacing.12') 0;
+                padding: theme('spacing.6') theme('spacing.6') 0;
             }
 
             .dlp-nav-link {
@@ -97,9 +97,6 @@
     .dlp-nav-ul {
         li {
             @apply text-center;
-            // Give the :after psydo space
-            // without this, the links move around on hover
-            height: 48px;
             padding-top: 3px;
         }
     }
@@ -162,6 +159,12 @@
             top: 32px;
             left: 0px;
             background: none theme('colors.secondary.500');
+        }
+
+        .dlp-nav-ul {
+            li {
+                height: 48px;
+            }
         }
     }
 }
