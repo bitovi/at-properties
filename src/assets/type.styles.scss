@@ -96,33 +96,3 @@ a:focus, a:hover, a:active {
     @apply mt-4;             /* margin-top: 16px; */
   }
 }
-
-/* Links
-a {
-  font-size: theme('fontSize.base');
-  &:link,
-  &:visited {
-      text-decoration: underline;
-      color: theme('colors.primary.900');
-  }
-
-  &:hover,
-  &:active {
-      color: theme('colors.primary.500');
-      text-decoration: none;
-  }
-
-  @media (min-width: theme('screens.md')) {  
-      font-size: theme('fontSize.lg');
-  }
-}
-a:focus,
-button:focus {
-  // outline-color: theme('colors.secondary.500');
-  outline-style: dashed;
-  outline-width: thin;
-} 
-
-hr {
-  border-color: theme('colors.primary.100');
-} */
