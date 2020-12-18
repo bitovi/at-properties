@@ -17,7 +17,6 @@
                     </swiper-slide>
                     <swiper-slide>
                         <dlp-display-card
-                            class="pt-16"
                             source="images/marketing/marketing-2.png"
                             caption="Yard Signs"/>
                     </swiper-slide>
@@ -28,7 +27,6 @@
                     </swiper-slide>
                     <swiper-slide>
                         <dlp-display-card 
-                            class="pt-16"
                             source="images/marketing/marketing-1.jpg"
                             caption="Flyers"/>
                     </swiper-slide>
