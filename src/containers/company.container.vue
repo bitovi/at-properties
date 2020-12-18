@@ -31,8 +31,7 @@
                             />
                     </swiper-slide>
                     <swiper-slide>
-                        <dlp-timeline-item  
-                            class="md:pt-12"
+                        <dlp-timeline-item
                             date="2001"
                             alt="Cozy kitchen seating"
                             img="images/company/history2.jpg"
@@ -48,8 +47,7 @@
                             />
                     </swiper-slide>
                     <swiper-slide>
-                        <dlp-timeline-item  
-                            class="md:pt-12"
+                        <dlp-timeline-item
                             date="2003"
                             alt="Modern living room"
                             img="images/company/history1.jpg"
@@ -66,7 +64,6 @@
                     </swiper-slide>
                     <swiper-slide>
                         <dlp-timeline-item
-                            class="md:pt-12"
                             date="2005"
                             alt="Man working from home"
                             img="images/company/history3.jpg"
