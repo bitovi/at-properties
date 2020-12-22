@@ -25,7 +25,7 @@
                     </svg>
                 </dlp-button>
             </nav>
-            <div class="dlp-slide-in-content" >
+            <div class="dlp-slide-in-content" ref="modalContent">
                 <slot />
             </div>
         </div>  
@@ -74,9 +74,8 @@ export default {
                     this.bgOpen()
                     this.slideOpen()
                 }
+                disableBodyScroll(this.$refs.modalContent)
             })
-            
-            disableBodyScroll(this.$el)
         },
         slideOpen() {
             gsap.to(this.$refs.slideInner, {
