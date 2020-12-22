@@ -25,13 +25,13 @@
                     <p v-html="i18n.bio.brief" class="fade-in"></p>
                     <div class="btn-group fade-in">
                         <dlp-button type="button" @click="showModal('CoagentModal', $event)">Read Full Bio</dlp-button>
+                        <dlp-button type="button" @click="showModal('AgentVideo', $event)">Watch Agent Video</dlp-button>
+                    </div>
                         <dlp-appear-modal ref="CoagentModal">
                             <h3 class="head-5 accent--above-left mb-8">Agent Bio</h3>
                             <div v-html="i18n.bio.full"></div>
                         </dlp-appear-modal>
-                        <dlp-button type="button" @click="showModal('AgentVideo', $event)">Watch Agent Video</dlp-button>
                         <dlp-video-modal ref="AgentVideo" videoId="7ZMbcaCJzdg" :caption="i18n.name"/>
-                    </div>
                 </section>
             </div>
         </div>

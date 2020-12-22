@@ -26,13 +26,13 @@
                     <p v-html="i18n.bio.brief" class="fade-in"></p>
                     <div class="btn-group fade-in">
                         <dlp-button type="button" @click="showModal('AgentModal', $event)">Read Full Bio</dlp-button>
-                        <dlp-appear-modal ref="AgentModal">
-                            <h3 class="head-5 accent--above-left mb-8">Agent Bio</h3>
-                            <div v-html="i18n.bio.full"></div>
-                        </dlp-appear-modal>
                         <dlp-button type="button" @click="showModal('AgentVideo', $event)">Watch Agent Video</dlp-button>
-                        <dlp-video-modal ref="AgentVideo" videoId="U0DYr9w9SX0" :caption="i18n.name"/>
                     </div>
+                    <dlp-appear-modal ref="AgentModal">
+                        <h3 class="head-5 accent--above-left mb-8">Agent Bio</h3>
+                        <div v-html="i18n.bio.full"></div>
+                    </dlp-appear-modal>
+                    <dlp-video-modal ref="AgentVideo" videoId="U0DYr9w9SX0" :caption="i18n.name"/>
                 </section>
 
                 <section id="agent-testimonials" class="">

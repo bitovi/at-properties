@@ -24,12 +24,12 @@
                     <p class="fade-in" v-html="i18n.bio.brief"></p>
                     <div class="btn-group fade-in">
                         <dlp-button type="button" @click="showModal('AgentModal', $event)">Read Full Bio</dlp-button>
-                        <dlp-appear-modal ref="AgentModal">
-                            <div v-html="i18n.bio.full"></div>
-                        </dlp-appear-modal>                        
                         <dlp-button type="button" @click="showModal('TeamVideo', $event)">Watch Team Video</dlp-button>
-                        <dlp-video-modal ref="TeamVideo" videoId="jsNh7ov4uD4" :caption="i18n.name"/>
                     </div>
+                    <dlp-appear-modal ref="AgentModal">
+                        <div v-html="i18n.bio.full"></div>
+                    </dlp-appear-modal>                        
+                    <dlp-video-modal ref="TeamVideo" videoId="jsNh7ov4uD4" :caption="i18n.name"/>
                 </div>
             </div>
         </section>
