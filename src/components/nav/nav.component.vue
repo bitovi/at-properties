@@ -110,7 +110,6 @@ export default {
                 top: window.innerHeight
             }, {
                 duration: 1,
-                ease: "slow(0.4, 0.8, false)",
                 top: 0,
             })
             //fade in header
