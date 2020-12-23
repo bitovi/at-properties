@@ -92,11 +92,11 @@
                 <p class="accent--above-left fade-in">A fully integrated marketing plan is key to getting your home sold quickly and for top dollar. No home is the same, so we provide a customized marketing plan tailored for your home.</p>
                 <div class="btn-group fade-in">
                     <dlp-button type="button" @click="showModal('MarketingPlanModal', $event)">View Custom Marketing Plan</dlp-button>
-                    <dlp-appear-modal ref="MarketingPlanModal">
-                        <h3 class="head-5 accent--above-left mb-8">Custom Marketing Plan</h3>
-                        <p>Coming soon...</p>
-                    </dlp-appear-modal>
                 </div>
+                <dlp-appear-modal ref="MarketingPlanModal">
+                    <h3 class="head-5 accent--above-left mb-8">Custom Marketing Plan</h3>
+                    <p>Coming soon...</p>
+                </dlp-appear-modal>
             </div>
         </section>
     </div>

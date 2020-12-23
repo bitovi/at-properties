@@ -3,6 +3,7 @@
         active-class="isActive"
         :offset="0"
         :modifyUrl="false"
+        :clickToScroll="false"
         v-on:itemchanged="onItemChanged"
         class="dlp-nav" 
         :class="{ isOpen: isOpen}" 
@@ -99,7 +100,8 @@ export default {
         isMounted: false,
         isOpen: false,
         isScrolling: false,
-        elActive: null
+        elActive: null,
+        scrollOffset: document.body.clientHeight * -1
     }),
     methods: {
         open() {
@@ -110,7 +112,6 @@ export default {
                 top: window.innerHeight
             }, {
                 duration: 1,
-                ease: "slow(0.4, 0.8, false)",
                 top: 0,
             })
             //fade in header
@@ -153,6 +154,9 @@ export default {
         //onClick of a link in desktop, control the highlight
         clickNav(evt) {
             this.elActive = evt.target
+
+            const target = this.elActive.getAttribute('href')
+            document.querySelector(target).scrollIntoView(true)
             if(this.isOpen){ this.close() }
             this.changeHighlight()
         },

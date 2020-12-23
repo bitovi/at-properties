@@ -14,8 +14,8 @@
                 <p class="fade-in">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque gravida ac, diam malesuada. Fringilla arcu fusce tempus sodales velit id. Tristique sed nec dignissim imperdiet. Id eu cursus et parturient suscipit.</p>
                 <div class="btn-group fade-in">
                     <dlp-button type="button" @click="showModal('ReachVideo', $event)">Our Global Reach</dlp-button>
-                    <dlp-video-modal ref="ReachVideo" videoId="DgZb_NRk-Bk" />
                 </div>
+                <dlp-video-modal ref="ReachVideo" videoId="DgZb_NRk-Bk" />
             </div>
         </section>
 
@@ -33,11 +33,11 @@
                 <p class="fade-in">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Scelerisque gravida ac, diam malesuada. Fringilla arcu fusce tempus sodales velit id. Tristique sed nec dignissim imperdiet. Id eu cursus et parturient suscipit.</p>
                 <div class="btn-group fade-in">
                     <dlp-button type="button" @click="showModal('LuxaryStatsModal', $event)">View Luxury Stats</dlp-button>
-                    <dlp-appear-modal ref="LuxaryStatsModal">
-                        <h3 class="head-5 accent--above-left mb-8">Luxury Stats</h3>
-                        <p>Coming soon...</p>
-                    </dlp-appear-modal>
                 </div>
+                <dlp-appear-modal ref="LuxaryStatsModal">
+                    <h3 class="head-5 accent--above-left mb-8">Luxury Stats</h3>
+                    <p>Coming soon...</p>
+                </dlp-appear-modal>
             </div>
         </section>
     </div>

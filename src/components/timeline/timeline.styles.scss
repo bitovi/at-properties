@@ -25,6 +25,7 @@
     .dlp-timeline-item {
         @apply flex;
         @apply flex-col;
+        min-height: 390px;
 
         @media (min-width: theme('screens.md')) {
             min-height: 460px;
