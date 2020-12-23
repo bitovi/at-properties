@@ -8,14 +8,16 @@ import dedent from 'ts-dedent';
 * A testimonial includes a quote and a star [Rating](/?path=/docs/pattern-library-components-rating--page).
 * Quotes will be truncated to 160 characters followed by ellipses when they appear in the Agent section, but will appear in their entirety when they load in their modal.
 * [Rating](/?path=/docs/pattern-library-components-rating--page) star icons are red (Secondary 500), 20 x 20px, with 12px between stars, 16px above, 24px below each star rating. Empty and half stars are not shown, only full stars. Example: A rating of 4 out of 5 stars would be shown as 4 full stars vs 4 full and 1 empty star.
-* **Spacing**: Testimonials are shown separated by a 1px light gray (Primary 100) horizontal rule, with 24px between the rule and each item.
+* **Spacing**: 
+  * Testimonials are shown separated by a 1px light gray (Primary 100) horizontal rule, with 24px between the rule and each item.
+  * 24/32px between the heading and testimonials (`.dlp-testimonial-wrapper` top margin).
 * **Accessibility**: Notice that quotes use `<q>`, ratings have `role="img" aria-label="Rated N out of M stars"`, and star icons have `aria-hidden="true"`.
 * **Animation**: Testimonials fade in. Opacity changes from 0 to 1 at the same speed as the user scrolls (scrub). Each testimonial is given the class `.fade-in`: `<div class="testimonial fade-in">` (*not* indicated in code example below). See [Animation](/?path=/docs/style-guide-animation--page).
 
 <Preview>
-<div>
+<div id="agent-testimonials" className="w-2/3">
   <h3 className="head-5 accent--above-left">Testimonials</h3>
-  <div className="dlp-testimonial-wrapper w-2/3">
+  <div className="dlp-testimonial-wrapper">
     <div className="dlp-testimonial">
       <p><q>Carrie and her team member Anne went above and beyond with both selling our home and finding us a new place to live. We were outgrowing our condo...</q></p>
       <div className="dlp-rating" role="img" aria-label="Rated 5 out of 5 stars">

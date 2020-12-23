@@ -6,8 +6,14 @@ import dedent from 'ts-dedent';
 # Button
 
 * Buttons are used to open or close (toggle) **modals**. 
-* Button elements can include **text**, an **icon** (e.g., X to close a modal), or text with an icon (not used for @properties).
-* Buttons have two styles: **dark** for light backgrounds; **light** for dark backgrounds.
+* Button elements can include text, an icon (e.g., X to close a modal), or text with an icon (not used for @properties).
+* Buttons have two styles: dark for light backgrounds; light for dark backgrounds.
+* Focus and hover states: Buttons fade to medium gray (Primary 500) with white text over 500ms.
+* **Spacing**: 
+  * There is 16/32px mobile/desktop between buttons.
+  * There is 32/40px mobile/desktop of space between a button group and any element above it.
+* **Accessibility**: Icons have accessible names: `<svg role="img" aria-label="Close">`.
+* **Animation**: Buttons can fade in. Opacity changes from 0 to 1 at the same speed as the user scrolls (scrub). Each `<button>` is given the class `.fade-in`: `<button class="btn fade-in">` (*not* indicated in code example below). See [Animation](/?path=/docs/style-guide-animation--page).
 
 <Preview>
 <div className="grid grid-cols-3">
@@ -45,8 +51,8 @@ Define classes in **src/components/button/button.styles.scss**.
     @apply p-1;                /* padding: 4px; */
     @apply transition-all;     /* transition-property: all; */
     @apply duration-500;       /* transition-duration: 500ms; */
-    &:active, &:hover { 
-      span {
+    &:active, &:hover, &:focus { 
+      span, svg {
         @apply bg-primary-500; /* background-color: theme('colors.primary.500'); */
         @apply text-white;     /* color: white; */
       }
@@ -73,18 +79,22 @@ Define classes in **src/components/button/button.styles.scss**.
   .btn__icon {
     @apply text-base;          /* font-size: theme('fontSize.base'); */
     @apply p-3;                /* padding: 12px; */
+    svg {
+      @apply w-4;              /* width: 16px; */
+      @apply h-4;              /* height: 16px; */
+    }
   }
   /* Button: styles */
   .btn--style-dark {
     @apply border-primary-900;  /* border-color: theme('colors.primary.900'); */
-    span {
+    span, svg {
       @apply bg-primary-900;    /* background-color: theme('colors.primary.900'); */
       @apply text-white;        /* color: white; */
     }
   }
   .btn--style-light {
     @apply border-white;        /* border-color: theme('colors.white'); */
-    span {
+    span, svg {
       @apply bg-white;          /* background-color: theme('colors.white'); */
       @apply text-primary-900;  /* color: theme('colors.primary.900'); */
     }
@@ -93,16 +103,14 @@ Define classes in **src/components/button/button.styles.scss**.
   * + .btn-group {
     @apply mt-8;               /* margin-top: 32px; */
     @media (min-width: theme('screens.lg')) {
-      & {
-        @apply mt-12;          /* margin-top: 48px; */
-      }
+      @apply mt-10;            /* margin-top: 40px; */
     }
   }
   .btn-group {
     @apply inline-flex;        /* display: inline-flex; */
-    @apply flex-wrap;	         /* flex-wrap: wrap; */
+    @apply flex-wrap;          /* flex-wrap: wrap; */
     @apply gap-4;              /* gap: 16px; */
-    @apply place-items-start;	 /* justify-items: start; */
+    @apply place-items-start;  /* justify-items: start; */
     @media (min-width: theme('screens.lg')) {
       @apply gap-8;            /* gap: 32px; */
     }

@@ -6,47 +6,37 @@ import dedent from 'ts-dedent';
 # Property
 
 * A property includes an image (4:3 ratio), price, and address.
-* The component uses a 2-col, 16px gap layout for small screens; 3-col = 1/3 + 2/3, 24px gap layout for large screens.
-* Properties are shown separated by a 1px light gray (Primary 100) horizontal rule, with 16px between the rule and each item.
-* **Accessibility**: Notice that images use `alt=""`. Read more about [writing alt text](/?path=/story/pattern-library-components-figure--page#writing-alt-text) for images (See [Figure](/?path=/story/pattern-library-components-figure--page)).
-* NEED NOTE ABOUT ANIMATION
-
-<!-- <Canvas>
-  <Story 
-    name="Default">
-    {{
-      template: '<div class="w-2/3"><dlp-property sm="images/sales/505-n-mcclurg-ct-2203-sm.jpg" price="935000" address="505 N Mcclurg Court #2203 Chicago, Illinois 60611" /></div>'
-    }}
-  </Story>
-</Canvas> -->
+* The component uses a 2-col, 16px gap layout for mobile/tablet; 3-col = 1/3 + 2/3, 24px gap layout for desktop.
+* **Spacing**: 
+  * Properties are shown separated by a 1px light gray (Primary 100) horizontal rule, with 16px between the rule and each item.
+  * 24/32px between the heading and properties (`.dlp-property-wrapper` top margin).
+* **Accessibility**: Notice that images use `alt=""`. Read more about [writing alt text](/?path=/story/style-guide-imagery--page#writing-alt-text) for images. See [Figure](/?path=/story/pattern-library-components-figure--page).
+* **Animation**: Properties fade in. Opacity changes from 0 to 1 at the same speed as the user scrolls (scrub). Each property is given the class `.fade-in`: `<figure class="dlp-property fade-in">` (*not* indicated in code example below). See [Animation](/?path=/docs/style-guide-animation--page).
 
 <Preview>
-<div className="properties w-2/3">
-  <div className="property">
-    <div className="property__img">
-      <figure>
-        <picture>
-          <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTh8fGhvbWV8ZW58MHwwfDB8&auto=format&fit=crop&w=800&q=60" alt="" />
-        </picture>
-      </figure>
-    </div>
-    <div className="property__desc">
-      <p className="property__price">$589,500</p>
-      <address>26W268 Inwood Lane<br />Winfield, IL 60190</address>
-    </div>
-  </div>
-  <div className="property">
-    <div className="property__img">
-      <figure>
-        <picture>
-          <img src="https://images.unsplash.com/photo-1416331108676-a22ccb276e35?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDN8fGhvbWV8ZW58MHwwfDB8&auto=format&fit=crop&w=800&q=60" alt="" />
-        </picture>
-      </figure>
-    </div>
-    <div className="property__desc">
-      <p className="property__price">$1,140,100</p>
-      <address>701 W Thomas Rd<br />Wheaton, IL 60187</address>
-    </div>
+<div id="agent-sales" className="w-2/3">
+  <h3 className="head-5 accent--above-left">Recent Sales</h3>
+  <div className="dlp-property-wrapper">
+    <figure className="dlp-property">
+      <picture className="dlp-property__img ar ar--4-3">
+        <source srcset="images/sales/505-n-mcclurg-ct-2203-sm.jpg" />
+        <img src="images/sales/505-n-mcclurg-ct-2203-sm.jpg" alt="Skyscraper near a park" />
+      </picture>
+      <figcaption className="dlp-property__desc">
+        <p className="dlp-property__price"><strong>$935,000</strong></p>
+        <address><p>505 N Mcclurg Court #2203<br />Chicago, Illinois 60611</p></address>
+      </figcaption>
+    </figure>
+    <figure className="dlp-property">
+      <picture className="dlp-property__img ar ar--4-3">
+        <source srcset="images/sales/1030-w-wrightwood-ave-h-sm.jpg" />
+        <img src="images/sales/1030-w-wrightwood-ave-h-sm.jpg" alt="Modern brick building" />
+      </picture>
+      <figcaption className="dlp-property__desc">
+        <p className="dlp-property__price"><strong>$791,500</strong></p>
+        <address><p>1030 W Wrightwood Avenue #H<br />Chicago, Illinois 60614</p></address>
+      </figcaption>
+    </figure>
   </div>
 </div>
 </Preview>
@@ -57,44 +47,38 @@ Define classes in **src/components/cards/propertyCard/property.styles.scss**.
 
 <Source language='scss' code={dedent`
   /* Property */
-  .properties {
-    @apply space-y-4;          /* 16px of space between items and dividers */
-    @apply divide-y;           /* Place 1px horizontal dividers between items */
-    @apply divide-primary-100; /* Divider color is light gray (Primary 100) */
-    @apply mt-6;               /* margin-top: 24px; */
-    @apply mb-8;               /* margin-top: 32px; */
-    @screen lg {
-      @apply mt-8;             /* margin-top: 32px; */
-      @apply mb-12;            /* margin-top: 48px; */
+  .dlp-property-wrapper {
+    @apply space-y-4;           /* 16px of space between items and dividers */
+    @apply divide-y;            /* Place 1px horizontal dividers between items */
+    @apply divide-primary-100;  /* Divider color is light gray (Primary 100) */
+    @apply mt-6;                /* margin-top: 24px; */
+    @media (min-width: theme('screens.lg')) {
+      @apply mt-8;               /* margin-top: 32px; */
     }
   }
-  .property {
-    @apply grid;               /* display: grid; */
-    @apply grid-cols-2;        /* grid-template-columns: repeat(2, minmax(0, 1fr)); */
-    @apply gap-4;              /* gap: 16px; */
-    @apply pt-4;               /* padding-top: 16px; */
-    @screen lg {
-      @apply grid-cols-3;      /* grid-template-columns: repeat(3, minmax(0, 1fr)); */
-      @apply gap-6;            /* gap: 24px; */
+  .dlp-property {
+    @apply grid;                 /* display: grid; */
+    @apply grid-cols-2;          /* grid-template-columns: repeat(2, minmax(0, 1fr)); */
+    @apply gap-4;                /* gap: 16px; */
+    @apply pt-4;                 /* padding-top: 16px; */
+    @media (min-width: theme('screens.lg')) {
+      @apply grid-cols-3;        /* grid-template-columns: repeat(3, minmax(0, 1fr)); */
+      @apply gap-6;              /* gap: 24px; */
     }
     &:first-child {
-      @apply pt-0;             /* padding-top: 0; */
+      @apply pt-0;               /* padding-top: 0; */
     }
   }
-  .property_img picture {
-    @extend .ar;               /* Use an aspect ratio of... */
-    @extend .ar--4-3;          /* 4:3 */
-  }
-  .property__desc {
-    @screen lg {
+  .dlp-property__desc {
+    @media (min-width: theme('screens.lg')) {
       @apply col-span-2;       /* grid-column: span 2 / span 2; */
     }
   }
-  .property__price {
+  .dlp-property__price {
     @apply font-medium;        /* font-weight: 500; */
     @apply leading-none;       /* line-height: 1; */
   }
-  .property__price + address {
+  .dlp-property__price + address {
     @apply mt-2;               /* margin-top: 8px; */
   }
 `} />
@@ -103,4 +87,6 @@ Define classes in **src/components/cards/propertyCard/property.styles.scss**.
 
 Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
 
-* asdf
+* Same guidelines as for [Typography](/?path=/docs/style-guide-typography--page).
+* Same guidelines as for [Imagery](/?path=/docs/style-guide-imagery--page).
+* Same guidelines as for [Structure](/?path=/docs/style-guide-structure--page).
