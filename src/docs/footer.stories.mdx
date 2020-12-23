@@ -5,16 +5,34 @@ import dedent from 'ts-dedent';
 
 # Footer
 
+* The footer is just like any other section, except instead of `article`, it uses `footer`, and sits outside of `main`.
+* The section above it (Community) needs to have the class `.section-divider`.
+
 ## How to configure
 
-Define classes in **src/components/slidein/slidein.styles.scss**.
+The component uses the following semantic structure.
 
-<Source language='scss' code={dedent`
-  .class { }
+<Source language='html' code={dedent`
+  <footer id="contact">
+    <div className="section-content">
+      <section aria-label="Agent contact information" className="content-grid">
+        <div>Agency logo...</div>
+        <div>Agent photo...</div>
+        <div>Agent contact info...</div>
+      </section>
+      <section aria-label="@properties social presence" className="content-grid">
+        <div>@properties logo</div>
+        <div>Social icons...</div>
+      </section>
+      <section aria-label="Legal disclaimers" className="content-grid">
+        <div>Disclaimers...</div>
+      </section>
+    </div>
+  </footer>
 `} />
 
 ## Accessibility considerations
 
 Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
 
-* Hanna, Nick to do: Include best practices from [http://web-accessibility.carnegiemuseums.org/code/dialogs/](http://web-accessibility.carnegiemuseums.org/code/dialogs/)
+* Same guidelines as for [Structure](/?path=/docs/style-guide-structure--page).

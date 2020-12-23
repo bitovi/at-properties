@@ -5,65 +5,128 @@ import dedent from 'ts-dedent';
 
 # Animation
 
-Motion is a design element throughout the page.
-* [Header](), aka. Title area at the top of the page
-* [Navigation]() including the desktop nav bar and mobile menu
-* [Section Intros]() at the begining of some sections (e.g., Global Reach, Marketing, Community)
-* [Button]() to modal open/close sequence
-* [Transitions]() added to select elements on a case by case basis (e.g., text fades in, images scale down)
+* Motion is a design element throughout the page. The following components will be animated:
+  * [Header](/?path=/story/pattern-library-containers-header--page), aka. Title area at the top of the page.
+  * [Navigation](/?path=/docs/pattern-library-containers-navigation--page) including the desktop nav bar and mobile menu.
+  * [Section Intros](/?path=/docs/pattern-library-containers-section-intro--page) at the begining of some sections (e.g., Global Reach, Marketing, Community).
+  * [Button](/?path=/story/pattern-library-components-button--page) fade on `:hover` or `:focus`.
+  * Button to [Modal](/?path=/story/pattern-library-containers-modal--page) open/close sequence.
+  * [Transitions](#transitions) added to select elements on a case by case basis (e.g., text fades in, items "pop").
+* All animations **play once** and do not reverse (rewind on scroll up) or repeat (start over once you reach the top of the page).
+* When [Reduce Motion](#reduce-motion) is on, all animations turn off.
 
-## Header
+## Header, aka. Title
 
-See [Header](/?path=/docs/pattern-library-containers-header--page). <span className="highlight">Link may be wrong.</span>
+See [Header](/?path=/story/pattern-library-containers-header--page).
 
 ## Navigation
 
-See [Navigation](/?path=/docs/pattern-library-containers-navigation--page). <span className="highlight">Link doesn't exist yet.</span>
+See [Navigation](/?path=/docs/pattern-library-containers-navigation--page).
 
 ## Section Intro
 
-See [Secton Intro](/?path=/docs/pattern-library-containers-section-intro--page). <span className="highlight">Link doesn't exist yet.</span>
+See [Secton Intro](/?path=/docs/pattern-library-containers-section-intro--page).
 
-## Button to modal 
+## Button fade
 
-See [Button](). <span className="highlight">There are two: video and regular. Also button? Should this live under button or modal.</span>
+See [Button](/?path=/story/pattern-library-components-button--page). See Accessibility bullet.
+
+## Button to Modal 
+
+See [Modal](/?path=/story/pattern-library-containers-modal--page).
 
 ## Transitions
 
-* Transitions can be added to individual elements (e.g., paragraph, testimonial, property, etc.) using classes.
-* Animations play once and do not reverse (rewind on scroll up) or repeat (start over once you reach the top of the page).
+* Transitions can be added to individual elements (e.g., paragraph, testimonial, property, etc.).
+* Transitions include fade in, pop, and shrink. See [Reduce Motion](#reduce-motion) below for details.
+
+## Reduce Motion
+
+Reduce Motion is a global setting that allows users to disable animations.
+
+* **Android**: First, enable Developer Options: "Settings" > "About Phone" > "Software Information" > tap on "Build Number" until your phone announces that “You are Now a Developer!” Then, "Settings" > "Developer Options" > 
+  * "Window animation scale" > "Animation off" (disables animation for in-app windows and notifications)
+  * "Transition animation scale" > "Animation off" (disables animation for app-to-app transitions)
+  * "Animator duration scale" > "Animation off" (disables animation for in-app effects, like the loading wheel)
+* **iOS**: "Settings > General > Accessibility" and turn on "Reduce Motion".
+* **Mac**: "System Preferences > Accessibility > Display" and check the box for "Reduce motion".
+* **Windows**: "Settings > Ease of Access > Display > Simplify and personalise Windows". Set "Show animation in Windows" to off.
+
+When a user has indicated (s)he prefers reduced motion, animations will **not** play. Content will display in its animated end state.
 
 <table>
   <thead>
     <tr>
-      <th>Class</th>
-      <th>Animation</th>
+      <th className="w-1/5">Animation</th>
+      <th className="w-2/5">Motion OK</th>
+      <th className="w-2/5">Reduce Motion ON</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td><code>.fade-in</code></td>
-      <td>Change opacity from 0 to 1 over 700ms</td>
+      <th>Header, aka. Title</th>
+      <td>Background image scale changes from 1.5 to 1 over 10 seconds. <br />
+      @properties logo opacity changes from 0 to 1 over 0.7s. <br />
+      "love" writes itself over 2.1 seconds. <br />
+      Presented by fades in and slides up (opacity changes from 0 to 1, and y changes from 50 to 0) over 0.7s. <br />
+      Scroll to continue fades in and slides up (opacity changes from 0 to 1, and y changes from 50 to 0) over 0.7s. <br />
+      The red arrow slides down and bounces (opacity changes from 0 to 1, and y changes from 10 to 0) over 0.7s.
+      </td>
+      <td>Background image scale is 1 by default. <br /><br />
+      @properties logo opacity is 1 by default. <br /><br />
+      "love" appears already written by default. <br />
+      Presented opacity is 1 and y is 0 by default. <br /><br /><br />
+      Scroll to continue opacity is 1 and y is 0 by default. <br /><br /><br />
+      The red arrow opacity is 1 and y is 0 by default and does not bounce.
+      </td>
     </tr>
     <tr>
-      <td><code>.pop</code></td>
-      <td>Change opacity from 0 to 1 <em>and</em> scale from 0.5 to 1 over 500ms<br />
-      Stagger multiple instances 300ms apart (i.e., pop, wait 300 ms, pop the next item, wait 300ms, etc.)</td>
+      <th>Navigation</th>
+      <td>asdf</td>
+      <td>asdf</td>
+    </tr>
+    <tr>
+      <th>Section Intro</th>
+      <td>Background image scale changes from 1 to 1.3 at the same speed as the user scrolls (scrub). <br />
+      Background image opacity changes from 1 to 0.25 at the same speed as the user scrolls (scrub). <br />
+      Section Intro pins in place. Text (<code>hgroup</code>) fades in and slides up (opacity changes from 0 to 1, and y changes from 50 to 0) at the same speed as the user scrolls. Section Intro unpins.</td>
+      <td>Background image scale is 1 by default. <br /><br />
+      Background image opacity is 0.25 by default. <br /><br />
+      Section Intro does not pin. <br />Text (<code>hgroup</code>) opacity is 1 and y is 0 by default.</td>
+    </tr>
+    <tr>
+      <th>Button to Modal</th>
+      <td>Semi-transparent overlay grows out of the button in a circular shape. <br />
+      Content area slides in from the right; video fades in.</td>
+      <td>Semi-transparent overlay appears instantly. <br /><br />
+      Content area or video appears instantly.</td>
+    </tr>
+    <tr>
+      <th>Fade in <br /><code>class="fade-in"</code><br /><code>type="fadeIn"</code></th>
+      <td>Opacity changes from 0 to 1 at the same speed as the user scrolls (scrub).</td>
+      <td>Opacity is 1 by default.</td>
+    </tr>
+    <tr>
+      <th>Pop <br /><code>type="pop"</code></th>
+      <td>Scale changes from 0.5 to 1 over 500ms. Each animation is staggered by 250ms: the first stat pops, 250ms later, the second stat pops, 250ms later, the third stat pops, etc.</td>
+      <td>Scale is 1 by default.</td>
+    </tr>
+    <tr>
+      <th>Shrink <br /><code>animate="shrink"</code></th>
+      <td>Scale changes from 1.1 to 1 at the same speed as the user scrolls (scrub).</td>
+      <td>Scale is 1 by default.</td>
     </tr>
   </tbody>
 </table>
 
-<Preview>
-<div className="grid grid-cols-2 gap-8">
-  <div>
-    <p className="highlight">NEED EXAMPLES</p>
-  </div>
-</div>
-</Preview>
-
 ## How to configure
 
-<span className="highlight">Write a paragraph about Nick's explanation: GSAP styles everything vs CSS. Checks for reduced motion preference first.</span>
+* Define Header animation in **src/containers/title.container.vue**.
+* Define Navigation animation in **src/components/nav/nav.component.vue**.
+* Define Section Intro animation in **src/components/title/title.page.vue**.
+* Define Button fade animations in **src/components/button/button.styles.scss**.
+* Define Button to Modal animations in **src/components/modals/appearModal**, **util**, and **videoModal**.
+* Define Transition animations in **src/components/transition/transition.components.vue**.
 
 ## Accessibility considerations
 

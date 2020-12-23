@@ -9,7 +9,7 @@
     @apply bg-fixed;
     @apply bg-cover;
     @apply bg-no-repeat;
-    z-index: 10;
+    // z-index: 10;
 
     background-color: rgb(0, 0, 0); 
     overflow: hidden; 
@@ -23,11 +23,11 @@
         position:absolute; 
         height:100%; 
         width:100%; 
-        z-index: 0;
+        // z-index: 0;
     }
 
     .dlp-title-page-text {
-        z-index: 1;
+        // z-index: 1;
     }
 
     .dlp-title-page-head {
