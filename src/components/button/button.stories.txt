@@ -1,0 +1,29 @@
+import { withDesign } from 'storybook-addon-designs'
+import DLPButton from './button.component.vue'
+
+export default {
+  title: 'Pattern Library/Components/Button',
+  component: DLPButton,
+  decorators: [withDesign],
+  argTypes: {
+    theme: { control: { type: 'select', options: ['dark', 'light'] } }
+  }
+};
+
+const Template = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { DLPButton },
+  template: '<dlp-button v-bind="$props">Agent Bio</dlp-button>',
+});
+
+export const Text_Button = Template.bind({});
+
+Text_Button.parameters = {
+  design: {
+    type: 'figma',
+    url: 'https://www.figma.com/file/9Dh5lVMksIBNrDGMlPsWMk/DLP-Design-Library?node-id=56%3A0',
+  },
+  docs: { 
+    page: './button.stories.mdx' 
+  }
+};

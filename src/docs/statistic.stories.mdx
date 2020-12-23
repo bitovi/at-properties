@@ -1,31 +1,244 @@
-import { Meta, Canvas, Source } from '@storybook/addon-docs/blocks';
+import { Meta, Preview, Source } from '@storybook/addon-docs/blocks';
 import dedent from 'ts-dedent';
 
 <Meta title="Pattern Library/Components/Statistic" />
 
 # Statistic
 
-There are 3 styles for statistics:
-* [Agent Stats](#agent-stats)
-* [Team Stats](#team-stats)
-* [Company Stats](#company-stats)
+* There are 3 types for statistics: [Agent Stats](#agent-stats), [Team Stats](#team-stats), [Company Stats](#company-stats).
+* Stats are almost identical in appearance. The difference in how they look comes from the container that holds them (i.e., Agent Stats appear in a vertical grid, Team and Company stats appear in a 3-col grid).
 
 ## Agent Stats
 
+* 2 lines of text in a vertical grid; no vertical or horizontal dividers.
+* Line 1: red (Secondary 500), Gotham Light (300), 28/39px mobile/desktop, 150% leading (line-height), 5% tracking (letter-spacing). Same as [Heading](/?path=/docs/pattern-library-components-heading--page) `.head-3`, just red.
+* Line 2: dark gray (Primary 900), Gotham Medium (500), 14/16px mobile/desktop, 150% leading (line-height), 10% tracking (letter-spacing). Same as [Heading](/?path=/docs/pattern-library-components-heading--page) `.head-6`.
+* **Spacing**: 24/32px mobile/desktop between the heading and first item (top margin), 16/24px mobile/desktop between items.
+* **Accessibility**: use `aria-label` for text which may be misread by screenreaders.<br />
+  For example: `<span aria-label="Over 500 million dollars">Over $500 Million` will read as "Over 500 million dollars" vs "Over 500 dollars million".
+* **Animation**: Each statistic fades in. Opacity changes from 0 to 1 at the same speed as the user scrolls (scrub). Each `.stat` is given the class `.fade-in` (*not* indicated in code example below). See [Animation](/?path=/docs/style-guide-animation--page).
+
+<Preview>
+<section id="agent-stats">
+  <h3 className="head-5 accent--above-left">Agent Stats</h3>
+  <div className="space-y-4 lg:space-y-6 mt-6 lg:mt-8">
+    <p>
+      <span className="head-3 block text-secondary-500">Number one</span>
+      <span className="head-6">luxury broker in Chicago</span>
+    </p>
+    <p>
+      <span className="head-3 block text-secondary-500" aria-label="Over 500 million dollars">Over $500 Million</span>
+      <span className="head-6">in sales to date</span>
+    </p>
+    <p>
+      <span className="head-3 block text-secondary-500">20 Years</span>
+      <span className="head-6">of real estate experience</span>
+    </p>
+  </div>
+</section>
+</Preview>
+
 ## Team Stats
+
+* 2 lines of text in a 1-col/3-col mobile/desktop grid, with light-gray (Primary 100) vertical and horizontal dividers.
+* Line 1: Same as [Agent Stats](#agent-stats).
+* Line 2: Same as [Agent Stats](#agent-stats).
+* **Spacing**: 32px padding on each grid cell; no top margin or padding (since there's no heading and there are already rules for spacing between sections).
+* **Accessibility**: use `aria-label` for text which may be misread by screenreaders.<br />
+  For example: `<span aria-label="Over 24 million dollars">$24M+` will read as "Over 24 million dollars" vs "24 dollars M plus".
+* **Animation**: Each statistic fades in and "pops". See [Animation](/?path=/docs/style-guide-animation--page).
+  * Opacity changes from 0 to 1 at the same speed as the user scrolls (scrub). 
+  * Scale changes from 0.5 to 1 over 500ms. Each animation is staggered by 250ms: the first stat pops, 250ms later, the second stat pops, 250ms later, the third stat pops, etc. 
+  * Each `.stat` is wrapped in a `<dlp-transition class="fade-in pop">` (*not* indicated in code example below).
+
+<Preview>
+<section id="team-stats">
+  <div className="grid md:grid-cols-3 border-t border-b border-primary-100 divide-y md:divide-y-0 md:divide-x divide-primary-100">
+    <div className="p-8 text-center stat">
+      <span className="head-3 block text-secondary-500" aria-label="Over 300">300+</span>
+      <span className="head-6">transactions</span>
+    </div>
+    <div className="p-8 text-center stat">
+      <span className="head-3 block text-secondary-500">10 years</span>
+      <span className="head-6">selling real estate</span>
+    </div>
+    <div className="p-8 text-center stat">
+      <span className="head-3 block text-secondary-500" aria-label="Over 24 million dollars">$24M+</span>
+      <span className="head-6">total sales</span>
+    </div>
+  </div>
+</section>
+</Preview>
 
 ## Company Stats
 
+* 2 lines of text in a custom grid. The grid is 1-col mobile, 12-col tablet (looks like a 2-col grid with the third item centered), 3-col desktop.
+* Each grid tile has an image background. The aspect ratio `.ar--stat` is 4:3 mobile, 1:1 tablet/desktop.
+* The image border is the same as for [Figure](/?path=/docs/pattern-library-components-figure--page). Borders are 1px solid white, positioned 8px in on mobile/tablet, 12px in on desktop.
+* Inside the image border, padding is 27px mobile, 39px tablet, 35px desktop.
+* Lines of text sit inside a 90% white container with 16px padding. Text is centered vertically and horizontally.
+* Line 1: Same as [Agent Stats](#agent-stats), but dark gray (Primary 900).
+* Line 2: Same as [Agent Stats](#agent-stats).
+* **Spacing**: 
+  * Mobile: (bg img) 8px padding -- 1px border -- 27px padding = 36px -- (white background) 16px padding -- stat text
+  * Tablet: (bg img) 8px padding -- 1px border -- 39px padding = 48px -- (white background) 16px padding -- stat text
+  * Desktop: (bg img) 12px padding -- 1px border -- 35px padding = 48px -- (white background) 16px padding -- stat text
+  * No top or bottom margin or padding (since there are already rules for gap spacing between rows in a `.content-grid`).
+* **Accessibility**: 
+  * Use `aria-label` for text which may be misread by screenreaders.<br />
+    For example: `<span aria-label="Over 50 billion dollars">$50B` will read as "50 billion dollars" vs "50 dollars B".
+  * Since image backgrounds are purely decorative "frames", they can have null alt text: `alt=""` or just `alt`.
+* **Animation**: These stats are not animated. However, they could be animated to pop the same as Team Stats by wrapping each `.stat-img__tile` in `<dlp-transition class="fade-in pop">` (*not* indicated in code example below).
+
+
+<Preview>
+<section id="company-stats" className="content-grid">
+  <div className="col-span-full text-center">
+    <h3 className="head-2 accent--below-center accent--mb-0">The Numbers Don't Lie</h3>
+  </div>
+  <div className="col-span-full text-center">
+    <div className="col-span-full lg:col-span-14 lg:col-start-2">
+      <div className="stat-img__grid">
+        <div className="stat-img__tile">
+          <figure>
+            <picture className="ar ar--stat">
+              <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTd8fGxpdmluZyUyMHJvb218ZW58MHx8MHw%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" alt="" aria-hidden="true" />
+            </picture>
+          </figure>
+          <div className="stat-img__border">
+            <div className="stat-img__content">
+              <div className="stat">
+                <span className="head-3" aria-role="Number 10">#10</span>
+                <span className="head-6">ranking according to Real Trends</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="stat-img__tile">
+          <figure>
+            <picture className="ar ar--stat">
+              <img src="https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Nnx8YmVkcm9vbXxlbnwwfHwwfA%3D%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" alt="" aria-hidden="true" />
+            </picture>
+          </figure>
+          <div className="stat-img__border">
+            <div className="stat-img__content">
+              <div className="stat">
+                <span aria-label="50 billion dollars" className="head-3" aria-role="50 billion dollars">$50B</span>
+                <span className="head-6">total home sales</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="stat-img__tile">
+          <figure>
+            <picture className="ar ar--stat">
+              <img src="https://images.unsplash.com/photo-1562663474-6cbb3eaa4d14?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8YmVkcm9vbXxlbnwwfHwwfA%3D%3D&amp;ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60" alt="" aria-hidden="true" />
+            </picture>
+          </figure>
+          <div className="stat-img__border">
+            <div className="stat-img__content">
+              <div className="stat">
+                <span className="head-3">25%</span>
+                <span className="head-6">of our listings sold in-house</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+  <div className="col-span-full text-center">
+    <button type="button" className="btn mx-auto btn--style-dark">
+      <span className="btn__text">View local stats</span>
+    </button>
+  </div>
+</section>
+</Preview>
+
 ## How to configure
 
-Define classes in **src/assets/text.styles.scss**.
+Agent Stats and Team Stats do not use any component-specific classes. The classes below are for Company Stats.
+
+Define an additional aspect ratio class in **src/assets/util.styles.scss**.
 
 <Source language='scss' code={dedent`
-  .stat { }
+  .ar--stat {
+    padding-top: min(80vh, calc(3/4 * 100%));
+    @media (min-width: theme('screens.md')) { 
+      padding-top: 100%;
+    }
+  }
+`} />
+
+Define classes in **src/assets/stat.styles.scss**.
+
+<Source language='scss' code={dedent`
+  /* Statistic: image grid style */
+  .stat span {
+    @apply block;                /* display: block; */
+  }
+  .stat-img__grid {
+    @apply grid;                 /* display: grid; */
+    @apply gap-8;                /* gap: 32px; */
+    @media (min-width: theme('screens.md')) {  
+      @apply grid-cols-12;       /* grid-template-columns: repeat(12, minmax(0, 1fr)); */
+    }
+    @media (min-width: theme('screens.lg')) {  
+      @apply grid-cols-3;        /* grid-template-columns: repeat(3, minmax(0, 1fr)); */
+    }
+  }
+  .stat-img__tile {
+    @apply col-span-full;        /* grid-column: 1 / -1; */
+    @apply relative;             /* position: relative; */
+    @media (min-width: theme('screens.md')) {  
+      @apply col-span-6;         /* grid-column: span 6 / span 6; */
+      &:last-child {
+        @apply col-start-4;      /* grid-column-start: 4; */
+      }
+    }
+    @media (min-width: theme('screens.lg')) {  
+      @apply col-span-1;         /* grid-column: span 1 / span 1; */
+      &:last-child {
+        @apply col-start-3;      /* grid-column-start: 3; */
+      }
+    }
+  }
+  .stat-img__border {
+    @apply border;               /* border-width: 1px; */
+    @apply border-white;         /* border-color: theme('colors.white'); */
+    @apply absolute;             /* position: absolute; */
+    @apply top-0;                /* top: 0; */
+    @apply left-0;               /* left: 0; */
+    @apply z-20;                 /* z-index: 20; */
+    @apply m-2;                  /* margin: 8px; */
+    width: calc(100% - 18px);
+    height: calc(100% - 18px);
+    padding: 27px;
+    @media (min-width: theme('screens.md')) {  
+      padding: 39px;
+    }
+    @media (min-width: theme('screens.lg')) {  
+      @apply m-3;                /* margin: 12px; */
+      width: calc(100% - 26px);
+      height: calc(100% - 26px);
+      padding: 35px;
+    }
+  }
+  .stat-img__content {
+    background-color: rgba(255, 255, 255, 0.9);
+    @apply grid;                 /* display: grid; */
+    @apply content-center;       /* align-content: center; */
+    @apply text-center;          /* text-align: center; */
+    @apply w-full;               /* width: 100%; */
+    @apply h-full;               /* height: 100%; */
+    @apply p-4;                  /* padding: 16px; */
+  }
 `} />
 
 ## Accessibility considerations
 
 Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
 
-* asdf
+* Same guidelines as for [Color](/?path=/docs/style-guide-color--page).
+* Same guidelines as for [Typography](/?path=/docs/style-guide-typography--page).
+* Same guidelines as for [Imagery](/?path=/docs/style-guide-imagery--page).

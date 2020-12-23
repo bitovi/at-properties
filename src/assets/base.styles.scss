@@ -5,7 +5,8 @@
 @import './util.styles';        /* html, body, custom scroll bar, colors */
 @import './type.styles';        /* headings, paragraph, lists */
 @import './object.styles';      /* borders, rules, accents */
-@import './page.styles';        /* containers? */
+@import './page.styles';        /* containers */
+@import './stat.styles';        /* bg img statistic */
 
 @import '../components/index';  /* component styles */
 @import './dev.styles.scss';    /* NOT for production, dev only */

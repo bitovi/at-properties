@@ -33,18 +33,22 @@
 .btn__icon {
   @apply text-base;          /* font-size: theme('fontSize.base'); */
   @apply p-3;                /* padding: 12px; */
+  svg {
+    @apply w-4;              /* width: 16px; */
+    @apply h-4;              /* height: 16px; */
+  }
 }
 /* Button: styles */
 .btn--style-dark {
   @apply border-primary-900;  /* border-color: theme('colors.primary.900'); */
-  span {
+  span, svg {
     @apply bg-primary-900;    /* background-color: theme('colors.primary.900'); */
     @apply text-white;        /* color: white; */
   }
 }
 .btn--style-light {
   @apply border-white;        /* border-color: theme('colors.white'); */
-  span {
+  span, svg {
     @apply bg-white;          /* background-color: theme('colors.white'); */
     @apply text-primary-900;  /* color: theme('colors.primary.900'); */
   }

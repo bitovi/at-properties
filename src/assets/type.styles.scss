@@ -28,7 +28,7 @@
   @apply font-medium;        /* font-weight: 500; */
   @apply tracking-widest;    /* letter-spacing: 0.10em; */
 }
-.head-1 { font-size: 5vh;} /* font-size: 42px */
+.head-1 { font-size: 5vh }   /* font-size: 5vh */
 .head-2 { @apply text-3xl; } /* font-size: 34px */
 .head-3 { @apply text-2xl; } /* font-size: 28px */
 .head-4 { @apply text-xl; }  /* font-size: 24px */
@@ -46,9 +46,7 @@
 .head-1 + .head-5 {
   @apply mt-6;               /* margin-top: 24px; */
   @media (min-width: theme('screens.lg')) {
-    & { 
-      @apply mt-8;           /* margin-top: 32px; */
-    }
+    @apply mt-8;           /* margin-top: 32px; */
   }
 }
 

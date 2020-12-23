@@ -5,11 +5,14 @@ import dedent from 'ts-dedent';
 
 # Figure
 
-* Images are coded as `figure`, with the exception of some logos (e.g., @properties, [partner](/?path=/docs/pattern-library-components-carousel--page#marketing-assets--partners) logos), which are SVGs.
-* Most images have inner borders. The exceptions are [property](/?path=/docs/pattern-library-components-property--default-story) photos and images used in [carousels](/?path=/docs/pattern-library-components-carousel--page).
+* Images are coded as `figure`, with the exception of some [logos](/?path=/docs/style-guide-imagery--page) (e.g., @properties, [partner](/?path=/docs/pattern-library-components-carousel--page#marketing-assets--partners) logos), which are SVGs.
+* Most images have inner borders. The exceptions are [property](/?path=/docs/pattern-library-components-property--page) photos and images used in [carousels](/?path=/docs/pattern-library-components-carousel--page).
 * Borders are 1px solid white, positioned 8px in on mobile/tablet, 12px in on desktop.
 * Images can have captions on top of the image (i.e., agent, co-agent photos) or below the image (i.e., [Team member](/?path=/docs/pattern-library-components-carousel--page#team-members) photos).
 * Images are scaled to a certain [aspect ratio](/?path=/docs/style-guide-imagery--page#aspect-ratios) (e.g., 4:3, 4:5).
+* **Animation**: All images scale down (shrink) on scroll down. Images can also fade in. Each `<figure>` can be given the class `.fade-in` (*not* indicated in code example below). See [Animation](/?path=/docs/style-guide-animation--page).
+  * Shrink: Scale changes from 1.1 to 1 at the same speed as the user scrolls (scrub). 
+  * Fade (optional): Opacity changes from 0 to 1 at the same speed as the user scrolls (scrub). 
 
 ## Profile photo
 
@@ -63,7 +66,7 @@ See [Property](/?path=/docs/pattern-library-components-property--default-story).
 
 ## Statistic photo
 
-See [Statistic](/?path=/docs/pattern-library-components-statistic--page).
+See [Statistic](/?path=/docs/pattern-library-components-statistic--page), specifically [Company Stats](/?path=/docs/pattern-library-components-statistic--page#company-stats).
 
 ## Video thumbnail
 

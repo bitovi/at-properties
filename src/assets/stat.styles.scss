@@ -1,0 +1,60 @@
+/* Statistic: image grid style */
+.stat span {
+  @apply block;                /* display: block; */
+}
+.stat-img__grid {
+  @apply grid;                 /* display: grid; */
+  @apply gap-8;                /* gap: 32px; */
+  @media (min-width: theme('screens.md')) {  
+    @apply grid-cols-12;       /* grid-template-columns: repeat(12, minmax(0, 1fr)); */
+  }
+  @media (min-width: theme('screens.lg')) {  
+    @apply grid-cols-3;        /* grid-template-columns: repeat(3, minmax(0, 1fr)); */
+  }
+}
+.stat-img__tile {
+  @apply col-span-full;        /* grid-column: 1 / -1; */
+  @apply relative;             /* position: relative; */
+  @media (min-width: theme('screens.md')) {  
+    @apply col-span-6;         /* grid-column: span 6 / span 6; */
+    &:last-child {
+      @apply col-start-4;      /* grid-column-start: 4; */
+    }
+  }
+  @media (min-width: theme('screens.lg')) {  
+    @apply col-span-1;         /* grid-column: span 1 / span 1; */
+    &:last-child {
+      @apply col-start-3;      /* grid-column-start: 3; */
+    }
+  }
+}
+.stat-img__border {
+  @apply border;               /* border-width: 1px; */
+  @apply border-white;         /* border-color: theme('colors.white'); */
+  @apply absolute;             /* position: absolute; */
+  @apply top-0;                /* top: 0; */
+  @apply left-0;               /* left: 0; */
+  @apply z-20;                 /* z-index: 20; */
+  @apply m-2;                  /* margin: 8px; */
+  width: calc(100% - 18px);
+  height: calc(100% - 18px);
+  padding: 27px;
+  @media (min-width: theme('screens.md')) {  
+    padding: 39px;
+  }
+  @media (min-width: theme('screens.lg')) {  
+    @apply m-3;                /* margin: 12px; */
+    width: calc(100% - 26px);
+    height: calc(100% - 26px);
+    padding: 35px;
+  }
+}
+.stat-img__content {
+  background-color: rgba(255, 255, 255, 0.9);
+  @apply grid;                 /* display: grid; */
+  @apply content-center;       /* align-content: center; */
+  @apply text-center;          /* text-align: center; */
+  @apply w-full;               /* width: 100%; */
+  @apply h-full;               /* height: 100%; */
+  @apply p-4;                  /* padding: 16px; */
+}

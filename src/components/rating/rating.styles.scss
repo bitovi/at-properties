@@ -1,8 +1,23 @@
-
+/* Rating */
 .dlp-rating {
-    @apply flex;
-    @apply flex-row;
-    span {
-        margin-right: theme('spacing.3');
-    }
+  @apply flex;                 /* display: flex; */
+  @apply flex-row;             /* flex-direction: row; */
+  @apply mt-4;                 /* margin-top: 16px; */
+  @apply mb-6;                 /* margin-bottom: 24px; */
+  .dlp-testimonial:last-child & {
+    @apply mb-0;               /* margin-bottom: 0px; */
+  }
+  span {
+    @apply mr-3;               /* margin-right: 12px; */
+  }
+  span:last-child {
+    @apply mr-0;               /* margin-right: 0px; */
+  }
+  svg {
+    @apply w-5;                /* width: 20px; */
+    @apply h-5;                /* height: 20px; */
+  }
+}
+.icon-star {
+  @apply text-secondary-500;   /* color: theme('colors.secondary.500'); */
 }

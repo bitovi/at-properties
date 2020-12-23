@@ -7,10 +7,12 @@ import dedent from 'ts-dedent';
 
 * Paragraphs are dark gray (Primary 900), Gotham Light (300), 16px/24px leading (1.5) on mobile, 20px/32px (1.6) leading on desktop. 
 * Addresses and lists follow the same style as paragraphs.
-* There is 16px of space between a paragraph, address, or list and any element above or below it.
-* [Accents](/?path=/story/style-guide-object-styles--page#accents) may be added to paragraphs.
 * Links are dark gray (Primary 900) and underlined by default, blue (System Focus) and not underlined on focus and hover.
-* Contact Info (in the Agent section and page footer) has 20px of space between the heading and links, and 16px of space between links.
+* **Styling**: [Accents](/?path=/story/style-guide-object-styles--page#accents) may be added to paragraphs.
+* **Spacing**: 
+  * There is 16px of space between a paragraph, address, or list and any element above or below it.
+  * Contact Info (in the Agent section and page footer) has 20px of space between the heading and links, and 16px of space between links.
+* **Animation**: Paragraphs can fade in. Opacity changes from 0 to 1 at the same speed as the user scrolls (scrub). Each `<p>` is given the class `.fade-in`: `<p class="fade-in">` (*not* indicated in code example below). See [Animation](/?path=/docs/style-guide-animation--page).
 
 <Preview>
 <div className="grid grid-cols-2 gap-10">
@@ -100,4 +102,9 @@ Define classes in **src/assets/type.styles.scss**.
 
 Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
 
-* NEED TO ADD
+* Same guidelines as for [Color](/?path=/docs/style-guide-color--page).
+* Same guidelines as for [Typography](/?path=/docs/style-guide-typography--page).
+* [2.4.7 Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG21/quickref/#focus-visible)<br />
+  Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible.
+* [3.2.1 On Focus (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#on-focus)<br />
+  When any user interface component receives focus, it does not initiate a change of context. 

@@ -25,7 +25,7 @@ export const parameters = {
             'Footer', 'Modal', 'Video Modal'
           ], 
           'Components', [
-            'Button', 'Carousel', 'Figure', 'Heading', 'Paragraph', 'Property', 
+            'Button', 'Carousel', 'Figure', 'Heading', 'Paragraph', 'Property', 'Rating', 
             'Social', 'Statistic', 'Testimonial', 'Video Thumbnail'
           ]
         ]

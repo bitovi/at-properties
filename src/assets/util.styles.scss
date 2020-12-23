@@ -24,6 +24,9 @@
 svg {
   @apply fill-current;	     /* fill: currentColor; */
 }
+.icon {
+  @apply w-full;             /* width: 100%; */
+}
 
 /* Aspect ratio */ 
 .ar {

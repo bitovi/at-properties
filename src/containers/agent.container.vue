@@ -93,18 +93,18 @@
                 <section id="agent-stats" class="">
                     <h3 class="head-5 accent--above-left fade-in">Agent Stats</h3>
                     <div class="space-y-4 lg:space-y-6 mt-6 lg:mt-8">
-                        <p class="fade-in">
-                            <span class="head-3 block text-secondary-500" v-html="i18n.stats[0]['span-1']"></span>
+                        <div class="stat fade-in">
+                            <span class="head-3 text-secondary-500" v-html="i18n.stats[0]['span-1']"></span>
                             <span class="head-6" v-html="i18n.stats[0]['span-2']"></span>
-                        </p>
-                        <p class="fade-in">
-                            <span class="head-3 block text-secondary-500" v-html="i18n.stats[1]['span-1']"></span>
+                        </div>
+                        <div class="stat fade-in">
+                            <span class="head-3 text-secondary-500" v-html="i18n.stats[1]['span-1']"></span>
                             <span class="head-6" v-html="i18n.stats[1]['span-2']"></span>
-                        </p>
-                        <p class="fade-in">
-                            <span class="head-3 block text-secondary-500">{{i18n.stats[2]['span-1']}}</span>
+                        </div>
+                        <div class="stat fade-in">
+                            <span class="head-3 text-secondary-500">{{i18n.stats[2]['span-1']}}</span>
                             <span class="head-6" v-html="i18n.stats[2]['span-2']"></span>
-                        </p>
+                        </div>
                     </div>
                 </section>
 

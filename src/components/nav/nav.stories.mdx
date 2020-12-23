@@ -1,0 +1,25 @@
+import { Meta, Canvas, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+<Meta title="Pattern Library/Containers/Navigation" />
+
+# Navigation
+
+## How to configure
+
+Define classes in **src/components/nav/nav.styles.scss**.
+
+<Source language='scss' code={dedent`
+  .class { }
+`} />
+
+## Accessibility considerations
+
+Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
+
+* [2.4.7 Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG21/quickref/#focus-visible)<br />
+  Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible.
+* [3.2.1 On Focus (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#on-focus)<br />
+  When any user interface component receives focus, it does not initiate a change of context. 
+* [3.2.3 Consistent Navigation (Level AA)](https://www.w3.org/WAI/WCAG21/quickref/#consistent-navigation)<br />
+  Navigational mechanisms that are repeated on multiple Web pages within a set of Web pages occur in the same relative order each time they are repeated, unless a change is initiated by the user.
