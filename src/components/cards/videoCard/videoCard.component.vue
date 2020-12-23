@@ -1,5 +1,5 @@
 <template>
-    <div class="dlp-video-card" :title="title" @click="onClick">
+    <div class="dlp-video-card" :aria-label="title" @click="onClick">
         <dlp-figure 
             :sm="sm"
             :md="md"
@@ -11,7 +11,7 @@
             :ar="ar"
             :animate="animate"
         />
-        <div class="dlp-video-card--overlay">
+        <div class="dlp-video-card__overlay">
             <svg class="icon-play"><use xlink:href="#icon-play"></use></svg>
         </div>
         <dlp-video-modal ref="VideoCardModal" :videoId="videoId" :caption="caption"/>
