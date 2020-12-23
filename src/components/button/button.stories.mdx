@@ -1,38 +1,23 @@
-import { Meta, Preview, Source, Canvas, Story, ArgsTable } from '@storybook/addon-docs/blocks';
+import { Meta, Preview, Source } from '@storybook/addon-docs/blocks';
 import dedent from 'ts-dedent';
-import DLPButton from './button.component.vue'
 
-<Meta 
-  title="Pattern Library/Components/Button" 
-  argTypes={{
-    nativeType: { control: { type: 'select', options: [null, 'button', 'submit', 'reset'] } }
-  }}
-/>
+<Meta title="Pattern Library/Components/Button" />
 
 # Button
 
 * Buttons are used to open or close (toggle) **modals**. 
-* Button elements can include **text**, an **icon** (e.g., X to close a modal), or text with an icon (not used for @properties).
-* Buttons have two styles: **dark** for light backgrounds; **light** for dark backgrounds.
-
-<Canvas>
-  <Story name="Default">
-    {{
-      template: `<dlp-button v-bind="$props">Agent Bio</dlp-button>`
-    }}
-  </Story>
-  <Story name="CloseBtn">
-    {{
-      template: `<dlp-close-btn v-bind="$props">Close</dlp-close-btn>`
-    }}
-  </Story>
-</Canvas>
-
-<ArgsTable of={DLPButton} />
+* Button elements can include text, an icon (e.g., X to close a modal), or text with an icon (not used for @properties).
+* Buttons have two styles: dark for light backgrounds; light for dark backgrounds.
+* Focus and hover states: Buttons fade to medium gray (Primary 500) with white text over 500ms.
+* **Spacing**: 
+  * There is 16/32px mobile/desktop between buttons.
+  * There is 32/40px mobile/desktop of space between a button group and any element above it.
+* **Accessibility**: Icons have accessible names: `<svg role="img" aria-label="Close">`.
+* **Animation**: Buttons can fade in. Opacity changes from 0 to 1 at the same speed as the user scrolls (scrub). Each `<button>` is given the class `.fade-in`: `<button class="btn fade-in">` (*not* indicated in code example below). See [Animation](/?path=/docs/style-guide-animation--page).
 
 <Preview>
-<div className="grid grid-cols-2">
-  <div className="bg-white p-5 self-center">
+<div className="grid grid-cols-3">
+  <div className="col-span-2 bg-white p-5 self-center">
     <div className="btn-group">
       <button className="btn btn--style-dark">
         <span className="btn__text">Read Full Bio</span>
@@ -42,7 +27,7 @@ import DLPButton from './button.component.vue'
       </button>
     </div>
   </div>
-  <div className="bg-primary-900 p-5 self-center">
+  <div className="bg-primary-900 p-5 text-right">
     <button className="btn btn--style-light">
       <span className="btn__icon">
         <svg role="img" aria-label="Close">
@@ -66,8 +51,8 @@ Define classes in **src/components/button/button.styles.scss**.
     @apply p-1;                /* padding: 4px; */
     @apply transition-all;     /* transition-property: all; */
     @apply duration-500;       /* transition-duration: 500ms; */
-    &:active, &:hover { 
-      span {
+    &:active, &:hover, &:focus { 
+      span, svg {
         @apply bg-primary-500; /* background-color: theme('colors.primary.500'); */
         @apply text-white;     /* color: white; */
       }
@@ -94,18 +79,22 @@ Define classes in **src/components/button/button.styles.scss**.
   .btn__icon {
     @apply text-base;          /* font-size: theme('fontSize.base'); */
     @apply p-3;                /* padding: 12px; */
+    svg {
+      @apply w-4;              /* width: 16px; */
+      @apply h-4;              /* height: 16px; */
+    }
   }
   /* Button: styles */
   .btn--style-dark {
     @apply border-primary-900;  /* border-color: theme('colors.primary.900'); */
-    span {
+    span, svg {
       @apply bg-primary-900;    /* background-color: theme('colors.primary.900'); */
       @apply text-white;        /* color: white; */
     }
   }
   .btn--style-light {
     @apply border-white;        /* border-color: theme('colors.white'); */
-    span {
+    span, svg {
       @apply bg-white;          /* background-color: theme('colors.white'); */
       @apply text-primary-900;  /* color: theme('colors.primary.900'); */
     }
@@ -114,16 +103,14 @@ Define classes in **src/components/button/button.styles.scss**.
   * + .btn-group {
     @apply mt-8;               /* margin-top: 32px; */
     @media (min-width: theme('screens.lg')) {
-      & {
-        @apply mt-12;          /* margin-top: 48px; */
-      }
+      @apply mt-10;            /* margin-top: 40px; */
     }
   }
   .btn-group {
     @apply inline-flex;        /* display: inline-flex; */
-    @apply flex-wrap;	         /* flex-wrap: wrap; */
+    @apply flex-wrap;          /* flex-wrap: wrap; */
     @apply gap-4;              /* gap: 16px; */
-    @apply place-items-start;	 /* justify-items: start; */
+    @apply place-items-start;  /* justify-items: start; */
     @media (min-width: theme('screens.lg')) {
       @apply gap-8;            /* gap: 32px; */
     }
@@ -134,7 +121,19 @@ Define classes in **src/components/button/button.styles.scss**.
 
 Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
 
-* For user interface components with labels that include text or images of text, the name contains the text that is presented visually. [2.5.3 Label in Name (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#label-in-name)
-* The size of the target for pointer inputs is at least 44 by 44 CSS pixels except when: 1) Equivalent: The target is available through an equivalent link or control on the same page that is at least 44 by 44 CSS pixels; 2) Inline: The target is in a sentence or block of text; 3) User Agent Control: The size of the target is determined by the user agent and is not modified by the author; 4) Essential: A particular presentation of the target is essential to the information being conveyed. [2.5.5 Target Size (Level AAA)](https://www.w3.org/WAI/WCAG21/quickref/#target-size)
-* When any user interface component receives focus, it does not initiate a change of context. [3.2.1 On Focus (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#on-focus)
-* Labels or instructions are provided when content requires user input. [3.3.2 Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#labels-or-instructions)
+* [2.4.7 Focus Visible (Level AA)](https://www.w3.org/WAI/WCAG21/quickref/#focus-visible)<br />
+  Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible.
+* [2.5.3 Label in Name (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#label-in-name)<br />
+  For user interface components with labels that include text or images of text, the name contains the text that is presented visually. 
+* [2.5.5 Target Size (Level AAA)](https://www.w3.org/WAI/WCAG21/quickref/#target-size)<br />
+  The size of the target for pointer inputs is at least 44 by 44 CSS pixels except when: 
+  * Equivalent: The target is available through an equivalent link or control on the same page that is at least 44 by 44 CSS pixels;
+  * Inline: The target is in a sentence or block of text;
+  * User Agent Control: The size of the target is determined by the user agent and is not modified by the author;
+  * Essential: A particular presentation of the target is essential to the information being conveyed.
+* [3.2.1 On Focus (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#on-focus)<br />
+  When any user interface component receives focus, it does not initiate a change of context. 
+* [3.2.2 On Input (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#on-input)<br />
+  Changing the setting of any user interface component does not automatically cause a change of context unless the user has been advised of the behavior before using the component.
+* [3.3.2 Labels or Instructions (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#labels-or-instructions)<br />
+  Labels or instructions are provided when content requires user input. 

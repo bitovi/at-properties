@@ -1,20 +1,144 @@
-import { Meta, Canvas, Source } from '@storybook/addon-docs/blocks';
+import { Meta, Preview, Source } from '@storybook/addon-docs/blocks';
 import dedent from 'ts-dedent';
 
 <Meta title="Pattern Library/Components/Social" />
 
 # Social
 
+* Icons are dark gray (Primary 900).
+* Focus and hover states:
+  * Facebook, Instagram, LinkedIn, Twitter, and YouTube change to their corporate color.
+  * The earth icon (for web sites) changes to a dark blue.
+  * Fair Housing and Realtor do not change color.
+* **Spacing**: Padding around icons increases their total touch target size to 44 x 44px.
+  * Mobile: icons are 24 x 24px + 10px padding (x2 sides = 20) = 44 x 44px touch target.<br />
+    (icon 1) 10px padding + 4px right margin + 10px padding (icon 2) = 24px between icons.
+  * Tablet/Desktop: icons are 32 x 32px + 6px padding (x2 sides = 12) = 44 x 44px touch target.<br />
+    (icon 1) 6px padding + 20px right margin + 6px padding (icon 2) = 32px between icons.
+  * No right margin on the last icon (`:last-child`).
+  * 32px betweeen the list of icons and anything above it (top margin).
+* **Animation**: The row of icons can fade in. Opacity changes from 0 to 1 at the same speed as the user scrolls (scrub). Each `<div class="dlp-social>` is given the class `.fade-in`: `<div class="dlp-social fade-in">` (*not* indicated in code example below). See [Animation](/?path=/docs/style-guide-animation--page).
+
+<Preview>
+<div className="grid grid-cols-2 gap-8">
+  <div>
+    <div className="dlp-social">
+      <a href="https://www.facebook.com/atproperties" target="blank" aria-label="Facebook">
+        <svg className="icon icon-facebook"><use href="images/icons/icons.svg#icon-facebook"></use></svg>
+      </a>
+      <a href="https://www.instagram.com/thadly_wong/" target="blank" aria-label="Instagram">
+        <svg className="icon icon-instagram"><use href="images/icons/icons.svg#icon-instagram"></use></svg>
+      </a>
+      <a href="https://www.linkedin.com/company/properties/" target="blank" aria-label="LinkedIn">
+        <svg className="icon icon-linkedin"><use href="images/icons/icons.svg#icon-linkedin"></use></svg>
+      </a>
+      <a href="https://twitter.com/properties" target="blank" aria-label="Twitter">
+        <svg className="icon icon-twitter"><use href="images/icons/icons.svg#icon-twitter"></use></svg>
+      </a>
+      <a href="https://www.youtube.com/user/AtPropertiesTV" target="blank" aria-label="YouTube">
+        <svg className="icon icon-youtube"><use href="images/icons/icons.svg#icon-youtube"></use></svg>
+      </a>
+      <a href="https://www.atproperties.com/" target="blank" aria-label="@properties web site">
+        <svg className="icon icon-earth"><use href="images/icons/icons.svg#icon-earth"></use></svg>
+      </a>
+    </div>
+  </div>
+  <div>
+    <div className="dlp-social">
+      <a href="https://www.us.hsbc.com/home-loans/equal-housing-lender/" target="blank" aria-label="Equal Housing Lender">
+        <svg className="icon icon-equal-housing"><use href="images/icons/icons.svg#icon-equal-housing"></use></svg>
+      </a>
+      <a href="https://www.nar.realtor/" target="blank" aria-label="Realtor">
+        <svg className="icon icon-realtor"><use href="images/icons/icons.svg#icon-realtor"></use></svg>
+      </a>
+    </div>
+  </div>
+</div>
+</Preview>
+
+## Brand guidelines
+
+Social "icons" are actually logos and must follow third-party brand guidelines like any other logo. Guidelines define not only the logo itself, but also its color, size, placement, and spacing. Please reference each brand's fair use guidelines.
+
+* **Facebook** - [https://en.facebookbrand.com/facebookapp/](https://en.facebookbrand.com/facebookapp/)
+* **Instagram** - [https://en.instagram-brand.com/](https://en.instagram-brand.com/)
+* **LinkedIn** - [https://brand.linkedin.com/](https://brand.linkedin.com/)
+* **Twitter** - [https://about.twitter.com/en_us/company/brand-resources.html](https://about.twitter.com/en_us/company/brand-resources.html)
+* **YouTube** - [https://www.youtube.com/about/brand-resources/#logos-icons-colors](https://www.youtube.com/about/brand-resources/#logos-icons-colors)
+* **HUD Equal Housing** - [https://www.hud.gov/library/bookshelf11/hudgraphics](https://www.hud.gov/library/bookshelf11/hudgraphics)
+* **National Association of Realtors** - [https://www.nar.realtor/logos-and-trademark-rules/the-realtor-logo](https://www.nar.realtor/logos-and-trademark-rules/the-realtor-logo)
+
 ## How to configure
 
 Define classes in **src/component/social/social.styles.scss**.
 
 <Source language='scss' code={dedent`
-  .class { }
+  /* Social */
+  .dlp-social {
+    margin: -10px;
+    @media (min-width: theme('screens.md')) {
+      margin: -6px;
+    }
+    a {
+      @apply inline-block;       /* display: inline-block; */
+      @apply mr-1;               /* margin-right: 4px; */
+      padding: 10px;
+      @apply duration-500;       /* transition-duration: 500ms; */
+      @media (min-width: theme('screens.md')) {
+        @apply mr-5;             /* margin-right: 20px; */
+        padding: 6px;
+      }
+    }
+    a:last-child {
+      @apply mr-0;               /* margin-right: 0; */
+    }
+    svg {
+      @apply text-primary-900;   /* color: theme('colors.primary.900'); */
+      @apply w-6;                /* width: 24px; */
+      @apply h-6;                /* height: 24px; */
+      @media (min-width: theme('screens.md')) {
+        @apply w-8;              /* width: 32px; */
+        @apply h-8;              /* height: 32px; */
+      }
+    }
+  }
+  * + .dlp-social {
+    @apply pt-8;                 /* padding-top: 32px; */
+  }
+  .icon-facebook {
+    &:hover, &:focus, &:active {
+      color: #1877F2;
+    }
+  }
+  .icon-instagram {
+    &:hover, &:focus, &:active {
+      color: #E4405F;
+    }
+  }
+  .icon-twitter {
+    &:hover, &:focus, &:active {
+      color: #1DA1F2;
+    }
+  }
+  .icon-linkedin {
+    &:hover, &:focus, &:active {
+      color: #0077B5;
+    }
+  }
+  .icon-youtube {
+    &:hover, &:focus, &:active {
+      color: #FF0000;
+    }
+  }
+  .icon-earth {
+    &:hover, &:focus, &:active {
+      color: #025A9A;
+    }
+  }
 `} />
 
 ## Accessibility considerations
 
 Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
 
-* asdf
+* Same guidelines as for [Iconography](/?path=/docs/style-guide-iconography--page).

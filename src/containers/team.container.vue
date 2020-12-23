@@ -61,8 +61,9 @@
 
         <section id="team-members" class="content-grid">
           <div class="col-span-full lg:col-span-14 lg:col-start-2 text-center">
-            <h2 class="head-5 text-center accent--below-center mb-12">Team Members</h2>
-
+            <h2 class="head-5 text-center accent--below-center accent--mb-0">Team Members</h2>
+          </div>
+          <div class="col-span-full lg:col-span-14 lg:col-start-2 text-center">
             <dlp-carousel
                 :options="{
                     spaceBetween: 32,

@@ -1,12 +1,21 @@
+/* Social */
 .dlp-social {
+  margin: -10px;
+  @media (min-width: theme('screens.md')) {
+    margin: -6px;
+  }
   a {
     @apply inline-block;       /* display: inline-block; */
-    @apply mr-6;               /* margin-right: 24px; */
-    padding: 4px;
+    @apply mr-1;               /* margin-right: 4px; */
+    padding: 10px;
     @apply duration-500;       /* transition-duration: 500ms; */
     @media (min-width: theme('screens.md')) {
-      @apply mr-8;             /* margin-right: 32px; */
+      @apply mr-5;             /* margin-right: 20px; */
+      padding: 6px;
     }
+  }
+  a:last-child {
+    @apply mr-0;               /* margin-right: 0; */
   }
   svg {
     @apply text-primary-900;   /* color: theme('colors.primary.900'); */
@@ -18,11 +27,9 @@
     }
   }
 }
-
 * + .dlp-social {
-    @apply mt-8;
+  @apply pt-8;                 /* padding-top: 32px; */
 }
-
 .icon-facebook {
   &:hover, &:focus, &:active {
     color: #1877F2;

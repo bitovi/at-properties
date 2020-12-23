@@ -6,11 +6,13 @@ import dedent from 'ts-dedent';
 # Heading
 
 * Headings are dark gray (Primary 900), Gotham Light (300) or Medium (500), various sizes (see below), 150% leading (line-height), 5 or 10% tracking (letter-spacing). 
-* [Accents](/?path=/story/style-guide-object-styles--page#accents) may be added to headings.
-* Level 1/2 headings used in the Agent, Co-Agent, and Team sections will scale to fit the available width. <span className="highlight">How is this done?</span>
+* **Styling**: [Accents](/?path=/story/style-guide-object-styles--page#accents) may be added to headings.
+* **Fit text**: Level 1 headings on mobile will scale to fit the available width. They have `font-size: 5vh;` instead of a fixed font-size.
+* **Spacing**: 24/32px between `.head-1` and `.head-5` on mobile/desktop.
+* **Animation**: Headings can fade in. Opacity changes from 0 to 1 at the same speed as the user scrolls (scrub). Each `<hX>` is given the class `.fade-in`: `<h2 class="head-1 fade-in">` (*not* indicated in code example below). See [Animation](/?path=/docs/style-guide-animation--page).
 
 <Preview>
-<div class="grid grid-cols-1">
+<div className="grid grid-cols-1">
   <h1 className="head-1">Heading Level 1</h1>
   <h2 className="head-2">Heading Level 2</h2>
   <h3 className="head-3">Heading Level 3</h3>
@@ -37,7 +39,7 @@ Define classes in **src/assets/type.styles.scss**.
     @apply font-medium;        /* font-weight: 500; */
     @apply tracking-widest;    /* letter-spacing: 0.10em; */
   }
-  .head-1 { @apply text-5xl; } /* font-size: 42px */
+  .head-1 { font-size: 5vh }   /* font-size: 5vh */
   .head-2 { @apply text-3xl; } /* font-size: 34px */
   .head-3 { @apply text-2xl; } /* font-size: 28px */
   .head-4 { @apply text-xl; }  /* font-size: 24px */
@@ -64,4 +66,5 @@ Define classes in **src/assets/type.styles.scss**.
 
 Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
 
-* NEED TO ADD
+* Same guidelines as for [Color](/?path=/docs/style-guide-color--page).
+* Same guidelines as for [Typography](/?path=/docs/style-guide-typography--page).

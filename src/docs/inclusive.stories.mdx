@@ -1,4 +1,4 @@
-import { Meta, Canvas, Source } from '@storybook/addon-docs/blocks';
+import { Meta, Preview, Source } from '@storybook/addon-docs/blocks';
 import dedent from 'ts-dedent';
 
 <Meta title="Style Guide/Inclusive Design" />
@@ -12,6 +12,8 @@ Whenever possible, this design system includes relevant [WCAG 2.1 guidelines](ht
 ## Accessibility considerations
 
 Additional [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
+
+**Sensory Characteristics**
 
 * [1.3.3 Sensory Characteristics (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#sensory-characteristics)<br />
   Instructions provided for understanding and operating content do not rely solely on sensory characteristics of components such as shape, color, size, visual location, orientation, or sound. 
@@ -29,6 +31,38 @@ Additional [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
   * Turn off: A mechanism is available to turn the shortcut off; 
   * Remap: A mechanism is available to remap the shortcut to include one or more non-printable keyboard keys (e.g., Ctrl, Alt); 
   * Active only on focus: The keyboard shortcut for a user interface component is only active when that component has focus. 
+
+**Input Modalities**
+
+* [2.5.1 Pointer Gestures (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#pointer-gestures)<br />
+  All functionality that uses multipoint or path-based gestures for operation can be operated with a single pointer without a path-based gesture, unless a multipoint or path-based gesture is essential.
+* [2.5.2 Pointer Cancellation (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#pointer-cancellation)<br />
+  For functionality that can be operated using a single pointer, at least one of the following is true: 
+  * No Down-Event: The down-event of the pointer is not used to execute any part of the function;
+  * Abort or Undo: Completion of the function is on the up-event, and a mechanism is available to abort the function before completion or to undo the function after completion;
+  * Up Reversal: The up-event reverses any outcome of the preceding down-event;
+  * Essential: Completing the function on the down-event is essential.
+* [2.5.3 Label in Name (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#label-in-name)<br />
+  For user interface components with labels that include text or images of text, the name contains the text that is presented visually.
+* [2.5.4 Motion Actuation (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#motion-actuation)<br />
+  Functionality that can be operated by device motion or user motion can also be operated by user interface components and responding to the motion can be disabled to prevent accidental actuation, except when: 
+  * Supported Interface: The motion is used to operate functionality through an accessibility supported interface;
+  * Essential: The motion is essential for the function and doing so would invalidate the activity.
+* [2.5.5 Target Size (Level AAA)](https://www.w3.org/WAI/WCAG21/quickref/#target-size)<br />
+  The size of the target for pointer inputs is at least 44 by 44 CSS pixels except when: 
+  * Equivalent: The target is available through an equivalent link or control on the same page that is at least 44 by 44 CSS pixels;
+  * Inline: The target is in a sentence or block of text;
+  * User Agent Control: The size of the target is determined by the user agent and is not modified by the author;
+  * Essential: A particular presentation of the target is essential to the information being conveyed.
+* [2.5.6 Concurrent Input Mechanisms (Level AAA)](https://www.w3.org/WAI/WCAG21/quickref/#concurrent-input-mechanisms)<br />
+  Web content does not restrict use of input modalities available on a platform except where the restriction is essential, required to ensure the security of the content, or required to respect user settings.
+
+**Predictable**
+
+* [3.2.4 Consistent Identification (Level AA)](https://www.w3.org/WAI/WCAG21/quickref/#consistent-identification)<br />
+  Components that have the same functionality within a set of Web pages are identified consistently
+* [3.2.5 Change on Request (Level AAA)](https://www.w3.org/WAI/WCAG21/quickref/#change-on-request)<br />
+  Changes of context are initiated only by user request or a mechanism is available to turn off such changes.
 
 **Valid Code**
 

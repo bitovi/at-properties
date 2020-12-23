@@ -1,0 +1,70 @@
+import { Meta, Preview, Source } from '@storybook/addon-docs/blocks';
+import dedent from 'ts-dedent';
+
+<Meta title="Pattern Library/Components/Rating" />
+
+# Rating
+
+* Ratings are part of [Testimonial](/?path=/docs/pattern-library-components-testimonial--page).
+* Icons are red (Secondary 500), 20 x 20px.
+* **Spacing**:
+  * 12px between icons. No right margin on the last icon (`:last-child`).
+  * 16px above, 24px below each star rating, except the last rating (`:last-child`).
+* **Accessibility**: Notice that each `span` has `aria-hidden="true"` and the `.dlp-rating` wrapper has `role="img"` and `aria-label="Rated N out of M stars"`.
+* **Animation**: See [Testimonial](/?path=/docs/pattern-library-components-testimonial--page).
+
+<Preview>
+<div className="dlp-rating" role="img" aria-label="Rated 5 out of 5 stars">
+  <span aria-hidden="true">
+    <svg className="icon-star"><use href="images/icons/icons.svg#icon-star"></use></svg>
+  </span>
+  <span aria-hidden="true">
+    <svg className="icon-star"><use href="images/icons/icons.svg#icon-star"></use></svg>
+  </span>
+  <span aria-hidden="true">
+    <svg className="icon-star"><use href="images/icons/icons.svg#icon-star"></use></svg>
+  </span>
+  <span aria-hidden="true">
+    <svg className="icon-star"><use href="images/icons/icons.svg#icon-star"></use></svg>
+  </span>
+  <span aria-hidden="true">
+    <svg className="icon-star"><use href="images/icons/icons.svg#icon-star"></use></svg>
+  </span>
+</div>
+</Preview>
+
+## How to configure
+
+Define classes in **src/component/rating/rating.styles.scss**.
+
+<Source language='scss' code={dedent`
+  /* Rating */
+  .dlp-rating {
+    @apply flex;                 /* display: flex; */
+    @apply flex-row;             /* flex-direction: row; */
+    @apply mt-4;                 /* margin-top: 16px; */
+    @apply mb-6;                 /* margin-bottom: 24px; */
+    .dlp-testimonial:last-child & {
+      @apply mb-0;               /* margin-bottom: 0px; */
+    }
+    span {
+      @apply mr-3;               /* margin-right: 12px; */
+    }
+    span:last-child {
+      @apply mr-0;               /* margin-right: 0px; */
+    }
+    svg {
+      @apply w-5;                /* width: 20px; */
+      @apply h-5;                /* height: 20px; */
+    }
+  }
+  .icon-star {
+    @apply text-secondary-500;   /* color: theme('colors.secondary.500'); */
+  }
+`} />
+
+## Accessibility considerations
+
+Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
+
+* Same guidelines as for [Iconography](/?path=/docs/style-guide-iconography--page).

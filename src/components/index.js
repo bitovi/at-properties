@@ -6,7 +6,7 @@ import Rating from './rating/rating.component'
 import TitlePage from './title/title.page'
 import Social from './social/social.component'
 import Carousel from './carousel/carousel.component.vue'
-import FlatScroll from './flatScroll/flatScroll.component.vue'
+// import FlatScroll from './flatScroll/flatScroll.component.vue'
 import Timeline from './timeline/timeline.component.vue'
 import TimelineItem from './timeline/timelineItem.component.vue'
 
@@ -48,9 +48,8 @@ Vue.component(TitlePage.name, TitlePage)
 
 Vue.component(Social.name, Social)
 
-
 Vue.component(Carousel.name, Carousel)
-Vue.component(FlatScroll.name, FlatScroll)
+// Vue.component(FlatScroll.name, FlatScroll)
 Vue.component(Timeline.name, Timeline)
 Vue.component(TimelineItem.name, TimelineItem)
 
@@ -74,7 +73,7 @@ export {
     Timeline,
     TimelineItem,
     Transition,
-    FlatScroll,
+    // FlatScroll,
     VideoCard
 }
 

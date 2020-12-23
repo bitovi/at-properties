@@ -92,7 +92,7 @@
                 <a href="#agent" class="self-end scroll-wrapper" ref="scrollWrapper" :class="[{ 'hide': isAnimated}]">
                     <p class="scroll">Scroll to continue</p>
                     <img 
-                        alt="Scroll to continue" 
+                        alt="Down arrow" 
                         ref="iconArrow" 
                         class="mx-auto" 
                         :class="[{ 'hide': isAnimated}]"

@@ -20,9 +20,7 @@
                     {{srHeading}}
                 </h1>
                 <dlp-button @click.stop="close" :icon='true'>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Close">
-                        <path class="shape" fill-rule="evenodd" clip-rule="evenodd" d="M16 1.61143L14.3886 0L8 6.38857L1.61143 0L0 1.61143L6.38857 8L0 14.3886L1.61143 16L8 9.61143L14.3886 16L16 14.3886L9.61143 8L16 1.61143Z"/>
-                    </svg>
+                    <svg role="img" aria-label="Close"><use xlink:href="images/icons/icons.svg#icon-close"></use></svg>
                 </dlp-button>
             </nav>
             <div class="dlp-slide-in-content" ref="modalContent">

@@ -8,12 +8,12 @@ import dedent from 'ts-dedent';
 * As soon as the page loads, the animation starts. <span className="highlight">Include a delay? Check that the bg image and SVGs have loaded?</span>
 * The background image scales down from 150% to 100% over 4.5 seconds (timeline 1).
 * Meanwhile (timeline 2), after a delay of 700ms, 
-* The border fades in over 700ms.
-* The @properties logo fades in and slides up over 700ms.
+* The border fades in at the same speed as the user scrolls (scrub).
+* The @properties logo fades in and slides up at the same speed as the user scrolls (scrub).
 * The word "love" (or an alternative SVG) writes itself (each letter has its own timing).
-* The "presented by" text fades in and slides up over 700ms.
-* The "scroll to continue" text fades in and slides up over 700ms.
-* The arrow fades in and slides *down* over 700ms.
+* The "presented by" text fades in and slides up at the same speed as the user scrolls (scrub).
+* The "scroll to continue" text fades in and slides up at the same speed as the user scrolls (scrub).
+* The arrow fades in and slides *down* at the same speed as the user scrolls (scrub).
 * The arrow moves up and down on an infinite loop. <span className="highlight">Should we change this to 5X instead?</span>
 * Scrolling is disabled while the animation is running. All subsequent sections are hidden using `display: none`. 
 * Once the animation finishes, scrolling is enabled. All subsequent sections are made visible using `display: block`.
