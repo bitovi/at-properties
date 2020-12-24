@@ -1,4 +1,4 @@
-.dlp-video-modal-wrapper {
+.dlp-video-modal__wrapper {
     @apply fixed;
     @apply top-0;
     @apply left-0;
@@ -28,7 +28,7 @@
     @apply h-full;
     @apply mx-auto;
     width: 100%;
-    z-index: 1;
+    // z-index: 1;
     @media screen and (orientation:landscape) and (max-width: theme('screens.md')) {
         width: 60%;
     }

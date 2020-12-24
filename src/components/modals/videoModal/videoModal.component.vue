@@ -1,7 +1,7 @@
 
 <template>
     <div 
-        class="dlp-video-modal-wrapper" 
+        class="dlp-video-modal__wrapper" 
         @click.self="close" 
         v-if="showModal"
         role="dialog"

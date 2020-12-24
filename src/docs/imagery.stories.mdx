@@ -5,42 +5,55 @@ import dedent from 'ts-dedent';
 
 # Imagery
 
-The page includes several types of images.
+The DLP page includes several types of images.
 
-* Logos: @properties, Agency, Partner
-* Background images for section intros
-* Agent profile photos
-* Agency logos
-* Property photos
-* Editorial images
+* Background image for the [Header, aka. Title](/?path=/story/pattern-library-containers-header--page).
+* Background images for [Section Intros](/?path=/story/pattern-library-containers-section-intro--page).
+* Logos: [@properties](#properties-logos), [Agency](#agency-logos), [Partner](#partner-logos), and [Social](/?path=/story/pattern-library-components-social--page#brand-guidelines) logos.
+* Agent profile photos. See [Figure](/?path=/story/pattern-library-components-figure--page).
+* Editorial images. See [Figure](/?path=/story/pattern-library-components-figure--page).
+* Property photos. See [Property](/?path=/story/pattern-library-components-property--page).
 
-IMAGE HERE
+## @properties logos
 
-## @Properties Logos
+* @properties logos appear in the [Header, aka. Title](/?path=/story/pattern-library-containers-header--page#properties-logo), [Navigation](/?path=/story/pattern-library-containers-navigation--page#properties-logo), and [Footer](/?path=/story/pattern-library-containers-footer--page#properties-logo). See individual components for image sizes.
+* The same SVG file will be used everywhere: **public/images/intro/logo-atproperties.svg**.
 
-* @properties logos appear in the [Header, aka. Title](), [Navigation](), and [Footer](). See individual components for image sizes.
-* Logos will be SVG to make them easy to scale.
+## Agency logos
+
+* Agency logos appear in the Agent, Co-Agent, and Team sections. 
+* Image files are in **public/images/agent/**, **../co-agent/**, and **../team/**.
+* They may be JPG or PNG.
+* Logos are horizontally centered and have a max-width of 150/200px mobile/desktop.
+* **Spacing**: 64/80px between the agency logo and the agent profile photo on mobile/desktop.
 
 <Preview>
-<div className="w-1/2 mx-auto">
-  <img src="images/intro/logo-atproperties.svg" className="w-full" alt="@properties" />
+<div class="content-grid">
+  <div class="col-span-full lg:col-span-14 lg:col-start-2">
+    <img src="images/agent/logo-carrie-mccormick-sm.jpg" alt="Carrie McCormick Real Estate Group" class="mx-auto logo--agency" />
+  </div>
 </div>
 </Preview>
 
-## Agency Logos
+Define the class in **src/assets/object.styles.scss**.
 
-* Agency logos appear in the Agent, Co-Agent, and Team sections.
-* They may be JPG or PNG.
-* Talk about min and max size.
+<Source language='scss' code={dedent`
+  /* Agency logo */
+  .logo--agency {
+    max-width: 150px;
+    @apply mb-8;              /* margin-bottom: 32px; + 32 = 64 mobile, + 48 = 80 desktop */
+    @media (min-width: theme('screens.lg')) {
+      max-width: 200px;
+    }
+  }
+`} />
 
-## Partner Logos
+## Partner logos
 
-* Partner logos appear in the Partner Carousel in the Partner section.
-* Partner logos are 000 x 000px mobile, 000 x 000px desktop.
-
-## Photography and Mood
-
-NEED CONTENT HERE? Example: [https://brand.uber.com/guide#photography-overview](https://brand.uber.com/guide#photography-overview)
+* Partner logos appear in the Partner section. See [Partner Carousel](/?path=/story/pattern-library-components-carousel--page#marketing-assets--partners).
+* Image files are in **public/images/public/**.
+* They may be SVG (preferred), JPG, or PNG.
+* Logos are vertically and horizontally centered and have a max-width of 302px.
 
 ## Image sizes
 
@@ -58,30 +71,38 @@ For performance reasons, some images will have small, medium, and large versions
   </thead>
   <tbody>
     <tr>
-      <td>Section intro background images</td>
-      <td>416 x 800 px</td>
-      <td>768 x 1024 px</td>
-      <td>1920 x 1200 px</td>
-      <td>2560 x 1600 px</td>
+      <td>Background images for <br />Header and Section Intros</td>
+      <td>416 x 800 px <br />832 x 1600 px Retina</td>
+      <td>768 x 1024 px <br />1536 x 2048 px Retina</td>
+      <td>1920 x 1200 px <br />3840 x 4096 px Retina</td>
+      <td>2560 x 1600 px <br />5120 x 3200 px Retina</td>
+    </tr>
+    <tr>
+      <td>@properties logo</td>
+      <td colspan="4">SVG will scale to any size</td>
+    </tr>
+    <tr>
+      <td>Agency logos</td>
+      <td colspan="2">150 px max-width <br />300 px Retina</td>
+      <td colSpan="2">200 px max-width <br />400 px Retina</td>
+    </tr>
+    <tr>
+      <td>Partner logos</td>
+      <td colspan="4">SVG preferred, otherwise <br />302 px max-width <br />604 px Retina</td>
     </tr>
     <tr>
       <td>Agent profile photos (4:5)</td>
-      <td>768 x 960 px</td>
-      <td colSpan="3">640 x 800 px</td>
-    </tr>
-    <tr>
-      <td>Agency logos (5:4)</td>
-      <td>384 x 304 px</td>
-      <td colSpan="3">288 x 224 px</td>
-    </tr>
-    <tr>
-      <td>Property photos (4:3)</td>
-      <td>320 x 240 px</td>
-      <td colSpan="3">240 x 180 px</td>
+      <td>768 x 960 px <br />1536 x 1920 px Retina</td>
+      <td colSpan="3">640 x 800 px <br />1280 x 1600 px Retina</td>
     </tr>
     <tr>
       <td>Editorial images (4:3)</td>
-      <td colSpan="4">672 x 504 px</td>
+      <td colSpan="4">672 x 504 px <br />1344 x 1008 px Retina</td>
+    </tr>
+    <tr>
+      <td>Property photos (4:3)</td>
+      <td>320 x 240 px <br />640 x 480 px Retina</td>
+      <td colSpan="3">240 x 180 px <br />480 x 360 px Retina</td>
     </tr>
   </tbody>
 </table>
@@ -135,13 +156,6 @@ Images can be cropped (via CSS and HTML code) to the following aspect ratios: **
 
 **However**, there is also a rule coded into CSS that images can never exceed 80% of the viewport height. For example, an image with a tall aspect ratio like 2:3 in a layout spanning 6 columns would be very tall on large, wide (desktop) screens. In this case, it would be cropped to never exceed 80% of the viewport height (`min(80vh`), which would change the original 2:3 aspect ratio.
 
-Retina displays
-
-`<img src="low-res.jpg" srcset="high-res.jpg 2x">`
-[Retina Display image assets](https://www.elegantthemes.com/blog/tips-tricks/how-to-create-retina-display-image-assets-for-better-looking-websites)
-
-## How to configure
-
 Define classes in **src/assets/util.styles.scss**.
 
 <Source language='scss' code={dedent`
@@ -189,7 +203,15 @@ Define classes in **src/assets/util.styles.scss**.
 
 ## Writing alt text
 
-* When writing image descriptions, describe the style of the home and any distinguising features. 
+Images should have a descriptive and accessible text alternative.
+* Background images (i.e., Header, Section Intro, Company Stats) do not require a text alternative if they are purely decorative. <br />Use `alt=""` or just `alt` and `aria-hidden="true"`.
+* Logos should identify the company name. If there is confusion between an agent name and an agency name, add "real estate". Example: "Olivia Carlson" (agent) vs. "Olivia Carlson Real Estate" (agency).
+* Agent profile photos should identify the person(s): `alt="Firstname Lastname"` or 
+`"Our team at Company Name"`.
+* Editorial images should:
+  * Describe what the image shows in 120 characters or less (ideally). It’s OK for more complex images to have longer descriptions.
+  * A well-written text description will find very similar images if used as a Google Images search query. Examples: `"Man presenting whiteboard ideas to his team"` or `"Aerial view of a neighborhood with saltbox houses"`.
+* Property images should describe the home. Examples: `"A modern glass facade home"` or `"A craftsman style country estate"`.
 
 ## Accessibility considerations
 

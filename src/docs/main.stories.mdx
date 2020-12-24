@@ -5,8 +5,9 @@ import dedent from 'ts-dedent';
 
 # Main Content
 
-* Main content is divided into sections (e.g., Agent, Co-Agent, Team, etc.). Each section is coded as `article`.
-* The Contact section includes legal disclaimers. It is coded as `footer`. See [Footer](/?path=/story/pattern-library-containers-footer--page).
+* Main content is divided into sections (e.g., Agent, Co-Agent, Team, etc.). 
+* Each section is coded as `article` and nested inside `main`.
+* The Contact section includes legal disclaimers. It is coded as `footer` and sits outside of `main`. See [Footer](/?path=/story/pattern-library-containers-footer--page).
 * Some sections have a 1px light gray (Primary 200) divider between them (i.e., `.section-divider`). Specifically, Agent | Co-Agent | Team... Community | Footer. See [Section Content](/?path=/story/pattern-library-containers-section-content--page).
 * Some sections have an intro (e.g., Company, Technology, Marketing); others do not (e.g., Co-Agent, Team, Contact). 
 * Each intro is coded as a `header` for that `article`. See [Section Intro](/?path=/story/pattern-library-containers-section-intro--page).
@@ -14,29 +15,29 @@ import dedent from 'ts-dedent';
 
 ## Example: Selling
 
-Example code for the Selling section. *Note*: code is abbreviated for simplicity (e.g., no end/closing tags).
+Example code for the Selling section. *Note*: The following code has been abbreviated for simplicity (e.g., no end/closing tags).
 
 <Source language='html' code={dedent`
   <!-- Selling section -->
   <article id="selling">
     <!-- section INTRO, aka. “intro slide” -->
-    <header className="section-intro">  
+    <header class="section-intro">  
     <!-- section CONTENT: adds left and right borders, applies consistent padding -->
-    <div className="section-content"> 
+    <div class="section-content"> 
       <!-- SUB-SECTION -->
       <section id="pricing">
         <!-- content GRID: sets max-width and provides a grid that content will align to -->
-        <div className="content-grid">
+        <div class="content-grid">
           <!-- COLUMNS of content: classes are used to specify order, column span, and alignment -->
-          <div className="order-1 md:order-2 col-span-4 md:col-span-6 md:col-start-7 lg:col-span-7 lg:col-start-9">
-          <div className="order-2 md:order-1 col-span-4 md:col-span-6 md:col-start-1 lg:col-span-6 lg:col-start-2">
+          <div class="order-1 md:order-2 col-span-4 md:col-span-6 md:col-start-7 lg:col-span-7 lg:col-start-9">
+          <div class="order-2 md:order-1 col-span-4 md:col-span-6 md:col-start-1 lg:col-span-6 lg:col-start-2">
       <!-- SUB-SECTION -->
       <section id="staging">
         <!-- content GRID: sets max-width and provides a grid that content will align to -->
-        <div className="content-grid">
+        <div class="content-grid">
           <!-- COLUMNS of content: classes are used to specify order, column span, and alignment -->
-          <div className="col-span-4 md:col-span-6 md:col-start-7 lg:col-span-7 lg:col-start-9">
-          <div className="col-span-4 md:col-span-6 md:col-start-1 lg:col-span-6 lg:col-start-2">
+          <div class="col-span-4 md:col-span-6 md:col-start-7 lg:col-span-7 lg:col-start-9">
+          <div class="col-span-4 md:col-span-6 md:col-start-1 lg:col-span-6 lg:col-start-2">
 `} />
 
 <img src="images/styleguide/selling.jpg" alt="Comps for Selling section" className="w-full" />

@@ -1,9 +1,8 @@
 <template>
     <div
         ref="figWrapper"
-        class="dlp-figure-wrapper" 
+        class="dlp-figure__wrapper" 
         :class="[{ 'pinned': isSticky }, {'hide': isAnimated}]">
-        <div v-if="showBorder" class="dlp-figure-border"></div>
         <figure 
             v-bind="$attrs" 
             class="dlp-figure" 
@@ -17,9 +16,11 @@
                     :alt="alt" 
                     :src="defaultImage" />
             </picture>
-            <figcaption v-if="caption" class="dlp-figure-caption head-6 accent--below-center">
-                {{ caption }}
-            </figcaption>
+            <div v-if="showBorder" class="dlp-figure__border">
+              <figcaption v-if="caption" class="hidden md:block dlp-figure__caption head-6 accent--below-center">
+                  {{ caption }}
+              </figcaption>
+            </div>
         </figure>
     </div>
 </template>

@@ -1,6 +1,6 @@
 <template>
     <component
-        class="dlp-transition-wrapper"
+        class="dlp-transition__wrapper"
         :is="tagName"
         v-bind="$attrs"
         v-on="$listeners"

@@ -1,27 +1,24 @@
-
+/* Video Thumbnail */
 .dlp-video-card {
-  @apply relative;
+  @apply relative;           /* position: relative; */
   cursor: pointer;
-
   &:focus, &:hover {
-    .dlp-video-card--overlay {
-      opacity: 1;
+    .dlp-video-card__overlay {
+      @apply opacity-100;    /* opacity: 1; */
     }
   }
-
-  .dlp-video-card--overlay {
-    @apply absolute;
-    @apply top-0;
-    @apply flex;
-    @apply items-center;
-    @apply justify-center;
-    @apply w-full;
-    @apply h-full;
-    opacity: 0.75;
+  .dlp-video-card__overlay {
+    @apply absolute;         /* position: absolute; */
+    @apply top-0;            /* top: 0; */
+    @apply flex;             /* display: flex; */
+    @apply items-center;     /* align-items: center; */
+    @apply justify-center;   /* justify-content: center; */
+    @apply w-full;           /* width: 100%; */
+    @apply h-full;           /* height: 100%; */
+    @apply opacity-75;       /* opacity: 0.75; */
     transition: opacity 0.3s;
   }
 }
-
 .icon-play {
   @apply w-12;               /* width: 48px; */
   @media (min-width: theme('screens.lg')) {

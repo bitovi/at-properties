@@ -5,22 +5,29 @@ import dedent from 'ts-dedent';
 
 # Video Thumbnail
 
-* Video thumbnails use a **16:9** aspect ratio, have a border, and include a play icon.
+* A video thumbnail is a [Figure](/?path=/docs/pattern-library-components-figure--page) with an additional overlay for the play icon.
+* Video thumbnails use a **16:9** [aspect ratio](/?path=/docs/style-guide-imagery--page#aspect-ratios).
 * The play icon is 75% white by default, 100% white on `:focus` and `:hover`. 
-* The play icon is 48px wide on mobile/tablet; 128px wide on desktop.
+* The play icon is centered vertically and horizontally; 48px wide on mobile/tablet; 128px wide on desktop.
+* **Accessibility**: Notice that `.dlp-video-card` uses `aria-label="Watch video: ..."`. Read more about [writing alt text](/?path=/story/style-guide-imagery--page#writing-alt-text).
+* **Animation**: All images scale down (shrink) on scroll down. Images can also fade in. Each `<figure>` can be given the class `.fade-in` (*not* indicated in code example below). See [Animation](/?path=/docs/style-guide-animation--page).
+  * Shrink: Scale changes from 1.1 to 1 at the same speed as the user scrolls (scrub). 
+  * Fade (optional): Opacity changes from 0 to 1 at the same speed as the user scrolls (scrub). 
 
 <Preview>
-<div className="w-1/2">
-  <figure>
-    <picture className="ar ar--16-9">
-      <img src="images/community/video-thumb.jpg" alt="" />
-    </picture>
-    <div className="img__border">
-      <div className="video-thumbnail">
-        <svg class="icon-play"><use href="images/icons/icons.svg#icon-play"></use></svg>
-      </div>
-    </div>
-  </figure>
+<div className="dlp-video-card w-2/3" aria-label="Watch video: Cutting Edge Technology">
+  <div className="dlp-figure__wrapper">
+    <div className="dlp-figure-border"></div>
+    <figure className="dlp-figure ar ar--16-9">
+      <picture>
+        <source media="(min-width:1280px)" srcset="images/technology/laptop-lg.jpg" />
+        <img src="images/technology/laptop-lg.jpg" alt="Man's hands resting on a laptop" />
+      </picture>
+    </figure>
+  </div>
+  <div className="dlp-video-card__overlay">
+    <svg className="icon-play"><use href="images/icons/icons.svg#icon-play"></use></svg>
+  </div>
 </div>
 </Preview>
 
@@ -29,14 +36,25 @@ import dedent from 'ts-dedent';
 Define classes in **src/components/cards/videoCard/videoCard.styles.scss**.
 
 <Source language='scss' code={dedent`
-  /* Video Thumbnail */ 
-  .video-thumbnail {
-    @apply self-center;        /* align-self: center; */
-    @apply text-white;         /* color: theme('colors.white'); */
-    @apply justify-self-center;  /* justify-self: center; */
-    @apply opacity-75;         /* opacity: 0.75; */
+  /* Video Thumbnail */
+  .dlp-video-card {
+    @apply relative;           /* position: relative; */
+    cursor: pointer;
     &:focus, &:hover {
-      @apply opacity-100;      /* opacity: 1; */
+      .dlp-video-card__overlay {
+        @apply opacity-100;    /* opacity: 1; */
+      }
+    }
+    .dlp-video-card__overlay {
+      @apply absolute;         /* position: absolute; */
+      @apply top-0;            /* top: 0; */
+      @apply flex;             /* display: flex; */
+      @apply items-center;     /* align-items: center; */
+      @apply justify-center;   /* justify-content: center; */
+      @apply w-full;           /* width: 100%; */
+      @apply h-full;           /* height: 100%; */
+      @apply opacity-75;       /* opacity: 0.75; */
+      transition: opacity 0.3s;
     }
   }
   .icon-play {
@@ -44,6 +62,7 @@ Define classes in **src/components/cards/videoCard/videoCard.styles.scss**.
     @media (min-width: theme('screens.lg')) {
       @apply w-32;             /* width: 128px; */
     }
+    @apply text-white;         /* color: theme('colors.white'); */
   }
 `} />
 
@@ -51,5 +70,4 @@ Define classes in **src/components/cards/videoCard/videoCard.styles.scss**.
 
 Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
 
-* Same guidelines as for [Imagery](/?path=/docs/style-guide-imagery--page). See [writing alt text](/?path=/docs/style-guide-imagery--page#writing-alt-text). 
-* <span className="highlight">Need to discuss what element alt text will be attached to. Also, use alt or aria-label, not title.</span>
+* Same guidelines as for [Imagery](/?path=/docs/style-guide-imagery--page). See [writing alt text](/?path=/docs/style-guide-imagery--page#writing-alt-text).

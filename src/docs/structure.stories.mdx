@@ -5,9 +5,7 @@ import dedent from 'ts-dedent';
 
 # Structure
 
-The page follows a semantic structure using HTML5 tags. *Note*: code is abbreviated for simplicity (e.g., no end/closing tags).
-
-<span class="highlight">Need to ensure code follows this structure, then delete this comment.</span>
+The page follows a semantic structure using HTML5 tags. *Note*: The following code has been abbreviated for simplicity (e.g., no end/closing tags).
 
 <Source language='html' code={dedent`
   <head>
@@ -17,7 +15,7 @@ The page follows a semantic structure using HTML5 tags. *Note*: code is abbrevia
       <a href="#main" class="skip-link">Skip to main content</a>
       <header class="dlp-title">
       <nav class="dlp-nav">
-      <main id="main" class="dlp-main">
+      <main class="dlp-main">
         <article id="agent">
         <article id="co-agent">
         <article id="team">
@@ -29,7 +27,6 @@ The page follows a semantic structure using HTML5 tags. *Note*: code is abbrevia
         <article id="partners">
         <article id="community">
       <footer class="dlp-footer">
-      <div class="dlp-modal">
 `} />
 
 ## Page Title
@@ -38,15 +35,13 @@ The page follows a semantic structure using HTML5 tags. *Note*: code is abbrevia
 
 Page titles should be descriptive. Follow this template:
 
-<Source language='scss' code={dedent`
+<Source language='html' code={dedent`
   <title>[Firstname Lastname] - [City, State Abbreviation], Luxury Real Estate Agent - [Company Name]<title>
 `} />
 
 ## Skip Link
 
-Skip links are a recommended accessibility best practice. They are invisible until focus is brought to them. (Tab to the skip link to see it.)
-
-<span class="highlight">Style defined below is being overwritten. Fix later.</span>
+Skip links are a recommended accessibility best practice. They are invisible until focus is brought to them. (Tab to the skip link to see it.) <span class="highlight"><em>Note</em>: There is no skip link in the prototype at present.</span>
 
 <Preview>
 <div className="relative overflow-y-scroll border border-primary-900 text-base">
@@ -102,46 +97,65 @@ See [Modal](/?path=/story/pattern-library-containers-modal--page) and [Video Mod
 
 ## Layers
 
-Content will stack along the `z-index` in the following order. <span class="highlight">Need to update this.</span>
+Content will stack along the `z-index` in the following order.
 
 <table>
   <thead>
     <tr>
-      <th className="w-1/5">z-index</th>
-      <th className="w-1/5">Item</th>
-      <th className="w-3/5">Description</th>
+      <th className="whitespace-no-wrap">z-index</th>
+      <th>File</th>
+      <th>Item</th>
+      <th>Description</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>1</td>
+      <td>-1</td>
+      <td><strong>src/assets/dev.styles.scss</strong></td>
       <td><code>#grids</code></td>
-      <td>Used to check alignment during development <em>only</em>.<br /><u>Remove from production/public code</u>.</td>
+      <td>Layout grids used to check alignment during development <em>only</em>.<br /><u>Remove from production/public code</u>.</td>
     </tr>
     <tr>
-      <td>2</td>
-      <td><code>main.dlp-main</code></td>
-      <td>Main content area.</td>
+      <td>10</td>
+      <td><strong>src/components/carousel/carousel.styles.scss</strong></td>
+      <td><code>.swiper-scrollbar-drag</code></td>
+      <td>Carousel</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td><strong>src/stat.styles.scss</strong></td>
+      <td><code>.stat-img__border</code></td>
+      <td>Statistics</td>
     </tr>
     <tr>
       <td>30</td>
-      <td><code>nav.dlp-nav</code></td>
-      <td>Navigation, stuck to the bottom of the screen.</td>
+      <td><strong>src/components/figure/figure.styles.scss</strong></td>
+      <td><code>.dlp-figure__border</code></td>
+      <td>Figure - (inner) border</td>
     </tr>
     <tr>
-      <td>?</td>
-      <td><code>header.dlp-title</code></td>
-      <td>Title: animated intro to the page.</td>
+      <td>100</td>
+      <td><strong>src/components/nav/nav.styles.scss</strong></td>
+      <td><code>.dlp-nav</code></td>
+      <td>Navigation</td>
     </tr>
     <tr>
-      <td>?</td>
-      <td><code>a.skip-link</code></td>
-      <td>Skip link.</td>
+      <td>1000</td>
+      <td><strong>src/containers/title.container.vue</strong></td>
+      <td><code>.title</code></td>
+      <td>Header, aka. Title</td>
     </tr>
     <tr>
       <td>9998</td>
-      <td><code>div.dlp-modal</code></td>
-      <td>Modals.</td>
+      <td><strong>src/components/modals/</strong> <br />
+      <strong>.. appearModal/appearModal.styles.scss</strong> <br />
+      <strong>.. videoModal/videoModal.styles.scss</strong></td>
+      <td><br />
+      <code>.dlp-slide-in__wrapper</code> <br />
+      <code>.dlp-video-modal__wrapper</code></td>
+      <td><br />
+      Modal wrapper <br />
+      Video modal wrapper</td>
     </tr>
   </tbody>
 </table>
