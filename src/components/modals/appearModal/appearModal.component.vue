@@ -1,6 +1,6 @@
 <template>
     <div 
-        class="dlp-slide-in-wrapper"
+        class="dlp-slide-in__wrapper"
         ref="slideWrapper"
         v-if="showModal"
         role="dialog"

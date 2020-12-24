@@ -1,65 +1,16 @@
-
-.dlp-figure-wrapper {
-    @apply relative;
-    overflow: hidden;
-    .dlp-figure {
-        @apply relative;
-    }
-
-    &.dark-text .dlp-figure-caption {
-        color: theme('colors.primary.900');
-    }
-
-    &.pinned {
-        @apply sticky;
-        top: theme('spacing.8')
-    } 
-
-    //pre-load animation
-    &.hide {
-        opacity: 0;
-    }
-
-    .dlp-figure-border {
-        @apply absolute;
-        @apply w-full;
-        @apply h-full;
-        z-index: 30;
-        outline: 1px solid #FFFFFF;
-        outline-offset: -8px;
-        @media (min-width: theme('screens.md')) {
-            outline-offset: -12px;
-        }
-    }
-
-    img,
-    picture {
-        width: 100%;
-    }
-
-    .dlp-figure-caption {
-        @apply absolute;
-        @apply bottom-0;
-        color: theme('colors.white');
-        display: none;
-        width: 100%;
-        text-align: center;
-        padding-bottom: theme('spacing.8');
-        
-        
-        @media (min-width: theme('screens.md')) {
-            display: block;
-        }
-    }
-}
-
-/* Hanna: adding my classes here */ 
-
 /* Figure */ 
-figure {
+.dlp-figure__wrapper, 
+.dlp-figure {
   @apply relative;           /* position: relative; */
 }
-.img__border {
+.pinned {
+  @apply sticky;             /* Sticky positioning is not supported in IE11. */
+  top: theme('spacing.8');
+} 
+.hide {
+  @apply opacity-0;          /* opacity: 0; */
+}
+.dlp-figure__border {
   @apply absolute;           /* position: absolute; */
   @apply top-0;              /* top: 0; */
   @apply left-0;             /* left: 0; */
@@ -76,7 +27,7 @@ figure {
     height: calc(100% - 24px);
   }
 }
-.caption--inside {
+.dlp-figure__caption {
   @apply self-end;           /* align-self: flex-end; */
   @apply text-white;         /* color: theme('colors.white'); */
   @apply text-center;        /* text-align: center; */

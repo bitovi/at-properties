@@ -37,7 +37,7 @@
 
                 <section id="agent-testimonials" class="">
                     <h3 class="head-5 accent--above-left fade-in">Testimonials</h3>
-                    <div class="dlp-testimonial-wrapper">
+                    <div class="dlp-testimonial__wrapper">
                         <dlp-testimonial
                             v-for="t in i18n.testimonials.slice(0, 3)" v-bind:key="t.id"
                             class="fade-in"
@@ -49,7 +49,7 @@
                         <dlp-button type="button" class="fade-in" @click="showModal('TestimonialsModal', $event)">View more testimonials</dlp-button>
                         <dlp-appear-modal ref="TestimonialsModal">
                             <h3 class="head-5 accent--above-left">Testimonials</h3>
-                            <div class="dlp-testimonial-wrapper">
+                            <div class="dlp-testimonial__wrapper">
                                 <dlp-testimonial
                                     v-for="t in i18n.testimonials" 
                                     v-bind:key="t.id" 
@@ -63,7 +63,7 @@
 
                 <section id="agent-sales" class="">
                     <h3 class="head-5 accent--above-left fade-in">Recent Sales</h3>
-                    <div class="dlp-property-wrapper">
+                    <div class="dlp-property__wrapper">
                         <dlp-property
                             class="fade-in"
                             v-for="s in i18n.sales.slice(0, 3)" 
@@ -77,7 +77,7 @@
                         <dlp-button type="button" class="fade-in" @click="showModal('SalesModal', $event)">View more sales</dlp-button>
                         <dlp-appear-modal ref="SalesModal">
                             <h3 class="head-5 accent--above-left mb-8">Recent Sales</h3>
-                            <div class="dlp-property-wrapper">
+                            <div class="dlp-property__wrapper">
                                 <dlp-property
                                     v-for="sale in i18n.sales" 
                                     v-bind:key="sale.id" 

@@ -20,16 +20,17 @@ import dedent from 'ts-dedent';
 * Images will be JPG.
 * The agent name appears as the figure caption inside the photo. *Note*: the figure caption does **not** appear on `sm` screen sizes.
 * Captions only appear for photos in the Agent and Co-Agent sections. The Team and Contact section photos will not have captions.
+* Only the Agent photo will be `.pinned` (sticky).
 
 <Preview>
-<div className="w-1/2">
-  <figure>
+<div className="w-1/2 dlp-figure__wrapper">
+  <figure className="dlp-figure">
     <picture className="ar ar--4-5">
       <img src="images/agent/photo-carrie-mccormick-md.jpg" alt="" />
     </picture>
-    <div className="img__border">
-      <figcaption className="hidden md:block caption--inside">
-        <h3 className="head-6 accent--below-center">Carrie McCormick</h3>
+    <div className="dlp-figure__border">
+      <figcaption className="hidden md:block dlp-figure__caption head-6 accent--below-center">
+        Carrie McCormick
       </figcaption>
     </div>
   </figure>
@@ -43,12 +44,12 @@ import dedent from 'ts-dedent';
 
 <Preview>
 <div className="grid md:grid-cols-2 gap-8">
-  <div>
-    <figure>
+  <div className="dlp-figure__wrapper">
+    <figure className="dlp-figure">
       <picture className="ar ar--4-3">
-        <img src="images/selling/selling-2.jpg" alt="" />
+        <img src="images/selling/selling-2.jpg" alt="Cozy white living room with a large window" />
       </picture>
-      <div className="img__border"></div>
+      <div className="dlp-figure__border"></div>
     </figure>
   </div>
   <div className="opacity-25 self-center">
@@ -80,10 +81,18 @@ Define classes in **src/components/figure/figure.styles.scss**.
 
 <Source language='scss' code={dedent`
   /* Figure */ 
-  figure {
+  .dlp-figure__wrapper, 
+  .dlp-figure {
     @apply relative;           /* position: relative; */
   }
-  .img__border {
+  .pinned {
+    @apply sticky;             /* Sticky positioning is not supported in IE11. */
+    top: theme('spacing.8');
+  } 
+  .hide {
+    @apply opacity-0;          /* opacity: 0; */
+  }
+  .dlp-figure__border {
     @apply absolute;           /* position: absolute; */
     @apply top-0;              /* top: 0; */
     @apply left-0;             /* left: 0; */
@@ -100,7 +109,7 @@ Define classes in **src/components/figure/figure.styles.scss**.
       height: calc(100% - 24px);
     }
   }
-  .caption--inside {
+  .dlp-figure__caption {
     @apply self-end;           /* align-self: flex-end; */
     @apply text-white;         /* color: theme('colors.white'); */
     @apply text-center;        /* text-align: center; */

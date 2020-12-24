@@ -59,7 +59,7 @@
             </div>
             <div class="dlp-nav-trigger dlp-nav-m-tile flex lg:hidden">
                 <button aria-expanded="false" :class="{ open: isOpen}" @click="toggle" id="nav-icon">
-                    <span class="nav-icon-wrapper">
+                    <span class="nav-icon__wrapper">
                         <span class="nav-icon-line line-1"></span>
                         <span class="nav-icon-line line-2"></span>
                         <span class="nav-icon-line line-3"></span>

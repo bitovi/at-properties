@@ -10,14 +10,14 @@ import dedent from 'ts-dedent';
 * The component uses a 2-col, 16px gap layout for mobile/tablet; 3-col = 1/3 + 2/3, 24px gap layout for desktop.
 * **Spacing**: 
   * Properties are shown separated by a 1px light gray (Primary 100) horizontal rule, with 16px between the rule and each item.
-  * 24/32px between the heading and properties (`.dlp-property-wrapper` top margin).
+  * 24/32px between the heading and properties (`.dlp-property__wrapper` top margin).
 * **Accessibility**: Notice that images use `alt=""`. Read more about [writing alt text](/?path=/story/style-guide-imagery--page#writing-alt-text) for images. See [Figure](/?path=/story/pattern-library-components-figure--page).
 * **Animation**: Properties fade in. Opacity changes from 0 to 1 at the same speed as the user scrolls (scrub). Each property is given the class `.fade-in`: `<figure class="dlp-property fade-in">` (*not* indicated in code example below). See [Animation](/?path=/docs/style-guide-animation--page).
 
 <Preview>
 <div id="agent-sales" className="w-2/3">
   <h3 className="head-5 accent--above-left">Recent Sales</h3>
-  <div className="dlp-property-wrapper">
+  <div className="dlp-property__wrapper">
     <figure className="dlp-property">
       <picture className="dlp-property__img ar ar--4-3">
         <source srcset="images/sales/505-n-mcclurg-ct-2203-sm.jpg" />
@@ -48,7 +48,7 @@ Define classes in **src/components/cards/propertyCard/property.styles.scss**.
 
 <Source language='scss' code={dedent`
   /* Property */
-  .dlp-property-wrapper {
+  .dlp-property__wrapper {
     @apply space-y-4;           /* 16px of space between items and dividers */
     @apply divide-y;            /* Place 1px horizontal dividers between items */
     @apply divide-primary-100;  /* Divider color is light gray (Primary 100) */

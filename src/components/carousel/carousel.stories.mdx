@@ -23,7 +23,7 @@ import dedent from 'ts-dedent';
 * The spacing around items is image -- 24px -- heading -- 8px -- accent -- 8px -- paragraph.
 * **Accessibility**: Notice that images use null `alt=""` and provide a text alternative via `aria-labelledby="[id of the figcaption]"`.
 
-<Preview>
+<!-- <Preview>
 <div className="carousel__wrapper">
   <div className="carousel carousel--team">
     <div className="carousel__stage">
@@ -109,11 +109,11 @@ import dedent from 'ts-dedent';
     <div className="carousel__fade-right"></div>
   </div>
 </div>
-</Preview>
+</Preview> -->
 
 An example with a small number of team members. Items will be centered; the scrollbar and fades will not appear.
 
-<Preview>
+<!-- <Preview>
 <div className="carousel__wrapper">
   <div className="carousel carousel--team">
     <div className="carousel__stage justify-center">
@@ -153,7 +153,7 @@ An example with a small number of team members. Items will be centered; the scro
     </div>
   </div>
 </div>
-</Preview>
+</Preview> -->
 
 ## Company Timeline
 
@@ -164,7 +164,7 @@ USES ITS OWN COMPONENT -- timeline
 * The spacing around items is image -- 24px -- accent -- 8px -- paragraph -- <span className="highlight">Need additional info about red lines, icons here</span>.
 * **Accessibility**: Notice that images use `alt=""`. Read more about [writing alt text](/?path=/story/pattern-library-components-figure--page#writing-alt-text) for images (See [Figure](/?path=/story/pattern-library-components-figure--page)).
 
-<Preview>
+<!-- <Preview>
 <div className="carousel__wrapper">
   <div className="carousel carousel--company simplebar-scrollbar">
     <div className="carousel__stage">
@@ -223,7 +223,7 @@ USES ITS OWN COMPONENT -- timeline
     <div className="carousel__fade-right"></div>
   </div>
 </div>
-</Preview>
+</Preview> -->
 
 ## Marketing Assets &amp; Partners
 
@@ -234,7 +234,7 @@ USES ITS OWN COMPONENT -- timeline
 * The spacing around items is image -- 24px -- accent -- 8px -- heading.
 * **Accessibility**: Notice that images use `alt=""`. Read more about [writing alt text](/?path=/story/pattern-library-components-figure--page#writing-alt-text) for images (See [Figure](/?path=/story/pattern-library-components-figure--page)).
 
-<Preview>
+<!-- <Preview>
 <div className="carousel__wrapper">
   <div className="carousel carousel--marketing">
     <div className="carousel__stage">
@@ -293,46 +293,60 @@ USES ITS OWN COMPONENT -- timeline
     <div className="carousel__fade-right"></div>
   </div>
 </div>
-</Preview>
+</Preview> -->
 
-<Preview>
-<div className="carousel__wrapper">
-  <div className="carousel carousel--partners">
-    <div className="carousel__stage">
-      <div>
-        <figure>
-          <picture className="ar ar--3-2 border border-neutral-300">
-            <img src="https://static1.squarespace.com/static/5d499488e40860000132b465/t/5d4995e13b48f80001ef9b42/1605717068162/?format=1500w" alt="Proper Title" />
-          </picture>
+<!-- <Preview>
+<div className="dlp-carousel">
+  <div className="swiper-container dlp-carousel-items swiper-container-initialized swiper-container-horizontal">
+    <div className="swiper-wrapper">
+      <div className="swiper-slide swiper-slide-active mr-8">
+        <figure className="dlp-display-card">
+          <div className="dlp-display-card-content">
+            <div className="">
+              <img src="images/partners/ProperTitle-Logo_horiz_blue.png" />
+            </div>
+          </div>
+          <figcaption><!----></figcaption>
         </figure>
       </div>
-      <div>
-        <figure>
-          <picture className="ar ar--3-2 border border-neutral-300">
-            <img src="https://tse2.mm.bing.net/th?id=OIP.iZmxnG7UUw9hAIy4VbyEiQAAAA&pid=Api" alt="Proper Rate" />
-          </picture>
+      <div className="swiper-slide swiper-slide-next mr-8">
+        <figure className="dlp-display-card">
+          <div className="dlp-display-card-content">
+            <div className="">
+              <img src="images/partners/proper-rate.jpeg" />
+            </div>
+          </div>
+          <figcaption><!----></figcaption>
         </figure>
       </div>
-      <div>
-        <figure>
-          <picture className="ar ar--3-2 border border-neutral-300">
-            <img src="https://tse1.mm.bing.net/th?id=OIP.afitccwCmngYifzziNLcIgHaCX&pid=Api" alt="@properties Commercial" />
-          </picture>
+      <div className="swiper-slide mr-8">
+        <figure className="dlp-display-card">
+          <div className="dlp-display-card-content">
+            <div className="">
+              <img src="images/partners/at-commercial-logo.png" />
+            </div>
+          </div>
+          <figcaption><!----></figcaption>
         </figure>
       </div>
-      <div>
-        <figure>
-          <picture className="ar ar--3-2 border border-neutral-300">
-            <img src="https://tse3.mm.bing.net/th?id=OIP.MDRjm-GBb6-1iGdVJBSJtgAAAA&pid=Api" alt="Chicago Association of Realtors" />
-          </picture>
+      <div className="swiper-slide mr-8">
+        <figure className="dlp-display-card">
+          <div className="dlp-display-card-content">
+            <div className="">
+              <img src="images/partners/chicago-asso-realtors.jpeg" />
+            </div>
+          </div>
+          <figcaption><!----></figcaption>
         </figure>
       </div>
     </div>
-    <div className="carousel__fade-left"></div>
-    <div className="carousel__fade-right"></div>
+    <span className="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+  </div>
+  <div id="dlp-carousel-nav-swiper65524" className="dlp-carousel-nav swiper-scrollbar">
+    <div className="swiper-scrollbar-drag"></div>
   </div>
 </div>
-</Preview>
+</Preview> -->
 
 ## How to configure
 
