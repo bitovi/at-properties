@@ -68,8 +68,8 @@ export default {
             this.openerEl = evt
 
             this.$nextTick(()=> {
+                this.bgOpen()
                 if(hasMotion){
-                    this.bgOpen()
                     this.slideOpen()
                 }
                 disableBodyScroll(this.$refs.modalContent)
