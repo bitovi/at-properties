@@ -1,11 +1,15 @@
 import Vue from 'vue'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+
 import '../src/components/index'
 import '../src/assets/base.styles.scss'
+import 'swiper/css/swiper.min.css'
 
 import { themes } from '@storybook/theming';
 
 import VueScrollactive from 'vue-scrollactive';
 Vue.use(VueScrollactive);
+Vue.use(VueAwesomeSwiper);
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
