@@ -1,4 +1,4 @@
-import { Meta, Canvas, Source } from '@storybook/addon-docs/blocks';
+import { Meta, Preview, Source } from '@storybook/addon-docs/blocks';
 import dedent from 'ts-dedent';
 
 <Meta title="Pattern Library/Containers/Footer" />
@@ -7,6 +7,22 @@ import dedent from 'ts-dedent';
 
 * The footer is just like any other section, except instead of `article`, it uses `footer`, and sits outside of `main`.
 * The section above it (Community) needs to have the class `.section-divider`.
+
+## @properties logo
+
+The logo is horizontally centered and will scale to different screen sizes:
+
+* **Mobile**: logo width is 4/5 of 4-col (`col-span-full` and `w-4/5`)
+* **Tablet**: logo width is 4/5 of 8-col (`md:col-span-8 md:col-start-3` and `w-4/5`)
+* **Desktop**: logo width is 100% of 6-col (`lg:col-span-6 lg:col-start-6` and `lg:w-full`)
+
+<Preview>
+<div className="content-grid">
+  <div className="col-span-full md:col-span-8 md:col-start-3 lg:col-span-6 lg:col-start-6">
+    <img src="images/intro/logo-atproperties.svg" alt="@properties" className="mx-auto w-4/5 lg:w-full" />
+  </div>
+</div>
+</Preview>
 
 ## How to configure
 
