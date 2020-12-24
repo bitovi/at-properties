@@ -1,5 +1,6 @@
-import { Meta, Preview, Source } from '@storybook/addon-docs/blocks';
+import { Meta, Preview, Source, Story } from '@storybook/addon-docs/blocks';
 import dedent from 'ts-dedent';
+import Carousel from './carousel.component.vue'
 
 <Meta title="Pattern Library/Components/Carousel" />
 
@@ -23,93 +24,37 @@ import dedent from 'ts-dedent';
 * The spacing around items is image -- 24px -- heading -- 8px -- accent -- 8px -- paragraph.
 * **Accessibility**: Notice that images use null `alt=""` and provide a text alternative via `aria-labelledby="[id of the figcaption]"`.
 
-<!-- <Preview>
-<div className="carousel__wrapper">
-  <div className="carousel carousel--team">
-    <div className="carousel__stage">
-      <div>
-        <figure>
-          <picture className="ar ar--3-4">
-            <img src="https://oliviaschicago.com/wp-content/uploads/2019/01/Olivia_Main.jpg" alt="" aria-labelledby="team-member-1" />
-          </picture>
-          <figcaption id="team-member-1">
-            <h3 className="head-6 accent--below-center">Olivia Carlson</h3>
-            <p>Lead Broker</p>
-          </figcaption>
-        </figure>
-      </div>
-      <div>
-        <figure>
-          <picture className="ar ar--3-4">
-            <img src="https://oliviaschicago.com/wp-content/uploads/2019/08/Paul-Headshot.jpg" alt="" aria-labelledby="team-member-2" />
-          </picture>
-          <figcaption id="team-member-2">
-            <h3 className="head-6 accent--below-center">Paul Siebert</h3>
-            <p>Broker</p>
-          </figcaption>
-        </figure>
-      </div>
-      <div>
-        <figure>
-          <picture className="ar ar--3-4">
-            <img src="https://oliviaschicago.com/wp-content/uploads/2020/02/LoumenaDa.jpg" alt="" aria-labelledby="team-member-3" />
-          </picture>
-          <figcaption id="team-member-3">
-            <h3 className="head-6 accent--below-center">Dani Loumena</h3>
-            <p>Broker</p>
-          </figcaption>
-        </figure>
-      </div>
-      <div>
-        <figure>
-          <picture className="ar ar--3-4">
-            <img src="https://oliviaschicago.com/wp-content/uploads/2020/02/Lindsey-Crop.jpeg" alt="" aria-labelledby="team-member-4" />
-          </picture>
-          <figcaption id="team-member-4">
-            <h3 className="head-6 accent--below-center">Lindsey Matejak</h3>
-            <p>Broker</p>
-          </figcaption>
-        </figure>
-      </div>
-      <div>
-        <figure>
-          <picture className="ar ar--3-4">
-            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuJTIwcHJvZmVzc2lvbmFsfGVufDB8MXwwfA%3D%3D&auto=format&fit=crop&w=800&q=60" alt="" aria-labelledby="team-member-5" />
-          </picture>
-          <figcaption id="team-member-5">
-            <h3 className="head-6 accent--below-center">David Lubega</h3>
-            <p>Broker</p>
-          </figcaption>
-        </figure>
-      </div>
-      <div>
-        <figure>
-          <picture className="ar ar--3-4">
-            <img src="https://images.unsplash.com/photo-1573496358961-3c82861ab8f4?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NXx8d29tYW4lMjBwcm9mZXNzaW9uYWx8ZW58MHwxfDB8&auto=format&fit=crop&w=800&q=60" alt="" aria-labelledby="team-member-6" />
-          </picture>
-          <figcaption id="team-member-6">
-            <h3 className="head-6 accent--below-center">Christine Hooper</h3>
-            <p>Associate</p>
-          </figcaption>
-        </figure>
-      </div>
-      <div>
-        <figure>
-          <picture className="ar ar--3-4">
-            <img src="https://images.unsplash.com/photo-1568316674077-d72ee56de61c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Njh8fG1hbiUyMHByb2Zlc3Npb25hbHxlbnwwfDF8MHw%3D&auto=format&fit=crop&w=800&q=60" alt="" aria-labelledby="team-member-7" />
-          </picture>
-          <figcaption id="team-member-7">
-            <h3 className="head-6 accent--below-center">Lou Prima</h3>
-            <p>Associate</p>
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-    <div className="carousel__fade-left"></div>
-    <div className="carousel__fade-right"></div>
-  </div>
-</div>
-</Preview> -->
+<Preview>
+  <Story name="Bio">
+    {{
+      components: { Carousel },
+      template: `
+      <dlp-carousel
+                :options="{
+                    spaceBetween: 32,
+                }"
+                :hasScrollNav="true">
+                <swiper-slide>
+                    <dlp-bio-card source="images/team/Olivia_Main.jpg" name="Olivia Carlson" caption="Lead Broker"  ar="ar--3-4"/>
+                </swiper-slide>
+                <swiper-slide>
+                    <dlp-bio-card source="images/team/Paul-Headshot.jpg" name="Paul Siebert" caption="Broker"  ar="ar--3-4"/>
+                </swiper-slide>
+                <swiper-slide>
+                    <dlp-bio-card source="images/team/LoumenaDa.jpg" name="Dani Loumena" caption="Broker"  ar="ar--3-4"/>
+                </swiper-slide>
+                <swiper-slide>
+                    <dlp-bio-card source="images/team/Lindsey-Crop.jpeg" name="Lindsey Matejak" caption="Broker"  ar="ar--3-4"/>
+                </swiper-slide>
+                <swiper-slide>
+                    <dlp-bio-card source="images/team/david-lubega.jpeg" name="David Lubega" caption="Broker"  ar="ar--3-4"/>
+                </swiper-slide>
+      </dlp-carousel>
+      `
+    }}
+  </Story>
+</Preview>
+
 
 An example with a small number of team members. Items will be centered; the scrollbar and fades will not appear.
 
