@@ -3,16 +3,24 @@
   @apply border;             /* border-width: 1px; */
   @apply inline-block;       /* display: inline-block; */
   @apply p-1;                /* padding: 4px; */
-  @apply transition-all;     /* transition-property: all; */
-  @apply duration-500;       /* transition-duration: 500ms; */
   &:active, &:hover, &:focus { 
     span, svg {
       @apply bg-primary-500; /* background-color: theme('colors.primary.500'); */
       @apply text-white;     /* color: white; */
+      @apply transition-all;     /* transition-property: all; */
+      @apply duration-500;       /* transition-duration: 500ms; */
+      @media (prefers-reduced-motion) {
+        @apply transition-none;  /* transition-property: none; */
+      }
     }
   }
   &:active, &:hover { 
     @apply border-primary-500;  /* border-color: theme('colors.primary.500'); */
+    @apply transition-all;     /* transition-property: all; */
+    @apply duration-700;       /* transition-duration: 700ms; */
+    @media (prefers-reduced-motion) {
+      @apply transition-none;  /* transition-property: none; */
+    }
   }
 }
 /* Button: elements */

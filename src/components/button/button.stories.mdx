@@ -5,14 +5,16 @@ import dedent from 'ts-dedent';
 
 # Button
 
-* Buttons are used to open or close (toggle) **modals**. 
+* Buttons are used to open or close (toggle) [Modals](/?path=/story/pattern-library-containers-modal--page). 
 * Button elements can include text, an icon (e.g., X to close a modal), or text with an icon (not used for @properties).
 * Buttons have two styles: dark for light backgrounds; light for dark backgrounds.
 * Focus and hover states: Buttons fade to medium gray (Primary 500) with white text over 500ms.
 * **Spacing**: 
   * There is 16/32px mobile/desktop between buttons.
   * There is 32/40px mobile/desktop of space between a button group and any element above it.
-* **Accessibility**: Icons have accessible names: `<svg role="img" aria-label="Close">`.
+* **Accessibility**: 
+  * Icons have accessible names: `<svg role="img" aria-label="Close">`. 
+  * When users `prefers-reduced-motion`, the button does not fade on `:hover` or `:focus`, but rather changes instantly.
 * **Animation**: Buttons can fade in. Opacity changes from 0 to 1 at the same speed as the user scrolls (scrub). Each `<button>` is given the class `.fade-in`: `<button class="btn fade-in">` (*not* indicated in code example below). See [Animation](/?path=/docs/style-guide-animation--page).
 
 <Preview>
@@ -49,16 +51,24 @@ Define classes in **src/components/button/button.styles.scss**.
     @apply border;             /* border-width: 1px; */
     @apply inline-block;       /* display: inline-block; */
     @apply p-1;                /* padding: 4px; */
-    @apply transition-all;     /* transition-property: all; */
-    @apply duration-500;       /* transition-duration: 500ms; */
     &:active, &:hover, &:focus { 
       span, svg {
         @apply bg-primary-500; /* background-color: theme('colors.primary.500'); */
         @apply text-white;     /* color: white; */
+        @apply transition-all;     /* transition-property: all; */
+        @apply duration-500;       /* transition-duration: 500ms; */
+        @media (prefers-reduced-motion) {
+          @apply transition-none;  /* transition-property: none; */
+        }
       }
     }
     &:active, &:hover { 
       @apply border-primary-500;  /* border-color: theme('colors.primary.500'); */
+      @apply transition-all;     /* transition-property: all; */
+      @apply duration-700;       /* transition-duration: 700ms; */
+      @media (prefers-reduced-motion) {
+        @apply transition-none;  /* transition-property: none; */
+      }
     }
   }
   /* Button: elements */

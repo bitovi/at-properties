@@ -1,7 +1,7 @@
-
+/* Modal overlay */
 .dlp-bg-ripple {
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
+  @apply fixed;              /* position: fixed; */
+  @apply top-0;              /* top: 0; */
+  @apply left-0;             /* left: 0; */
+  pointer-events: none;
 }
