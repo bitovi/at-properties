@@ -1,6 +1,6 @@
 <template>
     <header v-bind="$attrs" class='dlp-title-page justify-center' ref="titleWrapper">
-        <div class="dlp-title-page__image">
+        <div class="dlp-title-page__image" :class="{ 'opactity-set': !isAnimated }">
             <img ref="titleImg" :src="backgroundUrl" role="presentation"/>
         </div>
        <hgroup ref="titleText" class="container mx-auto dlp-title-page__text">
@@ -14,9 +14,16 @@
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ExpoScaleEase } from "gsap/EasePack"
+import { hasMotion } from '../../constants'
 
 export default {
     name: 'dlp-title-page',
+
+    data() {
+        return {
+            isAnimated: hasMotion
+        }
+    },
 
     props: {
         backgroundUrl: {
@@ -35,6 +42,11 @@ export default {
 
     mounted() {
         const { titleWrapper, titleImg, titleText } = this.$refs
+
+        if(!hasMotion){
+            //do nothing if prefers-reduced-motion is on
+            return
+        }
 
         gsap.to(titleImg, {
             scrollTrigger: {
