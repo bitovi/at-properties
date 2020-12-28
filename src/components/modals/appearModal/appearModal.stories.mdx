@@ -7,18 +7,104 @@ import dedent from 'ts-dedent';
 
 * Modals are opened by clicking a [Button](/?path=/story/pattern-library-components-button--page) and closed by clicking the close button.<br />
   *Note*: clicking on the semi-transparent black overlay does not close the modal.
+* The semi-transparent overlay is 60% black.
+* The white scrollable content area is 100% wide on mobile, 552px wide on tablet, 704px wide on desktop.
+* The Close button is pinned and does not scroll.
 * **Animation**: 
+  * When a button is clicked, a semi-transparent overlay fades in and grows out of the button in a circle shape until it fills the full screen height and width. Then, the white scrollable content area slides out from the right.
+  * When the Close button is clicked, the white scrollable content area slides offscreen to the right. Then, the semi-transparent overlay shrinks and fades back into the button in a circle shape.
+* **Accessibility**: When [Reduce Motion](/?path=/docs/style-guide-animation--page#reduce-motion) is on, all animations turn off.
 
 ## How to configure
 
-Define classes in **src/components/slidein/slidein.styles.scss**.
+Define classes in **src/components/modal/util/background.styles.scss**.
 
 <Source language='scss' code={dedent`
-  .class { }
+  /* Modal Overlay */
+  .dlp-bg-ripple {
+    @apply fixed;              /* position: fixed; */
+    @apply top-0;              /* top: 0; */
+    @apply left-0;             /* left: 0; */
+    pointer-events: none;
+  }
+`} />
+
+Define classes in **src/components/modal/appearModal/appearModal.styles.scss**. <br />
+*Note*: This SCSS would benefit from having `@apply` Tailwind classes and `/* CSS equivalent */` comments added.
+
+<Source language='scss' code={dedent`
+  /* Appear Modal */
+  .dlp-slide-in__wrapper {
+    @apply fixed;
+    @apply top-0;
+    @apply left-0;
+    @apply w-screen;
+    @apply h-screen;
+    z-index: 9998;
+    overflow-x: auto;
+    @apply text-left;
+  }
+  .dlp-slide-in {
+    @apply h-full;
+    @apply absolute;
+    @apply right-0;
+    @apply pb-8;
+    width: 100%;
+    padding: 24px 8px 24px 24px;
+    background-color: #fff;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+    @media (min-width: theme('screens.md')) {
+      width: 552px;
+      padding: 30px 8px;
+    }
+    @media (min-width: theme('screens.lg')) {
+      width: 704px;
+      padding: 30px 8px;
+    }
+    //move the container off screen to be animated in
+    &.off-screen {
+      right: -100%;
+    }
+  }
+  .dlp-slide-in-content {
+    overflow: auto;
+    height: 80%;
+    height: calc(100vh - 120px);
+    padding: 0 32px 0 24px;
+    margin-top: 76px;
+    @media (min-width: theme('screens.sm')) {
+      height: 100%;
+      margin-top: 0;
+      padding: 0 77px 0 61px;
+    }
+    @media (min-width: theme('screens.md')) {
+      padding: 0 77px 0 61px;
+    }
+    @media (min-width: theme('screens.lg')) {
+      padding: 0 104px 0 88px;
+    }
+    /* The emerging W3C standard that is currently Firefox-only */
+      scrollbar-width: thin;
+      scrollbar-color: theme('colors.secondary.900') theme('colors.primary.200');
+    /* Works on Chrome/Edge/Safari */
+    &::-webkit-scrollbar {
+      width: 4px;
+      cursor: grab;
+    }
+    &::-webkit-scrollbar-track {
+      background: theme('colors.primary.200');
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: theme('colors.secondary.900');
+    }
+  }
 `} />
 
 ## Accessibility considerations
 
 Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
 
-* Hanna, Nick to do: Include best practices from [http://web-accessibility.carnegiemuseums.org/code/dialogs/](http://web-accessibility.carnegiemuseums.org/code/dialogs/)
+* Same guidelines as for [Structure](/?path=/docs/style-guide-structure--page).
+* Same guidelines as for [Animation](/?path=/docs/style-guide-animation--page).
+* Include best practices from [http://web-accessibility.carnegiemuseums.org/code/dialogs/](http://web-accessibility.carnegiemuseums.org/code/dialogs/)

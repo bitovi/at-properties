@@ -1,416 +1,378 @@
-import { Meta, Preview, Source, Story } from '@storybook/addon-docs/blocks';
+import { Meta, Preview, Source, Story, Canvas } from '@storybook/addon-docs/blocks';
 import dedent from 'ts-dedent';
 import Carousel from './carousel.component.vue'
+import BioCard from '../cards/bioCard/bioCard.component.vue'
+import StatGrid from '../../containers/statGrid.container.vue'
+import DisplayCard from '../cards/displayCard/displayCard.component.vue'
 
 <Meta title="Pattern Library/Components/Carousel" />
 
 # Carousel
 
-* Carousels are not "true carousels" (i.e., no JS library, no infinite loop, no previous/next buttons, no pagination/dots). Rather, a carousel is simply a horizontal scrolling `div`.
-* A user can scroll back and forth by grabbing and sliding the horizontal scrollbar or by swiping side to side (left to right) on a trackpad or touch device.
-* The slide area itself is not grabbable or draggable. (A JS library would be required to add this functionality.)
-* The component uses a custom scrollbar (see code below). However, this code may not display consistently across all devices (e.g., Firefox on MacOS will hide the scrollbar by default). Furthermore, it's not possible to style the cursor for the scroll thumb (grabable part of the scrollbar) to be a pointer/hand/grab. <span className="highlight">Should we use [SimpleBar](https://github.com/Grsmto/simplebar) to provide a consistent custom scrollbar across devices and style the scroll thumb cursor? File under: nice to have / requires more time.</span>
-* Carousels have a left and a right fade. The left fade is "off" (opacity: 0) by default. When the user starts scrolling to the right, the left fade turns "on" (fades in to opacity: 1 over 500ms). When the user reaches the end of the carousel (far right), the right fade will turn "off" (opacity: 0). When the user reaches the start of the carousel (far left), the right fade will turn "on" (fades in to opacity: 1 over 500ms). <span className="highlight">Carousel animations are not coded yet. These are nice to have / requires more time.</span>
-* There are 4 carousels on the page: [Team Members](#team-members), [Company Timeline](#company-timeline), [Marketing Assets](#marketing-assets--partners), [Partners](#marketing-assets--partners). <span className="highlight">Need additional styling and icons written to make Company Timeline look like a timeline.</span>
+* Carousels use [Vue Awesome Swiper](https://github.surmon.me/vue-awesome-swiper/).
+* A user can scroll back and forth by grabbing and sliding the carousel stage or the horizontal scrollbar. 
+* Both areas show a hand/grabber cursor to provide a visual hint to the user.
+* The component uses a custom scrollbar: 1px light gray (Primary 200) track; 5px red (Secondary 500) scroll drag.
+* There are 4 carousels on the page: [Team Members](#team-members), [Company Timeline](#company-timeline), [Marketing Assets](#marketing-assets--partners), [Partners](#marketing-assets--partners).
 * Carousel items align to top.
-* <span className="highlight">Logic needs to be written (Nick) to align items center and remove the left and right fades when the total width of the items is less than the width of the stage. Add <code>justify-center</code> next to <code>carousel__stage</code>.</span>
-* <span className="highlight">Note: All the images below point to outside of DLP. At some point, shouldn't these have local paths?</span>
 
 ## Team Members
 
-* BIO CARD
+* Items in the carousel use **src/components/cards/bioCard/**.
 * Items are 160px wide on mobile, 240px wide on desktop, 3:4 aspect ratio, no border (outer or inner).
 * The gap between items is 32px.
 * The spacing around items is image -- 24px -- heading -- 8px -- accent -- 8px -- paragraph.
-* **Accessibility**: Notice that images use null `alt=""` and provide a text alternative via `aria-labelledby="[id of the figcaption]"`.
+* **Accessibility**: Notice that images use `alt="Firstname Lastname"`.
 
-<Preview>
-  <Story name="Bio">
+<Canvas>
+  <Story name="Team Members">
     {{
       components: { Carousel },
       template: `
       <dlp-carousel
-                :options="{
-                    spaceBetween: 32,
-                }"
-                :hasScrollNav="true">
-                <swiper-slide>
-                    <dlp-bio-card source="images/team/Olivia_Main.jpg" name="Olivia Carlson" caption="Lead Broker"  ar="ar--3-4"/>
-                </swiper-slide>
-                <swiper-slide>
-                    <dlp-bio-card source="images/team/Paul-Headshot.jpg" name="Paul Siebert" caption="Broker"  ar="ar--3-4"/>
-                </swiper-slide>
-                <swiper-slide>
-                    <dlp-bio-card source="images/team/LoumenaDa.jpg" name="Dani Loumena" caption="Broker"  ar="ar--3-4"/>
-                </swiper-slide>
-                <swiper-slide>
-                    <dlp-bio-card source="images/team/Lindsey-Crop.jpeg" name="Lindsey Matejak" caption="Broker"  ar="ar--3-4"/>
-                </swiper-slide>
-                <swiper-slide>
-                    <dlp-bio-card source="images/team/david-lubega.jpeg" name="David Lubega" caption="Broker"  ar="ar--3-4"/>
-                </swiper-slide>
+        :options="{ spaceBetween: 32 }"
+        :hasScrollNav="true">
+        <swiper-slide>
+          <dlp-bio-card source="images/team/Olivia_Main.jpg" name="Olivia Carlson" caption="Lead Broker" ar="ar--3-4" />
+        </swiper-slide>
+        <swiper-slide>
+          <dlp-bio-card source="images/team/Paul-Headshot.jpg" name="Paul Siebert" caption="Broker" ar="ar--3-4" />
+        </swiper-slide>
+        <swiper-slide>
+          <dlp-bio-card source="images/team/LoumenaDa.jpg" name="Dani Loumena" caption="Broker" ar="ar--3-4" />
+        </swiper-slide>
+        <swiper-slide>
+          <dlp-bio-card source="images/team/Lindsey-Crop.jpeg" name="Lindsey Matejak" caption="Broker" ar="ar--3-4" />
+        </swiper-slide>
+        <swiper-slide>
+          <dlp-bio-card source="images/team/david-lubega.jpeg" name="David Lubega" caption="Broker" ar="ar--3-4" />
+        </swiper-slide>
       </dlp-carousel>
       `
     }}
   </Story>
-</Preview>
-
-
-An example with a small number of team members. Items will be centered; the scrollbar and fades will not appear.
-
-<!-- <Preview>
-<div className="carousel__wrapper">
-  <div className="carousel carousel--team">
-    <div className="carousel__stage justify-center">
-      <div>
-        <figure>
-          <picture className="ar ar--3-4">
-            <img src="https://oliviaschicago.com/wp-content/uploads/2019/01/Olivia_Main.jpg" alt="" aria-labelledby="team-member-1" />
-          </picture>
-          <figcaption id="team-member-1">
-            <h3 className="head-6 accent--below-center">Olivia Carlson</h3>
-            <p>Lead Broker</p>
-          </figcaption>
-        </figure>
-      </div>
-      <div>
-        <figure>
-          <picture className="ar ar--3-4">
-            <img src="https://oliviaschicago.com/wp-content/uploads/2019/08/Paul-Headshot.jpg" alt="" aria-labelledby="team-member-2" />
-          </picture>
-          <figcaption id="team-member-2">
-            <h3 className="head-6 accent--below-center">Paul Siebert</h3>
-            <p>Broker</p>
-          </figcaption>
-        </figure>
-      </div>
-      <div>
-        <figure>
-          <picture className="ar ar--3-4">
-            <img src="https://oliviaschicago.com/wp-content/uploads/2020/02/LoumenaDa.jpg" alt="" aria-labelledby="team-member-3" />
-          </picture>
-          <figcaption id="team-member-3">
-            <h3 className="head-6 accent--below-center">Dani Loumena</h3>
-            <p>Broker</p>
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-  </div>
-</div>
-</Preview> -->
+</Canvas>
 
 ## Company Timeline
 
-USES ITS OWN COMPONENT -- timeline
-
+* Items in the carousel use **src/components/timeline/**.
 * Items are 272px wide on mobile, 496px wide on desktop, 4:3 aspect ratio, no border (outer or inner).
 * The gap between items is 32px on mobile, 128px on desktop.
-* The spacing around items is image -- 24px -- accent -- 8px -- paragraph -- <span className="highlight">Need additional info about red lines, icons here</span>.
-* **Accessibility**: Notice that images use `alt=""`. Read more about [writing alt text](/?path=/story/pattern-library-components-figure--page#writing-alt-text) for images (See [Figure](/?path=/story/pattern-library-components-figure--page)).
+* The spacing around items is image -- 24px -- accent -- 8px -- paragraph -- redline and dot.
+* **Accessibility**: Notice that images use `alt="..."`. Read more about [writing alt text](/?path=/story/pattern-library-components-figure--page#writing-alt-text) for images (See [Figure](/?path=/story/pattern-library-components-figure--page)).
 
-<!-- <Preview>
-<div className="carousel__wrapper">
-  <div className="carousel carousel--company simplebar-scrollbar">
-    <div className="carousel__stage">
-      <div>
-        <figure>
-          <picture className="ar ar--4-3">
-            <img src="https://images.unsplash.com/photo-1567767292278-a4f21aa2d36e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8bGl2aW5nJTIwcm9vbXxlbnwwfDB8MHw%3D&auto=format&fit=crop&w=800&q=60" alt="Modern living room" />
-          </picture>
-          <figcaption>
-            <p className="accent--above-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet quam augue massa.</p>
-          </figcaption>
-        </figure>
-      </div>
-      <div>
-        <figure>
-          <picture className="ar ar--4-3">
-            <img src="https://images.unsplash.com/photo-1556912167-f556f1f39fdf?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8a2l0Y2hlbnxlbnwwfDB8MHw%3D&auto=format&fit=crop&w=800&q=60" alt="Cozy kitchen seating" />
-          </picture>
-          <figcaption>
-            <p className="accent--above-center">Aliquet quam augue massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </figcaption>
-        </figure>
-      </div>
-      <div>
-        <figure>
-          <picture className="ar ar--4-3">
-            <img src="https://images.unsplash.com/photo-1560185893-a55cbc8c57e8?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8YmVkcm9vbXxlbnwwfDB8MHw%3D&auto=format&fit=crop&w=800&q=60" alt="Neutral toned bedroom" />
-          </picture>
-          <figcaption>
-            <p className="accent--above-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet quam augue massa.</p>
-          </figcaption>
-        </figure>
-      </div>
-      <div>
-        <figure>
-          <picture className="ar ar--4-3">
-            <img src="https://images.unsplash.com/photo-1584722065001-ee7f49d903b1?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTZ8fGhvbWUlMjBvZmZpY2V8ZW58MHwwfDB8&auto=format&fit=crop&w=800&q=60" alt="Man working from home" />
-          </picture>
-          <figcaption>
-            <p className="accent--above-center">Aliquet quam augue massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </figcaption>
-        </figure>
-      </div>
-      <div>
-        <figure>
-          <picture className="ar ar--4-3">
-            <img src="https://images.unsplash.com/photo-1560449752-3fd4bdbe7df0?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8cmVhbHRvcnxlbnwwfDB8MHw%3D&auto=format&fit=crop&w=800&q=60" alt="Living room" />
-          </picture>
-          <figcaption>
-            <p className="accent--above-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet quam augue massa.</p>
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-    <div className="carousel__fade-left"></div>
-    <div className="carousel__fade-right"></div>
-  </div>
-</div>
-</Preview> -->
+<Canvas>
+  <Story name="Company Timeline">
+    {{
+      components: { StatGrid },
+      template: `
+      <dlp-timeline>
+        <swiper-slide>
+          <dlp-timeline-item  
+              date="2000"
+              alt="Modern living room"
+              img="images/company/history1.jpg"
+              desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet quam augue massa."
+              />
+        </swiper-slide>
+        <swiper-slide>
+          <dlp-timeline-item
+              date="2001"
+              alt="Cozy kitchen seating"
+              img="images/company/history2.jpg"
+              desc="Aliquet quam augue massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              />
+        </swiper-slide>
+        <swiper-slide>
+          <dlp-timeline-item  
+              date="2002"
+              alt="Man working from home"
+              img="images/company/history3.jpg"
+              desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet quam augue massa."
+              />
+        </swiper-slide>
+        <swiper-slide>
+          <dlp-timeline-item
+              date="2003"
+              alt="Modern living room"
+              img="images/company/history1.jpg"
+              desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet quam augue massa."
+              />
+        </swiper-slide>
+        <swiper-slide>
+          <dlp-timeline-item  
+              date="2004"
+              alt="Cozy kitchen seating"
+              img="images/company/history2.jpg"
+              desc="Aliquet quam augue massa. Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              />
+        </swiper-slide>
+        <swiper-slide>
+          <dlp-timeline-item
+              date="2005"
+              alt="Man working from home"
+              img="images/company/history3.jpg"
+              desc="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquet quam augue massa."
+              />
+        </swiper-slide>
+      </dlp-timeline>
+      `
+    }}
+  </Story>
+</Canvas>
 
-## Marketing Assets &amp; Partners
+## Marketing Assets
 
-* DISPLAY CARD
+* Items in the carousel use **src/components/cards/displayCard/**.
 * Items are 272px wide on mobile, 496px wide on desktop, 3:2 aspect ratio, 1px medium gray border (Neutral 300).
 * The gap between items is 64px.
 * The padding around images is 24px top/bottom, 56px left/right on mobile, and 32px top/bottom, 96px left/right on desktop.
 * The spacing around items is image -- 24px -- accent -- 8px -- heading.
-* **Accessibility**: Notice that images use `alt=""`. Read more about [writing alt text](/?path=/story/pattern-library-components-figure--page#writing-alt-text) for images (See [Figure](/?path=/story/pattern-library-components-figure--page)).
+* **Accessibility**: Notice that images use `alt="..."`. Read more about [writing alt text](/?path=/story/pattern-library-components-figure--page#writing-alt-text) for images (See [Figure](/?path=/story/pattern-library-components-figure--page)).
 
-<!-- <Preview>
-<div className="carousel__wrapper">
-  <div className="carousel carousel--marketing">
-    <div className="carousel__stage">
-      <div>
-        <figure>
-          <picture className="ar ar--3-2 border border-neutral-300">
-            <img src="https://banner2.cleanpng.com/20180805/fl/kisspng-website-real-estate-agent-image-web-design-multime-30-most-influential-real-estate-websites-of-2018-5b673a8d4f2781.3987929015334918533242.jpg" alt="Real estate web site featuring a home" />
-          </picture>
-          <figcaption>
-            <h3 className="head-6 accent--above-center">Online Advertising</h3>
-          </figcaption>
-        </figure>
-      </div>
-      <div>
-        <figure>
-          <picture className="ar ar--3-2 border border-neutral-300">
-            <img src="https://png.pngitem.com/pimgs/s/280-2803839_yard-sign-png-yard-sign-printing-transparent-png.png" alt="Home for sale yard sign" />
-          </picture>
-          <figcaption>
-            <h3 className="head-6 accent--above-center">Yard Signs</h3>
-          </figcaption>
-        </figure>
-      </div>
-      <div>
-        <figure>
-          <picture className="ar ar--3-2 border border-neutral-300">
-            <img src="https://banner2.cleanpng.com/20180429/jfq/kisspng-paper-ultimate-imaging-flyer-advertising-brochure-flyer-mock-up-5ae667700f0103.4032287815250492000615.jpg" alt="Real estate housing flyers" />
-          </picture>
-          <figcaption>
-            <h3 className="head-6 accent--above-center">Flyers</h3>
-          </figcaption>
-        </figure>
-      </div>
-      <div>
-        <figure>
-          <picture className="ar ar--3-2 border border-neutral-300">
-            <img src="https://www.seekpng.com/png/detail/253-2538036_local-company-builds-app-to-create-safe-space.png" alt="iPhone showing a social media app" />
-          </picture>
-          <figcaption>
-            <h3 className="head-6 accent--above-center">Social Media</h3>
-          </figcaption>
-        </figure>
-      </div>
-      <div>
-        <figure>
-          <picture className="ar ar--3-2 border border-neutral-300">
-            <img src="https://img.favpng.com/8/5/15/online-magazine-glamour-magazines-newspapers-png-favpng-vRNF6QzdhGneETZSKXRvtwL3k.jpg" alt="Two magazines laying open" />
-          </picture>
-          <figcaption>
-            <h3 className="head-6 accent--above-center">Magazine Feature</h3>
-          </figcaption>
-        </figure>
-      </div>
-    </div>
-    <div className="carousel__fade-left"></div>
-    <div className="carousel__fade-right"></div>
-  </div>
-</div>
-</Preview> -->
+<Canvas>
+  <Story name="Marketing Assets">
+    {{
+      components: { Carousel },
+      template: `
+      <dlp-carousel
+        :options="{ spaceBetween: 64 }"
+        :hasScrollNav="true"
+        id="marketing-assets">
+        <swiper-slide>
+          <dlp-display-card 
+              source="images/marketing/marketing-1.jpg"
+              caption="Online Advertising" />
+        </swiper-slide>
+        <swiper-slide>
+          <dlp-display-card
+              source="images/marketing/marketing-2.png"
+              caption="Yard Signs" />
+        </swiper-slide>
+        <swiper-slide>
+          <dlp-display-card 
+              source="images/marketing/marketing-4.png"
+              caption="Social Media" />
+        </swiper-slide>
+        <swiper-slide>
+          <dlp-display-card 
+              source="images/marketing/marketing-3.jpg"
+              caption="Flyers" />
+        </swiper-slide>
+        <swiper-slide>
+          <dlp-display-card
+              source="images/marketing/marketing-5.jpg"
+              caption="Magazine Feature" />
+        </swiper-slide>
+      </dlp-carousel>
+      `
+    }}
+  </Story>
+</Canvas>
 
-<!-- <Preview>
-<div className="dlp-carousel">
-  <div className="swiper-container dlp-carousel-items swiper-container-initialized swiper-container-horizontal">
-    <div className="swiper-wrapper">
-      <div className="swiper-slide swiper-slide-active mr-8">
-        <figure className="dlp-display-card">
-          <div className="dlp-display-card-content">
-            <div className="">
-              <img src="images/partners/ProperTitle-Logo_horiz_blue.png" />
-            </div>
-          </div>
-        </figure>
-      </div>
-      <div className="swiper-slide swiper-slide-next mr-8">
-        <figure className="dlp-display-card">
-          <div className="dlp-display-card-content">
-            <div className="">
-              <img src="images/partners/proper-rate.jpeg" />
-            </div>
-          </div>
-        </figure>
-      </div>
-      <div className="swiper-slide mr-8">
-        <figure className="dlp-display-card">
-          <div className="dlp-display-card-content">
-            <div className="">
-              <img src="images/partners/at-commercial-logo.png" />
-            </div>
-          </div>
-        </figure>
-      </div>
-      <div className="swiper-slide mr-8">
-        <figure className="dlp-display-card">
-          <div className="dlp-display-card-content">
-            <div className="">
-              <img src="images/partners/chicago-asso-realtors.jpeg" />
-            </div>
-          </div>
-        </figure>
-      </div>
-    </div>
-    <span className="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-  </div>
-  <div id="dlp-carousel-nav-swiper65524" className="dlp-carousel-nav swiper-scrollbar">
-    <div className="swiper-scrollbar-drag"></div>
-  </div>
-</div>
-</Preview> -->
+## Partners
+
+* Same as [Marketing Assets](#marketing-assets) carousel above.
+
+<Canvas>
+  <Story name="Partners">
+    {{
+      components: { Carousel },
+      template: `
+      <dlp-carousel
+        :options="{ spaceBetween: 32 }"
+        :hasScrollNav="true"
+        id="partners">
+        <swiper-slide>
+          <dlp-display-card source="images/partners/ProperTitle-Logo_horiz_blue.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <dlp-display-card source="images/partners/proper-rate.jpeg" />
+        </swiper-slide>
+        <swiper-slide>
+          <dlp-display-card source="images/partners/at-commercial-logo.png" />
+        </swiper-slide>
+        <swiper-slide>
+          <dlp-display-card source="images/partners/chicago-asso-realtors.jpeg" />
+        </swiper-slide>
+      </dlp-carousel>
+      `
+    }}
+  </Story>
+</Canvas>
 
 ## How to configure
-
-Define classes in **src/assets/page.styles.scss**. The custom scrollbar code styles both the vertical scrollbar for the page and the horizontal scrollbar for carousels.
-
-<Source language='scss' code={dedent`
-  /* Custom scroll bar */
-  /* Works for Firefox, but not in MacOS */
-  :root {
-    scrollbar-color: theme('colors.secondary.900') theme('colors.primary.100') !important;
-    scrollbar-width: thin !important;
-  }
-  /* Works on Chrome/Edge/Safari */
-  *::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-  }
-  *::-webkit-scrollbar-track {
-    @apply bg-primary-100;     /* background-color: theme('colors.primary.100'); */
-  }
-  *::-webkit-scrollbar-thumb {
-    @apply bg-secondary-900;   /* background-color: theme('colors.secondary.900'); */
-  }
-`} />
 
 Define classes in **src/components/carousel/carousel.styles.scss**.
 
 <Source language='scss' code={dedent`
   /* Carousel */
-  .carousel__wrapper {
-    @apply relative;           /* position: relative; */
-  }
-  .carousel {
-    @apply w-full;             /* width: 100%; */
-    @apply overflow-x-auto;    /* overflow-x: auto; */
-    @apply overflow-y-hidden;  /* overflow-y: hidden; */
-    @apply pb-12;              /* padding-bottom: 48px; */
-    @apply text-center;        /* text-align: center; */
-    @apply whitespace-no-wrap; /* white-space: nowrap; */
-    .carousel__stage {
-      @apply flex;             /* display: flex; */
-      @apply flex-row;         /* flex-direction: row; */
-      @apply gap-8;            /* gap: 32px; */
+  .dlp-carousel {
+    .swiper-slide {
+      @apply w-auto;           /* width: auto; */
+      @apply max-w-full;       /* max-width: 100%; */
     }
-    picture {
-      @apply mb-6;             /* margin-bottom: 24px; */
+    .dlp-carousel-nav {
+      @apply my-12;            /* margin-top/bottom: 48px; */
+      @apply mx-auto;          /* margin-right/left: auto; */
+      width: 496px;
+      max-width: 80%;
+      height: 5px;
     }
-  }
-  .carousel--team {
-    picture {
-      @apply w-40;             /* width: 160px; */
-      @media (min-width: theme('screens.lg')) {
-        width: 240px;
+    .swiper-scrollbar {
+      @apply rounded-none;     /* border-radius: 0; */
+      background: 0;
+      &:after {
+        content:"";
+        @apply absolute;       /* position: absolute; */
+        @apply w-full;         /* width: 100%; */
+        top: 2px;
+        @apply left-0;         /* left: 0px; */
+        @apply border-t;         /* border-width: 1px; */ 
+        @apply border-primary-200;  /* border-top: 1px solid theme('colors.primary.200'); */
       }
     }
-    p {
-      @apply mt-0;             /* margin-top: 0; */
+    .swiper-scrollbar-drag {
+      @apply bg-secondary-500; /* background-color: theme('colors.secondary.500'); */
+      @apply rounded-none;     /* border-radius: 0; */
+      cursor: pointer;
+      z-index: 10;             /* z-index; 10; */
     }
-  }
-  .carousel--company {
-    .carousel__stage {
-      @media (min-width: theme('screens.lg')) {
-        @apply gap-32;         /* gap: 128px; */
-      }
-    }
-    picture, p {
-      width: 272px;  
-      @media (min-width: theme('screens.lg')) {
-        width: 496px;
-      }
-    }
-    p {
-      @apply whitespace-normal;  /* white-space: normal; */
-    }
-  }
-  .carousel--marketing, 
-  .carousel--partners {
-    .carousel__stage {
-      @media (min-width: theme('screens.lg')) {
-        @apply gap-16;         /* gap: 64px; */
-      }
-    } 
-    picture {
-      width: 272px;
-      @media (min-width: theme('screens.lg')) {
-        width: 496px;
-      }
-    }
-    img {
-      @apply object-contain;   /* object-fit: contain; */
-      @apply object-center;    /* object-position: center center; */
-      padding: 24px 56px;
-      @media (min-width: theme('screens.lg')) {
-        @apply py-4;           /* padding-top/bottom: 32px; */
-        @apply px-24;          /* padding-right/left: 96px; */
-      }
-    }
-  }
-  .carousel__fade-left, 
-  .carousel__fade-right {
-    @apply bg-gradient-to-r;   /* background-image: linear-gradient(to right, */
-    @apply absolute;           /* position: absolute; */
-    @apply top-0;              /* top: 0; */
-    height: calc(100% - 48px);
-    @apply w-16;               /* width: 64px; */
-  }
-  .carousel__fade-left {
-    @apply from-white;         /* --gradient-from-color: theme('colors.white'); */
-    @apply to-transparent;     /* --gradient-to-color: theme('colors.transparent'); */
-    @apply left-0;             /* left: 0; */
-    @apply opacity-0;          /* opacity: 0; */
-  }
-  .carousel__fade-right {
-    @apply from-transparent;   /* --gradient-from-color: theme('colors.transparent'); */
-    @apply to-white;           /* --gradient-to-color: theme('colors.white'); */
-    @apply right-0;            /* right: 0; */
-    @apply opacity-100;        /* opacity: 1; */
   }
 `} />
 
 Define classes in **src/components/cards/bioCard/bioCard.styles.scss**.
 
+<Source language='scss' code={dedent`
+  /* Bio Card */
+  .dlp-bio-card {
+    @apply flex;               /* display: flex; */
+    @apply flex-col;           /* flex-direction: column; */
+    @apply text-center;        /* text-align: center; */
+    figcaption {
+      @apply pt-6;             /* padding-top: 24px; */
+    }
+    .dpl-bio-card__image {
+      width: 160px;
+      @media (min-width: theme('screens.lg')) {
+        width: 240px;
+      }
+    }
+  }
+`} />
+
 Define classes in **src/components/cards/displayCard/displayCard.styles.scss**.
+
+<Source language='scss' code={dedent`
+  /* Display Card */
+  .dlp-display-card {
+    @apply h-full;             /* height: 100%; */
+    @apply flex;               /* display: flex; */
+    @apply flex-col;           /* flex-direction: column; */
+    margin-bottom: 2px;
+    .dlp-display-card-content {
+      @apply flex;             /* display: flex; */
+      @apply flex-col;         /* flex-direction: column; */
+      @apply justify-center;   /* justify-content: center; */
+      @apply items-center;     /* align-items: center; */
+      width: 496px;
+      height: 332px;
+      @apply max-w-full;       /* max-width: 100%; */
+      @apply border;           /* border-width: 1px; */ 
+      @apply border-primary-200;  /* border-color: theme('colors.primary.200'); */
+    }
+    figcaption {
+      @apply text-center;      /* text-align: center; */
+    }
+  }
+  #marketing-assets, #partners {
+    .dlp-display-card-content {
+      @apply mb-5;             /* margin-bottom: 20px; */
+      @apply py-6;             /* padding-top/bottom: 24px; */
+      @apply px-12;            /* padding-left/right: 48px; */
+      @media (min-width: theme('screens.lg')) {
+        @apply py-8;           /* padding-top/bottom: 32px; */
+        @apply px-24;          /* padding-left/right: 96px; */
+      }
+    }
+  }
+`} />
+
+Define classes in **src/components/timeline/timeline.styles.scss**.
+
+<Source language='scss' code={dedent`
+  /* Timeline */
+  .dlp-timeline {
+    @apply relative;           /* position: relative; */
+    .swiper-slide {
+      @apply mr-12;            /* margin-right: 48px; */
+      width: 239px;
+      @media (min-width: theme('screens.md')) {
+        width: 274px;
+      }
+      @media (min-width: theme('screens.lg')) {
+        width: 496px;
+      }
+    }
+    .dlp-timeline--line {
+      @apply absolute;         /* position: absolute; */
+      bottom: 52px;
+      height: 1px;
+      @apply w-full;           /* width: 100%; */
+      @apply border-b;         /* border-bottom-width: 1px; */
+      @apply border-dotted;    /* border-style: dotted; */
+      @apply border-neutral-300;  /* border-color: theme('colors.neutral.300'); */
+    }
+    .dlp-timeline-item {
+      @apply flex;             /* display: flex; */
+      @apply flex-col;         /* flex-direction: column; */
+      min-height: 390px;
+      @media (min-width: theme('screens.md')) {
+        min-height: 460px;
+      }
+      @media (min-width: theme('screens.lg')) {
+        min-height: 600px;
+      }
+    }
+    .dlp-timeline-item--content {
+      @apply mb-4;             /* margin-bottom: 16px; */
+    }
+    .dlp-timeline-item--img {
+      height: 183px;
+      @media (min-width: theme('screens.lg')) {
+        height: 332px;
+      }
+    }
+    .dlp-timeline-item--time {
+      @apply flex;             /* display: flex; */
+      @apply flex-col;         /* flex-direction: column; */
+      @apply items-center;     /* align-items: center; */
+      @apply flex-grow;        /* flex-grow: 1; */
+      @apply h-full;           /* height: 100%; */
+    }
+    .dlp-timeline-item--pointer-line {
+      width: 1px;
+      @apply flex-grow;        /* flex-grow: 1; */
+      @apply border-l;         /* border-left-width: 1px; */ 
+      @apply border-secondary-500;  /* border-color: theme('colors.secondary.500'); */
+      @apply self-center;      /* align-self: center; */
+    }
+    .dlp-timeline-item--pointer {
+      @apply w-6;              /* width: 24px; */
+      @apply h-6;              /* height: 24px; */
+      @apply bg-secondary-500; /* background: theme('colors.secondary.500'); */
+      @apply rounded-2xl;      /* border-radius: 16px; */
+      @apply border-4;         /* border-width: 4px; */
+      @apply border-white;     /* border-color: theme('colors.white'); */
+      box-shadow: 0 0 0 1px theme('colors.secondary.500');
+    }
+    .dlp-timeline-item--date {
+      @apply text-secondary-500;  /* color: theme('colors.secondary.500'); */
+      @apply font-medium;      /* font-weight: 500; */
+      @apply mt-4;             /* margin-top: 16px; */
+    }
+  }
+`} />
 
 ## Accessibility considerations
 

@@ -1,23 +1,29 @@
-import { Meta, Canvas, Source } from '@storybook/addon-docs/blocks';
+import { Meta, Preview, Source, Story, Canvas } from '@storybook/addon-docs/blocks';
 import dedent from 'ts-dedent';
 
 <Meta title="Pattern Library/Containers/Navigation" />
 
 # Navigation
 
-* adfdsa
+* The navbar is stuck to the bottom of the screen.
+* It sits on top of everything except the [Header](/?path=/docs/pattern-library-containers-header--page) and [Modals](/?path=/docs/pattern-library-containers-modal--page). See [Layers](/?path=/docs/style-guide-structure--page#layers).
+* It has a double (1px -- 2px space -- 1px) light gray (Primary 200) border on top and a 1px solid light gray (Primary 200) border between the logo | nav items | contact me.
+* Links for up to 5 sections are listed as nav items.
+* **Spacing**: There is 32px between nav items.
+* The @properties logo links to the top of the page.
+* The desktop menu appears at 1280px.
+* The mobile menu slides up. When a user clicks a link, the menu items disapper, but the mobile menu does not slide down until after that section has been scrolled into view (to avoid having the user see scrolling content).
+* Contact Me launches a [Modal](/?path=/docs/pattern-library-containers-modal--page).
+* **Accessibility**: When [Reduce Motion](/?path=/docs/style-guide-animation--page#reduce-motion) is on, all animations turn off.
 
 ## @properties logo
 
-Talk about size, repeat pattern from Footer
+* The logo is 103px wide at all screen sizes.
 
 ## How to configure
 
-Define classes in **src/components/nav/nav.styles.scss**.
-
-<Source language='scss' code={dedent`
-  .class { }
-`} />
+Define classes in **src/components/nav/nav.styles.scss**. <br />
+*Note*: This SCSS would benefit from having `@apply` Tailwind classes and `/* CSS equivalent */` comments added.
 
 ## Accessibility considerations
 

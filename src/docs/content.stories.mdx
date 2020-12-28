@@ -18,6 +18,7 @@ import dedent from 'ts-dedent';
 * Nesting for `section` and `.content-grid` can vary. These classes are flexible.
   * Agent section -- one column in the `.content-grid` holds multiple `section` tags
   * Marketing section -- multiple `section` tags, each has the class `.content-grid`
+* **Accessibility**: When [Reduce Motion](/?path=/docs/style-guide-animation--page#reduce-motion) is on, all animations turn off.
 
 <Preview>
 <div id="dlp-main">
@@ -25,13 +26,13 @@ import dedent from 'ts-dedent';
     <div className="section-content">
       <div className="content-grid">
         <div className="col-span-full md:col-span-5 lg:col-span-6 lg:col-start-2">
-          <figure>
+          <figure className="dlp-figure">
             <picture className="ar ar--4-5">
               <img src="images/agent/photo-carrie-mccormick-md.jpg" alt="Carrie McCormick" />
             </picture>
-            <div className="img__border">
-              <figcaption className="hidden md:block caption--inside">
-                <h3 className="head-6 accent--below-center">Carrie McCormick</h3>
+            <div className="dlp-figure__border">
+              <figcaption className="hidden md:block dlp-figure__caption head-6 accent--below-center">
+                Carrie McCormick
               </figcaption>
             </div>
           </figure>
@@ -54,13 +55,13 @@ import dedent from 'ts-dedent';
     <div className="section-content">
       <div className="content-grid">
         <div className="col-span-full md:col-span-5 lg:col-span-6 lg:col-start-2">
-          <figure>
+          <figure className="dlp-figure">
             <picture className="ar ar--4-5">
               <img src="images/coagent/photo-leigh-marcus-md.jpg" alt="Leigh Marcus" />
             </picture>
-            <div className="img__border">
-              <figcaption className="hidden md:block caption--inside">
-                <h3 className="head-6 accent--below-center">Leigh Marcus</h3>
+            <div className="dlp-figure__border">
+              <figcaption className="hidden md:block dlp-figure__caption head-6 accent--below-center">
+                Leigh Marcus
               </figcaption>
             </div>
           </figure>

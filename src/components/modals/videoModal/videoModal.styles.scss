@@ -1,65 +1,57 @@
+/* Video Modal */
 .dlp-video-modal__wrapper {
-    @apply fixed;
-    @apply top-0;
-    @apply left-0;
-    @apply w-screen;
-    @apply h-screen;
-    z-index: 9998;
-    overflow-x: auto;
+  @apply fixed;
+  @apply top-0;
+  @apply left-0;
+  @apply w-screen;
+  @apply h-screen;
+  z-index: 9998;
+  overflow-x: auto;
 }
-
 .dlp-video-modal {
-    @apply p-4;
-    @apply h-full;
-    transition: all 0.5s ease-in-out;
-    overflow: hidden;
-
-    //if isAnimated, start at 0 opacity
-    &.hide {
-        opacity: 0;
-    }
+  @apply p-4;
+  @apply h-full;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  //if isAnimated, start at 0 opacity
+  &.hide {
+    opacity: 0;
+  }
 }
-
-.dlp-video-modal-content {
-    @apply flex;
-    @apply flex-col;
-    @apply items-center;
-    @apply justify-center;
-    @apply h-full;
-    @apply mx-auto;
+.dlp-video-modal__content {
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+  @apply justify-center;
+  @apply h-full;
+  @apply mx-auto;
+  width: 100%;
+  @media screen and (orientation:landscape) and (max-width: theme('screens.md')) {
+    width: 60%;
+  }
+}
+.dlp-video-modal__border {
+  border: 1px solid theme('colors.white');
+  padding: 8px;
+  width: 100%;
+  @media (min-width: theme('screens.md')) {
+    padding: 12px;
+  }
+}
+.dlp-video-modal__player {
+  @apply p-2;
+  @apply w-full;
+  @apply h-full;
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     width: 100%;
-    // z-index: 1;
-    @media screen and (orientation:landscape) and (max-width: theme('screens.md')) {
-        width: 60%;
-    }
-
-}
-
-.dlp-video-border {
-    border: 1px solid theme('colors.white');
-    padding: 8px;
-    width: 100%;
-    
-    @media (min-width: theme('screens.md')) {
-        padding: 12px;
-    }
-}
-
-.dlp-video-modal-player {
-    @apply p-2;
-    @apply w-full;
-    @apply h-full;
-    position: relative;
-    overflow: hidden;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
-
-    iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-    }
+    height: 100%;
+  }
 }

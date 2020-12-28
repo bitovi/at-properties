@@ -5,19 +5,81 @@ import dedent from 'ts-dedent';
 
 # Video Modal
 
+* Same open/close behavior and semi-transparent overlay as [Modal](/?path=/docs/pattern-library-containers-modal--page).
+* **Style**: The Close button uses the light style.
+* The video is centered horizontally and vertically.
+* **Accessibility**: 
+  * Videos are not accessible. Please follow WCAG 2.1 guidelines below.
+  * **Accessibility**: When [Reduce Motion](/?path=/docs/style-guide-animation--page#reduce-motion) is on, all animations turn off.
+
 ## How to configure
 
-Define classes in **src/components/slidein/slidein.styles.scss**.
+Define classes in **src/components/modals/videoModal/videoModal.styles.scss**. <br />
+*Note*: This SCSS would benefit from having `@apply` Tailwind classes and `/* CSS equivalent */` comments added.
 
 <Source language='scss' code={dedent`
-  .class { }
+  /* Video Modal */
+  .dlp-video-modal__wrapper {
+    @apply fixed;
+    @apply top-0;
+    @apply left-0;
+    @apply w-screen;
+    @apply h-screen;
+    z-index: 9998;
+    overflow-x: auto;
+  }
+  .dlp-video-modal {
+    @apply p-4;
+    @apply h-full;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden;
+    //if isAnimated, start at 0 opacity
+    &.hide {
+      opacity: 0;
+    }
+  }
+  .dlp-video-modal__content {
+    @apply flex;
+    @apply flex-col;
+    @apply items-center;
+    @apply justify-center;
+    @apply h-full;
+    @apply mx-auto;
+    width: 100%;
+    @media screen and (orientation:landscape) and (max-width: theme('screens.md')) {
+      width: 60%;
+    }
+  }
+  .dlp-video-modal__border {
+    border: 1px solid theme('colors.white');
+    padding: 8px;
+    width: 100%;
+    @media (min-width: theme('screens.md')) {
+      padding: 12px;
+    }
+  }
+  .dlp-video-modal__player {
+    @apply p-2;
+    @apply w-full;
+    @apply h-full;
+    position: relative;
+    overflow: hidden;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
 `} />
 
 ## Accessibility considerations
 
 Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
-
-* Hanna, Nick to do: Include best practices from [http://web-accessibility.carnegiemuseums.org/code/dialogs/](http://web-accessibility.carnegiemuseums.org/code/dialogs/)
 
 * [1.2.1 Audio-only and Video-only (Prerecorded) (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#audio-only-and-video-only-prerecorded)<br />
   For prerecorded audio-only and prerecorded video-only media, the following are true, except when the audio or video is a media alternative for text and is clearly labeled as such: 
@@ -50,3 +112,4 @@ Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
   Motion animation triggered by interaction can be disabled, unless the animation is essential to the functionality or the information being conveyed.
 * [3.2.1 On Focus (Level A)](https://www.w3.org/WAI/WCAG21/quickref/#on-focus)<br />
   When any user interface component receives focus, it does not initiate a change of context. 
+* Include best practices from [http://web-accessibility.carnegiemuseums.org/code/dialogs/](http://web-accessibility.carnegiemuseums.org/code/dialogs/)

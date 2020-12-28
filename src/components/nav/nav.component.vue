@@ -47,8 +47,6 @@
                                 href="#partners" 
                                 @click="clickNav">Partners</a>
                         </li>
-                        
-                        
                         <li 
                             ref="highlight" 
                             role="presentation" 

@@ -30,7 +30,7 @@ export default {
             swiperId: _id,
             swiperOptions: {
                 ...this.options,
-                slidesPerView: 'auto',
+                slidesPerView: 'auto', 
                 grabCursor: true,
                 scrollbar: this.hasScrollNav ? {
                     el: `#dlp-carousel-nav-${_id}`,

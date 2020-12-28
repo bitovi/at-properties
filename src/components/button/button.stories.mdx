@@ -1,5 +1,14 @@
-import { Meta, Preview, Source } from '@storybook/addon-docs/blocks';
+import { Meta, Preview, Source, Story, Canvas } from '@storybook/addon-docs/blocks';
 import dedent from 'ts-dedent';
+import Button from './button.component.vue'
+// import { withDesign } from 'storybook-addon-designs'
+
+<!-- Text_Button.parameters = {
+  design: {
+    type: 'figma',
+    url: 'https://www.figma.com/file/9Dh5lVMksIBNrDGMlPsWMk/DLP-Design-Library?node-id=56%3A0',
+  }
+}; -->
 
 <Meta title="Pattern Library/Components/Button" />
 
@@ -40,6 +49,27 @@ import dedent from 'ts-dedent';
   </div>
 </div>
 </Preview>
+
+<Canvas>
+  <Story name="Text Button">
+    {{
+      components: { Button },
+      template: `
+      <dlp-button type="button" @click="showModal('AgentModal', $event)" class="inline-block">Read Full Bio</dlp-button>
+      `
+    }}
+  </Story>
+  <Story name="Icon Button">
+    {{
+      components: { Button },
+      template: `
+      <dlp-button @click.stop="close" :icon='true' class="inline-block align-middle">
+        <svg role="img" aria-label="Close"><use xlink:href="images/icons/icons.svg#icon-close"></use></svg>
+      </dlp-button>
+      `
+    }}
+  </Story>
+</Canvas>
 
 ## How to configure
 
