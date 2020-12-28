@@ -32,6 +32,10 @@
     @media (min-width: theme('screens.lg')) {
       outline-offset: -20px;
     }
+    //reduced motion short circuit
+    &.opactity-set {
+      opacity: 0.25;
+    }
     img {
       @apply w-full;
       @apply h-full;

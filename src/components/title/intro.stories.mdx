@@ -53,6 +53,10 @@ Define classes in **src/components/title/title.styles.scss**. <br />
       @media (min-width: theme('screens.lg')) {
         outline-offset: -20px;
       }
+      //reduced motion short circuit
+      &.opactity-set {
+        opacity: 0.25;
+      }
       img {
         @apply w-full;
         @apply h-full;
