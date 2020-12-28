@@ -64,6 +64,8 @@ export default {
                 }
             },
         });
+
+        gsap.set(titleText, { opacity: 0, transform: 'translate(0, 50px)'})
         
         this.tl.to(titleImg, {
             opacity: 0.25
