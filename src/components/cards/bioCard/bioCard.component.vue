@@ -1,6 +1,6 @@
 <template>
     <figure class="dlp-bio-card">
-        <div class="dpl-bio-card--image" :class="[{ 'ar': ar}, ar]">
+        <div class="dpl-bio-card__image" :class="[{ 'ar': ar}, ar]">
             <img :src="source" :alt="name"/>
         </div>
         <figcaption>

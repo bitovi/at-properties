@@ -1,35 +1,33 @@
-
+/* Carousel */
 .dlp-carousel {
-    .swiper-slide {
-        width: auto;
-        max-width: 100%;
+  .swiper-slide {
+    @apply w-auto;           /* width: auto; */
+    @apply max-w-full;       /* max-width: 100%; */
+  }
+  .dlp-carousel-nav {
+    @apply my-12;            /* margin-top/bottom: 48px; */
+    @apply mx-auto;          /* margin-right/left: auto; */
+    width: 496px;
+    max-width: 80%;
+    height: 5px;
+  }
+  .swiper-scrollbar {
+    @apply rounded-none;     /* border-radius: 0; */
+    background: 0;
+    &:after {
+      content:"";
+      @apply absolute;       /* position: absolute; */
+      @apply w-full;         /* width: 100%; */
+      top: 2px;
+      @apply left-0;         /* left: 0px; */
+      @apply border-t;         /* border-width: 1px; */ 
+      @apply border-primary-200;  /* border-top: 1px solid theme('colors.primary.200'); */
     }
-
-    .dlp-carousel-nav {
-        @apply my-12;
-        @apply mx-auto;
-        width: 496px;
-        max-width: 80%;
-        height: 5px;
-    }
-
-    .swiper-scrollbar {
-        border-radius: 0;
-        background: 0;
-        &:after {
-            content:"";
-            position: absolute;
-            width: 100%;
-            top: 2px;
-            left: 0px;;
-            border-top: 1px solid theme('colors.primary.200');
-        }
-    }
-
-    .swiper-scrollbar-drag {
-        background-color: theme('colors.secondary.500');
-        border-radius: 0;
-        z-index: 10;
-        cursor: pointer;
-    }
+  }
+  .swiper-scrollbar-drag {
+    @apply bg-secondary-500; /* background-color: theme('colors.secondary.500'); */
+    @apply rounded-none;     /* border-radius: 0; */
+    cursor: pointer;
+    z-index: 10;             /* z-index; 10; */
+  }
 }

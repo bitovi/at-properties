@@ -1,78 +1,71 @@
+/* Timeline */
 .dlp-timeline {
-    @apply relative;
-
-    .swiper-slide {
-        @apply mr-12;
-        width: 239px;
-
-        @media (min-width: theme('screens.md')) {
-            width: 274px;
-        }
-
-        @media (min-width: theme('screens.lg')) {
-            width: 496px;
-        }
+  @apply relative;           /* position: relative; */
+  .swiper-slide {
+    @apply mr-12;            /* margin-right: 48px; */
+    width: 239px;
+    @media (min-width: theme('screens.md')) {
+      width: 274px;
     }
-
-    .dlp-timeline--line {
-        @apply absolute;
-        bottom: 52px;
-        height: 1px;
-        width: 100%;
-        border-bottom: 1px dotted theme('colors.neutral.300');
+    @media (min-width: theme('screens.lg')) {
+      width: 496px;
     }
-
-    .dlp-timeline-item {
-        @apply flex;
-        @apply flex-col;
-        min-height: 390px;
-
-        @media (min-width: theme('screens.md')) {
-            min-height: 460px;
-        }
-        @media (min-width: theme('screens.lg')) {
-            min-height: 600px;
-        }
+  }
+  .dlp-timeline--line {
+    @apply absolute;         /* position: absolute; */
+    bottom: 52px;
+    height: 1px;
+    @apply w-full;           /* width: 100%; */
+    @apply border-b;         /* border-bottom-width: 1px; */
+    @apply border-dotted;    /* border-style: dotted; */
+    @apply border-neutral-300;  /* border-color: theme('colors.neutral.300'); */
+  }
+  .dlp-timeline-item {
+    @apply flex;             /* display: flex; */
+    @apply flex-col;         /* flex-direction: column; */
+    min-height: 390px;
+    @media (min-width: theme('screens.md')) {
+      min-height: 460px;
     }
-
-    .dlp-timeline-item--content {
-        @apply mb-4;
+    @media (min-width: theme('screens.lg')) {
+      min-height: 600px;
     }
-
-    .dlp-timeline-item--img {
-        height: 183px;
-        @media (min-width: theme('screens.lg')) {
-            height: 332px;
-        }
+  }
+  .dlp-timeline-item--content {
+    @apply mb-4;             /* margin-bottom: 16px; */
+  }
+  .dlp-timeline-item--img {
+    height: 183px;
+    @media (min-width: theme('screens.lg')) {
+      height: 332px;
     }
-
-    .dlp-timeline-item--time {
-        @apply flex;
-        @apply flex-col;
-        @apply items-center;
-        flex-grow: 1;
-        height: 100%;
-    }
-
-    .dlp-timeline-item--pointer-line {
-        width: 1px;
-        flex-grow: 1;
-        border-left: 1px solid theme('colors.secondary.500');
-        align-self: center;
-    }
-
-    .dlp-timeline-item--pointer {
-        width: 24px;
-        height: 24px;
-        background: theme('colors.secondary.500');
-        border-radius: 16px;
-        border: 4px solid theme('colors.white');
-        box-shadow: 0 0 0 1px theme('colors.secondary.500');
-    }
-
-    .dlp-timeline-item--date {
-        color: theme('colors.secondary.500');
-        font-weight: 500;
-        margin-top: 16px;
-    }
+  }
+  .dlp-timeline-item--time {
+    @apply flex;             /* display: flex; */
+    @apply flex-col;         /* flex-direction: column; */
+    @apply items-center;     /* align-items: center; */
+    @apply flex-grow;        /* flex-grow: 1; */
+    @apply h-full;           /* height: 100%; */
+  }
+  .dlp-timeline-item--pointer-line {
+    width: 1px;
+    @apply flex-grow;        /* flex-grow: 1; */
+    @apply border-l;         /* border-left-width: 1px; */ 
+    @apply border-secondary-500;  /* border-color: theme('colors.secondary.500'); */
+    @apply self-center;      /* align-self: center; */
+  }
+  .dlp-timeline-item--pointer {
+    @apply w-6;              /* width: 24px; */
+    @apply h-6;              /* height: 24px; */
+    @apply bg-secondary-500; /* background: theme('colors.secondary.500'); */
+    @apply rounded-2xl;      /* border-radius: 16px; */
+    @apply border-4;         /* border-width: 4px; */
+    @apply border-white;     /* border-color: theme('colors.white'); */
+    box-shadow: 0 0 0 1px theme('colors.secondary.500');
+  }
+  .dlp-timeline-item--date {
+    @apply text-secondary-500;  /* color: theme('colors.secondary.500'); */
+    @apply font-medium;      /* font-weight: 500; */
+    @apply mt-4;             /* margin-top: 16px; */
+  }
 }

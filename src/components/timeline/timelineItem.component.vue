@@ -5,7 +5,7 @@
                 <img class="dlp-timeline-item--img" :src="img" :alt="alt"/>
             </div>
             <figcaption>
-                <p class="accent--above-center">{{desc}}</p>
+                <p class="text-center accent--above-center">{{desc}}</p>
             </figcaption>
         </figure>
         <div class="dlp-timeline-item--time">

@@ -1,75 +1,66 @@
+/* Appear Modal */
 .dlp-slide-in__wrapper {
-    @apply fixed;
-    @apply top-0;
-    @apply left-0;
-    @apply w-screen;
-    @apply h-screen;
-    z-index: 9998;
-    overflow-x: auto;
-    @apply text-left;
+  @apply fixed;
+  @apply top-0;
+  @apply left-0;
+  @apply w-screen;
+  @apply h-screen;
+  z-index: 9998;
+  overflow-x: auto;
+  @apply text-left;
 }
-
 .dlp-slide-in {
-    @apply h-full;
-    @apply absolute;
-    @apply right-0;
-    @apply pb-8;
-    width: 100%;
-    padding: 24px 8px 24px 24px;
-    background-color: #fff;
-    transition: all 0.5s ease-in-out;
-    overflow: hidden;
-    // z-index: 1000;
-    @media (min-width: theme('screens.md')) {
-        width: 552px;
-        padding: 30px 8px;
-    }
-
-    @media (min-width: theme('screens.lg')) {
-        width: 704px;
-        padding: 30px 8px;
-    }
-
-    //move the container off screen to be animated in
-    &.off-screen {
-        right: -100%;
-    }
+  @apply h-full;
+  @apply absolute;
+  @apply right-0;
+  @apply pb-8;
+  width: 100%;
+  padding: 24px 8px 24px 24px;
+  background-color: #fff;
+  transition: all 0.5s ease-in-out;
+  overflow: hidden;
+  @media (min-width: theme('screens.md')) {
+    width: 552px;
+    padding: 30px 8px;
+  }
+  @media (min-width: theme('screens.lg')) {
+    width: 704px;
+    padding: 30px 8px;
+  }
+  //move the container off screen to be animated in
+  &.off-screen {
+    right: -100%;
+  }
 }
-
 .dlp-slide-in-content {
-    overflow: auto;
-    height: 80%;
-    height: calc(100vh - 120px);
-    padding: 0 32px 0 24px;
-    margin-top: 76px;
-
-    @media (min-width: theme('screens.sm')) {
-        height: 100%;
-        margin-top: 0;
-        padding: 0 77px 0 61px;
-    }
-
-    @media (min-width: theme('screens.md')) {
-        padding: 0 77px 0 61px;
-    }
-
-    @media (min-width: theme('screens.lg')) {
-        padding: 0 104px 0 88px;
-    }
-
-    /* The emerging W3C standard that is currently Firefox-only */
-        scrollbar-width: thin;
-        scrollbar-color: theme('colors.secondary.900') theme('colors.primary.200');
-
-    /* Works on Chrome/Edge/Safari */
-    &::-webkit-scrollbar {
-        width: 4px;
-        cursor: grab;
-    }
-    &::-webkit-scrollbar-track {
-        background: theme('colors.primary.200');
-    }
-    &::-webkit-scrollbar-thumb {
-        background-color: theme('colors.secondary.900');
-    }
+  overflow: auto;
+  height: 80%;
+  height: calc(100vh - 120px);
+  padding: 0 32px 0 24px;
+  margin-top: 76px;
+  @media (min-width: theme('screens.sm')) {
+    height: 100%;
+    margin-top: 0;
+    padding: 0 77px 0 61px;
+  }
+  @media (min-width: theme('screens.md')) {
+    padding: 0 77px 0 61px;
+  }
+  @media (min-width: theme('screens.lg')) {
+    padding: 0 104px 0 88px;
+  }
+  /* The emerging W3C standard that is currently Firefox-only */
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.secondary.900') theme('colors.primary.200');
+  /* Works on Chrome/Edge/Safari */
+  &::-webkit-scrollbar {
+    width: 4px;
+    cursor: grab;
+  }
+  &::-webkit-scrollbar-track {
+    background: theme('colors.primary.200');
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: theme('colors.secondary.900');
+  }
 }

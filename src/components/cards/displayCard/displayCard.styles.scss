@@ -1,38 +1,32 @@
-
+/* Display Card */
 .dlp-display-card {
-    @apply h-full;
-    @apply flex;
-    @apply flex-col;
-    margin-bottom: 2px;
-    
-    .dlp-display-card-content {
-        @apply flex;
-        @apply flex-col;
-        @apply justify-center;
-        @apply items-center;
-        width: 496px;
-        height: 332px;
-        max-width: 100%;
-        border: 1px solid theme('colors.primary.200');
-    
-        /* &.ar img {
-            @apply p-8;
-        }*/
-    }
-
-    figcaption {
-        @apply text-center;
-    }
+  @apply h-full;             /* height: 100%; */
+  @apply flex;               /* display: flex; */
+  @apply flex-col;           /* flex-direction: column; */
+  margin-bottom: 2px;
+  .dlp-display-card-content {
+    @apply flex;             /* display: flex; */
+    @apply flex-col;         /* flex-direction: column; */
+    @apply justify-center;   /* justify-content: center; */
+    @apply items-center;     /* align-items: center; */
+    width: 496px;
+    height: 332px;
+    @apply max-w-full;       /* max-width: 100%; */
+    @apply border;           /* border-width: 1px; */ 
+    @apply border-primary-200;  /* border-color: theme('colors.primary.200'); */
+  }
+  figcaption {
+    @apply text-center;      /* text-align: center; */
+  }
 }
-
 #marketing-assets, #partners {
   .dlp-display-card-content {
-    @apply mb-5;
-    @apply py-6;
-    @apply px-12;
+    @apply mb-5;             /* margin-bottom: 20px; */
+    @apply py-6;             /* padding-top/bottom: 24px; */
+    @apply px-12;            /* padding-left/right: 48px; */
     @media (min-width: theme('screens.lg')) {
-      @apply py-8;
-      @apply px-24;
+      @apply py-8;           /* padding-top/bottom: 32px; */
+      @apply px-24;          /* padding-left/right: 96px; */
     }
   }
 }

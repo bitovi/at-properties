@@ -1,19 +1,15 @@
-
+/* Bio Card */
 .dlp-bio-card {
-    @apply flex;
-    @apply flex-col;
-    @apply text-center;
-
-    figcaption {
-        @apply pt-6;
+  @apply flex;               /* display: flex; */
+  @apply flex-col;           /* flex-direction: column; */
+  @apply text-center;        /* text-align: center; */
+  figcaption {
+    @apply pt-6;             /* padding-top: 24px; */
+  }
+  .dpl-bio-card__image {
+    width: 160px;
+    @media (min-width: theme('screens.lg')) {
+      width: 240px;
     }
-
-    .dpl-bio-card--image {
-        width: 160px;
-        
-        @media (min-width: theme('screens.lg')) {
-            width: 240px;
-        }
-    }
-    
+  }
 }

@@ -70,25 +70,25 @@
                 }"
                 :hasScrollNav="true">
                 <swiper-slide>
-                    <dlp-bio-card source="images/team/Olivia_Main.jpg" name="Olivia Carlson" caption="Lead Broker"  ar="ar--3-4"/>
+                    <dlp-bio-card source="images/team/Olivia_Main.jpg" name="Olivia Carlson" caption="Lead Broker" ar="ar--3-4"/>
                 </swiper-slide>
                 <swiper-slide>
-                    <dlp-bio-card source="images/team/Paul-Headshot.jpg" name="Paul Siebert" caption="Broker"  ar="ar--3-4"/>
+                    <dlp-bio-card source="images/team/Paul-Headshot.jpg" name="Paul Siebert" caption="Broker" ar="ar--3-4"/>
                 </swiper-slide>
                 <swiper-slide>
-                    <dlp-bio-card source="images/team/LoumenaDa.jpg" name="Dani Loumena" caption="Broker"  ar="ar--3-4"/>
+                    <dlp-bio-card source="images/team/LoumenaDa.jpg" name="Dani Loumena" caption="Broker" ar="ar--3-4"/>
                 </swiper-slide>
                 <swiper-slide>
-                    <dlp-bio-card source="images/team/Lindsey-Crop.jpeg" name="Lindsey Matejak" caption="Broker"  ar="ar--3-4"/>
+                    <dlp-bio-card source="images/team/Lindsey-Crop.jpeg" name="Lindsey Matejak" caption="Broker" ar="ar--3-4"/>
                 </swiper-slide>
                 <swiper-slide>
-                    <dlp-bio-card source="images/team/david-lubega.jpeg" name="David Lubega" caption="Broker"  ar="ar--3-4"/>
+                    <dlp-bio-card source="images/team/david-lubega.jpeg" name="David Lubega" caption="Broker" ar="ar--3-4"/>
                 </swiper-slide>
                 <swiper-slide>
-                    <dlp-bio-card source="images/team/christine-hooper.jpeg" name="Christine Hooper" caption="Broker"  ar="ar--3-4"/>
+                    <dlp-bio-card source="images/team/christine-hooper.jpeg" name="Christine Hooper" caption="Broker" ar="ar--3-4"/>
                 </swiper-slide>
                 <swiper-slide>
-                    <dlp-bio-card source="images/team/lou-prima.jpeg" name="Lou Prima" caption="Broker"  ar="ar--3-4"/>
+                    <dlp-bio-card source="images/team/lou-prima.jpeg" name="Lou Prima" caption="Broker" ar="ar--3-4"/>
                 </swiper-slide>
             </dlp-carousel>
           </div>

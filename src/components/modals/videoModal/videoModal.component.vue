@@ -24,9 +24,9 @@
                         <svg role="img" aria-label="Close"><use xlink:href="images/icons/icons.svg#icon-close"></use></svg>
                     </dlp-button>
                 </nav>
-                <div class="dlp-video-modal-content col-span-4 md:col-span-12 lg:col-span-12 lg:col-start-3" >
-                    <div class="dlp-video-border">
-                        <div class="dlp-video-modal-player">
+                <div class="dlp-video-modal__content col-span-4 md:col-span-12 lg:col-span-12 lg:col-start-3" >
+                    <div class="dlp-video-modal__border">
+                        <div class="dlp-video-modal__player">
                             <youtube :fitParent="true" :video-id="videoId" :player-vars="playerVars"/>
                         </div>
                     </div>

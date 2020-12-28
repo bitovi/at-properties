@@ -1,7 +1,7 @@
 import Nav from './nav.component.vue';
 
 export default {
-    title: 'Components/Nav',
+    title: 'Pattern Library/Containers/NavBar/',
     component: Nav,
     argTypes: {
         
@@ -14,4 +14,10 @@ const Template = (args, { argTypes }) => ({
     template: '<dlp-nav-component />',
 });
 
-export const Primary = Template.bind({});
+export const NavBar = Template.bind({});
+
+NavBar.parameters = {
+  docs: { 
+    page: './nav.stories.mdx' 
+  }
+};

@@ -5,78 +5,61 @@ import dedent from 'ts-dedent';
 
 # Section Intro
 
-asdfasdf
-
-<!-- <Preview>
-<article id="co-agent">
-  <div className="section-content">
-    <div className="content-grid">
-      <div className="col-span-full text-center">
-        <img src="https://tse1.mm.bing.net/th?id=OIP.TsQAleIGiLgT2oKwrtnXwgHaHr&pid=Api" className="mx-auto logo--agency" alt="Emily Sachs Wong Luxury Chicago Real Estate" />
-      </div>
-      <div className="col-span-4 md:col-span-5 lg:col-start-2 lg:col-span-6">
-        <div className="sticky top-4 relative">
-          <figure>
-            <picture className="ar ar--4-5">
-              <img src="https://images.unsplash.com/photo-1589751174647-3432251d615b?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTV8fG1hbiUyMGZhY2UlMjB0aWV8ZW58MHwwfDB8&auto=format&fit=crop&w=800&q=60" className="scale-img" alt="" />
-            </picture>
-            <div className="img__border">
-              <h4 className="appear-md head-6 accent--below-center">Leigh Marcus</h4>
-            </div>
-          </figure>
-        </div>
-      </div>
-      <div className="col-span-4 md:col-span-7 lg:col-start-9 lg:col-span-7">
-        <h1 className="head-2">Leigh Marcus</h1>
-        <h3 className="head-5 accent--above-left">Co-Agent Bio</h3>
-        <p>Having sold over 1000 homes in his own personal career, Leigh will give you the comfort and confidence that he will be able to help you achieve success with your move. For over a decade, Leigh brings that same dynamic to every client he helps to buy or sell a home. Clients say they feel comfortable and confident trusting their home and family’s future with Leigh and his team.</p>
-        <div className="btn-group">
-          <button className="btn btn--style-dark"><span className="btn__text">Read Full Bio</span></button>
-          <button className="btn btn--style-dark"><span className="btn__text">Watch Agent Video</span></button>
-        </div>
-      </div>
-    </div>
-  </div>
-</article>
-</Preview> -->
-
-<!-- <Preview>
-<article id="technology">
-  <div className="section-intro">
-    <picture className="intro-image">
-      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80" alt="" />
-    </picture>
-    <div className="intro-title">
-      <hgroup>
-        <h1 className="accent-below-center">Industry Leading Technology</h1>
-        <h6>Technology</h6>
-      </hgroup>
-    </div>
-  </div>
-  <div className="section-content">
-    <div className="content-grid">
-      <div className="col-span-full md:col-span-6 lg:col-span-7 lg:col-start-2">
-        <figure>
-          <picture className="ar ar--5-4">
-            <img src="https://images.unsplash.com/photo-1542330952-bffc55e812b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80" className="scale-img" alt="" />
-          </picture>
-          <div className="img__border"></div>
-        </figure>
-      </div>
-      <div className="col-span-full md:col-span-6 lg:col-span-6 lg:col-start-10">
-        <p className="accent--above-left">A fully integrated marketing plan is key to getting your home sold quickly and for top dollar. No home is the same, so we provide a customized marketing plan tailored for your home.</p>
-      </div>
-    </div>
-  </div>
-</article>
-</Preview> -->
+* **Animation**:
+  * When the top of the intro is at the bottom of the screen, the background image scale changes from 1 to 1.3 at the same speed as the user scrolls (scrub). The animation does not end until the bottom of the intro is at the top of the screen.
+  * When the top of the intro is at the top of the screen, the intro pins in place and the background image opacity changes from 1 to 0.25 at the same speed as the user scrolls (scrub).
+  * Text (hgroup) fades in and slides up (opacity changes from 0 to 1, and y changes from 50 to 0) at the same speed as the user scrolls. When the text animation is finished, the section Intro unpins.
+  * The animation plays once.
+  * CodePen example: [GSAP Intros v1.4](https://codepen.io/hkutcherb/pen/abmwLRv)
+* **Accessibility**: When [Reduce Motion](/?path=/docs/style-guide-animation--page#reduce-motion) is on, all animations turn off.
 
 ## How to configure
 
-Define classes in **src/assets/pages.styles.scss**.
+Define classes in **src/components/title/title.styles.scss**. <br />
+*Note*: This SCSS would benefit from having `@apply` Tailwind classes and `/* CSS equivalent */` comments added.
 
 <Source language='scss' code={dedent`
-  .section-intro {
+  /* Section Intro */
+  .dlp-title-page {
+    @apply flex;
+    @apply flex-col;
+    @apply items-center;
+    @apply p-6;
+    @apply pb-0;
+    @apply h-screen; //fallback
+    height: calc(100vh - 48px);
+    @apply bg-fixed;
+    @apply bg-cover;
+    @apply bg-no-repeat;
+    background-color: rgb(0, 0, 0); 
+    overflow: hidden; 
+    position: relative;
+    .dlp-title-page__text {
+      @apply text-white;
+      @apply text-center;
+    }
+    .dlp-title-page__image {
+      @apply absolute;
+      @apply w-full;
+      @apply h-full;
+      @apply top-0;
+      @apply left-0;
+      outline: 1px solid theme('colors.primary.500');
+      //Build order requires this be hard coded
+      outline-offset: -8px;
+      @media (min-width: theme('screens.md')) {
+        outline-offset: -16px;
+      }
+      @media (min-width: theme('screens.lg')) {
+        outline-offset: -20px;
+      }
+      img {
+        @apply w-full;
+        @apply h-full;
+        object-fit: cover;
+        object-position: center center;
+      }
+    }
   }
 `} />
 
@@ -84,5 +67,6 @@ Define classes in **src/assets/pages.styles.scss**.
 
 Relevant [WCAG 2.1 guidelines](https://www.w3.org/WAI/WCAG21/quickref/):
 
+* Same guidelines as for [Imagery](/?path=/docs/style-guide-imagery--page).
 * Same guidelines as for [Structure](/?path=/docs/style-guide-structure--page).
 * Same guidelines as for [Animation](/?path=/docs/style-guide-animation--page).
