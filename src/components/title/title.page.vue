@@ -12,7 +12,6 @@
 
 <script>
 import gsap from 'gsap'
-import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ExpoScaleEase } from "gsap/EasePack"
 import { hasMotion } from '../../constants'
 
@@ -48,6 +47,8 @@ export default {
             return
         }
 
+
+
         gsap.to(titleImg, {
             scrollTrigger: {
                 trigger: titleWrapper,
@@ -67,12 +68,9 @@ export default {
                 end: "bottom top",
                 scrub: 1,
                 pin: true,
-                onLeave: (self) => {
-                    self.kill()
-                    ScrollTrigger.getById("intro-image-" + this._uid).kill()
+                onLeave: () => {
                     gsap.set(titleImg, { scale: 1.3, opacity: 0.25 })
                     gsap.set(titleText, { opacity: 1, y: 0 })
-                    ScrollTrigger.refresh()
                 }
             },
         });
