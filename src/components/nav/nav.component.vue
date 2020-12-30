@@ -184,6 +184,7 @@ export default {
             return `${activeState.width}px`
         },
         changeHighlight() {
+            if(!this.elActive) return
             gsap.to(this.$refs.highlight, {
                 width: this.getWidth(this.elActive),
                 left: this.getLeft(this.elActive)
