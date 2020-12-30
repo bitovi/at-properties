@@ -99,8 +99,7 @@ export default {
         isMounted: false,
         isOpen: false,
         isScrolling: false,
-        elActive: null,
-        scrollOffset: document.body.clientHeight * -1
+        elActive: null
     }),
     methods: {
         open() {
@@ -211,6 +210,7 @@ export default {
     },
     destroyed () {
         window.removeEventListener('scroll', this.bounceScroll);
+        window.removeEventListener('resize', this.bounceResize);
     },
     mounted() {
         //On load, posititon the highlight. Then allow render
