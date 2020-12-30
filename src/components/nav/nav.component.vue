@@ -184,6 +184,10 @@ export default {
                 left: this.getLeft(this.elActive)
             })
         },
+        //did we resize? Reset the line
+        handleResize() {
+            this.changeHighlight()
+        },
         //Are we scrolling?
         handleScroll() {
             this.isScrolling = true
@@ -216,8 +220,11 @@ export default {
         this.isMounted = true;
 
         delay(() => {
-            this.bounceScroll = debounce(this.handleScroll, 1400, {leading: true})
+            this.bounceScroll = debounce(this.handleScroll, 800, {leading: true})
             window.addEventListener('scroll', this.bounceScroll);
+
+            this.bounceResize = debounce(this.handleResize, 200)
+            window.addEventListener('resize', this.bounceResize)
         }, 20)
         
     }
