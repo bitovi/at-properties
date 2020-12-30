@@ -13,7 +13,6 @@
   @apply h-full;
   @apply absolute;
   @apply right-0;
-  @apply pb-8;
   width: 100%;
   padding: 24px 8px 24px 24px;
   background-color: #fff;
@@ -36,7 +35,7 @@
   overflow: auto;
   height: 80%;
   height: calc(100vh - 120px);
-  padding: 0 32px 0 24px;
+  padding: 0 32px 80px 24px;
   margin-top: 76px;
   @media (min-width: theme('screens.sm')) {
     height: 100%;
