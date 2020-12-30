@@ -25,6 +25,7 @@
   @apply justify-center;
   @apply h-full;
   @apply mx-auto;
+  @apply z-10;
   width: 100%;
   @media screen and (orientation:landscape) and (max-width: theme('screens.md')) {
     width: 60%;
