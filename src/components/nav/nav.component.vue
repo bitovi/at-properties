@@ -9,7 +9,7 @@
         :class="{ isOpen: isOpen}" 
         aria-label="Main Menu">
         <div class="dlp-nav-tray xl:container mx-auto">
-            <a class="dlp-nav-m-tile flex lg:items-center" href="#">
+            <a class="dlp-nav-m-tile flex lg:items-center" href="#" @click="resetHighlight">
                 <img class="dlp-nav-logo" height="26" width="130" alt="@properties" :src="`images/intro/logo-atproperties.svg`">
                 <span class="visually-hidden">Back to top</span>
             </a>
@@ -50,7 +50,7 @@
                         <li 
                             ref="highlight" 
                             role="presentation" 
-                            class="hidden"
+                            class="hidden opacity-0"
                             :class="{'dlp-nav-highlight': isMounted}"
                             ></li>
                     </ul>
@@ -172,11 +172,9 @@ export default {
                 delay(this.changeHighlight, 1000)
             }
         },
-        //what is the left offest including the container offset?
+        //what is the left offest per the parent container
         getLeft(target) {
-            const navState = this.$refs.navUl.getBoundingClientRect()
-            const activeState = target.getBoundingClientRect()
-            return `${activeState.left - navState.left}px`
+            return `${target.offsetLeft}px`
         },
         //what is the width of the new nav item?
         getWidth(target) {
@@ -203,7 +201,12 @@ export default {
                 this.isScrolling = false
             }, 800)
         },
-        showModal: function(name) {
+        //send the highlight back to the first nav item
+        resetHighlight() {
+            this.elActive = this.$refs.navUl.children[0].children[0]
+            this.changeHighlight()
+        },
+        showModal(name) {
             if(this.$refs[name]){
                 this.$refs[name].open()
             }
@@ -222,11 +225,17 @@ export default {
         } else {
             this.elActive = this.$refs.navUl.children[0].children[0]
         }
-        //set the styles to match nav item
-        this.$refs.highlight.style.width = this.getWidth(this.elActive)
-        this.$refs.highlight.style.left = this.getLeft(this.elActive)
-        //over precidence hidden on highlight
-        this.isMounted = true;
+        delay(() => {
+            //set the styles to match nav item
+            this.$refs.highlight.style.width = this.getWidth(this.elActive)
+            this.$refs.highlight.style.left = this.getLeft(this.elActive)
+            //over precidence hidden on highlight
+            this.isMounted = true;
+
+            gsap.to(this.$refs.highlight, {
+                opacity: 1
+            })
+        }, 2000)
 
         delay(() => {
             this.bounceScroll = debounce(this.handleScroll, 800, {leading: true})
