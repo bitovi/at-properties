@@ -91,6 +91,7 @@
 <script>
 import gsap from 'gsap'
 import { delay, debounce, initial } from 'lodash'
+import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
 
 export default {
     name: 'dlp-nav-component',
@@ -104,7 +105,11 @@ export default {
     methods: {
         open() {
             this.isOpen = true
-            const openTimeline = gsap.timeline()
+            const openTimeline = gsap.timeline({
+                onComplete: () => {
+                    disableBodyScroll(this.$refs.navMenu)
+                }
+            })
             //Expand nav menu
             openTimeline.fromTo(this.$refs.navMenu, {
                 top: window.innerHeight
@@ -128,6 +133,7 @@ export default {
         },
         close() {
             const closeTimeline = gsap.timeline()
+            clearAllBodyScrollLocks()
             //fade the links
             closeTimeline.to(this.$refs.navUlWrapper, {
                 opacity: 0
@@ -187,6 +193,8 @@ export default {
         //did we resize? Reset the line
         handleResize() {
             this.changeHighlight()
+            //edge case. if the nav is open and resize happens, release the lock
+            clearAllBodyScrollLocks()
         },
         //Are we scrolling?
         handleScroll() {
