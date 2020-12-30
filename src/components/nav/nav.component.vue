@@ -9,7 +9,7 @@
         :class="{ isOpen: isOpen}" 
         aria-label="Main Menu">
         <div class="dlp-nav-tray xl:container mx-auto">
-            <a class="dlp-nav-m-tile flex lg:items-center" href="#">
+            <a class="dlp-nav-m-tile flex lg:items-center" href="#" @click="resetHighlight">
                 <img class="dlp-nav-logo" height="26" width="130" alt="@properties" :src="`images/intro/logo-atproperties.svg`">
                 <span class="visually-hidden">Back to top</span>
             </a>
@@ -50,7 +50,7 @@
                         <li 
                             ref="highlight" 
                             role="presentation" 
-                            class="hidden"
+                            class="hidden opacity-0"
                             :class="{'dlp-nav-highlight': isMounted}"
                             ></li>
                     </ul>
@@ -91,6 +91,7 @@
 <script>
 import gsap from 'gsap'
 import { delay, debounce, initial } from 'lodash'
+import { disableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock'
 
 export default {
     name: 'dlp-nav-component',
@@ -98,13 +99,16 @@ export default {
         isMounted: false,
         isOpen: false,
         isScrolling: false,
-        elActive: null,
-        scrollOffset: document.body.clientHeight * -1
+        elActive: null
     }),
     methods: {
         open() {
             this.isOpen = true
-            const openTimeline = gsap.timeline()
+            const openTimeline = gsap.timeline({
+                onComplete: () => {
+                    disableBodyScroll(this.$refs.navMenu)
+                }
+            })
             //Expand nav menu
             openTimeline.fromTo(this.$refs.navMenu, {
                 top: window.innerHeight
@@ -128,6 +132,7 @@ export default {
         },
         close() {
             const closeTimeline = gsap.timeline()
+            clearAllBodyScrollLocks()
             //fade the links
             closeTimeline.to(this.$refs.navUlWrapper, {
                 opacity: 0
@@ -167,11 +172,9 @@ export default {
                 delay(this.changeHighlight, 1000)
             }
         },
-        //what is the left offest including the container offset?
+        //what is the left offest per the parent container
         getLeft(target) {
-            const navState = this.$refs.navUl.getBoundingClientRect()
-            const activeState = target.getBoundingClientRect()
-            return `${activeState.left - navState.left}px`
+            return `${target.offsetLeft}px`
         },
         //what is the width of the new nav item?
         getWidth(target) {
@@ -179,10 +182,17 @@ export default {
             return `${activeState.width}px`
         },
         changeHighlight() {
+            if(!this.elActive) return
             gsap.to(this.$refs.highlight, {
                 width: this.getWidth(this.elActive),
                 left: this.getLeft(this.elActive)
             })
+        },
+        //did we resize? Reset the line
+        handleResize() {
+            this.changeHighlight()
+            //edge case. if the nav is open and resize happens, release the lock
+            clearAllBodyScrollLocks()
         },
         //Are we scrolling?
         handleScroll() {
@@ -191,7 +201,12 @@ export default {
                 this.isScrolling = false
             }, 800)
         },
-        showModal: function(name) {
+        //send the highlight back to the first nav item
+        resetHighlight() {
+            this.elActive = this.$refs.navUl.children[0].children[0]
+            this.changeHighlight()
+        },
+        showModal(name) {
             if(this.$refs[name]){
                 this.$refs[name].open()
             }
@@ -199,6 +214,7 @@ export default {
     },
     destroyed () {
         window.removeEventListener('scroll', this.bounceScroll);
+        window.removeEventListener('resize', this.bounceResize);
     },
     mounted() {
         //On load, posititon the highlight. Then allow render
@@ -209,15 +225,24 @@ export default {
         } else {
             this.elActive = this.$refs.navUl.children[0].children[0]
         }
-        //set the styles to match nav item
-        this.$refs.highlight.style.width = this.getWidth(this.elActive)
-        this.$refs.highlight.style.left = this.getLeft(this.elActive)
-        //over precidence hidden on highlight
-        this.isMounted = true;
+        delay(() => {
+            //set the styles to match nav item
+            this.$refs.highlight.style.width = this.getWidth(this.elActive)
+            this.$refs.highlight.style.left = this.getLeft(this.elActive)
+            //over precidence hidden on highlight
+            this.isMounted = true;
+
+            gsap.to(this.$refs.highlight, {
+                opacity: 1
+            })
+        }, 2000)
 
         delay(() => {
-            this.bounceScroll = debounce(this.handleScroll, 1400, {leading: true})
+            this.bounceScroll = debounce(this.handleScroll, 800, {leading: true})
             window.addEventListener('scroll', this.bounceScroll);
+
+            this.bounceResize = debounce(this.handleResize, 200)
+            window.addEventListener('resize', this.bounceResize)
         }, 20)
         
     }
