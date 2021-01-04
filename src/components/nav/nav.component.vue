@@ -1,7 +1,7 @@
 <template>
     <scrollactive 
         active-class="isActive"
-        :offset="0"
+        :offset="400"
         :modifyUrl="false"
         :clickToScroll="false"
         :highlightFirstItem="true"
