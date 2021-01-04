@@ -4,9 +4,12 @@
         :offset="0"
         :modifyUrl="false"
         :clickToScroll="false"
+        :highlightFirstItem="true"
+        :scrollOnStart="false"
+        :class="{ isOpen: isOpen}"
+        :alwaysTrack="true"
         v-on:itemchanged="onItemChanged"
         class="dlp-nav" 
-        :class="{ isOpen: isOpen}" 
         aria-label="Main Menu">
         <div class="dlp-nav-tray xl:container mx-auto">
             <a class="dlp-nav-m-tile flex lg:items-center" href="#" @click="resetHighlight">
@@ -154,23 +157,18 @@ export default {
                 this.open()
             }
         },
-        //onClick of a link in desktop, control the highlight
         clickNav(evt) {
             this.elActive = evt.target
-
-            const target = this.elActive.getAttribute('href')
-            document.querySelector(target).scrollIntoView(true)
             if(this.isOpen){ this.close() }
-            this.changeHighlight()
+            // this.changeHighlight()
         },
         //update the highlight on scroll
         // eslint-disable-next-line no-unused-vars
         onItemChanged(evt, currentItem, lastItem) {
             if(!currentItem) return
             this.elActive = currentItem
-            if(!this.isScrolling){
-                delay(this.changeHighlight, 1000)
-            }
+            delay(this.changeHighlight, 200)
+            
         },
         //what is the left offest per the parent container
         getLeft(target) {
