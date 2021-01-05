@@ -47,12 +47,11 @@ export default {
             return
         }
 
+        var tl_intros = gsap.timeline();
 
-
-        gsap.to(titleImg, {
+        tl_intros.to(titleImg, {
             scrollTrigger: {
                 trigger: titleWrapper,
-                id: "intro-image-" + this._uid,
                 start: "top bottom",
                 end: "bottom top", 
                 scrub: 1,
@@ -60,29 +59,29 @@ export default {
             scale: 1.3,
             ease: ExpoScaleEase.config(1, 1.3)
         })
-      
-        this.tl = gsap.timeline({
+
+        tl_intros.to(titleImg, {
             scrollTrigger: {
                 trigger: titleWrapper,
                 start: "top top",
-                end: "bottom top",
+                end: "bottom top", 
                 scrub: 1,
-                pin: true,
-                onLeave: () => {
-                    gsap.set(titleImg, { scale: 1.3, opacity: 0.25 })
-                    gsap.set(titleText, { opacity: 1, y: 0 })
-                }
             },
-        });
+            opacity: 0.25
+        })
 
         gsap.set(titleText, { opacity: 0, transform: 'translate(0, 50px)'})
-        
-        this.tl.to(titleImg, {
-            opacity: 0.25
-        }).to(titleText, {
+        tl_intros.to(titleText, {
+            scrollTrigger: {
+                trigger: titleWrapper,
+                start: "top top",
+                end: "bottom top", 
+                scrub: 1,
+                pin: true,
+            },
             opacity: 1, 
-            y: 0 
-        });
+            y: 0,
+        })
     }
 }
 </script>
