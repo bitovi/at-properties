@@ -11,8 +11,9 @@
             <div 
                 :class="{ 'hide': isAnimated }"
                 class="dlp-video-modal content-grid" 
-                ref="dlpContent">
-                <nav class="absolute right-0 mr-4 lg:mr-12 lg:mt-12 z-10">
+                ref="dlpContent"
+                >
+                <nav class="absolute right-0 mr-4 lg:mr-12 lg:mt-12 z-40">
                     <h1 
                         ref="ElDescription"
                         tabindex="0" 
@@ -78,6 +79,8 @@ export default {
                 this.close()
             }
         })
+
+        document.addEventListener("resize", this.cleanup)
     },
     methods: {
         open(evt) {
@@ -101,10 +104,11 @@ export default {
             
             this.$emit('close')
             this.showModal = false
+
+            window.removeEventListener('resize', this.cleanup);
             
         },
         close: function() {
-            
             gsap.to(this.$refs.dlpContent, { 
                 opacity: 0,
                 onComplete: () => {
