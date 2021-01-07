@@ -100,7 +100,6 @@ export default {
             }
         },
         cleanup() {
-            console.log('cleanup')
             clearAllBodyScrollLocks(this.$el)
             
             this.$emit('close')
